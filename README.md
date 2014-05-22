@@ -1,10 +1,16 @@
-# xECMAScript [![Build Status](https://travis-ci.org/exercism/xecmascript6.png?branch=master)](https://travis-ci.org/exercism/xecmascript6)
+# xECMAScript6 [![Build Status](https://travis-ci.org/exercism/xecmascript6.png?branch=master)](https://travis-ci.org/exercism/xecmascript6)
 
-Exercism exercises in ECMAScript
+> Exercism exercises in ECMAScript 6
 
 ## Running Unit Test Suite
 
-TODO
+### All Assignments
+
+    % make test
+
+### Single Assignment
+
+    % make test-assignment ASSIGNMENT=palindrome-products
 
 ## Contributing Guide
 
