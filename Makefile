@@ -13,8 +13,7 @@ EXAMPLE := "example.$(FILEEXT)"
 TSTFILE := "$(ASSIGNMENT)_test.spec.$(FILEEXT)"
 
 test-assignment:
-	@echo "Running tests for $(ASSIGNMENT) assignment"
-	@echo "Working Directory: $(OUTDIR)"
+	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)/$(TSTFILE)
 	@./node_modules/.bin/traceur --experimental --modules=commonjs --script $(ASSIGNMENT)/$(EXAMPLE) --out $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT)
 	@mv $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT) $(OUTDIR)/$(ASSIGNMENT).$(FILEEXT)
