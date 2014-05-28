@@ -12,6 +12,8 @@ FILEEXT := "js"
 EXAMPLE := "example.$(FILEEXT)"
 TSTFILE := "$(ASSIGNMENT)_test.spec.$(FILEEXT)"
 
+all: test
+
 test-assignment:
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)/$(TSTFILE)
@@ -22,4 +24,3 @@ test-assignment:
 
 test:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done
-

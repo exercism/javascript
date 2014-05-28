@@ -6,7 +6,7 @@
 
 ### All Assignments
 
-    % make test
+    % make
 
 ### Single Assignment
 
