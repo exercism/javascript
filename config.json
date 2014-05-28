@@ -4,12 +4,12 @@
   "repository": "https://github.com/exercism/xecmascript",
   "active": false,
   "problems": [
-
+    "palindrome-products"
   ],
   "deprecated": [
 
   ],
   "ignore": [
-
+    "node_modules"
   ]
 }
