@@ -1,7 +1,7 @@
 # assignments
 ASSIGNMENT ?= ""
-IGNOREDIRS := "node_modules"
-ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -not -path '*/\.*' | tr -d './' | sort | grep -Ev $(IGNOREDIRS))
+IGNOREDIRS := "^(\.git|bin|node_modules)$$"
+ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -exec basename -a {} + | sort | grep -Ev $(IGNOREDIRS))
 
 # output directories
 TMPDIR ?= "/tmp"
@@ -24,3 +24,4 @@ test-assignment:
 
 test:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done
+
