@@ -11,7 +11,7 @@
   "devDependencies": {
     "jasmine-node": "^1.14.3",
     "tape": "^2.13.1",
-    "traceur": "0.0.42"
+    "traceur": "0.0.90"
   },
   "dependencies": {},
   "scripts": {},
