@@ -17,7 +17,7 @@ all: test
 test-assignment:
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
 	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)/$(TSTFILE)
-	@./node_modules/.bin/traceur --experimental --modules=commonjs --script $(ASSIGNMENT)/$(EXAMPLE) --out $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT)
+	@./node_modules/.bin/traceur --experimental --modules=commonjs --symbols=false --script $(ASSIGNMENT)/$(EXAMPLE) --out $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT)
 	@mv $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT) $(OUTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@cp ./node_modules/traceur/bin/traceur-runtime.js $(OUTDIR)/traceur-runtime.js
 	@./node_modules/.bin/jasmine-node --captureExceptions $(OUTDIR)/$(TSTFILE)
