@@ -1,7 +1,7 @@
 # assignments
 ASSIGNMENT ?= ""
 IGNOREDIRS := "^(\.git|bin|node_modules)$$"
-ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d -exec basename -a {} + | sort | grep -Ev $(IGNOREDIRS))
+ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d | cut -d'/' -f2 | sort | grep -Ev $(IGNOREDIRS))
 
 # output directories
 TMPDIR ?= "/tmp"
@@ -16,7 +16,7 @@ all: test
 
 test-assignment:
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
-	@cp $(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)/$(TSTFILE)
+	@sed 's/xit/it/g' $(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/$(TSTFILE)
 	@./node_modules/.bin/traceur --experimental --modules=commonjs --symbols=false --script $(ASSIGNMENT)/$(EXAMPLE) --out $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT)
 	@mv $(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT) $(OUTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@cp ./node_modules/traceur/bin/traceur-runtime.js $(OUTDIR)/traceur-runtime.js
