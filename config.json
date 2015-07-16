@@ -4,6 +4,7 @@
   "repository": "https://github.com/exercism/xecmascript",
   "active": false,
   "problems": [
+    "hello-world",
     "palindrome-products"
   ],
   "deprecated": [
