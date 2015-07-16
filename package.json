@@ -6,12 +6,17 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/exercism/xecmascript6"
+    "url": "https://github.com/exercism/xecmascript"
   },
   "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-jasmine": "~2.0.1",
+    "gulp-traceur": "~0.17.1",
+    "gulp-clean": "~0.3.1",
+    "traceur": "0.0.90",
     "jasmine-node": "^1.14.3",
     "tape": "^2.13.1",
-    "traceur": "0.0.90"
+    "yargs": "~3.15.0"
   },
   "dependencies": {},
   "scripts": {},
@@ -19,3 +24,4 @@
     "MIT"
   ]
 }
+
