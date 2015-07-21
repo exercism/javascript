@@ -15,7 +15,11 @@ TSTFILE := "$(ASSIGNMENT)_test.spec.$(FILEEXT)"
 
 all: test
 
-test-assignment:
+node_modules: package.json
+	@npm prune
+	@npm install
+
+test-assignment: node_modules
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
 	@sed 's/xit/it/g' $(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp $(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
