@@ -5,6 +5,7 @@
   "active": false,
   "problems": [
     "hello-world",
+    "bob",
     "palindrome-products"
   ],
   "deprecated": [
