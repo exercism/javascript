@@ -1,18 +1,36 @@
-var TRACEUR_OUTPUT_DIR = 'traceur-output',
-  gulp = require('gulp'),
+function getInputDirectory(argv) {
+  if (argv.input) {
+    return argv.input;
+  }
+  return '.';
+}
+
+function getOutputDirectory(argv) {
+  if (argv.output) {
+    return argv.output;
+  }
+  return 'traceur-output';
+}
+
+var gulp = require('gulp'),
   jasmine = require('gulp-jasmine'),
   traceur = require('gulp-traceur'),
-  clean = require('gulp-clean');
+  del = require('del'),
+  argv  = require('yargs').argv,
+  inputDir = getInputDirectory(argv),
+  outputDir = getOutputDirectory(argv);
+
+// Gulp tasks definition
 
 gulp.task('default', [ 'test' ]);
  
 gulp.task('test', [ 'traceur', 'copy-runtime' ], function () {
-  return gulp.src([ TRACEUR_OUTPUT_DIR + '/*_test.spec.js' ])
+  return gulp.src([ outputDir + '/*_test.spec.js' ])
     .pipe(jasmine());
 });
 
 gulp.task('traceur', function () {
-  return gulp.src([ '*.js', '!gulpfile.js', '!example.js' ])
+  return gulp.src([ inputDir + '/*.js' ])
     .pipe(traceur({
       modules: 'commonjs',
 
@@ -31,16 +49,15 @@ gulp.task('traceur', function () {
       require: true,
       types: true
     }))
-    .pipe(gulp.dest(TRACEUR_OUTPUT_DIR));
+    .pipe(gulp.dest(outputDir));
 });
 
 gulp.task('copy-runtime', function () {
   return gulp.src(traceur.RUNTIME_PATH)
-    .pipe(gulp.dest(TRACEUR_OUTPUT_DIR));
+    .pipe(gulp.dest(outputDir));
 });
 
-gulp.task('clean', function () {
-  return gulp.src(TRACEUR_OUTPUT_DIR, { read: false })
-    .pipe(clean());
+gulp.task('clean', function (cb) {
+  del([ outputDir ], cb);
 });
 

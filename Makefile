@@ -21,6 +21,7 @@ node_modules: package.json
 
 test-assignment: node_modules
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
+	@cp gulpfile.js $(ASSIGNMENT)
 	@sed 's/xit/it/g' $(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp $(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@gulp test --input $(INTDIR) --output $(OUTDIR)
