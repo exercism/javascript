@@ -1,9 +1,3 @@
-'use strict';
-exports.generate = generate;
-
-// module imports (remove when es6 features are shipped with Node.js)
-require('./traceur-runtime');
-
 /**
  * Generate palindrome-products table and calculate largest/smallest.
  *
@@ -21,3 +15,4 @@ function generate({ minFactor = 1, maxFactor = Number.MAX_VALUE }) {
 //
 }
 
+export default generate;

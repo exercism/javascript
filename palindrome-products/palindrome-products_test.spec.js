@@ -1,5 +1,4 @@
-'use strict';
-var generate = require('./palindrome-products').generate;
+import generate from './palindrome-products';
 
 describe("Palindrome", function() {
 

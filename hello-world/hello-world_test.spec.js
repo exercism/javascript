@@ -1,4 +1,4 @@
-var HelloWorld = require('./hello-world');
+import HelloWorld from './hello-world';
 
 describe('Hello World', () => {
   var helloWorld = new HelloWorld();

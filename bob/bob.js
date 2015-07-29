@@ -11,5 +11,5 @@ class Bob {
   }
 }
 
-module.exports = Bob;
+export default Bob;
 
