@@ -1,9 +1,3 @@
-'use strict';
-exports.generate = generate;
-
-// module imports (remove when es6 features are shipped with Node.js)
-require('./traceur-runtime');
-
 /**
  * Generate palindrom-products table and calculate largest/smallest.
  *
@@ -99,3 +93,4 @@ function range(start, stop) {
   return out;
 }
 
+export default generate;

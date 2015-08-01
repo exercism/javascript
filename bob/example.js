@@ -2,7 +2,7 @@ let isSilence = (message) => message.replace(/\s+/g, '') === '';
 let isShouting = (message) => message.toUpperCase() === message && /[A-Z]/.test(message);
 let isAQuestion = (message) => message[message.length - 1] === '?';
 
-module.exports = class Bob {
+class Bob {
   hey(message) {
     if (isSilence(message)) {
       return 'Fine. Be that way!';
@@ -15,3 +15,4 @@ module.exports = class Bob {
   }
 }
 
+export default Bob;

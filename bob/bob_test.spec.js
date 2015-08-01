@@ -1,4 +1,4 @@
-var Bob = require('./bob.js');
+import Bob from './bob.js';
 
 describe('Bob', () => {
 
