@@ -6,6 +6,7 @@
   "problems": [
     "hello-world",
     "bob",
+    "word-count",
     "palindrome-products"
   ],
   "deprecated": [
