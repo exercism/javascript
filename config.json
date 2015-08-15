@@ -9,6 +9,7 @@
     "word-count",
     "hamming",
     "anagram",
+    "food-chain",
     "palindrome-products"
   ],
   "deprecated": [
