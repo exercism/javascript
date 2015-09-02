@@ -5,6 +5,7 @@
   "active": false,
   "problems": [
     "hello-world",
+    "leap",
     "bob",
     "word-count",
     "hamming",
