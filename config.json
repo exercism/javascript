@@ -6,14 +6,15 @@
   "problems": [
     "hello-world",
     "leap",
+    "hamming",
+    "rna-transcription",
     "bob",
     "gigasecond",
-    "rna-transcription",
     "word-count",
-    "hamming",
+    "beer-song",
+    "phone-number",
     "anagram",
     "food-chain",
-    "beer-song",
     "palindrome-products"
   ],
   "deprecated": [
