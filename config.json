@@ -2,7 +2,7 @@
   "slug": "ecmascript",
   "language": "ECMAScript",
   "repository": "https://github.com/exercism/xecmascript",
-  "active": false,
+  "active": true,
   "problems": [
     "hello-world",
     "leap",
