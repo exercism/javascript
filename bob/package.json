@@ -18,6 +18,8 @@
     "gulp-jasmine": "~2.0.1",
     "gulp-traceur": "~0.17.1",
     "traceur": "0.0.90",
-    "gulp-clean": "~0.3.1"
+    "gulp-clean": "~0.3.1",
+    "del": "~2.0.2",
+    "yargs": "~3.27.0"
   }
 }
