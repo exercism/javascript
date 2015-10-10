@@ -13,8 +13,8 @@
     "gulp": "~3.9.0",
     "gulp-jasmine": "~2.0.1",
     "gulp-traceur": "~0.17.1",
-    "del": "~1.2.0",
-    "yargs": "~3.15.0"
+    "del": "~2.0.2",
+    "yargs": "~3.27.0"
   },
   "dependencies": {},
   "scripts": {},
