@@ -1,96 +1,36 @@
-/**
- * Generate palindrom-products table and calculate largest/smallest.
- *
- * @param {Number} [minFactor]
- * Minimum Factor
- *
- * @param {Number} [maxFactor]
- * Maximum Factor
- *
- * @return {{largest: number, smallest: number}}
- */
+let isPalindrome = (num) => num.toString().split('').reverse().join('') === num.toString();
 
-function generate({ minFactor = 1, maxFactor = Number.MAX_VALUE }) {
-  let factors = range(minFactor, maxFactor);
-  let palindromes = [for (x of factors) for (y of factors) if (isPalindrome(x * y)) palindrome(x, y)];
+let Palindromes = (params) => {
+  let maxFactor, minFactor, maxProduct, minProduct, data;
+  maxFactor = params.maxFactor;
+  minFactor = params.minFactor || 1;
+  maxProduct = 1;
+  minProduct = Infinity;
+  data = [];
 
-  return  {
-    largest: palindromes.sort(comparator).pop(),
-    smallest: palindromes.shift()
+  for (let ii = minFactor; ii < maxFactor; ii++) {
+    for (let jj = ii; jj <= maxFactor; jj++) {
+      let product = ii * jj;
+      if (isPalindrome(product)) {
+        data[product] = [ii, jj];
+        maxProduct = Math.max(maxProduct, product);
+        minProduct = Math.min(minProduct, product);
+      }
+    }
   }
-}
 
-/**
- * Create a product/factor record.
- *
- * @param {Number} multiplicand
- * Multiplicand factor.
- *
- * @param {Number} multiplier
- * Multiplier factor.
- *
- * @return {{value: number, factors: array}}
- * Record depicting the product and an ordered array representation of the factors.
- */
-
-function palindrome(multiplicand, multiplier) {
   return {
-    value: multiplicand * multiplier,
-    factors: [multiplicand, multiplier].sort()
+    largest:  {
+      value:   maxProduct,
+      factors: data[maxProduct]
+    },
+    smallest: {
+      value:   minProduct,
+      factors: data[minProduct]
+    }
   };
-}
+};
 
-/**
- * Comparison predicate for product/factor records.
- *
- * @param {Number} a
- * First item.
- *
- * @param {Number} b
- * Second item.
- *
- * @return {Number}
- * When > 0, sort a higher than b.
- */
+export default Palindromes;
 
-function comparator(a, b) { return a.value - b.value; }
 
-/**
- * Whether given number is a palindrome.
- *
- * @param {Number} num
- * Number to test.
- *
- * @return {Boolean}
- * Whether given number is a palindrome.
- */
-
-function isPalindrome(num) {
-  return String(num) === "".split.call(num, '').reverse().join('');
-}
-
-/**
- * Generate a list of integers incremented by 1 from start to stop (inclusive).
- *
- * @param {Number} start
- * Starting integer.
- *
- * @param {Number} stop
- * Ending integer.
- *
- * @return {Array}
- * Array containing list of integers incremented by 1 from start to stop.
- */
-
-function range(start, stop) {
-  var out = [];
-  var idx = start - 1;
-
-  while (++idx <= stop) {
-    out.push(idx);
-  }
-
-  return out;
-}
-
-export default generate;
