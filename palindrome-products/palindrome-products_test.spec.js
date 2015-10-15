@@ -7,10 +7,10 @@ describe("Palindrome", function() {
     var largest = palindromes.largest;
 
     expect(largest.value).toEqual(9);
-    expect([[3, 3], [1, 9]], [[1, 9], [3, 3]]).toContain(largest.factors);
+    expect([[3, 3], [1, 9]]).toContain(largest.factors);
   });
 
-  xit("largets palindrome from double digit factors", function() {
+  xit("largest palindrome from double digit factors", function() {
     var palindromes = generate({ maxFactor: 99, minFactor: 10 });
     var largest = palindromes.largest;
 
