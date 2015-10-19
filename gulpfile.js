@@ -23,9 +23,9 @@ var gulp = require('gulp'),
 // Gulp tasks definition
 
 gulp.task('default', [ 'test' ]);
- 
+
 gulp.task('test', [ 'traceur', 'copy-runtime' ], function () {
-  return gulp.src([ outputDir + '/*_test.spec.js' ])
+  return gulp.src([ outputDir + '/*.spec.js' ])
     .pipe(jasmine());
 });
 

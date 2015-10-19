@@ -11,7 +11,7 @@ OUTDIR := $(shell mktemp -d "$(TMPDIR)/$(ASSIGNMENT).XXXXXXXXXX")
 # language specific config (tweakable per language)
 FILEEXT := "js"
 EXAMPLE := "example.$(FILEEXT)"
-TSTFILE := "$(ASSIGNMENT)_test.spec.$(FILEEXT)"
+TSTFILE := "$(ASSIGNMENT).spec.$(FILEEXT)"
 
 all: test
 
