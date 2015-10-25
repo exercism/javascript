@@ -8,4 +8,4 @@ node_modules
 .idea
 
 */node_modules
-*/traceur-output
+*/babel-output
