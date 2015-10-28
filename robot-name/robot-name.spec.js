@@ -17,21 +17,21 @@ describe('Robot', () => {
 
   xit('different robots have different names', () => {
     const NUMBER_OF_ROBOTS = 10000;
-    let usedNames = {};
+    const usedNames = new Set();
 
     for (let i = 0; i < NUMBER_OF_ROBOTS; i++) {
-      let newRobot = new Robot();
-      usedNames[newRobot.name] = true;
+      const newRobot = new Robot();
+      usedNames.add(newRobot.name);
     }
 
-    expect(Object.keys(usedNames).length).toEqual(NUMBER_OF_ROBOTS);
+    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS);
   });
 
   xit('is able to reset the name', () => {
-    let originalName = robot.name;
+    const originalName = robot.name;
 
     robot.reset();
-    let newName = robot.name;
+    const newName = robot.name;
 
     expect(newName).toMatch(/^[A-Z]{2}\d{3}$/);
     expect(originalName).not.toEqual(newName);
@@ -39,15 +39,15 @@ describe('Robot', () => {
 
   xit('should set a unique name after reset', () => {
     const NUMBER_OF_ROBOTS = 10000;
-    let usedNames = {};
+    const usedNames = new Set();
 
-    usedNames[robot.name] = true;
+    usedNames.add(robot.name);
     for (let i = 0; i < NUMBER_OF_ROBOTS; i++) {
       robot.reset();
-      usedNames[robot.name] = true;
+      usedNames.add(robot.name);
     }
 
-    expect(Object.keys(usedNames).length).toEqual(NUMBER_OF_ROBOTS + 1);
+    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS + 1);
   });
 
 });
