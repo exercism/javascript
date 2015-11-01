@@ -62,4 +62,12 @@ describe('School', () => {
     expect(school.roster()).toEqual(expectedSortedStudents);
   });
 
+  xit('roster cannot be modified outside of module', () => {
+    school.add('Aimee', 2);
+    const roster = school.roster();
+    roster[3]=['Oops.'];
+    const expectedDb = { 2 : [ 'Aimee' ] };
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
 });
