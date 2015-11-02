@@ -18,7 +18,7 @@ export default class PhoneNumber {
 }
 
 function cleanNumber(number) {
-  var num = number.replace(/\D/g,'');
+  const num = number.replace(/\D/g,'');
 
   if (num.length === 10) {
     return num;

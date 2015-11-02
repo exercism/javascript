@@ -17,7 +17,7 @@ class SpaceAge {
   }
 
   yearsOnPlanet(planet) {
-    var years = this.earthYears / EARTH_TO_OTHER_PLANETS[planet];
+    const years = this.earthYears / EARTH_TO_OTHER_PLANETS[planet];
     return parseFloat(years.toFixed(2));
   };
 
