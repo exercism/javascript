@@ -27,7 +27,6 @@
  * See its tests in this folder for a quick primer on how to use it! ( :
  */
 
-import BigInt from './big-integer';
 import Grains from './grains';
 
 describe('Grains', () => {
