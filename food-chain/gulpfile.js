@@ -9,7 +9,7 @@ function getOutputDirectory(argv) {
   if (argv.output) {
     return argv.output;
   }
-  return 'traceur-output';
+  return 'babel-output';
 }
 
 var gulp = require('gulp'),
