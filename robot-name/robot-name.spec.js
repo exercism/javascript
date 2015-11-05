@@ -16,6 +16,11 @@ describe('Robot', () => {
   });
 
   xit('different robots have different names', () => {
+    const differentRobot = new Robot();
+    expect(differentRobot.name).not.toEqual(robot.name);
+  });
+
+  xit('there can be lots of robots with different names each', () => {
     const NUMBER_OF_ROBOTS = 10000;
     const usedNames = new Set();
 
