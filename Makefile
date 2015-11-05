@@ -1,6 +1,6 @@
 # assignments
 ASSIGNMENT ?= ""
-IGNOREDIRS := "^(\.git|bin|node_modules)$$"
+IGNOREDIRS := "^(\.git|bin|node_modules|.idea)$$"
 ASSIGNMENTS = $(shell find . -maxdepth 1 -mindepth 1 -type d | cut -d'/' -f2 | sort | grep -Ev $(IGNOREDIRS))
 
 # output and intermediate directories
