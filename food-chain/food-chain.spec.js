@@ -8,7 +8,7 @@ describe('Food Chain', () => {
   });
 
   it('fly', () => {
-    var expected = `I know an old lady who swallowed a fly.
+    const expected = `I know an old lady who swallowed a fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `;
 
@@ -16,7 +16,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('spider', () => {
-    var expected = `I know an old lady who swallowed a spider.
+    const expected = `I know an old lady who swallowed a spider.
 It wriggled and jiggled and tickled inside her.
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
@@ -26,7 +26,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('bird', () => {
-    var expected = `I know an old lady who swallowed a bird.
+    const expected = `I know an old lady who swallowed a bird.
 How absurd to swallow a bird!
 She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.
 She swallowed the spider to catch the fly.
@@ -37,7 +37,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('cat', () => {
-    var expected = `I know an old lady who swallowed a cat.
+    const expected = `I know an old lady who swallowed a cat.
 Imagine that, to swallow a cat!
 She swallowed the cat to catch the bird.
 She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.
@@ -49,7 +49,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('dog', () => {
-    var expected = `I know an old lady who swallowed a dog.
+    const expected = `I know an old lady who swallowed a dog.
 What a hog, to swallow a dog!
 She swallowed the dog to catch the cat.
 She swallowed the cat to catch the bird.
@@ -62,7 +62,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('goat', () => {
-    var expected = `I know an old lady who swallowed a goat.
+    const expected = `I know an old lady who swallowed a goat.
 Just opened her throat and swallowed a goat!
 She swallowed the goat to catch the dog.
 She swallowed the dog to catch the cat.
@@ -76,7 +76,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('cow', () => {
-    var expected = `I know an old lady who swallowed a cow.
+    const expected = `I know an old lady who swallowed a cow.
 I don't know how she swallowed a cow!
 She swallowed the cow to catch the goat.
 She swallowed the goat to catch the dog.
@@ -91,7 +91,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('horse', () => {
-    var expected = `I know an old lady who swallowed a horse.
+    const expected = `I know an old lady who swallowed a horse.
 She's dead, of course!
 `;
 
@@ -99,7 +99,7 @@ She's dead, of course!
   });
 
   xit('multiple verses', () => {
-    var expected = `I know an old lady who swallowed a fly.
+    const expected = `I know an old lady who swallowed a fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 
 I know an old lady who swallowed a spider.
@@ -113,7 +113,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   });
 
   xit('the whole song', () => {
-    var expected = `I know an old lady who swallowed a fly.
+    const expected = `I know an old lady who swallowed a fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 
 I know an old lady who swallowed a spider.
