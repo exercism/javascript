@@ -3,6 +3,7 @@
   "language": "ECMAScript",
   "repository": "https://github.com/exercism/xecmascript",
   "active": true,
+  "test_pattern": ".*[.]spec[.]js$",
   "problems": [
     "hello-world",
     "leap",
