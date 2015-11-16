@@ -22,8 +22,9 @@
     "space-age",
     "grains",
     "triangle",
-    "palindrome-products"
-  ],
+    "palindrome-products",
+    "clock"
+ ],
   "deprecated": [
 
   ],
