@@ -12,7 +12,7 @@ function getOutputDirectory(argv) {
   return 'babel-output';
 }
 
-var gulp = require('gulp'),
+const gulp = require('gulp'),
   jasmine = require('gulp-jasmine'),
   babel = require('gulp-babel'),
   polyfill = require('babel/polyfill'),
