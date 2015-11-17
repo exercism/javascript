@@ -23,7 +23,8 @@
     "grains",
     "triangle",
     "palindrome-products",
-    "clock"
+    "clock",
+    "scrabble-score"
  ],
   "deprecated": [
 
