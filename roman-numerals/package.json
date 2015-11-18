@@ -1,0 +1,25 @@
+{
+  "name": "assignment",
+  "version": "0.0.1",
+  "description": "Exercism ECMAScript assignment",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/xecmascript"
+  },
+  "bugs": {
+    "url": "https://github.com/exercism/xecmascript/issues"
+  },
+  "homepage": "https://github.com/exercism/xecmascript",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-jasmine": "~2.0.1",
+    "gulp-clean": "~0.3.1",
+    "yargs": "~3.27.0",
+    "del": "~2.0.2",
+    "gulp-babel": "~5.3.0",
+    "babel": "~5.8.29"
+  }
+}
