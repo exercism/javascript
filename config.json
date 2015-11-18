@@ -25,7 +25,8 @@
     "palindrome-products",
     "clock",
     "scrabble-score",
-    "binary"
+    "binary",
+    "prime-factors"
  ],
   "deprecated": [
 
