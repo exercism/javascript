@@ -24,7 +24,10 @@
     "triangle",
     "palindrome-products",
     "clock",
-    "scrabble-score"
+    "scrabble-score",
+    "binary",
+    "prime-factors",
+    "circular-buffer"
  ],
   "deprecated": [
 
