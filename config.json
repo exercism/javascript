@@ -26,7 +26,8 @@
     "clock",
     "scrabble-score",
     "binary",
-    "prime-factors"
+    "prime-factors",
+    "circular-buffer"
  ],
   "deprecated": [
 
