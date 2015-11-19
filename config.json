@@ -26,9 +26,10 @@
     "clock",
     "scrabble-score",
     "roman-numerals",
+    "circular-buffer",
     "binary",
     "prime-factors",
-    "circular-buffer"
+    "raindrops"
  ],
   "deprecated": [
 
