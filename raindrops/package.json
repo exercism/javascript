@@ -9,16 +9,17 @@
     "url": "https://github.com/exercism/xecmascript"
   },
   "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-jasmine": "~2.0.1",
+    "babel": "~5.8.29",
     "del": "~2.0.2",
-    "yargs": "~3.27.0",
+    "gulp": "~3.9.0",
     "gulp-babel": "~5.3.0",
-    "babel": "~5.8.29"
+    "gulp-eslint": "^1.1.0",
+    "gulp-jasmine": "~2.0.1",
+    "yargs": "~3.27.0"
   },
-  "dependencies": {},
   "scripts": {},
   "licenses": [
     "MIT"
-  ]
+  ],
+  "dependencies": {}
 }
