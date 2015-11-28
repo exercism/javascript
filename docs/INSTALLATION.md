@@ -34,7 +34,7 @@ $ export PATH=/usr/local/share/npm/bin:$PATH
 
 Each assignment needs some tools to run the tests:
 
-* [Traceur](https://github.com/google/traceur-compiler): to transpile ECMAScript
+* [Babel](https://github.com/babel/babel): to transpile ECMAScript
 2015 code to ECMAScript 5
 * [Jasmine](http://jasmine.github.io): to run tests
 * [Gulp](http://gulpjs.com): to automate everything, you don't need to worry
