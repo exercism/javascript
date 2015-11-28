@@ -22,6 +22,6 @@ export default class Bob {
 ```
 
 You can find more information about modules in the
-[Traceur documentation](https://github.com/google/traceur-compiler/wiki/LanguageFeatures#modules).
+[Babel documentation](https://babeljs.io/docs/learn-es2015/#modules).
 To make it easier to get started, there is a *skeleton* ECMAScript file in the
 directory for the first exercise.
