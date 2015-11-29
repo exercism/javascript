@@ -35,7 +35,8 @@
     "strain",
     "simple-cipher",
     "octal",
-    "sieve"
+    "sieve",
+    "crypto-square"
  ],
   "deprecated": [
 
