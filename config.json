@@ -38,7 +38,8 @@
     "octal",
     "sieve",
     "crypto-square",
-    "accumulate"
+    "accumulate",
+    "trinary"
  ],
   "deprecated": [
 
