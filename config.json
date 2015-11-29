@@ -37,7 +37,8 @@
     "simple-cipher",
     "octal",
     "sieve",
-    "crypto-square"
+    "crypto-square",
+    "accumulate"
  ],
   "deprecated": [
 
