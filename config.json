@@ -39,6 +39,7 @@
     "trinary",
     "sieve",
     "simple-cipher",
+    "luhn",
     "octal"
  ],
   "deprecated": [
