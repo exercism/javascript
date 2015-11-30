@@ -34,7 +34,8 @@
     "allergies",
     "strain",
     "simple-cipher",
-    "octal"
+    "octal",
+    "sieve"
  ],
   "deprecated": [
 
