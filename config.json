@@ -34,12 +34,12 @@
     "allergies",
     "strain",
     "atbash-cipher",
-    "simple-cipher",
-    "octal",
-    "sieve",
-    "crypto-square",
     "accumulate",
-    "trinary"
+    "crypto-square",
+    "trinary",
+    "sieve",
+    "simple-cipher",
+    "octal"
  ],
   "deprecated": [
 
