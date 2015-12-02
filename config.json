@@ -40,6 +40,7 @@
     "sieve",
     "simple-cipher",
     "luhn",
+    "pig-latin",
     "octal"
  ],
   "deprecated": [
