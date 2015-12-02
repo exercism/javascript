@@ -39,6 +39,7 @@
     "trinary",
     "sieve",
     "simple-cipher",
+    "pythagorean-triplet",
     "luhn",
     "pig-latin",
     "octal"
