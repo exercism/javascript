@@ -1,7 +1,6 @@
 
 class HelloWorld {
-    hello(name) {
-        name = name || 'World';
+    hello(name = 'World') {
         return `Hello, ${name}!`;
     }
 }
