@@ -4,7 +4,7 @@
 //
 
 class HelloWorld {
-  hello(name) {
+  hello() {
     //
     // YOUR CODE GOES HERE
     //
