@@ -39,10 +39,11 @@
     "trinary",
     "sieve",
     "simple-cipher",
-    "pythagorean-triplet",
+    "octal",
     "luhn",
     "pig-latin",
-    "octal"
+    "pythagorean-triplet",
+    "series"
  ],
   "deprecated": [
 
