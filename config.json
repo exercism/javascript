@@ -39,6 +39,7 @@
     "sieve",
     "simple-cipher",
     "octal",
+    "largest-series-product",
     "luhn",
     "kindergarten-garden",
     "pig-latin",
