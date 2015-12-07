@@ -1,11 +1,9 @@
+---
 language: node_js
-
 node_js:
-  - "4.1"
-
+- '4.1'
 sudo: false
-
 script:
-  - bin/fetch-configlet
-  - bin/configlet .
-  - make test
+- bin/fetch-configlet
+- bin/configlet .
+- make test
