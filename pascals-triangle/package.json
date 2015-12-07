@@ -1,0 +1,25 @@
+{
+  "name": "xecmascript",
+  "version": "0.0.0",
+  "description": "Exercism exercises in ECMAScript 6.",
+  "author": "Katrina Owen",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/xecmascript"
+  },
+  "devDependencies": {
+    "babel": "~5.8.29",
+    "del": "~2.0.2",
+    "gulp": "~3.9.0",
+    "gulp-babel": "~5.3.0",
+    "gulp-eslint": "^1.1.0",
+    "gulp-jasmine": "~2.0.1",
+    "yargs": "~3.27.0"
+  },
+  "scripts": {},
+  "licenses": [
+    "MIT"
+  ],
+  "dependencies": {}
+}
