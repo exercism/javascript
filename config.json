@@ -23,7 +23,6 @@
     "space-age",
     "grains",
     "triangle",
-    "palindrome-products",
     "clock",
     "scrabble-score",
     "roman-numerals",
@@ -33,9 +32,7 @@
     "raindrops",
     "allergies",
     "strain",
-    "secret-handshake",
     "atbash-cipher",
-    "difference-of-squares",
     "accumulate",
     "crypto-square",
     "trinary",
@@ -45,7 +42,10 @@
     "luhn",
     "pig-latin",
     "pythagorean-triplet",
-    "series"
+    "series",
+    "difference-of-squares",
+    "secret-handshake",
+    "palindrome-products"
  ],
   "deprecated": [
 
