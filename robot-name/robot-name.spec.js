@@ -55,4 +55,9 @@ describe('Robot', () => {
     expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS + 1);
   });
 
+  xit('internal name cannot be modified', () => {
+    const modifyInternal = () => robot.name += "a modification";
+    expect(modifyInternal).toThrow();
+  });
+
 });

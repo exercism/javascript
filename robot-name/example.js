@@ -1,47 +1,27 @@
-const HOW_MANY_CHARS = 26;
-const HOW_MANY_NUMBERS = 1000;
-const CHAR_CODE_A = 'A'.charCodeAt(0);
+const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      BASE = 10,
+      usedNames ={};
 
-let generatedNames = {};
+const random = (max) => Math.floor(Math.random()*max);
 
-function generateName() {
-  let name = '';
-  name += generateRandomChar();
-  name += generateRandomChar();
-  name += pad(generateRandomNumber());
-
-  return getNotGeneratedName(name);
-}
-
-function generateRandomChar() {
-  const random = Math.floor(Math.random() * HOW_MANY_CHARS);
-  return String.fromCharCode(CHAR_CODE_A + random);
-}
-
-function pad(number) {
-  return ('000' + number).slice(-3);
-}
-
-function generateRandomNumber() {
-  return Math.floor(Math.random() * HOW_MANY_NUMBERS);
-}
-
-function getNotGeneratedName(name) {
-  if (generatedNames[name]) {
-    return generateName();
-  }
-
-  generatedNames[name] = true;
+const generateName = () => {
+  let name = ALPHA.charAt(random(ALPHA.length))
+    +ALPHA.charAt(random(ALPHA.length))
+    +random(BASE)+random(BASE)+random(BASE);
+  usedNames[name] ? name = generateName() : usedNames[name] = true;
   return name;
-}
+};
 
 export default class Robot {
-  constructor() {
-    this.name = generateName();
+  constructor(){
+    this.robotName = generateName();
+  }
+
+  get name() {
+    return this.robotName;
   }
 
   reset() {
-    this.name = generateName();
+    this.robotName = generateName();
   }
 };
-
