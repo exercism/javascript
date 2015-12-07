@@ -35,6 +35,7 @@
     "atbash-cipher",
     "accumulate",
     "crypto-square",
+    "nth-prime",
     "trinary",
     "sieve",
     "simple-cipher",
