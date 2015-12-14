@@ -62,7 +62,9 @@
     "matrix",
     "pascals-triangle",
     "robot-simulator",
-    "palindrome-products"
+    "palindrome-products",
+    "custom-set"
+
  ],
   "deprecated": [
 
