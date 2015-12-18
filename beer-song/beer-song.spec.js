@@ -54,7 +54,22 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
   });
 
   xit('sings all the verses', () => {
-    const finish = `2 bottles of beer on the wall, 2 bottles of beer.
+
+    const song = Beer.sing();
+
+    //are the first 97 verses present?
+    for (let verseNum = 3; verseNum < 99; verseNum++) {
+
+      const verse = `${verseNum} bottles of beer on the wall, ${verseNum} bottles of beer.
+Take one down and pass it around, ${verseNum-1} bottles of beer on the wall.
+
+`;
+
+      expect(song).toMatch(verse);
+    }
+
+    //how about the final 3?
+    const expected = `2 bottles of beer on the wall, 2 bottles of beer.
 Take one down and pass it around, 1 bottle of beer on the wall.
 
 1 bottle of beer on the wall, 1 bottle of beer.
@@ -63,18 +78,8 @@ Take it down and pass it around, no more bottles of beer on the wall.
 No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.
 `;
-    let wholeSong = '',
-      verseNum = 99;
-    while (verseNum > 2) {
-      const verse = `${verseNum} bottles of beer on the wall, ${verseNum} bottles of beer.
-Take one down and pass it around, ${--verseNum} bottles of beer on the wall.
+    expect(song).toMatch(expected);
 
-`;
-
-      wholeSong += verse;
-    }
-    wholeSong += finish;
-    expect(Beer.sing()).toEqual(wholeSong);
   });
 
 });
