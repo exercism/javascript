@@ -14,7 +14,7 @@ class Wordy {
 
   answer() {
     if (!this.numbers || !this.operands) {
-      throw (new ArgumentError());
+      throw new ArgumentError();
     }
     let ii = 1,
         jj = 0,
@@ -39,7 +39,7 @@ class Wordy {
       }
     }
     return result;
-  };
+  }
 }
 
 export { Wordy as WordProblem, ArgumentError as ArgumentError};

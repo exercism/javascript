@@ -25,7 +25,7 @@ class Triangle {
 
   violatesInequality() {
     const [a, b, c] = this.sides;
-    return (a + b < c) || (a + c < b) || (b + c < a);
+    return a + b < c || a + c < b || b + c < a;
   }
 
   hasImpossibleSides() {

@@ -3,4 +3,4 @@ export default function (octal) {
   return {
     toDecimal: () => octal.split('').reduce((prev, curr) => prev * 8 + parseInt(curr), 0)
   };
-};
+}

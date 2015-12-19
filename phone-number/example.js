@@ -29,13 +29,13 @@ function cleanNumber(number) {
   }
 
   return '0000000000';
-};
+}
 
 function exchangeCode(number) {
   return number.substr(3, 3);
-};
+}
 
 function subscriberNumber(number) {
   return number.substr(6);
-};
+}
 

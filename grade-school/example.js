@@ -22,6 +22,6 @@ class School {
     return clone(db);
   }
 
-};
+}
 
 export default School;

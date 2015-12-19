@@ -22,4 +22,4 @@ export default class Squares {
     return this.squareOfSums - this.sumOfSquares;
   }
 
-};
+}

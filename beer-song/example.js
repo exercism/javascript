@@ -15,7 +15,7 @@ function action(currentVerse) {
     return 'Go to the store and buy some more, ';
   }
 
-  let sbj = (currentVerse === 1 ? 'it' : 'one');
+  let sbj = currentVerse === 1 ? 'it' : 'one';
   return 'Take ' + sbj + ' down and pass it around, ';
 }
 
@@ -24,7 +24,7 @@ function nextBottle(currentVerse) {
 }
 
 function nextVerse(currentVerse) {
-  return currentVerse === 0 ? 99 : (currentVerse - 1);
+  return currentVerse === 0 ? 99 : currentVerse - 1;
 }
 
 class BeerSong {

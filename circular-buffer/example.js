@@ -12,14 +12,14 @@ const BufferFullException = () => ({
 
 const read = () => {
   if (buffer.length === 0){
-    throw (BufferEmptyException());
+    throw BufferEmptyException();
   }
   return buffer.splice(0,1)[0];
 };
 
 const write = (value) => {
   if (buffer.length === bufferMax){
-    throw (BufferFullException())
+    throw BufferFullException();
   }
   value ? buffer.push(value) : null;
 };

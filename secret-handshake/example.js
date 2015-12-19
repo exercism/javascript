@@ -12,7 +12,7 @@ export default function (handshake) {
 
     for (let i = 0; i < HANDSHAKE_COMMANDS.length; i++) {
       const currentCommand = HANDSHAKE_COMMANDS[i];
-      const handshakeHasCommand = (handshake & Math.pow(2,i));
+      const handshakeHasCommand = handshake & Math.pow(2,i);
 
       if (handshakeHasCommand) {
         if (currentCommand === 'REVERSE') {

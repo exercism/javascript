@@ -9,14 +9,20 @@ import BigInt from './big-integer';
 export default class Grains {
 
   /**
-   * Gets the number of grains on the nth square.
+   * Gets the number of grains on the nth square
+   *
+   * @param {Number} num Number to compute its square
+   *
+   * @return {String} Square of num
    */
   square(num) {
     return BigInt(2).pow(num - 1).toString();
   }
 
   /**
-   * Gets the total number of grains on all squares.
+   * Gets the total number of grains on all squares
+   *
+   * @return {String} Sum of all squares
    */
   total() {
     let total = BigInt(0);

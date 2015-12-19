@@ -11,6 +11,6 @@ function transform(input) {
   });
 
   return output;
-};
+}
 
 export default transform;

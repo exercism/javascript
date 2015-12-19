@@ -8,7 +8,7 @@ export default function(hour, minute) {
 
   function formatNum(num) {
     const numString = num.toString();
-    return (numString.length === 1 ? "0" + numString : numString);
+    return numString.length === 1 ? "0" + numString : numString;
   }
 
   function adjustTime(delta) {
@@ -29,6 +29,6 @@ export default function(hour, minute) {
     toString: () => formatNum(clock.hour) + ":" + formatNum(clock.minute),
     plus:     function(minutes) { adjustTime(minutes); return this; },
     minus:    function(minutes) { adjustTime(-minutes); return this; },
-    equals:   (otherClock) => (clock.hour === otherClock.clock.hour && clock.minute === otherClock.clock.minute)
+    equals:   (otherClock) => clock.hour === otherClock.clock.hour && clock.minute === otherClock.clock.minute
   }
-};
+}

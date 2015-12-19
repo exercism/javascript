@@ -28,4 +28,4 @@ function sieve(n) {
 
 export default function (n) {
   this.primes = sieve(n);
-};
+}

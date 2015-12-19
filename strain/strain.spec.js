@@ -11,11 +11,11 @@ describe('strain', () => {
   });
 
   xit('keeps first and last', () => {
-    expect(strain.keep([1, 2, 3], (e) =>  (e % 2) === 1 )).toEqual([1, 3]);
+    expect(strain.keep([1, 2, 3], (e) => e % 2 === 1 )).toEqual([1, 3]);
   });
 
   xit('keeps neither first nor last', () => {
-    expect(strain.keep([1, 2, 3, 4, 5], (e) =>  (e % 2) === 0 )).toEqual([2, 4]);
+    expect(strain.keep([1, 2, 3, 4, 5], (e) => e % 2 === 0 )).toEqual([2, 4]);
   });
 
   xit('keeps strings', () => {

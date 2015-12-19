@@ -1,7 +1,7 @@
 export default class Song {
 
   /**
-   * @param  {Number} verse
+   * @param {Number} number
    * verse number
    *
    * @return {String}
@@ -67,7 +67,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     case 8: return `I know an old lady who swallowed a horse.
 She's dead, of course!
 `;
-    };
+    }
   }
 
   /**

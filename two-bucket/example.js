@@ -24,14 +24,13 @@ class TwoBucket {
 
   bigFirst(measurements, moveCount, prBool) {
     let j = measurements[0], k = measurements[1];
-    while(true) {
-      if(this.reachedGoal(measurements)) break;
+    while(!this.reachedGoal(measurements)) {
       if(k > this.x && j === 0 && moveCount === 0) {
         j = this.x;
         k = this.y - j;
       } else if(j == this.x) {
         j = 0;
-      } else if((k > this.x && j !== 0) || (k > this.x && prBool)) {
+      } else if(k > this.x && j !== 0 || k > this.x && prBool) {
         k = k - (this.x-j);
         j = this.x;
       } else if(k > this.x || j == 0) {
@@ -50,15 +49,14 @@ class TwoBucket {
 
   smallFirst(measurements, moveCount, prBool) {
     let j = measurements[0], k = measurements[1];
-    while(true) {
-      if(this.reachedGoal(measurements)) break;
+    while(!this.reachedGoal(measurements)) {
       if(j === this.x && moveCount === 0) {
         j = 0;
         k = this.x;
       } else if(j == 0) {
         j = this.x;
       } else if(j == this.x && k < this.y) {
-        var tempK = k;
+        let tempK = k;
         k + j > this.y ? k = this.y : k = tempK + j;
         tempK + j > this.y ? j = j - (this.y- tempK) : j = 0;
       } else if(k === this.y) {
