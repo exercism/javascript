@@ -12,7 +12,8 @@ const Sum = (factors = [3, 5]) => {
 
     return Object.keys(multiples).reduce((prev, curr) => prev += multiples[curr], 0);
   };
+
   return self;
-};
+}
 
 export default Sum;

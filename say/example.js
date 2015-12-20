@@ -44,7 +44,7 @@ function bigPart(number) {
     if (number.current >= bigNumber) {
       factor = Math.floor(number.current / bigNumber);
       result += threeDigit(factor) + ' ' + bigNumbers[bigNumber] + ' ';
-      number.current = number.current - (factor * bigNumber);
+      number.current = number.current - factor * bigNumber;
     }
   }
   return result;

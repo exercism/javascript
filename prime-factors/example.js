@@ -14,6 +14,6 @@ class PrimeFactors {
     }
     return factors;
   }
-};
+}
 
 export default PrimeFactors;

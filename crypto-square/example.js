@@ -5,12 +5,12 @@ export default class Square {
 
   normalizePlaintext () {
     return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g,'');
-  };
+  }
 
   size () {
     const realLength = Math.sqrt(this.normalizePlaintext().length);
     return Math.ceil(realLength);
-  };
+  }
 
   plaintextSegments () {
     const plainText = this.normalizePlaintext();
@@ -18,7 +18,7 @@ export default class Square {
 
     const splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
     return plainText.match(splitRegex);
-  };
+  }
 
   ciphertext () {
     const textSegments = this.plaintextSegments(),
@@ -45,11 +45,11 @@ export default class Square {
     }
 
     return columns.join('');
-  };
+  }
 
   normalizeCiphertext () {
     const chunkSize = this.size();
     const splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
     return this.ciphertext().match(splitRegex).join(' ');
-  };
-};
+  }
+}

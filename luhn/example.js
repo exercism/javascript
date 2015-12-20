@@ -36,7 +36,7 @@ export default class Luhn {
   }
 
   static determineIfValid(sum) {
-    return (sum % 10 === 0);
+    return sum % 10 === 0;
   }
 
   static create(number) {
@@ -53,5 +53,5 @@ export default class Luhn {
       index += 1;
     }
     return finalNumber;
-  };
+  }
 }

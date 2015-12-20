@@ -15,14 +15,14 @@ function xCode(key, inText, sign) {
     }, '');
 }
 
-const mod = (n, m) => ((n % m) + m) % m;
+const mod = (n, m) => (n % m + m) % m;
 
 export default function (key) {
 
   if (typeof key === 'undefined') {
     key = generateKey();
   } else if (key.length === 0 || key.match(/[^a-z]/, "g")) {
-    throw(new Error("Bad key"));
+    throw new Error("Bad key");
   }
 
   return {
@@ -34,4 +34,4 @@ export default function (key) {
       return xCode(this.key, encodedText, -1);
     }
   }
-};
+}

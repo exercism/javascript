@@ -24,4 +24,4 @@ export default class Robot {
   reset() {
     this.robotName = generateName();
   }
-};
+}
