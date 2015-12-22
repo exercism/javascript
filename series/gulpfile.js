@@ -75,10 +75,10 @@ gulp.task('lint', function () {
         'use-isnan': 2, // do not compare with `NaN` value, use isNan() instead
         'valid-jsdoc': 2, // ensure JSDoc comments are valid
         'valid-typeof': 2 // ensure that the results of typeof are compared against a valid string
-      },      
-      ecmaFeatures: {
-        'modules': true,  //this gives us modules :)
       },
+      ecmaFeatures: {
+        'modules': true  //this gives us modules :)
+      }
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
