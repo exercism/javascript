@@ -39,6 +39,8 @@ Each assignment needs some tools to run the tests:
 * [Jasmine](http://jasmine.github.io): to run tests
 * [Gulp](http://gulpjs.com): to automate everything, you don't need to worry
 about anything
+* [ESLint](http://eslint.org/) (optional): to perform several static analysis and
+coding style checks to your ECMAScript code.
 
 They can be installed running this command within each assignment directory:
 

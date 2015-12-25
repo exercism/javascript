@@ -4,6 +4,20 @@ Execute the tests with:
 $ gulp test
 ```
 
+Be sure your code follows best practices and coding styles, as other users do, with
+ESLint, a tool to perform static analysis to your code. Sometimes, tools like this
+save you some time detecting typos or silly mistakes in your ECMAScript code:
+
+```bash
+$ gulp lint
+```
+
+Or do both at the same time:
+
+```bash
+$ gulp lint test
+```
+
 ## Making Your First ECMAScript 2015 Module
 
 Usually, tests on this track will load your implementation importing it as a

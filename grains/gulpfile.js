@@ -31,7 +31,7 @@ gulp.task('test', [ 'babel' ], function () {
     .pipe(jasmine());
 });
 
-gulp.task('babel', [ 'lint' ], function () {
+gulp.task('babel', function () {
   return gulp.src([ inputDir + '/*.js' ])
     .pipe(babel())
     .pipe(gulp.dest(outputDir));
