@@ -26,7 +26,7 @@ test-assignment: node_modules
 	@cp grains/big-integer.$(FILEEXT) $(OUTDIR)
 	@sed 's/xit/it/g' $(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp $(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
-	@gulp test --input $(INTDIR) --output $(OUTDIR)
+	@gulp lint test --input $(INTDIR) --output $(OUTDIR)
 
 test:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done
