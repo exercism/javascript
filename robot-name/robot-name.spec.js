@@ -60,4 +60,40 @@ describe('Robot', () => {
     expect(modifyInternal).toThrow();
   });
 
+
+  xit('new names should not be sequential', () => {
+    const name1 = robot.name;
+    const name2 = (new Robot()).name;
+    const name3 = (new Robot()).name;
+    expect(areSequential(name1, name1)).toBe(true);
+    expect(areSequential(name1, name2)).toBe(false);
+    expect(areSequential(name2, name3)).toBe(false);
+  });
+
+  xit('names from reset should not be sequential', () => {
+    const name1 = robot.name;
+    robot.reset();
+    const name2 = robot.name;
+    robot.reset();
+    const name3 = robot.name;
+    expect(areSequential(name1, name2)).toBe(false);
+    expect(areSequential(name2, name3)).toBe(false);
+    expect(areSequential(name3, name3)).toBe(true);
+  });
+
 });
+
+const areSequential = (name1, name2) => {
+  const alpha1 = name1.substr(0,2);
+  const alpha2 = name2.substr(0,2);
+  const num1 = +name1.substr(2,3);
+  const num2 = +name2.substr(2,3);
+
+  const numDiff = num2-num1;
+  const alphaDiff = (alpha2.charCodeAt(0)-alpha1.charCodeAt(0))*26
+    + (alpha2.charCodeAt(1)-alpha1.charCodeAt(1));
+
+  const totalDiff = alphaDiff*1000 + numDiff;
+
+  return Math.abs(totalDiff) <= 1;
+};
