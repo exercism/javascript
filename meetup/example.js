@@ -1,13 +1,12 @@
-export default function meetupDay (year, month, day_of_week, which) {
+export default function meetupDay (year, month, dayOfWeek, which) {
 
-  let candidates = _getCandidates(year, month, day_of_week),
-    d,
-    i,
-    res;
+  let candidates = getCandidates(year, month, dayOfWeek);
+  let d, i, res;
+
   which = which.toLowerCase();
 
   if (which === 'teenth') {
-    res = _find(candidates, d =>  {
+    res = find(candidates, d =>  {
       return 13 <= d.getDate() && d.getDate() <= 19;
     });
   }
@@ -19,12 +18,12 @@ export default function meetupDay (year, month, day_of_week, which) {
     res = candidates.slice(which, which + 1).pop();
   }
 
-  if (!res) { throw new MeetupDayException('Day not found! ;_;'); }
+  if (!res) { throw new MeetupDayException('Day not found!'); }
 
   return res;
 }
 
-function _getCandidates (year, month, day_of_week) {
+function getCandidates (year, month, dayOfWeek) {
   let d,
     i,
     numDaysInMonth = new Date(year, month + 1, 0).getDate(),
@@ -33,7 +32,7 @@ function _getCandidates (year, month, day_of_week) {
   for (i = 0; i < numDaysInMonth; i++) {
     d = new Date(year, month, i + 1);
 
-    if (d.getDay() === _getDayIndex(day_of_week)) {
+    if (d.getDay() === getDayIndex(dayOfWeek)) {
       res.push(d);
     }
   }
@@ -41,7 +40,7 @@ function _getCandidates (year, month, day_of_week) {
   return res;
 }
 
-function _getDayIndex (day) {
+function getDayIndex (day) {
   const daysInd = {
     'sunday': 0,
     'monday': 1,
@@ -57,7 +56,7 @@ function _getDayIndex (day) {
   return daysInd[day];
 }
 
-function _find(ary, callback) {
+function find(ary, callback) {
   for (let i = 0; i < ary.length; i++) {
     if (callback(ary[i], i, ary)) { return ary[i]; }
   }
