@@ -1,19 +1,27 @@
 import Acronyms from './acronym';
 
-describe('acronyms', ()=>{
-  const PAIRS = {
-    'Portable Network Graphics' : 'PNG',
-    'Ruby on Rails' : 'ROR',
-    'HyperText Markup Language': 'HTML',
-    'First In, First Out' : 'FIFO',
-    'PHP: Hypertext Preprocessor' : 'PHP',
-    'Complementary metal-oxide semiconductor' : 'CMOS'
-  };
+describe('Acronyms are produced from', ()=>{
+  it('title cased phrases', () => {
+    expect(Acronyms.parse('Portable Network Graphics')).toEqual('PNG');
+  });
 
-  it('Tests the creation of acronyms from phrases', () => {
-    Object.keys(PAIRS).forEach( key => {
-      expect(Acronyms.parse(key)).toEqual(PAIRS[key]);
-    })
-  })
+  it('other title cased phrases', () => {
+    expect(Acronyms.parse('Ruby on Rails')).toEqual('ROR');
+  });
 
+  it('inconsistently cased phrases', ()=>{
+    expect(Acronyms.parse('HyperText Markup Language')).toEqual('HTML');
+  });
+
+  it('phrases with punctuation', () => {
+    expect(Acronyms.parse('First In, First Out')).toEqual('FIFO');
+  });
+
+  it('other phrases with punctuation', () => {
+    expect(Acronyms.parse('PHP: Hypertext Preprocessor')).toEqual('PHP');
+  });
+
+  it('phrases with punctuation and sentence casing', () => {
+    expect(Acronyms.parse('Complementary metal-oxide semiconductor')).toEqual('CMOS');
+  });
 });
