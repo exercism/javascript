@@ -3,7 +3,7 @@
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://help.exercism.io/getting-started-with-ecmascript.html
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
