@@ -5,3 +5,8 @@ ECMAScript 2015 is a new version of the standard that defines JavaScript, the la
 > -- [ECMA International Language Specification](http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-overview)
 
 The current revision of ECMAScript is ECMAScript 2015, previously known as ES6 or Harmony.  This version brings many enhancements over ES5, including notably template strings, expressive arrow function syntax, and cleaner syntax for defining classes.  Support in current browsers is incomplete, and often requires transpilation with a tool like [Babel](https://babeljs.io/).   
+
+---
+
+_This track is intended for experimenting with the newest features of the JavaScript language and the ECMAScript standard. Here, you will find code that not all browsers are able to run. For widely supported JavaScript, you may be interested in the [JavaScript track](http://exercism.io/languages/javascript)._
+
