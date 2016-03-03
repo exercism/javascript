@@ -13,16 +13,23 @@ export default class Deque {
     if (!this.head) {
       return undefined;
     }
-    const result = this.head.value;
-    this.head = this.head.prev;
-    return result;
+
+    const value = this.head.value;
+    if (this.head.next) {
+      this.head = this.head.next;
+      this.head.prev = null;
+    } else {
+      this.head = this.tail = null;
+    }
+
+    return value;
   }
 
   push(value) {
     if (this.head) {
       const newHead = new Element(value);
-      newHead.prev = this.head;
-      this.head.next = newHead;
+      newHead.next = this.head;
+      this.head.prev = newHead;
       this.head = newHead;
     } else {
       this.head = new Element(value);
@@ -31,17 +38,26 @@ export default class Deque {
   }
 
   shift() {
-    this.tail.next ? this.tail.next.prev = null : {};
+    if (!this.tail) {
+      return undefined;
+    }
+
     const value = this.tail.value;
-    this.tail = this.tail.next;
+    if (this.tail.prev) {
+      this.tail = this.tail.prev;
+      this.tail.next = null;
+    } else {
+      this.head = this.tail = null;
+    }
+
     return value;
   }
 
   unshift(value) {
     if (this.tail) {
       const newTail = new Element(value);
-      newTail.next = this.tail;
-      this.tail.prev = newTail;
+      newTail.prev = this.tail;
+      this.tail.next = newTail;
       this.tail = newTail;
     } else {
       this.tail = new Element(value);
@@ -51,11 +67,11 @@ export default class Deque {
 
   count() {
     let count = 0,
-      element = this.head;
+        element = this.head;
 
     while (this.head && element) {
       count++;
-      element = element.prev;
+      element = element.next;
     }
     return count;
   }
@@ -64,14 +80,19 @@ export default class Deque {
     let element = this.head;
     while (element) {
       if (element.value === value) {
-        if (this.head === element){
-          this.head = null;
+        if (element.next) {
+          element.next.prev = element.prev;
+        } else {
+          this.tail = this.tail.prev;
         }
-        element.next ? element.next.prev = element.prev : {};
-        element.prev ? element.prev.next = element.next : {};
+        if (element.prev) {
+          element.prev.next = element.next;
+        } else {
+          this.head = this.head.next;
+        }
         element = null;
       } else {
-        element = element.prev;
+        element = element.next;
       }
     }
   }
