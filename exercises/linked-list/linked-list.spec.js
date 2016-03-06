@@ -54,6 +54,22 @@ describe('LinkedList', () => {
     list.push(20);
     expect(list.count()).toBe(2);
   });
+  xit('sets head/tail after popping last element', () => {
+    const list = new LinkedList();
+    list.push(10);
+    list.pop();
+    list.unshift(20);
+    expect(list.count()).toBe(1);
+    expect(list.pop()).toBe(20);
+  });
+  xit('sets head/tail after shifting last element', () => {
+    const list = new LinkedList();
+    list.unshift(10);
+    list.shift();
+    list.push(20);
+    expect(list.count()).toBe(1);
+    expect(list.shift()).toBe(20);
+  });
   xit('deletes the element with the specified value from the list', () => {
     const list = new LinkedList();
     list.push(10);
