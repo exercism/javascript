@@ -2,29 +2,7 @@ import Series from './largest-series-product';
 
 describe('Series', () => {
 
-  it('digits', () => {
-    expect(new Series('0123456789').digits).toEqual([0,1,2,3,4,5,6,7,8,9]);
-  });
-
-  xit('maintains digit order', () => {
-    expect(new Series('9876543210').digits).toEqual([9,8,7,6,5,4,3,2,1,0]);
-  });
-
-  xit('returns empty array for no digits', () => {
-    expect(new Series('').digits).toEqual([]);
-  });
-
-  xit('slices by 2', () => {
-    expect(new Series('01234').slices(2))
-      .toEqual([[0, 1], [1, 2], [2, 3], [3, 4]]);
-  });
-
-  xit('slices by 3', () => {
-    expect(new Series('982347').slices(3))
-      .toEqual([[9, 8, 2], [8, 2, 3], [2, 3, 4], [3, 4, 7]]);
-  });
-
-  xit('can get the largest product of 2', () => {
+  it('can get the largest product of 2', () => {
     expect(new Series('0123456789').largestProduct(2)).toBe(72);
   });
 
