@@ -17,7 +17,9 @@
     "gulp-jasmine": "~2.0.1",
     "yargs": "~3.27.0"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "gulp lint test"
+  },
   "licenses": [
     "MIT"
   ],
