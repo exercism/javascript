@@ -1,4 +1,4 @@
-const Sum = (factors = [3, 5]) => {
+const Sum = (factors) => {
   let self = this instanceof Sum ? this : Object.getPrototypeOf(Sum);
   self.factors = factors;
 
@@ -14,6 +14,6 @@ const Sum = (factors = [3, 5]) => {
   };
 
   return self;
-}
+};
 
 export default Sum;
