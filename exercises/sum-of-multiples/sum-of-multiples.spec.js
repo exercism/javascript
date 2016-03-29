@@ -2,23 +2,23 @@ import SumOfMultiples from './sum-of-multiples';
 
 describe('SumOfMultiples', () => {
   it('to 1', () => {
-    expect(SumOfMultiples().to(1)).toBe(0);
+    expect(SumOfMultiples([3, 5]).to(1)).toBe(0);
   });
 
   xit('to 3', () => {
-    expect(SumOfMultiples().to(4)).toBe(3);
+    expect(SumOfMultiples([3, 5]).to(4)).toBe(3);
   });
 
   xit('to 10', () => {
-    expect(SumOfMultiples().to(10)).toBe(23);
+    expect(SumOfMultiples([3, 5]).to(10)).toBe(23);
   });
 
   xit('to 100', () => {
-    expect(SumOfMultiples().to(100)).toBe(2318);
+    expect(SumOfMultiples([3, 5]).to(100)).toBe(2318);
   });
 
   xit('to 1000', () => {
-    expect(SumOfMultiples().to(1000)).toBe(233168);
+    expect(SumOfMultiples([3, 5]).to(1000)).toBe(233168);
   });
 
   xit('[7, 13, 17] to 20', () => {
