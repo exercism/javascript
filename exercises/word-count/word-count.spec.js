@@ -28,7 +28,7 @@ describe('words()', () => {
     expect(words.count('testing 1 2 testing')).toEqual(expectedCounts);
   });
 
-  xit('respects case', () => {
+  xit('normalizes to lower case', () => {
     const expectedCounts = { go: 3 };
     expect(words.count('go Go GO')).toEqual(expectedCounts);
   });
