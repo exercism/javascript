@@ -28,13 +28,13 @@ describe('words()', () => {
     expect(words.count('testing 1 2 testing')).toEqual(expectedCounts);
   });
 
-  xit('respects case', () => {
-    const expectedCounts = { go: 1, Go:1, GO:1 };
+  xit('normalizes to lower case', () => {
+    const expectedCounts = { go: 3 };
     expect(words.count('go Go GO')).toEqual(expectedCounts);
   });
 
   xit('counts properly international characters', () => {
-    const expectedCounts = { '¡Hola!': 1, '¿Qué': 1, 'tal?': 1, 'Привет!': 1 };
+    const expectedCounts = { '¡hola!': 1, '¿qué': 1, 'tal?': 1, 'привет!': 1 };
     expect(words.count('¡Hola! ¿Qué tal? Привет!')).toEqual(expectedCounts);
   });
 
@@ -54,12 +54,12 @@ describe('words()', () => {
   });
 
   xit('does not count leading or trailing whitespace', () => {
-    const expectedCounts = { Introductory: 1, Course: 1 };
+    const expectedCounts = { introductory: 1, course: 1 };
     expect(words.count('\t\tIntroductory Course      ')).toEqual(expectedCounts);
   });
 
   xit('handles properties that exist on Object’s prototype', () => {
-    const expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, toString: 1,  'ok?': 1};
+    const expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, tostring: 1,  'ok?': 1};
     expect(words.count('reserved words like prototype and toString ok?')).toEqual(expectedCounts);
   });
 
