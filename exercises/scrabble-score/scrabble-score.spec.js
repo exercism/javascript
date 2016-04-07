@@ -11,6 +11,6 @@ describe('Scrabble', function() {
 
   xit('scores more complicated words with more',() => expect(score('quirky')).toEqual(22));
 
-  xit('scores case insensitive words',() => expect(score('MULTIBILLIONAIRE')).toEqual(20));
+  xit('scores case insensitive words',() => expect(score('OXYPHENBUTAZONE')).toEqual(41));
 
 });
