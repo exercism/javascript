@@ -1,7 +1,8 @@
 export default function(hour, minute) {
   const MINUTESPERDAY = 1440;
+  const HOURSPERDAY = 24;
 
-  const clock = {
+  let clock = {
     hour:   hour,
     minute: minute || 0
   };
@@ -12,7 +13,6 @@ export default function(hour, minute) {
   }
 
   function adjustTime(delta) {
-
     delta = Math.abs(delta) >= MINUTESPERDAY ? delta % MINUTESPERDAY : delta;
 
     const currentMinutes = clock.hour * 60 + clock.minute;
@@ -20,9 +20,11 @@ export default function(hour, minute) {
 
     newMinutes = newMinutes < 0 ? newMinutes += MINUTESPERDAY : newMinutes;
 
-    clock.hour = Math.floor(newMinutes / 60);
+    clock.hour = Math.floor(newMinutes / 60) % HOURSPERDAY;
     clock.minute = newMinutes - clock.hour * 60;
   }
+
+  adjustTime(0);
 
   return {
     clock:    clock,
