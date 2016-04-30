@@ -31,7 +31,7 @@ describe('CircularBuffer', () => {
     buffer.write('1');
     buffer.write('2');
     buffer.clear();
-    expect(buffer.read).toThrowError;
+    expect(buffer.read).toThrow(bufferEmptyException());
     buffer.write('3');
     buffer.write('4');
     expect(buffer.read()).toBe('3');
