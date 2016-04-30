@@ -23,7 +23,7 @@ test-assignment: node_modules
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
 	@cp gulpfile.js exercises/$(ASSIGNMENT)
 	@cp package.json exercises/$(ASSIGNMENT)
-	@cp exercises/grains/big-integer.$(FILEEXT) $(OUTDIR)
+	@cp exercises/grains/lib/big-integer.$(FILEEXT) $(OUTDIR)
 	@sed 's/xit/it/g; s/xdescribe/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@gulp lint test --input $(INTDIR) --output $(OUTDIR)
