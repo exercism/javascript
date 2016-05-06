@@ -24,10 +24,9 @@ test-assignment: node_modules
 	@cp gulpfile.js exercises/$(ASSIGNMENT)
 	@cp package.json exercises/$(ASSIGNMENT)
 	@cp exercises/grains/big-integer.$(FILEEXT) $(OUTDIR)
-	@sed 's/xit/it/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
+	@sed 's/xit/it/g; s/xdescribe/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@gulp lint test --input $(INTDIR) --output $(OUTDIR)
 
 test:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done
-
