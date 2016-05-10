@@ -32,7 +32,7 @@ gulp.task('test', [ 'babel' ], function () {
 });
 
 gulp.task('babel', function () {
-  return gulp.src([ inputDir + '/*.js' ])
+  return gulp.src([ inputDir + '/*.js', inputDir + '/lib/*.js' ])
     .pipe(babel())
     .pipe(gulp.dest(outputDir));
 });
@@ -87,4 +87,3 @@ gulp.task('lint', function () {
 gulp.task('clean', function (cb) {
   del([ outputDir ], cb);
 });
-

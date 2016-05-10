@@ -6,6 +6,4 @@ bin/configlet
 bin/configlet.exe
 node_modules
 .idea
-
-*/node_modules
-*/babel-output
+babel-output

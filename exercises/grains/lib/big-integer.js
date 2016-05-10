@@ -295,7 +295,7 @@ var bigInt = (function (undefined) {
 
     function multiplyKaratsuba(x, y) {
         var n = Math.max(x.length, y.length);
-        
+
         if (n <= 400) return multiplyLong(x, y);
         n = Math.ceil(n / 2);
 
@@ -1069,7 +1069,7 @@ var bigInt = (function (undefined) {
         return this.value;
     };
     SmallInteger.prototype.toJSNumber = SmallInteger.prototype.valueOf;
-    
+
     function parseStringValue(v) {
             if (isPrecise(+v)) {
                 var x = +v;
@@ -1108,7 +1108,7 @@ var bigInt = (function (undefined) {
             trim(r);
             return new BigInteger(r, sign);
     }
-    
+
     function parseNumberValue(v) {
             if (isPrecise(v)) return new SmallInteger(v);
             return parseStringValue(v.toString());
