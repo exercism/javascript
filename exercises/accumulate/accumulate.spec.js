@@ -16,13 +16,13 @@ describe('accumulate()', () => {
   xit('accumulate upcases', () => {
     const accumulator =  word => word.toUpperCase();
     const result = accumulate('hello world'.split(/\s/), accumulator);
-    expect(result).toEqual(['HELLO', 'WORLD'])
+    expect(result).toEqual(['HELLO', 'WORLD']);
   });
 
   xit('accumulate reversed strings', () => {
     const accumulator = word => word.split('').reverse().join('');
     const result = accumulate('the quick brown fox etc'.split(/\s/), accumulator);
-    expect(result).toEqual(['eht', 'kciuq', 'nworb', 'xof', 'cte'])
+    expect(result).toEqual(['eht', 'kciuq', 'nworb', 'xof', 'cte']);
   });
 
   xit('accumulate recursively', () => {
@@ -32,7 +32,7 @@ describe('accumulate()', () => {
       });
     });
 
-    expect(result).toEqual([['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']])
+    expect(result).toEqual([['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']]);
   });
 
 });
