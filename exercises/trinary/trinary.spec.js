@@ -38,4 +38,8 @@ describe('Trinary', () => {
     expect(0).toEqual(new Trinary('carrot').toDecimal());
   });
 
+  xit('digits from 3 to 9 are invalid', () => {
+    expect(0).toEqual(new Trinary('123').toDecimal());
+  });
+
 });
