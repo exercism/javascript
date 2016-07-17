@@ -7,8 +7,17 @@ export default class Trinary {
   }
 
   toDecimal () {
-    const decimal = this.digits.reduce(this.accumulator, 0);
-    return isNaN(decimal) ? 0 : decimal;
+    if (this.someDigitIsInvalid()) {
+      return 0;
+    }
+
+    return this.digits.reduce(this.accumulator, 0);
+  }
+
+  someDigitIsInvalid() {
+    const greaterThanBase = this.digits.some(d => d >= BASE);
+    const notANumber = this.digits.some(d => isNaN(d));
+    return greaterThanBase || notANumber;
   }
 
   accumulator (decimal, digit, index) {
