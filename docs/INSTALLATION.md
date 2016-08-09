@@ -1,9 +1,9 @@
 Install [Node.js](http://nodejs.org):
 
-* **Windows and OS X users**: can install it
-[via package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
-* **Linux users**: [Joyent maintains a document][linstall] that details how to get
-Node.js installed for a wide range of distributions and package managers.
+* **Windows and OS X users**: can
+[download an Installer](https://nodejs.org/en/download/)
+* **Linux users**: can install it
+[via package manager](https://nodejs.org/en/download/package-manager/)
 
 [linstall]: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
 
