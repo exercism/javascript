@@ -67,7 +67,8 @@
     "meetup",
     "bracket-push",
     "two-bucket",
-    "diamond"
+    "diamond",
+    "isogram"
   ],
   "exercises": [
     {
@@ -444,6 +445,12 @@
     },
     {
       "slug": "diamond",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "isogram",
       "difficulty": 1,
       "topics": [
       ]
