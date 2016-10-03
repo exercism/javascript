@@ -4,7 +4,7 @@ describe('Random key cipher',  () => {
   const cipher = new Cipher();
 
   it('has a key made of letters', () => {
-    expect(cipher.key).toMatch(/[a-z]+/);
+    expect(cipher.key).toMatch(/^[a-z]+$/);
   });
 
   // Here we take advantage of the fact that plaintext of "aaa..."
