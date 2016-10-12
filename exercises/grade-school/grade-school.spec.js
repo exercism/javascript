@@ -70,4 +70,11 @@ describe('School', () => {
     expect(school.roster()).toEqual(expectedDb);
   });
 
+  xit('roster cannot be modified outside of module using grade()', () => {
+    school.add('Aimee', 2);
+    school.grade(2).push('Oops.');
+    const expectedDb = { 2 : [ 'Aimee' ] };
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
 });
