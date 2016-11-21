@@ -7,16 +7,6 @@ http://exercism.io/languages/ecmascript
 
 ## Requirements
 
-They are already described in the link above, but just as a
-quick reference:
-
-Install globally a tool to run [Gulp](http://gulpjs.com) if
-it is not installed yet:
-
-```bash
-$ npm install -g gulp-cli
-```
-
 Install assignment dependencies:
 
 ```bash
@@ -28,7 +18,7 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ gulp test
+$ npm test
 ```
 
 In many test suites all but the first test have been skipped.
