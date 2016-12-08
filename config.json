@@ -68,7 +68,8 @@
     "bracket-push",
     "two-bucket",
     "diamond",
-    "isogram"
+    "isogram",
+    "all-your-base"
   ],
   "exercises": [
     {
@@ -451,6 +452,12 @@
     },
     {
       "slug": "isogram",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "all-your-base",
       "difficulty": 1,
       "topics": [
       ]
