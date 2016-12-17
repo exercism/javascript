@@ -28,7 +28,6 @@
     "scrabble-score",
     "roman-numerals",
     "circular-buffer",
-    "binary",
     "prime-factors",
     "raindrops",
     "allergies",
@@ -36,7 +35,6 @@
     "atbash-cipher",
     "accumulate",
     "crypto-square",
-    "trinary",
     "sieve",
     "simple-cipher",
     "octal",
@@ -48,7 +46,6 @@
     "secret-handshake",
     "linked-list",
     "wordy",
-    "hexadecimal",
     "largest-series-product",
     "kindergarten-garden",
     "binary-search",
@@ -465,7 +462,10 @@
   ],
   "deprecated": [
     "nucleotide-count",
-    "point-mutations"
+    "point-mutations",
+    "binary",
+    "trinary",
+    "hexadecimal"
   ],
   "ignored": [
     "node_modules",
