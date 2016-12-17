@@ -37,7 +37,6 @@
     "crypto-square",
     "sieve",
     "simple-cipher",
-    "octal",
     "luhn",
     "pig-latin",
     "pythagorean-triplet",
@@ -262,12 +261,6 @@
       ]
     },
     {
-      "slug": "octal",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
       "slug": "luhn",
       "difficulty": 1,
       "topics": [
@@ -447,7 +440,8 @@
     "point-mutations",
     "binary",
     "trinary",
-    "hexadecimal"
+    "hexadecimal",
+    "octal"
   ],
   "ignored": [
     "node_modules",
