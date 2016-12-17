@@ -208,12 +208,6 @@
       ]
     },
     {
-      "slug": "binary",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
       "slug": "prime-factors",
       "difficulty": 1,
       "topics": [
@@ -251,12 +245,6 @@
     },
     {
       "slug": "crypto-square",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
-      "slug": "trinary",
       "difficulty": 1,
       "topics": [
       ]
@@ -323,12 +311,6 @@
     },
     {
       "slug": "wordy",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
-      "slug": "hexadecimal",
       "difficulty": 1,
       "topics": [
       ]
