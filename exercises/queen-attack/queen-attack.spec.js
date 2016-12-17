@@ -2,7 +2,7 @@ import Queens from './queen-attack';
 
 describe('Queens', () => {
   it('has the correct default positions', () => {
-    const queens = new Queens;
+    const queens = new Queens();
     expect(queens.white).toEqual([0, 3]);
     expect(queens.black).toEqual([7, 3]);
   });
