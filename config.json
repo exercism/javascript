@@ -28,7 +28,6 @@
     "scrabble-score",
     "roman-numerals",
     "circular-buffer",
-    "binary",
     "prime-factors",
     "raindrops",
     "allergies",
@@ -36,10 +35,8 @@
     "atbash-cipher",
     "accumulate",
     "crypto-square",
-    "trinary",
     "sieve",
     "simple-cipher",
-    "octal",
     "luhn",
     "pig-latin",
     "pythagorean-triplet",
@@ -48,7 +45,6 @@
     "secret-handshake",
     "linked-list",
     "wordy",
-    "hexadecimal",
     "largest-series-product",
     "kindergarten-garden",
     "binary-search",
@@ -68,7 +64,8 @@
     "bracket-push",
     "two-bucket",
     "diamond",
-    "isogram"
+    "isogram",
+    "all-your-base"
   ],
   "exercises": [
     {
@@ -210,12 +207,6 @@
       ]
     },
     {
-      "slug": "binary",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
       "slug": "prime-factors",
       "difficulty": 1,
       "topics": [
@@ -258,12 +249,6 @@
       ]
     },
     {
-      "slug": "trinary",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
       "slug": "sieve",
       "difficulty": 1,
       "topics": [
@@ -271,12 +256,6 @@
     },
     {
       "slug": "simple-cipher",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
-      "slug": "octal",
       "difficulty": 1,
       "topics": [
       ]
@@ -325,12 +304,6 @@
     },
     {
       "slug": "wordy",
-      "difficulty": 1,
-      "topics": [
-      ]
-    },
-    {
-      "slug": "hexadecimal",
       "difficulty": 1,
       "topics": [
       ]
@@ -454,11 +427,21 @@
       "difficulty": 1,
       "topics": [
       ]
+    },
+    {
+      "slug": "all-your-base",
+      "difficulty": 1,
+      "topics": [
+      ]
     }
   ],
   "deprecated": [
     "nucleotide-count",
-    "point-mutations"
+    "point-mutations",
+    "binary",
+    "trinary",
+    "hexadecimal",
+    "octal"
   ],
   "ignored": [
     "node_modules",
