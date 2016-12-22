@@ -14,7 +14,7 @@
     "gulp": "~3.9.0",
     "gulp-babel": "~5.3.0",
     "gulp-eslint": "^1.1.0",
-    "gulp-jasmine": "~2.0.1",
+    "gulp-jasmine": "~2.4.2",
     "yargs": "~3.27.0"
   },
   "scripts": {
