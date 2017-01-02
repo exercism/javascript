@@ -2,40 +2,27 @@ export default class PhoneNumber {
 
   constructor(number) {
     this.rawNumber = number;
-    this.cleanedNumber = cleanNumber(number);
   }
 
-  number() { return this.cleanedNumber; }
+  number() {
+    if(/[a-zA-Z]/.test(this.rawNumber)) {
+      return null;
+    }
 
-  areaCode() { return this.cleanedNumber.substr(0, 3); }
-
-  toString() {
-    return '(' + this.areaCode() + ')' +
-           ' ' +
-           exchangeCode(this.cleanedNumber) + '-' +
-           subscriberNumber(this.cleanedNumber);
-  }
-}
-
-function cleanNumber(number) {
-  const num = number.replace(/\D/g,'');
-
-  if (num.length === 10) {
-    return num;
+    return this._cleanedNumber();
   }
 
-  if (num.length === 11 && num[0] === '1') {
-    return num.substr(1);
+  _cleanedNumber() {
+    let num = this.rawNumber.replace(/\D/g,'');
+
+    if (num.length === 10) {
+      return num;
+    }
+
+    if (num.length === 11 && num[0] === '1') {
+      return num.substr(1);
+    }
+
+    return null;
   }
-
-  return '0000000000';
 }
-
-function exchangeCode(number) {
-  return number.substr(3, 3);
-}
-
-function subscriberNumber(number) {
-  return number.substr(6);
-}
-
