@@ -20,18 +20,6 @@ describe('Robot', () => {
     expect(differentRobot.name).not.toEqual(robot.name);
   });
 
-  xit('there can be lots of robots with different names each', () => {
-    const NUMBER_OF_ROBOTS = 10000;
-    const usedNames = new Set();
-
-    for (let i = 0; i < NUMBER_OF_ROBOTS; i++) {
-      const newRobot = new Robot();
-      usedNames.add(newRobot.name);
-    }
-
-    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS);
-  });
-
   xit('is able to reset the name', () => {
     const originalName = robot.name;
 
