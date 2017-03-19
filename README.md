@@ -1,4 +1,4 @@
-# xECMAScript [![Build Status](https://travis-ci.org/exercism/xecmascript.png?branch=master)](https://travis-ci.org/exercism/xecmascript)
+# xECMAScript [![Build Status](https://travis-ci.org/exercism/xecmascript.svg?branch=master)](https://travis-ci.org/exercism/xecmascript)
 
 Exercism exercises in ECMAScript 6
 
