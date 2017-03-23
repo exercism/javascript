@@ -2,8 +2,9 @@
 export default class PerfectNumbers {
 
   /**
-   * Calculate all the divisors for a given number and return them as an array.
-   * Note: the actual number is not include in the returned array.
+   * Calculate all the divisors for a given number.
+   * @param {number} number - natural number.
+   * @returns {array} array that contains the divisors for a given number NOT including the number itself.
    */
   getDivisors(number) {
 
@@ -31,7 +32,9 @@ export default class PerfectNumbers {
 
   /**
    * Classify a given number as perfect, abundant or deficient.
-   * If the number is equal or smaller than 0, then returns an error: Classification is only possible for natural numbers.
+   * @param {number} number - number to be classified. Note: if the number is equal or smaller than 0,
+   * then returns an error: Classification is only possible for natural numbers.
+   * @returns {string} - string that contains the number classification (perfect, abundant or deficient).
    */
   classify(number) {
 
@@ -47,9 +50,7 @@ export default class PerfectNumbers {
 
     // Sum the factors.
     sum = 0;
-    for (i = 0; i < divsArray.length; i++) {
-      sum = sum + divsArray[i];
-    }
+    sum = divsArray.reduce((sum, div) => sum += div, 0);
 
     // Check if the number is perfect.
     if (sum === number) {
