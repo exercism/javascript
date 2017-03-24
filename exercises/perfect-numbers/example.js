@@ -11,7 +11,7 @@ export default class PerfectNumbers {
     let i;
     let divs = new Array();
 
-    // Accepts only natura numbers greater than 1.
+    // Accepts only natural numbers greater than 1.
     if (number <= 1) {
       return divs;
   	}
@@ -49,7 +49,6 @@ export default class PerfectNumbers {
     const divsArray = this.getDivisors(number);
 
     // Sum the factors.
-    sum = 0;
     sum = divsArray.reduce((sum, div) => sum += div, 0);
 
     // Check if the number is perfect.
