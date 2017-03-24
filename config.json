@@ -11,6 +11,7 @@
     "rna-transcription",
     "bob",
     "gigasecond",
+		"perfect-numbers",
     "word-count",
     "pangram",
     "beer-song",
@@ -100,6 +101,12 @@
     },
     {
       "slug": "gigasecond",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+		{
+      "slug": "perfect-numbers",
       "difficulty": 1,
       "topics": [
       ]
