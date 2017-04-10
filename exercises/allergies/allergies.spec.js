@@ -1,4 +1,4 @@
-const Allergies = require('./allergies');
+import Allergies from './allergies';
 
 describe('Allergies', () => {
 
