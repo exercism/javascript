@@ -3,13 +3,10 @@
 // convenience to get you started writing code faster.
 //
 
-class HelloWorld {
-  hello() {
-    //
-    // YOUR CODE GOES HERE
-    //
-  }
+const helloWorld = () => {
+  //
+  // YOUR CODE GOES HERE
+  //
 }
 
-export default HelloWorld;
-
+export default helloWorld;
