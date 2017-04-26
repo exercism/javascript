@@ -1,40 +1,48 @@
-import isLeapYear from './leap';
+import Year from './leap';
 
 describe('A leap year', () => {
 
   it('is not very common', () => {
-    expect(isLeapYear(2015)).toBeFalsy();
+    let year = new Year(2015);
+    expect(year.isLeap()).toBeFalsy();
   });
 
   xit('is introduced every 4 years to adjust about a day', () => {
-    expect(isLeapYear(2016)).toBeTruthy();
+    let year = new Year(2016);
+    expect(year.isLeap()).toBeTruthy();
   });
 
   xit('is skipped every 100 years to remove an extra day', () => {
-    expect(isLeapYear(1900)).toBeFalsy();
+    let year = new Year(1900);
+    expect(year.isLeap()).toBeFalsy();
   });
 
   xit('is reintroduced every 400 years to adjust another day', () => {
-    expect(isLeapYear(2000)).toBeTruthy();
+    let year = new Year(2000);
+    expect(year.isLeap()).toBeTruthy();
   });
 
   // Feel free to enable the following tests to check some more examples
   xdescribe('Additional example of a leap year that', () => {
 
     it('is not a leap year', () => {
-      expect(isLeapYear(1978)).toBeFalsy();
+      let year = new Year(1978);
+      expect(year.isLeap()).toBeFalsy();
     });
 
     it('is a common leap year', () => {
-      expect(isLeapYear(1992)).toBeTruthy();
+      let year = new Year(1992);
+      expect(year.isLeap()).toBeTruthy();
     });
 
     it('is skipped every 100 years', () => {
-      expect(isLeapYear(2100)).toBeFalsy();
+      let year = new Year(2100);
+      expect(year.isLeap()).toBeFalsy();
     });
 
     it('is reintroduced every 400 years', () => {
-      expect(isLeapYear(2400)).toBeTruthy();
+      let year = new Year(2400);
+      expect(year.isLeap()).toBeTruthy();
     });
 
   });
