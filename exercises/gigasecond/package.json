@@ -9,22 +9,71 @@
     "url": "https://github.com/exercism/xecmascript"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
+    "babel-jest": "^19.0.0",
     "babel-preset-env": "^1.3.3",
-    "babel-preset-es2015": "^6.24.1",
-    "del": "~2.0.2",
-    "gulp": "~3.9.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^1.1.0",
-    "gulp-jasmine": "~2.4.2",
-    "yargs": "~3.27.0"
+    "eslint": "^3.19.0",
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.json"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "scripts": {
-    "test": "gulp test",
-    "lint-test": "gulp lint test"
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint *.js; exit 0;",
+    "lint-test": "eslint *.js && jest --no-cache ./* "
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "comma-dangle": [
+        2,
+        "never"
+      ],
+      "no-cond-assign": [
+        2,
+        "always"
+      ],
+      "no-console": 2,
+      "no-constant-condition": 2,
+      "no-control-regex": 2,
+      "no-debugger": 2,
+      "no-dupe-args": 2,
+      "no-dupe-keys": 2,
+      "no-duplicate-case": 2,
+      "no-empty-character-class": 2,
+      "no-empty": 2,
+      "no-ex-assign": 2,
+      "no-extra-boolean-cast": 2,
+      "no-extra-parens": 2,
+      "no-extra-semi": 2,
+      "no-func-assign": 2,
+      "no-inner-declarations": [
+        2,
+        "both"
+      ],
+      "no-invalid-regexp": 2,
+      "no-irregular-whitespace": 2,
+      "no-negated-in-lhs": 2,
+      "no-obj-calls": 2,
+      "no-regex-spaces": 2,
+      "no-sparse-arrays": 2,
+      "no-unexpected-multiline": 2,
+      "no-unreachable": 2,
+      "use-isnan": 2,
+      "valid-jsdoc": 2,
+      "valid-typeof": 2
+    }
   },
   "licenses": [
     "MIT"

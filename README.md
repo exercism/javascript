@@ -4,12 +4,11 @@ Exercism exercises in ECMAScript 6
 
 ## Running the Unit Test Suite
 
-[Node.js](https://nodejs.org) must be installed.  We recommend using the latest stable version.  Tests are run with
-a [Gulp](http://gulpjs.com) task so the `gulp-cli` tool must be installed via `npm`
+[Node.js](https://nodejs.org) must be installed.  We recommend using the latest stable version (v7 at the moment.)
 
-    % npm install -g gulp-cli
+    % npm install
 
-Then, `make` commands will install other dependencies as needed.
+Then, the `make` command will install other dependencies as needed.
 
 ### Linting Your Code
 This project uses [eslint](https://github.com/eslint/eslint) to help you write quality JavaScript code by checking for common formatting errors, enforcing style rules, and suggesting changes that conform to best practices.  
@@ -18,12 +17,9 @@ This project uses [eslint](https://github.com/eslint/eslint) to help you write q
    
 
 ### All Assignments
+The make script will build and test all exercises.
 
     % make
-
-### Single Assignment
-
-    % make test-assignment ASSIGNMENT=palindrome-products
 
 ## Contributing Guide
 
