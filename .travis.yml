@@ -6,4 +6,5 @@ sudo: false
 script:
 - bin/fetch-configlet
 - bin/configlet .
+- npm install
 - make test

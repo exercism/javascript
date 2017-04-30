@@ -1,7 +1,7 @@
 Execute the tests with:
 
 ```bash
-$ gulp test
+$ npm run test
 ```
 
 Be sure your code follows best practices and coding styles, as other users do, with
@@ -9,14 +9,21 @@ ESLint, a tool to perform static analysis to your code. Sometimes, tools like th
 save you some time detecting typos or silly mistakes in your ECMAScript code:
 
 ```bash
-$ gulp lint
+$ npm run lint
 ```
 
 Or do both at the same time:
 
 ```bash
-$ gulp lint test
+$ npm run lint-test
 ```
+
+You can also run Jest in "watch" mode, which will re-run your tests automatically when you save changes to the code or test module:
+
+```bash
+$ npm run watch
+```
+
 
 ## Making Your First ECMAScript 2015 Module
 
