@@ -63,11 +63,13 @@ describe('Exercise - Perfect Numbers', () => {
   describe('Invalid Inputs', () => {
 
     xit('Zero is rejected (not a natural number)', () => {
-      expect(perfectNumbers.classify(0)).toEqual('Classification is only possible for natural numbers.');
+      expect(() => perfectNumbers.classify(0))
+        .toThrow('Classification is only possible for natural numbers.');
     });
 
     xit('Negative integer is rejected (not a natural number)', () => {
-      expect(perfectNumbers.classify(-1)).toEqual('Classification is only possible for natural numbers.');
+      expect(() => perfectNumbers.classify(-1))
+        .toThrow('Classification is only possible for natural numbers.');
     });
 
   });
