@@ -42,7 +42,7 @@ export default class PerfectNumbers {
 
     // Check if the input is valid
     if (number <= 0) {
-      return 'Classification is only possible for natural numbers.';
+      throw new Error('Classification is only possible for natural numbers.');
     }
 
     // Factorize the current number.
