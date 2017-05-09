@@ -1,5 +1,5 @@
-# xECMAScript [![Build Status](https://travis-ci.org/exercism/xecmascript.svg?branch=master)](https://travis-ci.org/exercism/xecmascript)
-
+# xECMAScript
+[![Build Status](https://travis-ci.org/exercism/xecmascript.svg?branch=master)](https://travis-ci.org/exercism/xecmascript)
 [![Join the chat at https://gitter.im/exercism/xecmascript](https://badges.gitter.im/exercism/xecmascript.svg)](https://gitter.im/exercism/xecmascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Exercism exercises in ECMAScript 6
@@ -16,7 +16,7 @@ Then, the `make` command will install other dependencies as needed.
 This project uses [eslint](https://github.com/eslint/eslint) to help you write quality JavaScript code by checking for common formatting errors, enforcing style rules, and suggesting changes that conform to best practices.  
 
     % npm run lint-test
-   
+
 
 ### All Assignments
 The make script will build and test all exercises.
