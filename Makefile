@@ -19,7 +19,7 @@ test-assignment:
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	@sed 's/xit/it/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/temp.$(TSTFILE)
-	@jest $(OUTDIR)/temp.*.spec.js
+	@node_modules/.bin/jest $(OUTDIR)/temp.*.spec.js
 	@rm $(OUTDIR)/*
 	@rmdir $(OUTDIR)
 
