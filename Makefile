@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := test
+
 # assignments
 ASSIGNMENT ?= ""
 IGNOREDIRS := "^(\.git|docs|bin|node_modules|.idea)$$"
