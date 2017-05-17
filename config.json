@@ -67,7 +67,9 @@
     "diamond",
     "isogram",
     "all-your-base",
-    "connect"
+    "connect",
+    "flatten-array"
+
   ],
   "exercises": [
     {
@@ -442,9 +444,15 @@
       "topics": [
       ]
     },
-	{
+    {
       "slug": "connect",
       "difficulty": 7,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "flatten-array",
+      "difficulty": 1,
       "topics": [
       ]
     }
