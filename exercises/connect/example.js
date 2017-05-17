@@ -4,21 +4,21 @@
  */
 export default class {
   constructor(board) {
-    this.board = board.map(b => b.split(""));
+    this.board = board.map((b) => [...b]);
   }
   winner() {
-    var players = ['X','O'];
-    for(let i = 0; i < 2; i++) {
-      if(this.checkWin(players[i])) {
-        return players[i];
+    const players = ['X','O'];
+    for(let player of players) {
+      if(this.checkWin(player)) {
+        return player;
       }
     }
     return "";
   }
   checkWin(player) {
     let positions = this.startPositions(player);
-    for(var i = 0; i < positions.length; i++) {
-      if(this.search(positions[i], player,[])) {
+    for(let position of positions) {
+      if(this.search(position, player,[])) {
         return true;
       }
     }
@@ -33,8 +33,8 @@ export default class {
     }
     checked = checked.slice(0);
     checked.push(pos);
-    var matches = this.neighbors(pos).filter(({x,y}) =>{
-      return  this.matches({x,y}, XorO) && checked.filter((spot) => spot.x === x && spot.y === y).length === 0;
+    const matches = this.neighbors(pos).filter(({x,y}) => {
+      return this.matches({x,y}, XorO) && checked.filter((spot) => spot.x === x && spot.y === y).length === 0;
     });
     if(matches.length === 0) return false;
     return matches.filter(spot => this.search(spot, XorO, checked)).length > 0;
@@ -59,7 +59,7 @@ export default class {
   winningSpot({x,y},XorO) {
     return XorO === "X" ?
       y === this.board[0].length - 1 + x:
-      x ===  this.board.length - 1;
+      x === this.board.length - 1;
   }
   matches({x,y}, XorO) {
     return this.board[x] !== undefined && this.board[x][y] === XorO;
