@@ -1,0 +1,6 @@
+# Issues or Pull Requests with these labels will never be considered stale
+exemptLabels:
+  - pinned
+  - security
+  - good first patch
+  - first-timers only
