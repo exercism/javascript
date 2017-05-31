@@ -9,7 +9,9 @@ function isSortedArray(array) {
 }
 
 function recursiveSearch(array, value, start, end) {
-  if (start === end) return -1;
+  if (start === end) {
+    return -1;
+  }
 
   const mid = Math.floor((start + end) / 2);
   if (array[mid] > value) {

@@ -14,7 +14,7 @@ export default class PerfectNumbers {
     // Accepts only natural numbers greater than 1.
     if (number <= 1) {
       return divs;
-  	}
+    }
 
     // 1 always divides everyone!
     divs.push(1);
@@ -24,7 +24,7 @@ export default class PerfectNumbers {
 
       if (number % i === 0) {
         divs.push(i);
-  		}
+      }
     }
 
     return divs;
@@ -38,7 +38,7 @@ export default class PerfectNumbers {
    */
   classify(number) {
 
-    let i, sum, result;
+    let sum, result;
 
     // Check if the input is valid
     if (number <= 0) {
@@ -54,11 +54,9 @@ export default class PerfectNumbers {
     // Check if the number is perfect.
     if (sum === number) {
       result = 'perfect';
-    }
-    else if (sum > number) {
+    } else if (sum > number) {
       result = 'abundant';
-    }
-    else {
+    } else {
       result = 'deficient';
     }
 
