@@ -4,32 +4,35 @@
 
 Exercism exercises in ECMAScript 6
 
+
 ## Running the Unit Test Suite
 
-[Node.js](https://nodejs.org) must be installed.  We recommend using the latest stable version (v7 at the moment.)
+[Node.js](https://nodejs.org) must be installed. Follow [these instructions](http://exercism.io/languages/ecmascript/installing) for installing nodejs.
+We recommend using the latest stable version (v7 at the moment).
+
+Use `npm` to install all required dependencies:
 
     % npm install
 
-Then, the `make` command will install other dependencies as needed.
-
-### Linting Your Code
-This project uses [eslint](https://github.com/eslint/eslint) to help you write quality JavaScript code by checking for common formatting errors, enforcing style rules, and suggesting changes that conform to best practices.  
+#### Linting Your Code
+This project uses [eslint](https://github.com/eslint/eslint) to help you write quality
+ECMAScript code by checking for common formatting errors, enforcing style rules,
+and suggesting changes that conform to best practices.
 
     % npm run lint-test
 
+#### Test All Assignments
+The make script will test all exercises:
 
-### All Assignments
-The make script will build and test all exercises.
+    % make test
 
-    % make
+#### Test Specific Assignment
+Pass the exercise name to make script to run the tests for a specific exercise:
+
+    % make test-assignment ASSIGNMENT=hello-world
+
 
 ## Contributing Guide
 
 Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
 
