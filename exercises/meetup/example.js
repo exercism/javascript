@@ -1,7 +1,7 @@
 export default function meetupDay (year, month, dayOfWeek, which) {
 
   let candidates = getCandidates(year, month, dayOfWeek);
-  let d, i, res;
+  let res;
 
   which = which.toLowerCase();
 
@@ -9,11 +9,9 @@ export default function meetupDay (year, month, dayOfWeek, which) {
     res = find(candidates, d =>  {
       return 13 <= d.getDate() && d.getDate() <= 19;
     });
-  }
-  else if (which === 'last') {
+  } else if (which === 'last') {
     res = candidates.pop();
-  }
-  else {
+  } else {
     which = parseInt(which) - 1;
     res = candidates.slice(which, which + 1).pop();
   }

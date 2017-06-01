@@ -17,11 +17,10 @@ describe('Queens', () => {
     const positioning = {white: [2,4], black: [2,4]};
 
     try {
-      const queens = new Queens(positioning);
+      new Queens(positioning);
     } catch(error) {
       expect(error).toEqual('Queens cannot share the same space');
     }
-
   });
 
   xit('toString representation', () => {

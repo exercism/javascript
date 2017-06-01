@@ -1,7 +1,10 @@
 export default class Series {
 
   constructor(numberString) {
-    if(numberString.match('[^0-9]')) throw new Error('Invalid input.');
+    if(numberString.match('[^0-9]')) {
+      throw new Error('Invalid input.');
+    }
+
     this.numberString = numberString;
     this.digits = this.getDigits();
   }
@@ -13,7 +16,10 @@ export default class Series {
   }
 
   largestProduct(size) {
-    if (size < 0) throw new Error('Invalid input.');
+    if (size < 0) {
+      throw new Error('Invalid input.');
+    }
+
     let product,
       max = 0;
     this.slices(size).forEach( slice => {
