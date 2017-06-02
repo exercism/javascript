@@ -11,6 +11,13 @@ FILEEXT := "js"
 EXAMPLE := "example.$(FILEEXT)"
 TSTFILE := "$(subst _,-,$(ASSIGNMENT)).spec.$(FILEEXT)"
 
+# package.json MD5 hash
+SOURCE_PKG_MD5 ?= "`./bin/md5-hash ./package.json`"
+PKG_FILES= $(shell find ./exercises/*/* -name package.json)
+
+test-package-files:
+	@for pkg in $(PKG_FILES); do ! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || exit 1; done
+
 test-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
 	@echo "running tests for: $(ASSIGNMENT)"
@@ -24,4 +31,5 @@ test-assignment:
 	@rmdir $(OUTDIR)
 
 test:
+	@$(MAKE) -s test-package-files
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done

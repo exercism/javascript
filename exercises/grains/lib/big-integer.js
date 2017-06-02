@@ -1,3 +1,4 @@
+/* eslint-disable */
 // copied from https://github.com/peterolson/BigInteger.js/blob/master/BigInteger.js
 // commit: https://github.com/peterolson/BigInteger.js/commit/58375195b3bc12475cb382b165ba251766a3614e#diff-82f314e495f1c3ec2a3bc0602627d16a
 var bigInt = (function (undefined) {

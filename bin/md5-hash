@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Calculates the MD5 hash of a given file. It uses hashing utilities powered by
+# operating systems, but wraps them into a consistent interface.
+
+OS=$(
+    case $(uname) in
+        (Darwin*)  echo "mac";;
+        (Linux*)   echo "linux";;
+        # TODO: implement MD5 hashing on Windows
+        # (Windows*) echo "windows";;
+        (*)        echo "linux";;
+    esac
+)
+
+case $OS in
+    mac )
+        md5 -q $@;;
+    linux )
+        md5sum $@ | sed -E 's/([a-z0-9]{32}).+$/\1/';;
+esac
