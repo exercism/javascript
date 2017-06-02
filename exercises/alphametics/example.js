@@ -1,4 +1,3 @@
-import "babel-polyfill";
 export default function solve(puzzle) {
   let parts = puzzle
     .split(/[+|==]/g)
