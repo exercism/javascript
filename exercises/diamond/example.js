@@ -9,7 +9,7 @@ export default class Diamond {
     for(i = inputIndex - 1; i >= 0; i--){
       output += getLine(inputIndex, i);
     }
-    return output; 
+    return output;
   }
 }
 
@@ -22,9 +22,8 @@ function printAlphabets(index) {
   var character = 65 + index;
   if(index === 0){
     return "A";
-  }
-  else {
-    return String.fromCharCode(character) + spaceTimes((index - 1) * 2 + 1) + String.fromCharCode(character); 
+  } else {
+    return String.fromCharCode(character) + spaceTimes((index - 1) * 2 + 1) + String.fromCharCode(character);
   }
 }
 

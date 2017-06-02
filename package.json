@@ -28,52 +28,38 @@
   "scripts": {
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
-    "lint": "eslint *.js; exit 0;",
-    "lint-test": "eslint *.js && jest --no-cache ./* "
+    "lint": "eslint .",
+    "lint-test": "eslint . && jest --no-cache ./* "
   },
   "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module"
     },
+    "env": {
+      "es6": true,
+      "node": true,
+      "jasmine": true
+    },
+    "extends": "eslint:recommended",
     "rules": {
-      "comma-dangle": [
-        2,
-        "never"
-      ],
-      "no-cond-assign": [
-        2,
-        "always"
-      ],
-      "no-console": 2,
-      "no-constant-condition": 2,
-      "no-control-regex": 2,
-      "no-debugger": 2,
-      "no-dupe-args": 2,
-      "no-dupe-keys": 2,
-      "no-duplicate-case": 2,
-      "no-empty-character-class": 2,
-      "no-empty": 2,
-      "no-ex-assign": 2,
-      "no-extra-boolean-cast": 2,
-      "no-extra-parens": 2,
-      "no-extra-semi": 2,
-      "no-func-assign": 2,
-      "no-inner-declarations": [
-        2,
-        "both"
-      ],
-      "no-invalid-regexp": 2,
-      "no-irregular-whitespace": 2,
-      "no-negated-in-lhs": 2,
-      "no-obj-calls": 2,
-      "no-regex-spaces": 2,
-      "no-sparse-arrays": 2,
-      "no-unexpected-multiline": 2,
-      "no-unreachable": 2,
-      "use-isnan": 2,
-      "valid-jsdoc": 2,
-      "valid-typeof": 2
+      "indent": [ "off", 2 ],
+      "block-scoped-var": "off",
+      "radix": "off",
+      "no-use-before-define": "off",
+      "one-var": [ "off", "always" ],
+      "quotes": [ "off", "single", { "avoidEscape": true } ],
+      "semi": [ "off", "always" ],
+      "semi-spacing": [ "off", { "before": false, "after": true } ],
+      "no-whitespace-before-property": "off",
+      "space-before-blocks": [ "off", "always" ],
+      "space-before-function-paren": [ "off", { "anonymous": "always", "named": "never" } ],
+      "keyword-spacing": [ "off", { "before": true, "after": true } ],
+      "no-multi-spaces": "off",
+      "no-trailing-spaces": "off",
+      "curly": [ "error", "all" ],
+      "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
+      "object-curly-spacing": [ "off", "always" ]
     }
   },
   "licenses": [

@@ -12,8 +12,7 @@ export default class Transcriptor {
     if (rna.length !== dna.length) {
       // invalid characters in the strand
       throw new Error('Invalid input DNA.');
-    }
-    else {
+    } else {
       return rna;
     }
   }

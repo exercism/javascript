@@ -13,7 +13,7 @@ export default class Matrix {
   constructor(data) {
     this.rows = [];
     this.columns = [];
-    data.split(/\n/).map((row, ii) => {
+    data.split(/\n/).map((row) => {
       this.rows.push(row.trim().split(/\s/).map((cell, jj) => {
         this.columns[jj] ? this.columns[jj].push(+cell) : this.columns[jj] = [+cell];
         return +cell;

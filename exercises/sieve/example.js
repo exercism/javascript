@@ -12,7 +12,7 @@ function indivisibleBy(value) {
 }
 
 function sieve(n) {
-  let i, prime, possibilities;
+  let prime, possibilities;
   const primes = [];
 
   possibilities = newArrayWithRange(2, n);
