@@ -67,7 +67,10 @@
     "diamond",
     "isogram",
     "all-your-base",
-    "connect"
+    "connect",
+    "flatten-array",
+    "alphametics"
+
   ],
   "exercises": [
     {
@@ -442,10 +445,24 @@
       "topics": [
       ]
     },
-	{
+    {
       "slug": "connect",
       "difficulty": 7,
       "topics": [
+      ]
+    },
+    {
+      "slug": "flatten-array",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "alphametics",
+      "difficulty": 7,
+      "topics": [
+        "games",
+        "algorithms"
       ]
     }
   ],
