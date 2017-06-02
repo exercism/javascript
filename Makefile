@@ -16,7 +16,9 @@ SOURCE_PKG_MD5 ?= "`./bin/md5-hash ./package.json`"
 PKG_FILES= $(shell find ./exercises/*/* -name package.json)
 
 test-package-files:
-	@for pkg in $(PKG_FILES); do ! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || exit 1; done
+	@for pkg in $(PKG_FILES); do \
+		! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || { echo "$$pkg does not match main package.json"; exit 1; }; \
+	done
 
 test-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
