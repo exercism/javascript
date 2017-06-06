@@ -11,6 +11,7 @@
   "devDependencies": {
     "babel-jest": "^20.0.1",
     "babel-preset-env": "^1.4.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
     "eslint": "^3.19.0",
     "jest": "^20.0.1"
   },
@@ -22,6 +23,11 @@
   "babel": {
     "presets": [
       "env"
+    ],
+    "plugins": [
+      ["babel-plugin-transform-builtin-extend", {
+        "globals": ["Error"]
+      }]
     ]
   },
   "scripts": {
