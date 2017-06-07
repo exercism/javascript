@@ -33,5 +33,4 @@ test-assignment:
 	@rmdir $(OUTDIR)
 
 test:
-	@$(MAKE) -s test-package-files
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s test-assignment || exit 1; done
