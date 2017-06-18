@@ -445,6 +445,20 @@
       "topics": [
 
       ]
+    },
+    {
+      "slug": "flatten-array",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "alphametics",
+      "difficulty": 7,
+      "topics": [
+        "games",
+        "algorithms"
+      ]
     }
   ],
   "deprecated": [

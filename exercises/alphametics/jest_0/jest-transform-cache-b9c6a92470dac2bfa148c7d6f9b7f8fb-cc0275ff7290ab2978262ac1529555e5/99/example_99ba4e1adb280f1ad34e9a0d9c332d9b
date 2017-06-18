@@ -1,0 +1,99 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = solve;var _marked = [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+generate].map(regeneratorRuntime.mark);function solve(puzzle) {var parts = puzzle.split(/[+|==]/g).map(function (o) {return o.trim();}).filter(function (o) {return o !== "";});if (parts.length < 3) {return null;}var uniqueLetters = new Set(parts.join('').split(''));var firstLetters = new Set(parts.map(function (p) {return p[0];}));var numberCombinations = getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.size);while (numberCombinations.length) {var permutations = generate(Array(uniqueLetters.size).fill().map(function (_, i) {return i;}));var numberCombination = numberCombinations.pop();var _iteratorNormalCompletion = true;var _didIteratorError = false;var _iteratorError = undefined;try {for (var _iterator = permutations[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {var permutation = _step.value;var newNumbers = assignNumbers(numberCombination, uniqueLetters, permutation);if (testNumbers(newNumbers, parts, firstLetters)) {return newNumbers;}}} catch (err) {_didIteratorError = true;_iteratorError = err;} finally {try {if (!_iteratorNormalCompletion && _iterator.return) {_iterator.return();}} finally {if (_didIteratorError) {throw _iteratorError;}}}}return null;}function assignNumbers(numberCombination, uniqueLetters, permutation) {var output = {};var i = 0;var _iteratorNormalCompletion2 = true;var _didIteratorError2 = false;var _iteratorError2 = undefined;try {for (var _iterator2 = uniqueLetters.values()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {var letter = _step2.value;output[letter] = numberCombination[permutation[i++]];}} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2.return) {_iterator2.return();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}return output;}function testNumbers(numbers, puzzleParts, firstLetters) {var keys = Object.keys(numbers);var _iteratorNormalCompletion3 = true;var _didIteratorError3 = false;var _iteratorError3 = undefined;try {for (var _iterator3 = keys[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {var key = _step3.value;if (numbers[key] === 0 && firstLetters.has(key)) {return false;}}} catch (err) {_didIteratorError3 = true;_iteratorError3 = err;} finally {try {if (!_iteratorNormalCompletion3 && _iterator3.return) {_iterator3.return();}} finally {if (_didIteratorError3) {throw _iteratorError3;}}}var replaceRegex = new RegExp('[' + keys.join('') + ']', 'g');puzzleParts = puzzleParts.join(',').replace(replaceRegex, function (input) {return numbers[input];}).split(',').map(function (t) {return parseInt(t);});var total = puzzleParts.slice(puzzleParts.length - 1)[0];return total === puzzleParts.slice(0, puzzleParts.length - 1).reduce(function (acc, val) {return acc + val;}, 0);}function generate(A) {var c, n, _i, i;return regeneratorRuntime.wrap(function generate$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+          c = [];
+          n = A.length;_context.next = 4;return (
+            A);case 4:
+          for (_i = 0; _i < n; _i++) {
+            c[_i] = 0;
+          }
+          i = 0;case 6:if (!(
+          i < n)) {_context.next = 19;break;}if (!(
+          c[i] < i)) {_context.next = 15;break;}
+          if (i % 2 === 0) {
+            swap(A, 0, i);
+          } else {
+            swap(A, c[i], i);
+          }_context.next = 11;return (
+            A);case 11:
+          c[i] += 1;
+          i = 0;_context.next = 17;break;case 15:
+
+          c[i] = 0;
+          i += 1;case 17:_context.next = 6;break;case 19:case 'end':return _context.stop();}}}, _marked[0], this);}
+
+
+
+function swap(list, x, y) {
+  var tmp = list[x];
+  list[x] = list[y];
+  list[y] = tmp;
+  return list;
+}
+
+function getNumberCombinations(arr, size) {
+  var len = arr.length;
+
+  if (size == len) return [arr];
+
+  return arr.reduce(function (acc, val, i) {
+    var res = getNumberCombinations(arr.slice(i + 1), size - 1).
+    map(function (comb) {return [val].concat(comb);});
+
+    return acc.concat(res);
+  }, []);
+}
