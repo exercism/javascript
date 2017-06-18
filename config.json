@@ -1,7 +1,7 @@
 {
   "slug": "ecmascript",
   "language": "ECMAScript",
-  "repository": "https://github.com/exercism/xecmascript",
+  "repository": "https://github.com/exercism/ecmascript",
   "active": true,
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
