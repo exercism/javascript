@@ -1,7 +1,6 @@
 import Bob from './bob.js';
 
 describe('Bob', () => {
-
   const bob = new Bob();
 
   it('stating something', () => {
@@ -84,10 +83,9 @@ describe('Bob', () => {
     expect(result).toEqual('Fine. Be that way!');
   });
 
-   xit('prolonged silence', () => {
+  xit('prolonged silence', () => {
     const result = bob.hey('   ');
     expect(result).toEqual('Fine. Be that way!');
   });
-
 });
 

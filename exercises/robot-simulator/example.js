@@ -10,7 +10,7 @@ class Robot {
 
   orient(direction) {
     this.bearing = direction;
-    return 'The robot is pointed ' + direction;
+    return `The robot is pointed ${direction}`;
   }
 
   advance() {

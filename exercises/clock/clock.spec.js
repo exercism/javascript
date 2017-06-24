@@ -1,9 +1,7 @@
 import at from './clock';
 
 describe('Clock', () => {
-
   describe('Creating a new clock with an initial time', () => {
-
     it('on the hour', () => {
       expect(at(8).toString()).toEqual('08:00');
     });
@@ -81,7 +79,6 @@ describe('Clock', () => {
     });
 
     describe('Adding and subtracting minutes', () => {
-
       xit('add minutes', () => {
         expect(at(10, 0).plus(3).toString()).toEqual('10:03');
       });
@@ -145,11 +142,9 @@ describe('Clock', () => {
       xit('subtract more than two days', () => {
         expect(at(2, 20).minus(3000).toString()).toEqual('00:20');
       });
-
     });
 
     describe('Construct two separate clocks, set times, test if they are equal', () => {
-
       xit('clocks with same time', () => {
         expect(at(15, 37).equals(at(15, 37))).toBeTruthy();
       });
@@ -209,9 +204,6 @@ describe('Clock', () => {
       xit('clocks with negative hours and minutes that wrap', () => {
         expect(at(18, 7).equals(at(-54, -11513))).toBeTruthy();
       });
-
     });
-
   });
-
 });

@@ -1,13 +1,13 @@
 const DNA_TO_RNA = {
-  G: "C",
-  C: "G",
-  T: "A",
-  A: "U"
+  G: 'C',
+  C: 'G',
+  T: 'A',
+  A: 'U',
 };
 
 export default class Transcriptor {
   toRna(dna) {
-    let rna = dna.replace(/./g, nucleotide => DNA_TO_RNA[nucleotide])
+    const rna = dna.replace(/./g, nucleotide => DNA_TO_RNA[nucleotide]);
 
     if (rna.length !== dna.length) {
       // invalid characters in the strand

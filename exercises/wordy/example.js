@@ -1,6 +1,6 @@
 const ArgumentError = () => ({
-  name:    "argument error",
-  message: "oops"
+  name: 'argument error',
+  message: 'oops',
 });
 
 const re = new RegExp(/(plus|minus|divided by|multiplied by)+/g);
@@ -17,12 +17,12 @@ class Wordy {
       throw new ArgumentError();
     }
     let ii = 1,
-        jj = 0,
-        result = +this.numbers[0];
+      jj = 0,
+      result = +this.numbers[0];
 
     while (ii < this.numbers.length + 1) {
       const op = this.operands[jj++],
-            b = +this.numbers[ii++] || null;
+        b = +this.numbers[ii++] || null;
       switch (op) {
         case 'plus' :
           result += b;
@@ -42,4 +42,4 @@ class Wordy {
   }
 }
 
-export { Wordy as WordProblem, ArgumentError as ArgumentError};
+export { Wordy as WordProblem, ArgumentError };

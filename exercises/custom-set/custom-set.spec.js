@@ -1,8 +1,7 @@
 import CustomSet from './custom-set';
 
 describe('CustomSet', () => {
-
-  it('can delete elements', () =>{
+  it('can delete elements', () => {
     const expected = new CustomSet([1, 3]);
     const actual = new CustomSet([3, 2, 1]).delete(2);
     expect(actual.eql(expected)).toBe(true);
@@ -12,7 +11,7 @@ describe('CustomSet', () => {
     expect(actual2.eql(expected2)).toBe(true);
   });
 
-  xit('can check for difference', () =>{
+  xit('can check for difference', () => {
     const expected = new CustomSet([1, 3]);
     const actual = new CustomSet([3, 2, 1]).difference(new CustomSet([2, 4]));
     expect(actual.eql(expected)).toBe(true);
@@ -113,5 +112,4 @@ describe('CustomSet', () => {
     const expected4 = new CustomSet();
     expect(actual4.eql(expected4)).toBe(true);
   });
-
 });

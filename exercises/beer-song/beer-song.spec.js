@@ -1,7 +1,6 @@
 import Beer from './beer-song';
 
 describe('Beer', () => {
-
   it('prints an arbitrary verse', () => {
     const expected = `8 bottles of beer on the wall, 8 bottles of beer.
 Take one down and pass it around, 7 bottles of beer on the wall.
@@ -356,5 +355,4 @@ No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.
 `);
   });
-
 });

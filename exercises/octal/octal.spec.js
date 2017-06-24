@@ -1,7 +1,6 @@
 import Octal from './octal';
 
 describe('octal', () => {
-
   it('1 is decimal 1', () => {
     expect(new Octal('1').toDecimal()).toEqual(1);
   });
@@ -41,5 +40,4 @@ describe('octal', () => {
   xit('considers the digit 8 as invalid', () => {
     expect(new Octal('12345678').toDecimal()).toEqual(0);
   });
-
 });

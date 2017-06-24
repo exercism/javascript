@@ -1,10 +1,10 @@
 const Sum = (factors) => {
-  let self = this instanceof Sum ? this : Object.getPrototypeOf(Sum);
+  const self = this instanceof Sum ? this : Object.getPrototypeOf(Sum);
   self.factors = factors;
 
-  self.to = limit => {
-    let multiples = {};
-    self.factors.forEach(factor => {
+  self.to = (limit) => {
+    const multiples = {};
+    self.factors.forEach((factor) => {
       for (let ii = factor; ii < limit; ii += factor) {
         multiples[ii] = ii;
       }

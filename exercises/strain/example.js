@@ -1,5 +1,5 @@
 const Strain = {
-  strain : (array, filter, keepMatches) => {
+  strain: (array, filter, keepMatches) => {
     const results = [];
     for (let i = 0; i < array.length; i++) {
       const item = array[i];
@@ -10,9 +10,9 @@ const Strain = {
     return results;
   },
 
-  keep:  (array, filter) => Strain.strain(array, filter, true),
-  discard:  (array, filter) => Strain.strain(array, filter, false)
+  keep: (array, filter) => Strain.strain(array, filter, true),
+  discard: (array, filter) => Strain.strain(array, filter, false),
 
-}
+};
 
 export default Strain;

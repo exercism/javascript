@@ -1,7 +1,6 @@
 import { WordProblem, ArgumentError } from './wordy';
 
 describe('Word Problem', () => {
-
   it('add 1', () => {
     const question = 'What is 1 plus 1?';
     expect(new WordProblem(question).answer()).toEqual(2);
@@ -74,16 +73,15 @@ describe('Word Problem', () => {
 
   xit('too advanced', () => {
     const question = 'What is 53 cubed?';
-    const problem  = new WordProblem(question);
+    const problem = new WordProblem(question);
 
     expect(problem.answer.bind(problem)).toThrow(new ArgumentError());
   });
 
   xit('irrelevant', () => {
     const question = 'Who is the president of the United States?';
-    const problem  = new WordProblem(question);
+    const problem = new WordProblem(question);
 
     expect(problem.answer.bind(problem)).toThrow(new ArgumentError());
   });
-
 });

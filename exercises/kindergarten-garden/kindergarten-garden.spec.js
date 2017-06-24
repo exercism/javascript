@@ -1,7 +1,6 @@
 import Garden from './kindergarten-garden';
 
 describe('Garden', () => {
-
   it('for Alice', () => {
     expect(new Garden('RC\nGG').alice)
       .toEqual(['radishes', 'clover', 'grass', 'grass']);
@@ -22,7 +21,6 @@ describe('Garden', () => {
     expect(garden.bob).toEqual(['clover', 'clover', 'clover', 'clover']);
     expect(garden.charlie).toEqual(['grass', 'grass', 'grass', 'grass']);
   });
-
 });
 
 describe('Full garden', () => {
@@ -88,7 +86,6 @@ describe('Full garden', () => {
     expect(garden.larry)
       .toEqual(['grass', 'violets', 'clover', 'violets']);
   });
-
 });
 
 describe('Disordered class', () => {
@@ -115,7 +112,6 @@ describe('Disordered class', () => {
     expect(garden.xander)
       .toEqual(['radishes', 'grass', 'clover', 'violets']);
   });
-
 });
 
 describe('Two gardens, different students', () => {
@@ -133,5 +129,4 @@ describe('Two gardens, different students', () => {
     expect(garden2.charlie)
       .toEqual(['radishes', 'radishes', 'grass', 'clover']);
   });
-
 });

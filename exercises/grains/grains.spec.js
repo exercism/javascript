@@ -63,5 +63,4 @@ describe('Grains', () => {
   xit('total', () => {
     expect(grains.total()).toBe('18446744073709551615');
   });
-
 });

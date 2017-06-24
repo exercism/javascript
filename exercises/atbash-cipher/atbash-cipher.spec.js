@@ -1,7 +1,6 @@
 import atbash from './atbash-cipher';
 
 describe('encode', () => {
-
   it('encodes no', () => expect(atbash.encode('no')).toEqual('ml'));
 
   xit('encodes yes', () => expect(atbash.encode('yes')).toEqual('bvh'));
@@ -18,7 +17,6 @@ describe('encode', () => {
   xit('encodes sentences', () => expect(atbash.encode('Truth is fiction.')).toEqual('gifgs rhurx grlm'));
 
   xit('encodes all the things', () => expect(atbash.encode('The quick brown fox jumps over the lazy dog.'))
-    .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt')
+    .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'),
   );
-
 });

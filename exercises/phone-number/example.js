@@ -5,7 +5,7 @@ export default class PhoneNumber {
   }
 
   number() {
-    if(/[a-zA-Z]/.test(this.rawNumber)) {
+    if (/[a-zA-Z]/.test(this.rawNumber)) {
       return null;
     }
 
@@ -13,7 +13,7 @@ export default class PhoneNumber {
   }
 
   _cleanedNumber() {
-    let num = this.rawNumber.replace(/\D/g,'');
+    const num = this.rawNumber.replace(/\D/g, '');
 
     if (num.length === 10) {
       return num;

@@ -1,4 +1,4 @@
-export default function(hex) {
+export default function (hex) {
   this.hex = hex;
 
   this.toDecimal = () => {
@@ -8,6 +8,6 @@ export default function(hex) {
       if (/[^0-9a-fA-F]/.exec(hexCharacters[i])) { return 0; }
     }
 
-    return parseInt(this.hex,16);
+    return parseInt(this.hex, 16);
   };
 }

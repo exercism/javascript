@@ -47,5 +47,4 @@ describe('Pig Latin', () => {
     expect(translator.translate('quick fast run'))
       .toEqual('ickquay astfay unray');
   });
-
 });

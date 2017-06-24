@@ -6,8 +6,8 @@ const possibleAllergies = [
   'tomatoes',
   'chocolate',
   'pollen',
-  'cats'
-]; 
+  'cats',
+];
 
 class Allergies {
   constructor(allergenIndex) {
@@ -15,9 +15,7 @@ class Allergies {
   }
 
   list() {
-    return possibleAllergies.filter((allergy, i) => {
-      return this.allergenIndex & Math.pow(2, i);
-    });
+    return possibleAllergies.filter((allergy, i) => this.allergenIndex & Math.pow(2, i));
   }
 
   allergicTo(food) {

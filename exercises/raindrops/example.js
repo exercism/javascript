@@ -11,7 +11,7 @@ const Raindrops = () => ({
       result += 'Plong';
     }
     return result === '' ? n.toString() : result;
-  }
+  },
 });
 
 export default Raindrops;

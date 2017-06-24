@@ -1,7 +1,6 @@
 import Triangle from './triangle';
 
 describe('Triangle', () => {
-
   it('equilateral triangles have equal sides', () => {
     const triangle = new Triangle(2, 2, 2);
     expect(triangle.kind()).toEqual('equilateral');
@@ -72,9 +71,8 @@ describe('Triangle', () => {
     expect(triangle.kind.bind(triangle)).toThrow();
   });
 
-  xit('triangles violating triangle inequality are illegal 3', ()=> {
-    const triangle = new Triangle(10,1,3);
+  xit('triangles violating triangle inequality are illegal 3', () => {
+    const triangle = new Triangle(10, 1, 3);
     expect(triangle.kind.bind(triangle)).toThrow();
   });
-
 });

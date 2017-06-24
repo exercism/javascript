@@ -1,7 +1,6 @@
 import meetupDay from './meetup';
 
 describe('meetupDay()', () => {
-
   it('test monteenth of may 2013', () => {
     expect(meetupDay(2013, 4, 'Monday', 'teenth')).toEqual(new Date(2013, 4, 13));
   });
@@ -55,5 +54,4 @@ describe('meetupDay()', () => {
       meetupDay(2015, 1, 'Monday', '5th');
     }).toThrow();
   });
-
 });
