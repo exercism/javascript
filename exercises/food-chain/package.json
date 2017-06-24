@@ -56,7 +56,9 @@
       "jasmine": true
     },
     "extends": "airbnb",
-    "rules": {}
+    "rules": {
+      "import/no-unresolved": "off"
+    }
   },
   "licenses": [
     "MIT"
