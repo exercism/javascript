@@ -16,13 +16,15 @@ class Wordy {
     if (!this.numbers || !this.operands) {
       throw new ArgumentError();
     }
-    let ii = 1,
-      jj = 0,
-      result = +this.numbers[0];
+    let ii = 1;
+    let result = +this.numbers[0];
+    let jj = 0;
 
     while (ii < this.numbers.length + 1) {
-      const op = this.operands[jj++],
-        b = +this.numbers[ii++] || null;
+      const op = this.operands[jj];
+      const b = +this.numbers[ii] || null;
+      jj += 1;
+      ii += 1;
       switch (op) {
         case 'plus' :
           result += b;
@@ -35,6 +37,8 @@ class Wordy {
           break;
         case 'divided by' :
           result /= b;
+          break;
+        default:
           break;
       }
     }
