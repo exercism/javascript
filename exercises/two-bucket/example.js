@@ -89,7 +89,8 @@ class TwoBucket {
       moveCount = this.bigFirst(measurements, moveCount, prBool);
     }
 
-    return moveCount + 1; // accounts for first move made before loop (and moveCount starts at zero before loop)
+    // accounts for first move made before loop (and moveCount starts at zero before loop)
+    return moveCount + 1;
   }
 
 }

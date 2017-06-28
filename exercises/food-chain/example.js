@@ -82,7 +82,8 @@ She's dead, of course!
    */
   verses(first, last) {
     const rangeLength = last - first + 1;
-    const sequence = Array.from({ length: rangeLength }, (v, k) => first + k); // integers from first to last
+    // integers from first to last
+    const sequence = Array.from({ length: rangeLength }, (v, k) => first + k);
 
     // build the final string
     const str = sequence.map(x => this.verse(x));

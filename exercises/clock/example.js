@@ -31,6 +31,7 @@ export default function (hour, minute) {
     toString: () => `${formatNum(clock.hour)}:${formatNum(clock.minute)}`,
     plus(minutes) { adjustTime(minutes); return this; },
     minus(minutes) { adjustTime(-minutes); return this; },
-    equals: otherClock => clock.hour === otherClock.clock.hour && clock.minute === otherClock.clock.minute,
+    equals: otherClock => clock.hour === otherClock.clock.hour &&
+                          clock.minute === otherClock.clock.minute,
   };
 }

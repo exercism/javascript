@@ -60,7 +60,6 @@
       "import/no-unresolved": "off",
       "import/extensions": "off",
 
-      "max-len": "off",
       "no-unused-expressions": "off",
       "one-var": "off",
       "no-param-reassign": "off",

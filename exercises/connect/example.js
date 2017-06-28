@@ -33,7 +33,10 @@ export default class {
     }
     checked = checked.slice(0);
     checked.push(pos);
-    const matches = this.neighbors(pos).filter(({ x, y }) => this.matches({ x, y }, XorO) && checked.filter(spot => spot.x === x && spot.y === y).length === 0);
+    const matches = this.neighbors(pos).filter(function ({ x, y }) {
+      return this.matches({ x, y }, XorO) &&
+        checked.filter(spot => spot.x === x && spot.y === y).length === 0;
+    }, this);
     if (matches.length === 0) {
       return false;
     }

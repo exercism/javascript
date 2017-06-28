@@ -23,7 +23,10 @@ function printAlphabets(index) {
   if (index === 0) {
     return 'A';
   }
-  return String.fromCharCode(character) + spaceTimes((index - 1) * 2 + 1) + String.fromCharCode(character);
+
+  return String.fromCharCode(character) +
+    spaceTimes((index - 1) * 2 + 1) +
+    String.fromCharCode(character);
 }
 
 function spaceTimes(times) {
