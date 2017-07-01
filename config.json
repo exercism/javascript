@@ -293,6 +293,14 @@
       ]
     },
     {
+      "slug": "flatten-array",
+      "difficulty": 5,
+      "topics": [
+        "Arrays",
+        "Recursion"
+      ]
+    },
+    {
       "slug": "largest-series-product",
       "difficulty": 1,
       "topics": [
