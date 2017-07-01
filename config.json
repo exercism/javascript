@@ -314,6 +314,15 @@
       ]
     },
     {
+      "slug": "list-ops",
+      "difficulty": 5,
+      "topics": [
+        "Data structures",
+        "Lists",
+        "Loops"
+      ]
+    },
+    {
       "slug": "binary-search-tree",
       "difficulty": 1,
       "topics": [
