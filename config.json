@@ -460,7 +460,14 @@
       "slug": "connect",
       "difficulty": 7,
       "topics": [
-
+      ]
+    },
+    {
+      "slug": "alphametics",
+      "difficulty": 7,
+      "topics": [
+        "games",
+        "algorithms"
       ]
     }
   ],
