@@ -1,0 +1,74 @@
+{
+  "name": "xecmascript",
+  "version": "0.0.0",
+  "description": "Exercism exercises in ECMAScript 6.",
+  "author": "Katrina Owen",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/xecmascript"
+  },
+  "devDependencies": {
+    "babel-jest": "^20.0.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "eslint": "^3.19.0",
+    "jest": "^20.0.1"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.json"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      ["babel-plugin-transform-builtin-extend", {
+        "globals": ["Error"]
+      }]
+    ]
+  },
+  "scripts": {
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint .",
+    "lint-test": "eslint . && jest --no-cache ./* "
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "jasmine": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [ "off", 2 ],
+      "block-scoped-var": "off",
+      "radix": "off",
+      "no-use-before-define": "off",
+      "one-var": [ "off", "always" ],
+      "quotes": [ "off", "single", { "avoidEscape": true } ],
+      "semi": [ "off", "always" ],
+      "semi-spacing": [ "off", { "before": false, "after": true } ],
+      "no-whitespace-before-property": "off",
+      "space-before-blocks": [ "off", "always" ],
+      "space-before-function-paren": [ "off", { "anonymous": "always", "named": "never" } ],
+      "keyword-spacing": [ "off", { "before": true, "after": true } ],
+      "no-multi-spaces": "off",
+      "no-trailing-spaces": "off",
+      "curly": [ "error", "all" ],
+      "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
+      "object-curly-spacing": [ "off", "always" ]
+    }
+  },
+  "licenses": [
+    "MIT"
+  ],
+  "dependencies": {}
+}
