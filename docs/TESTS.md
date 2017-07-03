@@ -27,10 +27,9 @@ $ npm run watch
 
 ## Making Your First ECMAScript 2015 Module
 
-Usually, tests on this track will load your implementation importing it as a
-ECMAScript 2015 module: `import Bob from './bob.js';`. To make it work, you just
-needs to export your implementation from the file the tests are looking for
-your module, `bob.js`:
+Usually, tests on this track will load your implementation by importing it as an
+ECMAScript 2015 module: `import Bob from './bob.js';`. You just
+need to export your implementation from the referenced file, `bob.js`:
 
 ```javascript
 export default class Bob {
