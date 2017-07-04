@@ -1,6 +1,6 @@
 import Acronyms from './acronym';
 
-describe('Acronyms are produced from', ()=>{
+describe('Acronyms are produced from', () => {
   it('title cased phrases', () => {
     expect(Acronyms.parse('Portable Network Graphics')).toEqual('PNG');
   });
@@ -9,7 +9,7 @@ describe('Acronyms are produced from', ()=>{
     expect(Acronyms.parse('Ruby on Rails')).toEqual('ROR');
   });
 
-  xit('inconsistently cased phrases', ()=>{
+  xit('inconsistently cased phrases', () => {
     expect(Acronyms.parse('HyperText Markup Language')).toEqual('HTML');
   });
 

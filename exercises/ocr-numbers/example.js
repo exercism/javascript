@@ -38,7 +38,7 @@ const PATTERNS = {
   9: [' _ ',
     '|_|',
     ' _|',
-    '   ']
+    '   '],
 };
 export default class Parser {
   convert(text) {
@@ -55,7 +55,7 @@ export default class Parser {
     for (let rowNumber = 0; rowNumber < lines.length; rowNumber += 4) {
       let row = '';
       for (let rowLine = 0; rowLine < 4; rowLine++) {
-        row += lines[rowNumber + rowLine] + '\n';
+        row += `${lines[rowNumber + rowLine]}\n`;
       }
       rows.push(row.slice(0, -1));
     }
@@ -76,7 +76,7 @@ export default class Parser {
   }
 
   static getDigit(text) {
-    for (let digit in PATTERNS) {
+    for (const digit in PATTERNS) {
       if (PATTERNS.hasOwnProperty(digit)) {
         if (PATTERNS[digit].join('') === text) {
           return digit;

@@ -38,7 +38,7 @@ export default class CustomSet {
   }
 
   toList() {
-    return Object.keys(this.data).map(el =>  +el);
+    return Object.keys(this.data).map(el => +el);
   }
 
   member(el) {

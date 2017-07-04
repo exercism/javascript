@@ -4,12 +4,12 @@ export default class PerfectNumbers {
   /**
    * Calculate all the divisors for a given number.
    * @param {number} number - natural number.
-   * @returns {array} array that contains the divisors for a given number NOT including the number itself.
+   * @returns {array} array that contains the divisors for a given number NOT
+   * including the number itself.
    */
   getDivisors(number) {
-
     let i;
-    let divs = new Array();
+    const divs = new Array();
 
     // Accepts only natural numbers greater than 1.
     if (number <= 1) {
@@ -21,7 +21,6 @@ export default class PerfectNumbers {
 
     // Calculate the divisors up the the half of the number + 1
     for (i = 2; i <= number / 2; i++) {
-
       if (number % i === 0) {
         divs.push(i);
       }
@@ -32,13 +31,15 @@ export default class PerfectNumbers {
 
   /**
    * Classify a given number as perfect, abundant or deficient.
-   * @param {number} number - number to be classified. Note: if the number is equal or smaller than 0,
-   * then returns an error: Classification is only possible for natural numbers.
-   * @returns {string} - string that contains the number classification (perfect, abundant or deficient).
+   * @param {number} number - number to be classified. Note: if the number is equal
+   * or smaller than 0, then returns an error: Classification is only possible for
+   * natural numbers.
+   * @returns {string} - string that contains the number classification (perfect,
+   * abundant or deficient).
    */
   classify(number) {
-
-    let sum, result;
+    let sum,
+      result;
 
     // Check if the input is valid
     if (number <= 0) {

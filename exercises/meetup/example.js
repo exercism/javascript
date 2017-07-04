@@ -1,14 +1,11 @@
-export default function meetupDay (year, month, dayOfWeek, which) {
-
-  let candidates = getCandidates(year, month, dayOfWeek);
+export default function meetupDay(year, month, dayOfWeek, which) {
+  const candidates = getCandidates(year, month, dayOfWeek);
   let res;
 
   which = which.toLowerCase();
 
   if (which === 'teenth') {
-    res = find(candidates, d =>  {
-      return 13 <= d.getDate() && d.getDate() <= 19;
-    });
+    res = find(candidates, d => d.getDate() >= 13 && d.getDate() <= 19);
   } else if (which === 'last') {
     res = candidates.pop();
   } else {
@@ -21,7 +18,7 @@ export default function meetupDay (year, month, dayOfWeek, which) {
   return res;
 }
 
-function getCandidates (year, month, dayOfWeek) {
+function getCandidates(year, month, dayOfWeek) {
   let d,
     i,
     numDaysInMonth = new Date(year, month + 1, 0).getDate(),
@@ -38,15 +35,15 @@ function getCandidates (year, month, dayOfWeek) {
   return res;
 }
 
-function getDayIndex (day) {
+function getDayIndex(day) {
   const daysInd = {
-    'sunday': 0,
-    'monday': 1,
-    'tuesday': 2,
-    'wednesday': 3,
-    'thursday': 4,
-    'friday': 5,
-    'saturday': 6
+    sunday: 0,
+    monday: 1,
+    tuesday: 2,
+    wednesday: 3,
+    thursday: 4,
+    friday: 5,
+    saturday: 6,
   };
 
   day = day.toLowerCase();

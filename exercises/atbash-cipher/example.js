@@ -2,7 +2,7 @@ const LETTERS = 'abcdefghijklmnopqrstuvwxyz';
 const REVERSED_LETTERS = [...LETTERS].reverse().join('');
 
 function insertSpacing(s, interval) {
-  const matcher = new RegExp('.{1,' + interval + '}', 'g');
+  const matcher = new RegExp(`.{1,${interval}}`, 'g');
   return s.match(matcher).join(' ');
 }
 
@@ -15,11 +15,11 @@ function invert(character) {
 }
 
 export default {
-  encode:  (s) => {
+  encode: (s) => {
     let encoded;
     const characters = [];
     [...s.toLowerCase()].forEach(invert, characters);
     encoded = insertSpacing(characters.join(''), 5);
     return encoded;
-  }
+  },
 };

@@ -1,7 +1,6 @@
 import Series from './series';
 
 describe('Series', () => {
-
   it('has digits (short)', () => {
     expect(new Series('01234').digits).toEqual([0, 1, 2, 3, 4]);
   });
@@ -52,9 +51,8 @@ describe('Series', () => {
   });
 
   xit('throws an error if not enough digits to slice', () => {
-    expect( () => {
+    expect(() => {
       new Series('01032987583').slices(12);
     }).toThrow(new Error('Slice size is too big.'));
   });
-
 });

@@ -10,9 +10,13 @@
   },
   "devDependencies": {
     "babel-jest": "^20.0.1",
-    "babel-preset-env": "^1.4.0",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-preset-env": "^1.4.0",
     "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.1"
   },
   "jest": {
@@ -25,9 +29,14 @@
       "env"
     ],
     "plugins": [
-      ["babel-plugin-transform-builtin-extend", {
-        "globals": ["Error"]
-      }]
+      [
+        "babel-plugin-transform-builtin-extend",
+        {
+          "globals": [
+            "Error"
+          ]
+        }
+      ]
     ]
   },
   "scripts": {
@@ -46,25 +55,41 @@
       "node": true,
       "jasmine": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "rules": {
-      "indent": [ "off", 2 ],
-      "block-scoped-var": "off",
-      "radix": "off",
+      "import/no-unresolved": "off",
+      "import/extensions": "off",
+
+      "no-unused-expressions": "off",
+      "one-var": "off",
+      "no-param-reassign": "off",
+      "no-plusplus": "off",
+      "eqeqeq": "off",
+      "no-mixed-operators": "off",
+      "no-restricted-properties": "off",
+      "no-return-assign": "off",
+      "class-methods-use-this": "off",
+      "no-new": "off",
       "no-use-before-define": "off",
-      "one-var": [ "off", "always" ],
-      "quotes": [ "off", "single", { "avoidEscape": true } ],
-      "semi": [ "off", "always" ],
-      "semi-spacing": [ "off", { "before": false, "after": true } ],
-      "no-whitespace-before-property": "off",
-      "space-before-blocks": [ "off", "always" ],
-      "space-before-function-paren": [ "off", { "anonymous": "always", "named": "never" } ],
-      "keyword-spacing": [ "off", { "before": true, "after": true } ],
-      "no-multi-spaces": "off",
-      "no-trailing-spaces": "off",
-      "curly": [ "error", "all" ],
-      "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
-      "object-curly-spacing": [ "off", "always" ]
+      "no-bitwise": "off",
+      "no-shadow": "off",
+      "no-confusing-arrow": "off",
+      "consistent-return": "off",
+      "array-callback-return": "off",
+      "no-multi-str": "off",
+      "import/newline-after-import": "off",
+      "no-underscore-dangle": "off",
+      "prefer-const": "off",
+      "no-array-constructor": "off",
+      "radix": "off",
+      "no-multi-assign": "off",
+      "no-restricted-syntax": "off",
+      "default-case": "off",
+      "import/no-duplicates": "off",
+      "valid-typeof": "off",
+      "prefer-rest-params": "off",
+      "func-names": "off",
+      "no-prototype-builtins": "off"
     }
   },
   "licenses": [

@@ -1,7 +1,7 @@
 export default class Series {
 
   constructor(numberString) {
-    if(numberString.match('[^0-9]')) {
+    if (numberString.match('[^0-9]')) {
       throw new Error('Invalid input.');
     }
 
@@ -10,9 +10,7 @@ export default class Series {
   }
 
   getDigits() {
-    return [...this.numberString].map( digit => {
-      return parseInt(digit, 10);
-    });
+    return [...this.numberString].map(digit => parseInt(digit, 10));
   }
 
   largestProduct(size) {
@@ -22,10 +20,8 @@ export default class Series {
 
     let product,
       max = 0;
-    this.slices(size).forEach( slice => {
-      product = slice.reduce( (a, b) => {
-        return a * b;
-      }, 1);
+    this.slices(size).forEach((slice) => {
+      product = slice.reduce((a, b) => a * b, 1);
       if (product > max) {
         max = product;
       }

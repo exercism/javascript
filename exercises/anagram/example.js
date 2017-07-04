@@ -15,9 +15,8 @@ export default class Anagram {
   matches(words) {
     words = Array.isArray(words) ? words : Array.from(arguments);
 
-    return words.filter(candidate => {
-      return !sameWord(this.word, candidate) && isAnagram(this.word, candidate);
-    });
+    return words
+      .filter(candidate => !sameWord(this.word, candidate) && isAnagram(this.word, candidate));
   }
 }
 

@@ -2,14 +2,12 @@ import Ocr from './ocr-numbers';
 const ocr = new Ocr();
 
 describe('ocr', () => {
-
   it('recognizes zero', () => {
     expect(ocr.convert(
       ' _ \n' +
       '| |\n' +
       '|_|\n' +
-      '   '
-    )).toBe('0');
+      '   ')).toBe('0');
   });
 
   xit('recognizes one', () => {
@@ -17,8 +15,7 @@ describe('ocr', () => {
       '   \n' +
       '  |\n' +
       '  |\n' +
-      '   '
-    )).toBe('1');
+      '   ')).toBe('1');
   });
 
   xit('recognizes two', () => {
@@ -26,8 +23,7 @@ describe('ocr', () => {
       ' _ \n' +
       ' _|\n' +
       '|_ \n' +
-      '   '
-    )).toBe('2');
+      '   ')).toBe('2');
   });
 
   xit('recognizes three', () => {
@@ -35,8 +31,7 @@ describe('ocr', () => {
       ' _ \n' +
       ' _|\n' +
       ' _|\n' +
-      '   '
-    )).toBe('3');
+      '   ')).toBe('3');
   });
 
   xit('recognizes four', () => {
@@ -44,8 +39,7 @@ describe('ocr', () => {
       '   \n' +
       '|_|\n' +
       '  |\n' +
-      '   '
-    )).toBe('4');
+      '   ')).toBe('4');
   });
 
   xit('recognizes five', () => {
@@ -53,8 +47,7 @@ describe('ocr', () => {
       ' _ \n' +
       '|_ \n' +
       ' _|\n' +
-      '   '
-    )).toBe('5');
+      '   ')).toBe('5');
   });
 
   xit('recognizes six', () => {
@@ -62,8 +55,7 @@ describe('ocr', () => {
       ' _ \n' +
       '|_ \n' +
       '|_|\n' +
-      '   '
-    )).toBe('6');
+      '   ')).toBe('6');
   });
 
   xit('recognizes seven', () => {
@@ -71,8 +63,7 @@ describe('ocr', () => {
       ' _ \n' +
       '  |\n' +
       '  |\n' +
-      '   '
-    )).toBe('7');
+      '   ')).toBe('7');
   });
 
   xit('recognizes eight', () => {
@@ -80,8 +71,7 @@ describe('ocr', () => {
       ' _ \n' +
       '|_|\n' +
       '|_|\n' +
-      '   '
-    )).toBe('8');
+      '   ')).toBe('8');
   });
 
   xit('recognizes nine', () => {
@@ -89,8 +79,7 @@ describe('ocr', () => {
       ' _ \n' +
       '|_|\n' +
       ' _|\n' +
-      '   '
-    )).toBe('9');
+      '   ')).toBe('9');
   });
 
   xit('recognizes ten', () => {
@@ -98,8 +87,7 @@ describe('ocr', () => {
       '    _ \n' +
       '  || |\n' +
       '  ||_|\n' +
-      '      '
-    )).toBe('10');
+      '      ')).toBe('10');
   });
 
   xit('identifies garble', () => {
@@ -107,8 +95,7 @@ describe('ocr', () => {
       '   \n' +
       '| |\n' +
       '| |\n' +
-      '   '
-    )).toBe('?');
+      '   ')).toBe('?');
   });
 
   xit('converts 110101100', () => {
@@ -116,8 +103,7 @@ describe('ocr', () => {
       '       _     _        _  _ \n' +
       '  |  || |  || |  |  || || |\n' +
       '  |  ||_|  ||_|  |  ||_||_|\n' +
-      '                           '
-    )).toBe('110101100');
+      '                           ')).toBe('110101100');
   });
 
   xit('identifies garble mixed in', () => {
@@ -125,8 +111,7 @@ describe('ocr', () => {
       '       _     _           _ \n' +
       '  |  || |  || |     || || |\n' +
       '  |  | _|  ||_|  |  ||_||_|\n' +
-      '                           '
-    )).toBe('11?10?1?0');
+      '                           ')).toBe('11?10?1?0');
   });
 
   xit('converts 1234567890', () => {
@@ -134,8 +119,7 @@ describe('ocr', () => {
       '    _  _     _  _  _  _  _  _ \n' +
       '  | _| _||_||_ |_   ||_||_|| |\n' +
       '  ||_  _|  | _||_|  ||_| _||_|\n' +
-      '                              '
-    )).toBe('1234567890');
+      '                              ')).toBe('1234567890');
   });
 
   xit('converts 123 456 789', () => {
@@ -151,8 +135,6 @@ describe('ocr', () => {
       ' _  _  _ \n' +
       '  ||_||_|\n' +
       '  ||_| _|\n' +
-      '         '
-    )).toBe('123,456,789');
+      '         ')).toBe('123,456,789');
   });
-
 });

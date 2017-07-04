@@ -1,10 +1,14 @@
 class Words {
 
-  count(input) {
-    let counts = {};
-    let words = input.match(/\S+/g);
+  constructor() {
+    this.words = null;
+  }
 
-    words.forEach((word) => {
+  count(input) {
+    const counts = {};
+    this.words = input.match(/\S+/g);
+
+    this.words.forEach((word) => {
       const lcWord = word.toLowerCase();
       counts[lcWord] = counts.hasOwnProperty(lcWord) ? counts[lcWord] + 1 : 1;
     });

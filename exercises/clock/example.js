@@ -1,15 +1,15 @@
-export default function(hour, minute) {
+export default function (hour, minute) {
   const MINUTESPERDAY = 1440;
   const HOURSPERDAY = 24;
 
-  let clock = {
-    hour:   hour,
-    minute: minute || 0
+  const clock = {
+    hour,
+    minute: minute || 0,
   };
 
   function formatNum(num) {
     const numString = num.toString();
-    return numString.length === 1 ? "0" + numString : numString;
+    return numString.length === 1 ? `0${numString}` : numString;
   }
 
   function adjustTime(delta) {
@@ -27,10 +27,11 @@ export default function(hour, minute) {
   adjustTime(0);
 
   return {
-    clock:    clock,
-    toString: () => formatNum(clock.hour) + ":" + formatNum(clock.minute),
-    plus:     function(minutes) { adjustTime(minutes); return this; },
-    minus:    function(minutes) { adjustTime(-minutes); return this; },
-    equals:   (otherClock) => clock.hour === otherClock.clock.hour && clock.minute === otherClock.clock.minute
-  }
+    clock,
+    toString: () => `${formatNum(clock.hour)}:${formatNum(clock.minute)}`,
+    plus(minutes) { adjustTime(minutes); return this; },
+    minus(minutes) { adjustTime(-minutes); return this; },
+    equals: otherClock => clock.hour === otherClock.clock.hour &&
+                          clock.minute === otherClock.clock.minute,
+  };
 }

@@ -1,12 +1,12 @@
 export default class Diamond {
   makeDiamond(input) {
-    const inputIndex =  input.charCodeAt() - 65;
-    var output = "";
-    var i = 0;
-    for(i = 0; i <= inputIndex; i++){
+    const inputIndex = input.charCodeAt() - 65;
+    let output = '';
+    let i = 0;
+    for (i = 0; i <= inputIndex; i++) {
       output += getLine(inputIndex, i);
     }
-    for(i = inputIndex - 1; i >= 0; i--){
+    for (i = inputIndex - 1; i >= 0; i--) {
       output += getLine(inputIndex, i);
     }
     return output;
@@ -14,19 +14,21 @@ export default class Diamond {
 }
 
 function getLine(inputIndex, index) {
-  var difference = inputIndex - index;
-  return spaceTimes(difference) + printAlphabets(index) + spaceTimes(difference) + "\n";
+  const difference = inputIndex - index;
+  return `${spaceTimes(difference) + printAlphabets(index) + spaceTimes(difference)}\n`;
 }
 
 function printAlphabets(index) {
-  var character = 65 + index;
-  if(index === 0){
-    return "A";
-  } else {
-    return String.fromCharCode(character) + spaceTimes((index - 1) * 2 + 1) + String.fromCharCode(character);
+  const character = 65 + index;
+  if (index === 0) {
+    return 'A';
   }
+
+  return String.fromCharCode(character) +
+    spaceTimes((index - 1) * 2 + 1) +
+    String.fromCharCode(character);
 }
 
 function spaceTimes(times) {
-  return " ".repeat(times);
+  return ' '.repeat(times);
 }

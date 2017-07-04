@@ -1,4 +1,4 @@
-const bracketPush = input =>  {
+const bracketPush = (input) => {
   if (input.length === 0) {
     return true;
   }
@@ -20,7 +20,7 @@ const bracketPush = input =>  {
     }
   }
 
-  const topNumber = Math.max.apply(Math, iArr);
+  const topNumber = Math.max(...iArr);
 
   for (let k = 0; k < 3; k++) {
     if (bracketArray[topNumber] === openArray[k]) {

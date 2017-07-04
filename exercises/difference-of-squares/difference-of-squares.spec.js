@@ -1,7 +1,6 @@
 import Squares from './difference-of-squares';
 
 describe('Squares', () => {
-
   describe('up to 5', () => {
     const squares = new Squares(5);
 
@@ -16,7 +15,6 @@ describe('Squares', () => {
     xit('gets the difference', () => {
       expect(squares.difference).toBe(170);
     });
-
   });
 
   describe('up to 10', () => {
@@ -33,7 +31,6 @@ describe('Squares', () => {
     xit('gets the difference', () => {
       expect(squares.difference).toBe(2640);
     });
-
   });
 
   describe('up to 100', () => {
@@ -50,7 +47,5 @@ describe('Squares', () => {
     xit('gets the difference', () => {
       expect(squares.difference).toBe(25164150);
     });
-
   });
-
 });
