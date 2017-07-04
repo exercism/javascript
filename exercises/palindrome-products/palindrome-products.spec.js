@@ -2,7 +2,7 @@ import generate from './palindrome-products';
 
 describe("Palindrome", function() {
 
-  it("largest palindrome from single digit factors", function() {
+  test("largest palindrome from single digit factors", function() {
     const palindromes = generate({maxFactor: 9});
     const largest = palindromes.largest;
 
@@ -11,7 +11,7 @@ describe("Palindrome", function() {
     expect(containsMatch).toBe(true);
   });
 
-  xit("largest palindrome from double digit factors", function() {
+  xtest("largest palindrome from double digit factors", function() {
     const palindromes = generate({ maxFactor: 99, minFactor: 10 });
     const largest = palindromes.largest;
 
@@ -19,7 +19,7 @@ describe("Palindrome", function() {
     expect(largest.factors).toEqual([91, 99]);
   });
 
-  xit("smallest palindrome from double digit factors", function() {
+  xtest("smallest palindrome from double digit factors", function() {
     const palindromes = generate({ maxFactor: 99, minFactor: 10 });
     const smallest = palindromes.smallest;
 
@@ -27,7 +27,7 @@ describe("Palindrome", function() {
     expect(smallest.factors).toEqual([11, 11]);
   });
 
-  xit("largest palindrome from triple digit factors", function() {
+  xtest("largest palindrome from triple digit factors", function() {
     const palindromes = generate({ maxFactor: 999, minFactor: 100 });
     const largest = palindromes.largest;
 
@@ -35,7 +35,7 @@ describe("Palindrome", function() {
     expect(largest.factors).toEqual([913, 993]);
   });
 
-  xit("smallest palindrome from triple digit factors", function() {
+  xtest("smallest palindrome from triple digit factors", function() {
     const palindromes = generate({ maxFactor: 999, minFactor: 100 });
     const smallest = palindromes.smallest;
 

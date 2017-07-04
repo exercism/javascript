@@ -2,7 +2,7 @@ import solve from './alphametics';
 
 describe("Solve the alphametics puzzle", () =>  {
 
-  it("puzzle with three letters", () =>  {
+  test("puzzle with three letters", () =>  {
     let puzzle = "I + BB == ILL";
     let expected = {
       "I": 1,
@@ -12,17 +12,17 @@ describe("Solve the alphametics puzzle", () =>  {
     expect(solve(puzzle)).toEqual(expected);
   });
 
-  xit("solution must have unique value for each letter", () =>  {
+  xtest("solution must have unique value for each letter", () =>  {
     let puzzle = "A == B";
     expect(solve(puzzle)).toBeNull();
   });
 
-  xit("leading zero solution is invalid", () =>  {
+  xtest("leading zero solution is invalid", () =>  {
     let puzzle = "ACA + DD == BD";
     expect(solve(puzzle)).toBeNull();
   });
 
-  xit("puzzle with four letters", () =>  {
+  xtest("puzzle with four letters", () =>  {
     let puzzle = "AS + A == MOM";
     let expected =  {
       "A": 9,
@@ -33,7 +33,7 @@ describe("Solve the alphametics puzzle", () =>  {
     expect(solve(puzzle)).toEqual(expected);
   });
 
-  xit("puzzle with six letters", () =>  {
+  xtest("puzzle with six letters", () =>  {
     let puzzle = "NO + NO + TOO == LATE";
     let expected =  {
       "N": 7,
@@ -46,7 +46,7 @@ describe("Solve the alphametics puzzle", () =>  {
     expect(solve(puzzle)).toEqual(expected);
   });
 
-  xit("puzzle with seven letters", () =>  {
+  xtest("puzzle with seven letters", () =>  {
     let puzzle = "HE + SEES + THE == LIGHT";
     let expected =  {
       "E": 4,
@@ -60,7 +60,7 @@ describe("Solve the alphametics puzzle", () =>  {
     expect(solve(puzzle)).toEqual(expected);
   });
 
-  xit("puzzle with eight letters", () =>  {
+  xtest("puzzle with eight letters", () =>  {
     let puzzle = "SEND + MORE == MONEY";
     let expected =  {
       "S": 9,
@@ -75,7 +75,7 @@ describe("Solve the alphametics puzzle", () =>  {
     expect(solve(puzzle)).toEqual(expected);
   });
 
-  xit("puzzle with ten letters", () =>  {
+  xtest("puzzle with ten letters", () =>  {
     let puzzle = "AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE";
     let expected =   {
       "A": 5,

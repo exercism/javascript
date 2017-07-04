@@ -2,7 +2,7 @@ import Board from './connect';
 
 describe('Judging a game of connect', () => {
 
-  it("an empty board has no winner", () => {
+  test("an empty board has no winner", () => {
     let board = [
       ". . . . .",
       " . . . . .",
@@ -13,21 +13,21 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("");
   });
 
-  xit("X can win on a 1x1 board", () => {
+  xtest("X can win on a 1x1 board", () => {
     let board =  [
       "X"
     ];
     expect(new Board(board).winner()).toEqual("X");
   });
 
-  xit("O can win on a 1x1 board", () => {
+  xtest("O can win on a 1x1 board", () => {
     let board =  [
       "O"
     ];
     expect(new Board(board).winner()).toEqual("O");
   });
 
-  xit( "only edges does not make a winner", () => {
+  xtest( "only edges does not make a winner", () => {
     let board =   [
       "O O O X",
       " X . . X",
@@ -37,7 +37,7 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("");
   });
 
-  xit("illegal diagonal does not make a winner", () => {
+  xtest("illegal diagonal does not make a winner", () => {
     let board =  [
       "X O . .",
       " O X X X",
@@ -48,7 +48,7 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("");
   });
 
-  xit("nobody wins crossing adjacent angles", () => {
+  xtest("nobody wins crossing adjacent angles", () => {
     let board =  [
       "X . . .",
       " . X O .",
@@ -59,7 +59,7 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("");
   });
 
-  xit("X wins crossing from left to right", () => {
+  xtest("X wins crossing from left to right", () => {
     let board =  [
       ". O . .",
       " O X X X",
@@ -70,7 +70,7 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("X");
   });
 
-  xit("O wins crossing from top to bottom", () => {
+  xtest("O wins crossing from top to bottom", () => {
     let board =  [
       ". O . .",
       " O X X X",
@@ -81,7 +81,7 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("O");
   });
 
-  xit("X wins using a convoluted path", () => {
+  xtest("X wins using a convoluted path", () => {
     let board =  [
       ". X X . .",
       " X . X . X",
@@ -92,7 +92,7 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual("X");
   });
 
-  xit("X wins using a spiral path", () => {
+  xtest("X wins using a spiral path", () => {
     let board =   [
       "O X X X X X X X X",
       " O X O O O O O O O",

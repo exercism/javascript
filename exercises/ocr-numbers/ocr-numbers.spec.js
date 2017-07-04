@@ -3,7 +3,7 @@ const ocr = new Ocr();
 
 describe('ocr', () => {
 
-  it('recognizes zero', () => {
+  test('recognizes zero', () => {
     expect(ocr.convert(
       ' _ \n' +
       '| |\n' +
@@ -12,7 +12,7 @@ describe('ocr', () => {
     )).toBe('0');
   });
 
-  xit('recognizes one', () => {
+  xtest('recognizes one', () => {
     expect(ocr.convert(
       '   \n' +
       '  |\n' +
@@ -21,7 +21,7 @@ describe('ocr', () => {
     )).toBe('1');
   });
 
-  xit('recognizes two', () => {
+  xtest('recognizes two', () => {
     expect(ocr.convert(
       ' _ \n' +
       ' _|\n' +
@@ -30,7 +30,7 @@ describe('ocr', () => {
     )).toBe('2');
   });
 
-  xit('recognizes three', () => {
+  xtest('recognizes three', () => {
     expect(ocr.convert(
       ' _ \n' +
       ' _|\n' +
@@ -39,7 +39,7 @@ describe('ocr', () => {
     )).toBe('3');
   });
 
-  xit('recognizes four', () => {
+  xtest('recognizes four', () => {
     expect(ocr.convert(
       '   \n' +
       '|_|\n' +
@@ -48,7 +48,7 @@ describe('ocr', () => {
     )).toBe('4');
   });
 
-  xit('recognizes five', () => {
+  xtest('recognizes five', () => {
     expect(ocr.convert(
       ' _ \n' +
       '|_ \n' +
@@ -57,7 +57,7 @@ describe('ocr', () => {
     )).toBe('5');
   });
 
-  xit('recognizes six', () => {
+  xtest('recognizes six', () => {
     expect(ocr.convert(
       ' _ \n' +
       '|_ \n' +
@@ -66,7 +66,7 @@ describe('ocr', () => {
     )).toBe('6');
   });
 
-  xit('recognizes seven', () => {
+  xtest('recognizes seven', () => {
     expect(ocr.convert(
       ' _ \n' +
       '  |\n' +
@@ -75,7 +75,7 @@ describe('ocr', () => {
     )).toBe('7');
   });
 
-  xit('recognizes eight', () => {
+  xtest('recognizes eight', () => {
     expect(ocr.convert(
       ' _ \n' +
       '|_|\n' +
@@ -84,7 +84,7 @@ describe('ocr', () => {
     )).toBe('8');
   });
 
-  xit('recognizes nine', () => {
+  xtest('recognizes nine', () => {
     expect(ocr.convert(
       ' _ \n' +
       '|_|\n' +
@@ -93,7 +93,7 @@ describe('ocr', () => {
     )).toBe('9');
   });
 
-  xit('recognizes ten', () => {
+  xtest('recognizes ten', () => {
     expect(ocr.convert(
       '    _ \n' +
       '  || |\n' +
@@ -102,7 +102,7 @@ describe('ocr', () => {
     )).toBe('10');
   });
 
-  xit('identifies garble', () => {
+  xtest('identifies garble', () => {
     expect(ocr.convert(
       '   \n' +
       '| |\n' +
@@ -111,7 +111,7 @@ describe('ocr', () => {
     )).toBe('?');
   });
 
-  xit('converts 110101100', () => {
+  xtest('converts 110101100', () => {
     expect(ocr.convert(
       '       _     _        _  _ \n' +
       '  |  || |  || |  |  || || |\n' +
@@ -120,7 +120,7 @@ describe('ocr', () => {
     )).toBe('110101100');
   });
 
-  xit('identifies garble mixed in', () => {
+  xtest('identifies garble mixed in', () => {
     expect(ocr.convert(
       '       _     _           _ \n' +
       '  |  || |  || |     || || |\n' +
@@ -129,7 +129,7 @@ describe('ocr', () => {
     )).toBe('11?10?1?0');
   });
 
-  xit('converts 1234567890', () => {
+  xtest('converts 1234567890', () => {
     expect(ocr.convert(
       '    _  _     _  _  _  _  _  _ \n' +
       '  | _| _||_||_ |_   ||_||_|| |\n' +
@@ -138,7 +138,7 @@ describe('ocr', () => {
     )).toBe('1234567890');
   });
 
-  xit('converts 123 456 789', () => {
+  xtest('converts 123 456 789', () => {
     expect(ocr.convert(
       '    _  _ \n' +
       '  | _| _|\n' +

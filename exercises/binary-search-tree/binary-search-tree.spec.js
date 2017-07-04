@@ -10,11 +10,11 @@ function recordAllData(bst) {
 
 describe('BinarySearchTree', () => {
 
-  it('data is retained', () => {
+  test('data is retained', () => {
     expect(new BinarySearchTree(4).data).toEqual(4);
   });
 
-  xit('inserting less', () => {
+  xtest('inserting less', () => {
     let four = new BinarySearchTree(4);
     four.insert(2);
 
@@ -22,7 +22,7 @@ describe('BinarySearchTree', () => {
     expect(four.left.data).toEqual(2);
   });
 
-  xit('inserting same', () => {
+  xtest('inserting same', () => {
     let four = new BinarySearchTree(4);
     four.insert(4);
 
@@ -30,7 +30,7 @@ describe('BinarySearchTree', () => {
     expect(four.left.data).toEqual(4);
   });
 
-  xit('inserting right', () => {
+  xtest('inserting right', () => {
     let four = new BinarySearchTree(4);
     four.insert(5);
 
@@ -38,7 +38,7 @@ describe('BinarySearchTree', () => {
     expect(four.right.data).toEqual(5);
   });
 
-  xit('complex tree', () => {
+  xtest('complex tree', () => {
     let four = new BinarySearchTree(4);
     four.insert(2);
     four.insert(6);
@@ -56,25 +56,25 @@ describe('BinarySearchTree', () => {
     expect(four.right.right.data).toEqual(7);
   });
 
-  xit('iterating one element', () => {
+  xtest('iterating one element', () => {
     expect(recordAllData(new BinarySearchTree(4))).toEqual([ 4 ]);
   });
 
-  xit('iterating over smaller element', () => {
+  xtest('iterating over smaller element', () => {
     let four = new BinarySearchTree(4);
     four.insert(2);
 
     expect(recordAllData(four)).toEqual([ 2, 4 ]);
   });
 
-  xit('iterating over larger element', () => {
+  xtest('iterating over larger element', () => {
     let four = new BinarySearchTree(4);
     four.insert(5);
 
     expect(recordAllData(four)).toEqual([ 4, 5 ]);
   });
 
-  xit('iterating over complex tree', () => {
+  xtest('iterating over complex tree', () => {
     let four = new BinarySearchTree(4);
     four.insert(2);
     four.insert(1);

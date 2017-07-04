@@ -2,28 +2,28 @@ import transform from './etl';
 
 describe('Transform', () => {
 
-  it('transforms one value', () => {
+  test('transforms one value', () => {
     const old = { 1: [ 'A' ] };
     const expected = { a: 1 };
 
     expect(transform(old)).toEqual(expected);
   });
 
-  xit('transforms more values', () => {
+  xtest('transforms more values', () => {
     const old = { 1: [ 'A', 'E', 'I', 'O', 'U' ] };
     const expected = { a: 1, e: 1, i: 1, o: 1, u: 1 };
 
     expect(transform(old)).toEqual(expected);
   });
 
-  xit('transforms more keys', () => {
+  xtest('transforms more keys', () => {
     const old = { 1: [ 'A', 'E' ], 2: [ 'D', 'G' ] };
     const expected = { a: 1, e: 1, d: 2, g: 2 };
 
     expect(transform(old)).toEqual(expected);
   });
 
-  xit('transforms a full dataset', () => {
+  xtest('transforms a full dataset', () => {
     const old = {
       1: [ 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T' ],
       2: [ 'D', 'G' ],

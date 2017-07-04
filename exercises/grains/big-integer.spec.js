@@ -11,13 +11,13 @@ describe('The big-integer module\'s returned object', () => {
     bigI = null;
   });
 
-  it('is not a number', () => {
+  test('is not a number', () => {
     expect(typeof 42).toBe('number');
     expect(typeof bigI).not.toBe('number');
     expect(typeof bigI).toBe('object');
   });
 
-  it('can be compared to a stringified number by calling \'.toString()\'', () => {
+  test('can be compared to a stringified number by calling \'.toString()\'', () => {
     expect(bigI).not.toBe(42);
     expect(bigI).not.toBe('42');
     expect(bigI.toString()).toBe('42');
@@ -31,20 +31,20 @@ describe('The big-integer module\'s returned object', () => {
     // "Expected false to be true."
   });
 
-  it('is immutable', () => {
+  test('is immutable', () => {
     bigI.add(10);
     expect(bigI.toString()).toBe('42');
     bigI.subtract(10);
     expect(bigI.toString()).toBe('42');
   });
 
-  it('can add', () => {
+  test('can add', () => {
     bigI = bigI.add(42);
 
     expect(bigI.toString()).toBe('84');
   });
 
-  it('can perform power operations', () => {
+  test('can perform power operations', () => {
     bigI = BigInt(10);
     bigI = bigI.pow(2);
     expect(bigI.toString()).toBe('100');
