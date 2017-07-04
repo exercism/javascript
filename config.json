@@ -146,6 +146,13 @@
       ]
     },
     {
+      "slug": "diffie-hellman",
+      "difficulty": 3,
+      "topics": [
+        "Cryptography"
+      ]
+    },
+    {
       "slug": "acronym",
       "difficulty": 1,
       "topics": [
