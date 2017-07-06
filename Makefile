@@ -27,7 +27,7 @@ test-assignment:
 	@cp exercises/grains/lib/big-integer.$(FILEEXT) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
-	@sed 's/xit/it/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/temp.$(TSTFILE)
+	@sed 's/xtest/test/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(OUTDIR)/temp.$(TSTFILE)
 	@node_modules/.bin/jest $(OUTDIR)/temp.*.spec.js
 	@rm $(OUTDIR)/*
 	@rmdir $(OUTDIR)

@@ -21,8 +21,8 @@ Execute the tests with:
 $ npm test
 ```
 
-In many test suites all but the first test have been skipped.
+In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
+Once you get a test passing, you can enable the next one by
+changing `xtest` to `test`.
 

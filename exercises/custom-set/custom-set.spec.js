@@ -2,7 +2,7 @@ import CustomSet from './custom-set';
 
 describe('CustomSet', () => {
 
-  it('can delete elements', () =>{
+  test('can delete elements', () =>{
     const expected = new CustomSet([1, 3]);
     const actual = new CustomSet([3, 2, 1]).delete(2);
     expect(actual.eql(expected)).toBe(true);
@@ -12,7 +12,7 @@ describe('CustomSet', () => {
     expect(actual2.eql(expected2)).toBe(true);
   });
 
-  xit('can check for difference', () =>{
+  xtest('can check for difference', () =>{
     const expected = new CustomSet([1, 3]);
     const actual = new CustomSet([3, 2, 1]).difference(new CustomSet([2, 4]));
     expect(actual.eql(expected)).toBe(true);
@@ -21,7 +21,7 @@ describe('CustomSet', () => {
     expect(actual2.eql(expected2)).toBe(true);
   });
 
-  xit('can test disjoint', () => {
+  xtest('can test disjoint', () => {
     const actual = new CustomSet([1, 2]).disjoint(new CustomSet([3, 4]));
     expect(actual).toBe(true);
     const actual2 = new CustomSet([1, 2]).disjoint(new CustomSet([2, 3]));
@@ -30,7 +30,7 @@ describe('CustomSet', () => {
     expect(actual3).toBe(true);
   });
 
-  xit('can be emptied', () => {
+  xtest('can be emptied', () => {
     const actual = new CustomSet([1, 2]).empty();
     const expected = new CustomSet();
     expect(actual.eql(expected)).toBe(true);
@@ -39,7 +39,7 @@ describe('CustomSet', () => {
     expect(actual2.eql(expected2)).toBe(true);
   });
 
-  xit('can check for intersection', () => {
+  xtest('can check for intersection', () => {
     const actual = new CustomSet(['a', 'b', 'c']).intersection(new CustomSet(['a', 'c', 'd']));
     const expected = new CustomSet(['a', 'c']);
     expect(actual.eql(expected)).toBe(true);
@@ -49,14 +49,14 @@ describe('CustomSet', () => {
     expect(actual2.eql(expected2)).toBe(true);
   });
 
-  xit('can test for a member', () => {
+  xtest('can test for a member', () => {
     const actual = new CustomSet([1, 2, 3]).member(2);
     expect(actual).toBe(true);
     const actual2 = new CustomSet([1, 2, 3]).member(4);
     expect(actual2).toBe(false);
   });
 
-  xit('can add a member with put', () => {
+  xtest('can add a member with put', () => {
     const actual = new CustomSet([1, 2, 4]).put(3);
     const expected = new CustomSet([1, 2, 3, 4]);
     expect(actual.eql(expected)).toBe(true);
@@ -65,7 +65,7 @@ describe('CustomSet', () => {
     expect(actual2.eql(expected2)).toBe(true);
   });
 
-  xit('knows its size', () => {
+  xtest('knows its size', () => {
     const actual = new CustomSet().size();
     expect(actual).toBe(0);
     const actual2 = new CustomSet([1, 2, 3]).size();
@@ -74,7 +74,7 @@ describe('CustomSet', () => {
     expect(actual3).toBe(3);
   });
 
-  xit('can test for subsets', () => {
+  xtest('can test for subsets', () => {
     const actual = new CustomSet([1, 2, 3]).subset(new CustomSet([1, 2, 3]));
     expect(actual).toBe(true);
     const actual2 = new CustomSet([4, 1, 2, 3]).subset(new CustomSet([1, 2, 3]));
@@ -87,7 +87,7 @@ describe('CustomSet', () => {
     expect(actual5).toBe(true);
   });
 
-  xit('can give back a list', () => {
+  xtest('can give back a list', () => {
     const actual = new CustomSet().toList();
     const expected = [];
     expect(actual.sort()).toEqual(expected);
@@ -99,7 +99,7 @@ describe('CustomSet', () => {
     expect(actual3.sort()).toEqual(expected3);
   });
 
-  xit('can test for union', () => {
+  xtest('can test for union', () => {
     const actual = new CustomSet([1, 3]).union(new CustomSet([2]));
     const expected = new CustomSet([3, 2, 1]);
     expect(actual.eql(expected)).toBe(true);

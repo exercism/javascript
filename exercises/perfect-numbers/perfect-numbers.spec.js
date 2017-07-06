@@ -6,15 +6,15 @@ describe('Exercise - Perfect Numbers', () => {
 
   describe('Perfect Numbers', () => {
 
-    it('Smallest perfect number is classified correctly', () => {
+    test('Smallest perfect number is classified correctly', () => {
       expect(perfectNumbers.classify(6)).toEqual('perfect');
     });
 
-    xit('Medium perfect number is classified correctly', () => {
+    xtest('Medium perfect number is classified correctly', () => {
       expect(perfectNumbers.classify(28)).toEqual('perfect');
     });
 
-    xit('Large perfect number is classified correctly', () => {
+    xtest('Large perfect number is classified correctly', () => {
       expect(perfectNumbers.classify(33550336)).toEqual('perfect');
     });
 
@@ -22,15 +22,15 @@ describe('Exercise - Perfect Numbers', () => {
 
   describe('Abundant Numbers', () => {
 
-    xit('Smallest abundant number is classified correctly', () => {
+    xtest('Smallest abundant number is classified correctly', () => {
       expect(perfectNumbers.classify(12)).toEqual('abundant');
     });
 
-    xit('Medium abundant number is classified correctly', () => {
+    xtest('Medium abundant number is classified correctly', () => {
       expect(perfectNumbers.classify(30)).toEqual('abundant');
     });
 
-    xit('Large abundant number is classified correctly', () => {
+    xtest('Large abundant number is classified correctly', () => {
       expect(perfectNumbers.classify(33550335)).toEqual('abundant');
     });
 
@@ -38,23 +38,23 @@ describe('Exercise - Perfect Numbers', () => {
 
   describe('Deficient Numbers', () => {
 
-    xit('Smallest prime deficient number is classified correctly', () => {
+    xtest('Smallest prime deficient number is classified correctly', () => {
       expect(perfectNumbers.classify(2)).toEqual('deficient');
     });
 
-    xit('Smallest non-prime deficient number is classified correctly', () => {
+    xtest('Smallest non-prime deficient number is classified correctly', () => {
       expect(perfectNumbers.classify(4)).toEqual('deficient');
     });
 
-    xit('Medium deficient number is classified correctly', () => {
+    xtest('Medium deficient number is classified correctly', () => {
       expect(perfectNumbers.classify(32)).toEqual('deficient');
     });
 
-    xit('Large deficient number is classified correctly', () => {
+    xtest('Large deficient number is classified correctly', () => {
       expect(perfectNumbers.classify(33550337)).toEqual('deficient');
     });
 
-    xit('Edge case (no factors other than itself) is classified correctly', () => {
+    xtest('Edge case (no factors other than itself) is classified correctly', () => {
       expect(perfectNumbers.classify(1)).toEqual('deficient');
     });
 
@@ -62,12 +62,12 @@ describe('Exercise - Perfect Numbers', () => {
 
   describe('Invalid Inputs', () => {
 
-    xit('Zero is rejected (not a natural number)', () => {
+    xtest('Zero is rejected (not a natural number)', () => {
       expect(() => perfectNumbers.classify(0))
         .toThrow('Classification is only possible for natural numbers.');
     });
 
-    xit('Negative integer is rejected (not a natural number)', () => {
+    xtest('Negative integer is rejected (not a natural number)', () => {
       expect(() => perfectNumbers.classify(-1))
         .toThrow('Classification is only possible for natural numbers.');
     });

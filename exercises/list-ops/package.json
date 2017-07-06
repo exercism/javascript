@@ -25,9 +25,14 @@
       "env"
     ],
     "plugins": [
-      ["babel-plugin-transform-builtin-extend", {
-        "globals": ["Error"]
-      }]
+      [
+        "babel-plugin-transform-builtin-extend",
+        {
+          "globals": [
+            "Error"
+          ]
+        }
+      ]
     ]
   },
   "scripts": {
@@ -48,23 +53,71 @@
     },
     "extends": "eslint:recommended",
     "rules": {
-      "indent": [ "off", 2 ],
+      "indent": [
+        "off",
+        2
+      ],
       "block-scoped-var": "off",
       "radix": "off",
       "no-use-before-define": "off",
-      "one-var": [ "off", "always" ],
-      "quotes": [ "off", "single", { "avoidEscape": true } ],
-      "semi": [ "off", "always" ],
-      "semi-spacing": [ "off", { "before": false, "after": true } ],
+      "one-var": [
+        "off",
+        "always"
+      ],
+      "quotes": [
+        "off",
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "semi": [
+        "off",
+        "always"
+      ],
+      "semi-spacing": [
+        "off",
+        {
+          "before": false,
+          "after": true
+        }
+      ],
       "no-whitespace-before-property": "off",
-      "space-before-blocks": [ "off", "always" ],
-      "space-before-function-paren": [ "off", { "anonymous": "always", "named": "never" } ],
-      "keyword-spacing": [ "off", { "before": true, "after": true } ],
+      "space-before-blocks": [
+        "off",
+        "always"
+      ],
+      "space-before-function-paren": [
+        "off",
+        {
+          "anonymous": "always",
+          "named": "never"
+        }
+      ],
+      "keyword-spacing": [
+        "off",
+        {
+          "before": true,
+          "after": true
+        }
+      ],
       "no-multi-spaces": "off",
       "no-trailing-spaces": "off",
-      "curly": [ "error", "all" ],
-      "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
-      "object-curly-spacing": [ "off", "always" ]
+      "curly": [
+        "error",
+        "all"
+      ],
+      "brace-style": [
+        "error",
+        "1tbs",
+        {
+          "allowSingleLine": true
+        }
+      ],
+      "object-curly-spacing": [
+        "off",
+        "always"
+      ]
     }
   },
   "licenses": [

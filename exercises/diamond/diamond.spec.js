@@ -4,12 +4,12 @@ describe('Make diamond function', () => {
 
   var diamond = new Diamond();
 
-  it('test letter A', function() {
+  test('test letter A', function() {
     const result = "A\n";
     expect(diamond.makeDiamond('A')).toEqual(result);
   });
 
-  xit('test letter C', function() {
+  xtest('test letter C', function() {
     const result = ["  A  ",
       " B B ",
       "C   C",
@@ -18,7 +18,7 @@ describe('Make diamond function', () => {
     expect(diamond.makeDiamond('C')).toEqual(result);
   });
 
-  xit('test letter E', function() {
+  xtest('test letter E', function() {
     const result = ["    A    ",
       "   B B   ",
       "  C   C  ",
