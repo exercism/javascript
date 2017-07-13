@@ -10,9 +10,13 @@
   },
   "devDependencies": {
     "babel-jest": "^20.0.1",
-    "babel-preset-env": "^1.4.0",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-preset-env": "^1.4.0",
     "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.1"
   },
   "jest": {
@@ -49,75 +53,12 @@
     "env": {
       "es6": true,
       "node": true,
-      "jasmine": true
+      "jest": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "rules": {
-      "indent": [
-        "off",
-        2
-      ],
-      "block-scoped-var": "off",
-      "radix": "off",
-      "no-use-before-define": "off",
-      "one-var": [
-        "off",
-        "always"
-      ],
-      "quotes": [
-        "off",
-        "single",
-        {
-          "avoidEscape": true
-        }
-      ],
-      "semi": [
-        "off",
-        "always"
-      ],
-      "semi-spacing": [
-        "off",
-        {
-          "before": false,
-          "after": true
-        }
-      ],
-      "no-whitespace-before-property": "off",
-      "space-before-blocks": [
-        "off",
-        "always"
-      ],
-      "space-before-function-paren": [
-        "off",
-        {
-          "anonymous": "always",
-          "named": "never"
-        }
-      ],
-      "keyword-spacing": [
-        "off",
-        {
-          "before": true,
-          "after": true
-        }
-      ],
-      "no-multi-spaces": "off",
-      "no-trailing-spaces": "off",
-      "curly": [
-        "error",
-        "all"
-      ],
-      "brace-style": [
-        "error",
-        "1tbs",
-        {
-          "allowSingleLine": true
-        }
-      ],
-      "object-curly-spacing": [
-        "off",
-        "always"
-      ]
+      "import/no-unresolved": "off",
+      "import/extensions": "off"
     }
   },
   "licenses": [
@@ -125,3 +66,4 @@
   ],
   "dependencies": {}
 }
+
