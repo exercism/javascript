@@ -5,9 +5,10 @@ function generatePrimes(uptoNumber) {
     return realPrimes;
   }
 
-  let currentPrime, possiblePrimes = [];
+  let currentPrime,
+    possiblePrimes = [];
   for (let i = 2; i <= uptoNumber; i++) {
-    possiblePrimes.push({ number: i, prime: true});
+    possiblePrimes.push({ number: i, prime: true });
   }
 
   for (let i = 2; i < Math.sqrt(possiblePrimes.length); i++) {

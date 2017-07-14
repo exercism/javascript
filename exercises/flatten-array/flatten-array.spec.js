@@ -1,6 +1,6 @@
-import Flattener from "./flatten-array.js";
+import Flattener from './flatten-array.js';
 
-describe("FlattenArray", () => {
+describe('FlattenArray', () => {
   const flattener = new Flattener();
   test('flattens a nested list', () => {
     expect(flattener.flatten([[]])).toEqual([]);
@@ -37,5 +37,4 @@ describe("FlattenArray", () => {
   xtest('returns an empty list if all values in nested list are null', () => {
     expect(flattener.flatten([null, [[[null]]], null, null, [[null, null], null], null])).toEqual([]);
   });
-
 });

@@ -7,7 +7,7 @@ export default class Gigasecond {
   }
 
   date() {
-    let birthTime = this.dateOfBirth.getTime();
+    const birthTime = this.dateOfBirth.getTime();
     return new Date(birthTime + GIGASECOND_IN_MILIS);
   }
 

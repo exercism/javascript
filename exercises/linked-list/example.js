@@ -1,5 +1,5 @@
 function Element(value) {
-  return {value: value, next: null, prev: null}
+  return { value, next: null, prev: null };
 }
 
 export default class Deque {
@@ -67,7 +67,7 @@ export default class Deque {
 
   count() {
     let count = 0,
-        element = this.head;
+      element = this.head;
 
     while (this.head && element) {
       count++;

@@ -1,8 +1,8 @@
 class Words {
 
   count(input) {
-    let counts = {};
-    let words = input.match(/\S+/g);
+    const counts = {};
+    const words = input.match(/\S+/g);
 
     words.forEach((word) => {
       const lcWord = word.toLowerCase();

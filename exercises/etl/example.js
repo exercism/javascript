@@ -1,11 +1,11 @@
 function transform(input) {
-  let output = {};
+  const output = {};
 
   Object.keys(input).forEach((key) => {
-    let items = input[key] || [];
+    const items = input[key] || [];
 
     items.forEach((item) => {
-      let value = item.toLowerCase();
+      const value = item.toLowerCase();
       output[value] = Number(key);
     });
   });

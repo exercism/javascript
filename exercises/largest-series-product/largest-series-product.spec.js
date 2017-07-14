@@ -1,7 +1,6 @@
 import Series from './largest-series-product';
 
 describe('Series', () => {
-
   test('can get the largest product of 2', () => {
     expect(new Series('0123456789').largestProduct(2)).toBe(72);
   });
@@ -35,15 +34,15 @@ describe('Series', () => {
     expect(new Series('99099').largestProduct(3)).toBe(0);
   });
 
-  xtest('rejects invalid character in input', ()=> {
-    expect(()=> {
-      new Series('1234a5').largestProduct('2')
+  xtest('rejects invalid character in input', () => {
+    expect(() => {
+      new Series('1234a5').largestProduct('2');
     }).toThrow(new Error('Invalid input.'));
   });
 
-  xtest('rejects negative span', ()=> {
+  xtest('rejects negative span', () => {
     expect(() => {
-      new Series('12345').largestProduct(-1)
+      new Series('12345').largestProduct(-1);
     }).toThrow(new Error('Invalid input.'));
   });
 
@@ -66,5 +65,4 @@ describe('Series', () => {
       new Series('').largestProduct(1);
     }).toThrow(new Error('Slice size is too big.'));
   });
-
 });

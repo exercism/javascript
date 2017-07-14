@@ -1,4 +1,4 @@
-import Binary from'./binary';
+import Binary from './binary';
 
 describe('binary', () => {
   test('0 is decimal 0', () => expect(new Binary('0').toDecimal()).toEqual(0));
@@ -26,5 +26,4 @@ describe('binary', () => {
     expect(new Binary('nope10').toDecimal()).toEqual(0);
     expect(new Binary('10nope10').toDecimal()).toEqual(0);
   });
-
 });

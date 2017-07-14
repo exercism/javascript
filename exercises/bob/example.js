@@ -1,6 +1,6 @@
-let isSilence = (message) => message.replace(/\s+/g, '') === '';
-let isShouting = (message) => message.toUpperCase() === message && /[A-Z]/.test(message);
-let isAQuestion = (message) => message[message.length - 1] === '?';
+const isSilence = message => message.replace(/\s+/g, '') === '';
+const isShouting = message => message.toUpperCase() === message && /[A-Z]/.test(message);
+const isAQuestion = message => message[message.length - 1] === '?';
 
 class Bob {
   hey(message) {

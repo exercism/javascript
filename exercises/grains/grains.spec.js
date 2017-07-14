@@ -63,5 +63,4 @@ describe('Grains', () => {
   xtest('total', () => {
     expect(grains.total()).toBe('18446744073709551615');
   });
-
 });

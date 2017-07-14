@@ -1,4 +1,4 @@
-const MINE = "*";
+const MINE = '*';
 
 const DELTAS = [
   [-1, -1],
@@ -8,7 +8,7 @@ const DELTAS = [
   [1, 0],
   [1, -1],
   [0, 1],
-  [0, -1]
+  [0, -1],
 ];
 
 class Minesweeper {
@@ -20,17 +20,17 @@ class Minesweeper {
     const inputBoard = rows.map(row => [...row]);
 
     return stringify(
-      inputBoard.map((row, x) => [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y)))
-    )
+      inputBoard.map((row, x) => [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y))),
+    );
   }
 }
 
 function cellToMineOrCount(cell, inputBoard, x, y) {
   if (cell === MINE) {
     return MINE;
-  } else {
+  } 
     return countAdjacentMines(inputBoard, x, y) || " ";
-  }
+  
 }
 
 function countAdjacentMines(board, x, y) {
@@ -49,7 +49,7 @@ function noDataPresent(rows) {
 }
 
 function adjacentSquareIsOnBoard(board, x, d) {
-  return board[x + d[0]]
+  return board[x + d[0]];
 }
 
 function adjacentSquareHasMine(board, x, y, d) {
