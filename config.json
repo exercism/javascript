@@ -470,6 +470,16 @@
       ]
     },
     {
+      "slug": "minesweeper",
+      "difficulty": 7,
+      "topics": [
+        "games",
+        "arrays",
+        "algorithms",
+        "Matrices"
+      ]
+    },
+    {
       "slug": "alphametics",
       "difficulty": 7,
       "topics": [
