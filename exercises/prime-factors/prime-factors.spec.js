@@ -2,7 +2,6 @@ import PrimeFactors from './prime-factors';
 const primeFactors = new PrimeFactors();
 
 describe('primeFactors', () => {
-
   test('returns an empty array for 1', () => expect(primeFactors.for(1)).toEqual([]));
 
   xtest('factors 2', () => expect(primeFactors.for(2)).toEqual([2]));
@@ -24,5 +23,4 @@ describe('primeFactors', () => {
   xtest('factors 901255', () => expect(primeFactors.for(901255)).toEqual([5, 17, 23, 461]));
 
   xtest('factors 93819012551', () => expect(primeFactors.for(93819012551)).toEqual([11, 9539, 894119]));
-
 });

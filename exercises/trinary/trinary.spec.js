@@ -1,7 +1,6 @@
 import Trinary from './trinary';
 
 describe('Trinary', () => {
-
   test('1 is decimal 1', () => {
     expect(1).toEqual(new Trinary('1').toDecimal());
   });
@@ -41,5 +40,4 @@ describe('Trinary', () => {
   xtest('digits from 3 to 9 are invalid', () => {
     expect(0).toEqual(new Trinary('123').toDecimal());
   });
-
 });

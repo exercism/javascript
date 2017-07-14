@@ -6,6 +6,6 @@ export default class Flattener {
           ? acc.concat(this.flatten(el))
           : acc.concat(el),
         [])
-      .filter(el => el !== null && el !== undefined)
+      .filter(el => el !== null && el !== undefined);
   }
 }

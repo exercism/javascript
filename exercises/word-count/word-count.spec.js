@@ -1,7 +1,7 @@
 import Words from './word-count';
 
 describe('words()', () => {
-  let words = new Words();
+  const words = new Words();
 
   test('counts one word', () => {
     const expectedCounts = { word: 1 };
@@ -59,8 +59,7 @@ describe('words()', () => {
   });
 
   xtest('handles properties that exist on Object’s prototype', () => {
-    const expectedCounts = { reserved: 1, words : 1, like :1,  constructor: 1, and : 1, tostring: 1,  'ok?': 1};
+    const expectedCounts = { reserved: 1, words: 1, like: 1, constructor: 1, and: 1, tostring: 1, 'ok?': 1 };
     expect(words.count('reserved words like constructor and toString ok?')).toEqual(expectedCounts);
   });
-
 });

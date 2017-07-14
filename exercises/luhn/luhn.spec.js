@@ -1,7 +1,6 @@
 import Luhn from './luhn';
 
-describe('Luhn',() => {
-
+describe('Luhn', () => {
   test('single digit strings can not be valid', () => {
     const luhn = new Luhn('1');
     expect(luhn.valid).toEqual(false);
@@ -31,5 +30,4 @@ describe('Luhn',() => {
     const luhn = new Luhn('046a 454 286');
     expect(luhn.valid).toEqual(false);
   });
-
 });

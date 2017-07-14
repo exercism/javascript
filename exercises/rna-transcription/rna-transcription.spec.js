@@ -1,7 +1,7 @@
 import Transcriptor from './rna-transcription';
 
 describe('Transcriptor', () => {
-  let transcriptor = new Transcriptor();
+  const transcriptor = new Transcriptor();
 
   test('transcribes cytosine to guanine', () => {
     expect(transcriptor.toRna('C')).toEqual('G');
@@ -26,20 +26,19 @@ describe('Transcriptor', () => {
 
   xtest('correctly handles invalid input', () => {
     expect(() => transcriptor.toRna('U')).toThrow(
-      new Error('Invalid input DNA.')
+      new Error('Invalid input DNA.'),
     );
   });
 
   xtest('correctly handles completely invalid input', () => {
     expect(() => transcriptor.toRna('XXX')).toThrow(
-      new Error('Invalid input DNA.')
+      new Error('Invalid input DNA.'),
     );
   });
 
   xtest('correctly handles partially invalid input', () => {
     expect(() => transcriptor.toRna('ACGTXXXCTTAA')).toThrow(
-      new Error('Invalid input DNA.')
+      new Error('Invalid input DNA.'),
     );
   });
-
 });

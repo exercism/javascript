@@ -1,136 +1,136 @@
 import Robot from './robot-simulator';
 
-describe('Robot', function() {
-  let robot = new Robot();
+describe('Robot', () => {
+  const robot = new Robot();
 
-  test('robot bearing', function() {
-    const directions = [ 'east', 'west', 'north', 'south' ];
+  test('robot bearing', () => {
+    const directions = ['east', 'west', 'north', 'south'];
 
-    directions.forEach(currentDirection => {
+    directions.forEach((currentDirection) => {
       robot.orient(currentDirection);
       expect(robot.bearing).toEqual(currentDirection);
     });
   });
 
-  xtest('invalid robot bearing', function() {
+  xtest('invalid robot bearing', () => {
     try {
       robot.orient('crood');
-    } catch(exception) {
+    } catch (exception) {
       expect(exception).toEqual('Invalid Robot Bearing');
     }
   });
 
-  xtest('turn right from north', function() {
+  xtest('turn right from north', () => {
     robot.orient('north');
     robot.turnRight();
     expect(robot.bearing).toEqual('east');
   });
 
-  xtest('turn right from east', function() {
+  xtest('turn right from east', () => {
     robot.orient('east');
     robot.turnRight();
     expect(robot.bearing).toEqual('south');
   });
 
-  xtest('turn right from south', function() {
+  xtest('turn right from south', () => {
     robot.orient('south');
     robot.turnRight();
     expect(robot.bearing).toEqual('west');
   });
 
-  xtest('turn right from west', function() {
+  xtest('turn right from west', () => {
     robot.orient('west');
     robot.turnRight();
     expect(robot.bearing).toEqual('north');
   });
 
-  xtest('turn left from north', function() {
+  xtest('turn left from north', () => {
     robot.orient('north');
     robot.turnLeft();
     expect(robot.bearing).toEqual('west');
   });
 
-  xtest('turn left from east', function() {
+  xtest('turn left from east', () => {
     robot.orient('east');
     robot.turnLeft();
     expect(robot.bearing).toEqual('north');
   });
 
-  xtest('turn left from south', function() {
+  xtest('turn left from south', () => {
     robot.orient('south');
     robot.turnLeft();
     expect(robot.bearing).toEqual('east');
   });
 
-  xtest('turn left from west', function() {
+  xtest('turn left from west', () => {
     robot.orient('west');
     robot.turnLeft();
     expect(robot.bearing).toEqual('south');
   });
 
-  xtest('robot coordinates', function() {
+  xtest('robot coordinates', () => {
     robot.at(3, 0);
     expect(robot.coordinates).toEqual([3, 0]);
   });
 
-  xtest('other robot coordinates', function() {
+  xtest('other robot coordinates', () => {
     robot.at(-2, 5);
     expect(robot.coordinates).toEqual([-2, 5]);
   });
 
-  xtest('advance when facing north', function() {
+  xtest('advance when facing north', () => {
     robot.at(0, 0);
     robot.orient('north');
     robot.advance();
     expect(robot.coordinates).toEqual([0, 1]);
   });
 
-  xtest('advance when facing east', function() {
+  xtest('advance when facing east', () => {
     robot.at(0, 0);
     robot.orient('east');
     robot.advance();
     expect(robot.coordinates).toEqual([1, 0]);
   });
 
-  xtest('advance when facing south', function() {
+  xtest('advance when facing south', () => {
     robot.at(0, 0);
     robot.orient('south');
     robot.advance();
     expect(robot.coordinates).toEqual([0, -1]);
   });
 
-  xtest('advance when facing west', function() {
+  xtest('advance when facing west', () => {
     robot.at(0, 0);
     robot.orient('west');
     robot.advance();
     expect(robot.coordinates).toEqual([-1, 0]);
   });
 
-  xtest('instructions for turning left', function() {
-    expect(robot.instructions('L')).toEqual([ 'turnLeft' ]);
+  xtest('instructions for turning left', () => {
+    expect(robot.instructions('L')).toEqual(['turnLeft']);
   });
 
-  xtest('instructions for turning right', function() {
-    expect(robot.instructions('R')).toEqual([ 'turnRight' ]);
+  xtest('instructions for turning right', () => {
+    expect(robot.instructions('R')).toEqual(['turnRight']);
   });
 
-  xtest('instructions for advancing', function() {
-    expect(robot.instructions('A')).toEqual([ 'advance' ]);
+  xtest('instructions for advancing', () => {
+    expect(robot.instructions('A')).toEqual(['advance']);
   });
 
-  xtest('series of instructions', function() {
+  xtest('series of instructions', () => {
     expect(robot.instructions('RAAL'))
-      .toEqual([ 'turnRight', 'advance', 'advance', 'turnLeft' ]);
+      .toEqual(['turnRight', 'advance', 'advance', 'turnLeft']);
   });
 
-  xtest('instruct robot', function() {
+  xtest('instruct robot', () => {
     robot.place({ x: -2, y: 1, direction: 'east' });
     robot.evaluate('RLAALAL');
     expect(robot.coordinates).toEqual([0, 2]);
     expect(robot.bearing).toEqual('west');
   });
 
-  xtest('instruct many robots', function() {
+  xtest('instruct many robots', () => {
     const robot1 = new Robot();
     const robot2 = new Robot();
     const robot3 = new Robot();
@@ -150,5 +150,4 @@ describe('Robot', function() {
     expect(robot3.coordinates).toEqual([11, 5]);
     expect(robot3.bearing).toEqual('north');
   });
-
 });

@@ -1,29 +1,30 @@
 export default class Square {
-  constructor (input) {
+  constructor(input) {
     this.input = input;
   }
 
-  normalizePlaintext () {
-    return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g,'');
+  normalizePlaintext() {
+    return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
   }
 
-  size () {
+  size() {
     const realLength = Math.sqrt(this.normalizePlaintext().length);
     return Math.ceil(realLength);
   }
 
-  plaintextSegments () {
+  plaintextSegments() {
     const plainText = this.normalizePlaintext();
     const chunkSize = this.size();
 
-    const splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
+    const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g');
     return plainText.match(splitRegex);
   }
 
-  ciphertext () {
+  ciphertext() {
     const textSegments = this.plaintextSegments(),
       columns = [];
-    let i, j,
+    let i,
+      j,
       currentSegment,
       currentLetter;
 
@@ -47,9 +48,9 @@ export default class Square {
     return columns.join('');
   }
 
-  normalizeCiphertext () {
+  normalizeCiphertext() {
     const chunkSize = this.size();
-    const splitRegex = new RegExp('.{1,' + chunkSize + '}','g');
+    const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g');
     return this.ciphertext().match(splitRegex).join(' ');
   }
 }

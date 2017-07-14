@@ -23,5 +23,4 @@ describe('Prime', () => {
     expect(() => prime.nth(0))
       .toThrow(new Error('Prime is not possible'));
   });
-
 });

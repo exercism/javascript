@@ -1,7 +1,7 @@
 class BinarySearchTree {
   constructor(data) {
-    this.data  = data;
-    this.left  = undefined;
+    this.data = data;
+    this.left = undefined;
     this.right = undefined;
   }
 

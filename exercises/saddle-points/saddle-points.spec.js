@@ -3,7 +3,7 @@ import Matrix from './saddle-points';
 describe('Matrix', () => {
   test('extracts a row', () => {
     const matrix = new Matrix('1 2\n10 20');
-    expect(matrix.rows[0]).toEqual([1,2]);
+    expect(matrix.rows[0]).toEqual([1, 2]);
   });
 
   xtest('extracts other row', () => {
@@ -28,12 +28,12 @@ describe('Matrix', () => {
 
   xtest('a saddle point', () => {
     const matrix = new Matrix('1 2\n3 4');
-    expect(matrix.saddlePoints).toEqual([[0,1]]);
+    expect(matrix.saddlePoints).toEqual([[0, 1]]);
   });
 
   xtest('another saddle point', () => {
     const matrix = new Matrix('18 3 39 19 91\n38 10 8 77 320\n3 4 8 6 7');
-    expect(matrix.saddlePoints).toEqual([[2,2]]);
+    expect(matrix.saddlePoints).toEqual([[2, 2]]);
   });
 
   xtest('multiple saddle points', () => {

@@ -9,9 +9,9 @@ class Triangle {
   }
 
   fillRows(rows) {
-    let result = [[ 1 ]];
+    const result = [[1]];
     for (let x = 1; x < rows; x++) {
-      let newRow = [ 1 ];
+      const newRow = [1];
       result[x - 1].forEach(this.sumElements, newRow);
       result.push(newRow);
     }

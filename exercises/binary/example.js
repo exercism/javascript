@@ -1,7 +1,7 @@
-//classy solution, eh?
+// classy solution, eh?
 
-class Binary{
-  constructor(binary){
+class Binary {
+  constructor(binary) {
     this.binary = binary.match(/^[01]*$/) ? parseInt(binary, 2) : 0;
   }
   toDecimal() {

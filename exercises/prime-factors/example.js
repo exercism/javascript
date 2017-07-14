@@ -1,6 +1,6 @@
 class PrimeFactors {
-  for (num) {
-    const factors=[];
+  for(num) {
+    const factors = [];
     let currentFactor = 2;
 
     while (num !== 1) {

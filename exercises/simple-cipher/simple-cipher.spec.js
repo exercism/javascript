@@ -1,6 +1,6 @@
 import Cipher from './simple-cipher';
 
-describe('Random key cipher',  () => {
+describe('Random key cipher', () => {
   const cipher = new Cipher();
 
   test('has a key made of letters', () => {
@@ -26,19 +26,19 @@ describe('Random key cipher',  () => {
 
 describe('Incorrect key cipher', () => {
   xtest('throws an error with an all caps key', () => {
-    expect( () => {
+    expect(() => {
       new Cipher('ABCDEF');
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with a numeric key', () => {
-    expect( () => {
+    expect(() => {
       new Cipher('12345');
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with an empty key', () => {
-    expect( () => {
+    expect(() => {
       new Cipher('');
     }).toThrow(new Error('Bad key'));
   });

@@ -1,6 +1,6 @@
 import Raindrops from './raindrops';
 
-describe('Raindrops', ()  => {
+describe('Raindrops', () => {
   const drops = new Raindrops();
 
   test('converts 1', () => expect(drops.convert(1)).toEqual('1'));
@@ -34,5 +34,4 @@ describe('Raindrops', ()  => {
   xtest('converts 105', () => expect(drops.convert(105)).toEqual('PlingPlangPlong'));
 
   xtest('converts 12121', () => expect(drops.convert(12121)).toEqual('12121'));
-
 });

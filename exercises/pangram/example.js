@@ -1,15 +1,16 @@
 const notAlpha = /[^a-z]+/gi,
-      alphaLength = 26;
-let cleaned, sortedSet;
+  alphaLength = 26;
+let cleaned,
+  sortedSet;
 
 class Pangram {
 
-  constructor (candidate){
-    cleaned = (candidate.replace(notAlpha,'')).toLowerCase();
+  constructor(candidate) {
+    cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
     sortedSet = new Set([...cleaned].sort());
   }
 
-  isPangram (){
+  isPangram() {
     return sortedSet.size === alphaLength;
   }
 }
