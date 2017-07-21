@@ -1,7 +1,5 @@
 {
-  "slug": "ecmascript",
   "language": "ECMAScript",
-  "repository": "https://github.com/exercism/ecmascript",
   "active": true,
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
@@ -12,6 +10,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -21,6 +20,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -30,6 +30,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -39,6 +40,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -48,6 +50,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -57,6 +60,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -66,6 +70,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -75,6 +80,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -84,6 +90,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -93,6 +100,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -102,6 +110,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -111,6 +120,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -120,6 +130,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -129,6 +140,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -138,6 +150,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -147,6 +160,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -166,6 +180,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -175,6 +190,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -184,6 +200,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -193,6 +210,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -212,6 +230,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -221,6 +240,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -230,6 +250,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -239,6 +260,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -248,6 +270,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -257,6 +280,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -266,6 +290,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -275,6 +300,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -284,6 +310,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -293,6 +320,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -302,6 +330,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -311,6 +340,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -320,6 +350,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -329,6 +360,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -338,6 +370,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -347,6 +380,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -356,6 +390,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -365,6 +400,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -374,6 +410,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -383,6 +420,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -392,6 +430,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -412,6 +451,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -421,6 +461,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -430,6 +471,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -451,6 +493,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -460,6 +503,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -469,6 +513,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -478,6 +523,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -487,6 +533,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -496,6 +543,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -505,6 +553,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -514,6 +563,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -523,6 +573,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -532,6 +583,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -541,6 +593,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -550,6 +603,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -559,6 +613,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -568,6 +623,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -577,6 +633,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -586,6 +643,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -595,6 +653,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -604,6 +663,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+
       ]
     },
     {
@@ -662,5 +722,6 @@
     }
   ],
   "foregone": [
+
   ]
 }
