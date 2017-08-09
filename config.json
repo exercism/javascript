@@ -395,6 +395,22 @@
       ]
     },
     {
+      "uuid": "6ac4ad5f-a64a-4646-91c5-169d53f289f9",
+      "slug": "run-length-encoding",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "Control flow (conditionals)",
+        "Exception handling",
+        "Parsing",
+        "Text formatting",
+        "Regular expressions",
+        "Pattern recognition",
+        "Strings"
+      ]
+    },
+    {
       "uuid": "440d78d1-9dea-466f-9bd4-935eed067409",
       "slug": "acronym",
       "core": false,
