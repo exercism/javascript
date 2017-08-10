@@ -6,4 +6,5 @@ sudo: false
 script:
 - bin/fetch-configlet
 - bin/configlet lint .
-- make test
+- make test-travis
+
