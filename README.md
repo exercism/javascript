@@ -34,5 +34,5 @@ Pass the exercise name to make script to run the tests for a specific exercise:
 
 ## Contributing Guide
 
-Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
+For an in-depth discussion of how exercism language tracks and exercises work,please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
 
