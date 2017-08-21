@@ -666,6 +666,21 @@
       ]
     },
     {
+      "uuid": "5626f5b6-207b-458b-92b6-eff2cadb240a",
+      "slug": "proverb",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "Control flow (conditionals)",
+        "Control flow (loops)",
+        "Arrays",
+        "Strings",
+        "Text formatting",
+        "Optional values"
+      ]
+    },
+    {
       "uuid": "1a6c4a3b-d5db-4a5a-b123-66cf085defe6",
       "slug": "flatten-array",
       "core": false,
