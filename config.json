@@ -42,8 +42,8 @@
       "core": true,
       "difficulty": 1,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Mathematics",
         "Strings",
@@ -58,8 +58,8 @@
       "core": true,
       "difficulty": 2,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Lists",
         "Strings",
         "Maps",
@@ -73,7 +73,7 @@
       "core": true,
       "difficulty": 2,
       "topics": [
-        "Control flow (conditionals)",
+        "Control-flow (conditionals)",
         "Polymorfism",
         "Strings",
         "Unicode",
@@ -107,8 +107,8 @@
       "core": true,
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Strings",
@@ -122,8 +122,8 @@
       "core": true,
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Algorithms",
         "Integers"
@@ -135,8 +135,8 @@
       "core": true,
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Data structures",
         "Arrays",
         "Matrices",
@@ -149,8 +149,8 @@
       "core": true,
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Data structures",
         "Arrays",
@@ -164,8 +164,8 @@
       "core": true,
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Strings",
         "Text formatting"
@@ -177,8 +177,8 @@
       "core": true,
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Games",
         "Bitwise operations",
@@ -202,7 +202,7 @@
       "core": true,
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
+        "Control-flow (conditionals)",
         "Exception handling",
         "Sets",
         "Randomness",
@@ -215,8 +215,8 @@
       "core": true,
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Regular expressions",
         "Exception handling",
         "Strings",
@@ -230,7 +230,7 @@
       "core": true,
       "difficulty": 8,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Data structures",
         "Lists",
         "Recursion"
@@ -267,8 +267,8 @@
       "unlocked_by": "bob",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Strings"
       ]
     },
@@ -311,7 +311,7 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Transforming",
         "Maps",
         "Integers"
@@ -335,7 +335,7 @@
       "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Integers",
         "Mathematics"
       ]
@@ -347,8 +347,8 @@
       "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
-        "Control flow (loops)",
-        "Control flow (conditionals)",
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
         "Exception handling",
         "Integers",
         "Mathematics"
@@ -373,8 +373,8 @@
       "unlocked_by": "space-age",
       "difficulty": 3,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Arrays",
         "Integers",
         "Mathematics"
@@ -387,7 +387,7 @@
       "unlocked_by": "pangram",
       "difficulty": 1,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Lists",
         "Strings",
         "Unicode",
@@ -401,7 +401,7 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "Control flow (conditionals)",
+        "Control-flow (conditionals)",
         "Exception handling",
         "Parsing",
         "Text formatting",
@@ -418,7 +418,7 @@
       "difficulty": 2,
       "topics": [
         "Strings",
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Regular expressions",
         "Transforming"
       ]
@@ -430,8 +430,8 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Maps",
         "Strings"
       ]
@@ -443,8 +443,8 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Pattern recognition",
         "Transforming"
@@ -457,8 +457,8 @@
       "unlocked_by": "linked-list",
       "difficulty": 8,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Data structures",
         "Lists",
         "Arrays",
@@ -472,7 +472,7 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
-        "Control flow (conditionals)",
+        "Control-flow (conditionals)",
         "Strings",
         "Integers",
         "Transforming"
@@ -485,8 +485,8 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Bitwise operations",
         "Arrays"
       ]
@@ -498,8 +498,8 @@
       "unlocked_by": "list-ops",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Lists",
         "Arrays",
@@ -514,8 +514,8 @@
       "unlocked_by": "simple-cipher",
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Arrays",
         "Regular expressions",
@@ -529,7 +529,7 @@
       "unlocked_by": "list-ops",
       "difficulty": 5,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Algorithms",
         "Lists",
         "Callbacks"
@@ -542,8 +542,8 @@
       "unlocked_by": "atbash-cipher",
       "difficulty": 9,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Arrays",
         "Sorting",
@@ -559,8 +559,8 @@
       "unlocked_by": "binary",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Strings",
@@ -574,8 +574,8 @@
       "unlocked_by": "prime-factors",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Recursion"
@@ -588,8 +588,8 @@
       "unlocked_by": "binary",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Strings",
@@ -603,8 +603,8 @@
       "unlocked_by": "space-age",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Strings"
@@ -617,8 +617,8 @@
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Strings",
         "Games",
         "Regular expressions",
@@ -632,8 +632,8 @@
       "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Mathematics",
         "Integers"
@@ -646,7 +646,7 @@
       "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Exception handling",
         "Strings",
         "Text formatting"
@@ -659,7 +659,7 @@
       "unlocked_by": "space-age",
       "difficulty": 3,
       "topics": [
-        "Control flow (loops)",
+        "Control-flow (loops)",
         "Algorithms",
         "Mathematics",
         "Integers"
@@ -672,8 +672,8 @@
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Arrays",
         "Strings",
         "Text formatting",
@@ -698,8 +698,8 @@
       "unlocked_by": "binary",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Strings",
@@ -713,8 +713,8 @@
       "unlocked_by": "pangram",
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Strings",
@@ -729,8 +729,8 @@
       "unlocked_by": "wordy",
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Strings",
         "Arrays",
         "Text formatting"
@@ -743,8 +743,8 @@
       "unlocked_by": "linked-list",
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Recursion",
         "Arrays",
         "Algorithms"
@@ -757,8 +757,8 @@
       "unlocked_by": "binary-search",
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Recursion",
         "Algorithms"
       ]
@@ -770,8 +770,8 @@
       "unlocked_by": "wordy",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Exception handling",
         "Strings",
         "Games",
@@ -785,8 +785,8 @@
       "unlocked_by": "prime-factors",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Exception handling",
         "Algorithms",
         "Mathematics",
@@ -800,8 +800,8 @@
       "unlocked_by": "prime-factors",
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Exception handling",
         "Algorithms",
         "Mathematics",
@@ -815,8 +815,8 @@
       "unlocked_by": "bob",
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Mathematics",
         "Integers",
         "Exception handling",
@@ -831,8 +831,8 @@
       "unlocked_by": "linked-list",
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Data structures",
         "Arrays",
         "Lists",
@@ -848,8 +848,8 @@
       "unlocked_by": "prime-factors",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Lists",
         "Integers"
       ]
@@ -861,8 +861,8 @@
       "unlocked_by": null,
       "difficulty": 8,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Optional values",
         "Exception handling",
         "Equality",
@@ -877,8 +877,8 @@
       "unlocked_by": "matrix",
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Optional values",
         "Exception handling",
         "Equality",
@@ -895,8 +895,8 @@
       "unlocked_by": "matrix",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Exception handling",
         "Equality",
         "Parsing",
@@ -911,8 +911,8 @@
       "unlocked_by": "gigasecond",
       "difficulty": 7,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Exception handling",
         "Equality",
         "Time",
@@ -926,8 +926,8 @@
       "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Strings",
         "Parsing",
         "Exception handling"
@@ -940,8 +940,8 @@
       "unlocked_by": "grade-school",
       "difficulty": 6,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Arrays",
         "Parsing",
         "Algorithms",
@@ -956,8 +956,8 @@
       "unlocked_by": "pascals-triangle",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Arrays",
         "Parsing",
         "Games",
@@ -972,8 +972,8 @@
       "unlocked_by": "binary",
       "difficulty": 5,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Exception handling",
         "Parsing",
         "Mathematics",
@@ -1010,8 +1010,8 @@
       "unlocked_by": "grade-school",
       "difficulty": 7,
       "topics": [
-        "Control flow (loops)",
-        "Control flow (conditionals)",
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
         "Games",
         "Parsing",
         "Arrays",
@@ -1025,8 +1025,8 @@
       "unlocked_by": "simple-cipher",
       "difficulty": 3,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Algorithms",
         "Arrays",
         "Exception handling"
@@ -1039,8 +1039,8 @@
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "Control flow (conditionals)",
-        "Control flow (loops)",
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
         "Polymorfism",
         "Strings",
         "Pattern recognition",
