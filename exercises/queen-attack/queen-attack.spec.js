@@ -15,26 +15,21 @@ describe('Queens', () => {
 
   xtest('cannot occupy the same space', () => {
     const positioning = { white: [2, 4], black: [2, 4] };
-
-    try {
-      new Queens(positioning);
-    } catch (error) {
-      expect(error).toEqual('Queens cannot share the same space');
-    }
+    const expectedError = 'Queens cannot share the same space';
+    expect(() => new Queens(positioning)).toThrow(expectedError);
   });
 
   xtest('toString representation', () => {
     const positioning = { white: [2, 4], black: [6, 6] };
     const queens = new Queens(positioning);
-    const board = '_ _ _ _ _ _ _ _\n\
-_ _ _ _ _ _ _ _\n\
-_ _ _ _ W _ _ _\n\
-_ _ _ _ _ _ _ _\n\
-_ _ _ _ _ _ _ _\n\
-_ _ _ _ _ _ _ _\n\
-_ _ _ _ _ _ B _\n\
-_ _ _ _ _ _ _ _\n\
-';
+    const board = ['_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ W _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ B _',
+      '_ _ _ _ _ _ _ _\n'].join('\n');
     expect(queens.toString()).toEqual(board);
   });
 
