@@ -76,4 +76,9 @@ describe('Substitution cipher', () => {
   xtest('can wrap on decode', () => {
     expect(cipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz');
   });
+
+  xtest('can handle messages longer than the key', function() {
+    expect(new Cipher('abc').encode('iamapandabear'))
+      .toEqual('iboaqcnecbfcr');
+  });
 });
