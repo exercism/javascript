@@ -1004,6 +1004,18 @@
       ]
     },
     {
+      "uuid": "a1591026-2f02-45f9-b189-24b2359eb43f",
+      "slug": "simple-linked-list",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 8,
+      "topics": [
+        "Arrays",
+        "Data structures",
+        "Lists"
+      ]
+    },
+    {
       "uuid": "2fa2c262-77ae-409b-bfd8-1d643faae772",
       "slug": "connect",
       "core": false,
