@@ -1,11 +1,12 @@
 export default class CustomSet {
   constructor(data = []) {
     this.data = {};
-    data.forEach(el => this.put(el));
-    this.comparator = typeof data[0] === 'number' ?
-      (a, b) => a - b
-      : (a, b) => b <= a
-      ? 1 : -1;
+    data.forEach(el => this.add(el));
+  }
+
+  add(el) {
+    this.data[el] = el;
+    return this;
   }
 
   delete(el) {
@@ -13,8 +14,20 @@ export default class CustomSet {
     return this;
   }
 
+  size() {
+    return Object.keys(this.data).length;
+  }
+
+  empty() {
+    return this.size() === 0;
+  }
+
+  contains(el) {
+    return this.data[el] !== undefined;
+  }
+
   eql(other) {
-    return this.difference(other).size() === 0;
+    return this.size() === other.size() && this.difference(other).size() === 0;
   }
 
   difference(other) {
@@ -30,36 +43,14 @@ export default class CustomSet {
   }
 
   union(other) {
-    return new CustomSet(this.toList().concat(this.difference(other).toList()));
+    return new CustomSet(this.toList().concat(other.toList()));
   }
 
   subset(other) {
-    return other.eql(this.intersection(other));
+    return this.eql(this.intersection(other));
   }
 
   toList() {
-    return Object.keys(this.data).map(el => +el);
-  }
-
-  member(el) {
-    return this.data[el] !== undefined;
-  }
-
-  put(value) {
-    this.data[value] = value;
-    return this;
-  }
-
-  sort() {
-    this.data.sort(this.comparator);
-  }
-
-  size() {
-    return Object.keys(this.data).length;
-  }
-
-  empty() {
-    this.data = {};
-    return this;
+    return Object.values(this.data);
   }
 }
