@@ -53,6 +53,19 @@
       ]
     },
     {
+      "core": true,
+      "difficulty": 2,
+      "slug": "nucleotide-count",
+      "topics": [
+        "filtering",
+        "pattern-matching",
+        "strings",
+        "test-driven-development"
+      ],
+      "unlocked_by": "rna-transcription",
+      "uuid": "9debee8e-003d-4eb2-bf97-6d3764d024ca"
+    },
+    {
       "uuid": "da5b2b34-a1a7-4970-81f9-4665d875398b",
       "slug": "pangram",
       "core": true,
