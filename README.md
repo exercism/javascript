@@ -12,27 +12,27 @@ We recommend using the latest stable version (v7 at the moment).
 
 Use `npm` to install all required dependencies:
 
-    % npm install
+    npm install
 
 #### Linting Your Code
 This project uses [eslint](https://github.com/eslint/eslint) to help you write quality
 ECMAScript code by checking for common formatting errors, enforcing style rules,
 and suggesting changes that conform to best practices.
 
-    % npm run lint-test
+    npm run lint-test
 
 #### Test All Assignments
 The make script will test all exercises:
 
-    % make test
+    make test
 
 #### Test Specific Assignment
 Pass the exercise name to make script to run the tests for a specific exercise:
 
-    % make test-assignment ASSIGNMENT=hello-world
+    make test-assignment ASSIGNMENT=hello-world
 
 
 ## Contributing Guide
 
-For an in-depth discussion of how exercism language tracks and exercises work,please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
+For an in-depth discussion of how exercism language tracks and exercises work, please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
 
