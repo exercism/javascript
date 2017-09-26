@@ -8,7 +8,7 @@ Exercism exercises in ECMAScript 6
 ## Running the Unit Test Suite
 
 [Node.js](https://nodejs.org) must be installed. Follow these [instructions](http://exercism.io/languages/ecmascript/installation) for installing nodejs.
-We recommend using the LTS version.
+We recommend using the latest LTS version.
 
 Use `npm` to install all required dependencies:
 
