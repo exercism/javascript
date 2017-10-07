@@ -1,12 +1,9 @@
-Install [Node.js](http://nodejs.org):
+There are a couple of ways to install [NodeJS](http://nodejs.org):
 
-* **Windows and OS X users**: can
-[download an Installer](https://nodejs.org/en/download/)
-* **Linux users**: can install it
-[via package manager](https://nodejs.org/en/download/package-manager/)
+* via an [Installer or Binaries](https://nodejs.org/en/download/) 
+* via [package managers](https://nodejs.org/en/download/package-manager/)
 
-[linstall]: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-
+Both options have selections for Windows, MacOS, and Linux. 
 
 If you've used the official installer, your `PATH` should have been automatically
 configured, but if your shell has trouble locating your globally installed
