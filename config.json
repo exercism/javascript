@@ -355,6 +355,21 @@
       ]
     },
     {
+      "uuid": "363b8810-0bd1-c480-b23c-6b5f629975e7452b123",
+      "slug": "collatz-conjecture",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Recursion",
+        "Exception_handling",
+        "Integers",
+        "Mathematics"
+      ]
+    },
+    {
       "uuid": "4e0e2c30-be33-49b6-b196-213888a93a0c",
       "slug": "clock",
       "core": false,
