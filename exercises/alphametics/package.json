@@ -39,7 +39,7 @@
       ],
       ["transform-regenerator"]
     ]
-},
+  },
   "scripts": {
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
