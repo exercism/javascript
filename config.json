@@ -329,6 +329,22 @@
       ]
     },
     {
+      "uuid": "0125f5a7-8883-4553-a6c1-45f19544af5e",
+      "slug": "word-search",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 8,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Optional values",
+        "Equality",
+        "Text formatting",
+        "Parsing",
+        "Arrays"
+      ]
+    },
+    {
       "uuid": "d003975a-9045-4f03-9ad9-c15db584dc13",
       "slug": "grains",
       "core": false,
