@@ -1103,6 +1103,17 @@
         "Pattern recognition",
         "Regular expressions"
       ]
+    },
+    {
+      "uuid": "1c2c0ee5-04e9-0f80-1edd-8d6d0efa4e2eea856af",
+      "slug": "bowling",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 6,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Exception handling"
+      ]
     }
   ],
   "foregone": []
