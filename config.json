@@ -237,6 +237,20 @@
       ]
     },
     {
+      "uuid": "207af8f6-0ffe-e380-d521-7e054bd4e959257c77d",
+      "slug": "two-fer",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "Booleans",
+        "Strings",
+        "Logic",
+        "Optional values",
+        "Text formatting"
+      ]
+    },
+    {
       "uuid": "d773c4ef-c09e-40e4-a7fe-01456cb4a12a",
       "slug": "hamming",
       "core": false,
