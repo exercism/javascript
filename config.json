@@ -995,6 +995,22 @@
       ]
     },
     {
+      "core": false,
+      "difficulty": 8,
+      "slug": "bowling",
+      "topics": [
+        "arrays",
+        "control-flow-(conditionals)",
+        "control-flow-(loops)",
+        "exception-handling",
+        "games",
+        "parsing",
+        "text-formatting"
+      ],
+      "unlocked_by": "grade-school",
+      "uuid": "dbf26ef1-62ff-4cb1-8ac7-09b022df3b2f"
+    },
+    {
       "uuid": "6a1eee0e-f8d4-446d-9c52-f31c3700af1b",
       "slug": "diamond",
       "core": false,
