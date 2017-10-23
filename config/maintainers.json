@@ -1,35 +1,35 @@
 {
+  "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "github_username": "rchavarria",
-      "show_on_website": true,
       "alumnus": false,
-      "name": "Rubén Chavarría",
+      "avatar_url": null,
       "bio": "I'm a Web Developer with a passion for taking code that is hard to maintain and cleaning, refactoring, and bringing it back into a manageable state",
+      "github_username": "rchavarria",
       "link_text": "Here is where I blog",
       "link_url": "https://rchavarria.github.io/",
-      "avatar_url": null
+      "name": "Rubén Chavarría",
+      "show_on_website": true
     },
     {
+      "alumnus": false,
+      "avatar_url": null,
+      "bio": null,
       "github_username": "tejasbubane",
-      "show_on_website": false,
-      "alumnus": false,
-      "name": null,
-      "bio": null,
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     },
     {
-      "github_username": "matthewmorgan",
-      "show_on_website": false,
       "alumnus": false,
-      "name": null,
+      "avatar_url": null,
       "bio": null,
+      "github_username": "matthewmorgan",
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     }
-  ],
-  "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md"
+  ]
 }
