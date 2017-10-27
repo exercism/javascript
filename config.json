@@ -1119,6 +1119,19 @@
         "Pattern recognition",
         "Regular expressions"
       ]
+    },
+    {
+      "uuid": "213ea396-0c25-e480-4e76-5876975bdd54ac4890c",
+      "slug": "isbn-verifier",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "pattern_recognition",
+        "regular_expressions"
+      ]
     }
   ],
   "foregone": []
