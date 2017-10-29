@@ -1160,6 +1160,19 @@
         "strings",
         "text_formatting"
       ]
+    },
+    {
+      "uuid": "775ae0ec-8db7-4568-a188-963931cf5ee1",
+      "slug": "protein-translation",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control-flow-(conditionals)",
+        "control-flow-(loops)",
+        "strings",
+        "algorithms"
+      ]
     }
   ],
   "foregone": []
