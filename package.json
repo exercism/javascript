@@ -37,7 +37,9 @@
           ]
         }
       ],
-      ["transform-regenerator"]
+      [
+        "transform-regenerator"
+      ]
     ]
   },
   "scripts": {
