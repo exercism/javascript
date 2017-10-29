@@ -1106,6 +1106,19 @@
       ]
     },
     {
+      "uuid" : "cfa5741c-9fe9-4cb5-a322-d77ba8145f4b",
+      "slug" : "change",
+      "core" :  false,
+      "unlocked_by": "prime-factors",
+      "difficulty" : 8,
+      "topics": [
+        "Algorithms",
+        "Mathematics",
+        "Performance",
+        "Searching"
+      ]
+    },
+    {
       "uuid": "0e43944b-0a68-5680-ef11-70999d2df897c894476",
       "slug": "twelve-days",
       "core": false,
