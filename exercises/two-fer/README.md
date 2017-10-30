@@ -17,7 +17,7 @@ If the given name is "Alice", the result should be "One for Alice, one for me." 
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

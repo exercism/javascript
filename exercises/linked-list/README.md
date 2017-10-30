@@ -32,7 +32,7 @@ If you want to know more about linked lists, check [Wikipedia](https://en.wikipe
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

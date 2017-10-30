@@ -17,7 +17,7 @@ natural numbers is 3025 - 385 = 2640.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

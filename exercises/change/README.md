@@ -13,7 +13,7 @@ result is an array with the values: 1, 1, 10 and 25.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

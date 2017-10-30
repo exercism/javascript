@@ -22,7 +22,7 @@ youtube video](http://www.youtube.com/watch?v=Z_2gbGXzFbs).
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

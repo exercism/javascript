@@ -32,7 +32,7 @@ Given the nouns, "nail", "shoe", "horse", "rider", "message",  and a qualifier "
 Go through the setup instructions for EcmaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 
