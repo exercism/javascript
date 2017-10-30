@@ -30,7 +30,7 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-[http://exercism.io/languages/ecmascript/installation](http://exercism.io/languages/ecmascript)
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 
