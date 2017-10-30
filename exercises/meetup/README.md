@@ -28,7 +28,7 @@ For example, if given "First Monday of January 2017", the correct meetup date is
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

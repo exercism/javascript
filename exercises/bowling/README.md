@@ -41,7 +41,7 @@ For a tenth frame of XXX (three strikes), the total value is 30.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 

@@ -34,7 +34,7 @@ Written with <3 at [Fullstack Academy](http://www.fullstackacademy.com/) by [Lin
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/ecmascript/installation
 
 ## Requirements
 
