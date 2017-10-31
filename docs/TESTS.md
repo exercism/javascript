@@ -41,6 +41,18 @@ export default class Bob {
 }
 ```
 
+## How to Skip Tests
+
+The skip method instructs the test suite to not run a test. This is commonly used to avoid running tests of unimplemented functionality, so you can focus on the part you are currently working on.
+
+The skip method could be used also under the aliases: it.skip(name, fn) or xit(name, fn) or xtest(name, fn)
+
+```javascript
+  xtest('title cased phrases', () => {
+    expect(Acronyms.parse('Portable Network Graphics')).toEqual('PNG');
+  });
+```
+
 You can find more information about modules in the
 [Babel documentation](https://babeljs.io/docs/learn-es2015/#modules).
 To make it easier to get started, there is a *skeleton* ECMAScript file in the
