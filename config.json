@@ -1134,6 +1134,16 @@
       ]
     },
     {
+      "uuid": "a0eecb1c-0dd1-4180-1d19-c6ab92bc23ca163ee56",
+      "slug": "complex-numbers",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 4,
+      "topics": [
+        "Mathematics"
+      ]
+    },
+    {
       "uuid": "213ea396-0c25-e480-4e76-5876975bdd54ac4890c",
       "slug": "isbn-verifier",
       "core": false,
