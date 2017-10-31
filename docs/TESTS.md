@@ -41,14 +41,18 @@ export default class Bob {
 }
 ```
 
-## Skip Tests
+## Understanding Skip Tests
 
-The skip method instructs the test suite to not run a test. This is commonly used to avoid running tests of unimplemented functionality, so you can focus on the part you are currently working on.
+The skip method instructs the test suite to not run a test, this function could be used also under the aliases: `it.skip(name, fn) or xit(name, fn) or xtest(name, fn)`
 
-The skip method could be used also under the aliases: `it.skip(name, fn) or xit(name, fn) or xtest(name, fn)`
+- Why they are skipped ? 
+So as to enable users to concentrate on one test at a time and enable one by one as they evolve the solution.
+
+- How to enable them ? 
+Change xtest to test.
 
 ```javascript
-xtest('title cased phrases', () => {
+test('title cased phrases', () => {
   expect(Acronyms.parse('Portable Network Graphics')).toEqual('PNG');
 });
 ```
