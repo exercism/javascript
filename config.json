@@ -782,6 +782,20 @@
       ]
     },
     {
+      "uuid": "03889544-064a-a980-2c2a-c7eb7d8407f8f737fb8",
+      "slug": "house",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Strings",
+        "Arrays",
+        "Recursion"
+      ]
+    },
+    {
       "uuid": "7c569e5d-bb00-44b8-8adc-34253790c19b",
       "slug": "binary-search",
       "core": false,
