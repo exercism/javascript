@@ -1225,6 +1225,19 @@
         "Matrices",
         "Strings"
       ]
+    },
+    {
+      "uuid": "28d75cd0-0ab4-ed80-6010-6a0a9b61a3388455777",
+      "slug": "rotational-cipher",
+      "core": false,
+      "unlocked_by": "simple-cipher",
+      "difficulty": 2,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Strings",
+        "Text formatting",
+        "Transforming"
+      ]
     }
   ],
   "foregone": []
