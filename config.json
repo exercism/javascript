@@ -1197,6 +1197,20 @@
         "strings",
         "algorithms"
       ]
+    },
+    {
+      "uuid": "eec93b8b-0b50-3380-bd75-c53210c48ac5bffc8af",
+      "slug": "spiral-matrix",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Data structures",
+        "Arrays",
+        "Matrices"
+      ]
     }
   ],
   "foregone": []
