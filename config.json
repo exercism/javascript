@@ -1211,6 +1211,20 @@
         "Arrays",
         "Matrices"
       ]
+    },
+    {
+      "uuid": "a7277814-0582-ce80-6451-7352158be58a36d5c3d",
+      "slug": "rectangles",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Arrays",
+        "Matrices",
+        "Strings"
+      ]
     }
   ],
   "foregone": []
