@@ -30,3 +30,6 @@ The make script will test all exercises:
 Pass the exercise name to make script to run the tests for a specific exercise:
 
     make test-assignment ASSIGNMENT=hello-world
+    
+## Contributing Guide
+For an in-depth discussion of how exercism language tracks and exercises work, please see [CONTRIBUTING.md](https://github.com/exercism/ecmascript/blob/master/CONTRIBUTING.md)
