@@ -17,11 +17,6 @@ TSTFILE := "$(subst _,-,$(ASSIGNMENT)).spec.$(FILEEXT)"
 SOURCE_PKG_MD5 ?= "`./bin/md5-hash ./package.json`"
 PKG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name package.json)
 
-test-package-files:
-	@for pkg in $(PKG_FILES); do \
-		! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || { echo "$$pkg does not match main package.json"; exit 1; }; \
-	done
-
 copy-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
 	@mkdir -p $(OUTDIR)
@@ -37,6 +32,10 @@ test-assignment:
 	@rm -rf $(OUTDIR)
 
 test-travis:
+	@echo "Checking that exercise package.json files match main package.json..."
+	@for pkg in $(PKG_FILES); do \
+  		! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || { echo "$$pkg does not match main package.json.  Please run 'make test' locally and commit the results."; exit 1; }; \
+  	done
 	@echo "Preparing tests..."
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s copy-assignment || exit 1; done
 	@node_modules/.bin/jest --bail $(OUTDIR)

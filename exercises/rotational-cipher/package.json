@@ -61,8 +61,7 @@
     "extends": "airbnb",
     "rules": {
       "import/no-unresolved": "off",
-      "import/extensions": "off",
-      "no-plusplus": "off"
+      "import/extensions": "off"
     }
   },
   "licenses": [
