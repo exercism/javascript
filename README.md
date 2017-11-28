@@ -25,7 +25,8 @@ and suggesting changes that conform to best practices.
 The make script will test all exercises:
 
     make test
-
+    
+Note: `make test` is recommended BEFORE submitting a PR.  It will test your submission, and help guard against unintentional, unrelated changes.
 #### Test Specific Assignment
 Pass the exercise name to make script to run the tests for a specific exercise:
 
