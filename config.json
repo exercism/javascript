@@ -511,6 +511,18 @@
       ]
     },
     {
+      "uuid": "303c6969-9446-41aa-871a-11223a43e810",
+      "slug": "react",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 8,
+      "topics": [
+        "Algorithms",
+        "Events",
+        "Reactive programming"
+      ]
+    },
+    {
       "uuid": "f77ac2d1-cf3a-497d-bf04-b484a5a9cb37",
       "slug": "raindrops",
       "core": false,
