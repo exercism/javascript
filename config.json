@@ -237,7 +237,7 @@
       ]
     },
     {
-      "uuid": "207af8f6-0ffe-e380-d521-7e054bd4e959257c77d",
+      "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
       "slug": "two-fer",
       "core": false,
       "unlocked_by": "hello-world",
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "uuid": "363b8810-0bd1-c480-b23c-6b5f629975e7452b123",
+      "uuid": "b8dacb3a-51d0-4da7-a6d2-aa29867e2b8c",
       "slug": "collatz-conjecture",
       "core": false,
       "unlocked_by": "leap",
@@ -1119,7 +1119,7 @@
       ]
     },
     {
-      "uuid": "0e43944b-0a68-5680-ef11-70999d2df897c894476",
+      "uuid": "64de1776-d5c6-43fe-9abf-7e3aa08ae342",
       "slug": "twelve-days",
       "core": false,
       "unlocked_by": "bob",
@@ -1134,7 +1134,7 @@
       ]
     },
     {
-      "uuid": "a0eecb1c-0dd1-4180-1d19-c6ab92bc23ca163ee56",
+      "uuid": "ea9a9a3e-ae6a-470d-8bb4-2afead507f24",
       "slug": "complex-numbers",
       "core": false,
       "unlocked_by": "space-age",
@@ -1144,7 +1144,7 @@
       ]
     },
     {
-      "uuid": "213ea396-0c25-e480-4e76-5876975bdd54ac4890c",
+      "uuid": "b902c746-60d1-4645-a5bc-dafadec0ef32",
       "slug": "isbn-verifier",
       "core": false,
       "unlocked_by": "bob",
