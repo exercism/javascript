@@ -794,7 +794,7 @@
       ]
     },
     {
-      "uuid": "03889544-064a-a980-2c2a-c7eb7d8407f8f737fb8",
+      "uuid": "a8b7187d-12eb-4efc-b966-87823654ccda",
       "slug": "house",
       "core": false,
       "unlocked_by": "bob",
@@ -1211,7 +1211,7 @@
       ]
     },
     {
-      "uuid": "eec93b8b-0b50-3380-bd75-c53210c48ac5bffc8af",
+      "uuid": "c1abafcc-0d44-4fb5-afae-bff3ce2e1b39",
       "slug": "spiral-matrix",
       "core": false,
       "unlocked_by": "matrix",
@@ -1225,7 +1225,7 @@
       ]
     },
     {
-      "uuid": "a7277814-0582-ce80-6451-7352158be58a36d5c3d",
+      "uuid": "f8c6786e-bf93-4f35-b649-03f4e39bb094",
       "slug": "rectangles",
       "core": false,
       "unlocked_by": "matrix",
@@ -1239,7 +1239,7 @@
       ]
     },
     {
-      "uuid": "28d75cd0-0ab4-ed80-6010-6a0a9b61a3388455777",
+      "uuid": "34625b04-844e-41e3-b02b-3443b6b0b7cb",
       "slug": "rotational-cipher",
       "core": false,
       "unlocked_by": "simple-cipher",
