@@ -1,5 +1,4 @@
 class ReverseString {
-
   constructor(str) {
     this.str = str;
   }
