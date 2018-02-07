@@ -67,7 +67,7 @@ Use _and_ (correctly) when spelling out the number in English:
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

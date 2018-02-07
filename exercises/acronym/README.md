@@ -7,13 +7,12 @@ Techies love their TLA (Three Letter Acronyms)!
 Help generate some jargon by writing a program that converts a long name
 like Portable Network Graphics to its acronym (PNG).
 
-
 ## Setup
 
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

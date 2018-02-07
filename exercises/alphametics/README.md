@@ -7,7 +7,7 @@ letters in words are replaced with numbers.
 
 For example `SEND + MORE = MONEY`:
 
-```
+```text
   S E N D
   M O R E +
 -----------
@@ -16,7 +16,7 @@ M O N E Y
 
 Replacing these with valid numbers gives:
 
-```
+```text
   9 5 6 7
   1 0 8 5 +
 -----------
@@ -36,7 +36,7 @@ Write a function to solve alphametics puzzles.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

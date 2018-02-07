@@ -73,7 +73,7 @@ Install assignment dependencies:
 $ npm install
 ```
 
-## Making the Test Suite Pass
+## Making the test suite pass
 
 Execute the tests with:
 
@@ -81,10 +81,11 @@ Execute the tests with:
 $ npm test
 ```
 
-In the test suite, all tests but the first have been skipped.
+In the test suites all tests but the first have been skipped.
 
 Once you get a test passing, you can enable the next one by
 changing `xtest` to `test`.
+
 
 ## Source
 

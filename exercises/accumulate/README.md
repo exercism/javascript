@@ -25,15 +25,12 @@ Keep your hands off that collect/map/fmap/whatchamacallit functionality
 provided by your standard library!
 Solve this one yourself using other basic tools instead.
 
-Lisp specific: it's perfectly fine to use `MAPCAR` or the equivalent,
-as this is idiomatic Lisp, not a library function.
-
 ## Setup
 
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

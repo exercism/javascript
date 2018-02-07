@@ -1,11 +1,11 @@
-# Pascals Triangle
+# Pascal's Triangle
 
 Compute Pascal's triangle up to a given number of rows.
 
 In Pascal's Triangle each number is computed by adding the numbers to
 the right and left of the current position in the previous row.
 
-```plain
+```text
     1
    1 1
   1 2 1
@@ -19,7 +19,7 @@ the right and left of the current position in the previous row.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

@@ -10,7 +10,7 @@ This is a [cumulative song](http://en.wikipedia.org/wiki/Cumulative_song) of unk
 
 This is one of many common variants.
 
-```plain
+```text
 I know an old lady who swallowed a fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 
@@ -68,7 +68,7 @@ She's dead, of course!
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

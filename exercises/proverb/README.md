@@ -1,38 +1,27 @@
 # Proverb
 
-"For want of a horseshoe nail, a kingdom was lost" is a popular proverb. There are may variations
-of this proverb and these variations can be chained together. For example:
+For want of a horseshoe nail, a kingdom was lost, or so the saying goes.
 
-> For want of a nail the shoe was lost.  
-> For want of a shoe the horse was lost.  
-> For want of a horse the rider was lost.  
-> For want of a rider the message was lost.  
-> For want of a message the battle was lost.  
-> For want of a battle the kingdom was lost.  
-> And all for the want of a horseshoe nail.
+Given a list of inputs, generate the relevant proverb. For example, given the list `["nail", "shoe", "horse", "rider", "message", "battle", "kingdom"]`, you will output the full text of this proverbial rhyme:
 
-Given two or more nouns, construct the full chain of events for the above proverb.
-For example, given the nouns "nail", "shoe" and "horse", your program should output the text:
+```text
+For want of a nail the shoe was lost.
+For want of a shoe the horse was lost.
+For want of a horse the rider was lost.
+For want of a rider the message was lost.
+For want of a message the battle was lost.
+For want of a battle the kingdom was lost.
+And all for the want of a nail.
+```
 
->For want of a nail the shoe was lost.
->For want of a shoe the horse was lost.
->And all for the want of a nail.
-
-Given the nouns, "nail", "shoe", "horse", "rider", "message",  and a qualifier "horseshoe", your program should output:
-
-> For want of a nail the shoe was lost.  
-> For want of a shoe the horse was lost.  
-> For want of a horse the rider was lost.  
-> For want of a rider the message was lost. 
-> And all for the want of a horseshoe nail.
-
+Note that the list of inputs may vary; your solution should be able to handle lists of arbitrary length and content. No line of the output text should be a static, unchanging string; all should vary according to the input given.
 
 ## Setup
 
-Go through the setup instructions for EcmaScript to
+Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
@@ -54,6 +43,7 @@ In the test suites all tests but the first have been skipped.
 
 Once you get a test passing, you can enable the next one by
 changing `xtest` to `test`.
+
 
 ## Source
 
