@@ -25,15 +25,7 @@
     ]
   },
   "babel": {
-    "presets": [
-      [
-        "env", {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ],
+    "presets": [["env", { "node": "current"}]],
     "plugins": [
       [
         "babel-plugin-transform-builtin-extend",
