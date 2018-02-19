@@ -6,9 +6,14 @@ class Bob {
   hey(message) {
     if (isSilence(message)) {
       return 'Fine. Be that way!';
-    } else if (isShouting(message)) {
+    }
+    if (isShouting(message)) {
+      if (isAQuestion(message)) {
+        return "Calm down, I know what I'm doing!";
+      }
       return 'Whoa, chill out!';
-    } else if (isAQuestion(message)) {
+    }
+    if (isAQuestion(message)) {
       return 'Sure.';
     }
     return 'Whatever.';
