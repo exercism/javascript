@@ -1250,6 +1250,20 @@
         "Text formatting",
         "Transforming"
       ]
+    },
+    {
+      "uuid": "be6f3ab3-1593-4c2d-8a35-5f39c1d5c91f",
+      "slug": "nucleotide-count",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Strings",
+        "Arrays",
+        "Text formatting"
+      ]
     }
   ],
   "foregone": []
