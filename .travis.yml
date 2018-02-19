@@ -3,8 +3,9 @@ language: node_js
 node_js:
 - 'node'
 sudo: false
+install:
+- npm install --no-save
 script:
 - bin/fetch-configlet
 - bin/configlet lint .
 - make test-travis
-

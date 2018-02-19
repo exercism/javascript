@@ -3,7 +3,7 @@
 Given a single stranded DNA string, compute how many times each nucleotide occurs in the string. Also if the
 given input strand contains invalid nucleotides, throw the error "Invalid nucleotide in strand"
 
-The genetic language of every living thing on the planet is DNA. DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 4 types of nucleotides exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
+The genetic language of every living thing on the planet is DNA. DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 4 types of nucleotides exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' for thymine.
 
 ## Example 1
 
