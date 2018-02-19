@@ -25,13 +25,7 @@
     ]
   },
   "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "node": "current"
-        }
-      ]
+    "presets": [["env",{"node": "current"}]
     ],
     "plugins": [
       [
