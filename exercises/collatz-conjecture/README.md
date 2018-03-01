@@ -10,6 +10,7 @@ always reach 1 eventually.
 Given a number n, return the number of steps required to reach 1.
 
 ## Examples
+
 Starting with n = 12, the steps would be as follows:
 
 0. 12
@@ -30,7 +31,7 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
@@ -39,6 +40,7 @@ Install assignment dependencies:
 ```bash
 $ npm install
 ```
+
 ## Making the test suite pass
 
 Execute the tests with:
@@ -52,7 +54,9 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by
 changing `xtest` to `test`.
 
+
 ## Source
+
 An unsolved problem in mathematics named after mathematician Lothar Collatz [https://en.wikipedia.org/wiki/3x_%2B_1_problem](https://en.wikipedia.org/wiki/3x_%2B_1_problem)
 
 ## Submitting Incomplete Solutions

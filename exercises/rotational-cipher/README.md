@@ -1,4 +1,4 @@
-# Rotational cipher
+# Rotational Cipher
 
 Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.
 
@@ -35,7 +35,7 @@ Ciphertext is written out in the same formatting as the input including spaces a
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
@@ -57,6 +57,7 @@ In the test suites all tests but the first have been skipped.
 
 Once you get a test passing, you can enable the next one by
 changing `xtest` to `test`.
+
 
 ## Source
 

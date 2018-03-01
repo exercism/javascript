@@ -12,7 +12,7 @@ unique elements.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
@@ -34,7 +34,6 @@ In the test suites all tests but the first have been skipped.
 
 Once you get a test passing, you can enable the next one by
 changing `xtest` to `test`.
-
 
 
 ## Submitting Incomplete Solutions

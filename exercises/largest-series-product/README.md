@@ -18,7 +18,7 @@ the largest product for a series of 6 digits is 23520.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

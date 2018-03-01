@@ -1,10 +1,10 @@
 # Beer Song
 
-Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.
+Recite the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.
 
 Note that not all verses are identical.
 
-```plain
+```text
 99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
 
@@ -325,7 +325,7 @@ experiment make the code better? Worse? Did you learn anything from it?
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 

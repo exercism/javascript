@@ -18,7 +18,7 @@ computes the winner (or lack thereof). Note that all games need not be "fair".
 The boards look like this (with spaces added for readability, which won't be in
 the representation passed to your code):
 
-```        
+```text
 . O . X .
  . X X O .
   O O O X .
@@ -35,7 +35,7 @@ won since `O` didn't connect top and bottom.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
@@ -57,7 +57,6 @@ In the test suites all tests but the first have been skipped.
 
 Once you get a test passing, you can enable the next one by
 changing `xtest` to `test`.
-
 
 
 ## Submitting Incomplete Solutions

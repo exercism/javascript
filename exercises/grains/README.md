@@ -15,7 +15,6 @@ Write code that shows:
 - how many grains were on each square, and
 - the total number of grains
 
-
 ## For bonus points
 
 Did you get the tests passing and the code clean? If you want to, these
@@ -32,7 +31,7 @@ experiment make the code better? Worse? Did you learn anything from it?
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
