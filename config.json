@@ -1264,6 +1264,17 @@
         "Arrays",
         "Text formatting"
       ]
+    },
+    {
+      "uuid": "b28c34f4-f7af-47db-95c6-f920e020bbba",
+      "slug": "armstrong-numbers",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "mathematics",
+        "algorithms"
+      ]
     }
   ],
   "foregone": []
