@@ -596,7 +596,7 @@
       "uuid": "4dc30879-a589-4dd3-b7b6-22261f9d1520",
       "slug": "crypto-square",
       "core": false,
-      "unlocked_by": "atbash-cipher",
+      "unlocked_by": "simple-cipher",
       "difficulty": 9,
       "topics": [
         "Control-flow (conditionals)",
@@ -825,7 +825,7 @@
       "uuid": "6c4b4e25-c115-4789-9058-d28ab6ca0d26",
       "slug": "binary-search-tree",
       "core": false,
-      "unlocked_by": "binary-search",
+      "unlocked_by": "linked-list",
       "difficulty": 6,
       "topics": [
         "Control-flow (conditionals)",
