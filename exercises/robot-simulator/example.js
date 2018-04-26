@@ -9,6 +9,11 @@ class Robot {
   }
 
   orient(direction) {
+    const validDirections = ['north', 'south', 'east', 'west'];
+    if (!validDirections.includes(direction)) {
+      throw 'Invalid Robot Bearing';
+    }
+
     this.bearing = direction;
     return `The robot is pointed ${direction}`;
   }
