@@ -13,11 +13,7 @@ describe('Robot', () => {
   });
 
   xtest('invalid robot bearing', () => {
-    try {
-      robot.orient('crood');
-    } catch (exception) {
-      expect(exception).toEqual('Invalid Robot Bearing');
-    }
+    expect(() => robot.orient('crood')).toThrow('Invalid Robot Bearing');
   });
 
   xtest('turn right from north', () => {
