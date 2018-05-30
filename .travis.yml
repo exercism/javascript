@@ -3,8 +3,10 @@ language: node_js
 node_js:
 - 'node'
 sudo: false
+before_install:
+- npm i -g npm@latest
 install:
-- npm install --no-save
+- npm ci
 script:
 - bin/fetch-configlet
 - bin/configlet lint .
