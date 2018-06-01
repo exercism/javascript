@@ -4,7 +4,7 @@ import { InvalidInputError } from './robot-simulator';
 describe('Robot', () => {
   const robot = new Robot();
 
-  xtest('robot bearing', () => {
+  test('robot bearing', () => {
     const directions = ['east', 'west', 'north', 'south'];
 
     directions.forEach((currentDirection) => {
