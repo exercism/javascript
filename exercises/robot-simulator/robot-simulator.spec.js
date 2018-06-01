@@ -1,9 +1,10 @@
 import Robot from './robot-simulator';
+import { InvalidInputError } from './robot-simulator';
 
 describe('Robot', () => {
   const robot = new Robot();
 
-  test('robot bearing', () => {
+  xtest('robot bearing', () => {
     const directions = ['east', 'west', 'north', 'south'];
 
     directions.forEach((currentDirection) => {
@@ -13,7 +14,8 @@ describe('Robot', () => {
   });
 
   xtest('invalid robot bearing', () => {
-    expect(() => robot.orient('crood')).toThrow('Invalid Robot Bearing');
+    expect(InvalidInputError.prototype).toBeInstanceOf(Error);
+    expect(() => robot.orient('crood')).toThrow(InvalidInputError);
   });
 
   xtest('turn right from north', () => {
