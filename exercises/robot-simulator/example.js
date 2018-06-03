@@ -1,3 +1,10 @@
+export class InvalidInputError extends Error {
+  constructor(message) {
+    super();
+    this.message = message || 'Invalid Input';
+  }
+}
+
 class Robot {
   constructor() {
     this.coordinates = [0, 0];
@@ -9,6 +16,11 @@ class Robot {
   }
 
   orient(direction) {
+    const validDirections = ['north', 'south', 'east', 'west'];
+    if (!validDirections.includes(direction)) {
+      throw new InvalidInputError('Invalid Robot Bearing');
+    }
+
     this.bearing = direction;
     return `The robot is pointed ${direction}`;
   }

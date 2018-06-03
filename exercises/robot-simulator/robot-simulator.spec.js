@@ -1,4 +1,5 @@
 import Robot from './robot-simulator';
+import { InvalidInputError } from './robot-simulator';
 
 describe('Robot', () => {
   const robot = new Robot();
@@ -13,11 +14,8 @@ describe('Robot', () => {
   });
 
   xtest('invalid robot bearing', () => {
-    try {
-      robot.orient('crood');
-    } catch (exception) {
-      expect(exception).toEqual('Invalid Robot Bearing');
-    }
+    expect(InvalidInputError.prototype).toBeInstanceOf(Error);
+    expect(() => robot.orient('crood')).toThrow(InvalidInputError);
   });
 
   xtest('turn right from north', () => {
