@@ -1,7 +1,11 @@
-const ArgumentError = () => ({
-  name: 'argument error',
-  message: 'oops',
-});
+class ArgumentError extends Error {
+  constructor() {
+    super();
+    this.name = 'argument error';
+    this.message = 'oops';
+  }
+}
+
 
 const re = new RegExp(/(plus|minus|divided by|multiplied by)+/g);
 
@@ -41,5 +45,13 @@ class Wordy {
     return result;
   }
 }
+
+String.prototype.combine = function(x){
+  return x;
+}
+
+let f = new String('abc');
+let g = f.combine('xyz');
+
 
 export { Wordy as WordProblem, ArgumentError };
