@@ -240,7 +240,7 @@ describe('multi line grids', () => {
 describe('can find multiple words', () => {
   xtest('can find two words written left to right', () => {
     const grid = [
-      "jefblpepre",
+      "aefblpepre",
       "camdcimgtc",
       "oivokprjsm",
       "pbwasqroua",
