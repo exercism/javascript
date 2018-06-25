@@ -31,6 +31,18 @@
       ]
     },
     {
+      "slug": "reverse-string",
+      "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 2,
+      "topics": [
+        "for",
+        "loops",
+        "strings"
+      ]
+    },
+    {
       "slug": "rna-transcription",
       "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
       "core": true,
