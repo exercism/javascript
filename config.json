@@ -1308,6 +1308,18 @@
         "algorithms",
         "mathematics"
       ]
+    },
+    {
+      "slug": "rational-numbers",
+      "uuid": "d8da6cdd-3804-40b0-9821-0dd5765876ff",
+      "core": false,
+      "unlocked_by": "pascals-triangle",
+      "difficulty": 5,
+      "topics": [
+        "algorithms",
+        "floating_point_numbers",
+        "mathematics"
+      ]
     }
   ]
 }
