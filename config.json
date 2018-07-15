@@ -5,6 +5,18 @@
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
     {
+      "slug": "forth",
+      "uuid": "e4035939-4375-4720-87ae-e613f925f013",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 8,
+      "topics": [
+        "domain_specific_languages",
+        "parsing",
+        "stacks"
+      ]
+    },
+    {
       "slug": "hello-world",
       "uuid": "9ce0f408-6d7b-4466-a390-75aeaf9492f2",
       "core": true,
