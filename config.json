@@ -5,6 +5,15 @@
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
     {
+      "slug": "point-mutations",
+      "uuid": "6d43709b-3809-4a6a-ab41-2a5ab841b5fb",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null,
+      "deprecated": true
+    },
+    {
       "slug": "forth",
       "uuid": "e4035939-4375-4720-87ae-e613f925f013",
       "core": false,
