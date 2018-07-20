@@ -6,6 +6,11 @@ describe('Pangram()', () => {
     expect(pangram.isPangram()).toBe(false);
   });
 
+  xtest('recognizes a perfect lower case pangram', () => {
+    const pangram = new Pangram('abcdefghijklmnopqrstuvwxyz');
+    expect(pangram.isPangram()).toBe(true);
+  });
+
   xtest('pangram with only lower case', () => {
     const pangram = new Pangram('the quick brown fox jumps over the lazy dog');
     expect(pangram.isPangram()).toBe(true);
@@ -16,8 +21,8 @@ describe('Pangram()', () => {
     expect(pangram.isPangram()).toBe(false);
   });
 
-  xtest("another missing character 'x'", () => {
-    const pangram = new Pangram('the quick brown fish jumps over the lazy dog');
+  xtest("another missing character, e.g. 'h'", () => {
+    const pangram = new Pangram('five boxing wizards jump quickly at it');
     expect(pangram.isPangram()).toBe(false);
   });
 
@@ -41,8 +46,9 @@ describe('Pangram()', () => {
     expect(pangram.isPangram()).toBe(true);
   });
 
-  xtest('pangram with non-ascii characters', () => {
-    const pangram = new Pangram('Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.');
-    expect(pangram.isPangram()).toBe(true);
+  xtest('upper and lower case versions of the same character should not be counted separately', () => {
+    const pangram = new Pangram('the quick brown fox jumps over with lazy FX');
+    expect(pangram.isPangram()).toBe(false);
   });
+
 });
