@@ -5,6 +5,18 @@
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
     {
+      "slug": "zipper",
+      "uuid": "fd1575f3-3087-4cfa-8a26-168fba6d0606",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 8,
+      "topics": [
+        "recursion",
+        "searching",
+        "trees"
+      ]
+    },
+    {
       "slug": "point-mutations",
       "uuid": "6d43709b-3809-4a6a-ab41-2a5ab841b5fb",
       "core": false,
