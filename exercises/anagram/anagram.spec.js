@@ -1,6 +1,7 @@
-import Anagram from './anagram.js';
+import Anagram from './anagram';
 
 describe('Anagram', () => {
+
   test('no matches', () => {
     const subject = new Anagram('diaper');
     const matches = subject.matches(['hello', 'world', 'zombies', 'pants']);
@@ -8,21 +9,7 @@ describe('Anagram', () => {
     expect(matches).toEqual([]);
   });
 
-  xtest('detects simple anagram', () => {
-    const subject = new Anagram('ant');
-    const matches = subject.matches(['tan', 'stand', 'at']);
-
-    expect(matches).toEqual(['tan']);
-  });
-
-  xtest('does not detect false positives', () => {
-    const subject = new Anagram('galea');
-    const matches = subject.matches(['eagle']);
-
-    expect(matches).toEqual([]);
-  });
-
-  xtest('detects multiple anagrams', () => {
+  xtest('detects two anagrams', () => {
     const subject = new Anagram('master');
     const matches = subject.matches(['stream', 'pigeon', 'maters']);
 
@@ -43,11 +30,18 @@ describe('Anagram', () => {
     expect(matches).toEqual(['inlets']);
   });
 
-  xtest('detects multiple anagrams', () => {
+  xtest('detects three anagrams', () => {
     const subject = new Anagram('allergy');
     const matches = subject.matches(['gallery', 'ballerina', 'regally', 'clergy', 'largely', 'leading']);
 
     expect(matches).toEqual(['gallery', 'regally', 'largely']);
+  });
+
+  xtest('does not detect non-anagrams with identical checksum', () => {
+    const subject = new Anagram('mass');
+    const matches = subject.matches(['last']);
+
+    expect(matches).toEqual([]);
   });
 
   xtest('detects anagrams case-insensitively', () => {
@@ -57,24 +51,39 @@ describe('Anagram', () => {
     expect(matches).toEqual(['Carthorse']);
   });
 
-  xtest('does not detect a word as its own anagram', () => {
-    const subject = new Anagram('banana');
+  xtest('detects anagrams using case-insensitive subject', () => {
+    const subject = new Anagram('Orchestra');
+    const matches = subject.matches(['cashregister', 'carthorse', 'radishes']);
+
+    expect(matches).toEqual(['carthorse']);
+  });
+
+  xtest('detects anagrams using case-insensitive possible matches', () => {
+    const subject = new Anagram('orchestra');
+    const matches = subject.matches(['cashregister', 'Carthorse', 'radishes']);
+
+    expect(matches).toEqual(['Carthorse']);
+  });
+
+  xtest('does not detect a anagram if the original word is repeated', () => {
+    const subject = new Anagram('go');
+    const matches = subject.matches(['go Go GO']);
+
+    expect(matches).toEqual([]);
+  });
+
+  xtest('anagrams must use all letters exactly once', () => {
+    const subject = new Anagram('tapper');
+    const matches = subject.matches(['patter']);
+
+    expect(matches).toEqual([]);
+  });
+
+  xtest('capital word is not own anagram', () => {
+    const subject = new Anagram('BANANA');
     const matches = subject.matches(['Banana']);
 
     expect(matches).toEqual([]);
   });
 
-  xtest('matches() accepts string arguments', () => {
-    const subject = new Anagram('ant');
-    const matches = subject.matches('stand', 'tan', 'at');
-
-    expect(matches).toEqual(['tan']);
-  });
-
-  xtest('matches() accepts single string argument', () => {
-    const subject = new Anagram('ant');
-    const matches = subject.matches('tan');
-
-    expect(matches).toEqual(['tan']);
-  });
 });
