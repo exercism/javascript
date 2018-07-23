@@ -13,7 +13,7 @@ class Bob {
       }
       return 'Whoa, chill out!';
     }
-    if (isAQuestion(message)) {
+    if (isAQuestion(message.trim())) {
       return 'Sure.';
     }
     return 'Whatever.';
