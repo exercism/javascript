@@ -159,7 +159,7 @@
     {
       "slug": "binary",
       "uuid": "0ba4d3b9-2519-49ac-bd93-f960aca6c11f",
-      "core": true,
+      "core": false,
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
@@ -680,7 +680,7 @@
       "slug": "trinary",
       "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
       "core": false,
-      "unlocked_by": "binary",
+      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -710,7 +710,7 @@
       "slug": "octal",
       "uuid": "dec66f89-39d0-4857-9679-a035cf4259d7",
       "core": false,
-      "unlocked_by": "binary",
+      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -821,7 +821,7 @@
       "slug": "hexadecimal",
       "uuid": "8ed2c9fe-a13f-4313-abf9-125f351c85c9",
       "core": false,
-      "unlocked_by": "binary",
+      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
