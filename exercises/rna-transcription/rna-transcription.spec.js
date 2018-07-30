@@ -3,7 +3,11 @@ import Transcriptor from './rna-transcription';
 describe('Transcriptor', () => {
   const transcriptor = new Transcriptor();
 
-  test('transcribes cytosine to guanine', () => {
+  test('empty rna sequence', () => {
+    expect(transcriptor.toRna('')).toEqual('');
+  });
+
+  xtest('transcribes cytosine to guanine', () => {
     expect(transcriptor.toRna('C')).toEqual('G');
   });
 
