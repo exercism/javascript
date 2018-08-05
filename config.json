@@ -96,7 +96,6 @@
         "algorithms",
         "control_flow_conditionals",
         "control_flow_loops",
-        "mathematics",
         "randomness",
         "strings",
         "text_formatting",
@@ -152,8 +151,7 @@
       "difficulty": 3,
       "topics": [
         "classes",
-        "floating_point_numbers",
-        "mathematics"
+        "floating_point_numbers"
       ]
     },
     {
@@ -184,7 +182,7 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -227,7 +225,7 @@
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
-        "mathematics",
+        "math",
         "strings",
         "text_formatting"
       ]
@@ -433,8 +431,7 @@
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
-        "integers",
-        "mathematics"
+        "integers"
       ]
     },
     {
@@ -447,8 +444,7 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "exception_handling",
-        "integers",
-        "mathematics"
+        "integers"
       ]
     },
     {
@@ -462,7 +458,7 @@
         "control_flow_loops",
         "exception_handling",
         "integers",
-        "mathematics",
+        "math",
         "recursion"
       ]
     },
@@ -489,7 +485,7 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -557,7 +553,6 @@
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
-        "mathematics",
         "pattern_recognition",
         "transforming"
       ]
@@ -702,7 +697,7 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "integers",
-        "mathematics",
+        "math",
         "recursion"
       ]
     },
@@ -732,7 +727,6 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "integers",
-        "mathematics",
         "strings"
       ]
     },
@@ -762,7 +756,7 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -788,7 +782,7 @@
         "algorithms",
         "control_flow_loops",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -844,7 +838,7 @@
         "control_flow_loops",
         "exception_handling",
         "integers",
-        "mathematics",
+        "math",
         "regular_expressions",
         "strings"
       ]
@@ -931,7 +925,7 @@
         "control_flow_loops",
         "exception_handling",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -946,7 +940,7 @@
         "control_flow_loops",
         "exception_handling",
         "integers",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -960,7 +954,6 @@
         "control_flow_loops",
         "exception_handling",
         "integers",
-        "mathematics",
         "strings",
         "text_formatting"
       ]
@@ -992,7 +985,8 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "integers",
-        "lists"
+        "lists",
+        "math"
       ]
     },
     {
@@ -1023,7 +1017,6 @@
         "equality",
         "exception_handling",
         "integers",
-        "mathematics",
         "matrices",
         "optional_values",
         "parsing"
@@ -1133,7 +1126,7 @@
         "control_flow_loops",
         "exception_handling",
         "integers",
-        "mathematics",
+        "math",
         "parsing"
       ]
     },
@@ -1198,7 +1191,8 @@
         "arrays",
         "control_flow_conditionals",
         "control_flow_loops",
-        "exception_handling"
+        "exception_handling",
+        "math"
       ]
     },
     {
@@ -1209,7 +1203,6 @@
       "difficulty": 8,
       "topics": [
         "algorithms",
-        "mathematics",
         "performance",
         "searching"
       ]
@@ -1236,7 +1229,7 @@
       "unlocked_by": "space-age",
       "difficulty": 4,
       "topics": [
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -1343,7 +1336,7 @@
       "difficulty": 2,
       "topics": [
         "algorithms",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -1355,7 +1348,7 @@
       "topics": [
         "algorithms",
         "floating_point_numbers",
-        "mathematics"
+        "math"
       ]
     },
     {
