@@ -1,4 +1,4 @@
-const bracketPush = (input) => {
+export const bracketPush = (input) => {
   if (input.length === 0) {
     return true;
   }
@@ -34,5 +34,3 @@ const bracketPush = (input) => {
   }
   return false;
 };
-
-export default bracketPush;
