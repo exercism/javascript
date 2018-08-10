@@ -1,4 +1,4 @@
-import solve from './alphametics';
+import { solve } from './alphametics';
 
 describe('Solve the alphametics puzzle', () => {
   test('puzzle with three letters', () => {
