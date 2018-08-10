@@ -1,4 +1,4 @@
-export default (n) => {
+export const steps = (n) => {
   if (n <= 0) {
     throw new Error('Only positive numbers are allowed');
   }

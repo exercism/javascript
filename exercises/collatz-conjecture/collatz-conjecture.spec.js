@@ -1,4 +1,4 @@
-import steps from './collatz-conjecture';
+import { steps } from './collatz-conjecture';
 
 describe('steps()', () => {
   test('zero steps for one', () => {
