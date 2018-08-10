@@ -14,12 +14,10 @@ function invert(character) {
   }
 }
 
-export default {
-  encode: (s) => {
+export const encode = s => {
     let encoded;
     const characters = [];
     [...s.toLowerCase()].forEach(invert, characters);
     encoded = insertSpacing(characters.join(''), 5);
     return encoded;
-  },
 };
