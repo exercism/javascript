@@ -1,4 +1,4 @@
-export default function solve(puzzle) {
+export function solve(puzzle) {
   const parts = puzzle
     .split(/[+|==]/g)
     .map(o => o.trim())
