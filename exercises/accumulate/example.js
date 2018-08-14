@@ -1,4 +1,4 @@
-export default (list, accumulator) => {
+export const accumulate = (list, accumulator) => {
   const out = [];
   let idx = -1;
   const end = Array.isArray(list) ? list.length : 0;
@@ -9,4 +9,3 @@ export default (list, accumulator) => {
 
   return out;
 };
-

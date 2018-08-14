@@ -1,4 +1,4 @@
-import accumulate from './accumulate';
+import { accumulate } from './accumulate';
 
 describe('accumulate()', () => {
   test('accumulation empty', () => {
