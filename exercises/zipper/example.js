@@ -1,3 +1,5 @@
+'use strict';
+
 function fromTrail(tree, last) {
   if (last[0] === 'left') {
     return {
@@ -16,77 +18,83 @@ function fromTrail(tree, last) {
 function rebuildTree(tree, trail) {
   if (trail.length === 0) return tree;
 
-  const last = trail[0];
+  var last = trail[0];
   return rebuildTree(fromTrail(tree, last), trail.slice(1));
 }
 
-class Zipper {
-  constructor(tree, trail){
-    this.tree = tree;
-    this.trail = trail;
-  }
-  static fromTree(tree) {
-    return new Zipper(tree, []);
-  }
-  toTree() {
-    return rebuildTree(this.tree, this.trail);
-  }
-  value() {
-    return this.tree.value;
-  }
-  left() {
-    if (!this.tree.left) return null;
+var Zipper = function (tree, trail) {
+  this.tree = tree;
+  this.trail = trail;
+};
 
-    return new Zipper(
-      this.tree.left,
-      [['left', this.tree.value, this.tree.right]].concat(this.trail)
-    );
-  }
-  right() {
-    if (!this.tree.right) return null;
+Zipper.fromTree = function (tree) {
+  return new Zipper(tree, []);
+};
 
-    return new Zipper(
-      this.tree.right,
-      [['right', this.tree.value, this.tree.left]].concat(this.trail)
-    );
-  }
-  up() {
-    if (this.trail.length === 0) return null;
+Zipper.prototype.toTree = function () {
+  return rebuildTree(this.tree, this.trail);
+};
 
-    const last = this.trail[0];
-    return new Zipper(fromTrail(this.tree, last), this.trail.slice(1));
-  }
-  setValue(value) {
-    return new Zipper(
-      {
-        value: value,
-        left: this.tree.left,
-        right: this.tree.right
-      },
-      this.trail
-    );
-  }
-  setLeft(left) {
-    return new Zipper(
-      {
-        value: this.tree.value,
-        left: left,
-        right: this.tree.right
-      },
-      this.trail
-    );
-  }
-  setRight(right) {
-    return new Zipper(
-      {
-        value: this.tree.value,
-        left: this.tree.left,
-        right: right
-      },
-      this.trail
-    );
-  }
-}
+Zipper.prototype.value = function () {
+  return this.tree.value;
+};
 
+Zipper.prototype.left = function () {
+  if (!this.tree.left) return null;
 
-export default Zipper;
+  return new Zipper(
+    this.tree.left,
+    [['left', this.tree.value, this.tree.right]].concat(this.trail)
+  );
+};
+
+Zipper.prototype.right = function () {
+  if (!this.tree.right) return null;
+
+  return new Zipper(
+    this.tree.right,
+    [['right', this.tree.value, this.tree.left]].concat(this.trail)
+  );
+};
+
+Zipper.prototype.up = function () {
+  if (this.trail.length === 0) return null;
+
+  var last = this.trail[0];
+  return new Zipper(fromTrail(this.tree, last), this.trail.slice(1));
+};
+
+Zipper.prototype.setValue = function (value) {
+  return new Zipper(
+    {
+      value: value,
+      left: this.tree.left,
+      right: this.tree.right
+    },
+    this.trail
+  );
+};
+
+Zipper.prototype.setLeft = function (left) {
+  return new Zipper(
+    {
+      value: this.tree.value,
+      left: left,
+      right: this.tree.right
+    },
+    this.trail
+  );
+};
+
+Zipper.prototype.setRight = function (right) {
+  return new Zipper(
+    {
+      value: this.tree.value,
+      left: this.tree.left,
+      right: right
+    },
+    this.trail
+  );
+};
+
+module.exports = Zipper;

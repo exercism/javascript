@@ -1,98 +1,98 @@
-import Board from './connect';
+var Board = require('./connect');
 
-describe('Judging a game of connect', () => {
-  test('an empty board has no winner', () => {
-    const board = [
+describe('Judging a game of connect', function () {
+  it('an empty board has no winner', function () {
+    var board = [
       '. . . . .',
       ' . . . . .',
       '  . . . . .',
       '   . . . . .',
-      '    . . . . .',
+      '    . . . . .'
     ];
     expect(new Board(board).winner()).toEqual('');
   });
 
-  xtest('X can win on a 1x1 board', () => {
-    const board = [
-      'X',
+  xit('X can win on a 1x1 board', function () {
+    var board = [
+      'X'
     ];
     expect(new Board(board).winner()).toEqual('X');
   });
 
-  xtest('O can win on a 1x1 board', () => {
-    const board = [
-      'O',
+  xit('O can win on a 1x1 board', function () {
+    var board = [
+      'O'
     ];
     expect(new Board(board).winner()).toEqual('O');
   });
 
-  xtest('only edges does not make a winner', () => {
-    const board = [
+  xit('only edges does not make a winner', function () {
+    var board = [
       'O O O X',
       ' X . . X',
       '  X . . X',
-      '   X O O O',
+      '   X O O O'
     ];
     expect(new Board(board).winner()).toEqual('');
   });
 
-  xtest('illegal diagonal does not make a winner', () => {
-    const board = [
+  xit('illegal diagonal does not make a winner', function () {
+    var board = [
       'X O . .',
       ' O X X X',
       '  O X O .',
       '   . O X .',
-      '    X X O O',
+      '    X X O O'
     ];
     expect(new Board(board).winner()).toEqual('');
   });
 
-  xtest('nobody wins crossing adjacent angles', () => {
-    const board = [
+  xit('nobody wins crossing adjacent angles', function () {
+    var board = [
       'X . . .',
       ' . X O .',
       '  O . X O',
       '   . O . X',
-      '    . . O .',
+      '    . . O .'
     ];
     expect(new Board(board).winner()).toEqual('');
   });
 
-  xtest('X wins crossing from left to right', () => {
-    const board = [
+  xit('X wins crossing from left to right', function () {
+    var board = [
       '. O . .',
       ' O X X X',
       '  O X O .',
       '   X X O X',
-      '    . O X .',
+      '    . O X .'
     ];
     expect(new Board(board).winner()).toEqual('X');
   });
 
-  xtest('O wins crossing from top to bottom', () => {
-    const board = [
+  xit('O wins crossing from top to bottom', function () {
+    var board = [
       '. O . .',
       ' O X X X',
       '  O O O .',
       '   X X O X',
-      '    . O X .',
+      '    . O X .'
     ];
     expect(new Board(board).winner()).toEqual('O');
   });
 
-  xtest('X wins using a convoluted path', () => {
-    const board = [
+  xit('X wins using a convoluted path', function () {
+    var board = [
       '. X X . .',
       ' X . X . X',
       '  . X . X .',
       '   . X X . .',
-      '    O O O O O',
+      '    O O O O O'
     ];
     expect(new Board(board).winner()).toEqual('X');
   });
 
-  xtest('X wins using a spiral path', () => {
-    const board = [
+  xit('X wins using a spiral path', function () {
+    var board = [
       'O X X X X X X X X',
       ' O X O O O O O O O',
       '  O X O X X X X X O',
@@ -101,7 +101,7 @@ describe('Judging a game of connect', () => {
       '     O X O O O X O X O',
       '      O X X X X X O X O',
       '       O O O O O O O X O',
-      '        X X X X X X X X O',
+      '        X X X X X X X X O'
     ];
     expect(new Board(board).winner()).toEqual('X');
   });

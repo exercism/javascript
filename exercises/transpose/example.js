@@ -1,12 +1,17 @@
-function trimTrailingUndefined(array) {
-  const trailingUndefinedCount = [...array].reverse().findIndex(x => x !== undefined);
-  return array.slice(0, array.length - trailingUndefinedCount);
+'use strict';
+
+function transpose(text) {
+  return text.reduce(function (result, line, lineNo) {
+    line.split('').map(function (value, key) {
+      if (typeof result[key] === 'undefined') {
+        result[key] = new Array(lineNo + 1).join(' ');
+      }
+
+      result[key] += value;
+    });
+
+    return result;
+  }, []);
 }
 
-export default function transpose(input) {
-  const maxCol = Math.max(0, ...(input.map(row => row.length)));
-  return [...Array(maxCol).keys()].map(col =>
-    trimTrailingUndefined(input.map((_v, row) => input[row][col]))
-      .map(charOrUndefined => charOrUndefined || ' ')
-      .join(''));
-}
+module.exports = transpose;

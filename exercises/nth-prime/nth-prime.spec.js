@@ -1,26 +1,33 @@
-import Prime from './nth-prime';
+var prime = require('./nth-prime');
 
-describe('Prime', () => {
-  const prime = new Prime();
-
-  test('first', () => {
+describe('Prime', function () {
+  it('first', function () {
     expect(prime.nth(1)).toEqual(2);
   });
 
-  xtest('second', () => {
+  xit('second', function () {
     expect(prime.nth(2)).toEqual(3);
   });
 
-  xtest('sixth', () => {
+  xit('sixth', function () {
     expect(prime.nth(6)).toEqual(13);
   });
 
-  xtest('big prime', () => {
+  xit('big prime', function () {
     expect(prime.nth(10001)).toEqual(104743);
   });
 
-  xtest('weird case', () => {
-    expect(() => prime.nth(0))
-      .toThrow(new Error('Prime is not possible'));
+  xit('massive prime', function () {
+    expect(prime.nth(20000)).toEqual(224737);
+  });
+
+  xit('extreme prime', function () {
+    expect(prime.nth(30000)).toEqual(350377);
+  });
+
+  xit('weird case', function () {
+    expect( function () {
+      prime.nth(0);
+    }).toThrow(new Error('Prime is not possible'));
   });
 });

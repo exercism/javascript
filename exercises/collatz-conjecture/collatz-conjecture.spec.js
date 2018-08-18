@@ -1,31 +1,37 @@
-import { steps } from './collatz-conjecture';
+var CollatzConjecture = require('./collatz-conjecture');
 
-describe('steps()', () => {
-  test('zero steps for one', () => {
-    expect(steps(1)).toEqual(0);
+describe('CollatzConjecture', function () {
+  var collatz = new CollatzConjecture();
+
+  it('test zero steps for one', function () {
+    var expected = 0;
+    expect(collatz.steps(1)).toEqual(expected);
   });
 
-  xtest('divide if even', () => {
-    expect(steps(16)).toEqual(4);
+  xit('test divide if even steps', function () {
+    var expected = 4;
+    expect(collatz.steps(16)).toEqual(expected);
   });
 
-  xtest('even and odd steps', () => {
-    expect(steps(12)).toEqual(9);
+  xit('test even and odd steps', function () {
+    var expected = 9;
+    expect(collatz.steps(12)).toEqual(expected);
   });
 
-  xtest('Large number of even and odd steps', () => {
-    expect(steps(1000000)).toEqual(152);
+  xit('test large number of even and odd steps', function () {
+    var expected = 152;
+    expect(collatz.steps(1000000)).toEqual(expected);
   });
 
-  xtest('zero is an error', () => {
-    expect(() => {
-      steps(0);
+  xit('test zero is an error', function () {
+    expect(function () {
+      collatz.steps(0);
     }).toThrow(new Error('Only positive numbers are allowed'));
   });
 
-  xtest('negative value is an error', () => {
-    expect(() => {
-      steps(-15);
+  xit('test negative value is an error', function () {
+    expect(function () {
+      collatz.steps(-1);
     }).toThrow(new Error('Only positive numbers are allowed'));
   });
 });

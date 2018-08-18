@@ -1,36 +1,37 @@
-# ECMAScript
-[![Build Status](https://travis-ci.org/exercism/ecmascript.svg?branch=master)](https://travis-ci.org/exercism/ecmascript)
-[![Join the chat at https://gitter.im/exercism/xecmascript](https://badges.gitter.im/exercism/xecmascript.svg)](https://gitter.im/exercism/xecmascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# DEPRECATION NOTICE
 
-Exercism exercises in ECMAScript 6
+This track will be deprecated as part of the migration of Exercism to V2.  Going forward, the EcmaScript track will replace the JavaScript track as "the new JavaScript" track.  
+- User's old submissions will be migrated
+- PRs unrelated to the deprecation will be closed as `wontfix`
+- Issues unrelated to deprecation will be closed as `wontfix`
 
+Thank you to all the many invested and hardworking contributors who have helped to make this track a success!!
 
-## Running the Unit Test Suite
+# JavaScript [![Build Status](https://travis-ci.org/exercism/javascript.svg?branch=master)](https://travis-ci.org/exercism/javascript)[![Join the chat at https://gitter.im/exercism/xecmascript](https://badges.gitter.im/exercism/xecmascript.svg)](https://gitter.im/exercism/xecmascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[Node.js](https://nodejs.org) must be installed. Follow these [instructions](http://exercism.io/languages/ecmascript/installation) for installing nodejs.
-We recommend using the latest LTS version.
+Exercism exercises in JavaScript
 
-Use `npm` to install all required dependencies:
+## Installing
 
-    npm install
+To run the tests, you'll need NodeJS and Jasmine. For information about how to install these tools, see the [Javascript](http://exercism.io/languages/javascript/about) page.
 
-#### Linting Your Code
-This project uses [eslint](https://github.com/eslint/eslint) to help you write quality
-ECMAScript code by checking for common formatting errors, enforcing style rules,
-and suggesting changes that conform to best practices.
+## Tasks
 
-    npm run lint-test
+The following commands assume that you are in the `javascript` directory:
 
-#### Test All Assignments
-The make script will test all exercises:
+### Unit Tests: All Assignments
 
     make test
-    
-Note: `make test` is recommended BEFORE submitting a PR.  It will test your submission, and help guard against unintentional, unrelated changes.
-#### Test Specific Assignment
-Pass the exercise name to make script to run the tests for a specific exercise:
 
-    make test-assignment ASSIGNMENT=hello-world
-    
+### Unit Tests: Single Assignment
+
+    make test-assignment ASSIGNMENT=wordy
+
+### Code Style
+
+    npm run lint
+
 ## Contributing Guide
-For an in-depth discussion of how exercism language tracks and exercises work, please see [CONTRIBUTING.md](https://github.com/exercism/ecmascript/blob/master/CONTRIBUTING.md)
+
+Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
+

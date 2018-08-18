@@ -1,21 +1,28 @@
+'use strict';
 
-const sameWord = (word, candidate) =>
-  word.toLowerCase() === candidate.toLowerCase();
-
-const isAnagram = (word, candiate) =>
-  normalize(word) === normalize(candiate);
-
-const normalize = str => str.toLowerCase().split('').sort().join();
-
-export default class Anagram {
-  constructor(word) {
-    this.word = word;
-  }
-
-  matches(words) {
-    words = Array.isArray(words) ? words : Array.from(arguments);
-
-    return words.filter(candidate => !sameWord(this.word, candidate) && isAnagram(this.word, candidate));
-  }
+function Anagram(word) {
+  this.word = word;
 }
+
+Anagram.prototype.matches = function (wordList) {
+  var words = Array.isArray(wordList) ? wordList : [].slice.call(arguments, 0);
+
+  return words.filter(function (candidate) {
+    return !sameWord(this.word, candidate) && isAnagram(this.word, candidate);
+  }, this);
+};
+
+function sameWord(word, candidate) {
+  return word.toLowerCase() === candidate.toLowerCase();
+}
+
+function isAnagram(word, candiate) {
+  return normalize(word) === normalize(candiate);
+}
+
+function normalize(string) {
+  return string.toLowerCase().split('').sort().toString();
+}
+
+module.exports = Anagram;
 

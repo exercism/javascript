@@ -1,17 +1,29 @@
-ECMAScript is the standard that defines JavaScript, the language that allows web pages to be dynamic.
-It is an interpreted language, which means that it doesn't need to be compiled by the programmer: instead the client (such as a web browser) will parse the code and turn it into code that their machine can run - suitable for creating dynamic websites that can run on any browser on any computer!
+JavaScript is a scripting language used to provide dynamic and interactive content on webpages. 
+Also, server side JS allows the use of the same language on the server and client. 
 
-In addition to use in web pages with modern web browsers, and it can also be executed on servers where the NodeJS platform is installed where it can be used for creating a web server too.
+Besides being fast, JavaScript provides benefits like:
 
-"ECMAScript has grown to be one of the world’s most widely used general purpose programming languages.
-It is best known as the language embedded in web browsers but has also been widely adopted for server and embedded applications."
-—[ECMA International Language Specification](http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-overview)
+* Reducing server traffic by validating user input in the browser before it is sent to the server.
+* Providing immediate feedback to the site's visitors so that they don't have to reload pages just to get error messages on form validations.
+* Allowing richer user interfaces with content changes on mouse hover, drag and drop gestures, and animations.
 
-Starting with the 6th edition (commonly known as ES2015 or ES6) in 2015, a new edition of the standard will be released each year.
-The 6th edition was a major update which brought many enhancements over ES5, including notably template strings, expressive arrow function syntax, and cleaner syntax for defining classes.
+Client-side JavaScript is interpreted in the browser without requiring compilation. 
+This allows interactive content to be included in HTML pages which would otherwise be static.
 
-However, support in current browsers is incomplete, and often requires transpilation with a tool like [Babel](https://babeljs.io/).
+Server-Side JavaScript as run in NodeJS enables back-end access to databases, file systems, and servers. 
+NodeJS is built on Google Chrome's JavaScript V8 Engine. 
+NodeJS uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
+Node can be a great solution for applications requiring I/O bound operations, data streaming etc. 
+More details can be found [here](https://nodejs.org/en/about/).
 
-_Note: This track supports the latest ECMAScript syntax via Babel and the [babel-preset-env](https://babeljs.io/docs/plugins/preset-env/) plugin, and new experimental features will be enabled with each release of the specification. 
-Here, you will find code that not all browsers are able to run. 
-For widely supported JavaScript based on the ES5 standard, you may be interested in the [JavaScript track](http://exercism.io/languages/javascript)._
+You should learn JavaScript because:
+
+* It's easy to learn.
+* It's versatile in the sense that it's multi-paradigm - supporting procedural, event based, object oriented and functional programming.
+* It can be used for the front-end and back-end.
+* It's Open Source.
+* JavaScript programming skills are in high demand.
+
+_This track is intended for widely supported JavaScript, for code that could be executed in almost all existing browsers. 
+If you're looking to experiment with newer features of the language, try the [ECMAScript](http://exercism.io/languages/ecmascript) track._
+

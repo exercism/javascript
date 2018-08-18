@@ -1,11 +1,11 @@
-export default class Isogram {
+module.exports = function (word) {
+  this.word = word.replace(/ |-/g, '');
 
-  constructor(string) {
-    this.string = string.replace(/ |-/g, '');
-  }
+  this.isIsogram = function () {
+    var unique = this.word.toLowerCase().split('').filter(function (element, index, self) {
+      return self.indexOf(element) === index;
+    });
 
-  isIsogram() {
-    const uniqueLetters = this.string.toLowerCase().split('').filter((element, index, self) => self.indexOf(element) === index);
-    return uniqueLetters.length === this.string.length;
-  }
-}
+    return unique.length === this.word.length;
+  };
+};

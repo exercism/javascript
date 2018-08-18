@@ -1,50 +1,50 @@
-import Squares from './difference-of-squares';
+var Squares = require('./difference-of-squares');
 
-describe('Squares', () => {
-  describe('up to 5', () => {
-    const squares = new Squares(5);
+describe('Squares', function () {
+  describe('up to 5', function () {
+    var squares = new Squares(5);
 
-    test('gets the square of sums', () => {
+    it('gets the square of sums', function () {
       expect(squares.squareOfSums).toBe(225);
     });
 
-    xtest('gets the sum of squares', () => {
+    xit('gets the sum of squares', function () {
       expect(squares.sumOfSquares).toBe(55);
     });
 
-    xtest('gets the difference', () => {
+    xit('gets the difference', function () {
       expect(squares.difference).toBe(170);
     });
   });
 
-  describe('up to 10', () => {
-    const squares = new Squares(10);
+  describe('up to 10', function () {
+    var squares = new Squares(10);
 
-    xtest('gets the square of sums', () => {
+    xit('gets the square of sums', function () {
       expect(squares.squareOfSums).toBe(3025);
     });
 
-    xtest('gets the sum of squares', () => {
+    xit('gets the sum of squares', function () {
       expect(squares.sumOfSquares).toBe(385);
     });
 
-    xtest('gets the difference', () => {
+    xit('gets the difference', function () {
       expect(squares.difference).toBe(2640);
     });
   });
 
-  describe('up to 100', () => {
-    const squares = new Squares(100);
+  describe('up to 100', function () {
+    var squares = new Squares(100);
 
-    xtest('gets the square of sums', () => {
+    xit('gets the square of sums', function () {
       expect(squares.squareOfSums).toBe(25502500);
     });
 
-    xtest('gets the sum of squares', () => {
+    xit('gets the sum of squares', function () {
       expect(squares.sumOfSquares).toBe(338350);
     });
 
-    xtest('gets the difference', () => {
+    xit('gets the difference', function () {
       expect(squares.difference).toBe(25164150);
     });
   });

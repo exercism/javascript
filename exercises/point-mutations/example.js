@@ -1,21 +1,20 @@
-class DNA {
-  constructor(nucleotides){
-    this.nucleotides = nucleotides;
+'use strict';
+
+var DNA = module.exports = function DNA(nucleotides) {
+  this.nucleotides = nucleotides;
+};
+
+DNA.prototype.hammingDistance = function (comparison) {
+  var distance = 0;
+  var calculationDistance = Math.min(this.nucleotides.length, comparison.length);
+
+  for (var i = 0; i < calculationDistance; i++) {
+    var currentNucleotide = this.nucleotides[i];
+    var comparisonNucleotide = comparison[i];
+
+    if (currentNucleotide !== comparisonNucleotide) { distance++; }
   }
 
-  hammingDistance(comparison){
-    let distance = 0;
-    const calculationDistance = Math.min(this.nucleotides.length, comparison.length);
+  return distance;
+};
 
-    for (let i = 0; i < calculationDistance; i++) {
-      let currentNucleotide = this.nucleotides[i];
-      let comparisonNucleotide = comparison[i];
-
-      if (currentNucleotide !== comparisonNucleotide) { distance++; }
-    }
-
-    return distance;
-  }
-}
-
-export default DNA;

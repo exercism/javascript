@@ -1,50 +1,61 @@
-class Triangle {
-  constructor(...sides) {
-    this.sides = sides;
-  }
+function Triangle(a, b, c) {
+  'use strict';
 
-  kind() {
+  this.sides = [ a, b, c ];
+
+  this.kind = function () {
+    var name = 'scalene';
+
     if (this.isIllegal()) {
       throw new TypeError('illegal');
+    } else if (this.isEquilateral()) {
+      name = 'equilateral';
+    } else if (this.isIsosceles()) {
+      name = 'isosceles';
     }
 
-    if (this.isEquilateral()) {
-      return 'equilateral';
-    }
+    return name;
+  };
 
-    if (this.isIsosceles()) {
-      return 'isosceles';
-    }
-
-    return 'scalene';
-  }
-
-  isIllegal() {
+  this.isIllegal = function () {
     return this.violatesInequality() || this.hasImpossibleSides();
-  }
+  };
 
-  violatesInequality() {
-    const [a, b, c] = this.sides;
-    return a + b < c || a + c < b || b + c < a;
-  }
+  this.violatesInequality = function () {
+    return (a + b < c) || (a + c < b) || (b + c < a);
+  };
 
-  hasImpossibleSides() {
-    const [a, b, c] = this.sides;
-    return a <= 0 || b <= 0 || c <= 0;
-  }
+  this.hasImpossibleSides = function () {
+    return this.sides[0] <= 0 || this.sides[1] <= 0 || this.sides[2] <= 0;
+  };
 
-  isEquilateral() {
-    return this.uniqueSidesLength() === 1;
-  }
+  this.isEquilateral = function () {
+    return this.uniqueSides().length === 1;
+  };
 
-  isIsosceles() {
-    return this.uniqueSidesLength() === 2;
-  }
+  this.isIsosceles = function () {
+    return this.uniqueSides().length === 2;
+  };
 
-  uniqueSidesLength() {
-    return new Set(this.sides).size;
-  }
+  this.uniqueSides = function () {
+    var sides = this.sides;
+    var uniques = {};
+
+    for (var i = 0; i < sides.length; i++) {
+      var currentSide = sides[i];
+      uniques[currentSide] = true;
+    }
+
+    var uniqueSides = [];
+
+    for (var uniqueSide in uniques) {
+      if (uniques.hasOwnProperty(uniqueSide)) {
+        uniqueSides.push(uniqueSide);
+      }
+    }
+
+    return uniqueSides;
+  };
 }
 
-export default Triangle;
-
+module.exports = Triangle;

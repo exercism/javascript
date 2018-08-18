@@ -27,40 +27,40 @@
  * See its tests in this folder for a quick primer on how to use it! ( :
  */
 
-import Grains from './grains';
+var Grains = require('./grains');
 
-describe('Grains', () => {
-  const grains = new Grains();
+describe('Grains', function () {
+  var grains = new Grains();
 
-  test('square 1', () => {
+  it('square 1', function () {
     expect(grains.square(1)).toBe('1');
   });
 
-  xtest('square 2', () => {
+  xit('square 2', function () {
     expect(grains.square(2)).toBe('2');
   });
 
-  xtest('square 3', () => {
+  xit('square 3', function () {
     expect(grains.square(3)).toBe('4');
   });
 
-  xtest('square 4', () => {
+  xit('square 4', function () {
     expect(grains.square(4)).toBe('8');
   });
 
-  xtest('square 16', () => {
+  xit('square 16', function () {
     expect(grains.square(16)).toBe('32768');
   });
 
-  xtest('square 32', () => {
+  xit('square 32', function () {
     expect(grains.square(32)).toBe('2147483648');
   });
 
-  xtest('square 64', () => {
+  xit('square 64', function () {
     expect(grains.square(64)).toBe('9223372036854775808');
   });
 
-  xtest('total', () => {
+  xit('total', function () {
     expect(grains.total()).toBe('18446744073709551615');
   });
 });

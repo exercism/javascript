@@ -1,56 +1,42 @@
 # Nucleotide Count
 
-Given a single stranded DNA string, compute how many times each nucleotide occurs in the string. Also if the
-given input strand contains invalid nucleotides, throw the error "Invalid nucleotide in strand"
+Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
 
-The genetic language of every living thing on the planet is DNA. DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 4 types of nucleotides exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' for thymine.
+The genetic language of every living thing on the planet is DNA.
+DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides.
+4 types exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
 
-## Example 1
-
-Given the strand `ACGT`
-
-The count of "A C G T" is `1 1 1 1`, respectively
-
-## Example 2
-
-Given the strand `GAG`
-
-The count of "A C G T" is `1 0 2 0`, respectively
-
-## Example 3
-
-Given the strand `TX`
-
-As `X` is an invalid nucleotide, it should give the error `Invalid nucleotide in strand`
+Here is an analogy:
+- twigs are to birds nests as
+- nucleotides are to DNA as
+- legos are to lego houses as
+- words are to sentences as...
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/javascript/installation
 
-## Requirements
+## Running the test suite
 
-Install assignment dependencies:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-```bash
-$ npm install
+```sh
+npm install -g jasmine
 ```
 
-## Making the test suite pass
+Run the test suite from the exercise directory with:
 
-Execute the tests with:
-
-```bash
-$ npm test
+```sh
+jasmine nucleotide-count.spec.js
 ```
 
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

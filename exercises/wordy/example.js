@@ -1,57 +1,67 @@
-class ArgumentError extends Error {
-  constructor() {
-    super();
-    this.name = 'argument error';
-    this.message = 'oops';
-  }
+'use strict';
+
+exports.WordProblem   = WordProblem;
+exports.ArgumentError = ArgumentError;
+
+var BINARY_OPERATORS = {
+  'plus': function (l, r) { return l + r; },
+  'minus': function (l, r) { return l - r; },
+  'multiplied by': function (l, r) { return l * r; },
+  'divided by': function (l, r) { return l / r; }
+};
+
+function operators() {
+  return Object.keys(BINARY_OPERATORS);
 }
 
+function pattern() {
+  var expression = '';
+  var operations = ' (' + operators().join('|') + ') ';
 
-const re = new RegExp(/(plus|minus|divided by|multiplied by)+/g);
+  expression += '(?:what is ([-+]?[\\d]+)';
+  expression += operations;
+  expression += '([-+]?[\\d]+)(?:';
+  expression += operations;
+  expression += '([-+]?[\\d]+))?)';
 
-class Wordy {
-
-  constructor(question) {
-    this.numbers = question.match(/[-]{0,1}\d+/g);
-    this.operands = question.match(re);
-  }
-
-  answer() {
-    if (!this.numbers || !this.operands) {
-      throw new ArgumentError();
-    }
-    let ii = 1,
-      jj = 0,
-      result = +this.numbers[0];
-
-    while (ii < this.numbers.length + 1) {
-      const op = this.operands[jj++],
-        b = +this.numbers[ii++] || null;
-      switch (op) {
-        case 'plus' :
-          result += b;
-          break;
-        case 'minus' :
-          result -= b;
-          break;
-        case 'multiplied by' :
-          result *= b;
-          break;
-        case 'divided by' :
-          result /= b;
-          break;
-      }
-    }
-    return result;
-  }
+  return new RegExp(expression, 'i');
 }
 
-String.prototype.combine = function(x){
-  return x;
+function WordProblem(question) {
+  this.question = question || '';
+  this.matches  = this.question.match(pattern());
 }
 
-let f = new String('abc');
-let g = f.combine('xyz');
+WordProblem.prototype.tooComplicated = function () {
+  return this.matches === null;
+};
 
+WordProblem.prototype.answer = function () {
+  if (this.tooComplicated()) {
+    throw new ArgumentError('I don\'t understand the question');
+  }
+  return this.evaluate();
+};
 
-export { Wordy as WordProblem, ArgumentError };
+WordProblem.prototype.evaluate = function () {
+  var out = 0;
+  var m   = this.matches;
+
+  if ( (typeof m[1]) === 'string'  && (typeof m[2]) === 'string'  && (typeof m[3]) === 'string') {
+    out = this.operate(m[2], m[1], m[3]);
+  }
+
+  if ( (typeof m[4]) === 'string' && (typeof m[5]) === 'string') {
+    out = this.operate(m[4], out, m[5]);
+  }
+
+  return out;
+};
+
+WordProblem.prototype.operate = function (operation, l, r) {
+  var fn = BINARY_OPERATORS[operation] || function () { return 0; };
+  return fn(Number(l), Number(r));
+};
+
+function ArgumentError() {}
+ArgumentError.prototype = new Error();

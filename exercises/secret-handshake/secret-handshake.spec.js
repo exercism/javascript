@@ -1,44 +1,45 @@
-import SecretHandshake from './secret-handshake';
+var SecretHandshake = require('./secret-handshake');
 
-describe('Secret Handshake', () => {
-  test('binary 1 (hexadecimal 0x01) is a wink', () => {
-    const handshake = new SecretHandshake(0x01);
+describe('Secret Handshake', function () {
+  it('1 is a wink', function () {
+    var handshake = new SecretHandshake(1);
     expect(handshake.commands()).toEqual(['wink']);
   });
 
-  xtest('binary 10 (hexadecimal 0x02) is a double blink', () => {
-    const handshake = new SecretHandshake(0x02);
+  xit('10 is a double blink', function () {
+    var handshake = new SecretHandshake(2);
     expect(handshake.commands()).toEqual(['double blink']);
   });
 
-  xtest('binary 100 (hexadecimal 0x04) is close your eyes', () => {
-    const handshake = new SecretHandshake(0x04);
+  xit('100 is close your eyes', function () {
+    var handshake = new SecretHandshake(4);
     expect(handshake.commands()).toEqual(['close your eyes']);
   });
 
-  xtest('binary 1000 (hexadecimal 0x08) is jump', () => {
-    const handshake = new SecretHandshake(0x08);
+  xit('1000 is jump', function () {
+    var handshake = new SecretHandshake(8);
     expect(handshake.commands()).toEqual(['jump']);
   });
 
-  xtest('binary 11 (hexadecimal 0x03) is wink and double blink', () => {
-    const handshake = new SecretHandshake(0x03);
+  xit('11 is wink and double blink', function () {
+    var handshake = new SecretHandshake(3);
     expect(handshake.commands()).toEqual(['wink', 'double blink']);
   });
 
-  xtest('binary 10011 (hexadecimal 0x13) is double blink and wink', () => {
-    const handshake = new SecretHandshake(0x13);
+  xit('10011 is double blink and wink', function () {
+    var handshake = new SecretHandshake(19);
     expect(handshake.commands()).toEqual(['double blink', 'wink']);
   });
 
-  xtest('binary 11111 (hexadecimal 0x1F) is jump, close your eyes, double blink, and wink', () => {
-    const handshake = new SecretHandshake(0x1F);
+  xit('11111 is jump, close your eyes, double blink, and wink', function () {
+    var handshake = new SecretHandshake(31);
     expect(handshake.commands()).toEqual(['jump', 'close your eyes', 'double blink', 'wink']);
   });
 
-  xtest('text is an invalid secret handshake', () => {
-    expect(() => new SecretHandshake('piggies'))
-      .toThrow(new Error('Handshake must be a number'));
+  xit('text is an invalid secret handshake', function () {
+    expect( function () {
+      /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }]*/
+      var ignoredHandshake = new SecretHandshake('piggies');
+    }).toThrow(new Error('Handshake must be a number'));
   });
 });
-

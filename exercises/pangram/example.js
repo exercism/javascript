@@ -1,18 +1,21 @@
-const notAlpha = /[^a-z]+/gi,
-  alphaLength = 26;
-let cleaned,
-  sortedSet;
 
-class Pangram {
+var Pangram = function (candidate) {
+  var notAlpha = /[^a-z]+/gi;
+  var ALPHA_LENGTH = 26;
+  var cleaned;
+  var unique;
 
-  constructor(candidate) {
-    cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
-    sortedSet = new Set([...cleaned].sort());
-  }
+  unique = {};
+  cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
+  cleaned.split('').forEach(function (el) {
+    unique[el] = true;
+  });
 
-  isPangram() {
-    return sortedSet.size === alphaLength;
-  }
-}
+  return {
+    isPangram: function () {
+      return Object.keys(unique).length === ALPHA_LENGTH;
+    }
+  };
+};
 
-export default Pangram;
+module.exports = Pangram;

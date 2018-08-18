@@ -1,6 +1,8 @@
+'use strict';
+
 function isValid(number) {
-  number = number.replace(/\s/g, '');
-  const digits = [...number];
+  var numbers = number.replace(/\s/g, '');
+  const digits = [...numbers];
 
   const sum = digits
     // convert to integers
@@ -13,7 +15,7 @@ function isValid(number) {
       return d;
     })
     // limit to digits less than 10
-    .map((d) => {
+    .map(d => {
       if (d > 9) {
         return d - 9;
       }
@@ -25,10 +27,8 @@ function isValid(number) {
   return sum > 0 && sum % 10 === 0;
 }
 
-export default class Luhn {
-
-  constructor(number) {
-    this.valid = isValid(number);
-  }
-
+function Luhn(number) {
+  this.valid = isValid(number);
 }
+
+module.exports = Luhn;

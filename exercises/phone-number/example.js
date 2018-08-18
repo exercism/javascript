@@ -1,28 +1,38 @@
-export default class PhoneNumber {
+'use strict';
 
-  constructor(number) {
-    this.rawNumber = number;
+var Phone = module.exports = function Phone(number) {
+  this.rawNumber = number;
+  this.cleanedNumber = this.cleanNumber(number);
+};
+
+Phone.prototype.cleanNumber = function (number) {
+  var num = number.replace(/\D/g, '');
+
+  if (num.length === 10 && num[0] >= 2 && num[3] >= 2) {
+    return num;
+  } else if (num.length === 11 && num[0] === '1') {
+    return num.substr(1, num.length);
   }
+  return null;
+};
 
-  number() {
-    if (/[a-zA-Z]/.test(this.rawNumber)) {
-      return null;
-    }
+Phone.prototype.number = function () {
+  return this.cleanedNumber;
+};
 
-    return this._cleanedNumber();
-  }
+Phone.prototype.areaCode = function () {
+  return this.number().substr(0, 3);
+};
 
-  _cleanedNumber() {
-    const num = this.rawNumber.replace(/\D/g, '');
+Phone.prototype.exchangeCode = function () {
+  return this.number().substr(3, 3);
+};
 
-    if (num.length === 10) {
-      return num;
-    }
+Phone.prototype.subscriberNumber = function () {
+  return this.number().substr(6, 4);
+};
 
-    if (num.length === 11 && num[0] === '1') {
-      return num.substr(1);
-    }
+Phone.prototype.toString = function () {
+  return '(' + this.areaCode() + ') ' + this.exchangeCode() + '-' + this.subscriberNumber();
+};
 
-    return null;
-  }
-}

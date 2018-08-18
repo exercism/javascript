@@ -1,39 +1,65 @@
-const isPalindrome = num => num.toString().split('').reverse().join('') === num.toString();
+'use strict';
 
-const Palindromes = (params) => {
-  let maxFactor,
-    minFactor,
-    maxProduct,
-    minProduct,
-    data;
-  maxFactor = params.maxFactor;
-  minFactor = params.minFactor || 1;
-  maxProduct = 1;
-  minProduct = Infinity;
-  data = [];
+module.exports = function Palindromes(options) {
+  this.maxFactor = options.maxFactor;
+  this.minFactor = options.minFactor || 1;
 
-  for (let ii = minFactor; ii < maxFactor; ii++) {
-    for (let jj = ii; jj <= maxFactor; jj++) {
-      const product = ii * jj;
-      if (isPalindrome(product)) {
-        data[product] = [ii, jj];
-        maxProduct = Math.max(maxProduct, product);
-        minProduct = Math.min(minProduct, product);
+  this.generate = function () {
+    var minFactor = this.minFactor;
+    var maxFactor = this.maxFactor;
+
+    var palindromes = [];
+    var palindromeIndexes = [];
+
+    for (var i = minFactor; i <= maxFactor; i++) {
+      for (var j = minFactor; j <= maxFactor; j++) {
+        var result = i * j;
+        if (!this.isPalindrome(result)) { continue; }
+
+        var newFactor = [i, j].sort();
+
+        if (!Array.isArray(palindromes[result])) {
+          palindromes[result] = [];
+          palindromeIndexes.push(result);
+        }
+
+        if (!arrayContainsArray(palindromes[result], newFactor)) {
+          palindromes[result].push(newFactor);
+        }
       }
     }
-  }
 
-  return {
-    largest: {
-      value: maxProduct,
-      factors: data[maxProduct],
-    },
-    smallest: {
-      value: minProduct,
-      factors: data[minProduct],
-    },
+    this.palindromes = palindromes;
+    this.palindromeIndexes = palindromeIndexes;
+  };
+
+  this.largest = function () {
+    var largestPalindrome = Math.max.apply(null, this.palindromeIndexes);
+    var factors = this.palindromes[largestPalindrome];
+    return { value: largestPalindrome, factors: factors };
+  };
+
+  this.smallest = function () {
+    var smallestPalindrome = Math.min.apply(null, this.palindromeIndexes);
+    var factors = this.palindromes[smallestPalindrome];
+    return { value: smallestPalindrome, factors: factors };
+  };
+
+  this.isPalindrome = function (number) {
+    var numberAsString = number.toString();
+    var reversedString = numberAsString.split('').reverse().join('');
+    return (numberAsString === reversedString);
   };
 };
 
-export default Palindromes;
+function arrayContainsArray(array, element) {
+  var containsArray = false;
 
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].join() === element.join()) {
+      containsArray = true;
+    }
+  }
+
+  return containsArray;
+}

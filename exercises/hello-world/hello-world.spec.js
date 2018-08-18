@@ -1,9 +1,9 @@
-import HelloWorld from './hello-world';
+var HelloWorld = require('./hello-world');
 
-describe('Hello World', () => {
-  const greeter = new HelloWorld();
+describe('Hello World', function () {
+  var helloWorld = new HelloWorld();
 
-  test('says hello', () => {
-    expect(greeter.hello()).toEqual('Hello, World!');
+  it('says hello world', function () {
+    expect(helloWorld.hello()).toEqual('Hello, World!');
   });
 });

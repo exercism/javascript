@@ -1,19 +1,31 @@
-const Sum = (factors) => {
-  const self = this instanceof Sum ? this : Object.getPrototypeOf(Sum);
-  self.factors = factors;
+'use strict';
 
-  self.to = (limit) => {
-    const multiples = {};
-    self.factors.forEach((factor) => {
-      for (let ii = factor; ii < limit; ii += factor) {
-        multiples[ii] = ii;
-      }
-    });
+function isMultiple(i) {
+  /* jshint validthis:true */
+  var result = false;
+  this.multiples.forEach(function (multiple) {
+    if (i % multiple === 0) {
+      result = true;
+    }
+  });
+  return result;
+}
 
-    return Object.keys(multiples).reduce((prev, curr) => prev += multiples[curr], 0);
-  };
+function SumOfMultiples(multiples) {
+  if (!(this instanceof SumOfMultiples)) {
+    return new SumOfMultiples(multiples);
+  }
+  this.multiples = multiples;
+}
 
-  return self;
+SumOfMultiples.prototype.to = function (limit) {
+  var sum = 0;
+  for (var i = 1; i < limit; i++) {
+    if (isMultiple.call(this, i)) {
+      sum += i;
+    }
+  }
+  return sum;
 };
 
-export default Sum;
+module.exports = SumOfMultiples;

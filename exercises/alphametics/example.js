@@ -1,23 +1,23 @@
-export function solve(puzzle) {
-  const parts = puzzle
+function solve(puzzle) {
+  var parts = puzzle
     .split(/[+|==]/g)
-    .map(o => o.trim())
-    .filter(o => o !== '');
+    .map(function (o) { return o.trim(); })
+    .filter(function (o) { return o !== ''; });
 
   if (parts.length < 3) {
     return null;
   }
 
-  const uniqueLetters = new Set(parts.join('').split(''));
-  const firstLetters = new Set(parts.map(p => p[0]));
+  var uniqueLetters = getUniqueLetters(parts.join(''));
+  var firstLetters = getFirstLetters(parts);
 
-  const numberCombinations = getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.size);
+  var numberCombinations = getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.length);
+  var permutations = getPermutations(Array(uniqueLetters.length).fill().map(function (_, i) {return i; }));
 
   while (numberCombinations.length) {
-    const permutations = generate(Array(uniqueLetters.size).fill().map((_, i) => i));
-    const numberCombination = numberCombinations.pop();
-    for (const permutation of permutations) {
-      const newNumbers = assignNumbers(numberCombination, uniqueLetters, permutation);
+    var numberCombination = numberCombinations.pop();
+    for (var k = 0; k < permutations.length; k++) {
+      var newNumbers = assignNumbers(numberCombination, uniqueLetters, permutations[k]);
       if (testNumbers(newNumbers, parts, firstLetters)) {
         return newNumbers;
       }
@@ -26,74 +26,86 @@ export function solve(puzzle) {
   return null;
 }
 
-function assignNumbers(numberCombination, uniqueLetters, permutation) {
-  const output = {};
-  let i = 0;
-  for (const letter of uniqueLetters.values()) {
-    output[letter] = numberCombination[permutation[i++]];
+function getFirstLetters(words) {
+  return words
+    .map(function (word) { return word[0]; })
+    .filter(function (val, i, arr) { return arr.indexOf(val) === i; });
+}
+
+function assignNumbers(numbers, letters, orders) {
+  var output = {};
+  for (var i = 0; i < letters.length; i++) {
+    output[letters[i]] = numbers[orders[i]];
   }
   return output;
 }
 
+function getUniqueLetters(string) {
+  return string.split('').filter(function (val, i, arr) { return arr.indexOf(val) === i; });
+}
+
 function testNumbers(numbers, puzzleParts, firstLetters) {
-  const keys = Object.keys(numbers);
-  for (const key of keys) {
-    if (numbers[key] === 0 && firstLetters.has(key)) {
+  var keys = Object.keys(numbers);
+  for (var i = 0; i < keys.length; i++) {
+    if (numbers[keys[i]] === 0 && firstLetters.indexOf(keys[i]) !== -1) {
       return false;
     }
   }
-  const replaceRegex = new RegExp(`[${keys.join('')}]`, 'g');
+  var replaceRegex = new RegExp('[' + keys.join('') + ']', 'g');
 
-  puzzleParts = puzzleParts.join(',')
-    .replace(replaceRegex, input => numbers[input])
+  var puzzlePartsJoined = puzzleParts.join(',')
+    .replace(replaceRegex, function (input) { return numbers[input]; })
     .split(',')
-    .map(t => parseInt(t));
+    .map(function (t) {return parseInt(t, 10);});
 
-  const total = puzzleParts.slice(puzzleParts.length - 1)[0];
-  return total === puzzleParts
-      .slice(0, puzzleParts.length - 1)
-      .reduce((acc, val) => acc + val, 0);
+  var total = puzzlePartsJoined.slice(puzzlePartsJoined.length - 1)[0];
+  return total === puzzlePartsJoined
+    .slice(0, puzzlePartsJoined.length - 1)
+    .reduce(function (acc, val) { return acc + val; }, 0);
 }
-function* generate(A) {
-  const c = [];
-  const n = A.length;
-  yield A;
-  for (let i = 0; i < n; i++) {
-    c[i] = 0;
-  }
-  let i = 0;
-  while (i < n) {
-    if (c[i] < i) {
-      if (i % 2 === 0) {
-        swap(A, 0, i);
-      } else {
-        swap(A, c[i], i);
+
+function getPermutations(inputArr) {
+  var results = [];
+  function permute(arr, memo) {
+    var cur = memo;
+    for (var i = 0; i < arr.length; i++) {
+      cur = arr.splice(i, 1);
+      if (arr.length === 0) {
+        results.push(memo.concat(cur));
       }
-      yield A;
-      c[i] += 1;
-      i = 0;
-    } else {
-      c[i] = 0;
-      i += 1;
+      permute(arr.slice(), memo.concat(cur));
+      arr.splice(i, 0, cur[0]);
+    }
+    return results;
+  }
+  return permute(inputArr, []);
+}
+
+function getNumberCombinations(set, k) {
+  var i;
+  var j;
+  var combs;
+  var head;
+  var tailcombs;
+  if (k > set.length || k <= 0) {
+    return [];
+  }
+  if (k === 1) {
+    combs = [];
+    for (i = 0; i < set.length; i++) {
+      combs.push([set[i]]);
+    }
+    return combs;
+  }
+  combs = [];
+  for (i = 0; i < set.length - k + 1; i++) {
+    head = set.slice(i, i + 1);
+    tailcombs = getNumberCombinations(set.slice(i + 1), k - 1);
+    for (j = 0; j < tailcombs.length; j++) {
+      combs.push(head.concat(tailcombs[j]));
     }
   }
-}
-function swap(list, x, y) {
-  const tmp = list[x];
-  list[x] = list[y];
-  list[y] = tmp;
-  return list;
+  return combs;
 }
 
-function getNumberCombinations(arr, size) {
-  const len = arr.length;
-
-  if (size == len) return [arr];
-
-  return arr.reduce((acc, val, i) => {
-    const res = getNumberCombinations(arr.slice(i + 1), size - 1)
-      .map(comb => [val].concat(comb));
-
-    return acc.concat(res);
-  }, []);
-}
+module.exports = solve;

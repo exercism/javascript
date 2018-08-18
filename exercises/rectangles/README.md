@@ -65,31 +65,26 @@ every line equals the length of the first line).
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
+Go through the setup instructions for JavaScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/javascript
 
-## Requirements
-
-Install assignment dependencies:
-
-```bash
-$ npm install
-```
-
-## Making the test suite pass
+## Making the Test Suite Pass
 
 Execute the tests with:
 
-```bash
-$ npm test
-```
+    jasmine <exercise-name>.spec.js
 
-In the test suites all tests but the first have been skipped.
+Replace `<exercise-name>` with the name of the current exercise. E.g., to
+test the Hello World exercise:
 
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
+    jasmine hello-world.spec.js
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Submitting Incomplete Solutions

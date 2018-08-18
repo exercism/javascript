@@ -32,32 +32,29 @@ So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/javascript/installation
 
-## Requirements
+## Running the test suite
 
-Install assignment dependencies:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-```bash
-$ npm install
+```sh
+npm install -g jasmine
 ```
 
-## Making the test suite pass
+Run the test suite from the exercise directory with:
 
-Execute the tests with:
-
-```bash
-$ npm test
+```sh
+jasmine binary.spec.js
 ```
 
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

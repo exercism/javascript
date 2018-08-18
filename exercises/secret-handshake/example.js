@@ -1,24 +1,29 @@
-export default function (handshake) {
-  const HANDSHAKE_COMMANDS = ['wink', 'double blink', 'close your eyes', 'jump', 'REVERSE'];
+'use strict';
+
+function SecretHandshake(handshake) {
+  SecretHandshake.allCommands = [ 'wink', 'double blink', 'close your eyes', 'jump', 'REVERSE' ];
+  var handshakeCommands = SecretHandshake.allCommands;
 
   if (typeof handshake !== 'number') {
     throw new Error('Handshake must be a number');
   }
 
-  this.commands = () => this.shakeWith;
+  this.commands = function () {
+    return this.shakeWith;
+  };
 
-  this.calculateHandshake = (handshake) => {
-    const shakeWith = [];
+  this.calculateHandshake = function () {
+    var shakeWith = [];
 
-    for (let i = 0; i < HANDSHAKE_COMMANDS.length; i++) {
-      const currentCommand = HANDSHAKE_COMMANDS[i];
-      const handshakeHasCommand = handshake & Math.pow(2, i);
+    for (var i = 0; i < handshakeCommands.length; i++) {
+      var currentCommand = handshakeCommands[i];
+      var handshakeHasCommand = (handshake & Math.pow(2, i));
 
       if (handshakeHasCommand) {
         if (currentCommand === 'REVERSE') {
           shakeWith.reverse();
         } else {
-          shakeWith.push(HANDSHAKE_COMMANDS[i]);
+          shakeWith.push(handshakeCommands[i]);
         }
       }
     }
@@ -28,3 +33,5 @@ export default function (handshake) {
 
   this.shakeWith = this.calculateHandshake(handshake);
 }
+
+module.exports = SecretHandshake;

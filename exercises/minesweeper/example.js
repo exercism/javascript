@@ -1,60 +1,48 @@
-const MINE = '*';
+var Minesweeper = function () {
+  this.distanceXdistanceYs = [
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
 
-const DELTAS = [
-  [-1, -1],
-  [-1, 0],
-  [-1, 1],
-  [1, 1],
-  [1, 0],
-  [1, -1],
-  [0, 1],
-  [0, -1],
-];
+    [1, 1],
+    [1, 0],
+    [1, -1],
 
-class Minesweeper {
-  annotate(rows) {
-    if (noDataPresent(rows)) {
-      return rows;
-    }
+    [0, 1],
+    [0, -1]
 
-    const inputBoard = rows.map(row => [...row]);
+  ];
+};
 
-    return stringify(
-      inputBoard.map((row, x) => [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y))),
-    );
+
+Minesweeper.prototype.annotate = function (rows) {
+  if (rows.length === 0 || rows[0].length === 0) {
+    return rows;
   }
-}
+  var board = rows.map(function (row) { return row.split(''); });
+  var outBoard = [];
+  board.forEach(function (memberX, x)  {
+    outBoard[x] = [];
+    memberX.forEach(function (memberXY, y) {
+      var spot = memberXY;
+      if (spot === '*') {
+        outBoard[x][y] = spot;
+      } else {
+        var bombCount = this.distanceXdistanceYs.map(function (dxdy) {
+          if (typeof board[x + dxdy[0]] === 'undefined') {
+            return 0;
+          }
+          return board[x + dxdy[0]][y + dxdy[1]] === '*' ? 1 : 0;
+        }).reduce(function (total, num) {
+          return total + num;
+        });
+        outBoard[x][y] = bombCount > 0 ? bombCount : ' ';
+      }
+    }, this);
+  }, this);
+  return outBoard.map(function (row) {
+    return row.join('');
+  });
+};
 
-function cellToMineOrCount(cell, inputBoard, x, y) {
-  if (cell === MINE) {
-    return MINE;
-  } 
-    return countAdjacentMines(inputBoard, x, y) || " ";
-  
-}
-
-function countAdjacentMines(board, x, y) {
-  return DELTAS
-    .filter(d => adjacentSquareIsOnBoard(board, x, d))
-    .filter(d => adjacentSquareHasMine(board, x, y, d))
-    .length;
-}
-
-function stringify(board) {
-  return board.map(row => row.join(''));
-}
-
-function noDataPresent(rows) {
-  return rows.length === 0 || rows[0].length === 0;
-}
-
-function adjacentSquareIsOnBoard(board, x, d) {
-  return board[x + d[0]];
-}
-
-function adjacentSquareHasMine(board, x, y, d) {
-  return board[x + d[0]][y + d[1]] === MINE;
-}
-
-
-export default Minesweeper;
+module.exports = Minesweeper;

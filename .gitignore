@@ -1,9 +1,10 @@
 *.swp
 .DS_Store
+node_modules
 npm-debug.log
 tmp
 bin/configlet
 bin/configlet.exe
-node_modules
 .idea
-babel-output
+
+*.js~

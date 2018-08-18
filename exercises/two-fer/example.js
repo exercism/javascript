@@ -1,4 +1,10 @@
-export default (name) => {
-  const nameText = name || 'you';
-  return `One for ${nameText}, one for me.`;
+var TwoFer = function () {};
+
+TwoFer.prototype.twoFer = function (who) {
+  if (who) {
+    return 'One for ' + who + ', one for me.';
+  }
+  return 'One for you, one for me.';
 };
+
+module.exports = TwoFer;

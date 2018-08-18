@@ -14,36 +14,33 @@ If no name is given, the result should be "One for you, one for me."
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/javascript/installation
 
-## Requirements
+## Running the test suite
 
-Install assignment dependencies:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-```bash
-$ npm install
+```sh
+npm install -g jasmine
 ```
 
-## Making the test suite pass
+Run the test suite from the exercise directory with:
 
-Execute the tests with:
-
-```bash
-$ npm test
+```sh
+jasmine two-fer.spec.js
 ```
 
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 
-[https://en.wikipedia.org/wiki/Two-fer](https://en.wikipedia.org/wiki/Two-fer)
+This is an exercise to introduce users to basic programming constructs, just after Hello World. [https://en.wikipedia.org/wiki/Two-fer](https://en.wikipedia.org/wiki/Two-fer)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

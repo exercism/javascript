@@ -1,62 +1,68 @@
-import Isogram from './isogram';
+var Isogram = require('./isogram');
 
-describe('Isogram Test Suite', () => {
-  test('empty string', () => {
-    const word = new Isogram('');
-
-    expect(word.isIsogram()).toEqual(true);
-  });
-
-  xtest('isogram with only lower case characters', () => {
-    const word = new Isogram('isogram');
+describe('Isogram Test Suite', function () {
+  it('duplicates', function () {
+    var word = new Isogram('duplicates');
 
     expect(word.isIsogram()).toEqual(true);
   });
 
-  xtest('word with one duplicated character', () => {
-    const word = new Isogram('eleven');
+  xit('eleven', function () {
+    var word = new Isogram('eleven');
 
     expect(word.isIsogram()).toEqual(false);
   });
 
-  xtest('word with one duplicated character from the end of the alphabet', () => {
-    const word = new Isogram('zzyzx');
+  xit('subdermatoglyphic', function () {
+    var word = new Isogram('subdermatoglyphic');
+
+    expect(word.isIsogram()).toEqual(true);
+  });
+
+  xit('Alphabet', function () {
+    var word = new Isogram('Alphabet');
 
     expect(word.isIsogram()).toEqual(false);
   });
 
-  xtest('longest reported english isogram', () => {
-    const word = new Isogram('subdermatoglyphic');
+  xit('thumbscrew-japingly', function () {
+    var word = new Isogram('thumbscrew-japingly');
 
     expect(word.isIsogram()).toEqual(true);
   });
 
-  xtest('word with duplicated character in mixed case', () => {
-    const word = new Isogram('Alphabet');
+  xit('Hjelmqvist-Gryb-Zock-Pfund-Wax', function () {
+    var word = new Isogram('Hjelmqvist-Gryb-Zock-Pfund-Wax');
+
+    expect(word.isIsogram()).toEqual(true);
+  });
+
+  xit('Heizölrückstoßabdämpfung', function () {
+    var word = new Isogram('Heizölrückstoßabdämpfung');
+
+    expect(word.isIsogram()).toEqual(true);
+  });
+
+  xit('the quick brown fox', function () {
+    var word = new Isogram('the quick brown fox');
 
     expect(word.isIsogram()).toEqual(false);
   });
 
-  xtest('hypothetical isogrammic word with hyphen', () => {
-    const word = new Isogram('thumbscrew-japingly');
+  xit('Emily Jung Schwartzkopf', function () {
+    var word = new Isogram('Emily Jung Schwartzkopf');
 
     expect(word.isIsogram()).toEqual(true);
   });
 
-  xtest('isogram with duplicated hyphen', () => {
-    const word = new Isogram('six-year-old');
+  xit('éléphant', function () {
+    var word = new Isogram('éléphant');
 
-    expect(word.isIsogram()).toEqual(true);
+    expect(word.isIsogram()).toEqual(false);
   });
 
-  xtest('made-up name that is an isogram', () => {
-    const word = new Isogram('Emily Jung Schwartzkopf');
-
-    expect(word.isIsogram()).toEqual(true);
-  });
-
-  xtest('duplicated character in the middle', () => {
-    const word = new Isogram('accentor');
+  xit('Àcrobàt', function () {
+    var word = new Isogram('Àcrobàt');
 
     expect(word.isIsogram()).toEqual(false);
   });

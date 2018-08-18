@@ -1,12 +1,15 @@
-const LETTERS = 'abcdefghijklmnopqrstuvwxyz';
-const REVERSED_LETTERS = [...LETTERS].reverse().join('');
+'use strict';
+
+var LETTERS = 'abcdefghijklmnopqrstuvwxyz';
+var REVERSED_LETTERS = 'zyxwvutsrqponmlkjihgfedcba';
 
 function insertSpacing(s, interval) {
-  const matcher = new RegExp(`.{1,${interval}}`, 'g');
+  var matcher = new RegExp('.{1,' + interval + '}', 'g');
   return s.match(matcher).join(' ');
 }
 
 function invert(character) {
+  /* jshint validthis: true */
   if (character.match(/\d/)) {
     this.push(character);
   } else {
@@ -14,10 +17,12 @@ function invert(character) {
   }
 }
 
-export const encode = s => {
-    let encoded;
-    const characters = [];
-    [...s.toLowerCase()].forEach(invert, characters);
+module.exports = {
+  encode: function (s) {
+    var encoded = '';
+    var characters = [];
+    s.toLowerCase().split('').forEach( invert, characters );
     encoded = insertSpacing(characters.join(''), 5);
     return encoded;
+  }
 };

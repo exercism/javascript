@@ -1,50 +1,52 @@
-import BigInt from './big-integer';
+var BigInt = require('./big-integer');
 
-describe('The big-integer module\'s returned object', () => {
-  let bigI;
 
-  beforeEach(() => {
+describe('The big-integer module\'s returned object', function () {
+  var bigI;
+
+  beforeEach(function () {
     bigI = BigInt(42);
   });
 
-  afterEach(() => {
+  afterEach(function () {
     bigI = null;
   });
 
-  test('is not a number', () => {
+  it('is not a number', function () {
     expect(typeof 42).toBe('number');
     expect(typeof bigI).not.toBe('number');
     expect(typeof bigI).toBe('object');
   });
 
-  test('can be compared to a stringified number by calling \'.toString()\'', () => {
-    expect(bigI).not.toBe(42);
-    expect(bigI).not.toBe('42');
-    expect(bigI.toString()).toBe('42');
-    // NOTE:
-    // The '==' operator calls '.toString()' here in order to compare.
-    expect(bigI == '42').toBe(true);
+  it('can be compared to a stringified number by calling \'.toString()\'',
+    function () {
+      expect(bigI).not.toBe(42);
+      expect(bigI).not.toBe('42');
+      expect(bigI.toString()).toBe('42');
+      // NOTE:
+      // The '==' operator calls '.toString()' here in order to compare.
+      expect(bigI == '42').toBe(true);
     // While the line above is easier to write and read, we will use the
     // 'expect(bigI.toString()).toBe(expected)' way so that test failure
     // messages will be more informative. Eg,
     // "Expected '84' to be '42'." instead of
     // "Expected false to be true."
-  });
+    });
 
-  test('is immutable', () => {
+  it('is immutable', function () {
     bigI.add(10);
     expect(bigI.toString()).toBe('42');
     bigI.subtract(10);
     expect(bigI.toString()).toBe('42');
   });
 
-  test('can add', () => {
+  it('can add', function () {
     bigI = bigI.add(42);
 
     expect(bigI.toString()).toBe('84');
   });
 
-  test('can perform power operations', () => {
+  it('can perform power operations', function () {
     bigI = BigInt(10);
     bigI = bigI.pow(2);
     expect(bigI.toString()).toBe('100');

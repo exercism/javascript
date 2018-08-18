@@ -1,91 +1,85 @@
-export class InvalidInputError extends Error {
-  constructor(message) {
-    super();
-    this.message = message || 'Invalid Input';
-  }
+'use strict';
+
+var VALID_DIRECTIONS = ['north', 'east', 'south', 'west'];
+var INSTRUCTION_KEYS = {
+  A: 'advance',
+  L: 'turnLeft',
+  R: 'turnRight'
+};
+
+function Robot() {
+  this.coordinates = [0, 0];
+  this.bearing = 'north';
 }
 
-class Robot {
-  constructor() {
-    this.coordinates = [0, 0];
-    this.bearing = 'north';
+Robot.prototype.at = function (x, y) {
+  this.coordinates = [x, y];
+};
+
+Robot.prototype.orient = function (direction) {
+  if (VALID_DIRECTIONS.indexOf(direction) === -1) {
+    throw new Error('Invalid Robot Bearing');
   }
 
-  at(xcoord, ycoord) {
-    this.coordinates = [xcoord, ycoord];
+  this.bearing = direction;
+};
+
+Robot.prototype.advance = function () {
+  switch (this.bearing) {
+  case 'north':
+    this.coordinates[1]++;
+    break;
+  case 'east':
+    this.coordinates[0]++;
+    break;
+  case 'south':
+    this.coordinates[1]--;
+    break;
+  case 'west':
+    this.coordinates[0]--;
+    break;
+  default:
+    break;
   }
+};
 
-  orient(direction) {
-    const validDirections = ['north', 'south', 'east', 'west'];
-    if (!validDirections.includes(direction)) {
-      throw new InvalidInputError('Invalid Robot Bearing');
-    }
+Robot.prototype.turnLeft = function () {
+  var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
 
-    this.bearing = direction;
-    return `The robot is pointed ${direction}`;
+  if (directionPosition > 0) {
+    this.orient(VALID_DIRECTIONS[--directionPosition]);
+  } else {
+    this.orient(VALID_DIRECTIONS[VALID_DIRECTIONS.length - 1]);
   }
+};
 
-  advance() {
-    if (this.bearing === 'north') {
-      this.coordinates[1] += 1;
-    } else if (this.bearing === 'south') {
-      this.coordinates[1] -= 1;
-    } else if (this.bearing === 'east') {
-      this.coordinates[0] += 1;
-    } else if (this.bearing === 'west') {
-      this.coordinates[0] -= 1;
-    }
+Robot.prototype.turnRight = function () {
+  var directionPosition = VALID_DIRECTIONS.indexOf(this.bearing);
+
+  if (directionPosition < (VALID_DIRECTIONS.length - 1)) {
+    this.orient(VALID_DIRECTIONS[++directionPosition]);
+  } else {
+    this.orient(VALID_DIRECTIONS[0]);
   }
+};
 
-  turnLeft() {
-    if (this.bearing === 'north') {
-      this.orient('west');
-    } else if (this.bearing === 'south') {
-      this.orient('east');
-    } else if (this.bearing === 'east') {
-      this.orient('north');
-    } else if (this.bearing === 'west') {
-      this.orient('south');
-    }
-  }
-
-  turnRight() {
-    if (this.bearing === 'north') {
-      this.orient('east');
-    } else if (this.bearing === 'south') {
-      this.orient('west');
-    } else if (this.bearing === 'east') {
-      this.orient('south');
-    } else if (this.bearing === 'west') {
-      this.orient('north');
-    }
-  }
-
-  instructions(s) {
-    return [...s].map((character) => {
-      if (character === 'L') {
-        return 'turnLeft';
-      } else if (character === 'R') {
-        return 'turnRight';
-      } else if (character === 'A') {
-        return 'advance';
-      }
+Robot.prototype.instructions = function (instructionKeys) {
+  return instructionKeys.split('')
+    .map(function (key) {
+      return INSTRUCTION_KEYS[key];
     });
-  }
+};
 
-  place(args) {
-    this.coordinates = [args.x, args.y];
-    this.bearing = args.direction;
-  }
+Robot.prototype.place = function (args) {
+  this.coordinates = [args.x, args.y];
+  this.bearing = args.direction;
+};
 
-  evaluate(s) {
-    this.instructions(s).forEach((instruction) => {
+Robot.prototype.evaluate = function (instructionKeys) {
+  this.instructions(instructionKeys)
+    .forEach(function (instruction) {
       this[instruction]();
-    });
-  }
+    }, this);
+};
 
-}
-
-
-export default Robot;
-
+module.exports = Robot;

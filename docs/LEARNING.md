@@ -1,5 +1,4 @@
-If you want to learn ECMAScript, check out the following resources.
-
-* [Exploring ES6](https://leanpub.com/exploring-es6) book, by Axel Rauschmayer
-* [ES6 Katas](http://es6katas.org) website
-* [Babel compiler](https://github.com/babel/babel)
+* [Eloquent JavaScript: A Modern Introduction to Programming](http://eloquentjavascript.net)
+* [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)
+* [Crockford on JavaScript](http://javascript.crockford.com/)
+* [idiomatic.js: Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js)

@@ -1,21 +1,23 @@
-const LANGUAGE_RULES_REGEXP = /^([^aeiou]?qu|[^aeiou]*)(.+)/;
+'use strict';
 
-function translateWord(word) {
-  const [, beginning, ending] = word.match(LANGUAGE_RULES_REGEXP);
+module.exports = {
+  translate: function (english) {
+    var words = english.split(' ');
+    var translated = [];
 
-  if (beginning.length === 0) {
-    return `${word}ay`;
+    function translateWord(word) {
+      var parts = word.match(/^([^aeiou]?qu|[^aeiou]*)(.+)/);
+      var beginning = parts[1];
+      var ending = parts[2];
+
+      if (beginning.length === 0) {
+        translated.push(word + 'ay');
+      } else {
+        translated.push(ending + beginning + 'ay');
+      }
+    }
+
+    words.forEach( translateWord );
+    return translated.join(' ');
   }
-  return `${ending + beginning}ay`;
-}
-
-class PigLatin {
-  translate(english) {
-    return english
-      .split(' ')
-      .map(translateWord)
-      .join(' ');
-  }
-}
-
-export default PigLatin;
+};

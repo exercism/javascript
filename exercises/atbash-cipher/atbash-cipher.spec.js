@@ -1,22 +1,37 @@
-import { encode } from './atbash-cipher';
+var atbash = require('./atbash-cipher');
 
-describe('encode', () => {
-  test('encodes no', () => expect(encode('no')).toEqual('ml'));
+describe('encode', function () {
+  it('encodes no', function () {
+    expect(atbash.encode('no')).toEqual('ml');
+  });
 
-  xtest('encodes yes', () => expect(encode('yes')).toEqual('bvh'));
+  xit('encodes yes', function () {
+    expect(atbash.encode('yes')).toEqual('bvh');
+  });
 
-  xtest('encodes OMG', () => expect(encode('OMG')).toEqual('lnt'));
+  xit('encodes OMG', function () {
+    expect(atbash.encode('OMG')).toEqual('lnt');
+  });
 
-  xtest('encodes O M G', () => expect(encode('O M G')).toEqual('lnt'));
+  xit('encodes O M G', function () {
+    expect(atbash.encode('O M G')).toEqual('lnt');
+  });
 
-  xtest('encodes long words', () => expect(encode('mindblowingly')).toEqual('nrmwy oldrm tob'));
+  xit('encodes long words', function () {
+    expect(atbash.encode('mindblowingly')).toEqual('nrmwy oldrm tob');
+  });
 
-  xtest('encodes numbers', () => expect(encode('Testing, 1 2 3, testing.'))
-    .toEqual('gvhgr mt123 gvhgr mt'));
+  xit('encodes numbers', function () {
+    expect(atbash.encode('Testing, 1 2 3, testing.'))
+      .toEqual('gvhgr mt123 gvhgr mt');
+  });
 
-  xtest('encodes sentences', () => expect(encode('Truth is fiction.')).toEqual('gifgs rhurx grlm'));
+  xit('encodes sentences', function () {
+    expect(atbash.encode('Truth is fiction.')).toEqual('gifgs rhurx grlm');
+  });
 
-  xtest('encodes all the things', () => expect(encode('The quick brown fox jumps over the lazy dog.'))
-    .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'),
-  );
+  xit('encodes all the things', function () {
+    expect(atbash.encode('The quick brown fox jumps over the lazy dog.'))
+      .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt');
+  });
 });

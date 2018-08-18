@@ -1,16 +1,24 @@
-function transform(input) {
-  const output = {};
+'use strict';
 
-  Object.keys(input).forEach((key) => {
-    const items = input[key] || [];
+function ETL() {}
 
-    items.forEach((item) => {
-      const value = item.toLowerCase();
+ETL.prototype.transform = function (input) {
+  var output = {};
+  var object = Object.keys(input);
+
+  function processKey(key) {
+    var items = input[key] || [];
+
+    items.forEach(function (item) {
+      var value = item.toLowerCase();
       output[value] = Number(key);
     });
-  });
+  }
+
+  object.forEach(processKey);
 
   return output;
-}
+};
 
-export default transform;
+module.exports = ETL;
+

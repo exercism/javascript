@@ -1,198 +1,197 @@
-import { Rational } from './rational-numbers';
+var Rational = require('./rational-numbers');
 
-
-describe('Addition', () => {
-  test('Add two positive rational numbers', () => {
-    const expected = new Rational(7, 6);
+describe('Addition', function () {
+  it('Add two positive rational numbers', function () {
+    var expected = new Rational(7, 6);
     expect(new Rational(1, 2).add(new Rational(2, 3))).toEqual(expected);
   });
 
-  xtest('Add a positive rational number and a negative rational number', () => {
-    const expected = new Rational(-1, 6);
+  xit('Add a positive rational number and a negative rational number', function () {
+    var expected = new Rational(-1, 6);
     expect(new Rational(1, 2).add(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Add two negative rational numbers', () => {
-    const expected = new Rational(-7, 6);
+  xit('Add two negative rational numbers', function () {
+    var expected = new Rational(-7, 6);
     expect(new Rational(-1, 2).add(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Add a rational number to its additive inverse', () => {
-    const expected = new Rational(0, 1);
+  xit('Add a rational number to its additive inverse', function () {
+    var expected = new Rational(0, 1);
     expect(new Rational(1, 2).add(new Rational(-1, 2))).toEqual(expected);
   });
 });
 
-describe('Subtraction', () => {
-  xtest('Subtract two positive rational numbers', () => {
-    const expected = new Rational(-1, 6);
+describe('Subtraction', function () {
+  xit('Subtract two positive rational numbers', function () {
+    var expected = new Rational(-1, 6);
     expect(new Rational(1, 2).sub(new Rational(2, 3))).toEqual(expected);
   });
 
-  xtest('Subtract a positive rational number and a negative rational number', () => {
-    const expected = new Rational(7, 6);
+  xit('Subtract a positive rational number and a negative rational number', function () {
+    var expected = new Rational(7, 6);
     expect(new Rational(1, 2).sub(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Subtract two negative rational numbers', () => {
-    const expected = new Rational(1, 6);
+  xit('Subtract two negative rational numbers', function () {
+    var expected = new Rational(1, 6);
     expect(new Rational(-1, 2).sub(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Subtract a rational number from itself', () => {
-    const expected = new Rational(0, 1);
+  xit('Subtract a rational number from itself', function () {
+    var expected = new Rational(0, 1);
     expect(new Rational(1, 2).sub(new Rational(1, 2))).toEqual(expected);
   });
 });
 
-describe('Multiplication', () => {
-  xtest('Multiply two positive rational numbers', () => {
-    const expected = new Rational(1, 3);
+describe('Multiplication', function () {
+  xit('Multiply two positive rational numbers', function () {
+    var expected = new Rational(1, 3);
     expect(new Rational(1, 2).mul(new Rational(2, 3))).toEqual(expected);
   });
 
-  xtest('Multiply a negative rational number by a positive rational number', () => {
-    const expected = new Rational(-1, 3);
+  xit('Multiply a negative rational number by a positive rational number', function () {
+    var expected = new Rational(-1, 3);
     expect(new Rational(-1, 2).mul(new Rational(2, 3))).toEqual(expected);
   });
 
-  xtest('Multiply two negative rational numbers', () => {
-    const expected = new Rational(1, 3);
+  xit('Multiply two negative rational numbers', function () {
+    var expected = new Rational(1, 3);
     expect(new Rational(-1, 2).mul(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Multiply a rational number by its reciprocal', () => {
-    const expected = new Rational(1, 1);
+  xit('Multiply a rational number by its reciprocal', function () {
+    var expected = new Rational(1, 1);
     expect(new Rational(1, 2).mul(new Rational(2, 1))).toEqual(expected);
   });
 
-  xtest('Multiply a rational number by 1', () => {
-    const expected = new Rational(1, 2);
+  xit('Multiply a rational number by 1', function () {
+    var expected = new Rational(1, 2);
     expect(new Rational(1, 2).mul(new Rational(1, 1))).toEqual(expected);
   });
 
-  xtest('Multiply a rational number by 0', () => {
-    const expected = new Rational(0, 1);
+  xit('Multiply a rational number by 0', function () {
+    var expected = new Rational(0, 1);
     expect(new Rational(1, 2).mul(new Rational(0, 1))).toEqual(expected);
   });
 });
 
-describe('Division', () => {
-  xtest('Divide two positive rational numbers', () => {
-    const expected = new Rational(3, 4);
+describe('Division', function () {
+  xit('Divide two positive rational numbers', function () {
+    var expected = new Rational(3, 4);
     expect(new Rational(1, 2).div(new Rational(2, 3))).toEqual(expected);
   });
 
-  xtest('Divide a positive rational number by a negative rational number', () => {
-    const expected = new Rational(-3, 4);
+  xit('Divide a positive rational number by a negative rational number', function () {
+    var expected = new Rational(-3, 4);
     expect(new Rational(1, 2).div(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Divide two negative rational numbers', () => {
-    const expected = new Rational(3, 4);
+  xit('Divide two negative rational numbers', function () {
+    var expected = new Rational(3, 4);
     expect(new Rational(-1, 2).div(new Rational(-2, 3))).toEqual(expected);
   });
 
-  xtest('Divide a rational number by 1', () => {
-    const expected = new Rational(1, 2);
+  xit('Divide a rational number by 1', function () {
+    var expected = new Rational(1, 2);
     expect(new Rational(1, 2).div(new Rational(1, 1))).toEqual(expected);
   });
 });
 
-describe('Absolute value', () => {
-  xtest('Absolute value of a positive rational number', () => {
-    const expected = new Rational(1, 2);
+describe('Absolute value', function () {
+  xit('Absolute value of a positive rational number', function () {
+    var expected = new Rational(1, 2);
     expect(new Rational(1, 2).abs()).toEqual(expected);
   });
 
-  xtest('Absolute value of a negative rational number', () => {
-    const expected = new Rational(1, 2);
+  xit('Absolute value of a negative rational number', function () {
+    var expected = new Rational(1, 2);
     expect(new Rational(-1, 2).abs()).toEqual(expected);
   });
 
-  xtest('Absolute value of zero', () => {
-    const expected = new Rational(0, 1);
+  xit('Absolute value of zero', function () {
+    var expected = new Rational(0, 1);
     expect(new Rational(0, 1).abs()).toEqual(expected);
   });
 });
 
-describe('Exponentiation of a rational number', () => {
-  xtest('Raise a positive rational number to a positive integer power', () => {
-    const expected = new Rational(1, 8);
+describe('Exponentiation of a rational number', function () {
+  xit('Raise a positive rational number to a positive integer power', function () {
+    var expected = new Rational(1, 8);
     expect(new Rational(1, 2).exprational(3)).toEqual(expected);
   });
 
-  xtest('Raise a negative rational number to a positive integer power', () => {
-    const expected = new Rational(-1, 8);
+  xit('Raise a negative rational number to a positive integer power', function () {
+    var expected = new Rational(-1, 8);
     expect(new Rational(-1, 2).exprational(3)).toEqual(expected);
   });
 
-  xtest('Raise zero to an integer power', () => {
-    const expected = new Rational(0, 1);
+  xit('Raise zero to an integer power', function () {
+    var expected = new Rational(0, 1);
     expect(new Rational(0, 1).exprational(5)).toEqual(expected);
   });
 
-  xtest('Raise one to an integer power', () => {
-    const expected = new Rational(1, 1);
+  xit('Raise one to an integer power', function () {
+    var expected = new Rational(1, 1);
     expect(new Rational(1, 1).exprational(4)).toEqual(expected);
   });
 
-  xtest('Raise a positive rational number to the power of zero', () => {
-    const expected = new Rational(1, 1);
+  xit('Raise a positive rational number to the power of zero', function () {
+    var expected = new Rational(1, 1);
     expect(new Rational(1, 2).exprational(0)).toEqual(expected);
   });
 
-  xtest('Raise a negative rational number to the power of zero', () => {
-    const expected = new Rational(1, 1);
+  xit('Raise a negative rational number to the power of zero', function () {
+    var expected = new Rational(1, 1);
     expect(new Rational(-1, 2).exprational(0)).toEqual(expected);
   });
 });
 
-describe('Exponentiation of a real number to a rational number', () => {
-  xtest('Raise a real number to a positive rational number', () => {
-    const expected = 16.0;
+describe('Exponentiation of a real number to a rational number', function () {
+  xit('Raise a real number to a positive rational number', function () {
+    var expected = 16.0;
     expect(new Rational(4, 3).expreal(8)).toEqual(expected);
   });
 
-  xtest('Raise a real number to a negative rational number', () => {
-    const expected = 0.3333333333333333;
+  xit('Raise a real number to a negative rational number', function () {
+    var expected = 0.3333333333333333;
     expect(new Rational(-1, 2).expreal(9)).toEqual(expected);
   });
 
-  xtest('Raise a real number to a zero rational number', () => {
-    const expected = 1.0;
+  xit('Raise a real number to a zero rational number', function () {
+    var expected = 1.0;
     expect(new Rational(0, 1).expreal(2)).toEqual(expected);
   });
 });
 
-describe('Reduction to lowest terms', () => {
-  xtest('Reduce a positive rational number to lowest terms', () => {
-    const expected = new Rational(1, 2);
+describe('Reduction to lowest terms', function () {
+  xit('Reduce a positive rational number to lowest terms', function () {
+    var expected = new Rational(1, 2);
     expect(new Rational(2, 4).reduce()).toEqual(expected);
   });
 
-  xtest('Reduce a negative rational number to lowest terms', () => {
-    const expected = new Rational(-2, 3);
+  xit('Reduce a negative rational number to lowest terms', function () {
+    var expected = new Rational(-2, 3);
     expect(new Rational(-4, 6).reduce()).toEqual(expected);
   });
 
-  xtest('Reduce a rational number with a negative denominator to lowest terms', () => {
-    const expected = new Rational(-1, 3);
+  xit('Reduce a rational number with a negative denominator to lowest terms', function () {
+    var expected = new Rational(-1, 3);
     expect(new Rational(3, -9).reduce()).toEqual(expected);
   });
 
-  xtest('Reduce zero to lowest terms', () => {
-    const expected = new Rational(0, 1);
+  xit('Reduce zero to lowest terms', function () {
+    var expected = new Rational(0, 1);
     expect(new Rational(0, 6).reduce()).toEqual(expected);
   });
 
-  xtest('Reduce an integer to lowest terms', () => {
-    const expected = new Rational(-2, 1);
+  xit('Reduce an integer to lowest terms', function () {
+    var expected = new Rational(-2, 1);
     expect(new Rational(-14, 7).reduce()).toEqual(expected);
   });
 
-  xtest('Reduce one to lowest terms', () => {
-    const expected = new Rational(1, 1);
+  xit('Reduce one to lowest terms', function () {
+    var expected = new Rational(1, 1);
     expect(new Rational(13, 13).reduce()).toEqual(expected);
   });
 });

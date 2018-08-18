@@ -1,36 +1,46 @@
-export default function (hour, minute) {
-  const MINUTESPERDAY = 1440;
-  const HOURSPERDAY = 24;
+exports.at = at;
 
-  const clock = {
-    hour,
-    minute: minute || 0,
+var HOURS_IN_A_DAY = 24;
+var MINUTES_IN_AN_HOUR = 60;
+var MINUTES_IN_A_DAY = HOURS_IN_A_DAY * MINUTES_IN_AN_HOUR;
+var MILLIS_IN_A_MINUTE = 60 * 1000;
+var MILLIS_IN_AN_HOUR = MINUTES_IN_AN_HOUR * MILLIS_IN_A_MINUTE;
+var MILLIS_IN_A_DAY = HOURS_IN_A_DAY * MILLIS_IN_AN_HOUR;
+
+function makePositive(time, maxValue) {
+  return time % maxValue + maxValue;
+}
+
+function at(inputHours, inputMinutes) {
+  var minutes = makePositive(inputMinutes || 0, MINUTES_IN_A_DAY);
+  var hours = makePositive(inputHours, HOURS_IN_A_DAY);
+
+  var clock = {};
+  var value = (hours * MILLIS_IN_AN_HOUR) + (minutes * MILLIS_IN_A_MINUTE);
+  value = makePositive(value, MILLIS_IN_A_DAY);
+
+  clock.valueOf = function () {
+    return value;
   };
 
-  function formatNum(num) {
-    const numString = num.toString();
-    return numString.length === 1 ? `0${numString}` : numString;
-  }
-
-  function adjustTime(delta) {
-    delta = Math.abs(delta) >= MINUTESPERDAY ? delta % MINUTESPERDAY : delta;
-
-    const currentMinutes = clock.hour * 60 + clock.minute;
-    let newMinutes = (currentMinutes + delta) % MINUTESPERDAY;
-
-    newMinutes = newMinutes < 0 ? newMinutes += MINUTESPERDAY : newMinutes;
-
-    clock.hour = Math.floor(newMinutes / 60) % HOURSPERDAY;
-    clock.minute = newMinutes - clock.hour * 60;
-  }
-
-  adjustTime(0);
-
-  return {
-    clock,
-    toString: () => `${formatNum(clock.hour)}:${formatNum(clock.minute)}`,
-    plus(minutes) { adjustTime(minutes); return this; },
-    minus(minutes) { adjustTime(-minutes); return this; },
-    equals: otherClock => clock.hour === otherClock.clock.hour && clock.minute === otherClock.clock.minute,
+  clock.toString = function () {
+    var time = new Date(value).toISOString().split('T')[1].split(':');
+    return time[0] + ':' + time[1];
   };
+
+  clock.plus = function (addMinutes) {
+    value += addMinutes * MILLIS_IN_A_MINUTE;
+    return clock;
+  };
+
+  clock.minus = function (subMinutes) {
+    value -= subMinutes * MILLIS_IN_A_MINUTE;
+    return clock;
+  };
+
+  clock.equals = function (other) {
+    return +clock === +other;
+  };
+
+  return Object.create(clock);
 }

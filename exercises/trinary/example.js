@@ -1,27 +1,18 @@
-const BASE = 3;
+'use strict';
 
-export default class Trinary {
+module.exports = Trinary;
 
-  constructor(decimal) {
-    this.digits = [...decimal].reverse().map(Number);
-  }
+var BASE = 3;
 
-  toDecimal() {
-    if (this.someDigitIsInvalid()) {
-      return 0;
-    }
-
-    return this.digits.reduce(this.accumulator, 0);
-  }
-
-  someDigitIsInvalid() {
-    const greaterThanBase = this.digits.some(d => d >= BASE);
-    const notANumber = this.digits.some(d => isNaN(d));
-    return greaterThanBase || notANumber;
-  }
-
-  accumulator(decimal, digit, index) {
-    return decimal += digit * Math.pow(BASE, index);
-  }
-
+function Trinary(decimal) {
+  this.digits = decimal.split('').reverse().map(Number);
 }
+
+Trinary.prototype.toDecimal = function () {
+  var decimal = this.digits.reduce(this.accumulator, 0);
+  return isNaN(decimal) ? 0 : decimal;
+};
+
+Trinary.prototype.accumulator = function (decimal, digit, index) {
+  return decimal + digit * Math.pow(BASE, index);
+};

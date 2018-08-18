@@ -1,14 +1,12 @@
-const GIGASECOND_IN_MILIS = 1e9 * 1e3;
+function Gigasecond(dateOfBirth) {
+  'use strict';
 
-export default class Gigasecond {
+  this.dateOfBirth = dateOfBirth;
 
-  constructor(dateOfBirth) {
-    this.dateOfBirth = dateOfBirth;
-  }
-
-  date() {
-    const birthTime = this.dateOfBirth.getTime();
-    return new Date(birthTime + GIGASECOND_IN_MILIS);
-  }
-
+  this.date = function () {
+    var gigasecondDate = new Date(this.dateOfBirth.getTime() + 1000000000000);
+    return gigasecondDate;
+  };
 }
+
+module.exports = Gigasecond;

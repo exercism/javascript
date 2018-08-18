@@ -1,25 +1,23 @@
-export default class Squares {
+'use strict';
 
-  constructor(max) {
-    this.max = max;
-  }
-
-  get squareOfSums() {
-    let sum = 0;
-    for (let x = 1; x <= this.max; x++) {
-      sum += x;
+module.exports = function Squares(max) {
+  return {
+    get squareOfSums() {
+      var sum = 0;
+      for (var x = 1; x <= max; x++) {
+        sum += x;
+      }
+      return sum * sum;
+    },
+    get sumOfSquares() {
+      var sum = 0;
+      for (var x = 1; x <= max; x++) {
+        sum += x * x;
+      }
+      return sum;
+    },
+    get difference() {
+      return this.squareOfSums - this.sumOfSquares;
     }
-    return sum * sum;
-  }
-  get sumOfSquares() {
-    let sum = 0;
-    for (let x = 1; x <= this.max; x++) {
-      sum += x * x;
-    }
-    return sum;
-  }
-  get difference() {
-    return this.squareOfSums - this.sumOfSquares;
-  }
-
-}
+  };
+};

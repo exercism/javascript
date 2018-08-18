@@ -1,41 +1,34 @@
-function isSortedArray(array) {
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] < array[i - 1]) {
-      return false;
-    }
+'use strict';
+
+function BinarySearch(array) {
+  // check if array is sorted
+  var arrayIsSorted = true;
+  for (var i = 1; i < array.length; i++) {
+    if (array[i] < array[i - 1]) arrayIsSorted = false;
   }
 
-  return true;
+  // instantiate the array if sorted
+  if (arrayIsSorted) this.array = array;
+
+  // use binary search for indexOf
+  this.indexOf = function (value) {
+    return recursiveSearch(this.array, value, 0, this.array.length);
+  };
 }
 
-function recursiveSearch(array, value, start, end) {
-  if (start === end) {
-    return -1;
-  }
 
-  const mid = Math.floor((start + end) / 2);
+function recursiveSearch(array, value, start, end) {
+  if (start === end) return -1;
+
+  var mid = Math.floor((start + end) / 2);
+
   if (array[mid] > value) {
     return recursiveSearch(array, value, start, mid);
   }
-
   if (array[mid] < value) {
     return recursiveSearch(array, value, mid + 1, end);
   }
-
   return mid;
 }
 
-class BinarySearch {
-  constructor(array) {
-    if (isSortedArray(array)) {
-      this.array = array;
-    }
-  }
-
-  indexOf(value) {
-    return recursiveSearch(this.array, value, 0, this.array.length);
-  }
-}
-
-export default BinarySearch;
-
+module.exports = BinarySearch;

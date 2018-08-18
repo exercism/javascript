@@ -1,56 +1,123 @@
-export default class CustomSet {
-  constructor(data = []) {
-    this.data = {};
-    data.forEach(el => this.add(el));
-  }
+(function () {
+  'use strict';
 
-  add(el) {
-    this.data[el] = el;
+  var CustomSet = function (inputData) {
+    this.data = inputData || [];
+  };
+
+  CustomSet.prototype.empty = function () {
+    return this.data.length === 0;
+  };
+
+  CustomSet.prototype.delete = function (element) {
+    var index = this.data.indexOf(element);
+    if (index !== -1) {
+      this.data.splice(index, 1);
+    }
     return this;
-  }
+  };
 
-  delete(el) {
-    delete this.data[el];
+  CustomSet.prototype.difference = function (other) {
+    var thisData = this.data.sort();
+    var thatData = other.data.sort();
+    var result = [];
+    for (var i = 0; i < thisData.length; i++) {
+      if (thatData.indexOf(thisData[i]) === -1) {
+        result.push(thisData[i]);
+      }
+    }
+    return new CustomSet(result);
+  };
+
+  CustomSet.prototype.disjoint = function (other) {
+    if (this.data.length === 0) { return true; }
+    for (var i = 0; i < this.data.length; i++) {
+      if (other.data.indexOf(this.data[i]) !== -1) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  CustomSet.prototype.clear = function () {
+    return new CustomSet([]);
+  };
+
+  CustomSet.prototype.intersection = function (other) {
+    var thisData = this.data.sort();
+    var thatData = other.data.sort();
+    var result = [];
+    for (var i = 0; i < thisData.length; i++) {
+      if (thatData.indexOf(thisData[i]) !== -1) {
+        result.push(thisData[i]);
+      }
+    }
+    return new CustomSet(result);
+  };
+
+  CustomSet.prototype.contains = function (datum) {
+    return this.data.indexOf(datum) !== -1;
+  };
+
+  CustomSet.prototype.add = function (datum) {
+    if (this.data.indexOf(datum) === -1) {
+      this.data.push(datum);
+    }
     return this;
-  }
+  };
 
-  size() {
-    return Object.keys(this.data).length;
-  }
+  CustomSet.prototype.size = function () {
+    return arrayUnique(this.data).length;
+  };
 
-  empty() {
-    return this.size() === 0;
-  }
+  CustomSet.prototype.subset = function (other) {
+    for (var i = 0; i < other.data.length; i++) {
+      if (this.data.indexOf(other.data[i]) === -1) {
+        return false;
+      }
+    }
+    return true;
+  };
 
-  contains(el) {
-    return this.data[el] !== undefined;
-  }
+  CustomSet.prototype.toList = function () {
+    return arrayUnique(this.data);
+  };
 
-  eql(other) {
-    return this.size() === other.size() && this.difference(other).size() === 0;
-  }
+  CustomSet.prototype.union = function (other) {
+    var result = [];
 
-  difference(other) {
-    return new CustomSet(Object.keys(this.data).filter(el => other.data[el] === undefined));
-  }
+    for (var i = 0; i < this.data.length; i++) {
+      result.push(this.data[i]);
+    }
+    for (var j = 0; j < other.data.length; j++) {
+      result.push(other.data[j]);
+    }
 
-  disjoint(other) {
-    return this.size === 0 || this.difference(other).size() === this.size();
-  }
+    return new CustomSet(arrayUnique(result));
+  };
 
-  intersection(other) {
-    return this.difference(this.difference(other));
-  }
+  CustomSet.prototype.eql = function (other) {
+    var thisData = this.data.sort();
+    var thatData = other.data.sort();
 
-  union(other) {
-    return new CustomSet(this.toList().concat(other.toList()));
-  }
+    if (!other || this.data.length !== other.data.length) {
+      return false;
+    }
 
-  subset(other) {
-    return this.eql(this.intersection(other));
-  }
+    for (var i = 0; i < thisData.length; i++) {
+      if (thisData[i] !== thatData[i]) {
+        return false;
+      }
+    }
+    return true;
+  };
 
-  toList() {
-    return Object.values(this.data);
-  }
-}
+  var arrayUnique = function (a) {
+    return a.reduce(function (p, c) {
+      if (p.indexOf(c) < 0) p.push(c);
+      return p;
+    }, []);
+  };
+
+  module.exports = CustomSet;
+})();

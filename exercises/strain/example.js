@@ -1,8 +1,10 @@
-const Strain = {
-  strain: (array, filter, keepMatches) => {
-    const results = [];
-    for (let i = 0; i < array.length; i++) {
-      const item = array[i];
+'use strict';
+
+module.exports = {
+  strain: function (array, filter, keepMatches) {
+    var results = [];
+    for (var i = 0; i < array.length; i++) {
+      var item = array[i];
       if (filter(item) === keepMatches) {
         results.push(item);
       }
@@ -10,9 +12,11 @@ const Strain = {
     return results;
   },
 
-  keep: (array, filter) => Strain.strain(array, filter, true),
-  discard: (array, filter) => Strain.strain(array, filter, false),
+  keep: function (array, filter) {
+    return this.strain(array, filter, true);
+  },
 
+  discard: function (array, filter) {
+    return this.strain(array, filter, false);
+  }
 };
-
-export default Strain;

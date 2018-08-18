@@ -1,77 +1,76 @@
-class List {
+'use strict';
 
-  constructor(arr) {
-    this.values = arr || [];
-  }
-
-  append(otherList) {
-    for (const el of otherList.values) {
-      this.values.push(el);
-    }
-    return this;
-  }
-
-  concat(otherList) {
-    return this.append(otherList);
-  }
-
-  filter(operation) {
-    const filteredValues = [];
-    for (const el of this.values) {
-      if (operation(el)) {
-        filteredValues.push(el);
-      }
-    }
-    this.values = filteredValues;
-    return this;
-  }
-
-  length() {
-    let length = 0;
-    for (const el of this.values) {
-      length++;
-    }
-    return length;
-  }
-
-  map(operation) {
-    const mappedValues = [];
-    for (const el of this.values) {
-      mappedValues.push(operation(el));
-    }
-    this.values = mappedValues;
-    return this;
-  }
-
-  foldl(operation, initialValue) {
-    let acc = initialValue;
-    for (const el of this.values) {
-      acc = operation(acc, el);
-    }
-    return acc;
-  }
-
-  foldr(operation, initialValue) {
-    let acc = initialValue;
-    let index = this.length() - 1;
-    while (index >= 0) {
-      const el = this.values[index--];
-      acc = operation(acc, el);
-    }
-    return acc;
-  }
-
-  reverse() {
-    const numElements = this.length();
-    let finalIndex = numElements - 1;
-    for (let index = 0; index < numElements / 2; index++) {
-      const temp = this.values[index];
-      this.values[index] = this.values[finalIndex];
-      this.values[finalIndex--] = temp;
-    }
-    return this;
-  }
-
+function List(arr) {
+  this.values = arr || [];
 }
 
-export default List;
+List.prototype = {
+  append: function (otherList) {
+    var appended = this.values;
+
+    for (var i = 0; i < otherList.length(); i++) {
+      appended.push(otherList.values[i]);
+    }
+
+    return new List(appended);
+  },
+
+  concat: function (otherList) {
+    return this.append(otherList);
+  },
+
+  cons: function (item, arr) {
+    var x = new List([item]);
+    var xs = new List(arr);
+    return x.append(xs).values;
+  },
+
+  foldl: function (func, start) {
+    var acc = start;
+
+    for (var i = 0; i < this.length(); i++) {
+      acc = func(this.values[i], acc);
+    }
+
+    return acc;
+  },
+
+  foldr: function (func, start) {
+    var acc = start;
+
+    for (var i = this.length() - 1; i >= 0; i--) {
+      acc = func(this.values[i], acc);
+    }
+
+    return acc;
+  },
+
+  length: function () {
+    var count = 0;
+    this.values.forEach(function () { count++; });
+
+    return count;
+  },
+
+  reverse: function () {
+    return new List(this.foldl(this.cons, []));
+  },
+
+  map: function (func) {
+    var applyFuncThenCons = function (x, acc) {
+      return this.cons(func(x), acc);
+    };
+
+    return new List(this.foldr(applyFuncThenCons.bind(this), []));
+  },
+
+  filter: function (pred) {
+    var consIfPred = function (x, acc) {
+      return pred(x) ? this.cons(x, acc) : acc;
+    };
+
+    return new List(this.foldr(consIfPred.bind(this), []));
+  }
+};
+
+module.exports = List;

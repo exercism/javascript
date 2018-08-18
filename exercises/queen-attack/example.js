@@ -1,52 +1,63 @@
-const W = 8;
-const H = 8;
-const STARTING = { black: [7, 3], white: [0, 3] };
+'use strict';
 
-function samePosition({ white, black }) {
-  return white[0] === black[0] && white[1] === black[1];
-}
 
-function buildRow(cell, colCount) {
-  return Array(...Array(colCount)).map(() => cell);
-}
+module.exports = function (passedInOptions) {
+  var options = passedInOptions || {white: [0, 3], black: [7, 3]};
 
-function concatRows(row, rowCount) {
-  return [...Array.prototype.concat.apply(buildRow(row, rowCount)).join('')];
-}
-
-function constructBoard() {
-  let row = buildRow('_ ', W).join('');
-  row = `${row.substring(0, row.length - 1)}\n`;
-  return concatRows(row, H);
-}
-
-function placePieces(self) {
-  const board = self.board;
-  board[(self.black[0] * W * 2) + (self.black[1] * 2)] = 'B';
-  board[(self.white[0] * W * 2) + (self.white[1] * 2)] = 'W';
-}
-
-function QueenAttack (params = STARTING) {
-  const self = this instanceof QueenAttack ? this : Object.getPrototypeOf(QueenAttack);
-  if (samePosition(params)) {
-    throw new Error('Queens cannot share the same space');
+  if (options.white[0] === options.black[0] && options.white[1] === options.black[1]) {
+    throw String('Queens cannot share the same space');
   }
 
-  self.black = params.black;
-  self.white = params.white;
-  self.board = constructBoard();
-  placePieces(self);
+  this.white = options.white;
+  this.black = options.black;
 
-  self.canAttack = () => {
-    if (self.black[0] === self.white[0] || self.black[1] === self.white[1]) {
-      return true;
+  this.canAttack = function () {
+    var canAttack = false;
+
+    if (this.white[0] === this.black[0]) {
+      canAttack = true;
     }
-    return Math.abs(self.black[0] - self.white[0]) === Math.abs(self.black[1] - self.white[1]);
+    if (this.white[1] === this.black[1]) {
+      canAttack = true;
+    }
+
+    var yDistance = this.white[0] - this.black[0];
+    var xDistance = this.white[1] - this.black[1];
+
+    if (xDistance === yDistance) {
+      canAttack = true;
+    }
+
+    if (xDistance === -yDistance) {
+      canAttack = true;
+    }
+
+    return canAttack;
   };
 
-  self.toString = () => self.board.join('');
+  this.boardRepresentation = function () {
+    var boardRepresentation = '';
 
-  return self;
-}
+    for (var i = 0; i < 8; i++) {
+      for (var j = 0; j < 8; j++) {
+        if (this.white[0] === i && this.white[1] === j) {
+          boardRepresentation += 'W';
+        } else if (this.black[0] === i && this.black[1] === j) {
+          boardRepresentation += 'B';
+        } else {
+          boardRepresentation += '_';
+        }
 
-export default QueenAttack;
+        if (j < 7) { boardRepresentation += ' '; }
+      }
+      boardRepresentation += '\n';
+    }
+
+    return boardRepresentation;
+  };
+
+  this.toString = function () {
+    return this.boardRepresentation();
+  };
+};
+

@@ -1,4 +1,4 @@
-# ISBN Verifier
+# Isbn Verifier
 
 The [ISBN-10 verification process](https://en.wikipedia.org/wiki/International_Standard_Book_Number) is used to validate book identification
 numbers. These normally contain dashes and look like: `3-598-21508-8`
@@ -42,32 +42,29 @@ Now, it's even trickier since the check digit of an ISBN-10 may be 'X' (represen
 * Generate valid ISBN, maybe even from a given starting ISBN.
 ## Setup
 
-Go through the setup instructions for ECMAScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/javascript/installation
 
-## Requirements
+## Running the test suite
 
-Install assignment dependencies:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-```bash
-$ npm install
+```sh
+npm install -g jasmine
 ```
 
-## Making the test suite pass
+Run the test suite from the exercise directory with:
 
-Execute the tests with:
-
-```bash
-$ npm test
+```sh
+jasmine isbn-verifier.spec.js
 ```
 
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

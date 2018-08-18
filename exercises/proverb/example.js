@@ -1,23 +1,36 @@
-const lastArgIsOptions = (args) => {
-  const last = args[args.length - 1];
-  return typeof last === 'object';
-};
+module.exports = function () {
+  var last = arguments[arguments.length - 1];
+  var chain = Array.from(arguments);
+  this.options = {};
 
-const conclusion = (firstArg, qualifier = '') => `And all for the want of a ${qualifier}${firstArg}.`;
-
-const proverb = (...args) => {
-  let options = {};
-  if (lastArgIsOptions(args)) {
-    options = args.pop();
+  if (typeof last === 'object' && last.hasOwnProperty('qualifier')) {
+    this.options = chain.pop();
   }
 
-  const allExceptLastArg = args.slice(0, -1);
-  const chainOfEvents = allExceptLastArg.map((arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`);
+  this.chain = chain;
+  this.qualifier = this.options.qualifier ? this.options.qualifier + ' ' : '';
 
-  const qualifier = options.qualifier ? `${options.qualifier} ` : options.qualifier;
-  chainOfEvents.push(conclusion(args[0], qualifier));
+  this.toString = function () {
+    return this.chainOfEvents() + this.conclusion();
+  }.bind(this);
 
-  return chainOfEvents.join('\n');
+  this.chainOfEvents = function () {
+    return this.causesAndEffects().map( function (entry) {
+      return 'For want of a ' + entry.cause +
+        ' the '  + entry.effect + ' was lost.\n';
+    } ).join('');
+  }.bind(this);
+
+  this.causesAndEffects = function () {
+    return this.chain.reduce( function (array, event, index) {
+      if (index < this.chain.length - 1) {
+        array.push({ cause: event, effect: this.chain[index + 1] });
+      }
+      return array;
+    }.bind(this), [] );
+  }.bind(this);
+
+  this.conclusion = function () {
+    return 'And all for the want of a ' + this.qualifier + this.chain[0] + '.';
+  }.bind(this);
 };
-
-export default proverb;

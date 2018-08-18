@@ -1,36 +1,50 @@
-const ALPHA = 'abcdefghijklmnopqrstuvwxyz';
+'use strict';
 
-function generateKey() {
-  return Array(...Array(100))
-    .map(() => ALPHA[Math.floor(Math.random() * ALPHA.length)])
-    .join('');
+var ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+
+function randomKey() {
+  var result;
+  for ( var i = 0; i < 100; i++ ) {
+    result += ALPHABET[randomUpTo(ALPHABET.length)];
+  }
+  return result;
 }
 
-function xCode(key, inText, sign) {
-  return [...inText]
-    .reduce((outText, letter, ii) => {
-      const offset = sign * ALPHA.indexOf(key[mod(ii, key.length)]);
-      outText += ALPHA[mod(ALPHA.indexOf(letter) + offset, ALPHA.length)];
-      return outText;
-    }, '');
+function randomUpTo(n) {
+  return Math.floor(Math.random() * n);
 }
 
-const mod = (n, m) => (n % m + m) % m;
+module.exports = function (userDefinedKey) {
+  var key;
 
-export default function (key) {
-  if (typeof key === 'undefined') {
-    key = generateKey();
-  } else if (key.length === 0 || key.match(/[^a-z]/, 'g')) {
-    throw new Error('Bad key');
+  function addEncodedCharacter(character, index) {
+    var i = ALPHABET.indexOf(character) + ALPHABET.indexOf(key[index % key.length]);
+    if (i >= ALPHABET.length) { i -= ALPHABET.length; }
+    this.push(ALPHABET[i]);
   }
 
-  return {
-    key,
-    encode(plainText) {
-      return xCode(this.key, plainText, 1);
-    },
-    decode(encodedText) {
-      return xCode(this.key, encodedText, -1);
-    },
+  function addDecodedCharacter(character, index) {
+    var i = ALPHABET.indexOf(character) - ALPHABET.indexOf(key[index % key.length]);
+    if (i < 0) { i += ALPHABET.length; }
+    this.push(ALPHABET[i]);
+  }
+
+  this.encode = function (plaintext) {
+    var characters = [];
+    plaintext.split('').forEach( addEncodedCharacter, characters );
+    return characters.join('');
   };
-}
+
+  this.decode = function (ciphertext) {
+    var characters = [];
+    ciphertext.split('').forEach( addDecodedCharacter, characters );
+    return characters.join('');
+  };
+
+  this.key = userDefinedKey || randomKey();
+  key = this.key;
+
+  if (userDefinedKey === '' || key.match(/[\dA-Z]/)) {
+    throw new Error('Bad key');
+  }
+};

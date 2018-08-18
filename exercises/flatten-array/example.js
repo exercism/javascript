@@ -1,11 +1,16 @@
-export default class Flattener {
-  flatten(arr) {
-    return arr
-      .reduce((acc, el) =>
-        Array.isArray(el)
-          ? acc.concat(this.flatten(el))
-          : acc.concat(el),
-        [])
-      .filter(el => el !== null && el !== undefined);
-  }
-}
+var Flattener = function () { };
+
+Flattener.prototype.flatten = function (unflattenedArray, inputFlattenedArray) {
+  var self = this;
+  var flattenedArray = inputFlattenedArray || [];
+  unflattenedArray.forEach(function (element) {
+    if (Array.isArray(element)) {
+      self.flatten(element, flattenedArray);
+    } else if (element !== null) {
+      flattenedArray.push(element);
+    }
+  });
+  return flattenedArray;
+};
+
+module.exports = Flattener;

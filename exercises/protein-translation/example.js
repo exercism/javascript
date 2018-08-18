@@ -1,31 +1,13 @@
-const ACID_PROTEIN_MAP = {
-  AUG: 'Methionine',
-  UUU: 'Phenylalanine',
-  UUC: 'Phenylalanine',
-  UUA: 'Leucine',
-  UUG: 'Leucine',
-  UCU: 'Serine',
-  UCC: 'Serine',
-  UCA: 'Serine',
-  UCG: 'Serine',
-  UAU: 'Tyrosine',
-  UAC: 'Tyrosine',
-  UGU: 'Cysteine',
-  UGC: 'Cysteine',
-  UGG: 'Tryptophan',
-  UAA: 'STOP',
-  UAG: 'STOP',
-  UGA: 'STOP',
-};
+'use strict';
 
-const getProtein = codon => ACID_PROTEIN_MAP[codon] || 'INVALID';
+module.exports = translate;
 
-export default function translate(rnaStrand) {
-  const proteins = [];
+function translate(rnaStrand) {
+  var proteins = [];
 
   if (rnaStrand) {
-    for (let i = 0; i < rnaStrand.length; i += 3) {
-      const protein = getProtein(rnaStrand.substring(i, i + 3));
+    for (var i = 0; i < rnaStrand.length; i += 3) {
+      var protein = getProtein(rnaStrand.substring(i, i + 3));
 
       if (protein) {
         if (protein === 'STOP') {
@@ -42,4 +24,44 @@ export default function translate(rnaStrand) {
   }
 
   return proteins;
+}
+
+function getProtein(codon) {
+  switch (codon) {
+  case 'AUG':
+    return 'Methionine';
+
+  case 'UUU':
+  case 'UUC':
+    return 'Phenylalanine';
+
+  case 'UUA':
+  case 'UUG':
+    return 'Leucine';
+
+  case 'UCU':
+  case 'UCC':
+  case 'UCA':
+  case 'UCG':
+    return 'Serine';
+
+  case 'UAU':
+  case 'UAC':
+    return 'Tyrosine';
+
+  case 'UGU':
+  case 'UGC':
+    return 'Cysteine';
+
+  case 'UGG':
+    return 'Tryptophan';
+
+  case 'UAA':
+  case 'UAG':
+  case 'UGA':
+    return 'STOP';
+
+  default:
+    return 'INVALID';
+  }
 }

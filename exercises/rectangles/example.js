@@ -1,38 +1,66 @@
-class Rectangles {
+var GLYPH = { corner: '+', edgeV: '|', edgeH: '-' };
 
-  static count(diagram) {
-    const rows = diagram.length;
-    const cols = rows ? diagram[0].length : 0;
+var Vertex = function () {
+  this.right = [];
+  this.down = [];
+};
 
-    let rectangles = 0;
+// number of rectangles with given top left corner
+Vertex.prototype.findRectangles = function () {
+  var corners = [];
+  var rectangles = 0;
 
-    // All possible topleft corners
-    for (let y = 0; y < rows - 1; y++) {
-      for (let x = 0; x < cols - 1; x++) {
-        if (diagram[y].charAt(x) === '+') {
-          // All possible bottomright corners
-          for (let j = y + 1; j < rows; j++) {
-            for (let i = x + 1; i < cols; i++) {
-              // Check if all corners are valid
-              if (diagram[j].charAt(i) === '+' && diagram[y].charAt(i) === '+' && diagram[j].charAt(x) === '+') {
-                let validRectangle = true;
+  this.right.forEach(function (topLeft) {
+    topLeft.down.forEach(function (bottomRight) {
+      corners.push(bottomRight);
+    });
+  });
+  this.down.forEach(function (bottomLeft) {
+    bottomLeft.right.forEach(function (bottomRight) {
+      if (corners.indexOf(bottomRight) >= 0) {
+        rectangles++;
+      }
+    });
+  });
+  return rectangles;
+};
 
-                // Check if all sides are valid
-                for (let s = x + 1; s < i; s++) if (!'+-'.includes(diagram[y].charAt(s))) validRectangle = false;
-                for (let s = x + 1; s < i; s++) if (!'+-'.includes(diagram[j].charAt(s))) validRectangle = false;
-                for (let t = y + 1; t < j; t++) if (!'+|'.includes(diagram[t].charAt(x))) validRectangle = false;
-                for (let t = y + 1; t < j; t++) if (!'+|'.includes(diagram[t].charAt(i))) validRectangle = false;
+// finds connected corners right and down from every corner
+var toVertices = function (grid) {
+  var vertices = [];
+  grid.forEach(function (row, y) {
+    row.forEach(function (cell, x) {
+      if (cell === GLYPH.corner) {
+        var newVert = new Vertex();
+        var side;
 
-                if (validRectangle) rectangles++;
-              }
-            }
-          }
+        vertices.push(newVert);
+        grid[y][x] = newVert; // replace glyph with the vertex
+        for (var u = y - 1; u >= 0; u--) { // search *up* along the side
+          side = grid[u][x];
+          if (side instanceof Vertex) side.down.push(newVert);
+          else if (side !== GLYPH.edgeV) break;
+        }
+        for (var l = x - 1; l >= 0; l--) { // search *left* along the side
+          side = grid[y][l];
+          if (side instanceof Vertex) side.right.push(newVert);
+          else if (side !== GLYPH.edgeH) break;
         }
       }
-    }
+    });
+  });
+  return vertices;
+};
 
-    return rectangles;
-  }
-}
+var rectangles = function (input) {
+  var grid;
+  var corners;
 
-export default Rectangles;
+  grid = input.map(function (row) { return row.split(''); });
+  corners = toVertices(grid);
+  return corners.reduce(function (total, vert) {
+    return total + vert.findRectangles();
+  }, 0);
+};
+
+module.exports = rectangles;

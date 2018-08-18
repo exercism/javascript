@@ -1,23 +1,32 @@
-const isSilence = message => message.replace(/\s+/g, '') === '';
-const isShouting = message => message.toUpperCase() === message && /[A-Z]/.test(message);
-const isAQuestion = message => message[message.length - 1] === '?';
+function Bob() {
+  'use strict';
 
-class Bob {
-  hey(message) {
+  function isSilence(message) {
+    return message.replace(/\s+/g, '') === '';
+  }
+
+  function isShouting(message) {
+    return message.toUpperCase() === message && /[A-Z]/.test(message);
+  }
+
+  function isAQuestion(message) {
+    return message[message.length - 1] === '?';
+  }
+
+  this.hey = function (input) {
+    var message = input.trim();
     if (isSilence(message)) {
       return 'Fine. Be that way!';
-    }
-    if (isShouting(message)) {
+    } else if (isShouting(message)) {
       if (isAQuestion(message)) {
         return "Calm down, I know what I'm doing!";
       }
       return 'Whoa, chill out!';
-    }
-    if (isAQuestion(message.trim())) {
+    } else if (isAQuestion(message)) {
       return 'Sure.';
     }
     return 'Whatever.';
-  }
+  };
 }
 
-export default Bob;
+module.exports = Bob;

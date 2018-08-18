@@ -1,26 +1,27 @@
-function columnsFromRows(rows) {
-  const columns = [];
+'use strict';
 
-  rows.forEach((row) => {
-    row.forEach((n, index) => {
+function columnsFromRows(rows) {
+  var columns = [];
+  rows.forEach(function (row) {
+    row.forEach(function (n, index) {
       columns[index] = columns[index] || [];
       columns[index].push(n);
     });
   });
-
   return columns;
 }
 
 function parseRows(description) {
-  return description.split('\n').map(row => row.split(' ').map(char => parseInt(char, 10)));
+  return description.split('\n').map(function (row) {
+    return row.split(' ').map(function (char) {
+      return parseInt(char, 10);
+    });
+  });
 }
 
-class Matrix {
-  constructor(description) {
-    this.rows = parseRows(description);
-    this.columns = columnsFromRows(this.rows);
-  }
+function Matrix(description) {
+  this.rows = parseRows(description);
+  this.columns = columnsFromRows(this.rows);
 }
 
-export default Matrix;
-
+module.exports = Matrix;

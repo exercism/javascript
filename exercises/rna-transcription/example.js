@@ -1,19 +1,23 @@
-const DNA_TO_RNA = {
+'use strict';
+
+var DnaTranscriber = function () {};
+
+var dnaToRna = {
   G: 'C',
   C: 'G',
   T: 'A',
-  A: 'U',
+  A: 'U'
 };
 
-export default class Transcriptor {
-  toRna(dna) {
-    const rna = dna.replace(/./g, nucleotide => DNA_TO_RNA[nucleotide]);
+var transcribeDna = function (dna, lookupTable) {
+  return dna.replace(/./g, function (dnaNucleotide) {
+    if (!(dnaNucleotide in lookupTable)) { throw Error('Invalid input'); }
+    return lookupTable[dnaNucleotide];
+  });
+};
 
-    if (rna.length !== dna.length) {
-      // invalid characters in the strand
-      throw new Error('Invalid input DNA.');
-    } else {
-      return rna;
-    }
-  }
-}
+DnaTranscriber.prototype.toRna = function (dna) {
+  return transcribeDna(dna, dnaToRna);
+};
+
+module.exports = DnaTranscriber;

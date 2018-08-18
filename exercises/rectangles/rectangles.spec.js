@@ -1,137 +1,100 @@
-import Rectangles from './rectangles.js';
+var rectangles = require('./rectangles');
 
-describe('Rectangles', () => {
-  test('no rows', () => {
-    const expected = 0;
-    const actual = Rectangles.count([]);
-
-    expect(actual).toEqual(expected);
+describe('Rectangles', function () {
+  it('no rows', function () {
+    expect(rectangles([])).toBe(0);
   });
 
-  xtest('no columns', () => {
-    const expected = 0;
-    const actual = Rectangles.count(['']);
-
-    expect(actual).toEqual(expected);
+  xit('no columns', function () {
+    expect(rectangles([''])).toBe(0);
   });
 
-  xtest('no rectangles', () => {
-    const expected = 0;
-    const actual = Rectangles.count([' ']);
-
-    expect(actual).toEqual(expected);
+  xit('no rectangles', function () {
+    expect(rectangles([' '])).toBe(0);
   });
 
-  xtest('one rectangle', () => {
-    const expected = 1;
-    const actual = Rectangles.count([
+  xit('one rectangle', function () {
+    var input = [
       '+-+',
       '| |',
-      '+-+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+-+'];
+    expect(rectangles(input)).toBe(1);
   });
 
-  xtest('two rectangles without shared parts', () => {
-    const expected = 2;
-    const actual = Rectangles.count([
+  xit('two rectangles without shared parts', function () {
+    var input = [
       '  +-+',
       '  | |',
       '+-+-+',
       '| |  ',
-      '+-+  ',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+-+  '];
+    expect(rectangles(input)).toBe(2);
   });
 
-  xtest('five rectangles with shared parts', () => {
-    const expected = 5;
-    const actual = Rectangles.count([
+  xit('five rectangles with shared parts', function () {
+    var input = [
       '  +-+',
       '  | |',
       '+-+-+',
       '| | |',
-      '+-+-+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+-+-+'];
+    expect(rectangles(input)).toBe(5);
   });
 
-  xtest('rectangle of height 1 is counted', () => {
-    const expected = 1;
-    const actual = Rectangles.count([
+  xit('rectangle of height 1 is counted', function () {
+    var input = [
       '+--+',
-      '+--+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+--+'];
+    expect(rectangles(input)).toBe(1);
   });
 
-  xtest('rectangle of width 1 is counted', () => {
-    const expected = 1;
-    const actual = Rectangles.count([
+  xit('rectangle of width 1 is counted', function () {
+    var input = [
       '++',
       '||',
-      '++',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '++'];
+    expect(rectangles(input)).toBe(1);
   });
 
-  xtest('1x1 square is counted', () => {
-    const expected = 1;
-    const actual = Rectangles.count([
+  xit('1x1 square is counted', function () {
+    var input = [
       '++',
-      '++',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '++'];
+    expect(rectangles(input)).toBe(1);
   });
 
-  xtest('only complete rectangles are counted', () => {
-    const expected = 1;
-    const actual = Rectangles.count([
+  xit('only complete rectangles are counted', function () {
+    var input = [
       '  +-+',
       '    |',
       '+-+-+',
       '| | -',
-      '+-+-+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+-+-+'];
+    expect(rectangles(input)).toBe(1);
   });
 
-  xtest('rectangles can be of different sizes', () => {
-    const expected = 3;
-    const actual = Rectangles.count([
+  xit('rectangles can be of different sizes', function () {
+    var input = [
       '+------+----+',
       '|      |    |',
       '+---+--+    |',
       '|   |       |',
-      '+---+-------+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+---+-------+'];
+    expect(rectangles(input)).toBe(3);
   });
 
-  xtest('corner is required for a rectangle to be complete', () => {
-    const expected = 2;
-    const actual = Rectangles.count([
+  xit('corner is required for a rectangle to be complete', function () {
+    var input = [
       '+------+----+',
       '|      |    |',
       '+------+    |',
       '|   |       |',
-      '+---+-------+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '+---+-------+'];
+    expect(rectangles(input)).toBe(2);
   });
 
-  xtest('large input with many rectangles', () => {
-    const expected = 60;
-    const actual = Rectangles.count([
+  xit('large input with many rectangles', function () {
+    var input = [
       '+---+--+----+',
       '|   +--+----+',
       '+---+--+    |',
@@ -139,9 +102,7 @@ describe('Rectangles', () => {
       '+---+--+--+-+',
       '+---+--+--+-+',
       '+------+  | |',
-      '          +-+',
-    ]);
-
-    expect(actual).toEqual(expected);
+      '          +-+'];
+    expect(rectangles(input)).toBe(60);
   });
 });

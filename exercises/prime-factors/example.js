@@ -1,19 +1,16 @@
-class PrimeFactors {
-  for(num) {
-    const factors = [];
-    let currentFactor = 2;
+'use strict';
 
-    while (num !== 1) {
-      if (num % currentFactor === 0) {
-        factors.push(currentFactor);
-        num /= currentFactor;
-        currentFactor = 2;
-      } else {
-        currentFactor++;
-      }
+exports.for = function (n) {
+  var primeFactors = [];
+  var possibleFactor = 2;
+  var number = n;
+  while (possibleFactor * possibleFactor <= number) {
+    while (number % possibleFactor === 0) {
+      primeFactors.push(possibleFactor);
+      number /= possibleFactor;
     }
-    return factors;
+    possibleFactor += 1;
   }
-}
-
-export default PrimeFactors;
+  if (number > 1) { primeFactors.push(number); }
+  return primeFactors;
+};

@@ -1,68 +1,68 @@
-import DiffieHellman from './diffie-hellman';
+var DiffieHellman = require('./diffie-hellman');
 
-describe('diffie-hellman', () => {
-  const p = 23;
-  const g = 5;
-  const diffieHellman = new DiffieHellman(p, g);
+describe('diffie-hellman', function () {
+  var p = 23;
+  var g = 5;
+  var diffieHellman = new DiffieHellman(p, g);
 
-  const alicePrivateKey = 6;
-  const alicePublicKey = 8;
+  var alicePrivateKey = 6;
+  var alicePublicKey = 8;
 
-  const bobPrivateKey = 15;
-  const bobPublicKey = 19;
+  var bobPrivateKey = 15;
+  var bobPublicKey = 19;
 
-  test('throws an error if the constructor arguments are out of range', () => {
-    expect(() => {
-      new DiffieHellman(0, 9999);
+  it('throws an error if the constructor arguments are out of range', function () {
+    expect(function () {
+      return new DiffieHellman(0, 9999);
     }).toThrow();
   });
 
-  xtest('throws an error if the constructor arguments are not prime', () => {
-    expect(() => {
-      new DiffieHellman(10, 13);
+  xit('throws an error if the constructor arguments are not prime', function () {
+    expect(function () {
+      return new DiffieHellman(10, 13);
     }).toThrow();
   });
 
-  xtest('throws an error if private key is negative', () => {
-    expect(() => {
+  xit('throws an error if private key is negative', function () {
+    expect(function () {
       diffieHellman.getPublicKeyFromPrivateKey(-1);
     }).toThrow();
   });
 
-  xtest('throws an error if private key is zero', () => {
-    expect(() => {
+  xit('throws an error if private key is zero', function () {
+    expect(function () {
       diffieHellman.getPublicKeyFromPrivateKey(0);
     }).toThrow();
   });
 
-  xtest('throws an error if private key is one', () => {
-    expect(() => {
+  xit('throws an error if private key is one', function () {
+    expect(function () {
       diffieHellman.getPublicKeyFromPrivateKey(1);
     }).toThrow();
   });
 
-  xtest('throws an error if private key equals the modulus parameter p', () => {
-    expect(() => {
+  xit('throws an error if private key equals the modulus parameter p', function () {
+    expect(function () {
       diffieHellman.getPublicKeyFromPrivateKey(p);
     }).toThrow();
   });
 
-  xtest('throws an error if private key is greater than the modulus parameter p', () => {
-    expect(() => {
+  xit('throws an error if private key is greater than the modulus parameter p', function () {
+    expect(function () {
       diffieHellman.getPublicKeyFromPrivateKey(p + 1);
     }).toThrow();
   });
 
-  xtest('when given a private key, returns the correct public one', () => {
+  xit('when given a private key, returns the correct public one', function () {
     expect(diffieHellman.getPublicKeyFromPrivateKey(alicePrivateKey)).toEqual(alicePublicKey);
   });
 
-  xtest('when given a different private key, returns the correct public one', () => {
+  xit('when given a different private key, returns the correct public one', function () {
     expect(diffieHellman.getPublicKeyFromPrivateKey(bobPrivateKey)).toEqual(bobPublicKey);
   });
 
-  xtest('can generate a shared secret from our private key and their public key', () => {
-    const sharedSecret = 2;
+  xit('can generate a shared secret from our private key and their public key', function () {
+    var sharedSecret = 2;
 
     expect(diffieHellman.getSharedSecret(alicePrivateKey, bobPublicKey))
       .toEqual(sharedSecret);

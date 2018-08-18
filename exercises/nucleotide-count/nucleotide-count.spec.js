@@ -1,23 +1,42 @@
-import NucleotideCounts from './nucleotide-count';
+var dna = require('./nucleotide-count');
 
-describe('count all nucleotides in a strand', () => {
-  test('empty strand', () => {
-    expect(NucleotideCounts.parse('')).toEqual('0 0 0 0');
+describe('DNA', function () {
+  it('Empty DNA strand has no adenosine', function () {
+    expect(dna().count('A')).toEqual(0);
   });
 
-  xtest('can count one nucleotide in single-character input', () => {
-    expect(NucleotideCounts.parse('G')).toEqual('0 0 1 0');
+  xit('Repetitive cytidine gets counted', function () {
+    expect(dna('CCCCC').count('C')).toEqual(5);
   });
 
-  xtest('strand with repeated nucleotide', () => {
-    expect(NucleotideCounts.parse('GGGGGGG')).toEqual('0 0 7 0');
+  xit('Counts only thymidine', function () {
+    expect(dna('GGGGGTAACCCGG').count('T')).toEqual(1);
   });
 
-  xtest('strand with multiple nucleotides', () => {
-    expect(NucleotideCounts.parse('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')).toEqual('20 12 17 21');
+  xit('Counts a nucleotide only once', function () {
+    var acid = dna('CGATTGGG');
+    acid.count('T');
+    acid.count('T');
+    expect(acid.count('T')).toEqual(2);
   });
 
-  xtest('strand with invalid nucleotides', () => {
-    expect(() => NucleotideCounts.parse('AGXXACT')).toThrow(new Error('Invalid nucleotide in strand'));
+  xit('Empty DNA strand has no nucleotides', function () {
+    var expected = {A: 0, T: 0, C: 0, G: 0};
+    expect(dna().histogram()).toEqual(expected);
+  });
+
+  xit('Repetitive sequence has only guanosine', function () {
+    var expected = {A: 0, T: 0, C: 0, G: 8};
+    expect(dna('GGGGGGGG').histogram()).toEqual(expected);
+  });
+
+  xit('Counts all nucleotides', function () {
+    var strand = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC';
+    var expected = {A: 20, T: 21, C: 12, G: 17};
+    expect(dna(strand).histogram()).toEqual(expected);
+  });
+
+  xit('Validates DNA', function () {
+    expect(dna.bind(null, 'JOHNNYAPPLESEED')).toThrow();
   });
 });

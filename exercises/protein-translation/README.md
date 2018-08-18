@@ -20,11 +20,11 @@ All subsequent codons after are ignored, like this:
 
 RNA: `"AUGUUUUCUUAAAUG"` =>
 
-Codons: `"AUG", "UUU", "UCU", "UAA", "AUG"` =>
+Codons: `"AUG", "UUU", "UCU", "UAG", "AUG"` =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
 
-Note the stop codon `"UAA"` terminates the translation and the final methionine is not translated into the protein sequence.
+Note the stop codon terminates the translation and the final methionine is not translated into the protein sequence.
 
 Below are the codons and resulting Amino Acids needed for the exercise.
 
@@ -43,32 +43,29 @@ Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
-install the necessary dependencies:
+Go through the setup instructions for JavaScript to install the
+ necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+http://exercism.io/languages/javascript/installation
 
-## Requirements
+## Running the test suite
 
-Install assignment dependencies:
+The provided test suite uses [Jasmine](https://jasmine.github.io/).
+You can install it by opening a terminal window and running the
+following command:
 
-```bash
-$ npm install
+```sh
+npm install -g jasmine
 ```
 
-## Making the test suite pass
+Run the test suite from the exercise directory with:
 
-Execute the tests with:
-
-```bash
-$ npm test
+```sh
+jasmine protein-translation.spec.js
 ```
 
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+In many test suites all but the first test have been marked "pending".
+Once you get a test passing, activate the next one by changing `xit` to `it`.
 
 ## Source
 

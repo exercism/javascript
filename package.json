@@ -1,70 +1,35 @@
 {
-  "name": "xecmascript",
-  "version": "0.0.0",
-  "description": "Exercism exercises in ECMAScript 6.",
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Exercism exercises in JavaScript.",
+  "main": "index.js",
+  "repository": "https://github.com/exercism/javascript",
   "author": "Katrina Owen",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/exercism/xecmascript"
-  },
+  "license": "MIT",
   "devDependencies": {
-    "babel-jest": "^21.2.0",
-    "babel-plugin-transform-builtin-extend": "^1.1.2",
-    "babel-preset-env": "^1.4.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^5.0.1",
-    "eslint-plugin-react": "^7.0.1",
-    "jest": "^21.2.1"
-  },
-  "jest": {
-    "modulePathIgnorePatterns": [
-      "package.json"
-    ]
-  },
-  "babel": {
-    "presets": [["env",{"targets":[{"node": "current"}]}]
-    ],
-    "plugins": [
-      [
-        "babel-plugin-transform-builtin-extend",
-        {
-          "globals": [
-            "Error"
-          ]
-        }
-      ],
-      [
-        "transform-regenerator"
-      ]
-    ]
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-airbnb-es5": "^1.2.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jasmine": "^2.9.1",
+    "eslint-plugin-react": "^7.3.0",
+    "jasmine": "^3.1.0"
   },
   "scripts": {
-    "test": "jest --no-cache ./*",
-    "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",
-    "lint-test": "eslint . && jest --no-cache ./* "
+    "lint-fix": "eslint . --fix"
   },
   "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    },
+    "plugins": [
+      "jasmine"
+    ],
     "env": {
-      "es6": true,
-      "node": true,
-      "jest": true
+      "jasmine": true
     },
-    "extends": "airbnb",
+    "extends": "eslint-config-airbnb-es5",
     "rules": {
-      "import/no-unresolved": "off",
-      "import/extensions": "off"
+      "func-names": "off"
     }
-  },
-  "licenses": [
-    "MIT"
-  ],
-  "dependencies": {}
+  }
 }

@@ -1,30 +1,31 @@
-class List {
+function List(list) {
+  this.list = list || [];
 
-  constructor(list = []) {
-    this.list = list;
-  }
-
-  compare(other) {
-    return {
-      '-1': isSublist(other.list, this.list)
-              ? 'SUBLIST'
-              : 'UNEQUAL',
-      '0':  isSublist(other.list, this.list)
-              ? 'EQUAL'
-              : 'UNEQUAL',
-      '1':  isSublist(this.list, other.list)
-              ? 'SUPERLIST'
-              : 'UNEQUAL'
-    }[lengthDiff(this, other)];
-  }
+  return {
+    list: this.list,
+    compare: function (other) {
+      return {
+        '-1': isSublist(other.list, this.list)
+          ? 'SUBLIST'
+          : 'UNEQUAL',
+        '0': isSublist(other.list, this.list)
+          ? 'EQUAL'
+          : 'UNEQUAL',
+        '1': isSublist(this.list, other.list)
+          ? 'SUPERLIST'
+          : 'UNEQUAL'
+      }[lengthDiff(this, other)];
+    }
+  };
 }
 
-function lengthDiff(one, two){
+function lengthDiff(one, two) {
   return String(Math.sign(one.list.length - two.list.length));
 }
 
-function isSublist(one, two){
+function isSublist(one, two) {
   return one.join().match(two.join());
 }
 
-export default List;
+
+module.exports = List;

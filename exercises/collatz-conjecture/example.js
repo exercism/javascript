@@ -1,14 +1,20 @@
-export const steps = (n) => {
-  if (n <= 0) {
+'use strict';
+
+function CollatzConjecture() {}
+
+CollatzConjecture.prototype.steps = function (number) {
+  var count = 0;
+  if (number < 1) {
     throw new Error('Only positive numbers are allowed');
   }
-
-  const iterate = (number, step) => {
-    if (number === 1) {
-      return step;
-    }
-
-    return number % 2 === 0 ? iterate(number / 2, step + 1) : iterate((3 * number) + 1, step + 1);
-  };
-  return iterate(n, 0);
+  getStepsCount(number);
+  function getStepsCount(n) {
+    if (n === 1) return 0;
+    var nextNumber = ( n % 2 === 0 ? n / 2 : 3 * n + 1);
+    count++;
+    return getStepsCount(nextNumber);
+  }
+  return count;
 };
+
+module.exports = CollatzConjecture;

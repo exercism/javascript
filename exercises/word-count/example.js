@@ -1,17 +1,18 @@
-class Words {
+'use strict';
 
-  count(input) {
-    const counts = {};
-    const words = input.match(/\S+/g);
+function Words() {}
 
-    words.forEach((word) => {
-      const lcWord = word.toLowerCase();
-      counts[lcWord] = counts.hasOwnProperty(lcWord) ? counts[lcWord] + 1 : 1;
-    });
+Words.prototype.count = function (input) {
+  var counts = {};
+  var words = input.toLowerCase()
+    .replace(/[,."\/!&@$%\^\*;:{}()¡¿?]/g, ' ')
+    .replace(/\s'(\w+)'\s/, ' ' + '$1' + ' ')
+    .match(/\S+/g);
 
-    return counts;
-  }
+  words.forEach(function (word) {
+    counts[word] = counts.hasOwnProperty(word) ? counts[word] + 1 : 1;
+  });
+  return counts;
+};
 
-}
-
-export default Words;
+module.exports = Words;

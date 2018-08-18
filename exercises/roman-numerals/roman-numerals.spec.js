@@ -1,22 +1,75 @@
-import toRoman from './roman-numerals';
+var toRoman = require('./roman-numerals');
 
-describe('toRoman()', () => {
-  test('converts 1', () => expect(toRoman(1)).toEqual('I'));
-  xtest('converts 2', () => expect(toRoman(2)).toEqual('II'));
-  xtest('converts 3', () => expect(toRoman(3)).toEqual('III'));
-  xtest('converts 4', () => expect(toRoman(4)).toEqual('IV'));
-  xtest('converts 5', () => expect(toRoman(5)).toEqual('V'));
-  xtest('converts 6', () => expect(toRoman(6)).toEqual('VI'));
-  xtest('converts 9', () => expect(toRoman(9)).toEqual('IX'));
-  xtest('converts 27', () => expect(toRoman(27)).toEqual('XXVII'));
-  xtest('converts 48', () => expect(toRoman(48)).toEqual('XLVIII'));
-  xtest('converts 59', () => expect(toRoman(59)).toEqual('LIX'));
-  xtest('converts 93', () => expect(toRoman(93)).toEqual('XCIII'));
-  xtest('converts 141', () => expect(toRoman(141)).toEqual('CXLI'));
-  xtest('converts 163', () => expect(toRoman(163)).toEqual('CLXIII'));
-  xtest('converts 402', () => expect(toRoman(402)).toEqual('CDII'));
-  xtest('converts 575', () => expect(toRoman(575)).toEqual('DLXXV'));
-  xtest('converts 911', () => expect(toRoman(911)).toEqual('CMXI'));
-  xtest('converts 1024', () => expect(toRoman(1024)).toEqual('MXXIV'));
-  xtest('converts 3000', () => expect(toRoman(3000)).toEqual('MMM'));
+describe('toRoman()', function () {
+  it('converts 1', function () {
+    expect(toRoman(1)).toEqual('I');
+  });
+
+  xit('converts 2', function () {
+    expect(toRoman(2)).toEqual('II');
+  });
+
+  xit('converts 3', function () {
+    expect(toRoman(3)).toEqual('III');
+  });
+
+  xit('converts 4', function () {
+    expect(toRoman(4)).toEqual('IV');
+  });
+
+  xit('converts 5', function () {
+    expect(toRoman(5)).toEqual('V');
+  });
+
+  xit('converts 6', function () {
+    expect(toRoman(6)).toEqual('VI');
+  });
+
+  xit('converts 9', function () {
+    expect(toRoman(9)).toEqual('IX');
+  });
+
+  xit('converts 27', function () {
+    expect(toRoman(27)).toEqual('XXVII');
+  });
+
+  xit('converts 48', function () {
+    expect(toRoman(48)).toEqual('XLVIII');
+  });
+
+  xit('converts 59', function () {
+    expect(toRoman(59)).toEqual('LIX');
+  });
+
+  xit('converts 93', function () {
+    expect(toRoman(93)).toEqual('XCIII');
+  });
+
+  xit('converts 141', function () {
+    expect(toRoman(141)).toEqual('CXLI');
+  });
+
+  xit('converts 163', function () {
+    expect(toRoman(163)).toEqual('CLXIII');
+  });
+
+  xit('converts 402', function () {
+    expect(toRoman(402)).toEqual('CDII');
+  });
+
+  xit('converts 575', function () {
+    expect(toRoman(575)).toEqual('DLXXV');
+  });
+
+  xit('converts 911', function () {
+    expect(toRoman(911)).toEqual('CMXI');
+  });
+
+  xit('converts 1024', function () {
+    expect(toRoman(1024)).toEqual('MXXIV');
+  });
+
+  xit('converts 3000', function () {
+    expect(toRoman(3000)).toEqual('MMM');
+  });
 });
