@@ -1,7 +1,7 @@
 {
-  "language": "ECMAScript",
+  "language": "JavaScript",
   "active": true,
-  "blurb": "ECMAScript is the standard that defines JavaScript, a language widely used in web development. It is updated regularly, requiring transpilation for code to be compatible with most browsers.",
+  "blurb": "JavaScript is a scripting language, primarily used for creating dynamic websites and programming web servers. It's a very popular language, and supports a variety of programming paradigms.",
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
     {
