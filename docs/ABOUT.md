@@ -14,4 +14,3 @@ However, support in current browsers is incomplete, and often requires transpila
 
 _Note: This track supports the latest ECMAScript syntax via Babel and the [babel-preset-env](https://babeljs.io/docs/plugins/preset-env/) plugin, and new experimental features will be enabled with each release of the specification. 
 Here, you will find code that not all browsers are able to run. 
-For widely supported JavaScript based on the ES5 standard, you may be interested in the [JavaScript track](http://exercism.io/languages/javascript)._

@@ -21,7 +21,7 @@ Each assignment needs some tools to run the tests:
 * [Babel](https://github.com/babel/babel): to transpile ECMAScript
 2015 code to ECMAScript 5
 * [ESLint](http://eslint.org/) (optional): to perform several static analysis and
-coding style checks to your ECMAScript code.
+coding style checks to your JavaScript code.
 
 They can be installed running this command within each assignment directory:
 

@@ -1,13 +1,12 @@
-# ECMAScript
-[![Build Status](https://travis-ci.org/exercism/ecmascript.svg?branch=master)](https://travis-ci.org/exercism/ecmascript)
-[![Join the chat at https://gitter.im/exercism/xecmascript](https://badges.gitter.im/exercism/xecmascript.svg)](https://gitter.im/exercism/xecmascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# JavaScript
+[![Build Status](https://travis-ci.org/exercism/javascript.svg?branch=master)](https://travis-ci.org/exercism/javascript)
 
-Exercism exercises in ECMAScript 6
+Exercism exercises in JavaScript
 
 
 ## Running the Unit Test Suite
 
-[Node.js](https://nodejs.org) must be installed. Follow these [instructions](http://exercism.io/languages/ecmascript/installation) for installing nodejs.
+[Node.js](https://nodejs.org) must be installed. Follow these [instructions](http://exercism.io/languages/javascript/installation) for installing nodejs.
 We recommend using the latest LTS version.
 
 Use `npm` to install all required dependencies:
@@ -16,7 +15,7 @@ Use `npm` to install all required dependencies:
 
 #### Linting Your Code
 This project uses [eslint](https://github.com/eslint/eslint) to help you write quality
-ECMAScript code by checking for common formatting errors, enforcing style rules,
+JavaScript code by checking for common formatting errors, enforcing style rules,
 and suggesting changes that conform to best practices.
 
     npm run lint-test
@@ -33,4 +32,4 @@ Pass the exercise name to make script to run the tests for a specific exercise:
     make test-assignment ASSIGNMENT=hello-world
     
 ## Contributing Guide
-For an in-depth discussion of how exercism language tracks and exercises work, please see [CONTRIBUTING.md](https://github.com/exercism/ecmascript/blob/master/CONTRIBUTING.md)
+For an in-depth discussion of how exercism language tracks and exercises work, please see [CONTRIBUTING.md](https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md)

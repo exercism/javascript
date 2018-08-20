@@ -6,7 +6,7 @@ $ npm run test
 
 Be sure your code follows best practices and coding styles, as other users do, with
 ESLint, a tool to perform static analysis to your code. Sometimes, tools like this
-save you some time detecting typos or silly mistakes in your ECMAScript code:
+save you some time detecting typos or silly mistakes in your JavaScript code:
 
 ```bash
 $ npm run lint
@@ -40,10 +40,10 @@ test('title cased phrases', () => {
 });
 ```
 
-## Making Your First ECMAScript 2015 Module
+## Making Your First JavaScript 2015 Module
 
-Usually, tests on this track will load your implementation by importing it as an
-ECMAScript 2015 module: `import Bob from './bob.js';`. You just
+Usually, tests on this track will load your implementation by importing it as a
+JavaScript module: `import Bob from './bob.js';`. You just
 need to export your implementation from the referenced file, `bob.js`:
 
 ```javascript
@@ -58,5 +58,5 @@ export default class Bob {
 
 You can find more information about modules in the
 [Babel documentation](https://babeljs.io/docs/learn-es2015/#modules).
-To make it easier to get started, there is a *skeleton* ECMAScript file in the
+To make it easier to get started, there is a *skeleton* JavaScript file in the
 directory for the first exercise.
