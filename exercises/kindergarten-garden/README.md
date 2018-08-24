@@ -64,7 +64,7 @@ While asking for Bob's plants would yield:
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

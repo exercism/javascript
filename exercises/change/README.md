@@ -21,7 +21,7 @@ that the sum of the coins' value would equal the correct amount of change.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

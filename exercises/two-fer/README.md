@@ -17,7 +17,7 @@ If no name is given, the result should be "One for you, one for me."
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

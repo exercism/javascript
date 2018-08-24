@@ -45,7 +45,7 @@ Now, it's even trickier since the check digit of an ISBN-10 may be 'X' (represen
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

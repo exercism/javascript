@@ -46,7 +46,7 @@ Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

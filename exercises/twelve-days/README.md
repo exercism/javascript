@@ -33,7 +33,7 @@ On the twelfth day of Christmas my true love gave to me, twelve Drummers Drummin
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 
