@@ -1,12 +1,12 @@
 {
-  "name": "xecmascript",
+  "name": "exercism-javascript",
   "version": "0.0.0",
-  "description": "Exercism exercises in ECMAScript 6.",
+  "description": "Exercism exercises in Javascript.",
   "author": "Katrina Owen",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/exercism/xecmascript"
+    "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
     "babel-jest": "^21.2.0",
@@ -25,7 +25,17 @@
     ]
   },
   "babel": {
-    "presets": [["env",{"targets":[{"node": "current"}]}]
+    "presets": [
+      [
+        "env",
+        {
+          "targets": [
+            {
+              "node": "current"
+            }
+          ]
+        }
+      ]
     ],
     "plugins": [
       [
