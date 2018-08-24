@@ -27,7 +27,7 @@ a single line. Feel free to add your own code/tests to check for degenerate tria
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

@@ -51,7 +51,7 @@ game while being scored at 4 in the Hawaiian-language version.
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

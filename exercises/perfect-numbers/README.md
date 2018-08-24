@@ -22,7 +22,7 @@ Implement a way to determine whether a given number is **perfect**. Depending on
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

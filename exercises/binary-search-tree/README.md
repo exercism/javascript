@@ -58,7 +58,7 @@ And if we then added 1, 5, and 7, it would look like this
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 

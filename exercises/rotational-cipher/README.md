@@ -35,7 +35,7 @@ Ciphertext is written out in the same formatting as the input including spaces a
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript
+https://exercism.io/tracks/javascript/installation
 
 ## Requirements
 
