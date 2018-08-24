@@ -3,37 +3,67 @@ import Hamming from './hamming';
 describe('Hamming', () => {
   const hamming = new Hamming();
 
-  test('no difference between identical strands', () => {
+  test('no difference between empty strands', () => {
+    expect(hamming.compute('', '')).toEqual(0);
+  });
+
+  xtest('no difference between identical strands', () => {
     expect(hamming.compute('A', 'A')).toEqual(0);
   });
 
-  xtest('complete hamming distance for single nucleotide strand', () => {
+  xtest('long identical strands', () => {
+    expect(hamming.compute('GGACTGA', 'GGACTGA')).toEqual(0);
+  });
+
+  xtest('complete distance in single nucleotide strands', () => {
     expect(hamming.compute('A', 'G')).toEqual(1);
   });
 
-  xtest('complete hamming distance for small strand', () => {
+  xtest('complete distance in small strands', () => {
     expect(hamming.compute('AG', 'CT')).toEqual(2);
   });
 
-  xtest('small hamming distance', () => {
+  xtest('small distance in small strands', () => {
     expect(hamming.compute('AT', 'CT')).toEqual(1);
   });
 
-  xtest('small hamming distance in longer strand', () => {
+  xtest('small distance', () => {
     expect(hamming.compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
-  xtest('large hamming distance', () => {
+  xtest('small distance in long strands', () => {
+    expect(hamming.compute('ACCAGGG', 'ACTATGG')).toEqual(2);
+  });
+
+  xtest('non-unique character in first strand', () => {
+    expect(hamming.compute('AAG', 'AAA')).toEqual(1);
+  });
+
+  xtest('non-unique character in second strand', () => {
+    expect(hamming.compute('AAA', 'AAG')).toEqual(1);
+  });
+
+  xtest('same nucleotides in different positions', () => {
+    expect(hamming.compute('TAG', 'GAT')).toEqual(2);
+  });
+
+  xtest('large distance', () => {
     expect(hamming.compute('GATACA', 'GCATAA')).toEqual(4);
   });
 
-  xtest('hamming distance in very long strand', () => {
+  xtest('large distance in off-by-one strand', () => {
     expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9);
   });
 
-  xtest('throws error when strands are not equal length', () => {
-    expect(() => hamming.compute('GGACGGATTCTG', 'AGGAC')).toThrow(
-      new Error('DNA strands must be of equal length.'),
+  xtest('disallow first strand longer', () => {
+    expect(() => hamming.compute('AATG', 'AAA')).toThrow(
+      new Error('left and right strands must be of equal length'),
+    );
+  });
+
+  xtest('disallow second strand longer', () => {
+    expect(() => hamming.compute('ATA', 'AGTG')).toThrow(
+      new Error('left and right strands must be of equal length'),
     );
   });
 });
