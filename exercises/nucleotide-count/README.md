@@ -1,34 +1,23 @@
 # Nucleotide Count
 
-Given a single stranded DNA string, compute how many times each nucleotide occurs in the string. Also if the
-given input strand contains invalid nucleotides, throw the error "Invalid nucleotide in strand"
+Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
 
-The genetic language of every living thing on the planet is DNA. DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 4 types of nucleotides exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' for thymine.
+The genetic language of every living thing on the planet is DNA.
+DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides.
+4 types exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
 
-## Example 1
-
-Given the strand `ACGT`
-
-The count of "A C G T" is `1 1 1 1`, respectively
-
-## Example 2
-
-Given the strand `GAG`
-
-The count of "A C G T" is `1 0 2 0`, respectively
-
-## Example 3
-
-Given the strand `TX`
-
-As `X` is an invalid nucleotide, it should give the error `Invalid nucleotide in strand`
+Here is an analogy:
+- twigs are to birds nests as
+- nucleotides are to DNA as
+- legos are to lego houses as
+- words are to sentences as...
 
 ## Setup
 
 Go through the setup instructions for ECMAScript to
 install the necessary dependencies:
 
-http://exercism.io/languages/ecmascript/installation
+http://exercism.io/languages/ecmascript
 
 ## Requirements
 
