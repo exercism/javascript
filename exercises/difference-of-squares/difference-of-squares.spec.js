@@ -4,8 +4,8 @@ describe('Squares', () => {
   describe('up to 5', () => {
     const squares = new Squares(5);
 
-    test('gets the square of sums', () => {
-      expect(squares.squareOfSums).toBe(225);
+    test('gets the square of sum', () => {
+      expect(squares.squareOfSum).toBe(225);
     });
 
     xtest('gets the sum of squares', () => {
@@ -20,8 +20,8 @@ describe('Squares', () => {
   describe('up to 10', () => {
     const squares = new Squares(10);
 
-    xtest('gets the square of sums', () => {
-      expect(squares.squareOfSums).toBe(3025);
+    xtest('gets the square of sum', () => {
+      expect(squares.squareOfSum).toBe(3025);
     });
 
     xtest('gets the sum of squares', () => {
@@ -36,8 +36,8 @@ describe('Squares', () => {
   describe('up to 100', () => {
     const squares = new Squares(100);
 
-    xtest('gets the square of sums', () => {
-      expect(squares.squareOfSums).toBe(25502500);
+    xtest('gets the square of sum', () => {
+      expect(squares.squareOfSum).toBe(25502500);
     });
 
     xtest('gets the sum of squares', () => {
