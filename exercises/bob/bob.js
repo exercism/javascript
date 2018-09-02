@@ -4,13 +4,8 @@
 // convenience to get you started writing code faster.
 //
 
-class Bob {
-  hey(message) {
-    //
-    // YOUR CODE GOES HERE
-    //
-  }
+export const hey = message => {
+  //
+  // YOUR CODE GOES HERE
+  //
 }
-
-export default Bob;
-
