@@ -1,4 +1,4 @@
-import Cipher from './simple-cipher';
+import { Cipher } from './simple-cipher';
 
 describe('Random key generation', () => {
   xtest('generates keys at random', () => {
@@ -54,6 +54,24 @@ describe('Incorrect key cipher', () => {
   xtest('throws an error with an empty key', () => {
     expect(() => {
       new Cipher('');
+    }).toThrow(new Error('Bad key'));
+  });
+
+  xtest('throws an error with a leading space', () => {
+    expect(() => {
+      new Cipher(' leadingspace');
+    }).toThrow(new Error('Bad key'));
+  });
+
+  xtest('throws an error with a punctuation mark', () => {
+    expect(() => {
+      new Cipher('hyphened-word');
+    }).toThrow(new Error('Bad key'));
+  });
+
+  xtest('throws an error with a single capital letter', () => {
+    expect(() => {
+      new Cipher('leonardoDavinci');
     }).toThrow(new Error('Bad key'));
   });
 });
