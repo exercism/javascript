@@ -3,16 +3,8 @@ const notAlpha = /[^a-z]+/gi,
 let cleaned,
   sortedSet;
 
-class Pangram {
-
-  constructor(candidate) {
-    cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
-    sortedSet = new Set([...cleaned].sort());
-  }
-
-  isPangram() {
-    return sortedSet.size === alphaLength;
-  }
+export const isPangram = candidate => {
+  cleaned = (candidate.replace(notAlpha, '')).toLowerCase();
+  sortedSet = new Set([...cleaned].sort());
+  return sortedSet.size === alphaLength;
 }
-
-export default Pangram;
