@@ -4,7 +4,7 @@ export default class Squares {
     this.max = max;
   }
 
-  get squareOfSums() {
+  get squareOfSum() {
     let sum = 0;
     for (let x = 1; x <= this.max; x++) {
       sum += x;
@@ -19,7 +19,7 @@ export default class Squares {
     return sum;
   }
   get difference() {
-    return this.squareOfSums - this.sumOfSquares;
+    return this.squareOfSum - this.sumOfSquares;
   }
 
 }
