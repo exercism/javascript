@@ -18,10 +18,10 @@ Note that the list of inputs may vary; your solution should be able to handle li
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
+Go through the setup instructions for Javascript to
 install the necessary dependencies:
 
-https://exercism.io/tracks/javascript/installation
+[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
 ## Requirements
 

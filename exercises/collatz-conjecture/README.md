@@ -28,10 +28,10 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
+Go through the setup instructions for Javascript to
 install the necessary dependencies:
 
-https://exercism.io/tracks/javascript/installation
+[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
 ## Requirements
 

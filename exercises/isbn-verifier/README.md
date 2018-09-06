@@ -42,10 +42,10 @@ Now, it's even trickier since the check digit of an ISBN-10 may be 'X' (represen
 * Generate valid ISBN, maybe even from a given starting ISBN.
 ## Setup
 
-Go through the setup instructions for ECMAScript to
+Go through the setup instructions for Javascript to
 install the necessary dependencies:
 
-https://exercism.io/tracks/javascript/installation
+[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
 ## Requirements
 

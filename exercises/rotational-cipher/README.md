@@ -32,10 +32,10 @@ Ciphertext is written out in the same formatting as the input including spaces a
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
+Go through the setup instructions for Javascript to
 install the necessary dependencies:
 
-https://exercism.io/tracks/javascript/installation
+[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
 ## Requirements
 

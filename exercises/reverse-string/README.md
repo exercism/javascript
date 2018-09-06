@@ -8,10 +8,10 @@ output: "looc"
 
 ## Setup
 
-Go through the setup instructions for ECMAScript to
+Go through the setup instructions for Javascript to
 install the necessary dependencies:
 
-https://exercism.io/tracks/javascript/installation
+[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
 ## Requirements
 
