@@ -9,7 +9,7 @@ const EARTH_TO_OTHER_PLANETS = {
   neptune: 164.79132,
 };
 
-class SpaceAge {
+export class SpaceAge {
 
   constructor(seconds) {
     this.seconds = seconds;
@@ -54,6 +54,3 @@ class SpaceAge {
   }
 
 }
-
-export default SpaceAge;
-
