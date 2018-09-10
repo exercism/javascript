@@ -1,4 +1,4 @@
-import SpaceAge from './space-age';
+import { SpaceAge } from './space-age';
 
 describe('Space Age', () => {
   test('age in seconds', () => {
@@ -53,4 +53,3 @@ describe('Space Age', () => {
     expect(age.onNeptune()).toEqual(1.58);
   });
 });
-
