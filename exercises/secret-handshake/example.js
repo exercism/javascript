@@ -1,24 +1,16 @@
-const HANDSHAKE_COMMANDS = ['wink', 'double blink', 'close your eyes', 'jump', 'REVERSE'];
+const handshakeCommands = ['wink', 'double blink', 'close your eyes', 'jump'];
 
 export const secretHandshake = (handshake) => {
   if (typeof handshake !== 'number') {
     throw new Error('Handshake must be a number');
   }
 
-  const shakeWith = [];
+  const shakeWith = handshakeCommands.filter((_, i) => (
+    handshake & (Math.pow(2, i))
+  ));
 
-  for (let i = 0; i < HANDSHAKE_COMMANDS.length; i++) {
-    const currentCommand = HANDSHAKE_COMMANDS[i];
-    const handshakeHasCommand = handshake & Math.pow(2, i);
-
-    if (handshakeHasCommand) {
-      if (currentCommand === 'REVERSE') {
-        shakeWith.reverse();
-      } else {
-        shakeWith.push(HANDSHAKE_COMMANDS[i]);
-      }
-    }
-  }
+  if (handshake & (Math.pow(2, 4)))
+    shakeWith.reverse();
 
   return shakeWith;
 };
