@@ -12,8 +12,8 @@
     "babel-jest": "^21.2.0",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
     "babel-preset-env": "^1.4.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^21.2.1"
   },
@@ -65,7 +65,7 @@
       "node": true,
       "jest": true
     },
-    "extends": "airbnb",
+    "extends": "airbnb-base",
     "rules": {
       "import/no-unresolved": "off",
       "import/extensions": "off",
