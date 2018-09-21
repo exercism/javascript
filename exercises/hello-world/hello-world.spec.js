@@ -1,9 +1,7 @@
-import HelloWorld from './hello-world';
+import { hello } from './hello-world';
 
 describe('Hello World', () => {
-  const greeter = new HelloWorld();
-
   test('says hello', () => {
-    expect(greeter.hello()).toEqual('Hello, World!');
+    expect(hello()).toEqual('Hello, World!');
   });
 });
