@@ -1,7 +1,1 @@
-class HelloWorld {
-  hello() {
-    return 'Hello, World!';
-  }
-}
-
-export default HelloWorld;
+export const hello = () => 'Hello, World!';

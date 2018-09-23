@@ -36,11 +36,15 @@ test-travis:
 	@for pkg in $(PKG_FILES); do \
   		! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || { echo "$$pkg does not match main package.json.  Please run 'make test' locally and commit the results."; exit 1; }; \
   	done
-	@echo "Preparing tests..."
-	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s copy-assignment || exit 1; done
-	@node_modules/.bin/jest --bail $(OUTDIR)
-	@rm -rf $(OUTDIR)
+	$(MAKE) -s test
 
 test:
 	@echo "Preparing tests..."
-	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) -s copy-assignment || exit 1; node_modules/.bin/jest --bail $(OUTDIR); rm -rf $(OUTDIR); done
+	@for assignment in $(ASSIGNMENTS); do \
+		ASSIGNMENT=$$assignment $(MAKE) -s copy-assignment || exit 1; \
+	done
+	@echo "Checking eslint..."
+	@node_modules/.bin/eslint $(OUTDIR);
+	@echo "Running tests..."
+	@node_modules/.bin/jest --bail $(OUTDIR);
+	rm -rf $(OUTDIR);
