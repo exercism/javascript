@@ -9,6 +9,7 @@
     "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^21.2.0",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
     "babel-preset-env": "^1.4.0",
@@ -56,8 +57,9 @@
     "lint-test": "eslint . && jest --no-cache ./* "
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "parserOptions": {
-      "ecmaVersion": 6,
+      "ecmaVersion": 7,
       "sourceType": "module"
     },
     "env": {
