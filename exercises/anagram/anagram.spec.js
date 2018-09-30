@@ -1,7 +1,6 @@
 import Anagram from './anagram';
 
 describe('Anagram', () => {
-
   test('no matches', () => {
     const subject = new Anagram('diaper');
     const matches = subject.matches(['hello', 'world', 'zombies', 'pants']);
@@ -85,5 +84,4 @@ describe('Anagram', () => {
 
     expect(matches).toEqual([]);
   });
-
 });
