@@ -5,7 +5,7 @@ const isInputValid = (array, base) => {
     return false;
   }
   const val = base - 1;
-  for (let i = 0, n = array.length; i < n; i++) { //eslint-disable-line
+  for (let i = 0, n = array.length; i < n; i++) { // eslint-disable-line no-plusplus
     const tmp = array[i];
     if (tmp > val || tmp < 0) {
       return false;
@@ -25,7 +25,7 @@ const convertFromDecimalToBase = (num, outputBase) => {
 };
 
 export default class Converter {
-  static convert(array, inputBase, outputBase) {
+  convert(array, inputBase, outputBase) { // eslint-disable-line class-methods-use-this
     if (isValidBase(inputBase)) {
       throw new Error('Wrong input base');
     }
