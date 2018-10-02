@@ -1,13 +1,11 @@
-const isValidBase = function (base) {
-  return !base || base < 2 || Math.floor(base) !== base;
-};
+const isValidBase = base => !base || base < 2 || Math.floor(base) !== base;
 
-const isInputValid = function (array, base) {
+const isInputValid = (array, base) => {
   if (!array || !array.length) {
     return false;
   }
   const val = base - 1;
-  for (let i = 0, n = array.length; i < n; i++) {
+  for (let i = 0, n = array.length; i < n; i++) { //eslint-disable-line
     const tmp = array[i];
     if (tmp > val || tmp < 0) {
       return false;
@@ -16,7 +14,7 @@ const isInputValid = function (array, base) {
   return true;
 };
 
-const convertFromDecimalToBase = function (num, outputBase) {
+const convertFromDecimalToBase = (num, outputBase) => {
   let tmp = num;
   const result = [];
   while (tmp) {
@@ -27,7 +25,7 @@ const convertFromDecimalToBase = function (num, outputBase) {
 };
 
 export default class Converter {
-  convert(array, inputBase, outputBase) {
+  static convert(array, inputBase, outputBase) {
     if (isValidBase(inputBase)) {
       throw new Error('Wrong input base');
     }
