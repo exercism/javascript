@@ -1,12 +1,12 @@
-import Zipper  from './zipper';
+import Zipper from './zipper';
 
 // Tests adapted from `problem-specifications/zipper/canonical-data.json` @ v1.0.0
 
 function bt(value, left, right) {
   return {
-    value: value,
-    left: left,
-    right: right
+    value,
+    left,
+    right,
   };
 }
 
@@ -48,7 +48,10 @@ describe('Zipper', () => {
   });
 
   xtest('left, right and up', () => {
-    expect(zipper.left().up().right().up().left().right().value()).toEqual(3);
+    expect(zipper.left().up().right().up()
+      .left()
+      .right()
+      .value()).toEqual(3);
   });
 
   xtest('setValue', () => {
@@ -56,7 +59,8 @@ describe('Zipper', () => {
   });
 
   xtest('setValue after traversing up', () => {
-    expect(zipper.left().right().up().setValue(5).toTree()).toEqual(t2);
+    expect(zipper.left().right().up().setValue(5)
+      .toTree()).toEqual(t2);
   });
 
   xtest('setLeft with leaf', () => {
