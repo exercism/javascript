@@ -1,17 +1,15 @@
 class Words {
-
   count(input) {
-    const counts = {};
-    const words = input.match(/\S+/g);
+    this.counts = {};
+    this.words = input.match(/\S+/g);
 
-    words.forEach((word) => {
+    this.words.forEach((word) => {
       const lcWord = word.toLowerCase();
-      counts[lcWord] = counts.hasOwnProperty(lcWord) ? counts[lcWord] + 1 : 1;
+      this.counts[lcWord] = Object.prototype.hasOwnProperty.call(this.counts, lcWord)
+        ? this.counts[lcWord] + 1 : 1;
     });
-
-    return counts;
+    return this.counts;
   }
-
 }
 
 export default Words;
