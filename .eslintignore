@@ -13,11 +13,9 @@ bracket-push
 change
 circular-buffer
 clock
-collatz-conjecture
 complex-numbers
 connect
 crypto-square
-custom-set
 diamond
 difference-of-squares
 diffie-hellman
@@ -30,7 +28,6 @@ grade-school
 grains
 hamming
 hexadecimal
-house
 isbn-verifier
 isogram
 kindergarten-garden
@@ -43,7 +40,6 @@ matrix
 meetup
 minesweeper
 nth-prime
-nucleotide-count
 ocr-numbers
 octal
 palindrome-products
@@ -54,15 +50,12 @@ phone-number
 pig-latin
 point-mutations
 prime-factors
-protein-translation
 proverb
 pythagorean-triplet
 queen-attack
-raindrops
 rational-numbers
 react
 rectangles
-reverse-string
 rna-transcription
 robot-name
 robot-simulator
@@ -76,7 +69,6 @@ secret-handshake
 series
 sieve
 simple-cipher
-simple-linked-list
 space-age
 spiral-matrix
 strain
@@ -87,7 +79,6 @@ triangle
 trinary
 twelve-days
 two-bucket
-two-fer
 variable-length-quantity
 word-count
 word-search
