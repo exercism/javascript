@@ -7,11 +7,15 @@ describe('TwoBucket', () => {
     const goal = 1;
 
     test('starting with bucket one', () => {
-      const starterBuck = 'one'; // indicates which bucket to fill first
+      // indicates which bucket to fill first
+      const starterBuck = 'one';
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toEqual(4); // includes the first fill
-      expect(twoBucket.goalBucket).toEqual('one'); // which bucket should end up with the desired # of liters
-      expect(twoBucket.otherBucket).toEqual(5); // leftover value in the "other" bucket once the goal has been reached
+      // includes the first fill
+      expect(twoBucket.moves()).toEqual(4);
+      // which bucket should end up with the desired # of liters
+      expect(twoBucket.goalBucket).toEqual('one');
+      // leftover value in the "other" bucket once the goal has been reached
+      expect(twoBucket.otherBucket).toEqual(5);
     });
 
     xtest('starting with bucket two', () => {
