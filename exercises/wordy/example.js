@@ -6,7 +6,6 @@ class ArgumentError extends Error {
   }
 }
 
-
 const re = new RegExp(/(plus|minus|divided by|multiplied by)+/g);
 
 class Wordy {
@@ -19,30 +18,28 @@ class Wordy {
     if (!this.numbers || !this.operands) {
       throw new ArgumentError();
     }
-    let ii = 1;
-    let jj = 0;
     let result = +this.numbers[0];
 
-    while (ii < this.numbers.length + 1) {
-      const op = this.operands[jj++];
-      const b = +this.numbers[ii++] || null;
-      switch (op) {
+    this.operands.forEach((operand, index) => {
+      const nextNumber = +this.numbers[index + 1] || null;
+
+      switch (operand) {
         case 'plus':
-          result += b;
+          result += nextNumber;
           break;
         case 'minus':
-          result -= b;
+          result -= nextNumber;
           break;
         case 'multiplied by':
-          result *= b;
+          result *= nextNumber;
           break;
         case 'divided by':
-          result /= b;
+          result /= nextNumber;
           break;
         default:
           break;
       }
-    }
+    });
     return result;
   }
 }
