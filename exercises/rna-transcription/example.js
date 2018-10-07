@@ -5,7 +5,7 @@ const DNA_TO_RNA = {
   A: 'U',
 };
 
-export const toRna = dna => {
+export const toRna = (dna) => {
   const rna = dna.replace(/./g, nucleotide => DNA_TO_RNA[nucleotide]);
 
   if (rna.length !== dna.length) {
@@ -14,4 +14,4 @@ export const toRna = dna => {
   } else {
     return rna;
   }
-}
+};
