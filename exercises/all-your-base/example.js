@@ -5,7 +5,7 @@ const isInputValid = (array, base) => {
     return false;
   }
   const val = base - 1;
-  for (let i = 0, n = array.length; i < n; i++) { // eslint-disable-line no-plusplus
+  for (let i = 0, n = array.length; i < n; i += 1) {
     const tmp = array[i];
     if (tmp > val || tmp < 0) {
       return false;
@@ -24,8 +24,10 @@ const convertFromDecimalToBase = (num, outputBase) => {
   return result;
 };
 
-export default class Converter {
-  convert(array, inputBase, outputBase) { // eslint-disable-line class-methods-use-this
+const Converter = () => {};
+
+Converter.prototype = {
+  convert: (array, inputBase, outputBase) => {
     if (isValidBase(inputBase)) {
       throw new Error('Wrong input base');
     }
@@ -47,5 +49,7 @@ export default class Converter {
     const decimalValue = array
       .reduce((accumulator, value) => accumulator * inputBase + value, 0);
     return convertFromDecimalToBase(decimalValue, outputBase);
-  }
-}
+  },
+};
+
+export default Converter;
