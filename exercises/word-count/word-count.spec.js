@@ -14,12 +14,16 @@ describe('words()', () => {
   });
 
   xtest('counts multiple occurrences', () => {
-    const expectedCounts = { one: 1, fish: 4, two: 1, red: 1, blue: 1 };
+    const expectedCounts = {
+      one: 1, fish: 4, two: 1, red: 1, blue: 1,
+    };
     expect(words.count('one fish two fish red fish blue fish')).toEqual(expectedCounts);
   });
 
   xtest('includes punctuation', () => {
-    const expectedCounts = { car: 1, ':': 2, carpet: 1, as: 1, java: 1, 'javascript!!&@$%^&': 1 };
+    const expectedCounts = {
+      car: 1, ':': 2, carpet: 1, as: 1, java: 1, 'javascript!!&@$%^&': 1,
+    };
     expect(words.count('car : carpet as java : javascript!!&@$%^&')).toEqual(expectedCounts);
   });
 
@@ -34,7 +38,9 @@ describe('words()', () => {
   });
 
   xtest('counts properly international characters', () => {
-    const expectedCounts = { '¡hola!': 1, '¿qué': 1, 'tal?': 1, 'привет!': 1 };
+    const expectedCounts = {
+      '¡hola!': 1, '¿qué': 1, 'tal?': 1, 'привет!': 1,
+    };
     expect(words.count('¡Hola! ¿Qué tal? Привет!')).toEqual(expectedCounts);
   });
 
@@ -59,7 +65,9 @@ describe('words()', () => {
   });
 
   xtest('handles properties that exist on Object’s prototype', () => {
-    const expectedCounts = { reserved: 1, words: 1, like: 1, constructor: 1, and: 1, tostring: 1, 'ok?': 1 };
+    const expectedCounts = {
+      reserved: 1, words: 1, like: 1, constructor: 1, and: 1, tostring: 1, 'ok?': 1,
+    };
     expect(words.count('reserved words like constructor and toString ok?')).toEqual(expectedCounts);
   });
 });
