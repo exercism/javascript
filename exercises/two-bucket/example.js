@@ -7,13 +7,16 @@ class TwoBucket {
   }
 
   reachedGoal(measurements) {
-    if (measurements[0] === this.z || measurements[1] === this.z) {
-      if (measurements[0] === this.z) {
+    const j = measurements[0];
+    const k = measurements[1];
+
+    if (j === this.z || k === this.z) {
+      if (j === this.z) {
         this.goalBucket = 'one';
-        this.otherBucket = measurements[1];
+        this.otherBucket = k;
       } else {
         this.goalBucket = 'two';
-        this.otherBucket = measurements[0];
+        this.otherBucket = j;
       }
 
       return true;
@@ -23,65 +26,90 @@ class TwoBucket {
   }
 
   bigFirst(measurements, moveCount, prBool) {
-    let j = measurements[0],
-      k = measurements[1];
-    while (!this.reachedGoal(measurements)) {
-      if (k > this.x && j === 0 && moveCount === 0) {
+    let measure = measurements;
+    let mvCount = moveCount;
+    let j = measure[0];
+    let k = measure[1];
+    let bool = prBool;
+
+    while (!this.reachedGoal(measure)) {
+      if (k > this.x && j === 0 && mvCount === 0) {
         j = this.x;
         k = this.y - j;
-      } else if (j == this.x) {
+      } else if (j === this.x) {
         j = 0;
-      } else if (k > this.x && j !== 0 || k > this.x && prBool) {
+      } else if (k > this.x && (j !== 0 || k > this.x) && bool) {
         k -= (this.x - j);
         j = this.x;
-      } else if (k > this.x || j == 0) {
+      } else if (k > this.x || j === 0) {
         j = k;
         k -= j;
-      } else if (k == 0) {
+      } else if (k === 0) {
         k = this.y;
       }
-      measurements = [j, k];
-      moveCount++;
-      prBool = !prBool;
+      measure = [j, k];
+      mvCount += 1;
+      bool = !bool;
     }
 
-    return moveCount;
+    return mvCount;
   }
 
   smallFirst(measurements, moveCount, prBool) {
-    let j = measurements[0],
-      k = measurements[1];
-    while (!this.reachedGoal(measurements)) {
-      if (j === this.x && moveCount === 0) {
+    let measure = measurements;
+    let mvCount = moveCount;
+    let j = measure[0];
+    let k = measure[1];
+    let bool = prBool;
+
+    while (!this.reachedGoal(measure)) {
+      if (j === this.x && mvCount === 0) {
         j = 0;
         k = this.x;
-      } else if (j == 0) {
+      } else if (j === 0) {
         j = this.x;
-      } else if (j == this.x && k < this.y) {
+      } else if (j === this.x && k < this.y) {
         const tempK = k;
-        k + j > this.y ? k = this.y : k = tempK + j;
-        tempK + j > this.y ? j -= (this.y - tempK) : j = 0;
+        if (k + j > this.y) {
+          k = this.y;
+        } else {
+          k = tempK + j;
+        }
+
+        if (tempK + j > this.y) {
+          j -= this.y - tempK;
+        } else {
+          j = 0;
+        }
       } else if (k === this.y) {
         k = 0;
       } else if (k === 0 && j < this.x) {
         k = j;
         j = 0;
       }
-      measurements = [j, k];
-      moveCount++;
-      prBool = !prBool;
+      measure = [j, k];
+      mvCount += 1;
+      bool = !bool;
     }
 
-    return moveCount;
+    return mvCount;
   }
 
   moves() {
-    let j = 0,
-      k = 0; // j will be running val of bucket one, k = running val of bucket two
-    this.starter === 'one' ? j = this.x : k = this.y;
+    let j = 0;
+    // j will be running val of bucket one, k = running val of bucket two
+    let k = 0;
+
+    if (this.starter === 'one') {
+      j = this.x;
+    } else {
+      k = this.y;
+    }
+
     const measurements = [j, k];
     let moveCount = 0;
-    const prBool = true; // pour / receive boolean - need to pour or receive every other turn
+    // pour / receive boolean - need to pour or receive every other turn
+    const prBool = true;
 
     if (this.starter === 'one') {
       moveCount = this.smallFirst(measurements, moveCount, prBool);
@@ -89,10 +117,9 @@ class TwoBucket {
       moveCount = this.bigFirst(measurements, moveCount, prBool);
     }
 
-    return moveCount + 1; // accounts for first move made before loop (and moveCount starts at zero before loop)
+    // accounts for first move made before loop (and moveCount starts at zero before loop)
+    return moveCount + 1;
   }
-
 }
 
 export default TwoBucket;
-
