@@ -48,27 +48,25 @@ function diagonalFind(r, c, word, grid, rIncrement, outOfRange, buildCoords) {
   let foundLetters = '';
   const startR = r + 1;
   const startC = c + 1;
-
-  for (const letter of word) {
-    if (outOfRange(currentRow,
+  let result;
+  word.split('').forEach((letter) => {
+    if (!outOfRange(currentRow,
       currentColumn,
       word.length,
       grid[currentRow].length,
       foundLetters.length)) {
-      return undefined;
+      const currLetterInGrid = grid[currentRow].charAt(currentColumn);
+      currentColumn += 1;
+      if (currLetterInGrid === letter) {
+        foundLetters += currLetterInGrid;
+        if (foundLetters === word) {
+          result = buildCoords(startR, startC, currentRow, currentColumn);
+        }
+        currentRow += rIncrement;
+      }
     }
-    const currLetterInGrid = grid[currentRow].charAt(currentColumn);
-    currentColumn += 1;
-    if (currLetterInGrid !== letter) {
-      return undefined;
-    }
-    foundLetters += currLetterInGrid;
-    if (foundLetters === word) {
-      return buildCoords(startR, startC, currentRow, currentColumn);
-    }
-    currentRow += rIncrement;
-  }
-  return undefined;
+  });
+  return result;
 }
 
 function findAWordDiagonallyTopDown(r, c, word, grid) {
