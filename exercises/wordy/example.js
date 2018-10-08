@@ -6,11 +6,9 @@ class ArgumentError extends Error {
   }
 }
 
-
 const re = new RegExp(/(plus|minus|divided by|multiplied by)+/g);
 
 class Wordy {
-
   constructor(question) {
     this.numbers = question.match(/[-]{0,1}\d+/g);
     this.operands = question.match(re);
@@ -20,38 +18,30 @@ class Wordy {
     if (!this.numbers || !this.operands) {
       throw new ArgumentError();
     }
-    let ii = 1,
-      jj = 0,
-      result = +this.numbers[0];
+    let result = +this.numbers[0];
 
-    while (ii < this.numbers.length + 1) {
-      const op = this.operands[jj++],
-        b = +this.numbers[ii++] || null;
-      switch (op) {
-        case 'plus' :
-          result += b;
+    this.operands.forEach((operand, index) => {
+      const nextNumber = +this.numbers[index + 1] || null;
+
+      switch (operand) {
+        case 'plus':
+          result += nextNumber;
           break;
-        case 'minus' :
-          result -= b;
+        case 'minus':
+          result -= nextNumber;
           break;
-        case 'multiplied by' :
-          result *= b;
+        case 'multiplied by':
+          result *= nextNumber;
           break;
-        case 'divided by' :
-          result /= b;
+        case 'divided by':
+          result /= nextNumber;
+          break;
+        default:
           break;
       }
-    }
+    });
     return result;
   }
 }
-
-String.prototype.combine = function(x){
-  return x;
-}
-
-let f = new String('abc');
-let g = f.combine('xyz');
-
 
 export { Wordy as WordProblem, ArgumentError };
