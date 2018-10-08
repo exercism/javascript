@@ -1,23 +1,4 @@
-class WordSearch {
-  constructor(grid) {
-    this.grid = grid;
-  }
-
-  find(words) {
-    return words
-      .map(word => ({[word]: findWordInAnyDirection(word, this.grid)}))
-      .reduce((acc, oneWord) => Object.assign(acc, oneWord), {});
-  }
-}
-
-function findWordInAnyDirection(word, grid) {
-  return searchHorizontally({word, grid})
-    || flipCoordinates(searchHorizontally({word, grid: flipGrid(grid)}))
-    || searchDiagonally({word, grid})
-    || searchDiagonally({word, grid, fromTop: false});
-}
-
-function searchHorizontally({word, grid}) {
+function searchHorizontally({ word, grid }) {
   let rowIndex = 0;
   let startCol;
   let start;
@@ -25,7 +6,7 @@ function searchHorizontally({word, grid}) {
 
   const getCoords = () => [[rowIndex + 1, startCol], [rowIndex + 1, startCol + word.length - 1]];
 
-  const getStartCol = (word) => 1 + grid[rowIndex].indexOf(word);
+  const getStartCol = currentWord => 1 + grid[rowIndex].indexOf(currentWord);
 
   while (rowIndex < grid.length) {
     startCol = getStartCol(word);
@@ -38,10 +19,11 @@ function searchHorizontally({word, grid}) {
       }
     }
     if (start && end) {
-      return {start, end};
+      return { start, end };
     }
-    rowIndex++;
+    rowIndex += 1;
   }
+  return false;
 }
 
 function flipCoordinates(coords) {
@@ -50,25 +32,99 @@ function flipCoordinates(coords) {
   }
   return {
     start: coords.start.reverse(),
-    end:   coords.end.reverse()
+    end: coords.end.reverse(),
   };
 }
 
 function flipGrid(grid) {
   return [...grid[0]]
     .map((col, c) => grid.map((row, r) => grid[r][c]))
-    .map(row => row.join(''))
+    .map(row => row.join(''));
 }
 
-function searchDiagonally({word, grid, isReversed = false, fromTop = true}) {
-  let rIncrement = fromTop ? 1 : -1;
-  let startRow = fromTop ? 0 : grid.length - 1;
-  let endRow = fromTop ? (r) => r < grid.length : (r) => r > 0;
-  let diagonalFind = fromTop ? findAWordDiagonallyTopDown : findAWordDiagonallyBottomUp;
+function diagonalFind(r, c, word, grid, rIncrement, outOfRange, buildCoords) {
+  let currentRow = r;
+  let currentColumn = c;
+  let foundLetters = '';
+  const startR = r + 1;
+  const startC = c + 1;
+
+  for (const letter of word) {
+    if (outOfRange(currentRow,
+      currentColumn,
+      word.length,
+      grid[currentRow].length,
+      foundLetters.length)) {
+      return undefined;
+    }
+    const currLetterInGrid = grid[currentRow].charAt(currentColumn);
+    currentColumn += 1;
+    if (currLetterInGrid !== letter) {
+      return undefined;
+    }
+    foundLetters += currLetterInGrid;
+    if (foundLetters === word) {
+      return buildCoords(startR, startC, currentRow, currentColumn);
+    }
+    currentRow += rIncrement;
+  }
+  return undefined;
+}
+
+function findAWordDiagonallyTopDown(r, c, word, grid) {
+  function outOfRange(row, column, words, columns, letters) {
+    return row > columns - words + letters || column > columns - words + letters;
+  }
+
+  function buildCoords(startR, startC, row, column) {
+    return {
+      start: [startR, startC],
+      end: [row + 1, column],
+    };
+  }
+
+  return diagonalFind(r, c, word, grid, 1, outOfRange, buildCoords);
+}
+
+function findAWordDiagonallyBottomUp(r, c, word, grid) {
+  function outOfRange(row, column, words, columns, letters) {
+    return row < words - letters - 1 || column > columns - words + letters;
+  }
+
+  function buildCoords(startR, startC, row, column) {
+    return {
+      start: [startR, startC],
+      end: [row + 1, column],
+    };
+  }
+
+  return diagonalFind(r, c, word, grid, -1, outOfRange, buildCoords);
+}
+
+function formatCoordinates(coords, isReversed) {
+  return {
+    true: {
+      start: coords.end,
+      end: coords.start,
+    },
+    false: coords,
+  }[isReversed];
+}
+
+function searchDiagonally({
+  word,
+  grid,
+  isReversed = false,
+  fromTop = true,
+}) {
+  const rIncrement = fromTop ? 1 : -1;
+  const startRow = fromTop ? 0 : grid.length - 1;
+  const endRow = fromTop ? r => r < grid.length : r => r > 0;
+  const findDirection = fromTop ? findAWordDiagonallyTopDown : findAWordDiagonallyBottomUp;
 
   for (let r = startRow; (endRow)(r); r += rIncrement) {
-    for (let c = 0; c < grid[r].length; c++) {
-      const possibleCoords = diagonalFind(r, c, word, grid);
+    for (let c = 0; c < grid[r].length; c += 1) {
+      const possibleCoords = findDirection(r, c, word, grid);
       if (possibleCoords) {
         return formatCoordinates(possibleCoords, isReversed);
       }
@@ -76,71 +132,35 @@ function searchDiagonally({word, grid, isReversed = false, fromTop = true}) {
   }
 
   if (!isReversed) {
-    //now find the reversed version
+    // now find the reversed version
     const reversedWord = [...word].reverse().join('');
-    return searchDiagonally({word: reversedWord, grid, isReversed: true, fromTop});
+    return searchDiagonally({
+      word: reversedWord,
+      grid,
+      isReversed: true,
+      fromTop,
+    });
   }
+  return undefined;
 }
 
-function formatCoordinates(coords, isReversed) {
-  return {
-    true:  {
-      start: coords.end,
-      end:   coords.start
-    },
-    false: coords
-  }[isReversed];
+function findWordInAnyDirection(word, grid) {
+  return searchHorizontally({ word, grid })
+    || flipCoordinates(searchHorizontally({ word, grid: flipGrid(grid) }))
+    || searchDiagonally({ word, grid })
+    || searchDiagonally({ word, grid, fromTop: false });
 }
 
-function findAWordDiagonallyTopDown(r, c, word, grid) {
-  function outOfRange(r, c, words, columns, letters) {
-    return r > columns - words + letters || c > columns - words + letters;
+class WordSearch {
+  constructor(grid) {
+    this.grid = grid;
   }
 
-  function buildCoords(startR, startC, r, c) {
-    return {
-      start: [startR, startC],
-      end:   [r + 1, c]
-    }
-  }
-
-  return diagonalFind(r, c, word, grid, 1, outOfRange, buildCoords);
-}
-
-function findAWordDiagonallyBottomUp(r, c, word, grid) {
-  function outOfRange(r, c, words, columns, letters) {
-    return r < words - letters - 1 || c > columns - words + letters;
-  }
-
-  function buildCoords(startR, startC, r, c) {
-    return {
-      start: [startR, startC],
-      end:   [r + 1, c]
-    };
-  }
-
-  return diagonalFind(r, c, word, grid, -1, outOfRange, buildCoords);
-}
-
-function diagonalFind(r, c, word, grid, rIncrement, outOfRange, buildCoords) {
-  let foundLetters = "";
-  let startR = r + 1;
-  let startC = c + 1;
-  for (let letter of word) {
-    if (outOfRange(r, c, word.length, grid[r].length, foundLetters.length)) {
-      return undefined;
-    }
-    let foundLetter = grid[r].charAt(c++);
-    if (foundLetter !== letter) {
-      return undefined;
-    }
-    foundLetters += foundLetter;
-    if (foundLetters === word) {
-      return buildCoords(startR, startC, r, c);
-    }
-    r += rIncrement;
+  find(words) {
+    return words
+      .map(word => ({ [word]: findWordInAnyDirection(word, this.grid) }))
+      .reduce((acc, oneWord) => Object.assign(acc, oneWord), {});
   }
 }
-
 
 module.exports = WordSearch;
