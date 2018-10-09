@@ -33,6 +33,20 @@ describe('Queens', () => {
     expect(queens.toString()).toEqual(board);
   });
 
+  xtest('toString representation edge case', () => {
+    const positioning = { white: [7, 7], black: [0, 0] };
+    const queens = new Queens(positioning);
+    const board = ['B _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ _',
+      '_ _ _ _ _ _ _ W\n'].join('\n');
+    expect(queens.toString()).toEqual(board);
+  });
+
   xtest('queens cannot attack', () => {
     const queens = new Queens({ white: [2, 3], black: [4, 7] });
     expect(queens.canAttack()).toEqual(false);
