@@ -10,7 +10,7 @@ class Triangle {
 
   fillRows(rows) {
     const result = [[1]];
-    for (let x = 1; x < rows; x++) {
+    for (let x = 1; x < rows; x += 1) {
       const newRow = [1];
       result[x - 1].forEach(this.sumElements, newRow);
       result.push(newRow);
@@ -20,4 +20,3 @@ class Triangle {
 }
 
 export default Triangle;
-
