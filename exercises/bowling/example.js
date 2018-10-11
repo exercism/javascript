@@ -1,67 +1,137 @@
 export default class Bowling {
-  constructor(rolls) {
-    this.rolls = rolls;
+  constructor() {
+    this.maxPins = 10;
+    this.maxFrames = 10;
+    this.currentFrame = 0;
+
+    this.frames = [];
+    this.frameScores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    this.initializeFrame();
+  }
+
+  initializeFrame() {
+    this.frameRoll = 1;
+    this.remainingPins = this.maxPins;
+    this.currentFrame = this.currentFrame + 1;
+  }
+
+  incrementFrame() {
+    this.frameRoll = this.frameRoll + 1;
+  }
+
+  incrementScore(pins) {
+    if (this.currentFrame > this.maxFrames) return;
+    this.frameScores[this.currentFrame - 1] += pins;
+  }
+
+  scoreStrike() {
+    this.frames[this.currentFrame - 1] = 'X';
+    this.applyStrikeBonus(this.maxPins);
+    this.applySpareBonus(this.maxPins);
+    this.incrementFrame();
+  }
+
+  scoreFirstRoll(pins) {
+    this.remainingPins = this.remainingPins - pins;
+    this.applySpareBonus(pins);
+    this.applyStrikeBonus(pins);
+    this.incrementFrame();
+  }
+
+  scoreSpare(pins) {
+    this.frames[this.currentFrame - 1] = 'S';
+    this.applyStrikeBonus(pins);
+    this.incrementFrame();
+  }
+
+  scoreOpenFrame(pins) {
+    this.frames[this.currentFrame - 1] = (this.maxPins - this.remainingPins) + pins;
+    this.applyStrikeBonus(pins);
+    this.incrementFrame();
+  }
+
+  applySpareBonus(pins) {
+    // pins on the first roll after a spare are counted twice (on the frame of spare)
+    if (this.frames[this.currentFrame - 2] === 'S') {
+      this.frameScores[this.currentFrame - 2] += pins;
+    }
+  }
+
+  applyStrikeBonus(pins) {
+    // on the two rolls after a strike are counted twice (on the frame of the strike)
+    if (this.frames[this.currentFrame - 3] === 'X'
+      && this.frames[this.currentFrame - 2] === 'X'
+      && this.frameRoll === 1 && this.currentFrame <= (this.maxFrames + 2)) {
+      this.frameScores[this.currentFrame - 3] += pins;
+    }
+    if (this.frames[this.currentFrame - 2] === 'X' && this.currentFrame <= (this.maxFrames + 1)) {
+      this.frameScores[this.currentFrame - 2] += pins;
+    }
+  }
+
+  isGameOver() {
+    if (this.currentFrame <= this.maxFrames) return false;
+
+    if (this.frames[this.maxFrames - 1] !== 'X' && this.frames[this.maxFrames - 1] !== 'S') return true;
+
+    // spare in the last frame gets no more than bonus roll
+    if (this.frames[this.maxFrames - 1] === 'S' && this.frameRoll > 1) return true;
+
+    // bonus roll after the spare in the last frame may get a strike but then the games ends
+    // without another roll
+    if (this.frames[this.maxFrames - 1] === 'S' && this.frames[this.maxFrames] === 'X') return true;
+
+    if (this.frames[this.maxFrames - 1] === 'X') {
+      // if the first bonus roll is not a strike then finish the bonus frame
+      if (this.frames[this.maxFrames] !== 'X' && this.currentFrame > this.maxFrames + 1) return true;
+
+      if (this.frames[this.maxFrames] === 'X') {
+        // if the second bonus roll is a strike, but was still used, the game is over
+        if (this.frames[this.maxFrames + 1] !== 'X' && this.frameRoll > 1) return true;
+        // if the second bonus roll is a strike the game is over
+        if (this.frames[this.maxFrames + 1] === 'X') return true;
+      }
+    }
+    return false;
+  }
+
+  roll(pins) {
+    if (pins < 0) {
+      throw new Error('Negative roll is invalid');
+    }
+
+    if (pins > this.remainingPins) {
+      throw new Error('Pin count exceeds pins on the lane');
+    }
+
+    if (this.isGameOver()) {
+      throw new Error('Cannot roll after game is over');
+    }
+
+    this.incrementScore(pins);
+
+    if (this.frameRoll === 1) {
+      if (pins === this.maxPins) {
+        this.scoreStrike();
+        this.initializeFrame();
+      } else {
+        this.scoreFirstRoll(pins);
+      }
+    } else {
+      if (pins === this.remainingPins) {
+        this.scoreSpare(pins);
+      } else {
+        this.scoreOpenFrame(pins);
+      }
+      this.initializeFrame();
+    }
   }
 
   score() {
-    const initialState = {
-      frameNumber: 1,
-      rollNumber: 1,
-      pinsRemaining: 10,
-      spareLastFrame: false,
-      strikeLastFrame: false,
-      twoStrikesInARow: false,
-      fillBall: false,
-      score: 0,
-    };
-
-    const finalState = this.rolls.reduce((state, roll) => {
-      if (roll < 0 || roll > 10) {
-        throw new Error('Pins must have a value from 0 to 10');
-      }
-
-      if (roll > state.pinsRemaining) {
-        throw new Error('Pin count exceeds pins on the lane');
-      }
-
-      if (state.frameNumber > 10) {
-        throw new Error('Should not be able to roll after game is over');
-      }
-
-      const finalFrame = state.frameNumber === 10;
-      const strike = state.rollNumber === 1 && roll === 10;
-      const spare = state.rollNumber === 2 && roll === state.pinsRemaining;
-      const frameOver = finalFrame
-        ? (!state.fillBall && !spare && state.rollNumber === 2) || state.rollNumber === 3
-        : strike || spare || state.rollNumber === 2;
-
-      let score = state.score + roll;
-
-      if (state.strikeLastFrame && state.rollNumber < 3) { score += roll; }
-      if (state.spareLastFrame && state.rollNumber === 1) { score += roll; }
-      if (state.twoStrikesInARow && state.rollNumber === 1) { score += roll; }
-
-      const next = {};
-
-      next.frameNumber = frameOver ? state.frameNumber + 1 : state.frameNumber;
-      next.rollNumber = frameOver ? 1 : state.rollNumber + 1;
-      next.pinsRemaining = finalFrame
-        ? ((strike || spare) ? 10 : state.pinsRemaining - roll)
-        : (frameOver ? 10 : state.pinsRemaining - roll);
-      next.spareLastFrame = frameOver ? spare : state.spareLastFrame;
-      next.strikeLastFrame = frameOver ? strike : state.strikeLastFrame;
-      next.twoStrikesInARow = frameOver ? strike && state.strikeLastFrame : state.twoStrikesInARow;
-      next.fillBall = next.fillBall || (finalFrame && (strike || spare));
-      next.score = score;
-
-      return next;
-    }, initialState);
-
-    if (finalState.frameNumber !== 11) {
+    if (!this.isGameOver()) {
       throw new Error('Score cannot be taken until the end of the game');
     }
-
-    return finalState.score;
+    return this.frameScores.reduce((total, num) => (total + num));
   }
 }
-
