@@ -41,43 +41,43 @@ describe('Random key cipher', () => {
 describe('Incorrect key cipher', () => {
   xtest('throws an error with an all caps key', () => {
     expect(() => {
-      new Cipher('ABCDEF');
+      new Cipher('ABCDEF'); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with a mixed-case key', () => {
     expect(() => {
-      new Cipher('ABcdEF');
+      new Cipher('ABcdEF'); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with a numeric key', () => {
     expect(() => {
-      new Cipher('12345');
+      new Cipher('12345'); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with an empty key', () => {
     expect(() => {
-      new Cipher('');
+      new Cipher(''); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with a leading space', () => {
     expect(() => {
-      new Cipher(' leadingspace');
+      new Cipher(' leadingspace'); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with a punctuation mark', () => {
     expect(() => {
-      new Cipher('hyphened-word');
+      new Cipher('hyphened-word'); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 
   xtest('throws an error with a single capital letter', () => {
     expect(() => {
-      new Cipher('leonardoDavinci');
+      new Cipher('leonardoDavinci'); // eslint-disable-line no-new
     }).toThrow(new Error('Bad key'));
   });
 });
@@ -115,7 +115,7 @@ describe('Substitution cipher', () => {
     expect(cipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz');
   });
 
-  xtest('can handle messages longer than the key', function() {
+  xtest('can handle messages longer than the key', () => {
     expect(new Cipher('abc').encode('iamapandabear'))
       .toEqual('iboaqcnecbfcr');
   });

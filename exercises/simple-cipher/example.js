@@ -6,20 +6,18 @@ function generateKey() {
     .join('');
 }
 
+const mod = (n, m) => ((n % m) + m) % m;
+
 function xCode(key, inText, sign) {
   return [...inText]
     .reduce((outText, letter, ii) => {
       const offset = sign * ALPHA.indexOf(key[mod(ii, key.length)]);
-      outText += ALPHA[mod(ALPHA.indexOf(letter) + offset, ALPHA.length)];
-      return outText;
+      return outText + ALPHA[mod(ALPHA.indexOf(letter) + offset, ALPHA.length)];
     }, '');
 }
 
-const mod = (n, m) => (n % m + m) % m;
-
 export class Cipher {
-
-  constructor (key) {
+  constructor(key) {
     if (typeof key === 'undefined') {
       this.key = generateKey();
     } else if (key.length === 0 || key.match(/[^a-z]/, 'g')) {
