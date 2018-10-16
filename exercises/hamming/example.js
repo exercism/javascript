@@ -5,8 +5,5 @@ export const compute = (strand1, strand2) => {
     throw new Error('left and right strands must be of equal length');
   }
 
-  return [...strand1].reduce(
-    (distance, _, i) => (strand1[i] !== strand2[i] ? distance + 1 : distance),
-    0,
-  );
+  return [...strand1].filter((element, index) => element !== strand2[index]).length;
 };
