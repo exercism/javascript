@@ -2,7 +2,7 @@ const isSilence = message => message.replace(/\s+/g, '') === '';
 const isShouting = message => message.toUpperCase() === message && /[A-Z]/.test(message);
 const isAQuestion = message => message[message.length - 1] === '?';
 
-export const hey = message => {
+export const hey = (message) => {
   if (isSilence(message)) {
     return 'Fine. Be that way!';
   }
@@ -16,4 +16,4 @@ export const hey = message => {
     return 'Sure.';
   }
   return 'Whatever.';
-}
+};

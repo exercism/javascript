@@ -1,7 +1,6 @@
 import { hey } from './bob';
 
 describe('Bob', () => {
-
   test('stating something', () => {
     const result = hey('Tom-ay-to, tom-aaaah-to.');
     expect(result).toEqual('Whatever.');
@@ -43,7 +42,7 @@ describe('Bob', () => {
   });
 
   xtest('forceful question', () => {
-    const result = hey("WHAT THE HELL WERE YOU THINKING?");
+    const result = hey('WHAT THE HELL WERE YOU THINKING?');
     expect(result).toEqual('Calm down, I know what I\'m doing!');
   });
 
