@@ -4,8 +4,8 @@
 // convenience to get you started writing code faster.
 //
 
-export const hey = message => {
+export const hey = (message) => {
   //
   // YOUR CODE GOES HERE
   //
-}
+};
