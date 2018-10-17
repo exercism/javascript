@@ -1,7 +1,7 @@
 import PigLatin from './pig-latin';
 
 describe('Pig Latin', () => {
-  const translator = new PigLatin();
+  const translator = PigLatin;
 
   test('translates a word beginning with a', () => {
     expect(translator.translate('apple')).toEqual('appleay');

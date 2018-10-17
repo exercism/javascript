@@ -9,13 +9,13 @@ function translateWord(word) {
   return `${ending + beginning}ay`;
 }
 
-class PigLatin {
+const PigLatin = {
   translate(english) {
     return english
       .split(' ')
       .map(translateWord)
       .join(' ');
-  }
-}
+  },
+};
 
 export default PigLatin;
