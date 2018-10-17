@@ -36,7 +36,7 @@ class ComputeCell {
   }
 
   update() {
-    let value = this.fn(this.inputCells);
+    const value = this.fn(this.inputCells);
     if (value !== this.value) {
       this.value = value;
       this.updated = true;
@@ -98,4 +98,4 @@ class CallbackCell {
 }
 
 
-export {InputCell, ComputeCell, CallbackCell}
+export { InputCell, ComputeCell, CallbackCell };

@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import DiffieHellman from './diffie-hellman';
 
 describe('diffie-hellman', () => {

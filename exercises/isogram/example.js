@@ -1,5 +1,4 @@
 export default class Isogram {
-
   constructor(string) {
     this.string = string.replace(/ |-/g, '');
   }

@@ -1,7 +1,6 @@
-import {InputCell, ComputeCell, CallbackCell} from './react';
+import { InputCell, ComputeCell, CallbackCell } from './react';
 
 describe('React module', () => {
-
   test('accepts input', () => {
     const inputCell = new InputCell(10);
     expect(inputCell.value).toEqual(10);
@@ -23,12 +22,12 @@ describe('React module', () => {
   xtest('compute cell takes inputs in correct order', () => {
     const inputCells = [
       new InputCell(1),
-      new InputCell(2)
+      new InputCell(2),
     ];
 
     const computeCell = new ComputeCell(
       inputCells,
-      inputs => inputs[0].value + inputs[1].value * 10
+      inputs => inputs[0].value + inputs[1].value * 10,
     );
 
     expect(computeCell.value).toEqual(21);
@@ -38,7 +37,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const computeCell = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value + 1
+      inputs => inputs[0].value + 1,
     );
     inputCell.setValue(3);
     expect(computeCell.value).toEqual(4);
@@ -49,17 +48,17 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const timesTwo = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value * 2
+      inputs => inputs[0].value * 2,
     );
 
     const timesThirty = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value * 30
+      inputs => inputs[0].value * 30,
     );
 
     const sum = new ComputeCell(
       [timesTwo, timesThirty],
-      inputs => inputs[0].value + inputs[1].value
+      inputs => inputs[0].value + inputs[1].value,
     );
 
     expect(sum.value).toEqual(32);
@@ -72,7 +71,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value + 1
+      inputs => inputs[0].value + 1,
     );
 
     const callback = new CallbackCell(cell => cell.value);
@@ -86,7 +85,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value < 3 ? 111 : 222
+      inputs => (inputs[0].value < 3 ? 111 : 222),
     );
 
     const callback = new CallbackCell(cell => cell.value);
@@ -104,7 +103,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value + 1
+      inputs => inputs[0].value + 1,
     );
 
     const callback1 = new CallbackCell(cell => cell.value);
@@ -131,7 +130,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value + 1
+      inputs => inputs[0].value + 1,
     );
 
     const callback1 = new CallbackCell(cell => cell.value);
@@ -154,22 +153,22 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const plusOne = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value + 1
+      inputs => inputs[0].value + 1,
     );
 
     const minusOne1 = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value - 1
+      inputs => inputs[0].value - 1,
     );
 
     const minusOne2 = new ComputeCell(
       [minusOne1],
-      inputs => inputs[0].value - 1
+      inputs => inputs[0].value - 1,
     );
 
     const output = new ComputeCell(
       [plusOne, minusOne2],
-      inputs => inputs[0].value * inputs[1].value
+      inputs => inputs[0].value * inputs[1].value,
     );
 
     const callback1 = new CallbackCell(cell => cell.value);
@@ -184,17 +183,17 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const plusOne = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value + 1
+      inputs => inputs[0].value + 1,
     );
 
     const minusOne = new ComputeCell(
       [inputCell],
-      inputs => inputs[0].value - 1
+      inputs => inputs[0].value - 1,
     );
 
     const alwaysTwo = new ComputeCell(
       [plusOne, minusOne],
-      inputs => inputs[0].value - inputs[1].value
+      inputs => inputs[0].value - inputs[1].value,
     );
 
 

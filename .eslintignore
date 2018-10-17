@@ -15,7 +15,6 @@ connect
 crypto-square
 diamond
 difference-of-squares
-diffie-hellman
 etl
 flatten-array
 food-chain
@@ -25,7 +24,6 @@ grade-school
 grains
 hexadecimal
 isbn-verifier
-isogram
 kindergarten-garden
 largest-series-product
 linked-list
@@ -46,7 +44,6 @@ proverb
 pythagorean-triplet
 queen-attack
 rational-numbers
-react
 rectangles
 robot-name
 robot-simulator
@@ -58,7 +55,6 @@ say
 scrabble-score
 secret-handshake
 series
-simple-cipher
 spiral-matrix
 strain
 sublist
