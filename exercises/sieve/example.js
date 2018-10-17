@@ -1,7 +1,7 @@
 function newArrayWithRange(first, last) {
   let i;
   const array = [];
-  for (i = first; i <= last; i++) {
+  for (i = first; i <= last; i += 1) {
     array.push(i);
   }
   return array;
@@ -12,8 +12,8 @@ function indivisibleBy(value) {
 }
 
 function sieve(n) {
-  let prime,
-    possibilities;
+  let prime;
+  let possibilities;
   const primes = [];
 
   possibilities = newArrayWithRange(2, n);
