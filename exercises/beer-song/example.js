@@ -19,12 +19,12 @@ function action(currentVerse) {
   return `Take ${sbj} down and pass it around, `;
 }
 
-function nextBottle(currentVerse) {
-  return `${bottles(nextVerse(currentVerse)).toLowerCase()} of beer on the wall.\n`;
-}
-
 function nextVerse(currentVerse) {
   return currentVerse === 0 ? 99 : currentVerse - 1;
+}
+
+function nextBottle(currentVerse) {
+  return `${bottles(nextVerse(currentVerse)).toLowerCase()} of beer on the wall.\n`;
 }
 
 class BeerSong {
@@ -39,7 +39,7 @@ class BeerSong {
 
   static sing(first = 99, last = 0) {
     const verses = [];
-    for (let i = first; i >= last; i--) {
+    for (let i = first; i >= last; i -= 1) {
       verses.push(this.verse(i));
     }
 
