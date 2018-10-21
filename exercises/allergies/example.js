@@ -15,7 +15,7 @@ class Allergies {
   }
 
   list() {
-    return possibleAllergies.filter((allergy, i) => this.allergenIndex & Math.pow(2, i));
+    return possibleAllergies.filter((allergy, i) => this.allergenIndex && 2 ** i);
   }
 
   allergicTo(food) {
@@ -24,4 +24,3 @@ class Allergies {
 }
 
 export default Allergies;
-
