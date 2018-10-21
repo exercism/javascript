@@ -17,6 +17,5 @@ describe('encode', () => {
   xtest('encodes sentences', () => expect(encode('Truth is fiction.')).toEqual('gifgs rhurx grlm'));
 
   xtest('encodes all the things', () => expect(encode('The quick brown fox jumps over the lazy dog.'))
-    .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'),
-  );
+    .toEqual('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'));
 });
