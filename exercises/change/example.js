@@ -38,6 +38,7 @@ export default class Change {
   constructor() {
     this.candidates = [];
   }
+
   calculate(coinArray, target) {
     const { candidates } = this;
     // fill the array with 0 to start
@@ -71,12 +72,14 @@ export default class Change {
     };
 
     // is everthing searched?
-    const isDone = () => candidates.every(
-      candidate => isNumber(candidate) || candidate.isSearched());
+    const isDone = () => (
+      candidates.every(candidate => isNumber(candidate) || candidate.isSearched())
+    );
 
     // get the next unsearched member of the candidate array
-    const getNext = () => candidates.find(
-      candidate => !isNumber(candidate) && !candidate.isSearched());
+    const getNext = () => (
+      candidates.find(candidate => !isNumber(candidate) && !candidate.isSearched())
+    );
 
     // for the candidate, generate another candate for each of the possible coins
     const branch = (current) => {
