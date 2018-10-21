@@ -15,7 +15,8 @@ class Allergies {
   }
 
   list() {
-    return possibleAllergies.filter((allergy, i) => this.allergenIndex && 2 ** i);
+    // eslint-disable-next-line no-bitwise
+    return possibleAllergies.filter((allergy, i) => this.allergenIndex & 2 ** i);
   }
 
   allergicTo(food) {
