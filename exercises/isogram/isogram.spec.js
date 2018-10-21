@@ -37,6 +37,12 @@ describe('Isogram Test Suite', () => {
     expect(word.isIsogram()).toEqual(false);
   });
 
+  xtest('word with duplicated character in mixed case, lowercase first', () => {
+    const word = new Isogram('alphAbet');
+
+    expect(word.isIsogram()).toEqual(false);
+  });
+
   xtest('hypothetical isogrammic word with hyphen', () => {
     const word = new Isogram('thumbscrew-japingly');
 
@@ -57,6 +63,12 @@ describe('Isogram Test Suite', () => {
 
   xtest('duplicated character in the middle', () => {
     const word = new Isogram('accentor');
+
+    expect(word.isIsogram()).toEqual(false);
+  });
+
+  xtest('same first and last characters', () => {
+    const word = new Isogram('angola');
 
     expect(word.isIsogram()).toEqual(false);
   });
