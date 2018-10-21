@@ -1,5 +1,5 @@
 function isSortedArray(array) {
-  for (let i = 1; i < array.length; i++) {
+  for (let i = 1; i < array.length; i += 1) {
     if (array[i] < array[i - 1]) {
       return false;
     }
@@ -38,4 +38,3 @@ class BinarySearch {
 }
 
 export default BinarySearch;
-

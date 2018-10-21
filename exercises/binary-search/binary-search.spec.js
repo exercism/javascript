@@ -25,4 +25,3 @@ describe('BinarySearch', () => {
     expect(new BinarySearch(sortedArray).indexOf(10)).toEqual(-1);
   });
 });
-
