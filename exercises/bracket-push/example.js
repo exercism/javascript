@@ -12,8 +12,8 @@ export const bracketPush = (input) => {
   const openArray = ['{', '[', '('];
   const closeArray = ['}', ']', ')'];
 
-  for (let i = 0; i < bracketArray.length; i++) {
-    for (let j = 0; j < openArray.length; j++) {
+  for (let i = 0; i < bracketArray.length; i += 1) {
+    for (let j = 0; j < openArray.length; j += 1) {
       if (bracketArray[i] === openArray[j]) {
         iArr.push(i);
       }
@@ -22,9 +22,9 @@ export const bracketPush = (input) => {
 
   const topNumber = Math.max(...iArr);
 
-  for (let k = 0; k < 3; k++) {
+  for (let k = 0; k < 3; k += 1) {
     if (bracketArray[topNumber] === openArray[k]) {
-      if (typeof bracketArray[topNumber + 1] !== undefined) {
+      if (typeof bracketArray[topNumber + 1] !== 'undefined') {
         if (bracketArray[topNumber + 1] === closeArray[k]) {
           bracketArray.splice(topNumber, 2);
           return bracketPush(bracketArray);
