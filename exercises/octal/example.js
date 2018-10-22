@@ -1,6 +1,7 @@
+
 export default function (octal) {
-  octal = octal.match(/[^0-7]/) ? octal = '0' : octal;
+  const newOctal = octal.match(/[^0-7]/) ? '0' : octal;
   return {
-    toDecimal: () => octal.split('').reduce((prev, curr) => prev * 8 + parseInt(curr), 0),
+    toDecimal: () => newOctal.split('').reduce((prev, curr) => prev * 8 + parseInt(curr, 8), 0),
   };
 }
