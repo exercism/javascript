@@ -38,6 +38,14 @@
       ]
     },
     {
+      "slug": "darts",
+      "uuid": "6c64649b-ea81-4118-9e74-a0a55018ffbc",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": null
+    },
+    {
       "slug": "hello-world",
       "uuid": "9ce0f408-6d7b-4466-a390-75aeaf9492f2",
       "core": true,
