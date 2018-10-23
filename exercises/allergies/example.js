@@ -15,7 +15,6 @@ class Allergies {
   }
 
   list() {
-    // eslint-disable-next-line no-bitwise
     return possibleAllergies.filter((allergy, i) => this.allergenIndex & 2 ** i);
   }
 
