@@ -1,6 +1,6 @@
 import solve from './target';
 
-describe('Solve the target problem', () => {
+describe('Return the correct amount earned by a dart landing in a given point in the target problem', () => {
   test('A dart lands outside the target', () => {
     const x = 15.3;
     const y = 13.2;
