@@ -1,6 +1,6 @@
 export default function solve(x, y) {
   // Check for NaN
-  if (Number.isNaN(x) || Number.isNaN(y)) return null;
+  if (Number.isNaN(Number(x)) || Number.isNaN(Number(y))) return null;
 
   // Use euclidean distance
   const distanceToDart = Math.sqrt(x * x + y * y);
