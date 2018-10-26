@@ -29,16 +29,5 @@ const letterScores = {
 
 const letterScore = letter => letterScores[letter] || 0;
 
-export default (word) => {
-  word = word ? word.toLowerCase() : '';
-
-  let sum = 0;
-  let idx = -1;
-  const end = word.length;
-
-  while (++idx < end) {
-    sum += letterScore(word[idx]);
-  }
-
-  return sum;
-};
+export default word => [...word.toLowerCase()]
+  .reduce((sum, currChar) => sum + letterScore(currChar), 0);
