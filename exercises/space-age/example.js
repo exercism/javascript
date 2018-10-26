@@ -12,7 +12,10 @@ const EARTH_TO_OTHER_PLANETS = {
 export class SpaceAge {
   constructor(seconds) {
     this.seconds = seconds;
-    this.earthYears = seconds / 31557600;
+  }
+
+  get earthYears() {
+    return this.seconds / 31557600;
   }
 
   yearsOnPlanet(planet) {

@@ -1,5 +1,20 @@
 import Robot from './robot-name';
 
+const areSequential = (name1, name2) => {
+  const alpha1 = name1.substr(0, 2);
+  const alpha2 = name2.substr(0, 2);
+  const num1 = +name1.substr(2, 3);
+  const num2 = +name2.substr(2, 3);
+
+  const numDiff = num2 - num1;
+  const alphaDiff = (alpha2.charCodeAt(0) - alpha1.charCodeAt(0)) * 26
+    + (alpha2.charCodeAt(1) - alpha1.charCodeAt(1));
+
+  const totalDiff = alphaDiff * 1000 + numDiff;
+
+  return Math.abs(totalDiff) <= 1;
+};
+
 describe('Robot', () => {
   let robot;
 
@@ -35,7 +50,7 @@ describe('Robot', () => {
     const usedNames = new Set();
 
     usedNames.add(robot.name);
-    for (let i = 0; i < NUMBER_OF_ROBOTS; i++) {
+    for (let i = 0; i < NUMBER_OF_ROBOTS; i += 1) {
       robot.reset();
       usedNames.add(robot.name);
     }
@@ -44,7 +59,7 @@ describe('Robot', () => {
   });
 
   xtest('internal name cannot be modified', () => {
-    const modifyInternal = () => robot.name += 'a modification';
+    const modifyInternal = () => { robot.name += 'a modification'; };
     expect(modifyInternal).toThrow();
   });
 
@@ -74,7 +89,7 @@ describe('Robot', () => {
     const NUMBER_OF_ROBOTS = 10000;
     const usedNames = new Set();
 
-    for (let i = 0; i < NUMBER_OF_ROBOTS; i++) {
+    for (let i = 0; i < NUMBER_OF_ROBOTS; i += 1) {
       const newRobot = new Robot();
       usedNames.add(newRobot.name);
     }
@@ -82,18 +97,3 @@ describe('Robot', () => {
     expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS);
   });
 });
-
-const areSequential = (name1, name2) => {
-  const alpha1 = name1.substr(0, 2);
-  const alpha2 = name2.substr(0, 2);
-  const num1 = +name1.substr(2, 3);
-  const num2 = +name2.substr(2, 3);
-
-  const numDiff = num2 - num1;
-  const alphaDiff = (alpha2.charCodeAt(0) - alpha1.charCodeAt(0)) * 26
-    + (alpha2.charCodeAt(1) - alpha1.charCodeAt(1));
-
-  const totalDiff = alphaDiff * 1000 + numDiff;
-
-  return Math.abs(totalDiff) <= 1;
-};
