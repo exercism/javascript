@@ -1,5 +1,4 @@
-import Robot from './robot-simulator';
-import { InvalidInputError } from './robot-simulator';
+import Robot, { InvalidInputError } from './robot-simulator';
 
 describe('Robot', () => {
   const robot = new Robot();
@@ -105,19 +104,19 @@ describe('Robot', () => {
   });
 
   xtest('instructions for turning left', () => {
-    expect(robot.instructions('L')).toEqual(['turnLeft']);
+    expect(Robot.instructions('L')).toEqual(['turnLeft']);
   });
 
   xtest('instructions for turning right', () => {
-    expect(robot.instructions('R')).toEqual(['turnRight']);
+    expect(Robot.instructions('R')).toEqual(['turnRight']);
   });
 
   xtest('instructions for advancing', () => {
-    expect(robot.instructions('A')).toEqual(['advance']);
+    expect(Robot.instructions('A')).toEqual(['advance']);
   });
 
   xtest('series of instructions', () => {
-    expect(robot.instructions('RAAL'))
+    expect(Robot.instructions('RAAL'))
       .toEqual(['turnRight', 'advance', 'advance', 'turnLeft']);
   });
 
