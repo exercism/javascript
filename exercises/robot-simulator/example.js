@@ -61,14 +61,17 @@ class Robot {
     }
   }
 
-  instructions(s) {
+  static instructions(s) {
     return [...s].map((character) => {
-      if (character === 'L') {
-        return 'turnLeft';
-      } else if (character === 'R') {
-        return 'turnRight';
-      } else if (character === 'A') {
-        return 'advance';
+      switch (character) {
+        case 'L':
+          return 'turnLeft';
+        case 'R':
+          return 'turnRight';
+        case 'A':
+          return 'advance';
+        default:
+          throw new InvalidInputError(`${character} is not a valid instruction character.`);
       }
     });
   }
@@ -79,13 +82,11 @@ class Robot {
   }
 
   evaluate(s) {
-    this.instructions(s).forEach((instruction) => {
+    Robot.instructions(s).forEach((instruction) => {
       this[instruction]();
     });
   }
-
 }
 
 
 export default Robot;
-
