@@ -1,6 +1,6 @@
-const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  BASE = 10,
-  usedNames = {};
+const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const BASE = 10;
+const usedNames = {};
 
 const random = max => Math.floor(Math.random() * max);
 
@@ -8,7 +8,8 @@ const generateName = () => {
   let name = ALPHA.charAt(random(ALPHA.length))
     + ALPHA.charAt(random(ALPHA.length))
     + random(BASE) + random(BASE) + random(BASE);
-  usedNames[name] ? name = generateName() : usedNames[name] = true;
+  if (usedNames[name]) name = generateName();
+  else usedNames[name] = true;
   return name;
 };
 
