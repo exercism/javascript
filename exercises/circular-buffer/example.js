@@ -1,5 +1,5 @@
-let buffer,
-  bufferMax;
+let buffer;
+let bufferMax;
 
 export class BufferEmptyError extends Error {
   constructor(message) {
@@ -25,7 +25,7 @@ const write = (value) => {
   if (buffer.length === bufferMax) {
     throw new BufferFullError();
   }
-  value ? buffer.push(value) : null;
+  return value ? buffer.push(value) : null;
 };
 
 const forceWrite = (value) => {
@@ -35,7 +35,10 @@ const forceWrite = (value) => {
   write(value);
 };
 
-const clear = () => buffer = [];
+const clear = () => {
+  buffer = [];
+  return buffer;
+};
 
 const CircularBuffer = (capacity) => {
   buffer = [];

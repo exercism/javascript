@@ -1,5 +1,4 @@
-import circularBuffer from './circular-buffer';
-import { BufferFullError, BufferEmptyError } from './circular-buffer';
+import circularBuffer, { BufferFullError, BufferEmptyError } from './circular-buffer';
 
 describe('CircularBuffer', () => {
   test('reading an empty buffer throws a BufferEmptyError', () => {
