@@ -3,25 +3,25 @@ export class HighScores {
     this.scores = scores;
   }
 
-  latest() {
+  get latest() {
     return this.scores[this.scores.length - 1];
   }
 
-  highest() {
+  get highest() {
     return Math.max(...this.scores);
   }
 
-  top() {
+  get top() {
     return this.scores.slice()
       .sort((a, b) => a - b)
       .reverse()
       .slice(0, 3);
   }
 
-  report() {
-    if (this.latest() === this.highest()) {
-      return `Your latest score was ${this.latest()}. That's your personal best!`;
+  get report() {
+    if (this.latest === this.highest) {
+      return `Your latest score was ${this.latest}. That's your personal best!`;
     }
-    return `Your latest score was ${this.latest()}. That's ${this.highest() - this.latest()} short of your personal best!`;
+    return `Your latest score was ${this.latest}. That's ${this.highest - this.latest} short of your personal best!`;
   }
 }
