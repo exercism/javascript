@@ -1,5 +1,4 @@
 export default class ComplexNumber {
-
   constructor(real, imag) {
     this.real = real;
     this.imag = imag;
@@ -16,7 +15,8 @@ export default class ComplexNumber {
   mul(other) {
     return new ComplexNumber(
       (this.real * other.real) - (this.imag * other.imag),
-      (this.imag * other.real) + (this.real * other.imag));
+      (this.imag * other.real) + (this.real * other.imag),
+    );
   }
 
   div(other) {
@@ -24,7 +24,8 @@ export default class ComplexNumber {
       ((this.real * other.real) + (this.imag * other.imag))
       / ((other.real * other.real) + (other.imag * other.imag)),
       ((this.imag * other.real) - (this.real * other.imag))
-      / ((other.real * other.real) + (other.imag * other.imag)));
+      / ((other.real * other.real) + (other.imag * other.imag)),
+    );
   }
 
   get abs() {
@@ -38,6 +39,7 @@ export default class ComplexNumber {
   get exp() {
     return new ComplexNumber(
       Math.exp(this.real) * Math.cos(this.imag),
-      Math.exp(this.real) * Math.sin(this.imag));
+      Math.exp(this.real) * Math.sin(this.imag),
+    );
   }
 }

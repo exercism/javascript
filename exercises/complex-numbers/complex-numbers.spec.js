@@ -42,7 +42,7 @@ describe('Complex numbers', () => {
 
     expect(actual).toEqual(expected);
   });
-  
+
   xtest('Add purely real numbers', () => {
     const expected = new ComplexNumber(3, 0);
     const actual = new ComplexNumber(1, 0).add(new ComplexNumber(2, 0));
