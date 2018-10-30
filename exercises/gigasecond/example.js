@@ -1,6 +1,6 @@
-const GIGASECOND_IN_MILIS = 1e9 * 1e3;
+const GIGASECOND_IN_MILLIS = 1e9 * 1e3;
 
-export const gigasecond = dateOfBirth => {
+export const gigasecond = (dateOfBirth) => {
   const birthTime = dateOfBirth.getTime();
-  return new Date(birthTime + GIGASECOND_IN_MILIS);
-}
+  return new Date(birthTime + GIGASECOND_IN_MILLIS);
+};
