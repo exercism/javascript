@@ -65,8 +65,8 @@ describe('PhoneNumber()', () => {
     expect(phone2.number()).toEqual(null);
   });
 
-  xtest('invalid when 11 digits starting with 1, ' +
-  'but invalid area/exchange code first digits', () => {
+  xtest('invalid when 11 digits starting with 1, '
+  + 'but invalid area/exchange code first digits', () => {
     const phone1 = new PhoneNumber('1 (023) 456-7890');
     const phone2 = new PhoneNumber('1 (123) 456-7890');
     const phone3 = new PhoneNumber('1 (223) 056-7890');

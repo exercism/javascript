@@ -1,5 +1,4 @@
 export default class PhoneNumber {
-
   constructor(number) {
     this.rawNumber = number;
   }
@@ -9,10 +8,10 @@ export default class PhoneNumber {
       return null;
     }
 
-    return this._cleanedNumber();
+    return this.cleanedNumber();
   }
 
-  _cleanedNumber() {
+  cleanedNumber() {
     const num = this.rawNumber.replace(/\D/g, '');
 
     if (num.length === 10 && num[0] >= 2 && num[3] >= 2) {
