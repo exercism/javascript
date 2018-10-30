@@ -12,7 +12,7 @@ export class HighScores {
   }
 
   get top() {
-    return this.scores.slice()
+    return [...this.scores]
       .sort((a, b) => a - b)
       .reverse()
       .slice(0, 3);
