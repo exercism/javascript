@@ -1369,6 +1369,16 @@
         "bitwise_operations",
         "transforming"
       ]
+    },
+    {
+      "slug": "high-scores",
+      "uuid": "19b41c4a-1466-5c19-b547-40284189fd18",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 2,
+      "topics": [
+        "arrays"
+      ]
     }
   ]
 }
