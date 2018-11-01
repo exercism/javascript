@@ -1,8 +1,21 @@
 import { classify } from './perfect-numbers';
 
 describe('Exercise - Perfect Numbers', () => {
+
+  describe('Invalid Inputs', () => {
+    test('Zero is rejected (not a natural number)', () => {
+      expect(() => classify(0))
+        .toThrow(new Error('Classification is only possible for natural numbers.'));
+    });
+
+    xtest('Negative integer is rejected (not a natural number)', () => {
+      expect(() => classify(-1))
+        .toThrow(new Error('Classification is only possible for natural numbers.'));
+    });
+  });
+
   describe('Perfect Numbers', () => {
-    test('Smallest perfect number is classified correctly', () => {
+    xtest('Smallest perfect number is classified correctly', () => {
       expect(classify(6)).toEqual('perfect');
     });
 
@@ -48,18 +61,6 @@ describe('Exercise - Perfect Numbers', () => {
 
     xtest('Edge case (no factors other than itself) is classified correctly', () => {
       expect(classify(1)).toEqual('deficient');
-    });
-  });
-
-  describe('Invalid Inputs', () => {
-    xtest('Zero is rejected (not a natural number)', () => {
-      expect(() => classify(0))
-        .toThrow('Classification is only possible for natural numbers.');
-    });
-
-    xtest('Negative integer is rejected (not a natural number)', () => {
-      expect(() => classify(-1))
-        .toThrow('Classification is only possible for natural numbers.');
     });
   });
 });
