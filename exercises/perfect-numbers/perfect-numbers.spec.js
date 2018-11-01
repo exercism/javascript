@@ -43,6 +43,10 @@ describe('Exercise - Perfect Numbers', () => {
   });
 
   describe('Deficient Numbers', () => {
+    xtest('Edge case (no factors other than itself) is classified correctly', () => {
+      expect(classify(1)).toEqual('deficient');
+    });
+
     xtest('Smallest prime deficient number is classified correctly', () => {
       expect(classify(2)).toEqual('deficient');
     });
@@ -57,10 +61,6 @@ describe('Exercise - Perfect Numbers', () => {
 
     xtest('Large deficient number is classified correctly', () => {
       expect(classify(33550337)).toEqual('deficient');
-    });
-
-    xtest('Edge case (no factors other than itself) is classified correctly', () => {
-      expect(classify(1)).toEqual('deficient');
     });
   });
 });
