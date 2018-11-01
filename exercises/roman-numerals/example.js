@@ -1,5 +1,6 @@
 function toRoman(number) {
   let result = '';
+  let remainingNumber = number;
   const mappings = [
     { arabic: 1000, roman: 'M' },
     { arabic: 900, roman: 'CM' },
@@ -17,9 +18,9 @@ function toRoman(number) {
   ];
 
   mappings.forEach((mapping) => {
-    while (number >= mapping.arabic) {
+    while (remainingNumber >= mapping.arabic) {
       result += mapping.roman;
-      number -= mapping.arabic;
+      remainingNumber -= mapping.arabic;
     }
   });
 
