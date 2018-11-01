@@ -1,7 +1,6 @@
 import { classify } from './perfect-numbers';
 
 describe('Exercise - Perfect Numbers', () => {
-
   describe('Invalid Inputs', () => {
     test('Zero is rejected (not a natural number)', () => {
       expect(() => classify(0))
