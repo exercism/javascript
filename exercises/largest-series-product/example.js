@@ -1,5 +1,4 @@
 export default class Series {
-
   constructor(numberString) {
     if (numberString.match('[^0-9]')) {
       throw new Error('Invalid input.');

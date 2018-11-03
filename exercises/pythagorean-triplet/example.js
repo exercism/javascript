@@ -1,5 +1,4 @@
 export default class Triplet {
-
   constructor(a, b, c) {
     this.a = a;
     this.b = b;
@@ -24,7 +23,6 @@ export default class Triplet {
 }
 
 class Triplets {
-
   constructor(conditions) {
     this.min = conditions.minFactor || 1;
     this.max = conditions.maxFactor;

@@ -1,5 +1,4 @@
 export default class Squares {
-
   constructor(max) {
     this.max = max;
   }
@@ -21,5 +20,4 @@ export default class Squares {
   get difference() {
     return this.squareOfSum - this.sumOfSquares;
   }
-
 }

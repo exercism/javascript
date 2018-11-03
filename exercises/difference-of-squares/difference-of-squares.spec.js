@@ -6,7 +6,6 @@ describe('difference-of-squares', () => {
     const squares100 = new Squares(100);
 
   describe('Square the sum of the numbers up to the given number', () => {
-
     xtest('square of sum 1', () => {
       expect(squares1.squareOfSum).toBe(1);
     });
@@ -18,11 +17,9 @@ describe('difference-of-squares', () => {
     xtest('square of sum 100', () => {
       expect(squares100.squareOfSum).toBe(25502500);
     });
-
   });
 
   describe('Sum the squares of the numbers up to the given number', () => {
-
     xtest('sum of squares 1', () => {
       expect(squares1.sumOfSquares).toBe(1);
     });
@@ -34,11 +31,9 @@ describe('difference-of-squares', () => {
     xtest('sum of squares 100', () => {
       expect(squares100.sumOfSquares).toBe(338350);
     });
-
   });
 
   describe('Subtract sum of squares from square of sums', () => {
-
     xtest('difference of squares 1', () => {
       expect(squares1.difference).toBe(0);
     });

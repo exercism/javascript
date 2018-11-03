@@ -1,5 +1,4 @@
 export default class ISBN {
-
   constructor(isbn) {
     this.isbn = isbn.replace(/-/g, '');
   }

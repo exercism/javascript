@@ -169,4 +169,3 @@ She's dead, of course!
     expect(song.verses(1, 8)).toEqual(expected);
   });
 });
-

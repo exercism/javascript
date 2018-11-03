@@ -1,7 +1,6 @@
 const BASE = 3;
 
 export default class Trinary {
-
   constructor(decimal) {
     this.digits = [...decimal].reverse().map(Number);
   }
@@ -23,5 +22,4 @@ export default class Trinary {
   accumulator(decimal, digit, index) {
     return decimal += digit * Math.pow(BASE, index);
   }
-
 }

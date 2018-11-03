@@ -7,7 +7,6 @@ import BigInt from './big-integer';
  * square, and doubling with each successive square.
  */
 export default class Grains {
-
   /**
    * Gets the number of grains on the nth square
    *
@@ -34,4 +33,3 @@ export default class Grains {
     return total.toString();
   }
 }
-

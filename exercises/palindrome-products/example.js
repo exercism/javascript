@@ -36,4 +36,3 @@ const Palindromes = (params) => {
 };
 
 export default Palindromes;
-

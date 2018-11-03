@@ -46,4 +46,3 @@ class Garden {
 }
 
 export default Garden;
-

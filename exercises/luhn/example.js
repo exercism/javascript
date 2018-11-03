@@ -26,9 +26,7 @@ function isValid(number) {
 }
 
 export default class Luhn {
-
   constructor(number) {
     this.valid = isValid(number);
   }
-
 }
