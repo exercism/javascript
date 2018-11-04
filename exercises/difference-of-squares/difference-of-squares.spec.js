@@ -1,9 +1,9 @@
 import Squares from './difference-of-squares';
 
 describe('difference-of-squares', () => {
-    const squares1 = new Squares(1);
-    const squares5 = new Squares(5);
-    const squares100 = new Squares(100);
+  const squares1 = new Squares(1);
+  const squares5 = new Squares(5);
+  const squares100 = new Squares(100);
 
   describe('Square the sum of the numbers up to the given number', () => {
     xtest('square of sum 1', () => {
