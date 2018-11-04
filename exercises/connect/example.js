@@ -66,4 +66,3 @@ export default class {
     return this.board[x] !== undefined && this.board[x][y] === XorO;
   }
 }
-

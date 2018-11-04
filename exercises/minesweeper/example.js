@@ -30,7 +30,6 @@ function cellToMineOrCount(cell, inputBoard, x, y) {
     return MINE;
   } 
     return countAdjacentMines(inputBoard, x, y) || " ";
-  
 }
 
 function countAdjacentMines(board, x, y) {

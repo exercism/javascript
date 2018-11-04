@@ -36,4 +36,3 @@ class Prime {
 }
 
 export default Prime;
-

@@ -5,7 +5,6 @@ function clone(obj) {
 
 let db;
 class School {
-
   constructor() {
     db = {};
   }
@@ -21,7 +20,6 @@ class School {
   roster() {
     return clone(db);
   }
-
 }
 
 export default School;

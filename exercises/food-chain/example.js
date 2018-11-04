@@ -1,5 +1,4 @@
 export default class Song {
-
   /**
    * @param {Number} number
    * verse number
@@ -89,6 +88,4 @@ She's dead, of course!
     str.push('');
     return str.join('\n');
   }
-
 }
-

@@ -1,5 +1,4 @@
 class List {
-
   constructor(list = []) {
     this.list = list;
   }

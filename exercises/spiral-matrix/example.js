@@ -1,5 +1,4 @@
 class SpiralMatrix {
-
   static ofSize(size) {
     const spiral = Array(size).fill().map(() => Array(0));
 
@@ -20,7 +19,6 @@ class SpiralMatrix {
 
     return spiral;
   }
-
 }
 
 export default SpiralMatrix;

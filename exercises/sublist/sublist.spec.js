@@ -2,7 +2,6 @@ import List from './sublist';
 
 
 describe('sublist', () => {
-
   test('two empty lists are equal', () => {
     const listOne = new List();
     const listTwo = new List();
@@ -43,7 +42,6 @@ describe('sublist', () => {
     const listTwo = new List([0, 1, 2, 3, 1, 2, 5, 6]);
 
     expect(listOne.compare(listTwo)).toEqual('SUBLIST');
-
   });
 
   xtest('consecutive', () => {
@@ -122,5 +120,4 @@ describe('sublist', () => {
 
     expect(listOne.compare(listTwo)).toEqual('UNEQUAL');
   });
-
 });

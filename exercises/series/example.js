@@ -1,5 +1,4 @@
 export default class Series {
-
   constructor(numberString) {
     this.numberString = numberString;
     this.digits = this.getDigits();

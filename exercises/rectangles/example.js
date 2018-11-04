@@ -1,5 +1,4 @@
 class Rectangles {
-
   static count(diagram) {
     const rows = diagram.length;
     const cols = rows ? diagram[0].length : 0;
