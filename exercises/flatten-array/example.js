@@ -5,7 +5,7 @@ export default class Flattener {
         Array.isArray(el)
           ? acc.concat(this.flatten(el))
           : acc.concat(el),
-        [])
+      [])
       .filter(el => el !== null && el !== undefined);
   }
 }

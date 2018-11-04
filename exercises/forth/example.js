@@ -49,9 +49,9 @@ class Forth {
       '-': { arity: 2, execute: (a, b) => [a - b] },
       '*': { arity: 2, execute: (a, b) => [a * b] },
       '/': { arity: 2, execute: (a, b) => {
-          if (b === 0) throw new Error('Division by zero');
-          return [Math.floor(a / b)];
-        } },
+        if (b === 0) throw new Error('Division by zero');
+        return [Math.floor(a / b)];
+      } },
       dup: { arity: 1, execute: a => [a, a] },
       drop: { arity: 1, execute: () => {} },
       swap: { arity: 2, execute: (a, b) => [b, a] },

@@ -6,14 +6,14 @@ class List {
   compare(other) {
     return {
       '-1': isSublist(other.list, this.list)
-              ? 'SUBLIST'
-              : 'UNEQUAL',
+        ? 'SUBLIST'
+        : 'UNEQUAL',
       '0':  isSublist(other.list, this.list)
-              ? 'EQUAL'
-              : 'UNEQUAL',
+        ? 'EQUAL'
+        : 'UNEQUAL',
       '1':  isSublist(this.list, other.list)
-              ? 'SUPERLIST'
-              : 'UNEQUAL'
+        ? 'SUPERLIST'
+        : 'UNEQUAL'
     }[lengthDiff(this, other)];
   }
 }

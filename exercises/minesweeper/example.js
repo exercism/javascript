@@ -29,7 +29,8 @@ function cellToMineOrCount(cell, inputBoard, x, y) {
   if (cell === MINE) {
     return MINE;
   } 
-    return countAdjacentMines(inputBoard, x, y) || " ";
+
+  return countAdjacentMines(inputBoard, x, y) || " ";
 }
 
 function countAdjacentMines(board, x, y) {

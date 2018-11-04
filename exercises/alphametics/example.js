@@ -51,8 +51,8 @@ function testNumbers(numbers, puzzleParts, firstLetters) {
 
   const total = puzzleParts.slice(puzzleParts.length - 1)[0];
   return total === puzzleParts
-      .slice(0, puzzleParts.length - 1)
-      .reduce((acc, val) => acc + val, 0);
+    .slice(0, puzzleParts.length - 1)
+    .reduce((acc, val) => acc + val, 0);
 }
 function* generate(A) {
   const c = [];
