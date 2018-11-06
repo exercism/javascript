@@ -9,12 +9,9 @@ food-chain
 forth
 grade-school
 grains
-hexadecimal
-kindergarten-garden
 largest-series-product
 linked-list
 list-ops
-luhn
 meetup
 minesweeper
 nth-prime
@@ -27,7 +24,6 @@ pythagorean-triplet
 queen-attack
 rational-numbers
 rectangles
-rotational-cipher
 saddle-points
 say
 secret-handshake
@@ -36,7 +32,6 @@ spiral-matrix
 strain
 sublist
 sum-of-multiples
-transpose
 trinary
 twelve-days
 variable-length-quantity
