@@ -4,10 +4,6 @@ const slices = (digits, sliceSize) => {
   const result = [];
   let slice = [];
 
-  if (sliceSize > digits.length) {
-    throw new Error('Slice size is too big.');
-  }
-
   for (let i = 0; i < digits.length - sliceSize + 1; i++) {
     for (let j = 0; j < sliceSize; j++) {
       slice.push(digits[i + j]);
@@ -25,6 +21,9 @@ export const largestSeriesProduct = (numberString, size) => {
   }
   if (size < 0) {
     throw new Error('Invalid input.');
+  }
+  if (size > numberString.length) {
+    throw new Error('Slice size is too big.');
   }
 
   let product,
