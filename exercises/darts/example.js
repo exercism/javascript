@@ -1,4 +1,4 @@
-export default function solve(x, y) {
+export const solve = (x, y) => {
   // Check for NaN
   if (Number.isNaN(Number(x)) || Number.isNaN(Number(y))) return null;
 
@@ -10,4 +10,4 @@ export default function solve(x, y) {
   if (distanceToDart > 5) return 1;
   if (distanceToDart > 1) return 5;
   return 10;
-}
+};
