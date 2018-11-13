@@ -2,16 +2,9 @@ const getDigits = numberString => [...numberString].map(digit => parseInt(digit,
 
 const slices = (digits, sliceSize) => {
   const result = [];
-  let slice = [];
-
-  for (let i = 0; i < digits.length - sliceSize + 1; i++) {
-    for (let j = 0; j < sliceSize; j++) {
-      slice.push(digits[i + j]);
-    }
-    result.push(slice);
-    slice = [];
+  for (let i = 0; i < digits.length - sliceSize + 1; i += 1) {
+    result.push(digits.slice(i, i + sliceSize));
   }
-
   return result;
 };
 
