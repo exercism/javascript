@@ -19,13 +19,8 @@ export const largestSeriesProduct = (numberString, size) => {
     throw new Error('Slice size is too big.');
   }
 
-  let product,
-    max = 0;
-  slices(getDigits(numberString), size).forEach((slice) => {
-    let product = slice.reduce((a, b) => a * b, 1);
-    if (product > max) {
-      max = product;
-    }
-  });
-  return max;
+  return slices(getDigits(numberString), size).reduce((max, slice) => {
+    const product = slice.reduce((a, b) => a * b, 1);
+    return product > max ? product : max;
+  }, 0);
 };
