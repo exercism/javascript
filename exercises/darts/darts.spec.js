@@ -1,4 +1,4 @@
-import solve from './darts';
+import { solve } from './darts';
 
 describe('Return the correct amount earned by a dart landing in a given point in the target problem', () => {
   test('A dart lands outside the target', () => {
