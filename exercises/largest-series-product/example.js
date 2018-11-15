@@ -17,8 +17,8 @@ export default class Series {
       throw new Error('Invalid input.');
     }
 
-    let product,
-      max = 0;
+    let product;
+    let max = 0;
     this.slices(size).forEach((slice) => {
       product = slice.reduce((a, b) => a * b, 1);
       if (product > max) {
@@ -36,8 +36,8 @@ export default class Series {
       throw new Error('Slice size is too big.');
     }
 
-    for (let i = 0; i < this.digits.length - sliceSize + 1; i++) {
-      for (let j = 0; j < sliceSize; j++) {
+    for (let i = 0; i < this.digits.length - sliceSize + 1; i += 1) {
+      for (let j = 0; j < sliceSize; j += 1) {
         slice.push(this.digits[i + j]);
       }
       result.push(slice);
