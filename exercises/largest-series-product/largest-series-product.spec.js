@@ -1,16 +1,16 @@
-import Series from './largest-series-product';
+import { largestProduct } from './largest-series-product';
 
 describe('Series', () => {
   test('can get the largest product of 2', () => {
-    expect(new Series('0123456789').largestProduct(2)).toBe(72);
+    expect(largestProduct('0123456789', 2)).toBe(72);
   });
 
   xtest('works for a tiny number', () => {
-    expect(new Series('19').largestProduct(2)).toBe(9);
+    expect(largestProduct('19', 2)).toBe(9);
   });
 
   xtest('can get the largest product of 3', () => {
-    expect(new Series('1027839564').largestProduct(3)).toBe(270);
+    expect(largestProduct('1027839564', 3)).toBe(270);
   });
 
   xtest('can get the largest product of a big number', () => {
@@ -23,46 +23,46 @@ describe('Series', () => {
       + '99244429282308634656748139191231628245861786645835912456652947654568284891288314260769004224219022671055626321111'
       + '10937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636'
       + '899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450';
-    expect(new Series(largeNumber).largestProduct(13)).toBe(23514624000);
+    expect(largestProduct(largeNumber, 13)).toBe(23514624000);
   });
 
   xtest('returns 0 if all digits are zero', () => {
-    expect(new Series('0000').largestProduct(2)).toBe(0);
+    expect(largestProduct('0000', 2)).toBe(0);
   });
 
   xtest('returns 0 if all spans contain zero', () => {
-    expect(new Series('99099').largestProduct(3)).toBe(0);
+    expect(largestProduct('99099', 3)).toBe(0);
   });
 
   xtest('rejects invalid character in input', () => {
     expect(() => {
-      new Series('1234a5').largestProduct('2');
+      largestProduct('1234a5', 2);
     }).toThrow(new Error('Invalid input.'));
   });
 
   xtest('rejects negative span', () => {
     expect(() => {
-      new Series('12345').largestProduct(-1);
+      largestProduct('12345', -1);
     }).toThrow(new Error('Invalid input.'));
   });
 
   xtest('returns 1 for empty string and zero slice length', () => {
-    expect(new Series('').largestProduct(0)).toBe(1);
+    expect(largestProduct('', 0)).toBe(1);
   });
 
   xtest('returns 1 for non-empty string and zero slice length', () => {
-    expect(new Series('123').largestProduct(0)).toBe(1);
+    expect(largestProduct('123', 0)).toBe(1);
   });
 
   xtest('throws an error for slices bigger than the number', () => {
     expect(() => {
-      new Series('123').largestProduct(4);
+      largestProduct('123', 4);
     }).toThrow(new Error('Slice size is too big.'));
   });
 
   xtest('throws an error for empty string and non-zero slice length', () => {
     expect(() => {
-      new Series('').largestProduct(1);
+      largestProduct('', 1);
     }).toThrow(new Error('Slice size is too big.'));
   });
 });

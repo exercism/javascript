@@ -1,49 +1,39 @@
-export default class Series {
-  constructor(numberString) {
-    if (numberString.match('[^0-9]')) {
-      throw new Error('Invalid input.');
-    }
+const getDigits = numberString => [...numberString].map(digit => parseInt(digit, 10));
 
-    this.numberString = numberString;
-    this.digits = this.getDigits();
+const slices = (digits, sliceSize) => {
+  const result = [];
+  let slice = [];
+
+  if (sliceSize > digits.length) {
+    throw new Error('Slice size is too big.');
   }
 
-  getDigits() {
-    return [...this.numberString].map(digit => parseInt(digit, 10));
+  for (let i = 0; i < digits.length - sliceSize + 1; i += 1) {
+    for (let j = 0; j < sliceSize; j += 1) {
+      slice.push(digits[i + j]);
+    }
+    result.push(slice);
+    slice = [];
   }
 
-  largestProduct(size) {
-    if (size < 0) {
-      throw new Error('Invalid input.');
-    }
+  return result;
+};
 
-    let product;
-    let max = 0;
-    this.slices(size).forEach((slice) => {
-      product = slice.reduce((a, b) => a * b, 1);
-      if (product > max) {
-        max = product;
-      }
-    });
-    return max;
+export const largestProduct = (numberString, size) => {
+  if (numberString.match('[^0-9]')) {
+    throw new Error('Invalid input.');
+  }
+  if (size < 0) {
+    throw new Error('Invalid input.');
   }
 
-  slices(sliceSize) {
-    const result = [];
-    let slice = [];
-
-    if (sliceSize > this.digits.length) {
-      throw new Error('Slice size is too big.');
+  let product;
+  let max = 0;
+  slices(getDigits(numberString), size).forEach((slice) => {
+    product = slice.reduce((a, b) => a * b, 1);
+    if (product > max) {
+      max = product;
     }
-
-    for (let i = 0; i < this.digits.length - sliceSize + 1; i += 1) {
-      for (let j = 0; j < sliceSize; j += 1) {
-        slice.push(this.digits[i + j]);
-      }
-      result.push(slice);
-      slice = [];
-    }
-
-    return result;
-  }
-}
+  });
+  return max;
+};
