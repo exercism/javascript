@@ -41,6 +41,7 @@ const PATTERNS = {
     '   '],
 };
 export default class Parser {
+  // eslint-disable-next-line class-methods-use-this
   convert(text) {
     return Parser.splitIntoRows(text).map(Parser.valuesInRow).join(',');
   }
@@ -54,7 +55,7 @@ export default class Parser {
     const lines = text.split('\n');
     for (let rowNumber = 0; rowNumber < lines.length; rowNumber += 4) {
       let row = '';
-      for (let rowLine = 0; rowLine < 4; rowLine++) {
+      for (let rowLine = 0; rowLine < 4; rowLine += 1) {
         row += `${lines[rowNumber + rowLine]}\n`;
       }
       rows.push(row.slice(0, -1));
@@ -63,11 +64,11 @@ export default class Parser {
   }
 
   static splitIntoDigits(row) {
-    const digits = [],
-      rows = row.split('\n');
+    const digits = [];
+    const rows = row.split('\n');
     for (let digitNumber = 0; digitNumber < rows[0].length; digitNumber += 3) {
       let digit = '';
-      for (let rowNumber = 0; rowNumber < rows.length; rowNumber++) {
+      for (let rowNumber = 0; rowNumber < rows.length; rowNumber += 1) {
         digit += rows[rowNumber].substr(digitNumber, 3);
       }
       digits.push(digit);
@@ -76,13 +77,13 @@ export default class Parser {
   }
 
   static getDigit(text) {
-    for (const digit in PATTERNS) {
-      if (PATTERNS.hasOwnProperty(digit)) {
-        if (PATTERNS[digit].join('') === text) {
-          return digit;
-        }
-      }
+    const digit = Object
+      .values(PATTERNS)
+      .map(x => x.join(''))
+      .indexOf(text);
+    if (digit === -1) {
+      return '?';
     }
-    return '?';
+    return digit;
   }
 }
