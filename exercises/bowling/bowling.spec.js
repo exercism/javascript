@@ -65,7 +65,7 @@ describe('Bowling', () => {
       expect(bowling.score()).toEqual(81);
     });
 
-    xtest('a strike in the last frame gets a two roll bonues that is counted once', () => {
+    xtest('a strike in the last frame gets a two roll bonuses that is counted once', () => {
       const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1];
       const bowling = new Bowling();
       rolls.forEach((roll) => { bowling.roll(roll); });
