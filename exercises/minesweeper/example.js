@@ -42,20 +42,16 @@ function noDataPresent(rows) {
   return rows.length === 0 || rows[0].length === 0;
 }
 
-class Minesweeper {
-  static annotate(rows) {
-    if (noDataPresent(rows)) {
-      return rows;
-    }
-
-    const inputBoard = rows.map(row => [...row]);
-
-    return stringify(
-      inputBoard.map(
-        (row, x) => [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y)),
-      ),
-    );
+export function annotate(rows) {
+  if (noDataPresent(rows)) {
+    return rows;
   }
-}
 
-export default Minesweeper;
+  const inputBoard = rows.map(row => [...row]);
+
+  return stringify(
+    inputBoard.map(
+      (row, x) => [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y)),
+    ),
+  );
+}
