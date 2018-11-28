@@ -1,4 +1,5 @@
-export const primeFactors = (num) => {
+export const primeFactors = (n) => {
+  let num = n;
   const factors = [];
   let currentFactor = 2;
 
@@ -8,7 +9,7 @@ export const primeFactors = (num) => {
       num /= currentFactor;
       currentFactor = 2;
     } else {
-      currentFactor++;
+      currentFactor += 1;
     }
   }
   return factors;
