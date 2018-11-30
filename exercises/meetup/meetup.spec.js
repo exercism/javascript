@@ -1,4 +1,4 @@
-import meetupDay from './meetup';
+import { meetupDay } from './meetup';
 
 describe('meetupDay()', () => {
   test('test monteenth of may 2013', () => {
