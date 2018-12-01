@@ -32,7 +32,7 @@ function find(ary, callback) {
   throw new Error('Day not found!');
 }
 
-export default function meetupDay(year, month, dayOfWeek, which) {
+export function meetupDay(year, month, dayOfWeek, which) {
   const candidates = getCandidates(year, month, dayOfWeek);
   let res;
 
