@@ -13,10 +13,12 @@ export default function (hour, minute) {
   }
 
   function adjustTime(delta) {
-    delta = Math.abs(delta) >= MINUTESPERDAY ? delta % MINUTESPERDAY : delta;
+    const newDelta = Math.abs(delta) >= MINUTESPERDAY
+      ? delta % MINUTESPERDAY
+      : delta;
 
     const currentMinutes = clock.hour * 60 + clock.minute;
-    let newMinutes = (currentMinutes + delta) % MINUTESPERDAY;
+    let newMinutes = (currentMinutes + newDelta) % MINUTESPERDAY;
 
     newMinutes = newMinutes < 0 ? newMinutes += MINUTESPERDAY : newMinutes;
 
@@ -31,6 +33,9 @@ export default function (hour, minute) {
     toString: () => `${formatNum(clock.hour)}:${formatNum(clock.minute)}`,
     plus(minutes) { adjustTime(minutes); return this; },
     minus(minutes) { adjustTime(-minutes); return this; },
-    equals: otherClock => clock.hour === otherClock.clock.hour && clock.minute === otherClock.clock.minute,
+    equals: otherClock => (
+      clock.hour === otherClock.clock.hour
+      && clock.minute === otherClock.clock.minute
+    ),
   };
 }

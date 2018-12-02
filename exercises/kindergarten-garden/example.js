@@ -13,7 +13,7 @@ const defaultChildren = [
   'Larry',
 ];
 
-const plants = {
+const plantCodes = {
   G: 'grass',
   V: 'violets',
   R: 'radishes',
@@ -31,7 +31,7 @@ function getPlants(pots, index) {
 }
 
 function parse(diagram) {
-  return diagram.split('\n').map(row => [...row].map(sign => plants[sign]));
+  return diagram.split('\n').map(row => [...row].map(sign => plantCodes[sign]));
 }
 
 class Garden {

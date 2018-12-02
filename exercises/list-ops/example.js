@@ -10,8 +10,11 @@ class List {
     return this;
   }
 
-  concat(otherList) {
-    return this.append(otherList);
+  concat(listOfLists) {
+    for (const list of listOfLists.values) {
+      this.append(list);
+    }
+    return this;
   }
 
   filter(operation) {

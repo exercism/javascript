@@ -5,8 +5,10 @@ class RotationalCipher {
       const isAlpha = c.match(/[a-z]/i);
       const charShift = (isUpper ? 'A' : 'a').charCodeAt(0);
 
-      return isAlpha ?
-        String.fromCharCode((((c.charCodeAt(0) - charShift) + shift) % 26) + charShift) : c;
+      return isAlpha
+        ? String.fromCharCode((((
+          c.charCodeAt(0) - charShift) + shift) % 26) + charShift)
+        : c;
     }).join('');
   }
 }

@@ -1,5 +1,5 @@
-function isValid(number) {
-  number = number.replace(/\s/g, '');
+function isValid(num) {
+  const number = num.replace(/\s/g, '');
   const digits = [...number];
 
   const sum = digits
