@@ -1,4 +1,4 @@
-import toRoman from './roman-numerals';
+import { toRoman } from './roman-numerals';
 
 describe('toRoman()', () => {
   test('converts 1', () => expect(toRoman(1)).toEqual('I'));
