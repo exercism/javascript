@@ -29,5 +29,5 @@ const letterScores = {
 
 const letterScore = letter => letterScores[letter] || 0;
 
-export default word => [...word.toLowerCase()]
+export const score = word => [...word.toLowerCase()]
   .reduce((sum, currChar) => sum + letterScore(currChar), 0);

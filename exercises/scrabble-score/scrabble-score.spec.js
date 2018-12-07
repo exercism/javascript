@@ -1,4 +1,4 @@
-import score from './scrabble-score';
+import { score } from './scrabble-score';
 
 describe('Scrabble', () => {
   test('lowercase letter', () => {
