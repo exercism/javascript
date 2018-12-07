@@ -1,4 +1,4 @@
-function toRoman(number) {
+export function toRoman(number) {
   let result = '';
   let remainingNumber = number;
   const mappings = [
@@ -26,5 +26,3 @@ function toRoman(number) {
 
   return result;
 }
-
-export default toRoman;
