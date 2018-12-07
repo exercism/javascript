@@ -41,6 +41,21 @@ describe('Pig Latin', () => {
     expect(translator.translate('school')).toEqual('oolschay');
   });
 
+  xtest('y is treated like a consonant at the beginning of a word', () => {
+    expect(translator.translate('yellow'))
+      .toEqual('ellowyay');
+  });
+
+  xtest('y is treated like a vowel at the end of a consonant cluster', () => {
+    expect(translator.translate('rhythm'))
+      .toEqual('ythmrhay');
+  });
+
+  xtest('y as second letter in two letter word', () => {
+    expect(translator.translate('my'))
+      .toEqual('ymay');
+  });
+
   xtest('translates a phrase', () => {
     expect(translator.translate('quick fast run'))
       .toEqual('ickquay astfay unray');
