@@ -19,8 +19,8 @@ export default class Deque {
       this.head = this.head.next;
       this.head.prev = null;
     } else {
-      // eslint-disable-next-line no-multi-assign
-      this.head = this.tail = null;
+      this.tail = null;
+      this.head = this.tail;
     }
 
     return value;
@@ -48,8 +48,8 @@ export default class Deque {
       this.tail = this.tail.prev;
       this.tail.next = null;
     } else {
-      // eslint-disable-next-line no-multi-assign
-      this.head = this.tail = null;
+      this.tail = null;
+      this.head = this.tail;
     }
 
     return value;
