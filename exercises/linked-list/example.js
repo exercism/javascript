@@ -14,12 +14,13 @@ export default class Deque {
       return undefined;
     }
 
-    const value = this.head.value;
+    const { value } = this.head;
     if (this.head.next) {
       this.head = this.head.next;
       this.head.prev = null;
     } else {
-      this.head = this.tail = null;
+      this.tail = null;
+      this.head = this.tail;
     }
 
     return value;
@@ -42,12 +43,13 @@ export default class Deque {
       return undefined;
     }
 
-    const value = this.tail.value;
+    const { value } = this.tail;
     if (this.tail.prev) {
       this.tail = this.tail.prev;
       this.tail.next = null;
     } else {
-      this.head = this.tail = null;
+      this.tail = null;
+      this.head = this.tail;
     }
 
     return value;
@@ -66,11 +68,11 @@ export default class Deque {
   }
 
   count() {
-    let count = 0,
-      element = this.head;
+    let count = 0;
+    let element = this.head;
 
     while (this.head && element) {
-      count++;
+      count += 1;
       element = element.next;
     }
     return count;
