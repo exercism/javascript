@@ -1,12 +1,13 @@
-const LANGUAGE_RULES_REGEXP = /^([^aeiou]?qu|[^aeiou]*)(.+)/;
+const VOWEL_SOUND_REGEXP = /^([aeiou]|xr|yt)/;
+const CONSONANT_SOUND_REGEXP = /^([^aeiou]+(?=y)|[^aeiou]?qu|[^aeiou]+)([a-z]+)/;
 
 function translateWord(word) {
-  const [, beginning, ending] = word.match(LANGUAGE_RULES_REGEXP);
-
-  if (beginning.length === 0) {
-    return `${word}ay`;
+  if (VOWEL_SOUND_REGEXP.test(word)) {
+      return `${word}ay`;
   }
-  return `${ending + beginning}ay`;
+
+  const newWord = word.replace(CONSONANT_SOUND_REGEXP, '$2$1');
+  return `${newWord}ay`;
 }
 
 const translator = {
