@@ -23,13 +23,13 @@
     },
     {
       "github_username": "matthewmorgan",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": true,
       "name": "Matt Morgan",
       "link_text": null,
       "link_url": "https://matthewmorgan.github.io/",
       "avatar_url": null,
-      "bio": "Learn, teach, build, repeat!"
+      "bio": "Learn, build, teach, repeat!"
     }
   ]
 }
