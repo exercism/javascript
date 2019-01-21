@@ -22,8 +22,9 @@ printLn('core')
 printLn('----')
 Object.keys(track).forEach(slug => {
     printLn(`├─ ${slug}`)
-    track[slug].forEach(side => {
-        printLn(`│  ├─ ${side.slug} (${side.difficulty})`)
+    track[slug].forEach((side, index, self) => {
+        junction = index === self.length - 1 ? '└─' : '├─'
+        printLn(`│  ${junction} ${side.slug} (${side.difficulty})`)
     })
     printLn('│')
 })
