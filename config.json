@@ -1215,7 +1215,7 @@
       "slug": "sieve",
       "uuid": "127287d1-ba44-4400-884a-6fe5f72e210f",
       "core": false,
-      "unlocked_by": "prime-factors",
+      "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -1261,7 +1261,7 @@
       "slug": "nth-prime",
       "uuid": "7ce09989-f202-4c3c-8b7e-72cef18808c3",
       "core": false,
-      "unlocked_by": "prime-factors",
+      "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -1276,7 +1276,7 @@
       "slug": "palindrome-products",
       "uuid": "f6799d10-0210-4c73-ac08-d5cac1a00ff3",
       "core": false,
-      "unlocked_by": "prime-factors",
+      "unlocked_by": "space-age",
       "difficulty": 7,
       "topics": [
         "algorithms",
@@ -1291,7 +1291,7 @@
       "slug": "sum-of-multiples",
       "uuid": "f7452f71-795b-40b6-847c-67ef4bb9db45",
       "core": false,
-      "unlocked_by": "prime-factors",
+      "unlocked_by": "secret-handshake",
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -1348,7 +1348,7 @@
       "slug": "change",
       "uuid": "cfa5741c-9fe9-4cb5-a322-d77ba8145f4b",
       "core": false,
-      "unlocked_by": "prime-factors",
+      "unlocked_by": "secret-handshake",
       "difficulty": 8,
       "topics": [
         "algorithms",
