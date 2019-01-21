@@ -683,6 +683,20 @@
       ]
     },
     {
+      "slug": "prime-factors",
+      "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "math"
+      ]
+    },
+    {
       "slug": "forth",
       "uuid": "e4035939-4375-4720-87ae-e613f925f013",
       "core": false,
@@ -1139,20 +1153,6 @@
         "strings"
       ],
       "deprecated": true
-    },
-    {
-      "slug": "prime-factors",
-      "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "integers",
-        "math"
-      ]
     },
     {
       "slug": "run-length-encoding",
