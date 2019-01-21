@@ -12,7 +12,7 @@ exports.tree = exercises.reduce((result, exercise) => {
     const tag = exercise.slug
     const item = {
         slug: tag,
-        difficulty: exercise.difficulty
+        difficulty: exercise.difficulty,
     }
 
     if (exercise.core) {
@@ -24,7 +24,8 @@ exports.tree = exercises.reduce((result, exercise) => {
 
         return {
             ...result,
-            __core: current.concat([item])
+            __core: current.concat([item]),
+            [tag]: result[tag] || []
         }
     }
 
