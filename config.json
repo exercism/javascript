@@ -169,7 +169,7 @@
       "uuid": "62d60b42-93bc-4de9-90d1-1ca18a847812",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 6,
       "topics": [
         "algorithms",
         "control_flow_conditionals",
