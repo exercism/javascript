@@ -3,7 +3,7 @@
   "maintainers": [
     {
       "github_username": "rchavarria",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": true,
       "name": "Rubén Chavarría",
       "link_text": "Here is where I blog",
