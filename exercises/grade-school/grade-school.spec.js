@@ -1,10 +1,10 @@
-import School from './grade-school';
+import { GradeSchool } from './grade-school';
 
 describe('School', () => {
   let school;
 
   beforeEach(() => {
-    school = new School();
+    school = new GradeSchool();
   });
 
   test('a new school has an empty roster', () => {
