@@ -1,4 +1,4 @@
-class Triangle {
+export class Triangle {
   constructor(rows) {
     this.rows = this.fillRows(rows);
     this.lastRow = this.rows[this.rows.length - 1];
@@ -18,5 +18,3 @@ class Triangle {
     return result;
   }
 }
-
-export default Triangle;
