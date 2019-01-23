@@ -3,23 +3,20 @@ function clone(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-let db;
-class School {
+export class GradeSchool {
   constructor() {
-    db = {};
+    this.db = {};
   }
 
   add(student, level) {
-    db[level] = this.grade(level).concat(student).sort();
+    this.db[level] = this.grade(level).concat(student).sort();
   }
 
   grade(level) {
-    return db[level] ? clone(db[level]).sort() : [];
+    return this.db[level] ? clone(this.db[level]).sort() : [];
   }
 
   roster() {
-    return clone(db);
+    return clone(this.db);
   }
 }
-
-export default School;
