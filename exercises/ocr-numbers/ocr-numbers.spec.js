@@ -1,10 +1,8 @@
-import Ocr from './ocr-numbers';
-
-const ocr = new Ocr();
+import { convert } from './ocr-numbers';
 
 describe('ocr', () => {
   test('recognizes zero', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + '| |\n'
       + '|_|\n'
@@ -13,7 +11,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes one', () => {
-    expect(ocr.convert(
+    expect(convert(
       '   \n'
       + '  |\n'
       + '  |\n'
@@ -22,7 +20,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes two', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + ' _|\n'
       + '|_ \n'
@@ -31,7 +29,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes three', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + ' _|\n'
       + ' _|\n'
@@ -40,7 +38,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes four', () => {
-    expect(ocr.convert(
+    expect(convert(
       '   \n'
       + '|_|\n'
       + '  |\n'
@@ -49,7 +47,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes five', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + '|_ \n'
       + ' _|\n'
@@ -58,7 +56,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes six', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + '|_ \n'
       + '|_|\n'
@@ -67,7 +65,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes seven', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + '  |\n'
       + '  |\n'
@@ -76,7 +74,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes eight', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + '|_|\n'
       + '|_|\n'
@@ -85,7 +83,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes nine', () => {
-    expect(ocr.convert(
+    expect(convert(
       ' _ \n'
       + '|_|\n'
       + ' _|\n'
@@ -94,7 +92,7 @@ describe('ocr', () => {
   });
 
   xtest('recognizes ten', () => {
-    expect(ocr.convert(
+    expect(convert(
       '    _ \n'
       + '  || |\n'
       + '  ||_|\n'
@@ -103,7 +101,7 @@ describe('ocr', () => {
   });
 
   xtest('identifies garble', () => {
-    expect(ocr.convert(
+    expect(convert(
       '   \n'
       + '| |\n'
       + '| |\n'
@@ -112,7 +110,7 @@ describe('ocr', () => {
   });
 
   xtest('converts 110101100', () => {
-    expect(ocr.convert(
+    expect(convert(
       '       _     _        _  _ \n'
       + '  |  || |  || |  |  || || |\n'
       + '  |  ||_|  ||_|  |  ||_||_|\n'
@@ -121,7 +119,7 @@ describe('ocr', () => {
   });
 
   xtest('identifies garble mixed in', () => {
-    expect(ocr.convert(
+    expect(convert(
       '       _     _           _ \n'
       + '  |  || |  || |     || || |\n'
       + '  |  | _|  ||_|  |  ||_||_|\n'
@@ -130,7 +128,7 @@ describe('ocr', () => {
   });
 
   xtest('converts 1234567890', () => {
-    expect(ocr.convert(
+    expect(convert(
       '    _  _     _  _  _  _  _  _ \n'
       + '  | _| _||_||_ |_   ||_||_|| |\n'
       + '  ||_  _|  | _||_|  ||_| _||_|\n'
@@ -139,7 +137,7 @@ describe('ocr', () => {
   });
 
   xtest('converts 123 456 789', () => {
-    expect(ocr.convert(
+    expect(convert(
       '    _  _ \n'
       + '  | _| _|\n'
       + '  ||_  _|\n'
