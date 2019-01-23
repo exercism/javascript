@@ -2,7 +2,7 @@ function Element(value) {
   return { value, next: null, prev: null };
 }
 
-export default class Deque {
+export class LinkedList {
   constructor() {
     this.size = 0;
     this.head = null;
