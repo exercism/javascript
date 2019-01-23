@@ -13,7 +13,7 @@ const generateName = () => {
   return name;
 };
 
-export default class Robot {
+export class Robot {
   constructor() {
     this.robotName = generateName();
   }
