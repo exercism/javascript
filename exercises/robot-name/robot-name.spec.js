@@ -18,17 +18,15 @@ const areSequential = (name1, name2) => {
 // Change these when adding / changing / removing tests in order to keep the
 // final test not exhausting all the names that can be generated.
 
-const NAMES_USED_IN_TESTS =
-    9     // beforeEach
-  + 3     // new Robot()
-  + 10003 // reset()
+const NAMES_USED_IN_TESTS = 9 // beforeEach
+  + 3 // new Robot()
+  + 10003; // reset()
 
-const TOTAL_NUMBER_OF_NAMES =
-    26    // A-Z
-  * 26    // A-Z
-  * 10    // 0-9
-  * 10    // 0-9
-  * 10    // 0-9
+const TOTAL_NUMBER_OF_NAMES = 26 // A-Z
+  * 26 // A-Z
+  * 10 // 0-9
+  * 10 // 0-9
+  * 10; // 0-9
 
 describe('Robot', () => {
   let robot;
@@ -112,4 +110,3 @@ describe('Robot', () => {
     expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS);
   });
 });
-
