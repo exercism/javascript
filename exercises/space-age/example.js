@@ -9,49 +9,9 @@ const EARTH_TO_OTHER_PLANETS = {
   neptune: 164.79132,
 };
 
-export class SpaceAge {
-  constructor(seconds) {
-    this.seconds = seconds;
-  }
+export const age = (planet, seconds) => {
+  const earthYears = seconds / 31557600;
+  const years = earthYears / EARTH_TO_OTHER_PLANETS[planet];
 
-  get earthYears() {
-    return this.seconds / 31557600;
-  }
-
-  yearsOnPlanet(planet) {
-    const years = this.earthYears / EARTH_TO_OTHER_PLANETS[planet];
-    return parseFloat(years.toFixed(2));
-  }
-
-  onMercury() {
-    return this.yearsOnPlanet('mercury');
-  }
-
-  onVenus() {
-    return this.yearsOnPlanet('venus');
-  }
-
-  onEarth() {
-    return this.yearsOnPlanet('earth');
-  }
-
-  onMars() {
-    return this.yearsOnPlanet('mars');
-  }
-
-  onJupiter() {
-    return this.yearsOnPlanet('jupiter');
-  }
-
-  onSaturn() {
-    return this.yearsOnPlanet('saturn');
-  }
-
-  onUranus() {
-    return this.yearsOnPlanet('uranus');
-  }
-
-  onNeptune() {
-    return this.yearsOnPlanet('neptune');
-  }
-}
+  return parseFloat(years.toFixed(2));
+};
