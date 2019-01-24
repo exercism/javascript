@@ -1,4 +1,4 @@
-export default function (hour, minute) {
+export const at = (hour, minute) => {
   const MINUTESPERDAY = 1440;
   const HOURSPERDAY = 24;
 
@@ -38,4 +38,4 @@ export default function (hour, minute) {
       && clock.minute === otherClock.clock.minute
     ),
   };
-}
+};

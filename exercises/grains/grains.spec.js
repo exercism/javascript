@@ -27,7 +27,7 @@
  * See its tests in this folder for a quick primer on how to use it! ( :
  */
 
-import Grains from './grains';
+import { Grains } from './grains';
 
 describe('Grains', () => {
   const grains = new Grains();

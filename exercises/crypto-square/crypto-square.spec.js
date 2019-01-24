@@ -1,4 +1,4 @@
-import Crypto from './crypto-square';
+import { Crypto } from './crypto-square';
 
 describe('Crypto', () => {
   test('normalize strange characters', () => {

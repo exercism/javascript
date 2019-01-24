@@ -1,4 +1,4 @@
-import Garden from './kindergarten-garden';
+import { Garden } from './kindergarten-garden';
 
 describe('Garden', () => {
   test('for Alice', () => {

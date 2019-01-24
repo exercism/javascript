@@ -25,7 +25,7 @@ function recursiveSearch(array, value, start, end) {
   return mid;
 }
 
-class BinarySearch {
+export class BinarySearch {
   constructor(array) {
     if (isSortedArray(array)) {
       this.array = array;
@@ -36,5 +36,3 @@ class BinarySearch {
     return recursiveSearch(this.array, value, 0, this.array.length);
   }
 }
-
-export default BinarySearch;

@@ -1,4 +1,4 @@
-class List {
+export class List {
   constructor(list = []) {
     this.list = list;
   }
@@ -25,5 +25,3 @@ function lengthDiff(one, two){
 function isSublist(one, two){
   return one.join().match(two.join());
 }
-
-export default List;

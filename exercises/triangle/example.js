@@ -1,4 +1,4 @@
-class Triangle {
+export class Triangle {
   constructor(...sides) {
     this.sides = sides;
   }
@@ -45,5 +45,3 @@ class Triangle {
     return new Set(this.sides).size;
   }
 }
-
-export default Triangle;

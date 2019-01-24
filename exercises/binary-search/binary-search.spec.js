@@ -1,4 +1,4 @@
-import BinarySearch from './binary-search';
+import { BinarySearch } from './binary-search';
 
 describe('BinarySearch', () => {
   const sortedArray = [1, 2, 3, 4, 5, 6];

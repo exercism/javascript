@@ -1,4 +1,4 @@
-import Trinary from './trinary';
+import { Trinary } from './trinary';
 
 describe('Trinary', () => {
   test('1 is decimal 1', () => {

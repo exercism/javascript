@@ -1,5 +1,4 @@
-
-export default class Say {
+export class Say {
   constructor() {
     this.smallNumbers = {
       0: 'zero',

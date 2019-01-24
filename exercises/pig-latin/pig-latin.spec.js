@@ -1,4 +1,4 @@
-import translator from './pig-latin';
+import { translator } from './pig-latin';
 
 describe('Pig Latin', () => {
   describe('ay is added to words that start with vowels', () => {

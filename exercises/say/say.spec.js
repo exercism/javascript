@@ -1,4 +1,4 @@
-import Say from './say';
+import { Say } from './say';
 
 describe('say', () => {
   const say = new Say();

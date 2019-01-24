@@ -1,4 +1,4 @@
-import TwoBucket from './two-bucket';
+import { TwoBucket } from './two-bucket';
 
 describe('TwoBucket', () => {
   describe('works for input of 3, 5, 1', () => {

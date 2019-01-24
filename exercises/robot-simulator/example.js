@@ -5,7 +5,7 @@ export class InvalidInputError extends Error {
   }
 }
 
-class Robot {
+export class Robot {
   constructor() {
     this.coordinates = [0, 0];
     this.bearing = 'north';
@@ -87,6 +87,3 @@ class Robot {
     });
   }
 }
-
-
-export default Robot;

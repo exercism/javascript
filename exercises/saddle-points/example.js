@@ -9,7 +9,7 @@ function findSaddlePoints(rows, rowMaxs, colMins) {
   }, []);
 }
 
-export default class Matrix {
+export class Matrix {
   constructor(data) {
     this.rows = [];
     this.columns = [];

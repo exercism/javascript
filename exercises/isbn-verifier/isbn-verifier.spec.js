@@ -1,4 +1,4 @@
-import ISBN from './isbn-verifier.js';
+import { ISBN } from './isbn-verifier.js';
 
 describe('ISBN Verifier Test Suite', () => {
   test('valid isbn number', () => {

@@ -5,7 +5,7 @@ const PRIMES = [
 ];
 /* eslint-enable max-len */
 
-export default class DiffieHellman {
+export class DiffieHellman {
   constructor(p, g) {
     if (!DiffieHellman.validateInitialArguments(p, g)) {
       throw Error('Constructor arguments are out of range or non-prime!');

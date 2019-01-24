@@ -10,7 +10,7 @@ function translateWord(word) {
   return `${newWord}ay`;
 }
 
-const translator = {
+export const translator = {
   translate(english) {
     return english
       .split(' ')
@@ -18,5 +18,3 @@ const translator = {
       .join(' ');
   },
 };
-
-export default translator;

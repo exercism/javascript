@@ -1,4 +1,4 @@
-function transform(input) {
+export const transform = (input) => {
   const output = {};
 
   Object.keys(input).forEach((key) => {
@@ -11,6 +11,4 @@ function transform(input) {
   });
 
   return output;
-}
-
-export default transform;
+};

@@ -1,4 +1,4 @@
-class Words {
+export class Words {
   count(input) {
     this.counts = {};
     this.words = input.match(/\S+/g);
@@ -11,5 +11,3 @@ class Words {
     return this.counts;
   }
 }
-
-export default Words;

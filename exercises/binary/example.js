@@ -1,6 +1,6 @@
 // classy solution, eh?
 
-class Binary {
+export class Binary {
   constructor(binary) {
     this.binary = binary.match(/^[01]*$/) ? parseInt(binary, 2) : 0;
   }
@@ -10,5 +10,3 @@ class Binary {
     return Number.isNaN(out) ? 0 : out;
   }
 }
-
-export default Binary;

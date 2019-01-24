@@ -1,4 +1,4 @@
-import BinarySearchTree from './binary-search-tree';
+import { BinarySearchTree } from './binary-search-tree';
 
 function recordAllData(bst) {
   const out = [];

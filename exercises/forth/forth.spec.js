@@ -1,4 +1,4 @@
-import Forth from './forth';
+import { Forth } from './forth';
 
 describe('Forth', () => {
   let forth;

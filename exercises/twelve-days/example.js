@@ -1,4 +1,4 @@
-class TwelveDays {
+export class TwelveDays {
   constructor() {
     this.verseList = [
       'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.',
@@ -49,5 +49,3 @@ class TwelveDays {
     return song;
   }
 }
-
-export default TwelveDays;

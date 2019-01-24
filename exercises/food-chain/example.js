@@ -1,4 +1,4 @@
-export default class Song {
+export class Song {
   /**
    * @param {Number} number
    * verse number

@@ -1,4 +1,4 @@
-import Octal from './octal';
+import { Octal } from './octal';
 
 describe('octal', () => {
   test('1 is decimal 1', () => {

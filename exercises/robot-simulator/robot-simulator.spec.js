@@ -1,4 +1,4 @@
-import Robot, { InvalidInputError } from './robot-simulator';
+import { Robot, InvalidInputError } from './robot-simulator';
 
 describe('Robot', () => {
   const robot = new Robot();

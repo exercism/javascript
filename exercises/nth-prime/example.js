@@ -25,7 +25,7 @@ function generatePrimes(uptoNumber) {
     .map(p => p.number);
 }
 
-class Prime {
+export class Prime {
   nth(nthPrime) {
     if (nthPrime === 0) {
       throw new Error('Prime is not possible');
@@ -34,5 +34,3 @@ class Prime {
     return realPrimes[nthPrime - 1];
   }
 }
-
-export default Prime;

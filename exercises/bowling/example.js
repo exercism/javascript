@@ -1,4 +1,4 @@
-export default class Bowling {
+export class Bowling {
   constructor() {
     this.maxPins = 10;
     this.maxFrames = 10;

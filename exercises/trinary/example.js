@@ -1,6 +1,6 @@
 const BASE = 3;
 
-export default class Trinary {
+export class Trinary {
   constructor(decimal) {
     this.digits = [...decimal].reverse().map(Number);
   }

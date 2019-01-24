@@ -1,4 +1,4 @@
-import Rectangles from './rectangles.js';
+import { Rectangles } from './rectangles.js';
 
 describe('Rectangles', () => {
   test('no rows', () => {

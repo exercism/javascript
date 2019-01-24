@@ -1,4 +1,4 @@
-import RotationalCipher from './rotational-cipher';
+import { RotationalCipher } from './rotational-cipher';
 
 describe('Rotational cipher', () => {
   test('rotate a by 0, same output as input', () => {

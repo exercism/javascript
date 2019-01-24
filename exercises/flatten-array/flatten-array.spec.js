@@ -1,4 +1,4 @@
-import Flattener from './flatten-array.js';
+import { Flattener } from './flatten-array.js';
 
 describe('FlattenArray', () => {
   const flattener = new Flattener();

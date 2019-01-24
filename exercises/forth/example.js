@@ -1,4 +1,4 @@
-class Forth {
+export class Forth {
   constructor(){
     this.stack = [];
     this.commands = Forth.basicCommands();
@@ -59,5 +59,3 @@ class Forth {
     };
   }
 }
-
-export default Forth;

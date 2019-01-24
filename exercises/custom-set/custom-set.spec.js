@@ -1,4 +1,4 @@
-import CustomSet from './custom-set';
+import { CustomSet } from './custom-set';
 
 describe('CustomSet', () => {
   describe('empty: returns true if the set contains no elements', () => {

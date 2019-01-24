@@ -1,4 +1,4 @@
-import Anagram from './anagram';
+import { Anagram } from './anagram';
 
 describe('Anagram', () => {
   test('no matches', () => {

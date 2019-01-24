@@ -28,7 +28,7 @@ const ACTIONS = [
   'belonged to',
 ];
 
-class House {
+export class House {
   static verse(verseNumber) {
     const lines = [];
     const totalLines = verseNumber;
@@ -58,5 +58,3 @@ class House {
     return lines;
   }
 }
-
-export default House;

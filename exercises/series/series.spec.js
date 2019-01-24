@@ -1,4 +1,4 @@
-import Series from './series';
+import { Series } from './series';
 
 describe('Series', () => {
   test('has digits (short)', () => {

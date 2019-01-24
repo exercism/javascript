@@ -1,4 +1,4 @@
-import DNA from './point-mutations';
+import { DNA } from './point-mutations';
 
 describe('DNA', () => {
   test('no difference between empty strands', () => {

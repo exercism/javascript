@@ -1,4 +1,4 @@
-import Allergies from './allergies';
+import { Allergies } from './allergies';
 
 describe('Allergies', () => {
   test('no allergies at all', () => {

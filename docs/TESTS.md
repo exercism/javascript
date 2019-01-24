@@ -28,10 +28,10 @@ $ npm run watch
 
 The skip method instructs the test suite to not run a test, this function could be used also under the aliases: `it.skip(name, fn) or xit(name, fn) or xtest(name, fn)`
 
-- Why they are skipped ? 
+- Why they are skipped ?
 So as to enable users to concentrate on one test at a time and enable one by one as they evolve the solution.
 
-- How to enable them ? 
+- How to enable them ?
 Change xtest to test.
 
 ```javascript
@@ -43,11 +43,11 @@ test('title cased phrases', () => {
 ## Making Your First JavaScript 2015 Module
 
 Usually, tests on this track will load your implementation by importing it as a
-JavaScript module: `import Bob from './bob.js';`. You just
+JavaScript module: `import { Bob } from './bob.js';`. You just
 need to export your implementation from the referenced file, `bob.js`:
 
 ```javascript
-export default class Bob {
+export class Bob {
   hey(message) {
 	//
 	// Your solution to the exercise goes here

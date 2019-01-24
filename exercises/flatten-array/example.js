@@ -1,4 +1,4 @@
-export default class Flattener {
+export class Flattener {
   flatten(arr) {
     return arr
       .reduce((acc, el) => (Array.isArray(el)

@@ -1,4 +1,4 @@
-export default class ComplexNumber {
+export class ComplexNumber {
   constructor(real, imag) {
     this.real = real;
     this.imag = imag;

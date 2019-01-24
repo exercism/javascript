@@ -1,4 +1,4 @@
-import translate from './protein-translation';
+import { translate } from './protein-translation';
 
 describe('ProteinTranslation', () => {
   test('Empty RNA has no proteins', () => {

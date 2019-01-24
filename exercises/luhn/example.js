@@ -25,7 +25,7 @@ function isValid(num) {
   return sum > 0 && sum % 10 === 0;
 }
 
-export default class Luhn {
+export class Luhn {
   constructor(number) {
     this.valid = isValid(number);
   }

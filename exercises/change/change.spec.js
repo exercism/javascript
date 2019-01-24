@@ -1,4 +1,4 @@
-import Change from './change';
+import { Change } from './change';
 
 describe('Change', () => {
   test('test change for 1 cent', () => {

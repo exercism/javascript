@@ -34,7 +34,7 @@ function parse(diagram) {
   return diagram.split('\n').map(row => [...row].map(sign => plantCodes[sign]));
 }
 
-class Garden {
+export class Garden {
   constructor(diagram, students) {
     this.students = students || defaultChildren;
     this.students.sort();
@@ -44,5 +44,3 @@ class Garden {
     });
   }
 }
-
-export default Garden;
