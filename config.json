@@ -35,7 +35,7 @@
       "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 2,
+      "difficulty": 1,
       "topics": [
         "time"
       ]
@@ -45,7 +45,7 @@
       "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "strings",
         "transforming"
@@ -143,7 +143,7 @@
       "uuid": "64637322-33bc-401f-8cec-1f9810a41f75",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 6,
+      "difficulty": 5,
       "topics": [
         "arrays",
         "maps",
