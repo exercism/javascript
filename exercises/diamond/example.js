@@ -1,4 +1,4 @@
-export default class Diamond {
+export class Diamond {
   makeDiamond(input) {
     const inputIndex = input.charCodeAt() - 65;
     let output = '';

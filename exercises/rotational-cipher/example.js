@@ -1,4 +1,4 @@
-class RotationalCipher {
+export class RotationalCipher {
   static rotate(text, shift) {
     return [...text].map((c) => {
       const isUpper = c.match(/[A-Z]/);
@@ -12,5 +12,3 @@ class RotationalCipher {
     }).join('');
   }
 }
-
-export default RotationalCipher;

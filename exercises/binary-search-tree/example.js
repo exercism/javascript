@@ -1,4 +1,4 @@
-class BinarySearchTree {
+export class BinarySearchTree {
   constructor(data) {
     this.data = data;
     this.left = undefined;
@@ -45,5 +45,3 @@ class BinarySearchTree {
     }
   }
 }
-
-export default BinarySearchTree;

@@ -1,4 +1,4 @@
-class List {
+export class List {
   constructor(arr) {
     this.values = arr || [];
   }
@@ -74,5 +74,3 @@ class List {
     return this;
   }
 }
-
-export default List;

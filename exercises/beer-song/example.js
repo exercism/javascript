@@ -27,7 +27,7 @@ function nextBottle(currentVerse) {
   return `${bottles(nextVerse(currentVerse)).toLowerCase()} of beer on the wall.\n`;
 }
 
-class BeerSong {
+export class BeerSong {
   static verse(number) {
     const line1 = `${bottles(number)} of beer on the wall, `;
     const line2 = `${bottles(number).toLowerCase()} of beer.\n`;
@@ -46,5 +46,3 @@ class BeerSong {
     return verses.join('\n');
   }
 }
-
-export default BeerSong;

@@ -34,7 +34,7 @@ class Candidate {
   }
 }
 
-export default class Change {
+export class Change {
   constructor() {
     this.candidates = [];
   }

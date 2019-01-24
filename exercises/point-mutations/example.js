@@ -1,4 +1,4 @@
-class DNA {
+export class DNA {
   constructor(nucleotides) {
     this.nucleotides = nucleotides;
   }
@@ -17,5 +17,3 @@ class DNA {
     return distance;
   }
 }
-
-export default DNA;

@@ -1,4 +1,4 @@
-export default class CustomSet {
+export class CustomSet {
   constructor(data = []) {
     this.data = {};
     data.forEach(el => this.add(el));

@@ -1,4 +1,4 @@
-import PhoneNumber from './phone-number';
+import { PhoneNumber } from './phone-number';
 
 describe('PhoneNumber()', () => {
   test('cleans the number', () => {

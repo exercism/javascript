@@ -2,7 +2,7 @@ const normalize = str => str.toLowerCase().split('').sort().join();
 const sameWord = (word, candidate) => word.toLowerCase() === candidate.toLowerCase();
 const isAnagram = (word, candiate) => normalize(word) === normalize(candiate);
 
-export default class Anagram {
+export class Anagram {
   constructor(word) {
     this.word = word;
   }

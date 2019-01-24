@@ -1,4 +1,4 @@
-import Board from './connect';
+import { Board } from './connect';
 
 describe('Judging a game of connect', () => {
   test('an empty board has no winner', () => {

@@ -1,4 +1,4 @@
-export default class Square {
+export class Crypto {
   constructor(input) {
     this.input = input;
   }

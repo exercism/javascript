@@ -5,7 +5,7 @@ const lastArgIsOptions = (args) => {
 
 const conclusion = (firstArg, qualifier = '') => `And all for the want of a ${qualifier}${firstArg}.`;
 
-const proverb = (...args) => {
+export const proverb = (...args) => {
   let options = {};
   if (lastArgIsOptions(args)) {
     options = args.pop();
@@ -19,5 +19,3 @@ const proverb = (...args) => {
 
   return chainOfEvents.join('\n');
 };
-
-export default proverb;

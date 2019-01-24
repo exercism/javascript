@@ -1,4 +1,4 @@
-import Triplet from './pythagorean-triplet';
+import { Triplet } from './pythagorean-triplet';
 
 describe('Triplet', () => {
   test('calculates the sum', () => {

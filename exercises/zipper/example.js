@@ -20,7 +20,7 @@ function rebuildTree(tree, trail) {
   return rebuildTree(fromTrail(tree, last), trail.slice(1));
 }
 
-class Zipper {
+export class Zipper {
   constructor(tree, trail) {
     this.tree = tree;
     this.trail = trail;
@@ -69,6 +69,3 @@ class Zipper {
     return new Zipper({ value: this.tree.value, left: this.tree.left, right }, this.trail);
   }
 }
-
-
-export default Zipper;

@@ -20,7 +20,7 @@ const ACID_PROTEIN_MAP = {
 
 const getProtein = codon => ACID_PROTEIN_MAP[codon] || 'INVALID';
 
-export default function translate(rnaStrand) {
+export const translate = (rnaStrand) => {
   const proteins = [];
 
   if (rnaStrand) {
@@ -42,4 +42,4 @@ export default function translate(rnaStrand) {
   }
 
   return proteins;
-}
+};

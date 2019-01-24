@@ -1,4 +1,4 @@
-class Rectangles {
+export class Rectangles {
   static count(diagram) {
     const rows = diagram.length;
     const cols = rows ? diagram[0].length : 0;
@@ -33,5 +33,3 @@ class Rectangles {
     return rectangles;
   }
 }
-
-export default Rectangles;

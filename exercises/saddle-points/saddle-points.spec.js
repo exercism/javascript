@@ -1,4 +1,4 @@
-import Matrix from './saddle-points';
+import { Matrix } from './saddle-points';
 
 describe('Matrix', () => {
   test('extracts a row', () => {

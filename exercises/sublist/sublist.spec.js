@@ -1,5 +1,4 @@
-import List from './sublist';
-
+import { List } from './sublist';
 
 describe('sublist', () => {
   test('two empty lists are equal', () => {

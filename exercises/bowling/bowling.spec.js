@@ -1,4 +1,4 @@
-import Bowling from './bowling';
+import { Bowling } from './bowling';
 
 describe('Bowling', () => {
   describe('Check game can be scored correctly.', () => {

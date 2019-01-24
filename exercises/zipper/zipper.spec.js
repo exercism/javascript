@@ -1,4 +1,4 @@
-import Zipper from './zipper';
+import { Zipper } from './zipper';
 
 // Tests adapted from `problem-specifications/zipper/canonical-data.json` @ v1.0.0
 

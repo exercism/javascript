@@ -1,4 +1,4 @@
-export default class PhoneNumber {
+export class PhoneNumber {
   constructor(number) {
     this.rawNumber = number;
   }

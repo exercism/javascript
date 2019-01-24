@@ -6,7 +6,7 @@ import BigInt from './big-integer';
  * chess board, starting with one grain on the first
  * square, and doubling with each successive square.
  */
-export default class Grains {
+export class Grains {
   /**
    * Gets the number of grains on the nth square
    *

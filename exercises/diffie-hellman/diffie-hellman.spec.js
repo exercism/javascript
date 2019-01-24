@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-import DiffieHellman from './diffie-hellman';
+import { DiffieHellman } from './diffie-hellman';
 
 describe('diffie-hellman', () => {
   const p = 23;

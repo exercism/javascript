@@ -1,4 +1,4 @@
-import House from './house';
+import { House } from './house';
 
 describe('House', () => {
   test('verse one - the house that jack built', () => {

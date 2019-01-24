@@ -1,4 +1,4 @@
-import Diamond from './diamond.js';
+import { Diamond } from './diamond.js';
 
 describe('Make diamond function', () => {
   const diamond = new Diamond();

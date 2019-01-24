@@ -2,7 +2,7 @@
  * "Player O" plays from top to bottom, "Player X" plays from left to right.
  * @param board
  */
-export default class {
+export class Board {
   constructor(board) {
     this.board = board.map(b => [...b]);
   }

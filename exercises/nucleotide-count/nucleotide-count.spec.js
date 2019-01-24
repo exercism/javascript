@@ -1,4 +1,4 @@
-import NucleotideCounts from './nucleotide-count';
+import { NucleotideCounts } from './nucleotide-count';
 
 describe('count all nucleotides in a strand', () => {
   test('empty strand', () => {

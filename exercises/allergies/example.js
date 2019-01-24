@@ -9,7 +9,7 @@ const possibleAllergies = [
   'cats',
 ];
 
-class Allergies {
+export class Allergies {
   constructor(allergenIndex) {
     this.allergenIndex = allergenIndex;
   }
@@ -23,5 +23,3 @@ class Allergies {
     return this.list().some(allergy => allergy === food);
   }
 }
-
-export default Allergies;

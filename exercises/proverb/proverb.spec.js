@@ -1,4 +1,4 @@
-import proverb from './proverb';
+import { proverb } from './proverb';
 
 describe('Proverb Test Suite', () => {
   test('a single consequence', () => {

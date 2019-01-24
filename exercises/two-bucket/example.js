@@ -1,4 +1,4 @@
-class TwoBucket {
+export class TwoBucket {
   constructor(x, y, z, starter) {
     this.starter = starter;
     this.x = x;
@@ -121,5 +121,3 @@ class TwoBucket {
     return moveCount + 1;
   }
 }
-
-export default TwoBucket;

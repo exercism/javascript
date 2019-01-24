@@ -1,6 +1,6 @@
 const count = (str, nuc) => [...str].filter(nucleotide => nucleotide === nuc).length;
 
-class NucleotideCounts {
+export class NucleotideCounts {
   static parse(strand) {
     if (strand.replace(/A|C|G|T/g, '').length) {
       throw new Error('Invalid nucleotide in strand');
@@ -9,5 +9,3 @@ class NucleotideCounts {
     }
   }
 }
-
-export default NucleotideCounts;

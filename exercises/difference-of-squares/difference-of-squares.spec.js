@@ -1,4 +1,4 @@
-import Squares from './difference-of-squares';
+import { Squares } from './difference-of-squares';
 
 describe('difference-of-squares', () => {
   const squares1 = new Squares(1);

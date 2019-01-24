@@ -1,4 +1,4 @@
-import transpose from './transpose';
+import { transpose } from './transpose';
 
 describe('Transpose', () => {
   test('empty string', () => {

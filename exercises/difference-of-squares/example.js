@@ -1,4 +1,4 @@
-export default class Squares {
+export class Squares {
   constructor(max) {
     this.max = max;
   }

@@ -1,5 +1,4 @@
-import List from './list-ops';
-
+import { List } from './list-ops';
 
 describe('append entries to a list and return the new list', () => {
   test('empty lists', () => {

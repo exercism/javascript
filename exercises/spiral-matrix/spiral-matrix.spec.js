@@ -1,4 +1,4 @@
-import SpiralMatrix from './spiral-matrix';
+import { SpiralMatrix } from './spiral-matrix';
 
 describe('Spiral Matrix', () => {
   test('empty spiral', () => {

@@ -1,4 +1,4 @@
-import TwelveDays from './twelve-days.js';
+import { TwelveDays } from './twelve-days.js';
 
 describe('TwelveDays', () => {
   let twelveDaysObject;

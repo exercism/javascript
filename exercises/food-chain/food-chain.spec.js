@@ -1,4 +1,4 @@
-import Song from './food-chain';
+import { Song } from './food-chain';
 
 describe('Food Chain', () => {
   let song;

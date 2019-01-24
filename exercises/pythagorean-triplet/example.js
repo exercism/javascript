@@ -1,4 +1,4 @@
-export default class Triplet {
+export class Triplet {
   constructor(a, b, c) {
     this.a = a;
     this.b = b;

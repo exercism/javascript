@@ -1,4 +1,4 @@
-import Prime from './nth-prime';
+import { Prime } from './nth-prime';
 
 describe('Prime', () => {
   const prime = new Prime();
