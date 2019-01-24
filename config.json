@@ -52,18 +52,14 @@
       ]
     },
     {
-      "slug": "bob",
-      "uuid": "a5bf36f0-5d3c-41d4-8d54-e37e484e59cd",
+      "slug": "space-age",
+      "uuid": "d9d757ed-ebe6-4d4a-aa73-f6834221cd54",
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "pattern_recognition",
-        "polymorfism",
-        "regular_expressions",
-        "strings",
-        "unicode"
+        "classes",
+        "floating_point_numbers"
       ]
     },
     {
@@ -83,28 +79,46 @@
       ]
     },
     {
-      "slug": "space-age",
-      "uuid": "d9d757ed-ebe6-4d4a-aa73-f6834221cd54",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-        "classes",
-        "floating_point_numbers"
-      ]
-    },
-    {
       "slug": "matrix",
       "uuid": "dd0b5e67-81f6-437e-8334-2ec0dfeb862a",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 4,
+      "difficulty": 3,
       "topics": [
         "arrays",
         "control_flow_conditionals",
         "control_flow_loops",
         "data_structures",
         "matrices",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "a5bf36f0-5d3c-41d4-8d54-e37e484e59cd",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "control_flow_conditionals",
+        "pattern_recognition",
+        "polymorfism",
+        "regular_expressions",
+        "strings",
+        "unicode"
+      ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "uuid": "99493160-4673-402f-acda-62db5378148d",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "math",
+        "strings",
         "text_formatting"
       ]
     },
@@ -137,6 +151,19 @@
       ]
     },
     {
+      "slug": "list-ops",
+      "uuid": "7d9db056-5398-41b6-af3b-9707f5eb0dbc",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 6,
+      "topics": [
+        "control_flow_loops",
+        "data_structures",
+        "lists",
+        "recursion"
+      ]
+    },
+    {
       "slug": "robot-name",
       "uuid": "03f4dfea-e6db-4754-b2c8-ca06c8b81ef1",
       "core": true,
@@ -148,20 +175,6 @@
         "randomness",
         "regular_expressions",
         "sets"
-      ]
-    },
-    {
-      "slug": "pascals-triangle",
-      "uuid": "99493160-4673-402f-acda-62db5378148d",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "math",
-        "strings",
-        "text_formatting"
       ]
     },
     {
@@ -209,19 +222,6 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "games"
-      ]
-    },
-    {
-      "slug": "list-ops",
-      "uuid": "7d9db056-5398-41b6-af3b-9707f5eb0dbc",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 8,
-      "topics": [
-        "control_flow_loops",
-        "data_structures",
-        "lists",
-        "recursion"
       ]
     },
     {
