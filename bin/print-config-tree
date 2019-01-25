@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+const actions = require('./generate-config-tree')
+
+const { tree, TAG_BONUS, TAG_CORE } = actions
+const { [TAG_BONUS]: __bonus, [TAG_CORE]: __core, ...track } = tree
+
+function printLn(line) {
+    process.stdout.write(`${line}\n`)
+}
+
+function printList(items) {
+    items.forEach(item => {
+        printLn(`- ${item.slug} (${item.difficulty})`)
+    })
+}
+
+printLn('Core (matches config.json) of this track:')
+printList(__core)
+printLn('\n')
+printLn('core')
+printLn('----')
+Object.keys(track).forEach(slug => {
+    printLn(`├─ ${slug}`)
+    track[slug].forEach((side, index, self) => {
+        junction = index === self.length - 1 ? '└─' : '├─'
+        printLn(`│  ${junction} ${side.slug} (${side.difficulty})`)
+    })
+    printLn('│')
+})
+
+printLn('bonus')
+printLn('----')
+printList(__bonus)

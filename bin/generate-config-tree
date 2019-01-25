@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const { exercises } = require('../config.json')
+const TAG_CORE = '__core'
+const TAG_BONUS = '__bonus'
+
+// node inter-opt exports
+exports.TAG_CORE = TAG_CORE
+exports.TAG_BONUS = TAG_BONUS
+
+exports.tree = exercises.reduce((result, exercise) => {
+    const tag = exercise.slug
+    const item = {
+        slug: tag,
+        difficulty: exercise.difficulty,
+    }
+
+    if (exercise.core) {
+        const current = result[TAG_CORE] || []
+
+        if (result[tag]) {
+            console.warn(`${tag} is not ordered correctly in config.json`)
+        }
+
+        return {
+            ...result,
+            __core: current.concat([item]),
+            [tag]: result[tag] || []
+        }
+    }
+
+    const parent = exercise.unlocked_by || TAG_BONUS
+    const current = result[parent] || []
+    return { ...result, [parent]: current.concat([item]) }
+}, {})
