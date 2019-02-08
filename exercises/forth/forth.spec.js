@@ -194,7 +194,7 @@ describe('Forth', () => {
     xtest('can override other user-defined words', () => {
       forth.evaluate(': foo dup ;');
       forth.evaluate(': foo dup dup ;');
-      forth.evaluate( '1 foo');
+      forth.evaluate('1 foo');
       expect(forth.stack).toEqual([1, 1, 1]);
     });
     xtest('can override built-in words', () => {
