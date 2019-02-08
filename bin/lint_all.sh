@@ -11,7 +11,6 @@ do
     case "${param}" in
         -v|--version)
             echo "${script_name}" version ${script_version}
-            echo "Copyright (C) xarxziux 2018-9"
             exit 0
             ;;
         -h|--help)
