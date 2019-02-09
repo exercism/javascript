@@ -10,7 +10,7 @@ const Sum = (factors) => {
       }
     });
 
-    return Object.keys(multiples).reduce((prev, curr) => prev += multiples[curr], 0);
+    return Object.keys(multiples).reduce((prev, curr) => prev + multiples[curr], 0);
   };
 
   return self;
