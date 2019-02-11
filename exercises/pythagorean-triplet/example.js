@@ -18,6 +18,7 @@ export class Triplet {
   }
 
   static where(conditions) {
+    // eslint-disable-next-line no-use-before-define
     return new Triplets(conditions).toArray();
   }
 }
@@ -32,9 +33,9 @@ class Triplets {
   toArray() {
     let triplet;
     const triplets = [];
-    for (let a = this.min; a < this.max - 1; a++) {
-      for (let b = a + 1; b < this.max; b++) {
-        for (let c = b + 1; c <= this.max; c++) {
+    for (let a = this.min; a < this.max - 1; a += 1) {
+      for (let b = a + 1; b < this.max; b += 1) {
+        for (let c = b + 1; c <= this.max; c += 1) {
           triplet = new Triplet(a, b, c);
           if (this.isDesired(triplet)) {
             triplets.push(triplet);
