@@ -116,8 +116,13 @@ describe('Substitution cipher', () => {
     expect(cipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz');
   });
 
-  xtest('can handle messages longer than the key', () => {
+  xtest('can encode messages longer than the key', () => {
     expect(new Cipher('abc').encode('iamapandabear'))
       .toEqual('iboaqcnecbfcr');
+  });
+
+  xtest('can decode messages longer than the key', () => {
+    expect(new Cipher('abc').decode('iboaqcnecbfcr'))
+      .toEqual('iamapandabear');
   });
 });
