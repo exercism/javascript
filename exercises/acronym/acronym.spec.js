@@ -22,7 +22,7 @@ describe('Acronyms are produced from', () => {
   });
   
   xtest('long phrases', () => {
-    expect(parse('Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me')
+    expect(parse('Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me'))
        .toEqual('ROTFLSHTMDCOALM');
    });
 
