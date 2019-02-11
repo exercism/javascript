@@ -20,11 +20,11 @@ describe('Acronyms are produced from', () => {
   xtest('phrases with punctuation without whitespace', () => {
     expect(parse('Complementary metal-oxide semiconductor')).toEqual('CMOS');
   });
-  
+
   xtest('long phrases', () => {
     expect(parse('Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me'))
-       .toEqual('ROTFLSHTMDCOALM');
-   });
+      .toEqual('ROTFLSHTMDCOALM');
+  });
 
   xtest('phrases with consecutive delimiters', () => {
     expect(parse('Something - I made up from thin air')).toEqual('SIMUFTA');
