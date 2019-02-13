@@ -24,28 +24,27 @@ const decodeOne = (buf) => {
   return val >>> 0; // convert to unsigned 32-bit
 };
 
-export default {
-  encode: (data) => {
-    let buf = [];
+export const encode = (data) => {
+  let buf = [];
 
-    for (let i = 0; i < data.length; i++) {
-      buf = buf.concat(encodeOne(data[i]));
-    }
-    return buf;
-  },
-  decode: (data) => {
-    let start = 0;
-    const vals = [];
-
-    for (let i = 0; i < data.length; i++) {
-      if (~data[i] & CONT_BITS) {
-        vals.push(decodeOne(data.slice(start, i + 1)));
-        start = i + 1;
-      }
-    }
-    if (start < data.length) {
-      throw new Error('Incomplete sequence');
-    }
-    return vals;
+  for (let i = 0; i < data.length; i++) {
+    buf = buf.concat(encodeOne(data[i]));
   }
+  return buf;
+}
+
+export const decode = (data) => {
+  let start = 0;
+  const vals = [];
+
+  for (let i = 0; i < data.length; i++) {
+    if (~data[i] & CONT_BITS) {
+      vals.push(decodeOne(data.slice(start, i + 1)));
+      start = i + 1;
+    }
+  }
+  if (start < data.length) {
+    throw new Error('Incomplete sequence');
+  }
+  return vals;
 }
