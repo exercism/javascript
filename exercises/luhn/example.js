@@ -1,13 +1,13 @@
-function isValid(num) {
-  const number = num.replace(/\s/g, '');
-  const digits = [...number];
+function isValid(number) {
+  const trimmed = number.replace(/\s/g, '');
+  const digits = [...trimmed];
 
   const sum = digits
     // convert to integers
     .map(d => parseInt(d, 10))
-    // double even positions (odd indexes)
+    // double the second digits, starting from right
     .map((d, i) => {
-      if (i % 2 !== 0) {
+      if ((i + digits.length) % 2 === 0) {
         return d * 2;
       }
       return d;
@@ -20,9 +20,9 @@ function isValid(num) {
       return d;
     })
     // sum all digits
-    .reduce((d, acc) => d + acc, 0);
+    .reduce((acc, d) => acc + d, 0);
 
-  return sum > 0 && sum % 10 === 0;
+  return digits.length > 1 && sum % 10 === 0;
 }
 
 export class Luhn {
