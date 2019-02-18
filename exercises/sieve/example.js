@@ -27,6 +27,4 @@ function sieve(n) {
   return primes;
 }
 
-export default function (n) {
-  this.primes = sieve(n);
-}
+export const primes = n => sieve(n);
