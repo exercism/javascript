@@ -26,7 +26,7 @@ function placePieces(self) {
   board[(self.white[0] * W * 2) + (self.white[1] * 2)] = 'W';
 }
 
-function QueenAttack (params = STARTING) {
+export const QueenAttack = (params = STARTING) => {
   const self = this instanceof QueenAttack ? this : Object.getPrototypeOf(QueenAttack);
   if (samePosition(params)) {
     throw new Error('Queens cannot share the same space');
@@ -48,5 +48,3 @@ function QueenAttack (params = STARTING) {
 
   return self;
 }
-
-export default QueenAttack;
