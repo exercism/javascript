@@ -1,6 +1,6 @@
 const isPalindrome = num => num.toString().split('').reverse().join('') === num.toString();
 
-const Palindromes = (params) => {
+export const generatePalindrome = (params) => {
   let maxFactor,
     minFactor,
     maxProduct,
@@ -34,5 +34,3 @@ const Palindromes = (params) => {
     },
   };
 };
-
-export default Palindromes;
