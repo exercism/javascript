@@ -6,7 +6,7 @@ describe('Palindrome', () => {
     const largest = palindromes.largest;
 
     expect(largest.value).toEqual(9);
-    const containsMatch = [[3, 3], [1, 9]].filter(el => numericalArraysMatch(el, [3, 3])).length > 0;
+    const containsMatch = [[3, 3], [1, 9]].filter(el => numericalArraysMatch(el, largest.factors)).length > 0;
     expect(containsMatch).toBe(true);
   });
 
