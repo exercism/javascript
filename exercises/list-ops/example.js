@@ -1,76 +1,95 @@
-export class List {
-  constructor(arr) {
-    this.values = arr || [];
+const Null = {
+  get value() { return undefined },
+  get next() { return this },
+  get values() { return [] },
+
+  get() { return this.value },
+  push(item) { return new Cons(item, this) },
+  length() { return 0 },
+  append(other) { return other },
+  concat() { return this },
+  forEach() { /* done */ },
+  foldl(_, initial) { return initial },
+  foldr(_, initial) { return initial },
+  filter() { return Null },
+  reverse() { return this },
+  map() { return this },
+}
+
+class Cons {
+  static fromArray([head, ...tail]) {
+    if (head === undefined) {
+      return Null
+    }
+
+    return new Cons(head, Cons.fromArray(tail || []))
   }
 
-  append(otherList) {
-    for (const el of otherList.values) {
-      this.values.push(el);
-    }
-    return this;
+  constructor(value, next = Null) {
+    this.value = value
+    this.next = next
   }
 
-  concat(listOfLists) {
-    for (const list of listOfLists.values) {
-      this.append(list);
-    }
-    return this;
+  get values() {
+    return [this.value, ...this.next.values]
   }
 
-  filter(operation) {
-    const filteredValues = [];
-    for (const el of this.values) {
-      if (operation(el)) {
-        filteredValues.push(el);
-      }
-    }
-    this.values = filteredValues;
-    return this;
+  get(i) {
+    return i === 0
+      ? this.value
+      : this.next.get(i - 1)
+  }
+
+  push(item) {
+    this.next = this.next.push(item)
+    return this
   }
 
   length() {
-    let length = 0;
-    for (const el of this.values) {
-      length++;
-    }
-    return length;
+    return 1 + this.next.length()
   }
 
-  map(operation) {
-    const mappedValues = [];
-    for (const el of this.values) {
-      mappedValues.push(operation(el));
-    }
-    this.values = mappedValues;
-    return this;
+  append(other) {
+    return other.foldl((result, item) => result.push(item), this)
   }
 
-  foldl(operation, initialValue) {
-    let acc = initialValue;
-    for (const el of this.values) {
-      acc = operation(acc, el);
-    }
-    return acc;
+  concat(others) {
+    return others.foldl((result, other) => result.append(other), this)
   }
 
-  foldr(operation, initialValue) {
-    let acc = initialValue;
-    let index = this.length() - 1;
-    while (index >= 0) {
-      const el = this.values[index--];
-      acc = operation(acc, el);
-    }
-    return acc;
+  foldl(callback, initial = undefined) {
+    return this.next.foldl(callback, callback(initial, this.value))
+  }
+
+  forEach(callback) {
+    this.foldl((_, item) => callback(item))
+  }
+
+  foldr(callback, initial = undefined) {
+    return callback(this.next.foldr(callback, initial), this.value)
+  }
+
+  filter(predicate) {
+    return this.foldl(
+      (result, item) => (predicate(item) && result.push(item)) || result,
+      Null,
+    )
+  }
+
+  map(expression) {
+    return this.foldl(
+      (result, item) => result.push(expression(item)),
+      Null,
+    )
   }
 
   reverse() {
-    const numElements = this.length();
-    let finalIndex = numElements - 1;
-    for (let index = 0; index < numElements / 2; index++) {
-      const temp = this.values[index];
-      this.values[index] = this.values[finalIndex];
-      this.values[finalIndex--] = temp;
-    }
-    return this;
+    return this.next.reverse().push(this.value)
+  }
+}
+
+export class List {
+  constructor(values = []) {
+    return Cons.fromArray(values)
   }
 }
