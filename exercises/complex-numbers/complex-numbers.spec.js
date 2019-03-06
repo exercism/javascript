@@ -213,4 +213,12 @@ describe('Complex numbers', () => {
     expect(actual.real).toBeCloseTo(expected.real);
     expect(actual.imag).toBeCloseTo(expected.imag);
   });
+
+  xtest('Exponential of a number with real and imaginary part', () => {
+    const expected = new ComplexNumber(-2, 0);
+    const actual = new ComplexNumber(Math.LN2, Math.PI).exp;
+
+    expect(actual.real).toBeCloseTo(expected.real);
+    expect(actual.imag).toBeCloseTo(expected.imag);
+  });
 });
