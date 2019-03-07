@@ -78,9 +78,9 @@ describe('Anagram', () => {
     expect(matches).toEqual([]);
   });
 
-  xtest('capital word is not own anagram', () => {
+  xtest('words are not anagrams of themselves (case-insensitive)', () => {
     const subject = new Anagram('BANANA');
-    const matches = subject.matches(['Banana']);
+    const matches = subject.matches(['BANANA', 'Banana', 'banana']);
 
     expect(matches).toEqual([]);
   });
