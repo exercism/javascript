@@ -104,22 +104,6 @@ describe('Palindromes', () => {
   });
 });
 
-function factorsMatch(a, b) {
-  if (a.length !== b.length) {
-    return false;
-  }
-  const one = a.map(f => f.sort()).sort();
-  const two = b.map(f => f.sort()).sort();
-  for (let i = 0; i < one.length; i += 1) {
-    for (let j = 0; j < one[i].length; j += 1) {
-      if (one[i][j] !== two[i][j]) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-
 function sortFactors(factors) {
   return factors.map(f => f.sort()).sort();
 }
