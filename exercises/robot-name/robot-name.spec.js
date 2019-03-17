@@ -15,13 +15,6 @@ const areSequential = (name1, name2) => {
   return Math.abs(totalDiff) <= 1;
 };
 
-// Change these when adding / changing / removing tests in order to keep the
-// final test not exhausting all the names that can be generated.
-
-const NAMES_USED_IN_TESTS = 9 // beforeEach
-  + 3 // new Robot()
-  + 10003; // reset()
-
 const TOTAL_NUMBER_OF_NAMES = 26 // A-Z
   * 26 // A-Z
   * 10 // 0-9
@@ -33,6 +26,9 @@ describe('Robot', () => {
 
   beforeEach(() => {
     robot = new Robot();
+  });
+  afterEach(() => {
+    Robot.releaseNames();
   });
 
   test('has a name', () => {
@@ -99,14 +95,13 @@ describe('Robot', () => {
 
   // This test is optional.
   xtest('all the names can be generated', () => {
-    const NUMBER_OF_ROBOTS = TOTAL_NUMBER_OF_NAMES - NAMES_USED_IN_TESTS;
     const usedNames = new Set();
 
-    for (let i = 0; i < NUMBER_OF_ROBOTS; i += 1) {
+    for (let i = 0; i < TOTAL_NUMBER_OF_NAMES; i += 1) {
       const newRobot = new Robot();
       usedNames.add(newRobot.name);
     }
 
-    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS);
+    expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
   });
 });

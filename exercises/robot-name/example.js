@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-
 // This generates ALL the possible names in order to be able to satisfy the
 // final test. This also _ensures_ it _never_ has a duplicate.
 const LETTERS = [...'QWERTYUIOPASDFGHJKLZXCVBNM'];
@@ -61,5 +60,4 @@ export default class Robot {
   }
 }
 
-Robot.release_names = () => { shuffledPointer = -1; };
-Robot.reshuffle_names = shuffleNames;
+Robot.releaseNames = () => { shuffledPointer = -1; };
