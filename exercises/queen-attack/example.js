@@ -26,25 +26,28 @@ function placePieces(self) {
   board[(self.white[0] * W * 2) + (self.white[1] * 2)] = 'W';
 }
 
-export const QueenAttack = (params = STARTING) => {
-  const self = this instanceof QueenAttack ? this : Object.getPrototypeOf(QueenAttack);
-  if (samePosition(params)) {
-    throw new Error('Queens cannot share the same space');
-  }
-
-  self.black = params.black;
-  self.white = params.white;
-  self.board = constructBoard();
-  placePieces(self);
-
-  self.canAttack = () => {
-    if (self.black[0] === self.white[0] || self.black[1] === self.white[1]) {
-      return true;
+export class QueenAttack {
+  constructor(params = STARTING) {
+    if (samePosition(params)) {
+      throw new Error('Queens cannot share the same space');
     }
-    return Math.abs(self.black[0] - self.white[0]) === Math.abs(self.black[1] - self.white[1]);
-  };
 
-  self.toString = () => self.board.join('');
+    const self = this
 
-  return self;
+    self.black = params.black;
+    self.white = params.white;
+    self.board = constructBoard();
+    placePieces(self);
+
+    self.canAttack = () => {
+      if (self.black[0] === self.white[0] || self.black[1] === self.white[1]) {
+        return true;
+      }
+      return Math.abs(self.black[0] - self.white[0]) === Math.abs(self.black[1] - self.white[1]);
+    };
+
+    self.toString = () => self.board.join('');
+
+    return self;
+  }
 }

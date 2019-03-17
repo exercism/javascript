@@ -62,7 +62,7 @@ fi
 
 # To-do: this will probably fail if Jest is globally installed
 # instead of locally.
-jest_bin="../../node_modules/.bin/jest"
+jest_bin="../../../node_modules/.bin/jest"
 spec_file=$( ls *.spec.js )
 tmp_spec_file="tmp-${spec_file}"
 js_file=${spec_file//.spec./.}

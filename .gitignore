@@ -10,3 +10,4 @@ babel-output
 
 exercises/**/package-lock.json
 exercises/**/.eslintrc.track.json
+tmp_exercises

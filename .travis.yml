@@ -10,4 +10,4 @@ install:
 script:
 - bin/fetch-configlet
 - bin/configlet lint .
-- make test-travis
+- npm run test:ci

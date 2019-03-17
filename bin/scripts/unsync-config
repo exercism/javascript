@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-
 /**
- * This node js executable REMOVES the .eslintrc from the exercises, allowing
+ * This nodejs executable REMOVES the .eslintrc from the exercises, allowing
  * you to lint all the files with stricter rules.
  */
 
@@ -13,7 +12,8 @@
 const fs = require('fs')
 const path = require('path')
 
-const EXERCISES_PATH = path.join(__dirname, '..', 'exercises')
+const ROOT_DIR = path.join(__dirname, '..', '..')
+const EXERCISES_PATH = path.join(ROOT_DIR, 'exercises')
 const ESLINT_CONFIG_NAME = '.eslintrc.json'
 
 fs.readdir(EXERCISES_PATH, (directoryErr, directories) => {

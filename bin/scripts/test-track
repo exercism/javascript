@@ -1,0 +1,91 @@
+#!/usr/bin/env node
+
+/**
+ * This nodejs executable runs all the tests in this repository against the the
+ *
+ */
+
+/* eslint-disable no-console, no-restricted-syntax, no-multi-spaces, global-require */
+/* eslint-disable import/no-dynamic-require, import/no-extraneous-dependencies */
+
+// @ts-check
+
+const fs = require('fs')
+const path = require('path')
+
+// @ts-ignore
+const { copyExercise } = require('./test-exercise')
+
+const TEST_INTEGRITY  = process.argv.includes('--ci')
+
+const ROOT_DIR        = path.join(__dirname, '..', '..')
+const OUT_DIR         = path.join(ROOT_DIR, 'tmp_exercises')
+const EXERCISES_DIR   = path.join(ROOT_DIR, 'exercises')
+const EXERCISES       = fs.readdirSync(EXERCISES_DIR)
+const ROOT_BABEL      = TEST_INTEGRITY && fs.readFileSync(path.join(ROOT_DIR, 'babel.config.js')).toString()
+const ROOT_ESLINT     = TEST_INTEGRITY && fs.readFileSync(path.join(ROOT_DIR, '.eslintrc.track.json')).toString()
+
+// Get root package.json
+const PACKAGE_SKIP_KEYS       = ['version']
+const PACKAGE_INCLUDE_SCRIPTS = ['test', 'watch', 'lint', 'lint-test']
+const ROOT_PACKAGE            = require(path.join(ROOT_DIR, 'package.json'))
+
+// Remove expected differences
+PACKAGE_SKIP_KEYS.forEach((key) => { delete ROOT_PACKAGE[key] })
+ROOT_PACKAGE.scripts = PACKAGE_INCLUDE_SCRIPTS.reduce(
+  (result, script) => ({ ...result, [script]: ROOT_PACKAGE.scripts[script] }),
+  {},
+)
+
+function failIntegrity(file) {
+  const message = `
+    ${file} does not match main ${path.basename(file)}. \n
+    Please run 'make test' or '.bin/scripts/sync-config ${file}' locally and commit the results.
+  `
+
+  console.error(message)
+  process.stdout.write(message)
+  process.exit(3)
+}
+
+for (const excersize of EXERCISES) {
+  copyExercise(excersize)
+
+  if (TEST_INTEGRITY) {
+    console.log(`=> integrity ${excersize}`)
+    const exercisePackage = require(path.join(EXERCISES_DIR, excersize, 'package.json'))
+    PACKAGE_SKIP_KEYS.forEach((key) => { delete exercisePackage[key] })
+
+    if (JSON.stringify(exercisePackage) !== JSON.stringify(ROOT_PACKAGE)) {
+      failIntegrity(`${excersize}/package.json`)
+    }
+
+    const exerciseBabel = fs.readFileSync(path.join(EXERCISES_DIR, excersize, 'babel.config.js')).toString()
+    if (ROOT_BABEL !== exerciseBabel) {
+      failIntegrity(`${excersize}/babel.config.js`)
+    }
+
+    const exerciseEslint = fs.readFileSync(path.join(EXERCISES_DIR, excersize, '.eslintrc.json')).toString()
+    if (ROOT_ESLINT !== exerciseEslint) {
+      failIntegrity(`${excersize}/.eslintrc.json`)
+    }
+  }
+}
+
+// eslint-disable-next-line import/order
+const { execSync } = require('child_process')
+
+const relativeToOutDir = path.relative(process.cwd(), OUT_DIR)
+
+try {
+  // Can't use the full path because that won't work cross-env :\
+  execSync(`npx jest --bail ${path.basename(OUT_DIR)}`, { stdio: 'inherit' })
+
+  console.log(`=> removing ${relativeToOutDir}`)
+  execSync(`rm -rf ${relativeToOutDir}`, { stdio: 'inherit' })
+} catch (ignore) {
+  console.log(`=> removing ${relativeToOutDir}`)
+  execSync(`rm -rf ${relativeToOutDir}`, { stdio: 'inherit' })
+
+  process.exit(2)
+}

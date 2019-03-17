@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * This node js executable reads in the top-level package.json, babel.config.js
+ * This nodejs executable reads in the top-level package.json, babel.config.js
  * and the special .eslintrc.track.json and copies them to each exercise.
  *
  * Preserves the package.json version number in order to allow for versioned
@@ -17,12 +17,14 @@ const path = require('path')
 
 const { ENOENT } = require('constants')
 
-const EXERCISES_PATH = path.join(__dirname, '..', 'exercises')
-const PACKAGE_PATH = path.join(__dirname, '..', 'package.json')
-const BABEL_CONFIG_PATH = path.join(__dirname, '..', 'babel.config.js')
-const ESLINTRC_TRACK_PATH = path.join(__dirname, '..', '.eslintrc.track.json')
+const ROOT_DIR = path.join(__dirname, '..', '..')
+const EXERCISES_PATH = path.join(ROOT_DIR, 'exercises')
+const PACKAGE_PATH = path.join(ROOT_DIR, 'package.json')
+const BABEL_CONFIG_PATH = path.join(ROOT_DIR, 'babel.config.js')
+const ESLINTRC_TRACK_PATH = path.join(ROOT_DIR, '.eslintrc.track.json')
 
 const PACKAGE_KEEP = ['version']
+const PACKAGE_SCRIPTS_ONLY = ['test', 'watch', 'lint', 'lint-test']
 
 /**
  * When a copy completes, this prints any error
@@ -60,7 +62,21 @@ fs.readFile(PACKAGE_PATH, (packageSourceErr, packageSource) => {
       process.exit(2)
     }
 
+    const lastArg = process.argv[process.argv.length - 1]
+    const SPECIFIC_EXERCISE = process.argv.length > 2 && !lastArg.startsWith('-')
+      ? lastArg
+      : false
+
+    if (SPECIFIC_EXERCISE) {
+      console.log(`=> only ${SPECIFIC_EXERCISE}`)
+    }
+
     for (const directory of directories) {
+      if (SPECIFIC_EXERCISE && directory !== SPECIFIC_EXERCISE) {
+        // eslint-disable-next-line no-continue
+        continue
+      }
+
       console.log(`=> sync: ${directory}`)
 
       const excersizePath = path.join(EXERCISES_PATH, directory)
@@ -80,9 +96,16 @@ fs.readFile(PACKAGE_PATH, (packageSourceErr, packageSource) => {
 
         const currentPackage = err ? { ...basePackage, version: '1.0.0' } : JSON.parse(currentPackageSource.toString())
 
+        // Make sure the new package.json retains these fields
         const newPackage = { ...basePackage }
         for (const keep of PACKAGE_KEEP) {
           newPackage[keep] = currentPackage[keep]
+        }
+
+        // Make sure the new package.json only has the listed scripts
+        newPackage.scripts = {}
+        for (const script of PACKAGE_SCRIPTS_ONLY) {
+          newPackage.scripts[script] = basePackage.scripts[script]
         }
 
         fs.writeFile(excerciseConfigPath, JSON.stringify(newPackage, null, 2), onCopyComplete)

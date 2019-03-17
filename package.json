@@ -28,7 +28,17 @@
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",
-    "lint-test": "eslint . && jest --no-cache ./* "
+    "lint-test": "npm run lint && npm run test",
+
+    "prelint:track": "node ./bin/scripts/unsync-config",
+    "lint:track": "npm run lint",
+    "postlint:track": "npm run sync:track",
+    "test:exercise": "node ./bin/scripts/test-exercise",
+    "test:track": "node ./bin/scripts/test-track",
+    "test:ci": "npm run test:track -- --ci && npm run lint:track",
+    "sync:track": "node ./bin/scripts/sync-config",
+    "sync:exercise": "node ./bin/scripts/sync-config",
+    "print:track": "node ./bin/scripts/print-config-tree"
   },
   "license": "MIT",
   "dependencies": {}

@@ -1,0 +1,84 @@
+#!/usr/bin/env node
+
+/**
+ * This nodejs executable runs all the tests in this repository against the the
+ *
+ */
+
+/* eslint-disable no-console, no-restricted-syntax */
+
+const fs = require('fs')
+const path = require('path')
+
+const ROOT_DIR = path.join(__dirname, '..', '..')
+const EXERCISES_DIR = path.join(ROOT_DIR, 'exercises')
+const OUT_DIR = path.join(ROOT_DIR, 'tmp_exercises')
+
+function copyExercise(exercise) {
+  const inDir = path.join(EXERCISES_DIR, exercise)
+  const outDir = path.join(OUT_DIR, exercise)
+  const exampleFileName = 'example.js'
+  const codeFileName = `${exercise}.js`
+  const testFileName = `${exercise}.spec.js`
+
+  try {
+    fs.mkdirSync(outDir, { recursive: true })
+  } catch (ignore) { /* ignore */ }
+
+  // Copy example.js as exercise.js
+  fs.copyFileSync(path.join(inDir, exampleFileName), path.join(outDir, codeFileName))
+
+  // Write test file
+  fs.writeFileSync(
+    path.join(outDir, testFileName),
+    fs.readFileSync(path.join(inDir, testFileName)).toString().replace(/xtest/g, 'test'),
+  )
+
+  try {
+    const libFiles = fs.readdirSync(path.join(inDir, 'lib'))
+    fs.mkdirSync(path.join(outDir, 'lib'))
+
+    for (const libFile of libFiles) {
+      fs.copyFileSync(path.join(inDir, 'lib', libFile), path.join(outDir, libFile))
+    }
+  } catch (ignore) { /* ignore */ }
+}
+
+if (path.basename(process.argv[1]) === 'test-exercise') {
+  const exercise = process.argv[2]
+
+  console.log(`=> testing ${exercise}`)
+
+  copyExercise(exercise)
+
+  // eslint-disable-next-line global-require
+  const { execSync } = require('child_process')
+
+  try {
+    // Can't use the full path because that won't work cross-env :\
+    execSync(`npx jest ${path.basename(OUT_DIR)}`, { stdio: 'inherit' })
+    execSync(`rm -Rf ${OUT_DIR}`, { stdio: 'inherit' })
+  } catch (ignore) {
+    execSync(`rm -Rf ${OUT_DIR}`, { stdio: 'inherit' })
+    process.exit(1)
+  }
+
+  // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+  /*
+  const jest = require('jest')
+  jest.runCLI({}, OUT_DIR)
+    .then((result) => {
+      console.log(JSON.stringify(result.results, null, 2))
+      fs.unlinkSync(OUT_DIR)
+      process.exit(result.results.success ? 0 : 1)
+    })
+    .catch((err) => {
+      console.error(err)
+      process.stdout.write(err.toString())
+      fs.unlinkSync(OUT_DIR)
+      process.exit(-1)
+    })
+    */
+} else {
+  module.exports = { copyExercise }
+}

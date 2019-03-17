@@ -85,5 +85,5 @@ fi
 cd "${download_dir}"
 test_file=$( basename "${download_dir}" ).spec.js
 sed -i -e 's/xtest/test/g' "${test_file}"
-ln -s ../../../node_modules/
+ln -s ../../../../node_modules/
 ./node_modules/.bin/jest "${test_file}"
