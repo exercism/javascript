@@ -16,7 +16,7 @@ export class GradeSchool {
     return this.db[level] ? clone(this.db[level]).sort() : [];
   }
 
-  roster() {
+  roster () {
     return clone(this.db);
   }
 }

@@ -43,6 +43,8 @@ test:
 	@for assignment in $(ASSIGNMENTS); do \
 		ASSIGNMENT=$$assignment $(MAKE) -s copy-assignment || exit 1; \
 	done
+	@echo "Remove exercise level .eslintrc.json"
+	./bin/unsync-config
 	@echo "Checking eslint..."
 	@node_modules/.bin/eslint $(OUTDIR);
 	@echo "Running tests..."
