@@ -7,3 +7,6 @@ bin/configlet.exe
 node_modules
 .idea
 babel-output
+
+exercises/**/package-lock.json
+exercises/**/.eslintrc.track.json

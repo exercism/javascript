@@ -1,0 +1,92 @@
+#!/usr/bin/env node
+
+/**
+ * This node js executable reads in the top-level package.json, babel.config.js
+ * and the special .eslintrc.track.json and copies them to each exercise.
+ *
+ * Preserves the package.json version number in order to allow for versioned
+ * track package.json
+ */
+
+/* eslint-disable no-console, no-restricted-syntax */
+
+// @ts-check
+
+const fs = require('fs')
+const path = require('path')
+
+const { ENOENT } = require('constants')
+
+const EXERCISES_PATH = path.join(__dirname, '..', 'exercises')
+const PACKAGE_PATH = path.join(__dirname, '..', 'package.json')
+const BABEL_CONFIG_PATH = path.join(__dirname, '..', 'babel.config.js')
+const ESLINTRC_TRACK_PATH = path.join(__dirname, '..', '.eslintrc.track.json')
+
+const PACKAGE_KEEP = ['version']
+
+/**
+ * When a copy completes, this prints any error
+ * @param {NodeJS.ErrnoException | undefined} err
+ */
+function onCopyComplete(err) {
+  if (!err) {
+    return
+  }
+
+  console.error(err)
+  // don't exit, just ignore
+}
+
+fs.readFile(PACKAGE_PATH, (packageSourceErr, packageSource) => {
+  if (packageSourceErr) {
+    console.error(packageSourceErr)
+    process.exit(1)
+  }
+
+  // This is the base package
+  const basePackage = JSON.parse(packageSource.toString())
+
+  const packageConfigName = path.basename(PACKAGE_PATH)
+  const babelConfigName = path.basename(BABEL_CONFIG_PATH)
+  const eslintConfigName = path.basename(ESLINTRC_TRACK_PATH).replace('.track', '')
+
+  console.log(`=> package config name: ${packageConfigName}`)
+  console.log(`=> babel config name: ${babelConfigName}`)
+  console.log(`=> eslint config name: ${eslintConfigName}`)
+
+  fs.readdir(EXERCISES_PATH, (directoryErr, directories) => {
+    if (directoryErr) {
+      console.error(directoryErr)
+      process.exit(2)
+    }
+
+    for (const directory of directories) {
+      console.log(`=> sync: ${directory}`)
+
+      const excersizePath = path.join(EXERCISES_PATH, directory)
+
+      const excersizeBabelConfigPath = path.join(excersizePath, babelConfigName)
+      const excerciseEslintConfigPath = path.join(excersizePath, eslintConfigName)
+      const excerciseConfigPath = path.join(excersizePath, packageConfigName)
+
+      fs.copyFile(BABEL_CONFIG_PATH, excersizeBabelConfigPath, onCopyComplete)
+      fs.copyFile(ESLINTRC_TRACK_PATH, excerciseEslintConfigPath, onCopyComplete)
+
+      fs.readFile(excerciseConfigPath, (err, currentPackageSource) => {
+        if (err && err.errno !== ENOENT) {
+          onCopyComplete(err)
+          return
+        }
+
+        const currentPackage = err ? { ...basePackage, version: '1.0.0' } : JSON.parse(currentPackageSource.toString())
+
+        const newPackage = { ...basePackage }
+        for (const keep of PACKAGE_KEEP) {
+          newPackage[keep] = currentPackage[keep]
+        }
+
+        fs.writeFile(excerciseConfigPath, JSON.stringify(newPackage, null, 2), onCopyComplete)
+      })
+    }
+  })
+})

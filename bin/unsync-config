@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+
+/**
+ * This node js executable REMOVES the .eslintrc from the exercises, allowing
+ * you to lint all the files with stricter rules.
+ */
+
+/* eslint-disable no-console, no-restricted-syntax */
+
+// @ts-check
+
+const fs = require('fs')
+const path = require('path')
+
+const EXERCISES_PATH = path.join(__dirname, '..', 'exercises')
+const ESLINT_CONFIG_NAME = '.eslintrc.json'
+
+fs.readdir(EXERCISES_PATH, (directoryErr, directories) => {
+  if (directoryErr) {
+    console.error(directoryErr)
+    process.exit(2)
+  }
+
+  for (const directory of directories) {
+    console.log(`=> unsync: ${directory}`)
+
+    const excersizePath = path.join(EXERCISES_PATH, directory)
+
+    const excerciseEslintConfigPath = path.join(excersizePath, ESLINT_CONFIG_NAME)
+    fs.unlink(excerciseEslintConfigPath, () => {})
+  }
+})
