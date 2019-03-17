@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * This nodejs executable runs all the tests in this repository against the the
+ * This nodejs executable runs all the tests in this repository against the
+ * example solutions for each exercise.
  *
+ * If ran with `--ci`, also checks the integrity of the following files:
+ *
+ * - package.json
+ * - babel.config.json
+ * - .eslintrc.json
+ *
+ * For a single exercise, check `test-exercise` instead.
  */
 
 /* eslint-disable no-console, no-restricted-syntax, no-multi-spaces, global-require */

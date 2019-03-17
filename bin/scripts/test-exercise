@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * This nodejs executable runs all the tests in this repository against the the
+ * This nodejs executable runs all the tests of the exercise against its example
  *
+ * Run with the exercise name: `./bin/scripts/test-exercise hello-world`
+ * Run `test-track` if you want to test them all
  */
 
 /* eslint-disable no-console, no-restricted-syntax */
