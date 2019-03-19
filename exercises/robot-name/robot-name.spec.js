@@ -15,11 +15,20 @@ const areSequential = (name1, name2) => {
   return Math.abs(totalDiff) <= 1;
 };
 
+const TOTAL_NUMBER_OF_NAMES = 26 // A-Z
+  * 26 // A-Z
+  * 10 // 0-9
+  * 10 // 0-9
+  * 10; // 0-9
+
 describe('Robot', () => {
   let robot;
 
   beforeEach(() => {
     robot = new Robot();
+  });
+  afterEach(() => {
+    Robot.releaseNames();
   });
 
   test('has a name', () => {
@@ -85,15 +94,14 @@ describe('Robot', () => {
   });
 
   // This test is optional.
-  xtest('there can be lots of robots with different names each', () => {
-    const NUMBER_OF_ROBOTS = 10000;
+  xtest('all the names can be generated', () => {
     const usedNames = new Set();
 
-    for (let i = 0; i < NUMBER_OF_ROBOTS; i += 1) {
+    for (let i = 0; i < TOTAL_NUMBER_OF_NAMES; i += 1) {
       const newRobot = new Robot();
       usedNames.add(newRobot.name);
     }
 
-    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS);
+    expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
   });
 });
