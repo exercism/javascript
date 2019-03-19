@@ -21,7 +21,7 @@ update which brought many enhancements over ES5, including notably template
 strings, expressive arrow function syntax, and cleaner syntax for defining
 classes.
 
-However, support for the newest syntax is incomplete in [current browsers]https://kangax.github.io/compat-table/es6/)
+However, support for the newest syntax is incomplete in [current browsers](https://kangax.github.io/compat-table/es6/)
 and [the latest node](https://node.green/), and often requires transpilation
 with a tool like [Babel](https://babeljs.io/).
 
