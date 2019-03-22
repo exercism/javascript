@@ -1,6 +1,6 @@
 import BigInt from './lib/big-integer';
 
-describe("The big-integer module's returned object", () => {
+describe('The big-integer module\'s returned object', () => {
   let bigI;
 
   beforeEach(() => {
@@ -17,7 +17,7 @@ describe("The big-integer module's returned object", () => {
     expect(typeof bigI).toBe('object');
   });
 
-  test("can be compared to a stringified number by calling '.toString()'", () => {
+  test('can be compared to a stringified number by calling \'.toString()\'', () => {
     expect(bigI).not.toBe(42);
     expect(bigI).not.toBe('42');
     expect(bigI.toString()).toBe('42');
