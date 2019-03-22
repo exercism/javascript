@@ -42,6 +42,17 @@
       ]
     },
     {
+      "slug": "resistor-colors",
+      "uuid": "de800041-3dcc-41b9-b101-7314ff685c93",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "arrays"
+      ]
+    },
+    {
       "slug": "gigasecond",
       "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
       "core": true,
@@ -1317,7 +1328,6 @@
         "math"
       ]
     },
-
     {
       "slug": "trinary",
       "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
