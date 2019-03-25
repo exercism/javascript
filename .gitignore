@@ -1,9 +1,26 @@
+# OS specific auto-generated folders and files
 *.swp
 .DS_Store
-npm-debug.log
-tmp
+
+# Platform specific tools (use fetch-configlet)
 bin/configlet
 bin/configlet.exe
-node_modules
+
+# IDE folders and files
 .idea
+
+# Babel specific
 babel-output
+
+# Test generated content
+tmp
+
+# package.json generated content
+node_modules
+
+# Ignore npm error/log
+npm-debug.log
+
+# Ignore yarn lockfile and error, in case someone accidentally runs yarn
+yarn.lock
+yarn-error.log
