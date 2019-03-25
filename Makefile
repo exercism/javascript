@@ -19,6 +19,7 @@ PKG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name package.json)
 
 copy-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
+	@cp babel.config.js exercises/$(ASSIGNMENT)
 	@mkdir -p $(OUTDIR)
 	@cp exercises/grains/lib/big-integer.$(FILEEXT) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
