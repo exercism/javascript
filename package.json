@@ -9,46 +9,23 @@
     "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-regenerator": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "babel-plugin-transform-builtin-extend": "^1.1.2",
-    "babel-preset-env": "^1.7.0",
+    "babel-jest": "^24.5.0",
     "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.15.0",
-    "jest": "^23.6.0"
+    "jest": "^24.5.0"
   },
   "jest": {
     "modulePathIgnorePatterns": [
       "package.json"
-    ]
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": [
-            {
-              "node": "current"
-            }
-          ]
-        }
-      ]
     ],
-    "plugins": [
-      [
-        "babel-plugin-transform-builtin-extend",
-        {
-          "globals": [
-            "Error"
-          ]
-        }
-      ],
-      [
-        "transform-regenerator"
-      ]
-    ]
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "scripts": {
     "test": "jest --no-cache ./*",
@@ -76,5 +53,8 @@
     }
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "@babel/runtime": "^7.4.2"
+  }
 }

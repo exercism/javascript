@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "current"
+        },
+        "useBuiltIns": "usage"
+      },
+
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-regenerator"
+  ]
+}
