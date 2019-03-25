@@ -17,8 +17,13 @@ TSTFILE := "$(subst _,-,$(ASSIGNMENT)).spec.$(FILEEXT)"
 SOURCE_PKG_MD5 ?= "`./bin/md5-hash ./package.json`"
 PKG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name package.json)
 
+# babel.config.js MD5 hash
+SOURCE_BABEL_MD5 ?= "`./bin/md5-hash ./babel.config.js`"
+BABEL_CONFIG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name babel.config.js)
+
 copy-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
+	@cp babel.config.js exercises/$(ASSIGNMENT)
 	@mkdir -p $(OUTDIR)
 	@cp exercises/grains/lib/big-integer.$(FILEEXT) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
@@ -35,6 +40,9 @@ test-travis:
 	@echo "Checking that exercise package.json files match main package.json..."
 	@for pkg in $(PKG_FILES); do \
   		! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || { echo "$$pkg does not match main package.json.  Please run 'make test' locally and commit the results."; exit 1; }; \
+  	done
+	@for bconfig in $(BABEL_CONFIG_FILES); do \
+  		! ./bin/md5-hash $$bconfig | grep -qv $(SOURCE_BABEL_MD5) || { echo "$$bconfig does not match main babel.config.js.  Please run 'make test' locally and commit the results."; exit 1; }; \
   	done
 	$(MAKE) -s test
 
