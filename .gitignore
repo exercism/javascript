@@ -7,3 +7,6 @@ bin/configlet.exe
 node_modules
 .idea
 babel-output
+# Ignore yarn lockfile and error, in case someone accidentally runs yarn
+yarn.lock
+yarn-error.log
