@@ -14,9 +14,8 @@
     "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.15.0",
+    "eslint": "^5.15.3",
+    "eslint-plugin-import": "^2.16.0",
     "jest": "^24.5.0"
   },
   "jest": {
@@ -29,25 +28,6 @@
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",
     "lint-test": "eslint . && jest --no-cache ./* "
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 7,
-      "sourceType": "module"
-    },
-    "env": {
-      "es6": true,
-      "node": true,
-      "jest": true
-    },
-    "extends": "airbnb-base",
-    "rules": {
-      "import/no-unresolved": "off",
-      "import/extensions": "off",
-      "import/prefer-default-export": "off",
-      "import/no-default-export": "off"
-    }
   },
   "license": "MIT",
   "dependencies": {}
