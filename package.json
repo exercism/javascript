@@ -9,8 +9,8 @@
     "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
-    "@babel/plugin-transform-regenerator": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
@@ -22,10 +22,7 @@
   "jest": {
     "modulePathIgnorePatterns": [
       "package.json"
-    ],
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
+    ]
   },
   "scripts": {
     "test": "jest --no-cache ./*",
@@ -53,8 +50,5 @@
     }
   },
   "license": "MIT",
-  "dependencies": {
-    "@babel/polyfill": "^7.4.0",
-    "@babel/runtime": "^7.4.2"
-  }
+  "dependencies": {}
 }
