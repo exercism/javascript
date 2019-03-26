@@ -3,4 +3,4 @@ export const COLORS = [
   'blue', 'violet', 'grey', 'white',
 ];
 
-export const value = color => COLORS.indexOf(color)
+export const colorCode = color => COLORS.indexOf(color)
