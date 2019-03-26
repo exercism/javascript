@@ -21,6 +21,10 @@ PKG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name package.json)
 SOURCE_BABEL_MD5 ?= "`./bin/md5-hash ./babel.config.js`"
 BABEL_CONFIG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name babel.config.js)
 
+# .eslintrc MD5 hash
+SOURCE_ESLINT_MD5 ?= "`./bin/md5-hash ./.eslintrc`"
+ESLINTRC_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name .eslintrc)
+
 copy-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
 	@cp babel.config.js exercises/$(ASSIGNMENT)
@@ -38,12 +42,17 @@ test-assignment:
 	@rm -rf $(OUTDIR)
 
 test-travis:
-	@echo "Checking that exercise package.json files match main package.json..."
+	@echo "Checking that exercise package.json files match main package.json ..."
 	@for pkg in $(PKG_FILES); do \
   		! ./bin/md5-hash $$pkg | grep -qv $(SOURCE_PKG_MD5) || { echo "$$pkg does not match main package.json.  Please run 'make test' locally and commit the results."; exit 1; }; \
   	done
+	@echo "Checking that exercise babel.config.js files match main babel.config.json ..."
 	@for bconfig in $(BABEL_CONFIG_FILES); do \
   		! ./bin/md5-hash $$bconfig | grep -qv $(SOURCE_BABEL_MD5) || { echo "$$bconfig does not match main babel.config.js.  Please run 'make test' locally and commit the results."; exit 1; }; \
+  	done
+	@echo "Checking that exercise .eslintrc files match main .eslintrc ..."
+	@for eslintrc in $(ESLINTRC_FILES); do \
+  		! ./bin/md5-hash eslintrc | grep -qv $(SOURCE_ESLINT_MD5) || { echo "$$eslintrc does not match main .eslintrc.  Please run 'make test' locally and commit the results."; exit 1; }; \
   	done
 	$(MAKE) -s test
 
