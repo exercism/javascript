@@ -24,6 +24,7 @@ BABEL_CONFIG_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name babel.config.
 copy-assignment:
 	@cp package.json exercises/$(ASSIGNMENT)
 	@cp babel.config.js exercises/$(ASSIGNMENT)
+	@cp .eslintrc exercises/$(ASSIGNMENT)
 	@mkdir -p $(OUTDIR)
 	@cp exercises/grains/lib/big-integer.$(FILEEXT) $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(TSTFILE) $(OUTDIR)
