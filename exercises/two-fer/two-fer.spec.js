@@ -1,18 +1,19 @@
-import { twoFer } from './two-fer';
+import { twoFer } from './two-fer.js'
 
-describe('twoFer()', () => {
+describe('no name given', () => {
   test('no name given', () => {
-    const name = '';
-    expect(twoFer(name)).toEqual('One for you, one for me.');
-  });
+    expect(twoFer()).toEqual("One for you, one for me.")
+  })
+})
 
+describe('a name given', () => {
   xtest('a name given', () => {
-    const name = 'Alice';
-    expect(twoFer(name)).toEqual('One for Alice, one for me.');
-  });
+    expect(twoFer("Alice")).toEqual("One for Alice, one for me.")
+  })
+})
 
+describe('another name given', () => {
   xtest('another name given', () => {
-    const name = 'Bob';
-    expect(twoFer(name)).toEqual('One for Bob, one for me.');
-  });
-});
+    expect(twoFer("Bob")).toEqual("One for Bob, one for me.")
+  })
+})
