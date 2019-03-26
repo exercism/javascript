@@ -19,6 +19,18 @@
       ]
     },
     {
+      "slug": "two-fer",
+      "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "resistor-color",
       "uuid": "53be6837-c224-45f1-bff3-d7f74d6285ce",
       "core": true,
@@ -221,20 +233,6 @@
         "control_flow_conditionals",
         "control_flow_loops",
         "games"
-      ]
-    },
-    {
-      "slug": "two-fer",
-      "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
-      "core": false,
-      "unlocked_by": "hello-world",
-      "difficulty": 1,
-      "topics": [
-        "booleans",
-        "logic",
-        "optional_values",
-        "strings",
-        "text_formatting"
       ]
     },
     {
