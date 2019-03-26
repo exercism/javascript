@@ -1,4 +1,4 @@
-import { twoFer } from './two-fer.js'
+import { twoFer } from './two-fer'
 
 describe('twoFer()', () => {
   test('no name given', () => {
