@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+
+/**
+ * This generates an exercise from a problem specification.
+ *
+ * Usage:
+ *
+ * ./bin/tools/generate <exercise> <path/to/problem-spec> # no-http
+ * ./bin/tools/generate <exercise>                        # will download it
+ */
+
+// @ts-check
+
+const [exercise, canonicalDataPath] = process.argv.slice(2).filter(arg => !arg.startsWith('-'));
+
+if (!exercise) {
+  process.stderr.write("=> no exercise given\n=> call this with <exercise>\n")
+  process.exit(-1)
+}
+
+function log(message) {
+  process.stdout.write(message + '\n')
+}
+
+(async () => {
+  const canonicalData = await require('../../lib/generate/fetch-canonical-data').fetch({
+    localPath: canonicalDataPath,
+    exercise,
+    log
+  })
+
+  log(`=> generating ${canonicalData.exercise} (${canonicalData.version})\n`);
+
+  const { cases, exports } = require('../../lib/generate/generate-canonical-tests').generate({
+    exportAs: 'functions',
+    canonicalData,
+    log
+  })
+
+  // TODO: check if tests already exist, and diff / only generate new? Or maybe
+  // ask the user if it wants to replace something
+
+  log(`=> writing spec file`)
+  const contents = await require('../../lib/generate/write-canonical-tests').write({ exercise, cases, exports, log })
+  log(`=> contents output`)
+  log(contents)
+
+  const path = require('path')
+  const { execSync } = require('child_process')
+  execSync(`node ${path.join(__dirname, `copy-package-json ${exercise}`)}`, { stdio: 'inherit' })
+  execSync(`node ${path.join(__dirname, `copy-eslint-config ${exercise}`)}`, { stdio: 'inherit' })
+  execSync(`node ${path.join(__dirname, `copy-babel-config ${exercise}`)}`, { stdio: 'inherit' })
+
+  // TODO: automatically generate README.md -- check if problem specs folder exist
+  // execSync(path.join('.', 'bin', `configlet generate ${exercise}`))
+  execSync(path.join('.', 'bin', `configlet uuid`), { stdio: 'inherit' })
+  execSync(path.join('.', 'bin', `configlet lint .`), { stdio: 'inherit' })
+})().catch(() => process.exit(-2))
