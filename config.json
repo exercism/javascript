@@ -31,6 +31,17 @@
       ]
     },
     {
+      "slug": "resistor-color",
+      "uuid": "53be6837-c224-45f1-bff3-d7f74d6285ce",
+      "core": true,
+      "unlocked_by": "leap",
+      "difficulty": 1,
+      "topics": [
+        "arrays",
+        "strings"
+      ]
+    },
+    {
       "slug": "gigasecond",
       "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
       "core": true,
