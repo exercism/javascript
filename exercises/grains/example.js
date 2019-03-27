@@ -1,4 +1,4 @@
-import BigInt from './big-integer';
+import BigInt from './lib/big-integer';
 
 /**
  * Computes the number of grains on the squares of a
