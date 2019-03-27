@@ -37,10 +37,9 @@ test-prepare:
 	@cp package.json $(OUTDIR)
 	@cp babel.config.js $(OUTDIR)
 	@cp .eslintrc $(OUTDIR)
-ifeq ($(ASSIGNMENT),grains)
-	@mkdir -p tmp_exercises/grains/lib
-	@cp exercises/grains/lib/big-integer.js tmp_exercises/grains/lib/
-endif
+	if test -d exercises/$(ASSIGNMENT)/lib; \
+	then cp -R exercises/$(ASSIGNMENT)/lib $(OUTDIR); \
+	fi
 
 test-eslint:
 	@echo "Checking eslint..."
