@@ -96,8 +96,9 @@ describe('Robot', () => {
   // This test is optional.
   xtest('all the names can be generated', () => {
     const usedNames = new Set();
+    usedNames.add(robot.name);
 
-    for (let i = 0; i < TOTAL_NUMBER_OF_NAMES; i += 1) {
+    for (let i = 0; i < TOTAL_NUMBER_OF_NAMES - 1; i += 1) {
       const newRobot = new Robot();
       usedNames.add(newRobot.name);
     }
