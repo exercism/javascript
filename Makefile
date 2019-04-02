@@ -85,9 +85,9 @@ test-travis:
 
 		ASSIGNMENT=$$assignment "$(MAKE)" -s test-prepare || exit 1; \
 	done
-	$(MAKE) -s test-eslint
-	$(MAKE) -s test-specs
-	$(MAKE) -s test-cleanup
+	"$(MAKE)" -s test-eslint
+	"$(MAKE)" -s test-specs
+	"$(MAKE)" -s test-cleanup
 
 test:
 	@for assignment in $(ASSIGNMENTS); do \
