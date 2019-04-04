@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+/**
+ * This generates a markdown list of exercises that have not been implemented.
+ *
+ * Usage:
+ *
+ * ./bin/tools/list-new-exercises
+ */
+
+// @ts-check
+
+const fs = require('fs')
+const path = require('path')
+
+/** @type {import('../../lib/fetch/exercises')} */
+const { fetch } = require(path.join(__dirname, '..', '..', 'lib', 'fetch', 'exercises'))
+
+/**
+ * @param {string} message
+ */
+function log(message) {
+  process.stdout.write(message + '\n')
+}
+
+(async function() {
+  const remoteExercises = await fetch({ log })
+  const localExercises = fs.readdirSync(path.join(__dirname, '..', '..', 'exercises'))
+
+  const newExercises = remoteExercises.filter(exercise => !localExercises.includes(exercise))
+
+  process.stdout.write(
+    newExercises.map(i => `- [ ] [${i}](https://github.com/exercism/problem-specifications/tree/master/exercises/${i})`).join("\n")
+  )
+})()

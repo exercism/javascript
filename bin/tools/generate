@@ -23,7 +23,7 @@ function log(message) {
 }
 
 (async () => {
-  const canonicalData = await require('../../lib/generate/fetch-canonical-data').fetch({
+  const canonicalData = await require('../../lib/fetch/canonical-data').fetch({
     localPath: canonicalDataPath,
     exercise,
     log
