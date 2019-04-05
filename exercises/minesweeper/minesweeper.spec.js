@@ -65,20 +65,6 @@ describe(')', () => {
     expect(annotate(input)).toEqual(expected);
   });
 
-  xtest('handles space surrounded by mines', () => {
-    const input = [
-      '***',
-      '* *',
-      '***',
-    ];
-    const expected = [
-      '***',
-      '*8*',
-      '***',
-    ];
-    expect(annotate(input)).toEqual(expected);
-  });
-
   xtest('handles horizontal line', () => {
     const input = [' * * '];
     const expected = ['1*2*1'];
