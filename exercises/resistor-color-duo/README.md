@@ -1,4 +1,4 @@
-# Resistor Colors
+# Resistor Color Duo
 
 If you want to build something using a Raspberry Pi, you'll probably use _resistors_. For this exercise, you need to know two things about them:
 
