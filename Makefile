@@ -82,7 +82,6 @@ test-travis:
 		! ./bin/md5-hash eslintrc | grep -qv $(SOURCE_ESLINT_MD5) || { echo "$$eslintrc does not match main .eslintrc.  Please run 'make test' locally and commit the changes."; exit 1; }; \
 	done
 	@for assignment in $(ASSIGNMENTS); do \
-
 		ASSIGNMENT=$$assignment "$(MAKE)" -s test-prepare || exit 1; \
 	done
 	"$(MAKE)" -s test-eslint
@@ -100,7 +99,7 @@ test:
 
 # To be run as: make test-assignment ASSIGNMENT=hello-world
 test-assignment:
-	@"$(MAKE)" -s test-prepare
-	@"$(MAKE)" -s test-eslint
-	@"$(MAKE)" -s test-specs
-	@"$(MAKE)" -s test-cleanup
+	"$(MAKE)" -s test-prepare
+	"$(MAKE)" -s test-eslint
+	"$(MAKE)" -s test-specs
+	"$(MAKE)" -s test-cleanup
