@@ -26,18 +26,32 @@ SOURCE_ESLINT_MD5 ?= "`./bin/md5-hash ./.eslintrc`"
 ESLINTRC_FILES= $(shell find ./exercises/*/* -maxdepth 1 -name .eslintrc)
 
 sync:
+	@if test ${ASSIGNMENT}; \
+	then \
+		echo "Syncing ${ASSIGNMENT}..."; \
+	else \
+		echo "ASSIGNMENT not set"; \
+		exit 1; \
+	fi
 	@cp package.json exercises/$(ASSIGNMENT)
 	@cp babel.config.js exercises/$(ASSIGNMENT)
 	@cp .eslintrc exercises/$(ASSIGNMENT)
 
 test-prepare:
+	@if test ${ASSIGNMENT}; \
+	then \
+		echo "Preparing "${ASSIGNMENT}"..."; \
+	else \
+		echo "ASSIGNMENT not set"; \
+		exit 1; \
+	fi
 	@mkdir -p $(OUTDIR)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(OUTDIR)/$(subst _,-,$(ASSIGNMENT)).$(FILEEXT)
 	@sed 's/xtest/test/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > tmp_exercises/$(ASSIGNMENT)/$(TSTFILE)
 	@cp package.json $(OUTDIR)
 	@cp babel.config.js $(OUTDIR)
 	@cp .eslintrc $(OUTDIR)
-	if test -d exercises/$(ASSIGNMENT)/lib; \
+	@if test -d exercises/$(ASSIGNMENT)/lib; \
 	then cp -R exercises/$(ASSIGNMENT)/lib $(OUTDIR); \
 	fi
 
@@ -68,24 +82,24 @@ test-travis:
 		! ./bin/md5-hash eslintrc | grep -qv $(SOURCE_ESLINT_MD5) || { echo "$$eslintrc does not match main .eslintrc.  Please run 'make test' locally and commit the changes."; exit 1; }; \
 	done
 	@for assignment in $(ASSIGNMENTS); do \
-		ASSIGNMENT=$$assignment $(MAKE) -s test-prepare || exit 1; \
+		ASSIGNMENT=$$assignment "$(MAKE)" -s test-prepare || exit 1; \
 	done
-	$(MAKE) -s test-eslint
-	$(MAKE) -s test-specs
-	$(MAKE) -s test-cleanup
+	"$(MAKE)" -s test-eslint
+	"$(MAKE)" -s test-specs
+	"$(MAKE)" -s test-cleanup
 
 test:
 	@for assignment in $(ASSIGNMENTS); do \
-		ASSIGNMENT=$$assignment $(MAKE) -s sync || exit 1; \
-		ASSIGNMENT=$$assignment $(MAKE) -s test-prepare || exit 1; \
+		ASSIGNMENT=$$assignment "$(MAKE)" -s sync || exit 1; \
+		ASSIGNMENT=$$assignment "$(MAKE)" -s test-prepare || exit 1; \
 	done
-	$(MAKE) -s test-eslint
-	$(MAKE) -s test-specs
-	$(MAKE) -s test-cleanup
+	"$(MAKE)" -s test-eslint
+	"$(MAKE)" -s test-specs
+	"$(MAKE)" -s test-cleanup
 
 # To be run as: make test-assignment ASSIGNMENT=hello-world
 test-assignment:
-	$(MAKE) -s test-prepare
-	$(MAKE) -s test-eslint
-	$(MAKE) -s test-specs
-	$(MAKE) -s test-cleanup
+	"$(MAKE)" -s test-prepare
+	"$(MAKE)" -s test-eslint
+	"$(MAKE)" -s test-specs
+	"$(MAKE)" -s test-cleanup
