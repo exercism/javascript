@@ -19,8 +19,8 @@ See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
 
 ## Setup
 
-Go through the setup instructions for Javascript to
-install the necessary dependencies:
+Go through the setup instructions for Javascript to install the necessary
+dependencies:
 
 [https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
@@ -42,13 +42,14 @@ $ npm test
 
 In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+Once you get a test passing, you can enable the next one by changing `xtest` to
+`test`.
 
 ## Source
 
 The Pig Latin exercise at Test First Teaching by Ultrasaurus [https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/](https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

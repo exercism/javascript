@@ -18,8 +18,8 @@ Note that the list of inputs may vary; your solution should be able to handle li
 
 ## Setup
 
-Go through the setup instructions for Javascript to
-install the necessary dependencies:
+Go through the setup instructions for Javascript to install the necessary
+dependencies:
 
 [https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
@@ -41,13 +41,14 @@ $ npm test
 
 In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+Once you get a test passing, you can enable the next one by changing `xtest` to
+`test`.
 
 ## Source
 
 Wikipedia [http://en.wikipedia.org/wiki/For_Want_of_a_Nail](http://en.wikipedia.org/wiki/For_Want_of_a_Nail)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

@@ -17,8 +17,8 @@ The outer circle has a radius of 10 units (This is equivalent to the total radiu
 Write a function that given a point in the target (defined by its `real` cartesian coordinates `x` and `y`), returns the correct amount earned by a dart landing in that point.
 ## Setup
 
-Go through the setup instructions for Javascript to
-install the necessary dependencies:
+Go through the setup instructions for Javascript to install the necessary
+dependencies:
 
 [https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
@@ -40,9 +40,14 @@ $ npm test
 
 In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
+Once you get a test passing, you can enable the next one by changing `xtest` to
+`test`.
 
+## Source
+
+Inspired by an exercise created by a professor Della Paolera in Argentina
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

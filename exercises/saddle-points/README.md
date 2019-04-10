@@ -5,14 +5,14 @@ Detect saddle points in a matrix.
 So say you have a matrix like so:
 
 ```text
-    0  1  2
+    1  2  3
   |---------
-0 | 9  8  7
-1 | 5  3  2     <--- saddle point at (1,0)
-2 | 6  6  7
+1 | 9  8  7
+2 | 5  3  2     <--- saddle point at column 1, row 2, with value 5
+3 | 6  6  7
 ```
 
-It has a saddle point at (1, 0).
+It has a saddle point at column 1, row 2.
 
 It's called a "saddle point" because it is greater than or equal to
 every element in its row and less than or equal to every element in
@@ -30,8 +30,8 @@ but the tests for this exercise follow the above unambiguous definition.
 
 ## Setup
 
-Go through the setup instructions for Javascript to
-install the necessary dependencies:
+Go through the setup instructions for Javascript to install the necessary
+dependencies:
 
 [https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
@@ -53,13 +53,14 @@ $ npm test
 
 In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+Once you get a test passing, you can enable the next one by changing `xtest` to
+`test`.
 
 ## Source
 
 J Dalbey's Programming Practice problems [http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html](http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

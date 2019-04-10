@@ -9,8 +9,8 @@ The program should handle invalid hexadecimal strings.
 
 ## Setup
 
-Go through the setup instructions for Javascript to
-install the necessary dependencies:
+Go through the setup instructions for Javascript to install the necessary
+dependencies:
 
 [https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
 
@@ -32,13 +32,14 @@ $ npm test
 
 In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
+Once you get a test passing, you can enable the next one by changing `xtest` to
+`test`.
 
 ## Source
 
 All of Computer Science [http://www.wolframalpha.com/examples/NumberBases.html](http://www.wolframalpha.com/examples/NumberBases.html)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.
