@@ -5,7 +5,8 @@
  *
  * Usage:
  *
- * ./bin/tools/list-new-exercises
+ * ./bin/tools/list-new-exercises                             # will download it
+ * ./bin/tools/list-new-exercises <path/to/problem-spec/root> # no-http
  */
 
 // @ts-check

@@ -5,8 +5,8 @@
  *
  * Usage:
  *
- * ./bin/tools/generate <exercise> <path/to/problem-spec> # no-http
- * ./bin/tools/generate <exercise>                        # will download it
+ * ./bin/tools/generate <exercise> <path/to/problem-spec/root> # no-http
+ * ./bin/tools/generate <exercise>                             # will download it
  */
 
 // @ts-check
