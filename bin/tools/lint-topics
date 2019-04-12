@@ -1,0 +1,130 @@
+#!/usr/bin/env node
+
+/**
+ * This lints the topics in config.json against the canonical topics
+ *
+ * Usage:
+ *
+ * ./bin/tools/lint-topics                                # will download it
+ * ./bin/tools/lint-topics <path/to/problem-spec/root>    # no-http
+ * ./bin/tools/lint-topics --config=<path/to/config.json> # uses this config
+ */
+
+// @ts-check
+
+const [canonicalDataPath] = process.argv.slice(2).filter(arg => !arg.startsWith('-'));
+
+let knownDistances = {}
+
+/**
+ *
+ * @param {string} a
+ * @param {string} b
+ * @returns {number}
+ */
+function levenshtein(a, b) {
+  if (knownDistances[a] && knownDistances[a][b]) {
+    return knownDistances[a][b]
+  }
+
+  knownDistances[a] = knownDistances[a] || {}
+
+  var t = [], u, i, j, m = a.length, n = b.length;
+  if (!m) { return knownDistances[a][b] = n; }
+  if (!n) { return knownDistances[a][b] = m; }
+  for (j = 0; j <= n; j++) { t[j] = j; }
+  for (i = 1; i <= m; i++) {
+    for (u = [i], j = 1; j <= n; j++) {
+      u[j] = a[i - 1] === b[j - 1] ? t[j - 1] : Math.min(t[j - 1], t[j], u[j - 1]) + 1;
+    } t = u;
+  }
+  return knownDistances[a][b] = u[n];
+}
+
+/**
+ *
+ * @param {{ validTopics: string[], invalidTopic: string }} params
+ * @returns {string}
+ */
+function suggest({ validTopics, invalidTopic }) {
+  const inclusions = validTopics.filter((topic) => invalidTopic.indexOf(topic) !== -1)
+
+  if (inclusions.length > 0) {
+    return ` (perhaps: ${inclusions.map(inclusion => `\`${inclusion}\``).join(', ')})`
+  }
+
+  const suggestions = validTopics
+    .map((topic) => ({ topic, distance: levenshtein(topic, invalidTopic)}))
+    .filter(l => l.distance < 6)
+    .sort((a, b) => a.distance === b.distance ? 0 : (a.distance > b.distance ? 1 : -1))
+
+  return suggestions.length > 0 ? ` (perhaps: ${suggestions.map(suggestion => `\`${suggestion.topic}\``).join(', ')})` : ''
+}
+
+const path = require('path')
+const pathToConfig = (process.argv.slice(2).find(arg => arg.startsWith('--config')) || path.join(__dirname, '..', '..', 'config.json'))
+  .replace('--config', '')
+  .replace('=', '')
+  .trim()
+
+
+/** @type {import('../../lib/fetch/topics')} */
+const { fetch } = require(path.join(__dirname, '..', '..', 'lib', 'fetch', 'topics'))
+
+/**
+ * @param {string} message
+ */
+function log(message) {
+  process.stdout.write(message + '\n')
+}
+
+(async function() {
+  log(`=> fetching config from ${pathToConfig}`)
+  /** @type {{ exercises: Array<{ slug: string, topics: string[] }>, language: string }} */
+  const { exercises, language } = require(path.isAbsolute(pathToConfig) ? pathToConfig : path.join(process.cwd(), pathToConfig))
+  const track = language.toLowerCase().replace('#', 'sharp')
+  const validTopics = await fetch({ log, localPath: canonicalDataPath })
+
+  const faultyExercises = exercises.filter(({ topics }) => (topics || []).some(topic => validTopics.indexOf(topic) === -1))
+  const emptyExercises = exercises.filter(({ topics }) => !topics || topics.length === 0)
+
+  if (faultyExercises.length === 0 && emptyExercises.length === 0) {
+    process.stdout.write(
+      'No issues detected'
+    )
+    process.exit(0)
+    return
+  }
+
+  process.stdout.write('<details>\n  <summary>List of valid topics</summary>\n\n')
+  process.stdout.write(validTopics.map(topic => `  - \`${topic}\``).join('\n'))
+  process.stdout.write('\n</details>')
+
+  if (faultyExercises.length > 0) {
+    process.stdout.write('\n\n## Exercises with non-standard topics\n\n')
+    process.stdout.write(
+      faultyExercises.map(({ slug, topics }) => {
+        return `- [ ] [\`${slug}\`](https://github.com/exercism/${track}/tree/master/exercises/${slug})\n`
+          + `  Incorrect topics:\n`
+          + topics
+            .filter(topic => validTopics.indexOf(topic) === -1)
+            .map(topic => `  - [ ] \`${topic}\`${suggest({ validTopics, invalidTopic: topic})}`)
+            .join('\n')
+      }).join('\n')
+    )
+  }
+
+  if (emptyExercises.length > 0) {
+    process.stdout.write('\n\n## Exercises without topics\n\n')
+    process.stdout.write(
+      emptyExercises.map(({ slug }) => {
+        return `- [ ] [\`${slug}\`](https://github.com/exercism/${track}/tree/master/exercises/${slug})`
+      }).join('\n')
+    )
+  }
+
+  process.exit(
+      ( emptyExercises.length === 0 ? 0 : (1 << 1))
+    + (faultyExercises.length === 0 ? 0 : (1 << 2))
+  )
+})()
