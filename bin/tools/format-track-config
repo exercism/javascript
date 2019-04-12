@@ -1,0 +1,78 @@
+#!/usr/bin/env node
+
+/**
+ * This orders the track config.json as follows:
+ *
+ * - core exercises, in current orders
+ * - side exercises, in order of their unlocked_by core exercise
+ * - bonus exercises
+ * - deprecated exercises
+ *
+ * Usage:
+ *
+ * ./bin/tools/format-track-config
+ * ./bin/tools/format-track-config --config=<path/to/config.json> # uses this config
+ */
+
+// @ts-check
+
+const fs = require('fs')
+const path = require('path')
+const pathToConfig = (process.argv.slice(2).find(arg => arg.startsWith('--config')) || path.join(__dirname, '..', '..', 'config.json'))
+  .replace('--config', '')
+  .replace('=', '')
+  .trim()
+
+const config = require(pathToConfig)
+
+const core        = []
+const side        = {}
+const bonus       = []
+const deprecated  = []
+
+for (const exercise of config.exercises) {
+  if (exercise.deprecated === true) {
+    deprecated.push(exercise)
+  } else if (exercise.core === true) {
+    side[core] = []
+    core.push(exercise)
+  } else if (exercise.unlocked_by !== null) {
+    side[exercise.unlocked_by] = side[exercise.unlocked_by] || []
+    side[exercise.unlocked_by].push(exercise)
+  } else {
+    bonus.push(exercise)
+  }
+}
+function orderByDifficulty(a, b) {
+  if (a.difficulty === b.difficulty) {
+
+    return a.slug.localeCompare(b.slug)
+  }
+
+  if (a.difficulty > b.difficulty) {
+    return 1
+  }
+
+  return -1
+}
+
+Object.keys(side).forEach(slug => {
+  side[slug] = side[slug].sort(orderByDifficulty)
+})
+
+bonus.sort(orderByDifficulty)
+
+const newExercises = []
+newExercises.push(...core)
+core.forEach(core_ => newExercises.push(...side[core_.slug]))
+newExercises.push(...bonus)
+newExercises.push(...deprecated)
+
+fs.writeFile(pathToConfig, JSON.stringify({ ...config, exercises: newExercises }, null, 2) + '\n', (err) => {
+  if (err) {
+    process.stderr.write(err.toString())
+    process.exit(-1)
+  }
+
+  process.exit(0)
+})
