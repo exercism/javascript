@@ -599,7 +599,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "4d456646-3a9b-4393-9558-6b30e5c1039c",
       "core": false,
       "unlocked_by": "pangram",
