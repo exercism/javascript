@@ -75,13 +75,13 @@ describe('Word Problem', () => {
     const question = 'What is 53 cubed?';
     const problem = new WordProblem(question);
 
-    expect(problem.answer.bind(problem)).toThrow(new ArgumentError());
+    expect(problem.answer.bind(problem)).toThrow(ArgumentError);
   });
 
   xtest('irrelevant', () => {
     const question = 'Who is the president of the United States?';
     const problem = new WordProblem(question);
 
-    expect(problem.answer.bind(problem)).toThrow(new ArgumentError());
+    expect(problem.answer.bind(problem)).toThrow(ArgumentError);
   });
 });
