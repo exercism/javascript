@@ -1329,6 +1329,17 @@
       ]
     },
     {
+      "slug": "dnd-character",
+      "uuid": "b373e13c-f179-4b36-b6e8-2a0f41540344",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "classes", 
+        "randomness"
+      ]
+    },
+    {
       "slug": "trinary",
       "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
       "core": false,
