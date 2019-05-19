@@ -1,18 +1,18 @@
 export class Character {
   constructor() {
-    this.strength = this.getAbilityScore();
-    this.dexterity = this.getAbilityScore();
-    this.constitution = this.getAbilityScore();
-    this.intelligence = this.getAbilityScore();
-    this.wisdom = this.getAbilityScore();
-    this.charisma = this.getAbilityScore();
-    this.hitpoints = 10 + ability_modifier(this.constitution);
+    this.strength = Character.rollAbility();
+    this.dexterity = Character.rollAbility();
+    this.constitution = Character.rollAbility();
+    this.intelligence = Character.rollAbility();
+    this.wisdom = Character.rollAbility();
+    this.charisma = Character.rollAbility();
+    this.hitpoints = 10 + abilityModifier(this.constitution);
   }
 
-  getAbilityScore() {
+  static rollAbility() {
     let diceRolls = [];
 
-    for (var i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
       diceRolls.push(Math.floor(Math.random() * 5) + 1);
     }
 
@@ -23,7 +23,7 @@ export class Character {
   }
 }
 
-export const ability_modifier = abilityScore => {
+export const abilityModifier = abilityScore => {
   if (abilityScore < 3) {
     throw new Error('Ability scores must be at least 3');
   }
