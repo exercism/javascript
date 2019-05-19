@@ -1,4 +1,4 @@
-import { Character, abilityModifier } from './dnd-character';
+import { Character, abilityModifier } from './example';
 
 describe('D&D Character', () => {
   describe('Ability modifier', () => {
