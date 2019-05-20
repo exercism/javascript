@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var shell = require('shelljs');
+var helpers = require('./helpers');
+
+var checkResult = shell.exec('scripts/checksum').code;
+if(checkResult != 0) shell.exit(checkResult);
+
+// Cleanup tmp directory if any exists
+helpers.cleanUp();
+
+var lintResult = shell.exec('PREPARE=true scripts/lint').code;
+if(lintResult != 0) shell.exit(lintResult);
+
+var testResult = shell.exec('CLEANUP=true scripts/test').code;
+if(testResult != 0) shell.exit(testResult);
