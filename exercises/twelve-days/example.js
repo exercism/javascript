@@ -36,11 +36,9 @@ Christmas my true love gave to me: `;
 const giftParade = verseNum => Array.from(Array(verseNum))
   .map((_, i) => gifts[verseNum - i]).join(', ');
 
-export function verse(startVerse, endVerse = null) {
+export function recite(startVerse, endVerse = null) {
   return Array.from(Array((endVerse || startVerse) - startVerse + 1))
     .map((_, i) => i + startVerse)
     .map(n => `${prefix(n)}${giftParade(n)}\n`.replace(': and', ':'))
     .join('\n');
 }
-
-export const sing = () => verse(1, 12);
