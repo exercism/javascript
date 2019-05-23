@@ -82,11 +82,11 @@ describe('TwelveDays', () => {
   });
 
   xtest('test lyrics recites three verses from the middle of the song', () => {
-    const expectedVerseOneToThree =
-    "On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n\n"
-    "On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n\n"
-    "On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n"
-    expect(recite(4, 6)).toEqual(expectedVerseOneToThree);
+    const expectedVerseFourToSix =
+      'On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n\n' +
+      'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n\n' +
+      'On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.\n';
+    expect(recite(4, 6)).toEqual(expectedVerseFourToSix);
   });
 
   xtest('test lyrics recites the whole song', () => {
