@@ -1,4 +1,4 @@
-export const bracketPush = (input) => {
+export const matchingBrackets = (input) => {
   if (input.length === 0) {
     return true;
   }
@@ -27,7 +27,7 @@ export const bracketPush = (input) => {
       if (typeof bracketArray[topNumber + 1] !== 'undefined') {
         if (bracketArray[topNumber + 1] === closeArray[k]) {
           bracketArray.splice(topNumber, 2);
-          return bracketPush(bracketArray);
+          return matchingBrackets(bracketArray);
         }
       }
     }
