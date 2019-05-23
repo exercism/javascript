@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/**
+ * Run this script (from root directory): node scripts/test
+ *
+ * This runs eslint on all sample solutions (and test) files
+ */
+
 var shell = require('shelljs');
 var helpers = require('./helpers');
 var assignment = shell.env['ASSIGNMENT'];

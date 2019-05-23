@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/**
+ * Run this script (from root directory): node scripts/lint
+ *
+ * This runs tests for all sample solutions
+ */
+
 var shell = require('shelljs');
 var helpers = require('./helpers');
 var assignment = shell.env['ASSIGNMENT'];

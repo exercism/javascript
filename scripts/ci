@@ -1,16 +1,33 @@
 #!/usr/bin/env node
 
+/**
+ * Run this script (from root directory): node scripts/ci
+ *
+ * This will run following checks:
+ * 1. Check config in all exercises matches
+ * 2. Run eslint to check code-style
+ * 3. Run tests against sample solutions
+ */
+
 var shell = require('shelljs');
 var helpers = require('./helpers');
 
 var checkResult = shell.exec('scripts/checksum').code;
-if(checkResult != 0) shell.exit(checkResult);
+if(checkResult != 0) { shell.exit(checkResult); }
 
 // Cleanup tmp directory if any exists
 helpers.cleanUp();
 
+/**
+ * PREPARE=true moves all example and test files to single directory - tmp_exercises
+ * This allows running the test command together for all files
+ * which is way faster than running once for each exercise
+ */
 var lintResult = shell.exec('PREPARE=true scripts/lint').code;
-if(lintResult != 0) shell.exit(lintResult);
+if(lintResult != 0) { shell.exit(lintResult); }
 
+/**
+ * CLEANUP=true removes tmp_exercises folder
+ */
 var testResult = shell.exec('CLEANUP=true scripts/test').code;
-if(testResult != 0) shell.exit(testResult);
+if(testResult != 0) { shell.exit(testResult); }
