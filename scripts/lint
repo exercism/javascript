@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): node scripts/lint
+ *
+ * This runs tests for all sample solutions
+ */
+
+var shell = require('shelljs');
+var helpers = require('./helpers');
+var assignment = shell.env['ASSIGNMENT'];
+
+var infoStr =
+    assignment ? '\nRunning lint for ' + assignment + '...':
+    '\nRunning lint for all exercises...';
+var failureStr = 'Lint check failed!';
+helpers.prepareAndRun('npx eslint tmp_exercises', infoStr, failureStr);

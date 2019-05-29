@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var shell = require('shelljs');
+var assignment = shell.env['ASSIGNMENT'];
+var helpers = require('./helpers');
+
+function copyConfig(destination) {
+  helpers.createExercisePackageJson();
+  shell.cat('exercise-package.json').to(destination + '/package.json');
+  shell.rm('exercise-package.json');
+
+  shell.cp('babel.config.js', destination);
+  shell.cp('.eslintrc', destination);
+}
+
+if(assignment) {
+  shell.echo('Syncing ' + assignment + '...');
+  copyConfig('exercises/' + assignment);
+}
+else {
+  shell.echo('Syncing all assignments...');
+  var assignments = helpers.assignments;
+
+  for(i = 0; i < assignments.length; i++) {
+    copyConfig('exercises/' + assignments[i]);
+  }
+}
