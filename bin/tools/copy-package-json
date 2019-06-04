@@ -21,7 +21,7 @@ const EXERCISE = process.argv.slice(2).find(arg => !arg.startsWith('-'));
 process.stdout.write(`=> copy package.json for ${EXERCISE || 'all exercises'}\n`);
 
 function formatAsJson(data) {
-  return JSON.stringify(data, null, 2);
+  return JSON.stringify(data, null, 2) + '\n';
 }
 
 // @ts-ignore
