@@ -7,5 +7,4 @@ export const colorCode = () => {
   throw new Error("Remove this statement and implement this function");
 };
 
-// Fill the array with the various colors
-export const COLORS = [];
+export const COLORS = undefined;
