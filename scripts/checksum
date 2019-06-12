@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 
-var shell = require('shelljs');
-var helpers = require('./helpers');
-var crypto = require('crypto');
+const shell = require('shelljs');
+const helpers = require('./helpers');
+const crypto = require('crypto');
 
-function sha(str) {
-  return crypto.createHash('md5').update(str).digest("hex");
-}
+const sha = str => crypto.createHash('md5').update(str).digest("hex");
 
 function checksum(filename, assignment, rootChecksum) {
   if(!assignment) { return; }
 
-  var assignmentConfig = shell.cat(['exercises', assignment, filename].join('/')).toString();
-  var assignmentChecksum = sha(assignmentConfig);
+  const assignmentConfig = shell.cat(['exercises', assignment, filename].join('/')).toString();
+  const assignmentChecksum = sha(assignmentConfig);
+
   if(assignmentChecksum !== rootChecksum) {
     shell.echo(filename + ' did not match for ' + assignment);
     shell.exit(1);
@@ -22,18 +21,15 @@ function checksum(filename, assignment, rootChecksum) {
 function checkSumAll(filename, rootFileName = filename) {
   shell.echo('\nChecking integrity of ' + filename + '...');
 
-  var config = shell.cat(rootFileName).toString();
-  var rootChecksum = sha(config);
-  var assignment = shell.env['ASSIGNMENT'];
-  var assignments = helpers.assignments;
+  const config = shell.cat(rootFileName).toString();
+  const rootChecksum = sha(config);
+  const assignment = shell.env['ASSIGNMENT'];
 
   if(assignment) {
     checksum(filename, assignment, rootChecksum);
   }
   else {
-    for(i = 0; i < assignments.length; i++) {
-      checksum(filename, assignments[i], rootChecksum);
-    }
+    helpers.assignments.forEach(assignment => checksum(filename, assignment, rootChecksum));
   }
 }
 

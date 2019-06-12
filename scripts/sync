@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var shell = require('shelljs');
-var assignment = shell.env['ASSIGNMENT'];
-var helpers = require('./helpers');
+const shell = require('shelljs');
+const assignment = shell.env['ASSIGNMENT'];
+const helpers = require('./helpers');
 
 function copyConfig(destination) {
   helpers.createExercisePackageJson();
@@ -19,9 +19,5 @@ if(assignment) {
 }
 else {
   shell.echo('Syncing all assignments...');
-  var assignments = helpers.assignments;
-
-  for(i = 0; i < assignments.length; i++) {
-    copyConfig('exercises/' + assignments[i]);
-  }
+  helpers.assignments.forEach(assignment => copyConfig('exercises/' + assignment));
 }

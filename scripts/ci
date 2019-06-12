@@ -9,10 +9,10 @@
  * 3. Run tests against sample solutions
  */
 
-var shell = require('shelljs');
-var helpers = require('./helpers');
+const shell = require('shelljs');
+const helpers = require('./helpers');
 
-var checkResult = shell.exec('scripts/checksum').code;
+const checkResult = shell.exec('scripts/checksum').code;
 if(checkResult != 0) { shell.exit(checkResult); }
 
 // Cleanup tmp directory if any exists
@@ -23,11 +23,11 @@ helpers.cleanUp();
  * This allows running the test command together for all files
  * which is way faster than running once for each exercise
  */
-var lintResult = shell.exec('PREPARE=true scripts/lint').code;
+const lintResult = shell.exec('PREPARE=true scripts/lint').code;
 if(lintResult != 0) { shell.exit(lintResult); }
 
 /**
  * CLEANUP=true removes tmp_exercises folder
  */
-var testResult = shell.exec('CLEANUP=true scripts/test').code;
+const testResult = shell.exec('CLEANUP=true scripts/test').code;
 if(testResult != 0) { shell.exit(testResult); }

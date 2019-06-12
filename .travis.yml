@@ -1,13 +1,18 @@
 ---
 language: node_js
 node_js:
-- 'lts/*'
+  - 'lts/*'
 sudo: false
+
 before_install:
-- npm i -g npm@latest
+  - npm i -g npm@latest
+
 install:
-- npm ci
+  - npm ci
+
+before_script:
+  - bin/fetch-configlet
+
 script:
-- bin/fetch-configlet
-- bin/configlet lint .
-- scripts/ci
+  - bin/configlet lint .
+  - npx @babel/node scripts/ci

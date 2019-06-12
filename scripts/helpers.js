@@ -1,56 +1,24 @@
-// Not intended to be run as a script
+const shell = require('shelljs');
 
-var shell = require('shelljs');
+const exerciseDirs = shell.ls('-d', 'exercises/*');
 
-var assignments = [];
-var exerciseDirs = shell.ls('-d', 'exercises/*');
-for(i = 0; i < exerciseDirs.length; i++) {
-  assignments.push(exerciseDirs[i].split('/')[1]);
-}
-
-
-/**
- * Copy sample solution and specs for given assignment to tmp_exercises
- */
-function prepare(assignment) {
-  if(!assignment) {
-    shell.echo('assignment not provided');
-    shell.exit(1);
-  }
-  var exampleFile = ['exercises', assignment, 'example.js'].join('/');
-  var specFile = ['exercises', assignment, assignment + '.spec.js'].join('/');
-
-  var inDir = ['exercises', assignment].join('/');
-  var outDir = ['tmp_exercises', assignment].join('/');
-
-  shell.mkdir('-p', 'tmp_exercises/lib');
-  shell.cp(exampleFile, ['tmp_exercises', assignment + '.js'].join('/'));
-  shell.sed('xtest', 'test', specFile)
-    .to(['tmp_exercises', assignment + '.spec.js'].join('/'));
-
-  var libDir = ['exercises', assignment, 'lib'].join('/');
-  if(shell.test('-d', libDir)) {
-    shell.cp(libDir + '/*.js', 'tmp_exercises/lib');
-  }
-}
+const assignments = exerciseDirs.map(dir => dir.split('/')[1]);
 
 // Preapre all exercises (see above) & run a given command
 function prepareAndRun(command, infoStr, failureStr) {
   if(shell.env['PREPARE']) {
-    var assignment = shell.env['ASSIGNMENT'];
+    const assignment = shell.env['ASSIGNMENT'];
 
     if(assignment) {
       prepare(assignment);
     }
     else {
-      for(i = 0; i < assignments.length; i++) {
-        prepare(assignments[i]);
-      }
+      assignments.forEach(prepare);
     }
   }
 
   if(infoStr) { shell.echo(infoStr); }
-  var result = shell.exec(command);
+  const result = shell.exec(command);
 
   if(shell.env['CLEANUP']) { cleanUp(); }
 
@@ -65,13 +33,45 @@ function cleanUp() {
   shell.rm('-rf', 'tmp_exercises');
 }
 
+// These packages will be skipped while performing checksum
+const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs', '@babel/node'];
+
 // Filter out some unwanted packages and create package.json for exercises
 function createExercisePackageJson() {
-  var packageFile = shell.cat('package.json').toString();
-  var packageJson = JSON.parse(packageFile);
-  delete packageJson['devDependencies']['shelljs'];
-  var shellStr = new shell.ShellString(JSON.stringify(packageJson, null, 2) + '\n');
+  const packageFile = shell.cat('package.json').toString();
+  const packageJson = JSON.parse(packageFile);
+
+  SKIP_PACKAGES_FOR_CHECKSUM.forEach(package => delete packageJson['devDependencies'][package]);
+
+  const shellStr = new shell.ShellString(JSON.stringify(packageJson, null, 2) + '\n');
   shellStr.to('exercise-package.json');
+}
+
+// PRIVATE
+
+/**
+ * Copy sample solution and specs for given assignment to tmp_exercises
+ */
+function prepare(assignment) {
+  if(!assignment) {
+    shell.echo('assignment not provided');
+    shell.exit(1);
+  }
+  const exampleFile = ['exercises', assignment, 'example.js'].join('/');
+  const specFile = ['exercises', assignment, assignment + '.spec.js'].join('/');
+
+  const inDir = ['exercises', assignment].join('/');
+  const outDir = ['tmp_exercises', assignment].join('/');
+
+  shell.mkdir('-p', 'tmp_exercises/lib');
+  shell.cp(exampleFile, ['tmp_exercises', assignment + '.js'].join('/'));
+  shell.sed('xtest', 'test', specFile)
+    .to(['tmp_exercises', assignment + '.spec.js'].join('/'));
+
+  const libDir = ['exercises', assignment, 'lib'].join('/');
+  if(shell.test('-d', libDir)) {
+    shell.cp(libDir + '/*.js', 'tmp_exercises/lib');
+  }
 }
 
 module.exports = {
