@@ -46,6 +46,7 @@ function createExercisePackageJson() {
   const packageFile = shell.cat('package.json').toString();
   const packageJson = JSON.parse(packageFile);
 
+  delete packageJson['version'];
   SKIP_PACKAGES_FOR_CHECKSUM.forEach(package => delete packageJson['devDependencies'][package]);
 
   const shellStr = new shell.ShellString(JSON.stringify(packageJson, null, 2) + '\n');
