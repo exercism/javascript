@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): node scripts/lint
+ * Run this script (from root directory): npx @babel/node scripts/lint
  *
- * This runs tests for all sample solutions
+ * This runs `eslint` on all sample solutions (and test) files
  */
 
-var shell = require('shelljs');
-var helpers = require('./helpers');
-var assignment = shell.env['ASSIGNMENT'];
+const shell = require('shelljs');
+const helpers = require('./helpers');
+const assignment = shell.env['ASSIGNMENT'];
 
-var infoStr =
+const infoStr =
     assignment ? '\nRunning lint for ' + assignment + '...':
     '\nRunning lint for all exercises...';
-var failureStr = 'Lint check failed!';
+const failureStr = 'Lint check failed!';
 helpers.prepareAndRun('npx eslint tmp_exercises', infoStr, failureStr);

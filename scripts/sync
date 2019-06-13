@@ -1,8 +1,17 @@
 #!/usr/bin/env node
 
-var shell = require('shelljs');
-var assignment = shell.env['ASSIGNMENT'];
-var helpers = require('./helpers');
+/**
+ * Run this script (from root directory): npx @babel/node scripts/sync
+ *
+ * This script is used to propagate any change to root package.json to
+ * all exercises and keep them in sync.
+ * There is a CI step which checks that package.json in root & exercises match
+ * (see checksum script for more info).
+ */
+
+const shell = require('shelljs');
+const assignment = shell.env['ASSIGNMENT'];
+const helpers = require('./helpers');
 
 function copyConfig(destination) {
   helpers.createExercisePackageJson();
@@ -19,9 +28,5 @@ if(assignment) {
 }
 else {
   shell.echo('Syncing all assignments...');
-  var assignments = helpers.assignments;
-
-  for(i = 0; i < assignments.length; i++) {
-    copyConfig('exercises/' + assignments[i]);
-  }
+  helpers.assignments.forEach(assignment => copyConfig('exercises/' + assignment));
 }

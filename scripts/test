@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): node scripts/test
+ * Run this script (from root directory): npx @babel/node scripts/test
  *
- * This runs eslint on all sample solutions (and test) files
+ * This runs `jest` tests for all sample solutions
  */
 
-var shell = require('shelljs');
-var helpers = require('./helpers');
-var assignment = shell.env['ASSIGNMENT'];
+const shell = require('shelljs');
+const helpers = require('./helpers');
+const assignment = shell.env['ASSIGNMENT'];
 
-var infoStr =
+const infoStr =
     assignment ? '\nRunning tests for ' + assignment + '...':
     '\nRunning tests for all exercises...';
-var failureStr = 'Tests failed!';
+const failureStr = 'Tests failed!';
 helpers.prepareAndRun('npx jest --bail tmp_exercises', infoStr, failureStr);
