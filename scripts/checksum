@@ -15,10 +15,16 @@ const crypto = require('crypto');
 
 const sha = str => crypto.createHash('md5').update(str).digest("hex");
 
+// Helper function to check single assignment
 function checksum(filename, assignment, rootChecksum) {
   if(!assignment) { return; }
 
-  const assignmentConfig = shell.cat(['exercises', assignment, filename].join('/')).toString();
+  let assignmentConfig = shell.cat(['exercises', assignment, filename].join('/')).toString();
+  if(filename === 'package.json') {
+    const json = JSON.parse(assignmentConfig);
+    delete json['version'];
+    assignmentConfig = JSON.stringify(json, null, 2) + '\n';
+  }
   const assignmentChecksum = sha(assignmentConfig);
 
   if(assignmentChecksum !== rootChecksum) {
@@ -27,6 +33,8 @@ function checksum(filename, assignment, rootChecksum) {
   }
 }
 
+// Check all assignments by default
+// or single if ASSIGNMENT is given
 function checkSumAll(filename, rootFileName = filename) {
   shell.echo('\nChecking integrity of ' + filename + '...');
 
