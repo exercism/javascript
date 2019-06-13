@@ -1,3 +1,8 @@
+/**
+ * This file provides helper functions
+ * & is NOT intended to be run as a script.
+ */
+
 const shell = require('shelljs');
 
 const exerciseDirs = shell.ls('-d', 'exercises/*');

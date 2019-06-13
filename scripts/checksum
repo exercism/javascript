@@ -1,5 +1,14 @@
 #!/usr/bin/env node
 
+/**
+ * Run this script (from root directory): npx @babel/node scripts/checksum
+ *
+ * This will check root `package.json` matches each exercise's `package.json`.
+ * But the catch is there are some dependencies used for build but not served to end users
+ * We skip those dependencies while performing checksum.
+ * See `SKIP_PACKAGES_FOR_CHECKSUM` in helpers.js for list of skipped packages.
+ */
+
 const shell = require('shelljs');
 const helpers = require('./helpers');
 const crypto = require('crypto');

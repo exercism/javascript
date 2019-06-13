@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): node scripts/ci
+ * Run this script (from root directory): npx @babel/node scripts/ci
  *
  * This will run following checks:
  * 1. Check config in all exercises matches

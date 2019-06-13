@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): node scripts/lint
+ * Run this script (from root directory): npx @babel/node scripts/lint
  *
- * This runs tests for all sample solutions
+ * This runs `eslint` on all sample solutions (and test) files
  */
 
 const shell = require('shelljs');

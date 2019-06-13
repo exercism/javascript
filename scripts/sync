@@ -1,5 +1,14 @@
 #!/usr/bin/env node
 
+/**
+ * Run this script (from root directory): npx @babel/node scripts/sync
+ *
+ * This script is used to propagate any change to root package.json to
+ * all exercises and keep them in sync.
+ * There is a CI step which checks that package.json in root & exercises match
+ * (see checksum script for more info).
+ */
+
 const shell = require('shelljs');
 const assignment = shell.env['ASSIGNMENT'];
 const helpers = require('./helpers');
