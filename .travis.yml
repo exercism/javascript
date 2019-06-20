@@ -1,7 +1,11 @@
 ---
 language: node_js
 node_js:
-  - 'lts/*'
+  - '8'
+  - '9'
+  - '10'
+  - '11'
+  - '12'
 sudo: false
 
 before_install:
