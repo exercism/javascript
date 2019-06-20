@@ -4,6 +4,7 @@ There are a couple of ways to install [NodeJS](http://nodejs.org):
 * via [package managers](https://nodejs.org/en/download/package-manager/)
 
 Both options have selections for Windows, MacOS, and Linux.
+We recommend using the LTS version.
 
 If you've used the official installer, your `PATH` should have been
 automatically configured, but if your shell has trouble locating your globally
