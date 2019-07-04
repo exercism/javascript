@@ -61,20 +61,20 @@ describe('Change', () => {
     const change = new Change();
     const message = 'The total 3 cannot be represented in the given currency.';
     const test = () => { change.calculate([5, 10], 3); };
-    expect(test).toThrowError(Error, message);
+    expect(test).toThrowError(message);
   });
 
   xtest('error testing if no combination can add up to target', () => {
     const change = new Change();
     const message = 'The total 94 cannot be represented in the given currency.';
     const test = () => { change.calculate([5, 10], 94); };
-    expect(test).toThrowError(Error, message);
+    expect(test).toThrowError(message);
   });
 
   xtest('negative change is rejected', () => {
     const change = new Change();
     const message = 'Negative totals are not allowed.';
     const test = () => { change.calculate([1, 2, 5], -5); };
-    expect(test).toThrowError(Error, message);
+    expect(test).toThrowError(message);
   });
 });
