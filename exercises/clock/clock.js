@@ -3,8 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-export class at {
+export class Clock {
   constructor() {
+    throw new Error("Remove this statement and implement this function");
+  }
+
+  toString() {
     throw new Error("Remove this statement and implement this function");
   }
 
