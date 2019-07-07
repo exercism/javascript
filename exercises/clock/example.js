@@ -9,8 +9,8 @@ export class Clock {
   }
 
   toString() {
-    const hourStr = this.hour.toString().padStart(2, "0");
-    const minuteStr = this.minute.toString().padStart(2, "0");
+    const hourStr = this.hour.toString().padStart(2, '0');
+    const minuteStr = this.minute.toString().padStart(2, '0');
     return `${hourStr}:${minuteStr}`;
   }
 
