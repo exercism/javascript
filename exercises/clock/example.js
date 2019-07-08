@@ -1,41 +1,42 @@
-export const at = (hour, minute) => {
-  const MINUTESPERDAY = 1440;
-  const HOURSPERDAY = 24;
-
-  const clock = {
-    hour,
-    minute: minute || 0,
-  };
-
-  function formatNum(num) {
-    const numString = num.toString();
-    return numString.length === 1 ? `0${numString}` : numString;
+export class Clock {
+  constructor(hour = 0, minute = 0) {
+    this.hour = this.normalizeHour(hour + Math.floor(minute / 60));
+    this.minute = ((minute % 60) + 60) % 60;
   }
 
-  function adjustTime(delta) {
-    const newDelta = Math.abs(delta) >= MINUTESPERDAY
-      ? delta % MINUTESPERDAY
-      : delta;
-
-    const currentMinutes = clock.hour * 60 + clock.minute;
-    let newMinutes = (currentMinutes + newDelta) % MINUTESPERDAY;
-
-    newMinutes = newMinutes < 0 ? newMinutes += MINUTESPERDAY : newMinutes;
-
-    clock.hour = Math.floor(newMinutes / 60) % HOURSPERDAY;
-    clock.minute = newMinutes - clock.hour * 60;
+  normalizeHour(hour) {
+    return ((hour % 24) + 24) % 24;
   }
 
-  adjustTime(0);
+  toString() {
+    const hourStr = this.hour.toString().padStart(2, '0');
+    const minuteStr = this.minute.toString().padStart(2, '0');
+    return `${hourStr}:${minuteStr}`;
+  }
 
-  return {
-    clock,
-    toString: () => `${formatNum(clock.hour)}:${formatNum(clock.minute)}`,
-    plus(minutes) { adjustTime(minutes); return this; },
-    minus(minutes) { adjustTime(-minutes); return this; },
-    equals: otherClock => (
-      clock.hour === otherClock.clock.hour
-      && clock.minute === otherClock.clock.minute
-    ),
-  };
-};
+  plus(mins) {
+    while (this.minute + mins >= 60) {
+      this.hour = this.normalizeHour(this.hour + 1);
+      mins -= 60;
+    }
+
+    this.minute += mins;
+
+    return this;
+  }
+
+  minus(mins) {
+    this.minute -= mins;
+
+    while (this.minute < 0) {
+      this.minute += 60;
+      this.hour = this.normalizeHour(this.hour - 1);
+    }
+
+    return this;
+  }
+
+  equals(other) {
+    return this.hour === other.hour && this.minute === other.minute;
+  }
+}
