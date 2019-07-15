@@ -14,7 +14,7 @@ describe('Random key generation', () => {
 describe('Random key cipher', () => {
   const cipher = new Cipher();
 
-  test('has a key made of letters', () => {
+  test('has a key made only of lowercase letters', () => {
     expect(cipher.key).toMatch(/^[a-z]+$/);
   });
 
@@ -103,7 +103,7 @@ describe('Substitution cipher', () => {
     expect(cipher.decode(cipher.encode('abcdefghij'))).toEqual('abcdefghij');
   });
 
-  xtest('double shift encode', () => {
+  xtest('can double shift encode', () => {
     expect(new Cipher('iamapandabear').encode('iamapandabear'))
       .toEqual('qayaeaagaciai');
   });
