@@ -3,7 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-export class List {
+export class Cipher {
   constructor() {
     throw new Error("Remove this statement and implement this function");
   }
