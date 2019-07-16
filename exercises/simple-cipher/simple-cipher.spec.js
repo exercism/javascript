@@ -1,26 +1,8 @@
 /* eslint-disable no-new */
 import { Cipher } from './simple-cipher';
 
-describe('Random key generation', () => {
-  xtest('generates keys at random', () => {
-    // Strictly speaking, this is difficult to test with 100% certainty.
-    // But, if you have a generator that generates 100-character-long
-    // strings of lowercase letters at random, the odds of two consecutively
-    // generated keys being identical are astronomically low.
-    expect(new Cipher().key).not.toEqual(new Cipher().key);
-  });
-});
-
 describe('Random key cipher', () => {
   const cipher = new Cipher();
-
-  test('has a key made only of lowercase letters', () => {
-    expect(cipher.key).toMatch(/^[a-z]+$/);
-  });
-
-  xtest('has a key that is at least 100 characters long', () => {
-    expect(cipher.key.length).toBeGreaterThanOrEqual(100);
-  });
 
   // Here we take advantage of the fact that plaintext of "aaa..."
   // outputs the key. This is a critical problem with shift ciphers, some
@@ -37,59 +19,15 @@ describe('Random key cipher', () => {
     const plaintext = 'abcdefghij';
     expect(cipher.decode(cipher.encode(plaintext))).toEqual(plaintext);
   });
-});
 
-describe('Incorrect key cipher', () => {
-  xtest('throws an error with an all caps key', () => {
-    expect(() => {
-      new Cipher('ABCDEF');
-    }).toThrow(new Error('Bad key'));
-  });
-
-  xtest('throws an error with a mixed-case key', () => {
-    expect(() => {
-      new Cipher('ABcdEF');
-    }).toThrow(new Error('Bad key'));
-  });
-
-  xtest('throws an error with a numeric key', () => {
-    expect(() => {
-      new Cipher('12345');
-    }).toThrow(new Error('Bad key'));
-  });
-
-  xtest('throws an error with an empty key', () => {
-    expect(() => {
-      new Cipher('');
-    }).toThrow(new Error('Bad key'));
-  });
-
-  xtest('throws an error with a leading space', () => {
-    expect(() => {
-      new Cipher(' leadingspace');
-    }).toThrow(new Error('Bad key'));
-  });
-
-  xtest('throws an error with a punctuation mark', () => {
-    expect(() => {
-      new Cipher('hyphened-word');
-    }).toThrow(new Error('Bad key'));
-  });
-
-  xtest('throws an error with a single capital letter', () => {
-    expect(() => {
-      new Cipher('leonardoDavinci');
-    }).toThrow(new Error('Bad key'));
+  test('key is made only of lowercase letters', () => {
+    expect(cipher.key).toMatch(/^[a-z]+$/);
   });
 });
 
 describe('Substitution cipher', () => {
   const key = 'abcdefghij';
   const cipher = new Cipher(key);
-
-  xtest('keeps the submitted key', () => {
-    expect(cipher.key).toEqual(key);
-  });
 
   xtest('can encode', () => {
     expect(cipher.encode('aaaaaaaaaa')).toEqual('abcdefghij');
