@@ -4,10 +4,10 @@ import { Cipher } from './simple-cipher';
 describe('Random key cipher', () => {
   const cipher = new Cipher();
 
-  // Here we take advantage of the fact that plaintext of "aaa..."
-  // outputs the key. This is a critical problem with shift ciphers, some
-  // characters will always output the key verbatim.
   xtest('can encode', () => {
+    // Here we take advantage of the fact that plaintext of "aaa..."
+    // outputs the key. This is a critical problem with shift ciphers, some
+    // characters will always output the key verbatim.
     expect(cipher.encode('aaaaaaaaaa')).toEqual(cipher.key.substr(0, 10));
   });
 
@@ -16,6 +16,8 @@ describe('Random key cipher', () => {
   });
 
   xtest('is reversible', () => {
+    // I.e., if you apply decode in a encoded result, you must see
+    // the same plaintext encode parameter as a result of the decode method
     const plaintext = 'abcdefghij';
     expect(cipher.decode(cipher.encode(plaintext))).toEqual(plaintext);
   });
@@ -38,6 +40,8 @@ describe('Substitution cipher', () => {
   });
 
   xtest('is reversible', () => {
+    // I.e., if you apply decode in a encoded result, you must see
+    // the same plaintext encode parameter as a result of the decode method
     expect(cipher.decode(cipher.encode('abcdefghij'))).toEqual('abcdefghij');
   });
 
