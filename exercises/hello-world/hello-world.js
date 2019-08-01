@@ -4,7 +4,5 @@
 //
 
 export const hello = () => {
-  //
-  // YOUR CODE GOES HERE
-  //
+  console.log("hello world")
 };
