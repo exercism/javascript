@@ -17,7 +17,7 @@ describe('BinarySearch', () => {
     expect(new BinarySearch(sortedArray).indexOf(3)).toEqual(2);
   });
 
-  xtest('should search the middle of the array', () => {
+  xtest('should searches the middle of the array', () => {
     expect(new BinarySearch(sortedArrayOfOddLength).indexOf(2)).toEqual(3);
   });
 
