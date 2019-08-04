@@ -2,7 +2,7 @@ import { BinarySearch } from './binary-search';
 
 describe('BinarySearch', () => {
   const sortedArray = [1, 2, 3, 4, 5, 6];
-  const sortedArrayOfOddLength = [0, 1, 2, 2, 3, 10, 12, 14, 16];
+  const sortedArrayOfOddLength = [0, 1, 2, 2, 3, 10, 12, 14, 16, 19, 22];
   const unsortedArray = [10, 2, 5, 1];
 
   it('should require a sorted array', () => {
