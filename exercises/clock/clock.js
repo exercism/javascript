@@ -5,7 +5,7 @@
 
 export class Clock {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error(ERROR: clock stopped);
   }
 
   toString() {
@@ -13,7 +13,7 @@ export class Clock {
   }
 
   plus() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error(ERROR: add hour);
   }
 
   minus() {
