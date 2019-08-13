@@ -27,6 +27,10 @@ empty list.
 
 If you want to know more about linked lists, check [Wikipedia](https://en.wikipedia.org/wiki/Linked_list).
 
+Your list must also implement the following interface:
+- `delete` (delete the first occurence of a specified value)
+
+
 ## Setup
 
 Go through the setup instructions for Javascript to install the necessary
