@@ -1,101 +1,115 @@
-function Element(value) {
-  return { value, next: null, prev: null };
+class Node {
+  constructor({ value, next, prev }) {
+    this.value = value
+    this.next = next
+    this.prev = prev
+  }
 }
 
 export class LinkedList {
   constructor() {
-    this.size = 0;
     this.head = null;
     this.tail = null;
   }
 
+  clear() {
+    this.tail = null
+    this.head = null
+  }
+
   pop() {
     if (!this.tail) {
-      return undefined;
+      throw new Error('list is empty')
     }
 
-    const { value } = this.tail;
-    if (this.tail.next) {
-      this.tail = this.tail.next;
-      this.tail.prev = null;
+    const { value } = this.tail
+
+    if (this.tail.prev) {
+      this.tail = this.tail.prev
+      this.tail.next = null
     } else {
-      this.head = null;
-      this.tail = this.head;
+      this.clear()
     }
 
-    return value;
+    return value
   }
 
   push(value) {
+    const element = new Node({ value, prev: this.tail })
+
     if (this.tail) {
-      const newtail = new Element(value);
-      newtail.next = this.tail;
-      this.tail.prev = newtail;
-      this.tail = newtail;
+      this.tail.next = element
     } else {
-      this.tail = new Element(value);
-      this.head = this.tail;
+      this.head = element
     }
+
+    this.tail = element
   }
 
   shift() {
     if (!this.head) {
-      return undefined;
+      throw new Error('list is empty')
     }
 
-    const { value } = this.head;
-    if (this.head.prev) {
-      this.head = this.head.prev;
-      this.head.next = null;
+    const { value } = this.head
+
+    if (this.head.next) {
+      this.head = this.head.next
+      this.head.prev = null
     } else {
-      this.head = null;
-      this.tail = this.head;
+      this.clear()
     }
 
     return value;
   }
 
   unshift(value) {
+    const element = new Node({ value, next: this.head })
+
     if (this.head) {
-      const newhead = new Element(value);
-      newhead.prev = this.head;
-      this.head.next = newhead;
-      this.head = newhead;
+      this.head.prev = element
     } else {
-      this.head = new Element(value);
-      this.tail = this.head;
+      this.tail = element
     }
+
+    this.head = element
   }
 
-  count() {
-    let count = 0;
-    let element = this.tail;
 
-    while (this.tail && element) {
-      count += 1;
-      element = element.next;
+  count() {
+    let count = 0
+    let element = this.head
+
+    while (element) {
+      count += 1
+      element = element.next
     }
-    return count;
+
+    return count
   }
 
   delete(value) {
-    let element = this.tail;
+    let element = this.head
     while (element) {
-      if (element.value === value) {
-        if (element.next) {
-          element.next.prev = element.prev;
-        } else {
-          this.head = this.head.prev;
-        }
-        if (element.prev) {
-          element.prev.next = element.next;
-        } else {
-          this.tail = this.tail.next;
-        }
-        element = null;
-      } else {
-        element = element.next;
+      if (element.value !== value) {
+        element = element.next
+        // eslint-disable-next-line no-continue
+        continue
       }
+
+      if (element.prev) {
+        element.prev.next = element.next
+      } else {
+        this.head = this.head.next
+      }
+
+      if (element.next) {
+        element.next.prev = element.prev
+      } else {
+        this.tail = this.tail.prev
+      }
+
+      break
     }
   }
 }
