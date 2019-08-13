@@ -104,4 +104,12 @@ describe('LinkedList', () => {
     list.delete(20);
     expect(list.count()).toBe(1);
   });
+  xtest('deletes only the first occurence', () => {
+    const list = new LinkedList();
+    list.push(10);
+    list.push(10);
+    list.delete(10);
+    expect(list.count()).toBe(1);
+    expect(list.pop()).toBe(10);
+  });
 });
