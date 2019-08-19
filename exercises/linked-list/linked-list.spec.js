@@ -106,10 +106,14 @@ describe('LinkedList', () => {
   });
   xtest('deletes only the first occurence', () => {
     const list = new LinkedList();
+    list.push(5);
     list.push(10);
     list.push(10);
+    list.push(2);
     list.delete(10);
-    expect(list.count()).toBe(1);
+    expect(list.count()).toBe(3);
+    expect(list.pop()).toBe(2);
     expect(list.pop()).toBe(10);
+    expect(list.pop()).toBe(5);
   });
 });
