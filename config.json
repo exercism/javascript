@@ -12,7 +12,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "optional_values",
         "strings",
         "text_formatting"
@@ -92,8 +92,8 @@
       "difficulty": 2,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "lists",
         "maps",
         "searching",
@@ -108,9 +108,8 @@
       "difficulty": 3,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "data_structures",
+        "conditionals",
+        "loops",
         "matrices",
         "text_formatting"
       ]
@@ -122,12 +121,11 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "pattern_recognition",
-        "polymorfism",
+        "polymorphism",
         "regular_expressions",
-        "strings",
-        "unicode"
+        "strings"
       ]
     },
     {
@@ -137,8 +135,8 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "math",
         "strings",
         "text_formatting"
@@ -153,9 +151,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "data_structures",
+        "conditionals",
+        "loops",
         "lists",
         "optional_values"
       ]
@@ -179,8 +176,7 @@
       "unlocked_by": null,
       "difficulty": 6,
       "topics": [
-        "control_flow_loops",
-        "data_structures",
+        "loops",
         "lists",
         "recursion"
       ]
@@ -192,7 +188,7 @@
       "unlocked_by": null,
       "difficulty": 6,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "exception_handling",
         "randomness",
         "regular_expressions",
@@ -207,8 +203,8 @@
       "difficulty": 6,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "randomness",
         "strings",
         "text_formatting",
@@ -222,8 +218,8 @@
       "unlocked_by": null,
       "difficulty": 7,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "parsing",
         "pattern_recognition",
@@ -241,8 +237,8 @@
         "algorithms",
         "arrays",
         "bitwise_operations",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "games"
       ]
     },
@@ -265,7 +261,6 @@
       "unlocked_by": "resistor-color",
       "difficulty": 2,
       "topics": [
-        "for",
         "loops",
         "strings"
       ]
@@ -277,8 +272,8 @@
       "unlocked_by": "resistor-color",
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
         "math",
@@ -292,8 +287,8 @@
       "unlocked_by": "resistor-color",
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers"
       ]
@@ -317,8 +312,8 @@
       "unlocked_by": "gigasecond",
       "difficulty": 7,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "dates",
         "equality",
         "exception_handling",
@@ -332,7 +327,7 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "integers",
         "maps",
         "transforming"
@@ -345,8 +340,8 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "equality",
         "strings"
       ]
@@ -358,7 +353,7 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "integers",
         "strings",
         "transforming"
@@ -372,8 +367,8 @@
       "difficulty": 4,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "strings",
         "text_formatting"
       ]
@@ -385,8 +380,8 @@
       "unlocked_by": "rna-transcription",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "maps",
         "strings"
       ]
@@ -400,8 +395,8 @@
       "topics": [
         "arrays",
         "bitwise_operations",
-        "control_flow_conditionals",
-        "control_flow_loops"
+        "conditionals",
+        "loops"
       ]
     },
     {
@@ -411,11 +406,10 @@
       "unlocked_by": "space-age",
       "difficulty": 1,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "lists",
         "regular_expressions",
-        "strings",
-        "unicode"
+        "strings"
       ]
     },
     {
@@ -426,7 +420,7 @@
       "difficulty": 3,
       "topics": [
         "algorithms",
-        "control_flow_loops",
+        "loops",
         "integers",
         "math"
       ]
@@ -439,8 +433,8 @@
       "difficulty": 3,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "math"
       ]
@@ -462,8 +456,8 @@
       "unlocked_by": "space-age",
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "strings"
       ]
@@ -476,8 +470,8 @@
       "difficulty": 4,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "math"
       ]
@@ -489,7 +483,7 @@
       "unlocked_by": "space-age",
       "difficulty": 5,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "integers"
       ]
     },
@@ -501,8 +495,8 @@
       "difficulty": 5,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "math"
       ]
@@ -515,8 +509,8 @@
       "difficulty": 7,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
         "math"
@@ -540,7 +534,7 @@
       "unlocked_by": "pangram",
       "difficulty": 2,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "regular_expressions",
         "strings",
         "transforming"
@@ -574,8 +568,8 @@
       "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "parsing",
         "strings"
@@ -599,7 +593,7 @@
       "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "exception_handling",
         "strings",
         "text_formatting"
@@ -612,8 +606,8 @@
       "unlocked_by": "pangram",
       "difficulty": 7,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
         "math",
@@ -644,8 +638,8 @@
       "difficulty": 4,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "matrices",
         "strings"
       ]
@@ -658,9 +652,8 @@
       "difficulty": 4,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "data_structures",
+        "conditionals",
+        "loops",
         "matrices"
       ]
     },
@@ -671,8 +664,8 @@
       "unlocked_by": "matrix",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "equality",
         "exception_handling",
         "integers",
@@ -687,8 +680,8 @@
       "unlocked_by": "matrix",
       "difficulty": 6,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "equality",
         "exception_handling",
         "integers",
@@ -728,8 +721,8 @@
       "difficulty": 4,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "recursion",
         "strings"
       ]
@@ -741,8 +734,8 @@
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "pattern_recognition",
         "regular_expressions"
       ]
@@ -754,8 +747,8 @@
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "games",
         "regular_expressions",
         "strings",
@@ -770,8 +763,8 @@
       "difficulty": 4,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "optional_values",
         "strings",
         "text_formatting"
@@ -784,10 +777,10 @@
       "unlocked_by": "bob",
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "pattern_recognition",
-        "polymorfism",
+        "polymorphism",
         "regular_expressions",
         "strings"
       ]
@@ -799,8 +792,8 @@
       "unlocked_by": "bob",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "strings"
       ]
     },
@@ -811,8 +804,8 @@
       "unlocked_by": "bob",
       "difficulty": 6,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
         "strings",
@@ -827,8 +820,8 @@
       "difficulty": 5,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "games",
         "parsing",
@@ -866,8 +859,8 @@
       "difficulty": 6,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "recursion"
       ]
     },
@@ -879,9 +872,8 @@
       "difficulty": 6,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "data_structures",
+        "conditionals",
+        "loops",
         "equality",
         "lists",
         "recursion",
@@ -897,8 +889,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "recursion"
       ]
     },
@@ -910,9 +902,8 @@
       "difficulty": 8,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "data_structures",
+        "conditionals",
+        "loops",
         "exception_handling",
         "lists"
       ]
@@ -925,7 +916,6 @@
       "difficulty": 8,
       "topics": [
         "arrays",
-        "data_structures",
         "lists"
       ]
     },
@@ -937,8 +927,8 @@
       "difficulty": 8,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "equality",
         "optional_values",
         "parsing",
@@ -965,8 +955,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "games",
         "parsing"
@@ -991,8 +981,8 @@
       "difficulty": 7,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "games",
         "maps",
         "parsing"
@@ -1006,8 +996,8 @@
       "difficulty": 8,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "games",
         "parsing",
@@ -1024,8 +1014,8 @@
         "algorithms",
         "arrays",
         "callbacks",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "filtering",
         "lists"
       ]
@@ -1039,7 +1029,7 @@
       "topics": [
         "algorithms",
         "callbacks",
-        "control_flow_loops",
+        "loops",
         "lists"
       ]
     },
@@ -1062,8 +1052,8 @@
       "difficulty": 5,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
         "math"
@@ -1076,8 +1066,8 @@
       "unlocked_by": "robot-name",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "math",
         "recursion"
@@ -1090,7 +1080,7 @@
       "unlocked_by": "simple-cipher",
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "strings",
         "text_formatting",
         "transforming"
@@ -1105,8 +1095,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "math"
       ]
@@ -1120,8 +1110,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "regular_expressions",
         "text_formatting"
       ]
@@ -1135,8 +1125,8 @@
       "topics": [
         "algorithms",
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "regular_expressions",
         "sorting",
         "text_formatting",
@@ -1150,8 +1140,8 @@
       "unlocked_by": "wordy",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "games",
         "parsing",
@@ -1166,8 +1156,8 @@
       "difficulty": 7,
       "topics": [
         "arrays",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "strings",
         "text_formatting"
       ]
@@ -1179,8 +1169,8 @@
       "unlocked_by": "secret-handshake",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
         "lists",
         "math"
@@ -1206,8 +1196,8 @@
       "difficulty": 1,
       "topics": [
         "algorithms",
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "strings"
       ]
     },
@@ -1229,7 +1219,7 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "exception_handling",
         "parsing",
         "pattern_recognition",
@@ -1253,8 +1243,8 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "pattern_recognition",
         "transforming"
       ]
@@ -1266,8 +1256,8 @@
       "unlocked_by": null,
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
         "math",
@@ -1293,8 +1283,8 @@
       "unlocked_by": null,
       "difficulty": 8,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "equality",
         "exception_handling",
         "optional_values",
@@ -1344,10 +1334,10 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
-        "mathematics",
+        "math",
         "regular_expressions",
         "strings"
       ],
@@ -1360,10 +1350,10 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
-        "mathematics",
+        "math",
         "regular_expressions",
         "strings"
       ],
@@ -1376,10 +1366,10 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "integers",
-        "mathematics",
+        "math",
         "regular_expressions",
         "strings"
       ],
@@ -1401,11 +1391,11 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "exception_handling",
         "integers",
-        "mathematics",
+        "math",
         "regular_expressions",
         "strings"
       ],
