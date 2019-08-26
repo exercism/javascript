@@ -152,6 +152,7 @@
         "algorithms",
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "lists",
         "optional_values"
@@ -176,6 +177,7 @@
       "unlocked_by": null,
       "difficulty": 6,
       "topics": [
+        "data_structures",
         "loops",
         "lists",
         "recursion"
@@ -653,6 +655,7 @@
       "topics": [
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "matrices"
       ]
@@ -873,6 +876,7 @@
       "topics": [
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "equality",
         "lists",
@@ -903,6 +907,7 @@
       "topics": [
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "exception_handling",
         "lists"
@@ -916,6 +921,7 @@
       "difficulty": 8,
       "topics": [
         "arrays",
+        "data_structures",
         "lists"
       ]
     },
