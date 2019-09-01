@@ -29,6 +29,10 @@ describe('Matrix', () => {
     expect(new Matrix('1 2 3\n4 5 6\n7 8 9\n8 7 6').columns[2]).toEqual([3, 6, 9, 6]);
   });
 
+  xtest('can extract column from non-square matrix with more columns than rows', () => {
+    expect(new Matrix('1 2 3\n4 5 6').columns[2]).toEqual([3, 6]);
+  });
+
   xtest('extract column where numbers have different widths', () => {
     expect(new Matrix('89 1903 3\n18 3 1\n9 4 800').columns[1]).toEqual([1903, 3, 4]);
   });
