@@ -1,6 +1,6 @@
 const isSilence = message => message.replace(/\s+/g, '') === '';
 const isShouting = message => message.toUpperCase() === message && /[A-Z]/.test(message);
-const isAQuestion = message => message[message.length - 1] === '?';
+const isAQuestion = message => message.endsWith('?');
 
 export const hey = (message) => {
   if (isSilence(message)) {
