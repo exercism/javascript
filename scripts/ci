@@ -12,6 +12,9 @@
 const shell = require('shelljs');
 const helpers = require('./helpers');
 
+const stubResult = shell.exec('scripts/stub-check').code;
+if(stubResult != 0) { shell.exit(stubResult); }
+
 const checkResult = shell.exec('scripts/checksum').code;
 if(checkResult != 0) { shell.exit(checkResult); }
 
