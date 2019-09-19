@@ -801,6 +801,16 @@
       ]
     },
     {
+      "slug": "resistor-color-trio",
+      "uuid": "7170d6a3-a32f-44d7-b82e-524485c58aaf",
+      "core": false,
+      "difficulty": 5,
+      "topics": [
+        "conditionals",
+        "loops"
+      ]
+    },
+    {
       "slug": "say",
       "uuid": "12989bb3-c593-4f68-bea4-e2c5b76bc3c0",
       "core": false,
