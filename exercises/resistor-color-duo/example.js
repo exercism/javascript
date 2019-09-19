@@ -1,8 +1,10 @@
+// resistor-color solution START
 const COLORS = [
   'black', 'brown', 'red', 'orange', 'yellow', 'green',
   'blue', 'violet', 'grey', 'white',
 ];
 
-const reducer = (acc, color, i) => acc + COLORS.indexOf(color) * (10 ** i);
+const colorCode = color => COLORS.indexOf(color)
+// resistor-color solution END
 
-export const value = colors => colors.reverse().reduce(reducer, 0);
+export const value = ([tens, ones]) => colorCode(tens) * 10 + colorCode(ones);
