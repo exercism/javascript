@@ -19,7 +19,7 @@ export class ResistorColorTrio {
       throw new ArgumentError('invalid color')
     }
 
-    return this.significants * this.multiplier
+    return this.significants() * this.multiplier()
   }
 
   get label() {
@@ -43,20 +43,20 @@ export class ResistorColorTrio {
    * @private
    */
   significants() {
-    return this.colorValue(this.tens) * 10 + this.colorValue(this.ones)
+    return this.colorCode(this.tens) * 10 + this.colorCode(this.ones)
   }
 
   /**
    * @private
    */
   multiplier() {
-    return Math.pow(10, this.colorValue(this.zeros))
+    return Math.pow(10, this.colorCode(this.zeros))
   }
 
   /**
    * @private
    */
-  colorValue(color) {
+  colorCode(color) {
     return COLORS.indexOf(color)
   }
 }
