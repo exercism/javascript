@@ -126,7 +126,7 @@ as listed below. We use the following dependencies:
 - `shelljs` in order to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file
 - `jest` to run all the test files on all example implementations
-- `babel` to transpile everything so it works _regardless of your version of NodeJS.
+- `babel` to transpile everything so it works _regardless of your version of NodeJS_.
 
 ### Fetch configlet
 
