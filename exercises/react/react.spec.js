@@ -98,6 +98,24 @@ describe('React module', () => {
     expect(callback.values).toEqual([222]);
   });
 
+  xtest('static callbacks fire even if their own value has not changed', () => {
+    const inputCell = new InputCell(1);
+    const output = new ComputeCell(
+      [inputCell],
+      inputs => (inputs[0].value < 3 ? 111 : 222),
+    );
+
+    const callback = new CallbackCell(() => "cell changed");
+    output.addCallback(callback);
+
+    inputCell.setValue(2);
+    expect(callback.values).toEqual([]);
+
+    inputCell.setValue(4);
+    inputCell.setValue(2);
+    inputCell.setValue(4);
+    expect(callback.values).toEqual(["cell changed","cell changed","cell changed"]);
+  });
 
   xtest('callbacks can be added and removed', () => {
     const inputCell = new InputCell(1);
