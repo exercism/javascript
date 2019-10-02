@@ -50,10 +50,23 @@ another track, or just because you find this interesting; the first step is to
 working on it, and most of all that there is not an open Pull Request towards this 
 exercise.
 
-If there is no such issue, you may open one. Follow the steps in [this issue][list-of-exercises]
-as a baseline of what work should be done. The final step is opening a 
-Pull Request, with these items all checked off. Make sure the tests run and the 
-linter is happy. It will run automatically on your PR.
+If there is no such issue, you may open one. The baseline of work is as follows:
+
+1. Open a new issue, we'll label it with `new exercise ✨`
+1. We'll assign the issue to you, so you get to work on this exercise
+1. Create a new folder in `/exercises`
+1. You'll need to sync this folder with the matching config files. You can use 
+`scripts/sync` to do this: `ASSIGNMENT=slug npx @babel/node scripts/sync`.
+1. Create a `<slug>.js` stub file.
+1. Create a `<slug>.spec.js` test file. Here add the tests, per canonical data if 
+possible.
+1. Create a `example.js` file. Place a working implementation, assuming it's renamed 
+to `<slug>.js`
+1. Run the tests locally, using `scripts/test`: 
+`ASSIGNMENT=slug npx @babel/node scripts/test`.
+
+The final step is opening a Pull Request, with these items all checked off. Make 
+sure the tests run and the linter is happy. It will run automatically on your PR.
 
 #### Creating a track-specific exercise
 
