@@ -31,11 +31,6 @@ on your environment, use:
 ASSIGNMENT=two-fer npx @babel/node scripts/test
 ```
 
-## Contributing
-
-For an in-depth discussion of how exercism language tracks and exercises work, 
-please see [CONTRIBUTING.md][file-contributing].
-
 [file-contributing]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
 [web-exercism]: https://exercism.io
 [git-configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
