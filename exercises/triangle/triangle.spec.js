@@ -16,7 +16,7 @@ describe('Triangle', () => {
     expect(triangle.kind()).toEqual('isosceles');
   });
 
-  xtest('isosceles trianges have first and last sides equal', () => {
+  xtest('isosceles triangles have first and last sides equal', () => {
     const triangle = new Triangle(4, 3, 4);
     expect(triangle.kind()).toEqual('isosceles');
   });
