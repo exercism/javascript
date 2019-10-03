@@ -32,7 +32,7 @@ describe('ISBN Verifier Test Suite', () => {
   });
 
   xtest('X is only valid as a check digit', () => {
-    const isbn = new ISBN('3-598-2X507-0');
+    const isbn = new ISBN('3-598-2X507-9');
 
     expect(isbn.isValid()).toEqual(false);
   });
