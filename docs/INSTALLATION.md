@@ -83,14 +83,8 @@ means that the open terminals don't know that a new program was installed.
 The `hello-world` assignment will teach you how to use the `exercism` cli and
 download an assignment to your computer. 
 
-Each assignment then needs some tools to run the tests:
-
-* [Jest][web-jest]: a test runner based on Jasmine
-* [Babel][web-babel]: to transpile ESNext code to work on your NodeJS version
-* [ESLint][web-eslint]: to perform several static analysis and coding style 
-checks to your JavaScript code.
-
-They can be installed running this command within each assignment directory:
+Each assignment then needs some tools to run the tests. They can be installed 
+running this command within each assignment directory:
 
 ```bash
 $ npm install
@@ -115,6 +109,3 @@ $ npm install
 [web-nodejs]: https://nodejs.org/
 [web-nodejs-download]: https://nodejs.org/en/download/
 [web-nodejs-package]: https://nodejs.org/en/download/package-manager/
-[web-jest]: https://facebook.github.io/jest/
-[web-babel]: https://babeljs.io/
-[web-eslint]: http://eslint.org/
