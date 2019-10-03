@@ -3,33 +3,36 @@
 
 Exercism exercises in JavaScript
 
+This is the JavaScript track, one of the many tracks on [exercism][web-exercism].
+It holds all the _exercises_ that are currently implemented and available for 
+students to complete. The track consists of various **core** exercises, the ones 
+a student _must_ complete, and each **core** exercise may unlock various _side_ 
+exercises. You can find this in the [`config.json`][file-config]. 
 
-## Running the Unit Test Suite
+## Tools
 
-[Node.js](https://nodejs.org) must be installed. Follow these [instructions](http://exercism.io/languages/javascript/installation) for installing nodejs.
-We recommend using the latest LTS version.
+See [CONTRIBUTING.md][file-contributing] for a list of requirements to
+contribute to this track. It also has a list of tools you can use, of which the
+`test` tool is one of them.
 
-Use `npm` to install all required dependencies:
+## Running the test suite
 
-    npm install
+This runs `jest` tests for all sample solutions
 
-#### Linting Your Code
-This project uses [eslint](https://github.com/eslint/eslint) to help you write quality
-JavaScript code by checking for common formatting errors, enforcing style rules,
-and suggesting changes that conform to best practices.
+```shell
+npx @babel/node scripts/test
+```
 
-    npm run lint-test
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For
+example, if you only want to test the `example.js` for `two-fer`, you may, depending 
+on your environment, use:
 
-#### Test All Assignments
-The make script will test all exercises:
+```shell
+ASSIGNMENT=two-fer npx @babel/node scripts/test
+```
 
-    make test
-    
-Note: `make test` is recommended BEFORE submitting a PR.  It will test your submission, and help guard against unintentional, unrelated changes.
-#### Test Specific Assignment
-Pass the exercise name to make script to run the tests for a specific exercise:
-
-    make test-assignment ASSIGNMENT=hello-world
-    
-## Contributing Guide
-For an in-depth discussion of how exercism language tracks and exercises work, please see [CONTRIBUTING.md](https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md)
+[file-contributing]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
+[web-exercism]: https://exercism.io
+[git-configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
+[bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
+[file-config]: https://github.com/exercism/javascript/blob/master/config.json
