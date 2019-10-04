@@ -1,5 +1,7 @@
-export function total(basket) {
-  return calculate(basket, 0)
+export class BookStore {
+  static total(basket) {
+    return calculate(basket, 0)
+  }
 }
 
 function calculate(basket, total) {
