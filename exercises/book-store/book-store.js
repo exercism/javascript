@@ -1,5 +1,5 @@
 //
-// This is only a SKELETON file for the 'Beer Song' exercise. It's been provided as a
+// This is only a SKELETON file for the 'Book Store' exercise. It's been provided as a
 // convenience to get you started writing code faster.
 //
 
