@@ -1345,6 +1345,19 @@
       ]
     },
     {
+      "slug": "book-store",
+      "uuid": "7d232e4a-5b97-4167-a8f3-99c7f26d9cc0",
+      "core": false,
+      "unlocked_by": "flatten-array",
+      "difficulty": 8,
+      "topics": [
+        "algorithms",
+        "floating_point_numbers",
+        "integers",
+        "lists"
+      ]
+    },
+    {
       "slug": "trinary",
       "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
       "core": false,
