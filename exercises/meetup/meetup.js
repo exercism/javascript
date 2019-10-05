@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-function getDayIndex(day) {
+export const meetupDay = (day) =>  {
   throw new Error("Remove this statement and implement this function");
 }
