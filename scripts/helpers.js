@@ -47,7 +47,7 @@ function createExercisePackageJson() {
   const packageJson = JSON.parse(packageFile);
 
   delete packageJson['version'];
-  SKIP_PACKAGES_FOR_CHECKSUM.forEach(package => delete packageJson['devDependencies'][package]);
+  SKIP_PACKAGES_FOR_CHECKSUM.forEach(pkg => delete packageJson['devDependencies'][pkg]);
 
   const shellStr = new shell.ShellString(JSON.stringify(packageJson, null, 2) + '\n');
   shellStr.to('exercise-package.json');
@@ -65,9 +65,6 @@ function prepare(assignment) {
   }
   const exampleFile = ['exercises', assignment, 'example.js'].join('/');
   const specFile = ['exercises', assignment, assignment + '.spec.js'].join('/');
-
-  const inDir = ['exercises', assignment].join('/');
-  const outDir = ['tmp_exercises', assignment].join('/');
 
   shell.mkdir('-p', 'tmp_exercises/lib');
   shell.cp(exampleFile, ['tmp_exercises', assignment + '.js'].join('/'));

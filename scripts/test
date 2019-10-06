@@ -14,4 +14,11 @@ const infoStr =
     assignment ? '\nRunning tests for ' + assignment + '...':
     '\nRunning tests for all exercises...';
 const failureStr = 'Tests failed!';
+
+// Copies the necessary files
+shell.env['PREPARE'] = true
+
+// Cleans up after
+shell.env['CLEANUP'] = true
+
 helpers.prepareAndRun('npx jest --bail tmp_exercises', infoStr, failureStr);

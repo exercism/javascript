@@ -14,6 +14,7 @@ babel-output
 
 # Test generated content
 tmp
+tmp_exercises
 
 # package.json generated content
 node_modules
