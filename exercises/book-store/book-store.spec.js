@@ -60,7 +60,6 @@ describe('BookStore', () => {
   test('Two groups of four is cheaper than groups of five and three', () => {
     const basket = [1,1,2,3,4,4,5,5];
     const expected = 5120;
-
     expect(BookStore.total(basket)).toEqual(expected);
   });
 
