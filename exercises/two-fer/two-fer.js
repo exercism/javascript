@@ -3,8 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class TwoFer {
-  return() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const twofer = () => {
+  throw new Error("Remove this statement and implement this function");
+};
