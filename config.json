@@ -991,6 +991,19 @@
       ]
     },
     {
+      "slug": "scale-generator",
+      "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
+      "topics": [
+        "loops",
+        "pattern_recognition",
+        "strings",
+        "arrays"
+      ]
+    },
+    {
       "slug": "connect",
       "uuid": "2fa2c262-77ae-409b-bfd8-1d643faae772",
       "core": false,
