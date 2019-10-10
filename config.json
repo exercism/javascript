@@ -994,10 +994,11 @@
       "slug": "scale-generator",
       "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 3,
       "topics": [
-        "pattern_matching",
+        "loops",
+        "pattern_recognition",
         "strings",
         "arrays"
       ]
