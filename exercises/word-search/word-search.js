@@ -13,4 +13,4 @@ class WordSearch {
   }
 }
 
-module.exports = WordSearch;
+export default WordSearch;
