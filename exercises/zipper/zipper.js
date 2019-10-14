@@ -3,14 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-function fromTrail() {
-  throw new Error("Remove this statement and implement this function");
-}
-
-function rebuildTree() {
-  throw new Error("Remove this statement and implement this function");
-}
-
 export class Zipper {
   constructor() {
     throw new Error("Remove this statement and implement this function");
