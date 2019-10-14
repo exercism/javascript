@@ -9,8 +9,6 @@ class ArgumentError extends Error {
   }
 }
 
-const re = new RegExp();
-
 class Wordy {
   constructor() {
     throw new Error("Remove this statement and implement this function");
