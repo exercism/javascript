@@ -4,7 +4,7 @@ export class SaddlePoints {
     const minimumColumnValues = [];
 
     for (let i = 0; i <= matrix.length - 1; i++) {
-      const maximumRowValue = Math.max(...matrix[i])
+      const maximumRowValue = Math.max(...matrix[i]);
       maximumRowValues.push(maximumRowValue);
     }
 
@@ -25,6 +25,6 @@ export class SaddlePoints {
       }
     }
 
-    return resultPoints
+    return resultPoints;
   }
 }
