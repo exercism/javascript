@@ -3,20 +3,8 @@
 // convenience to get you started writing code faster.
 //
 
-export class Matrix {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get rows() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get columns() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get saddlePoints() {
+export class SaddlePoints {
+  static saddlePoints() {
     throw new Error("Remove this statement and implement this function");
   }
 }

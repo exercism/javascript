@@ -1,43 +1,92 @@
-import { Matrix } from './saddle-points';
+import { SaddlePoints } from './saddle-points';
 
-describe('Matrix', () => {
-  test('extracts a row', () => {
-    const matrix = new Matrix('1 2\n10 20');
-    expect(matrix.rows[0]).toEqual([1, 2]);
+describe("Saddle Points", () => {
+  test("Can identify single saddle point", () => {
+    const expected = [{ row: 2, column: 1 }];
+    expect(
+      SaddlePoints.saddlePoints([
+        [9, 8, 7],
+        [5, 3, 2],
+        [6, 6, 7]
+      ])
+    ).toEqual(expected);
   });
 
-  xtest('extracts other row', () => {
-    const matrix = new Matrix('9 8 7\n19 18 17');
-    expect(matrix.rows[1]).toEqual([19, 18, 17]);
+  xtest("Can identify that empty matrix has no saddle points", () => {
+    expect(SaddlePoints.saddlePoints([[]])).toEqual([]);
   });
 
-  xtest('extracts a column', () => {
-    const matrix = new Matrix('1 2 3\n4 5 6\n7 8 9\n 8 7 6');
-    expect(matrix.columns[0]).toEqual([1, 4, 7, 8]);
+  xtest("Can identify lack of saddle points when there are none", () => {
+    expect(
+      SaddlePoints.saddlePoints([
+        [1, 2, 3],
+        [3, 1, 2],
+        [2, 3, 1]
+      ])
+    ).toEqual([]);
   });
 
-  xtest('extracts another column', () => {
-    const matrix = new Matrix('89 1903 3\n18 3 1\n9 4 800');
-    expect(matrix.columns[1]).toEqual([1903, 3, 4]);
+  xtest("Can identify multiple saddle points in a column", () => {
+    const expected = [
+      { row: 1, column: 2 },
+      { row: 2, column: 2 },
+      { row: 3, column: 2 }
+    ];
+    expect(
+      SaddlePoints.saddlePoints([
+        [4, 5, 4],
+        [3, 5, 5],
+        [1, 5, 4]
+      ])
+    ).toEqual(expected);
   });
 
-  xtest('no saddle point', () => {
-    const matrix = new Matrix('2 1\n1 2');
-    expect(matrix.saddlePoints).toEqual([]);
+  xtest("Can identify multiple saddle points in a row", () => {
+    const expected = [
+      { row: 2, column: 1 },
+      { row: 2, column: 2 },
+      { row: 2, column: 3 }
+    ];
+    expect(
+      SaddlePoints.saddlePoints([
+        [6, 7, 8],
+        [5, 5, 5],
+        [7, 5, 6]
+      ])
+    ).toEqual(expected);
   });
 
-  xtest('a saddle point', () => {
-    const matrix = new Matrix('1 2\n3 4');
-    expect(matrix.saddlePoints).toEqual([[0, 1]]);
+  xtest("Can identify saddle point in bottom right corner", () => {
+    const expected = [{ row: 3, column: 3 }];
+    expect(
+      SaddlePoints.saddlePoints([
+        [8, 7, 9],
+        [6, 7, 6],
+        [3, 2, 5]
+      ])
+    ).toEqual(expected);
   });
 
-  xtest('another saddle point', () => {
-    const matrix = new Matrix('18 3 39 19 91\n38 10 8 77 320\n3 4 8 6 7');
-    expect(matrix.saddlePoints).toEqual([[2, 2]]);
+  xtest("Can identify saddle points in a non square matrix", () => {
+    const expected = [{ row: 1, column: 1 }, { row: 1, column: 3 }];
+    expect(SaddlePoints.saddlePoints([
+      [3, 1, 3],
+      [3, 2, 4]
+    ])).toEqual(expected);
   });
 
-  xtest('multiple saddle points', () => {
-    const matrix = new Matrix('4 5 4\n3 5 5\n1 5 4');
-    expect(matrix.saddlePoints).toEqual([[0, 1], [1, 1], [2, 1]]);
+  xtest("Can identify that saddle points in a single column matrix are those with the minimum value", () => {
+    const expected = [{ row: 2, column: 1 }, { row: 4, column: 1 }];
+    expect(SaddlePoints.saddlePoints([
+      [2],
+      [1],
+      [4],
+      [1]
+    ])).toEqual(expected);
   });
-});
+
+  xtest("Can identify that saddle points in a single row matrix are those with the maximum value", () => {
+    const expected = [{ row: 1, column: 2 }, { row: 1, column: 4 }];
+    expect(SaddlePoints.saddlePoints([[2, 5, 3, 5]])).toEqual(expected);
+  });
+})
