@@ -13,15 +13,11 @@ export class SimpleLinkedList {
     throw new Error("Remove this statement and implement this function");
   }
 
-  remove(removeValue) {
+  get length() {
     throw new Error("Remove this statement and implement this function");
   }
 
-  length() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  fromArray(numberArray) {
+  get head() {
     throw new Error("Remove this statement and implement this function");
   }
 
