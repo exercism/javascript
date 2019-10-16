@@ -22,6 +22,14 @@ export default () => {
   return new CircularBuffer();
 }
 
-export const BufferFullError = new Error("Error: Buffer is full");
+export class BufferFullError extends Error {
+  constructor() {
+    throw new Error("Remove this statement and implement this function");
+  }
+}
 
-export const BufferEmptyError = new Error("Error: Buffer is empty");
+export class BufferEmptyError extends Error {
+  constructor() {
+    throw new Error("Remove this statement and implement this function");
+  }
+}
