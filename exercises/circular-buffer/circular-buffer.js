@@ -4,6 +4,10 @@
 //
 
 class CircularBuffer {
+  constructor() {
+    throw new Error("Remove this statement and implement this function");
+  }
+
   write() {
     throw new Error("Remove this statement and implement this function");
   }
@@ -21,10 +25,7 @@ class CircularBuffer {
   }
 }
 
-export default () => {
-  // Complete this with the code for the exercise.
-  return new CircularBuffer();
-}
+export default CircularBuffer;
 
 export class BufferFullError extends Error {
   constructor() {
