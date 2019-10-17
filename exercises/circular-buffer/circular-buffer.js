@@ -15,6 +15,10 @@ class CircularBuffer {
   forceWrite() {
     throw new Error("Remove this statement and implement this function");
   }
+
+  clear() {
+    throw new Error("Remove this statement and implement this function");
+  }
 }
 
 export default () => {
