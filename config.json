@@ -101,6 +101,17 @@
       ]
     },
     {
+      "slug": "bank-account",
+      "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "classes",
+        "conditionals"
+      ]
+    },
+    {
       "slug": "matrix",
       "uuid": "dd0b5e67-81f6-437e-8334-2ec0dfeb862a",
       "core": true,
