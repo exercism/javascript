@@ -3,7 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-class QueenAttack {
+export class QueenAttack {
     constructor(params = { white: [], black: []}) {
         this.white = params.white;
         this.black = params.black;
