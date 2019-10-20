@@ -4,9 +4,7 @@
 //
 
 export class QueenAttack {
-    constructor(params = { white: [], black: []}) {
-        this.white = params.white;
-        this.black = params.black;
+    constructor() {
         throw new Error("Remove this statement and implement this function");
     }
 
