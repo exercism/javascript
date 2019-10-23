@@ -907,6 +907,20 @@
       "topics": ["conditionals", "strings", "text_formatting", "transforming"]
     },
     {
+      "slug": "hangman",
+      "uuid": "1a7f8522-2c68-45af-a5a2-1519c03a823e",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "loops",
+        "parsing",
+        "strings"
+      ]
+    },
+    {
       "slug": "diffie-hellman",
       "uuid": "127eccbd-3009-4a8f-95c1-7d8aeb608550",
       "core": false,

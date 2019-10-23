@@ -1,18 +1,21 @@
-# Hello World
+# Hangman
 
-The classical introductory exercise. Just say "Hello, World!".
+Implement the logic of the hangman game using functional reactive programming.
 
-["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
-the traditional first program for beginning programming in a new language
-or environment.
+Hangman is a simple word guessing game.
 
-The objectives are simple:
+[Functional Reactive Programming][frp] is a way to write interactive
+programs. It differs from the usual perspective in that instead of
+saying "when the button is pressed increment the counter", you write
+"the value of the counter is the sum of the number of times the button
+is pressed."
 
-- Write a function that returns the string "Hello, World!".
-- Run the test suite and make sure that it succeeds.
-- Submit your solution and check it at the website.
+Implement the basic logic behind hangman using functional reactive
+programming.  You'll need to install an FRP library for this, this will
+be described in the language/track specific files of the exercise.
 
-If everything goes well, you will be ready to fetch your first real exercise.
+[Hangman]: https://en.wikipedia.org/wiki/Hangman_%28game%29
+[frp]: https://en.wikipedia.org/wiki/Functional_reactive_programming
 
 ## Setup
 
@@ -41,10 +44,6 @@ In the test suites all tests but the first have been skipped.
 
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
-
-## Source
-
-This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
 
 ## Submitting Incomplete Solutions
 

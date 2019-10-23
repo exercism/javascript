@@ -7,12 +7,12 @@ describe('Hangman', () => {
     expect(game.getRemainingGuesses()).toEqual(9)
   })
 
-  test('Initially all letters are blanks and unguessed', () => {
+  xtest('Initially all letters are blanks and unguessed', () => {
     let game = new Hangman('apple')
     expect(game.getMaskedWord()).toEqual('_____')
   })
 
-  test('After 10 failures, the game is over', () => {
+  xtest('After 10 failures, the game is over', () => {
     let game = new Hangman('banana')
     let counter = 9
     while (counter > 0) {
@@ -29,7 +29,7 @@ describe('Hangman', () => {
     expect(game.getStatus()).toEqual(GAME_STATUS.LOSS)
   })
 
-  test('Entering a correct letter removes correct underscores', () => {
+  xtest('Entering a correct letter removes correct underscores', () => {
     let game = new Hangman('orange')
     game.guess('g')
     expect(game.getMaskedWord()).toEqual('____g_')
@@ -37,7 +37,7 @@ describe('Hangman', () => {
     expect(game.getMaskedWord()).toEqual('__a_g_')
   })
 
-  test('Entering a correct letter twice counts as a failure', () => {
+  xtest('Entering a correct letter twice counts as a failure', () => {
     let game = new Hangman('pear')
     game.guess('e')
     expect(game.getMaskedWord()).toEqual('_e__')
@@ -47,7 +47,7 @@ describe('Hangman', () => {
     expect(game.getRemainingGuesses()).toEqual(8)
   })
 
-  test('Guessing all letters correctly results in a win', () => {
+  xtest('Guessing all letters correctly results in a win', () => {
     let game = new Hangman('peach')
     game.guess('p')
     expect(game.getMaskedWord()).toEqual('p____')
@@ -62,7 +62,7 @@ describe('Hangman', () => {
     expect(game.getStatus()).toEqual(GAME_STATUS.WIN)
   })
 
-  test('Winning on last guess still results in a win', () => {
+  xtest('Winning on last guess still results in a win', () => {
     let game = new Hangman('yyyyy')
     let counter = 9
     while (counter > 0) {
