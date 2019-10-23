@@ -14,4 +14,11 @@ const infoStr =
     assignment ? '\nRunning lint for ' + assignment + '...':
     '\nRunning lint for all exercises...';
 const failureStr = 'Lint check failed!';
+
+// Copies the necessary files
+shell.env['PREPARE'] = true
+
+// Cleans up after
+shell.env['CLEANUP'] = true
+
 helpers.prepareAndRun('npx eslint tmp_exercises', infoStr, failureStr);
