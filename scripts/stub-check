@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): npx @babel/node scripts/stub-check
+ *
+ * This script checks that all exercises have a stub file.
+ * Ref: https://github.com/exercism/javascript/issues/705
+ */
+
+const shell = require('shelljs');
+const helpers = require('./helpers');
+
+const noStubs = helpers.assignments.filter(
+  assignment => !shell.test('-f', `exercises/${assignment}/${assignment}.js`)
+);
+if(noStubs.length > 0) {
+  shell.echo('[Error]: No stub files found for following exercises:');
+  shell.echo(noStubs.join('\n'));
+  shell.exit(1);
+}
+else {
+  shell.echo('[Success]: Stub files present for all exercises!');
+}
