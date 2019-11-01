@@ -4,10 +4,13 @@
  */
 
 const shell = require('shelljs');
+const fs = require('fs');
 
 const exerciseDirs = shell.ls('-d', 'exercises/*');
 
-const assignments = exerciseDirs.map(dir => dir.split('/')[1]);
+const config = JSON.parse(fs.readFileSync('config.json'))['exercises'];
+const assignments = exerciseDirs.map(dir => dir.split('/')[1])
+      .filter(exercise => !exercise.deprecated);
 
 // Preapre all exercises (see above) & run a given command
 function prepareAndRun(command, infoStr, failureStr) {
