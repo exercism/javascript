@@ -3,8 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class Flattener {
-  flatten() {
-    throw new Error("Remove this statement and implement this function");
-  }
+export const flatten = () => {
+  throw new Error("Remove this statement and implement this function");
 }
