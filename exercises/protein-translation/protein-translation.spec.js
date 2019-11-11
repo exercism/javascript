@@ -56,4 +56,8 @@ describe('ProteinTranslation', () => {
   xtest('Invalid codon throws error', () => {
     expect(() => translate('LOL')).toThrow(new Error('Invalid codon'));
   });
+
+  xtest('Invalid codon throws error', () => {
+    expect(() => translate('AUGOO')).toThrow(new Error('Invalid codon'));
+  });
 });
