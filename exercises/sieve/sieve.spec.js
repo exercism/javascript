@@ -1,11 +1,19 @@
 import { primes } from './sieve';
 
 describe('Sieve', () => {
-  test('finds primes up to 10', () => {
+  test('no primes under two', () => {
+    expect(primes(1)).toEqual([]);
+  });
+
+  xtest('finds first prime', () => {
+    expect(primes(2)).toEqual([2]);
+  });
+
+  xtest('finds primes up to 10', () => {
     expect(primes(10)).toEqual([2, 3, 5, 7]);
   });
 
-  xtest('finds primes up to 13, and considers the limit passed in', () => {
+  xtest('limit is prime', () => {
     expect(primes(13)).toEqual([2, 3, 5, 7, 11, 13]);
   });
 
