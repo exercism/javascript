@@ -12,6 +12,9 @@ function indivisibleBy(value) {
 }
 
 function sieve(n) {
+  if (n <= 1) {
+    return [];
+  }
   let prime;
   let possibilities;
   const primes = [];
