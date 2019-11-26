@@ -30,4 +30,10 @@ describe('ReverseString', () => {
     const actual = reverseString('racecar');
     expect(actual).toEqual(expected);
   });
+
+  xtest('an even-sized word', () => {
+    const expected = 'reward';
+    const actual = reverseString('drawer');
+    expect(actual).toEqual(expected);
+  });
 });
