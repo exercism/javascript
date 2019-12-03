@@ -3,12 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class Luhn {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get valid() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const valid = () => {
+  throw new Error("Remove this statement and implement this function");
+};
