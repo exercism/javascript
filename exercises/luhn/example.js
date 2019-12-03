@@ -1,4 +1,4 @@
-function isValid(number) {
+export const valid = number => {
   const trimmed = number.replace(/\s/g, '');
   const digits = [...trimmed];
 
@@ -13,7 +13,7 @@ function isValid(number) {
       return d;
     })
     // limit to digits less than 10
-    .map((d) => {
+    .map(d => {
       if (d > 9) {
         return d - 9;
       }
@@ -23,10 +23,4 @@ function isValid(number) {
     .reduce((acc, d) => acc + d, 0);
 
   return digits.length > 1 && sum % 10 === 0;
-}
-
-export class Luhn {
-  constructor(number) {
-    this.valid = isValid(number);
-  }
-}
+};
