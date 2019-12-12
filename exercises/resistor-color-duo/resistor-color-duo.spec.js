@@ -1,23 +1,23 @@
-import { value } from './resistor-color-duo.js';
+import { decodedValue } from './resistor-color-duo.js';
 
 describe('Resistor Colors', () => {
   test('Brown and black', () => {
-    expect(value(['brown', 'black'])).toEqual(10);
+    expect(decodedValue(['brown', 'black'])).toEqual(10);
   });
 
   xtest('Blue and grey', () => {
-    expect(value(['blue', 'grey'])).toEqual(68);
+    expect(decodedValue(['blue', 'grey'])).toEqual(68);
   });
 
   xtest('Yellow and violet', () => {
-    expect(value(['yellow', 'violet'])).toEqual(47);
+    expect(decodedValue(['yellow', 'violet'])).toEqual(47);
   });
 
   xtest('Orange and orange', () => {
-    expect(value(['orange', 'orange'])).toEqual(33);
+    expect(decodedValue(['orange', 'orange'])).toEqual(33);
   });
 
   xtest('Ignore additional colors', () => {
-    expect(value(['green', 'brown', 'orange'])).toEqual(51);
+    expect(decodedValue(['green', 'brown', 'orange'])).toEqual(51);
   })
 });
