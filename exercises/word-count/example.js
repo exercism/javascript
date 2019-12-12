@@ -1,13 +1,18 @@
-export class Words {
-  count(input) {
-    this.counts = {};
-    this.words = input.match(/\S+/g);
-
-    this.words.forEach((word) => {
-      const lcWord = word.toLowerCase();
-      this.counts[lcWord] = Object.prototype.hasOwnProperty.call(this.counts, lcWord)
-        ? this.counts[lcWord] + 1 : 1;
+export const countWords = phrase => {
+  let map = {};
+  phrase
+    .trim()
+    .toLowerCase()
+    .split(/[ ,\n]+/g)
+    .forEach(element => {
+      element = element.replace(/[.,!:"&@$%^]|^'|'$/g, "");
+      if (element) {
+        if (Object.prototype.hasOwnProperty.call(map, element)) {
+          map[element]++;
+        } else {
+          map[element] = 1;
+        }
+      }
     });
-    return this.counts;
-  }
-}
+  return map;
+};
