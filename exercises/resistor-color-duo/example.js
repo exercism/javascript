@@ -7,4 +7,4 @@ const COLORS = [
 const colorCode = color => COLORS.indexOf(color)
 // resistor-color solution END
 
-export const value = ([tens, ones]) => colorCode(tens) * 10 + colorCode(ones);
+export const decodedValue = ([tens, ones]) => colorCode(tens) * 10 + colorCode(ones);
