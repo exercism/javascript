@@ -3,12 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class Anagram {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  matches() {
-    throw new Error("Remove this statement and implement this function");
-  }
+export const findAnagrams = () => {
+  throw new Error("Remove this statement and implement this function");
 }
