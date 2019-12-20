@@ -1,36 +1,32 @@
-let realPrimes = [];
-
-function generatePrimes(uptoNumber) {
-  if (realPrimes.length > 0) {
-    return realPrimes;
+const isPrime = number => {
+  if (number === 2 || number === 3) {
+    return true;
   }
-
-  let currentPrime,
-    possiblePrimes = [];
-  for (let i = 2; i <= uptoNumber; i++) {
-    possiblePrimes.push({ number: i, prime: true });
+  if (number % 2 === 0) {
+    return false;
   }
-
-  for (let i = 2; i < Math.sqrt(possiblePrimes.length); i++) {
-    for (let j = 0; j < possiblePrimes.length; j++) {
-      currentPrime = possiblePrimes[j];
-      if (currentPrime.number !== i && currentPrime.number % i === 0) {
-        currentPrime.prime = false;
-      }
+  for (let i = 3; i <= Math.sqrt(number); i += 2) {
+    if (number % i === 0) {
+      return false;
     }
   }
+  return true;
+};
 
-  return possiblePrimes
-    .filter(candidate => candidate.prime)
-    .map(p => p.number);
-}
-
-export class Prime {
-  nth(nthPrime) {
-    if (nthPrime === 0) {
-      throw new Error('Prime is not possible');
-    }
-    realPrimes = generatePrimes(200000);
-    return realPrimes[nthPrime - 1];
+export const prime = ordinal => {
+  if (ordinal === 0) {
+    throw new Error('there is no zeroth prime');
   }
-}
+  if (ordinal === 1) {
+    return 2;
+  }
+  let primeCount = 1;
+  let index = 3;
+  while (primeCount < ordinal) {
+    if (isPrime(index)) {
+      primeCount++;
+    }
+    index += 2;
+  }
+  return index - 2;
+};
