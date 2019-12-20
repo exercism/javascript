@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const validate = () => {
+export const isArmstrongNumber = () => {
   throw new Error("Remove this statement and implement this function");
 };
