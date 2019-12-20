@@ -1,4 +1,4 @@
-export const validate = (input) => {
+export const isArmstrongNumber = input => {
   const digits = [...String(input)];
   const sum = digits.reduce((total, current) => (
     total + (current ** digits.length)

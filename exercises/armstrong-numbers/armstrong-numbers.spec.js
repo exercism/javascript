@@ -1,43 +1,39 @@
-import { validate } from './armstrong-numbers';
+import { isArmstrongNumber } from './armstrong-numbers';
 
-describe('ArmstrongNumber', () => {
-  test('Single digit numbers are Armstrong numbers', () => {
-    const input = 5;
-    expect(validate(input)).toBe(true);
+describe('Armstrong Numbers', () => {
+  test('Zero is an Armstrong number', () => {
+    expect(isArmstrongNumber(0)).toEqual(true);
+  });
+
+  xtest('Single digit numbers are Armstrong numbers', () => {
+    expect(isArmstrongNumber(5)).toEqual(true);
   });
 
   xtest('There are no 2 digit Armstrong numbers', () => {
-    const input = 10;
-    expect(validate(input)).toBe(false);
+    expect(isArmstrongNumber(10)).toEqual(false);
   });
 
   xtest('Three digit number that is an Armstrong number', () => {
-    const input = 153;
-    expect(validate(input)).toBe(true);
+    expect(isArmstrongNumber(153)).toEqual(true);
   });
 
   xtest('Three digit number that is not an Armstrong number', () => {
-    const input = 100;
-    expect(validate(input)).toBe(false);
+    expect(isArmstrongNumber(100)).toEqual(false);
   });
 
   xtest('Four digit number that is an Armstrong number', () => {
-    const input = 9474;
-    expect(validate(input)).toBe(true);
+    expect(isArmstrongNumber(9474)).toEqual(true);
   });
 
   xtest('Four digit number that is not an Armstrong number', () => {
-    const input = 9475;
-    expect(validate(input)).toBe(false);
+    expect(isArmstrongNumber(9475)).toEqual(false);
   });
 
   xtest('Seven digit number that is an Armstrong number', () => {
-    const input = 9926315;
-    expect(validate(input)).toBe(true);
+    expect(isArmstrongNumber(9926315)).toEqual(true);
   });
 
   xtest('Seven digit number that is not an Armstrong number', () => {
-    const input = 9926314;
-    expect(validate(input)).toBe(false);
+    expect(isArmstrongNumber(9926314)).toEqual(false);
   });
 });
