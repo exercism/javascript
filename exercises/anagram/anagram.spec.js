@@ -1,87 +1,83 @@
-import { Anagram } from './anagram';
+import { findAnagrams } from './anagram';
 
 describe('Anagram', () => {
   test('no matches', () => {
-    const subject = new Anagram('diaper');
-    const matches = subject.matches(['hello', 'world', 'zombies', 'pants']);
-
-    expect(matches).toEqual([]);
+    expect(
+      findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants'])
+    ).toEqual([]);
   });
 
   xtest('detects two anagrams', () => {
-    const subject = new Anagram('master');
-    const matches = subject.matches(['stream', 'pigeon', 'maters']);
-
-    expect(matches).toEqual(['stream', 'maters']);
+    expect(findAnagrams('master', ['stream', 'pigeon', 'maters'])).toEqual([
+      'stream',
+      'maters'
+    ]);
   });
 
   xtest('does not detect anagram subsets', () => {
-    const subject = new Anagram('good');
-    const matches = subject.matches(['dog', 'goody']);
-
-    expect(matches).toEqual([]);
+    expect(findAnagrams('good', ['dog', 'goody'])).toEqual([]);
   });
 
   xtest('detects anagram', () => {
-    const subject = new Anagram('listen');
-    const matches = subject.matches(['enlists', 'google', 'inlets', 'banana']);
-
-    expect(matches).toEqual(['inlets']);
+    expect(
+      findAnagrams('listen', ['enlists', 'google', 'inlets', 'banana'])
+    ).toEqual(['inlets']);
   });
 
   xtest('detects three anagrams', () => {
-    const subject = new Anagram('allergy');
-    const matches = subject.matches(['gallery', 'ballerina', 'regally', 'clergy', 'largely', 'leading']);
+    expect(
+      findAnagrams('allergy', [
+        'gallery',
+        'ballerina',
+        'regally',
+        'clergy',
+        'largely',
+        'leading'
+      ])
+    ).toEqual(['gallery', 'regally', 'largely']);
+  });
 
-    expect(matches).toEqual(['gallery', 'regally', 'largely']);
+  xtest('detects multiple anagrams with different case', () => {
+    expect(findAnagrams('nose', ['Eons', 'ONES'])).toEqual(['Eons', 'ONES']);
   });
 
   xtest('does not detect non-anagrams with identical checksum', () => {
-    const subject = new Anagram('mass');
-    const matches = subject.matches(['last']);
-
-    expect(matches).toEqual([]);
+    expect(findAnagrams('mass', ['last'])).toEqual([]);
   });
 
   xtest('detects anagrams case-insensitively', () => {
-    const subject = new Anagram('Orchestra');
-    const matches = subject.matches(['cashregister', 'Carthorse', 'radishes']);
-
-    expect(matches).toEqual(['Carthorse']);
+    expect(
+      findAnagrams('Orchestra', ['cashregister', 'Carthorse', 'radishes'])
+    ).toEqual(['Carthorse']);
   });
 
   xtest('detects anagrams using case-insensitive subject', () => {
-    const subject = new Anagram('Orchestra');
-    const matches = subject.matches(['cashregister', 'carthorse', 'radishes']);
-
-    expect(matches).toEqual(['carthorse']);
+    expect(
+      findAnagrams('Orchestra', ['cashregister', 'carthorse', 'radishes'])
+    ).toEqual(['carthorse']);
   });
 
   xtest('detects anagrams using case-insensitive possible matches', () => {
-    const subject = new Anagram('orchestra');
-    const matches = subject.matches(['cashregister', 'Carthorse', 'radishes']);
-
-    expect(matches).toEqual(['Carthorse']);
+    expect(
+      findAnagrams('orchestra', ['cashregister', 'Carthorse', 'radishes'])
+    ).toEqual(['Carthorse']);
   });
 
-  xtest('does not detect a anagram if the original word is repeated', () => {
-    const subject = new Anagram('go');
-    const matches = subject.matches(['go Go GO']);
-
-    expect(matches).toEqual([]);
+  xtest('does not detect an anagram if the original word is repeated', () => {
+    expect(findAnagrams('go', ['go Go GO'])).toEqual([]);
   });
 
   xtest('anagrams must use all letters exactly once', () => {
-    const subject = new Anagram('tapper');
-    const matches = subject.matches(['patter']);
-
-    expect(matches).toEqual([]);
+    expect(findAnagrams('tapper', ['patter'])).toEqual([]);
   });
 
   xtest('words are not anagrams of themselves (case-insensitive)', () => {
-    const subject = new Anagram('BANANA');
-    const matches = subject.matches(['BANANA', 'Banana', 'banana']);
+    expect(findAnagrams('BANANA', ['BANANA', 'Banana', 'banana'])).toEqual([]);
+  });
 
-    expect(matches).toEqual([]);
+  xtest('words other than themselves can be anagrams', () => {
+    expect(findAnagrams('LISTEN', ['Listen', 'Silent', 'LISTEN'])).toEqual([
+      'Silent'
+    ]);
   });
 });
