@@ -3,12 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class ISBN {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  isValid() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const isValid = () => {
+  throw new Error("Remove this statement and implement this function");
+};
