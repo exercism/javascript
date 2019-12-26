@@ -1,6 +1,6 @@
 const handshakeCommands = ['wink', 'double blink', 'close your eyes', 'jump'];
 
-export const secretHandshake = (handshake) => {
+export const commands = (handshake) => {
   if (typeof handshake !== 'number') {
     throw new Error('Handshake must be a number');
   }
