@@ -1,81 +1,71 @@
-import { ISBN } from './isbn-verifier.js';
+import { isValid } from './isbn-verifier.js';
 
-describe('ISBN Verifier Test Suite', () => {
+describe('ISBN Verifier', () => {
   test('valid isbn number', () => {
-    const isbn = new ISBN('3-598-21508-8');
-
-    expect(isbn.isValid()).toEqual(true);
+    expect(isValid('3-598-21508-8')).toEqual(true);
   });
 
-  test('invalid isbn check digit', () => {
-    const isbn = new ISBN('3-598-21508-9');
-
-    expect(isbn.isValid()).toEqual(false);
+  xtest('invalid isbn check digit', () => {
+    expect(isValid('3-598-21508-9')).toEqual(false);
   });
 
   xtest('valid isbn number with a check digit of 10', () => {
-    const isbn = new ISBN('3-598-21507-X');
-
-    expect(isbn.isValid()).toEqual(true);
+    expect(isValid('3-598-21507-X')).toEqual(true);
   });
 
   xtest('check digit is a character other than X', () => {
-    const isbn = new ISBN('3-598-21507-A');
-
-    expect(isbn.isValid()).toEqual(false);
+    expect(isValid('3-598-21507-A')).toEqual(false);
   });
 
   xtest('invalid character in isbn', () => {
-    const isbn = new ISBN('3-598-2K507-0');
-
-    expect(isbn.isValid()).toEqual(false);
+    expect(isValid('3-598-P1581-X')).toEqual(false);
   });
 
   xtest('X is only valid as a check digit', () => {
-    const isbn = new ISBN('3-598-2X507-9');
-
-    expect(isbn.isValid()).toEqual(false);
+    expect(isValid('3-598-2X507-9')).toEqual(false);
   });
 
   xtest('valid isbn without separating dashes', () => {
-    const isbn = new ISBN('3598215088');
-
-    expect(isbn.isValid()).toEqual(true);
+    expect(isValid('3598215088')).toEqual(true);
   });
 
   xtest('isbn without separating dashes and X as check digit', () => {
-    const isbn = new ISBN('359821507X');
-
-    expect(isbn.isValid()).toEqual(true);
+    expect(isValid('359821507X')).toEqual(true);
   });
 
   xtest('isbn without check digit and dashes', () => {
-    const isbn = new ISBN('359821507');
-
-    expect(isbn.isValid()).toEqual(false);
+    expect(isValid('359821507')).toEqual(false);
   });
 
   xtest('too long isbn and no dashes', () => {
-    const isbn = new ISBN('3598215078X');
+    expect(isValid('3598215078X')).toEqual(false);
+  });
 
-    expect(isbn.isValid()).toEqual(false);
+  xtest('too short isbn', () => {
+    expect(isValid('00')).toEqual(false);
   });
 
   xtest('isbn without check digit', () => {
-    const isbn = new ISBN('3-598-21507');
-
-    expect(isbn.isValid()).toEqual(false);
-  });
-
-  xtest('too long isbn', () => {
-    const isbn = new ISBN('3-598-21507-XA');
-
-    expect(isbn.isValid()).toEqual(false);
+    expect(isValid('3-598-21507')).toEqual(false);
   });
 
   xtest('check digit of X should not be used for 0', () => {
-    const isbn = new ISBN('3-598-21515-X');
+    expect(isValid('3-598-21515-X')).toEqual(false);
+  });
 
-    expect(isbn.isValid()).toEqual(false);
+  xtest('empty isbn', () => {
+    expect(isValid('')).toEqual(false);
+  });
+
+  xtest('input is 9 characters', () => {
+    expect(isValid('134456729')).toEqual(false);
+  });
+
+  xtest('invalid characters are not ignored', () => {
+    expect(isValid('3132P34035')).toEqual(false);
+  });
+
+  xtest('input is too long but contains a valid isbn', () => {
+    expect(isValid('98245726788')).toEqual(false);
   });
 });
