@@ -1,20 +1,25 @@
-export class Triangle {
-  constructor(rows) {
-    this.rows = this.fillRows(rows);
-    this.lastRow = this.rows[this.rows.length - 1];
+export const rows = size => {
+  if (size === 0) {
+    return [];
+  } else if (size === 1) {
+    return [[1]];
   }
 
-  sumElements(element, index, array) {
-    this.push(element + (array[index + 1] || 0));
-  }
+  let triangleRows = [[1]];
 
-  fillRows(rows) {
-    const result = [[1]];
-    for (let x = 1; x < rows; x += 1) {
-      const newRow = [1];
-      result[x - 1].forEach(this.sumElements, newRow);
-      result.push(newRow);
+  const getNextRow = row => {
+    let nextRow = [];
+    nextRow.push(1);
+    for (let i = 0; i <= row.length - 2; i++) {
+      nextRow.push(row[i] + row[i + 1]);
     }
-    return result;
+    nextRow.push(1);
+    return nextRow;
+  };
+
+  while (size-- > 1) {
+    triangleRows.push(getNextRow(triangleRows[triangleRows.length - 1]));
   }
-}
+
+  return triangleRows;
+};

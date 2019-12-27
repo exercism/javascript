@@ -3,16 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class Triangle {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get lastRow() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get rows() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const rows = () => {
+  throw new Error("Remove this statement and implement this function");
+};
