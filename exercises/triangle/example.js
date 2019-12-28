@@ -1,47 +1,20 @@
-export class Triangle {
-  constructor(...sides) {
-    this.sides = sides;
-  }
+const valid = ([s1, s2, s3]) => {
+  const sidesArePositive = (s1 > 0 && s2 > 0 && s3 > 0);
+  const validatesTriangleInequality =
+    s1 + s2 >= s3 && s1 + s3 >= s2 && s2 + s3 >= s1;
+  return sidesArePositive && validatesTriangleInequality;
+};
 
-  kind() {
-    if (this.isIllegal()) {
-      throw new TypeError('illegal');
-    }
+export const equilateral = sides => {
+  const [s1, s2, s3] = sides;
+  return valid(sides) && (s1 === s2 && s2 === s3 && s1 === s3);
+};
 
-    if (this.isEquilateral()) {
-      return 'equilateral';
-    }
+export const isosceles = sides => {
+  const [s1, s2, s3] = sides;
+  return valid(sides) && (s1 === s2 || s1 === s3 || s2 === s3);
+};
 
-    if (this.isIsosceles()) {
-      return 'isosceles';
-    }
-
-    return 'scalene';
-  }
-
-  isIllegal() {
-    return this.violatesInequality() || this.hasImpossibleSides();
-  }
-
-  violatesInequality() {
-    const [a, b, c] = this.sides;
-    return a + b < c || a + c < b || b + c < a;
-  }
-
-  hasImpossibleSides() {
-    const [a, b, c] = this.sides;
-    return a <= 0 || b <= 0 || c <= 0;
-  }
-
-  isEquilateral() {
-    return this.uniqueSidesLength() === 1;
-  }
-
-  isIsosceles() {
-    return this.uniqueSidesLength() === 2;
-  }
-
-  uniqueSidesLength() {
-    return new Set(this.sides).size;
-  }
-}
+export const scalene = sides => {
+  return valid(sides) && !isosceles(sides);
+};

@@ -1,78 +1,86 @@
-import { Triangle } from './triangle';
+import { equilateral, isosceles, scalene } from './triangle';
 
 describe('Triangle', () => {
-  test('equilateral triangles have equal sides', () => {
-    const triangle = new Triangle(2, 2, 2);
-    expect(triangle.kind()).toEqual('equilateral');
+  describe('equilateral triangle', () => {
+    test('all sides are equal', () => {
+      expect(equilateral([2, 2, 2])).toEqual(true);
+    });
+
+    xtest('any side is unequal', () => {
+      expect(equilateral([2, 3, 2])).toEqual(false);
+    });
+
+    xtest('no sides are equal', () => {
+      expect(equilateral([5, 4, 6])).toEqual(false);
+    });
+
+    xtest('all zero sides is not a triangle', () => {
+      expect(equilateral([0, 0, 0])).toEqual(false);
+    });
+
+    xtest('sides may be floats', () => {
+      expect(equilateral([0.5, 0.5, 0.5])).toEqual(true);
+    });
   });
 
-  xtest('larger equilateral triangles also have equal sides', () => {
-    const triangle = new Triangle(10, 10, 10);
-    expect(triangle.kind()).toEqual('equilateral');
+  describe('isosceles triangle', () => {
+    xtest('last two sides are equal', () => {
+      expect(isosceles([3, 4, 4])).toEqual(true);
+    });
+
+    xtest('first two sides are equal', () => {
+      expect(isosceles([4, 4, 3])).toEqual(true);
+    });
+
+    xtest('first and last sides are equal', () => {
+      expect(isosceles([4, 3, 4])).toEqual(true);
+    });
+
+    xtest('equilateral triangles are also isosceles', () => {
+      expect(isosceles([4, 4, 4])).toEqual(true);
+    });
+
+    xtest('no sides are equal', () => {
+      expect(isosceles([2, 3, 4])).toEqual(false);
+    });
+
+    xtest('first triangle inequality violation', () => {
+      expect(isosceles([1, 1, 3])).toEqual(false);
+    });
+
+    xtest('second triangle inequality violation', () => {
+      expect(isosceles([1, 3, 1])).toEqual(false);
+    });
+
+    xtest('third triangle inequality violation', () => {
+      expect(isosceles([3, 1, 1])).toEqual(false);
+    });
+
+    xtest('sides may be floats', () => {
+      expect(isosceles([0.5, 0.4, 0.5])).toEqual(true);
+    });
   });
 
-  xtest('isosceles triangles have last two sides equal', () => {
-    const triangle = new Triangle(3, 4, 4);
-    expect(triangle.kind()).toEqual('isosceles');
-  });
+  describe('scalene triangle', () => {
+    xtest('no sides are equal', () => {
+      expect(scalene([5, 4, 6])).toEqual(true);
+    });
 
-  xtest('isosceles triangles have first and last sides equal', () => {
-    const triangle = new Triangle(4, 3, 4);
-    expect(triangle.kind()).toEqual('isosceles');
-  });
+    xtest('all sides are equal', () => {
+      expect(scalene([4, 4, 4])).toEqual(false);
+    });
 
-  xtest('isosceles triangles have two first sides equal', () => {
-    const triangle = new Triangle(4, 4, 3);
-    expect(triangle.kind()).toEqual('isosceles');
-  });
+    xtest('two sides are equal', () => {
+      expect(scalene([4, 4, 3])).toEqual(false);
+    });
 
-  xtest('isosceles triangles have in fact exactly two sides equal', () => {
-    const triangle = new Triangle(10, 10, 2);
-    expect(triangle.kind()).toEqual('isosceles');
-  });
+    xtest('may not violate triangle inequality', () => {
+      expect(scalene([7, 3, 2])).toEqual(false);
+    });
 
-  xtest('scalene triangles have no equal sides', () => {
-    const triangle = new Triangle(3, 4, 5);
-    expect(triangle.kind()).toEqual('scalene');
-  });
-
-  xtest('scalene triangles have no equal sides at a larger scale too', () => {
-    const triangle = new Triangle(10, 11, 12);
-    expect(triangle.kind()).toEqual('scalene');
-  });
-
-  xtest('scalene triangles have no equal sides in descending order either', () => {
-    const triangle = new Triangle(5, 4, 2);
-    expect(triangle.kind()).toEqual('scalene');
-  });
-
-  xtest('very small triangles are legal', () => {
-    const triangle = new Triangle(0.4, 0.6, 0.3);
-    expect(triangle.kind()).toEqual('scalene');
-  });
-
-  xtest('test triangles with no size are illegal', () => {
-    const triangle = new Triangle(0, 0, 0);
-    expect(triangle.kind.bind(triangle)).toThrow();
-  });
-
-  xtest('triangles with negative sides are illegal', () => {
-    const triangle = new Triangle(3, 4, -5);
-    expect(triangle.kind.bind(triangle)).toThrow();
-  });
-
-  xtest('triangles violating triangle inequality are illegal', () => {
-    const triangle = new Triangle(1, 1, 3);
-    expect(triangle.kind.bind(triangle)).toThrow();
-  });
-
-  xtest('triangles violating triangle inequality are illegal 2', () => {
-    const triangle = new Triangle(7, 3, 2);
-    expect(triangle.kind.bind(triangle)).toThrow();
-  });
-
-  xtest('triangles violating triangle inequality are illegal 3', () => {
-    const triangle = new Triangle(10, 1, 3);
-    expect(triangle.kind.bind(triangle)).toThrow();
+    xtest('sides may be floats', () => {
+      expect(scalene([0.5, 0.4, 0.6])).toEqual(true);
+    });
   });
 });
+
