@@ -10,10 +10,7 @@ export class Hangman {
     this.status = GAME_STATUS.ONGOING
     this.word = word
     this.guesses = []
-    this.maskedWord = ''
-    for (var i = 0; i < this.word.length; i++) {
-      this.maskedWord += '_'
-    }
+    this.maskedWord = '_'.repeat(this.word.length)
   }
 
   guess(char) {
