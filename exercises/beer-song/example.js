@@ -24,25 +24,28 @@ function nextVerse(currentVerse) {
 }
 
 function nextBottle(currentVerse) {
-  return `${bottles(nextVerse(currentVerse)).toLowerCase()} of beer on the wall.\n`;
+  return `${bottles(
+    nextVerse(currentVerse)
+  ).toLowerCase()} of beer on the wall.`;
 }
 
-export class BeerSong {
-  static verse(number) {
-    const line1 = `${bottles(number)} of beer on the wall, `;
-    const line2 = `${bottles(number).toLowerCase()} of beer.\n`;
-    const line3 = action(number);
-    const line4 = nextBottle(number);
+function verse(number) {
+  const line1 = `${bottles(number)} of beer on the wall, ${bottles(
+    number
+  ).toLowerCase()} of beer.`;
+  const line2 = action(number) + nextBottle(number);
 
-    return [line1, line2, line3, line4].join('');
-  }
+  return [line1, line2];
+}
 
-  static sing(first = 99, last = 0) {
-    const verses = [];
-    for (let i = first; i >= last; i -= 1) {
-      verses.push(this.verse(i));
+export const recite = (startBottles, takeDown) => {
+  let verses = [];
+  for (let i = startBottles; i > startBottles - takeDown; i--) {
+    if(verses.length > 0) {
+      verses.push('')
     }
-
-    return verses.join('\n');
+    verses = verses.concat(verse(i));
   }
-}
+
+  return verses;
+};
