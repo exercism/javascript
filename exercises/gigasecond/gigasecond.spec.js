@@ -35,4 +35,10 @@ describe('Gigasecond', () => {
     const expectedDate = new Date(Date.parse('2046-10-03T01:46:39Z'));
     expect(gs).toEqual(expectedDate);
   });
+
+  xtest('does not mutate the input', () => {
+    const input = new Date(Date.UTC(2020, 0, 4, 20, 28, 30));
+    gigasecond(input);
+    expect(input).toEqual(new Date(Date.UTC(2020, 0, 4, 20, 28, 30)));
+  });
 });
