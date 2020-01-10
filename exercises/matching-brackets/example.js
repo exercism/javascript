@@ -1,36 +1,22 @@
-export const matchingBrackets = (input) => {
-  if (input.length === 0) {
-    return true;
-  }
+export const isPaired = input => {
+  const brackets = input.replace(/[^{(\[\])}]/g, ""); //eslint-disable-line
+  const bracketsAreMatching = (leftBracket, rightBracket) =>
+      leftBracket === '(' && rightBracket === ')' ||
+      leftBracket === '[' && rightBracket === ']' ||
+      leftBracket === '{' && rightBracket === '}';
 
-  let bracketArray = input;
-  if (typeof input === 'string') {
-    bracketArray = [...input];
-  }
-
-  const iArr = [];
-  const openArray = ['{', '[', '('];
-  const closeArray = ['}', ']', ')'];
-
-  for (let i = 0; i < bracketArray.length; i += 1) {
-    for (let j = 0; j < openArray.length; j += 1) {
-      if (bracketArray[i] === openArray[j]) {
-        iArr.push(i);
+  let arr = [];
+  for (let letter of brackets) {
+      if (arr.length >= 1) {
+          const lastBracket = arr[arr.length - 1];
+          if (bracketsAreMatching(lastBracket, letter)) {
+              arr.pop();
+          } else {
+              arr.push(letter);
+          }
+      } else {
+          arr.push(letter);
       }
-    }
   }
-
-  const topNumber = Math.max(...iArr);
-
-  for (let k = 0; k < 3; k += 1) {
-    if (bracketArray[topNumber] === openArray[k]) {
-      if (typeof bracketArray[topNumber + 1] !== 'undefined') {
-        if (bracketArray[topNumber + 1] === closeArray[k]) {
-          bracketArray.splice(topNumber, 2);
-          return matchingBrackets(bracketArray);
-        }
-      }
-    }
-  }
-  return false;
+  return arr.length === 0;
 };
