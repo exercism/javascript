@@ -1435,7 +1435,7 @@
       "slug": "grep",
       "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "matrix",
       "difficulty": 4,
       "topics": [
         "files",
