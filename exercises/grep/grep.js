@@ -6,7 +6,7 @@
 //
 // node grep.js args
 //
-// Instead of "grep args".
+// Instead of "./grep.js args".
 // 
 // Read more about shebangs here: https://en.wikipedia.org/wiki/Shebang_(Unix)
 // 

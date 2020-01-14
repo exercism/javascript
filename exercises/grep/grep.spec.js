@@ -20,9 +20,9 @@ const spawn_grep = config => {
 
     if (stderr) {
       reject(stderr);
+    } else {
+      resolve(stdout);
     }
-
-    resolve(stdout);
   });
 };
 
@@ -116,11 +116,9 @@ describe("grep exercise", () => {
           files: ["midsummer-night.txt"]
         })
       ).resolves.toBe(
-        formatStringTemplate(
-          `3:Nor how it may concern my modesty,
-            5:But I beseech your grace that I may know
-            6:The worst that may befall me in this case,`
-        )
+        formatStringTemplate(`3:Nor how it may concern my modesty,
+        5:But I beseech your grace that I may know
+        6:The worst that may befall me in this case,`)
       );
     });
 
