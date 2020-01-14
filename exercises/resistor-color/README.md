@@ -17,6 +17,8 @@ These colors are encoded as follows:
 
 Mnemonics map the colors to the numbers, that, when stored as an array, happen to map to their index in the array: Better Be Right Or Your Great Big Values Go Wrong.
 
+Your task is to write a function that receives a color as input and returns the appropriate number.
+
 More information on the color encoding of resistors can be found in the [Electronic color code Wikipedia article](https://en.wikipedia.org/wiki/Electronic_color_code)
 
 ## Setup
