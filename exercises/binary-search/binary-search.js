@@ -3,16 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class BinarySearch {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  get array() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  indexOf() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const find = () => {
+  throw new Error("Remove this statement and implement this function");
+};
