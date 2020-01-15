@@ -1,48 +1,61 @@
-import { Triangle } from './pascals-triangle';
+import { rows } from './pascals-triangle';
 
-describe('Triangle', () => {
-  test('with one row', () => {
-    expect(new Triangle(1).rows).toEqual([[1]]);
-  });
+describe('Pascals Triangle', () => {
+  describe("Given a count, return a collection of that many rows of pascal's triangle", () => {
+    test('zero rows', () => {
+      expect(rows(0)).toEqual([]);
+    });
 
-  xtest('with two rows', () => {
-    expect(new Triangle(2).rows).toEqual([[1], [1, 1]]);
-  });
+    xtest('single row', () => {
+      expect(rows(1)).toEqual([[1]]);
+    });
 
-  xtest('with three rows', () => {
-    expect(new Triangle(3).rows).toEqual([[1], [1, 1], [1, 2, 1]]);
-  });
+    xtest('two rows', () => {
+      expect(rows(2)).toEqual([[1], [1, 1]]);
+    });
 
-  xtest('last row', () => {
-    expect(new Triangle(4).lastRow).toEqual([1, 3, 3, 1]);
-  });
+    xtest('three rows', () => {
+      expect(rows(3)).toEqual([[1], [1, 1], [1, 2, 1]]);
+    });
 
-  xtest('fifth row', () => {
-    expect(new Triangle(5).lastRow).toEqual([1, 4, 6, 4, 1]);
-  });
+    xtest('four rows', () => {
+      expect(rows(4)).toEqual([[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]);
+    });
 
-  xtest('twentieth row', () => {
-    const twentieth = [
-      1,
-      19,
-      171,
-      969,
-      3876,
-      11628,
-      27132,
-      50388,
-      75582,
-      92378,
-      92378,
-      75582,
-      50388,
-      27132,
-      11628,
-      3876,
-      969,
-      171,
-      19,
-      1];
-    expect(new Triangle(20).lastRow).toEqual(twentieth);
+    xtest('five rows', () => {
+      expect(rows(5)).toEqual([
+        [1],
+        [1, 1],
+        [1, 2, 1],
+        [1, 3, 3, 1],
+        [1, 4, 6, 4, 1]
+      ]);
+    });
+
+    xtest('six rows', () => {
+      expect(rows(6)).toEqual([
+        [1],
+        [1, 1],
+        [1, 2, 1],
+        [1, 3, 3, 1],
+        [1, 4, 6, 4, 1],
+        [1, 5, 10, 10, 5, 1]
+      ]);
+    });
+
+    xtest('ten rows', () => {
+      expect(rows(10)).toEqual([
+        [1],
+        [1, 1],
+        [1, 2, 1],
+        [1, 3, 3, 1],
+        [1, 4, 6, 4, 1],
+        [1, 5, 10, 10, 5, 1],
+        [1, 6, 15, 20, 15, 6, 1],
+        [1, 7, 21, 35, 35, 21, 7, 1],
+        [1, 8, 28, 56, 70, 56, 28, 8, 1],
+        [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+      ]);
+    });
   });
 });

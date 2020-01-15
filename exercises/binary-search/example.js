@@ -1,38 +1,16 @@
-function isSortedArray(array) {
-  for (let i = 1; i < array.length; i += 1) {
-    if (array[i] < array[i - 1]) {
-      return false;
+export const find = (array, element) => {
+  let start = 0;
+  let end = array.length - 1;
+  let middle;
+  while (start <= end) {
+    middle = Math.floor((start + end) / 2);
+    if (element === array[middle]) {
+      return middle;
+    } else if (element < array[middle]) {
+      end = middle - 1;
+    } else if (element > array[middle]) {
+      start = middle + 1;
     }
   }
-
-  return true;
-}
-
-function recursiveSearch(array, value, start, end) {
-  if (start === end) {
-    return -1;
-  }
-
-  const mid = Math.floor((start + end) / 2);
-  if (array[mid] > value) {
-    return recursiveSearch(array, value, start, mid);
-  }
-
-  if (array[mid] < value) {
-    return recursiveSearch(array, value, mid + 1, end);
-  }
-
-  return mid;
-}
-
-export class BinarySearch {
-  constructor(array) {
-    if (isSortedArray(array)) {
-      this.array = array;
-    }
-  }
-
-  indexOf(value) {
-    return recursiveSearch(this.array, value, 0, this.array.length);
-  }
-}
+  throw new Error("Value not in array");
+};
