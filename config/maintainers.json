@@ -40,6 +40,16 @@
       "line_url": "https://derk-jan.com/",
       "avatar_url": null,
       "bio": "All-round programmer, manager and owner of a Dutch software agency specializing in bespoke and tailored code."
+    },
+    {
+      "github_username": "Calamari",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": "Georg Tavonius",
+      "link_text": "My website",
+      "line_url": "https://webgeist.dev/",
+      "avatar_url": null,
+      "bio": "Freelance software developer in Ruby, JavaScript, Elixir and everything else that is learnable and fun."
     }
   ]
 }
