@@ -40,6 +40,16 @@
       "line_url": "https://derk-jan.com/",
       "avatar_url": null,
       "bio": "All-round programmer, manager and owner of a Dutch software agency specializing in bespoke and tailored code."
+    },
+    {
+      "github_username": "aimorris",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": "Adam Morris",
+      "link_text": null,
+      "link_url": null,
+      "avatar_url": null,
+      "bio": "Front-end web developer with years of experience using JavaScript, but learning a functional approach to web development using PureScript and Haskell"
     }
   ]
 }
