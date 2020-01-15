@@ -27,40 +27,58 @@
  * See its tests in this folder for a quick primer on how to use it! ( :
  */
 
-import { Grains } from './grains';
+import { square, total } from './grains';
 
 describe('Grains', () => {
-  const grains = new Grains();
+  describe('Returns The Number Of Grains On The Square', () => {
+    test('1', () => {
+      expect(square(1)).toEqual('1');
+    });
 
-  test('square 1', () => {
-    expect(grains.square(1)).toBe('1');
+    xtest('2', () => {
+      expect(square(2)).toEqual('2');
+    });
+
+    xtest('3', () => {
+      expect(square(3)).toEqual('4');
+    });
+
+    xtest('4', () => {
+      expect(square(4)).toEqual('8');
+    });
+
+    xtest('16', () => {
+      expect(square(16)).toEqual('32768');
+    });
+
+    xtest('32', () => {
+      expect(square(32)).toEqual('2147483648');
+    });
+
+    xtest('64', () => {
+      expect(square(64)).toEqual('9223372036854775808');
+    });
+
+    xtest('square 0 raises an exception', () => {
+      expect(() => square(0)).toThrow(
+        new Error('square must be between 1 and 64')
+      );
+    });
+
+    xtest('negative square raises an exception', () => {
+      expect(() => square(-1)).toThrow(
+        new Error('square must be between 1 and 64')
+      );
+    });
+
+    xtest('square greater than 64 raises an exception', () => {
+      expect(() => square(65)).toThrow(
+        new Error('square must be between 1 and 64')
+      );
+    });
   });
 
-  xtest('square 2', () => {
-    expect(grains.square(2)).toBe('2');
-  });
-
-  xtest('square 3', () => {
-    expect(grains.square(3)).toBe('4');
-  });
-
-  xtest('square 4', () => {
-    expect(grains.square(4)).toBe('8');
-  });
-
-  xtest('square 16', () => {
-    expect(grains.square(16)).toBe('32768');
-  });
-
-  xtest('square 32', () => {
-    expect(grains.square(32)).toBe('2147483648');
-  });
-
-  xtest('square 64', () => {
-    expect(grains.square(64)).toBe('9223372036854775808');
-  });
-
-  xtest('total', () => {
-    expect(grains.total()).toBe('18446744073709551615');
+  xtest('returns the total number of grains on the board', () => {
+    expect(total()).toEqual('18446744073709551615');
   });
 });

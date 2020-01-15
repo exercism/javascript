@@ -1,4 +1,4 @@
-export const solve = (x, y) => {
+export const score = (x, y) => {
   // Check for NaN
   if (Number.isNaN(Number(x)) || Number.isNaN(Number(y))) return null;
 

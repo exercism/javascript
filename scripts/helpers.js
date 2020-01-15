@@ -78,6 +78,13 @@ function prepare(assignment) {
   if(shell.test('-d', libDir)) {
     shell.cp(libDir + '/*.js', 'tmp_exercises/lib');
   }
+
+  shell.mkdir('-p', 'tmp_exercises/data');
+  const dataDir = ['exercises', assignment, 'data'].join('/');
+
+  if(shell.test('-d', dataDir)) {
+    shell.cp([dataDir, '*'].join('/'), 'tmp_exercises/data');
+  }
 }
 
 module.exports = {

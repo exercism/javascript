@@ -1,6 +1,5 @@
 {
   "name": "exercism-javascript",
-  "version": "1.7.0",
   "description": "Exercism exercises in Javascript.",
   "author": "Katrina Owen",
   "private": true,

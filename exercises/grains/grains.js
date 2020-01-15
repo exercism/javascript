@@ -2,13 +2,12 @@
 // This is only a SKELETON file for the 'Grains' exercise. It's been provided as a
 // convenience to get you started writing code faster.
 //
+import BigInt from "./lib/big-integer";
 
-export class Grains {
-  square() {
-    throw new Error("Remove this statement and implement this function");
-  }
+export const square = () => {
+  throw new Error("Remove this statement and implement this function");
+};
 
-  total() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const total = () => {
+  throw new Error("Remove this statement and implement this function");
+};

@@ -1432,6 +1432,18 @@
       "deprecated": true
     },
     {
+      "slug": "grep",
+      "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 4,
+      "topics": [
+        "files",
+        "searching",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "yacht",
       "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
       "core": false,
