@@ -2,7 +2,7 @@ import { CustomSet } from './custom-set';
 
 describe('CustomSet', () => {
   describe('empty: returns true if the set contains no elements', () => {
-    xtest('sets with no elements are empty', () => {
+    test('sets with no elements are empty', () => {
       const actual = new CustomSet().empty();
       expect(actual).toBe(true);
     });
@@ -112,6 +112,10 @@ describe('CustomSet', () => {
 
     xtest('sets with different elements are not equal', () => {
       const actual = new CustomSet([1, 2, 3]).eql(new CustomSet([1, 2, 4]));
+      expect(actual).toBe(false);
+    });
+    xtest('set is not equal to larger set with same elements', () => {
+      const actual = new CustomSet([1, 2, 3]).eql(new CustomSet([1, 2, 3, 4]));
       expect(actual).toBe(false);
     });
   });
