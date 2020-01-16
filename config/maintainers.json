@@ -80,6 +80,16 @@
       "line_url": null,
       "avatar_url": null,
       "bio": "I am a full stack engineer which means if you give me one more task my stack will overflow."
+    },
+    {
+      "github_username": "ovidiu141",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": "Ovidiu Miu",
+      "link_text": null,
+      "line_url": null,
+      "avatar_url": null,
+      "bio": "Walked on many paths. Javascript was so friendly to me such that I want to make it my best friend."
     }
   ]
 }
