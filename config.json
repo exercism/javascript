@@ -103,8 +103,8 @@
       "slug": "bank-account",
       "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
+      "unlocked_by": "space-age",
+      "difficulty": 3,
       "topics": [
         "classes",
         "conditionals"
