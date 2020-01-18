@@ -31,4 +31,10 @@ export class BankAccount {
 
 }
 
-export class ValueError extends Error {}
+export class ValueError extends Error {
+
+  constructor() {
+    super('Bank account error');
+  }
+
+}
