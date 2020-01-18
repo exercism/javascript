@@ -3,45 +3,34 @@ export class Triangle {
     this.sides = sides;
   }
 
-  kind() {
-    if (this.isIllegal()) {
-      throw new TypeError('illegal');
-    }
-
-    if (this.isEquilateral()) {
-      return 'equilateral';
-    }
-
-    if (this.isIsosceles()) {
-      return 'isosceles';
-    }
-
-    return 'scalene';
-  }
-
-  isIllegal() {
-    return this.violatesInequality() || this.hasImpossibleSides();
-  }
-
-  violatesInequality() {
-    const [a, b, c] = this.sides;
-    return a + b < c || a + c < b || b + c < a;
-  }
-
-  hasImpossibleSides() {
-    const [a, b, c] = this.sides;
-    return a <= 0 || b <= 0 || c <= 0;
+  isValid() {
+    const [s1, s2, s3] = this.sides;
+    const sidesArePositive = s1 > 0 && s2 > 0 && s3 > 0;
+    const validatesTriangleInequality =
+      s1 + s2 >= s3 && s1 + s3 >= s2 && s2 + s3 >= s1;
+    return sidesArePositive && validatesTriangleInequality;
   }
 
   isEquilateral() {
-    return this.uniqueSidesLength() === 1;
+    if (!this.isValid()) {
+      return false;
+    }
+    const [s1, s2, s3] = this.sides;
+    return s1 === s2 && s2 === s3 && s1 === s3;
   }
 
   isIsosceles() {
-    return this.uniqueSidesLength() === 2;
+    if (!this.isValid()) {
+      return false;
+    }
+    const [s1, s2, s3] = this.sides;
+    return s1 === s2 || s1 === s3 || s2 === s3;
   }
 
-  uniqueSidesLength() {
-    return new Set(this.sides).size;
+  isScalene() {
+    if (!this.isValid()) {
+      return false;
+    }
+    return !this.isIsosceles();
   }
 }
