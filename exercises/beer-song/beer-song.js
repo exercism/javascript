@@ -3,12 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class BeerSong {
-  static verse() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  static sing() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const recite = (initialBottlesCount, takeDownCount) => {
+  throw new Error("Remove this statement and implement this function");
+};
