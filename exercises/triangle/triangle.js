@@ -3,14 +3,20 @@
 // convenience to get you started writing code faster.
 //
 
-export const equilateral = () => {
-  throw new Error("Remove this statement and implement this function");
-};
+export class Triangle {
+  constructor() {
+    throw new Error("Remove this statement and implement this function");
+  }
 
-export const isosceles = () => {
-  throw new Error("Remove this statement and implement this function");
-};
+  isEquilateral() {
+    throw new Error("Remove this statement and implement this function");
+  }
 
-export const scalene = () => {
-  throw new Error("Remove this statement and implement this function");
-};
+  isIsosceles() {
+    throw new Error("Remove this statement and implement this function");
+  }
+
+  isScalene() {
+    throw new Error("Remove this statement and implement this function");
+  }
+}
