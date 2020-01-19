@@ -45,11 +45,11 @@ function cleanUp() {
 const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs', '@babel/node'];
 
 // Filter out some unwanted packages and create package.json for exercises
-function createExercisePackageJson() {
+function createExercisePackageJson(assignmentVersion) {
   const packageFile = shell.cat('package.json').toString();
   const packageJson = JSON.parse(packageFile);
 
-  delete packageJson['version'];
+  packageJson['version'] = assignmentVersion;
   SKIP_PACKAGES_FOR_CHECKSUM.forEach(pkg => delete packageJson['devDependencies'][pkg]);
 
   const shellStr = new shell.ShellString(JSON.stringify(packageJson, null, 2) + '\n');
