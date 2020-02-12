@@ -40,7 +40,7 @@ describe('Triangle', () => {
     });
 
     xtest('first and last sides are equal', () => {
-      const triangle = new Triangle(4, 3, 4);
+      const triangle = new Triangle(2, 4, 2);
       expect(triangle.isIsosceles()).toBe(true);
     });
 
