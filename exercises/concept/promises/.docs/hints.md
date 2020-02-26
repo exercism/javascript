@@ -1,5 +1,3 @@
-# Hints
-
 ### 1. Fetch a translation, ignoring the quality
 
 - Promises are chainable, for example by using `.then`.
