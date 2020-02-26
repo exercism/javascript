@@ -1,5 +1,3 @@
-# Hints
-
 ### 1. Get the first letter of a sentence
 
 - Any `string` in JavaScript has two methods to access characters at a certain

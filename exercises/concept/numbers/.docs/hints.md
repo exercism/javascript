@@ -1,5 +1,3 @@
-# Hints
-
 ### 1. Calculate the day rate given an hourly rate
 
 ### 2. Calculate the month rate, given an hourly rate and a discount
