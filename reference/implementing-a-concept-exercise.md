@@ -52,6 +52,8 @@ If the student gets stuck, we will allow them to click a button requesting a hin
 
 The file should contain both general and task-specific "hints". These hints should be enough to unblock almost any student. They might link to the docs of the functions that need to be used.
 
+The hints should not spell out the solution, but instead point to a resource describing the solution (e.g. linking to documentation for the function to use).
+
 ## Step 4: add .docs/after.md (optional)
 
 Once the student completes the exercise they will be shown this file, which should provide them with a summary of what the exercise aimed to teach. This document can also link to any additional resources that might be interesting to the student in the context of the exercise.
