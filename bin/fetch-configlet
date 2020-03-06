@@ -37,8 +37,11 @@ case $(uname -m) in
 esac)
 
 
-VERSION="$(curl --silent --head $LATEST | awk -v FS=/ '/Location:/{print $NF}' | tr -d '\r')"
-URL=https://github.com/exercism/configlet/releases/download/$VERSION/configlet-$OS-${ARCH}.$EXT
+VERSION="$(curl --head --silent $LATEST | perl -nE 's/\R//g; /^Location:/i && print [split/\//]->[-1]')"
+URL=https://github.com/exercism/configlet/releases/download/$VERSION/configlet-$OS-${ARCH}.tgz
+
+echo "VERSION = $VERSION"
+echo "URL = $URL"
 
 case $EXT in
     (*zip)
