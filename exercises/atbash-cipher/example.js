@@ -1,22 +1,17 @@
-const LETTERS = 'abcdefghijklmnopqrstuvwxyz';
-const REVERSED_LETTERS = [...LETTERS].reverse().join('');
+const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
 
-function insertSpacing(s, interval) {
-  const matcher = new RegExp(`.{1,${interval}}`, 'g');
-  return s.match(matcher).join(' ');
-}
+export const encode = message => {
+  const encodedMessage = [...message.toLowerCase().replace(/[ .,]/g, '')]
+    .map(char => {
+      if (ALPHABET.includes(char)) {
+        return ALPHABET[ALPHABET.length - 1 - ALPHABET.indexOf(char)];
+      }
+      return char;
+    })
+    .join('');
+  return encodedMessage.match(/.{1,5}/g).join(' ');
+};
 
-function invert(character) {
-  if (character.match(/\d/)) {
-    this.push(character);
-  } else {
-    this.push(LETTERS[REVERSED_LETTERS.indexOf(character)]);
-  }
-}
-
-export const encode = (s) => {
-  const characters = [];
-  [...s.toLowerCase()].forEach(invert, characters);
-  const encoded = insertSpacing(characters.join(''), 5);
-  return encoded;
+export const decode = message => {
+  return encode(message).replace(/ /g, '')
 };

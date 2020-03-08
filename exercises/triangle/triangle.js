@@ -8,7 +8,15 @@ export class Triangle {
     throw new Error("Remove this statement and implement this function");
   }
 
-  kind() {
+  isEquilateral() {
+    throw new Error("Remove this statement and implement this function");
+  }
+
+  isIsosceles() {
+    throw new Error("Remove this statement and implement this function");
+  }
+
+  isScalene() {
     throw new Error("Remove this statement and implement this function");
   }
 }

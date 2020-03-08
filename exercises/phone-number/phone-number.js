@@ -3,12 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class PhoneNumber {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
-  }
-
-  number() {
-    throw new Error("Remove this statement and implement this function");
-  }
-}
+export const clean = () => {
+  throw new Error("Remove this statement and implement this function");
+};

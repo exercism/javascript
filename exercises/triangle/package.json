@@ -1,5 +1,6 @@
 {
   "name": "exercism-javascript",
+  "version": "1.2.1",
   "description": "Exercism exercises in Javascript.",
   "author": "Katrina Owen",
   "private": true,
@@ -10,6 +11,7 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-bigint": "^7.7.4",
     "@babel/preset-env": "^7.5.5",
     "@types/jest": "^24.0.16",
     "@types/node": "^12.6.8",

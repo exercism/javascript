@@ -26,7 +26,7 @@ describe('High Scores Test Suite', () => {
     expect(new HighScores(input).personalTopThree).toEqual([30, 20, 10]);
   });
 
-  xtest('Personal top when ther eis a tie', () => {
+  xtest('Personal top when there is a tie', () => {
     const input = [40, 20, 40, 30];
     expect(new HighScores(input).personalTopThree).toEqual([40, 40, 30]);
   });
