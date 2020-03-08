@@ -27,6 +27,36 @@ describe('Zipper', () => {
     zipper = Zipper.fromTree(t1);
   });
 
+  test('left returns a new Zipper', () => {
+    let left = zipper.left();
+    expect(left).not.toBe(zipper)
+  })
+
+  test('right returns a new Zipper', () => {
+    let right = zipper.right();
+    expect(right).not.toBe(zipper)
+  })
+
+  test('setValue returns a new Zipper', () => {
+    let anotherZipper = zipper.setValue(99);
+    expect(anotherZipper).not.toBe(zipper)
+  })
+
+  test('setRight returns a new Zipper', () => {
+    let right = zipper.setRight(bt(55,null,null));
+    expect(right).not.toBe(zipper)
+  })
+
+  test('setLeft returns a new Zipper', () => {
+    let left = zipper.setLeft(bt(55,null,null));
+    expect(left).not.toBe(zipper)
+  })
+
+  test('up returns a new Zipper', () => {
+    let up = zipper.right().up();
+    expect(zipper).not.toBe(up)
+  })
+
   test('data is retained', () => {
     expect(zipper.toTree()).toEqual(t1);
   });
