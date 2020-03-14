@@ -110,7 +110,7 @@ changes the _version_ of that canonical data. Syncing an exercise consists of:
   - updating or adding the `"version"` key in the `package.json` file, 
   - updating the `<slug>.spec.js` file,
   - match the `example.js` file to still work with the new tests, and 
-  - regenerate the `README.md`, should there be any changes.
+  - [regenerate the `README.md`][doc-readme], should there be any changes.
 
 #### Improving or adding mentor notes
 
