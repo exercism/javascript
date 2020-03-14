@@ -78,10 +78,15 @@ means that the open terminals don't know that a new program was installed.
 >
 > Close any open terminals and open a new one.
 
-# Assignment Requirements
+### Assignment Requirements
 
-The `hello-world` assignment will teach you how to use the `exercism` cli and
-download an assignment to your computer. 
+Please follow [these instructions][cli-walkthrough] to download exercism cli for your OS.
+
+Once CLI is all setup & configured, download the first exercise - `hello-world`:
+
+```bash
+$ exercism download --exercise=hello-world --track=javascript
+```
 
 Each assignment then needs some tools to run the tests. They can be installed 
 running this command within each assignment directory:
@@ -109,3 +114,4 @@ $ npm install
 [web-nodejs]: https://nodejs.org/
 [web-nodejs-download]: https://nodejs.org/en/download/
 [web-nodejs-package]: https://nodejs.org/en/download/package-manager/
+[cli-walkthrough]: https://exercism.io/cli-walkthrough
