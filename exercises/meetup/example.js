@@ -45,7 +45,6 @@ const getMeetupDay = (year, month, weekOrdinal, dayOfWeek) => {
   }
 
   for (let i = lowerLimit; i <= upperLimit; i++) {
-    // console.log(new Date(year, month - 1, i).getDay(), getDayOfWeekCount(dayOfWeek))
     if (
       new Date(year, month - 1, i).getDay() === getDayOfWeekCount(dayOfWeek)
     ) {
@@ -56,9 +55,6 @@ const getMeetupDay = (year, month, weekOrdinal, dayOfWeek) => {
 };
 
 export const meetup = (year, month, weekOrdinal, dayOfWeek) => {
-  const meetupDayAsString = getMeetupDay(year, month, weekOrdinal, dayOfWeek)
-    .toString()
-    .padStart(2, '0');
-  const monthAsString = month.toString().padStart(2, '0');
-  return `${year}-${monthAsString}-${meetupDayAsString}`;
+  const meetupDay = getMeetupDay(year, month, weekOrdinal, dayOfWeek);
+  return new Date(year, month - 1, meetupDay);
 };
