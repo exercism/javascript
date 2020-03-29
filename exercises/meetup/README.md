@@ -26,6 +26,19 @@ Given examples of a meetup dates, each containing a month, day, year, and
 descriptor calculate the date of the actual meetup.  For example, if given
 "The first Monday of January 2017", the correct meetup date is 2017/1/2.
 
+In Javascript, the Date object month's index ranges from 0 to 11.
+
+```javascript
+const date = new Date('2020-06-13');
+date.getFullYear();
+// => 2020
+date.getMonth();
+// => 5 (instead of 6)
+date.getDate();
+// => 13
+```
+
+
 ## Setup
 
 Go through the setup instructions for Javascript to install the necessary
