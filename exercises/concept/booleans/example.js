@@ -10,6 +10,6 @@ export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
   return prisonerIsAwake && !archerIsAwake;
 }
 
-export function canReleasePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent) {
+export function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent) {
   return !knightIsAwake && !archerIsAwake && prisonerIsAwake || petDogIsPresent && !archerIsAwake;
 }
