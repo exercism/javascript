@@ -2,7 +2,7 @@ import {
   canExecuteFastAttack,
   canSpy,
   canSignalPrisoner,
-  canReleasePrisoner
+  canFreePrisoner
 } from "./booleans";
 
 describe("booleans", () => {
@@ -61,7 +61,7 @@ describe("booleans", () => {
     );
   });
 
-  describe("canReleasePrisoner", () => {
+  describe("canFreePrisoner", () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false, false, false],
       [false, false, false, true, true],
@@ -89,9 +89,9 @@ describe("booleans", () => {
         petDogIsPresent,
         expected
       ]) => {
-        test(`canReleasePrisoner(${knightIsAwake}, ${archerIsAwake}, ${prisonerIsAwake}, ${petDogIsPresent})`, () => {
+        test(`canFreePrisoner(${knightIsAwake}, ${archerIsAwake}, ${prisonerIsAwake}, ${petDogIsPresent})`, () => {
           expect(
-            canReleasePrisoner(
+            canFreePrisoner(
               knightIsAwake,
               archerIsAwake,
               prisonerIsAwake,
