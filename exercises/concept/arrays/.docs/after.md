@@ -3,7 +3,7 @@ In Javascript, an array is actually just a regular object where the elements are
 Declaring an array and accessing an element:
 
 ```javascript
-const names = ['Jack', 'Laura', 'Paul', 'Megan'];
+const names = ["Jack", "Laura", "Paul", "Megan"];
 names[1];
 // => Laura
 ```
