@@ -22,7 +22,7 @@
 
 [Example of implementation](https://exercism.io/tracks/javascript/exercises/bob/solutions/375313effb6346879203533e78484002)
 
-- **switch statement**: used as an alternative to if-else statements for identifying the type of message 
+- **switch statement**: used as an alternative to if-else statements for identifying the type of message
 
 ## Using anonymous functions
 

@@ -8,9 +8,9 @@ entry, you'll need to work out the password of that day:
 ## Front door
 
 1. The guard will recite a poem, one line at the time;
-    - You will have to respond with the appropriate letter.
+   - You will have to respond with the appropriate letter.
 2. The guard will tell you all the letters you've responded with at once;
-    - You need to format the letters as a capitalised word.
+   - You need to format the letters as a capitalised word.
 
 For example, one of their favourite writers is Michael Lockwood, who's written
 the following _acrostic_ poem, which means that the first letter of each
@@ -36,11 +36,11 @@ VIP area. Because this is not for everyone, the back door process is a bit more
 convoluted.
 
 1. The guard will recite a poem, one line at the time;
-    - You will have to respond with the appropriate letter.
+   - You will have to respond with the appropriate letter.
 2. The guard will tell you all the letters you've responded with at once, _but
    in reverse_:
-    - You need to format the letters as a capitalised word
-    - and ask nicely, by appending `, please`
+   - You need to format the letters as a capitalised word
+   - and ask nicely, by appending `, please`
 
 For example, the poem mentioned before is also _telestich_, which means that
 the last letter of each sentence form a word:
@@ -66,7 +66,7 @@ with the renowned poets.
 Implement a function that returns first letter of a sentence:
 
 ```javascript
-frontDoorResponse('Stands so high')
+frontDoorResponse("Stands so high");
 // => "S"
 ```
 
@@ -75,10 +75,10 @@ frontDoorResponse('Stands so high')
 Implement a function that correctly capitalizes a word:
 
 ```javascript
-capitalize('SHIRE')
+capitalize("SHIRE");
 // => "Shire"
 
-capitalize('horse')
+capitalize("horse");
 // => "Horse"
 ```
 
@@ -87,7 +87,7 @@ capitalize('horse')
 Implement a function that returns the last letter of a sentence:
 
 ```javascript
-backDoorResponse('Stands so high')
+backDoorResponse("Stands so high");
 // => "h"
 ```
 
@@ -96,7 +96,7 @@ backDoorResponse('Stands so high')
 Implement a function that reverses a word:
 
 ```javascript
-reverse('esroh')
+reverse("esroh");
 // => "horse"
 ```
 
@@ -105,5 +105,6 @@ reverse('esroh')
 Change the implementation of the `backDoorPassword` function so that it's polite:
 
 ```javascript
-backDoorPassword('esroh')
+backDoorPassword("esroh");
 // => "Horse, please"
+```

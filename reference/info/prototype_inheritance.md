@@ -14,7 +14,6 @@ JavaScript objects are dynamic "bags" of properties (referred to as "own propert
 
 JavaScript does **not** have "methods" in the form that [class][concept-class]-based languages define them. In JavaScript, any [function][type-function] can be added to an object in the form of a property. An inherited function acts just as any other property, including _property shadowing_.
 
-
 [concept-class]: ../../../../reference/concepts/classes.md
 [concept-inheritance]: ../../../../reference/concepts/inheritance.md
 [concept-property]: ../../../../reference/concepts/state.md

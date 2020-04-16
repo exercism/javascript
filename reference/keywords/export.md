@@ -55,7 +55,7 @@ function square(x) {
 }
 module.exports = {
   foo: foo,
-  square: square
+  square: square,
 };
 ```
 

@@ -6,23 +6,23 @@ Because JavaScript is a [prototype-based][info-prototype-inheritance] language, 
 
 ## Table with types and results
 
-| `operand` type | `typeof` result |
-|----------------|-----------------|
-| [Undefined][type-undefined] | `"undefined"` |
-| [Null][type-null] | `"object"` (see below) |
-| [Boolean][type-boolean] | `"boolean"` |
-| [Number][type-number] | `"number"` |
-| [BigInt][type-bigint] | `"bigint"` |
-| [String][type-string] | `"string"` |
-| [Symbol][type-symbol] | `"symbol"` |
-| Host object (provided by the JS environment) | _Implementation-dependent_
-| [Function][type-function] object | `"function"` |
-| Any other object | `"object"` |
+| `operand` type                               | `typeof` result            |
+| -------------------------------------------- | -------------------------- |
+| [Undefined][type-undefined]                  | `"undefined"`              |
+| [Null][type-null]                            | `"object"` (see below)     |
+| [Boolean][type-boolean]                      | `"boolean"`                |
+| [Number][type-number]                        | `"number"`                 |
+| [BigInt][type-bigint]                        | `"bigint"`                 |
+| [String][type-string]                        | `"string"`                 |
+| [Symbol][type-symbol]                        | `"symbol"`                 |
+| Host object (provided by the JS environment) | _Implementation-dependent_ |
+| [Function][type-function] object             | `"function"`               |
+| Any other object                             | `"object"`                 |
 
 ## Why `null` is `"object"`
 
 ```javascript
-typeof null
+typeof null;
 // => 'object'
 ```
 
@@ -32,12 +32,10 @@ was represented as the NULL [pointer][type-pointer] (`0x00` in most
 platforms). Consequently, `null` had 0 as type tag, hence the `"object"`
 `typeof` return value. [Read more][ref-null-pointer-typeof].
 
-
 [info-prototype-inheritance]: ../info/prototype_inheritance.md
 [keyword-instanceof]: ./instanceof.md
 [language-csharp]: ../../../csharp/README.md
 [language-ruby]: ../../../ruby/README.md
-
 [type-array]: ../../../../reference/types/array.md
 [type-bigint]: ../../../../reference/types/big_integer.md
 [type-boolean]: ../../../../reference/types/boolean.md
@@ -49,7 +47,6 @@ platforms). Consequently, `null` had 0 as type tag, hence the `"object"`
 [type-string]: ../../../../reference/types/string.md
 [type-symbol]: ../../../../reference/types/symbol.md
 [type-undefined]: ../../../../reference/concepts/undefined.md
-
 [ref-null-pointer-typeof]: https://2ality.com/2013/10/typeof-null.html
 [csharp-operator-is]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/is
 [ruby-method-is]: https://ruby-doc.org/core/Object.html#method-i-is_a-3F

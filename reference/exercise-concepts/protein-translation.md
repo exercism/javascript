@@ -15,12 +15,11 @@
 
 ## Depending on implementation could also be:
 
-
 ## When using a for loop to parse and translate rna in one go
 
 - Using for-loops
 - Using for-loops with custom step size
-- Using `String#substring` to access parts of 
+- Using `String#substring` to access parts of
 
 ## When first splitting then translating rna
 
