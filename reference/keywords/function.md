@@ -3,7 +3,7 @@
 The `function` keyword can be used to define a [function][concept-functions] inside an [expression][concept-expressions].
 
 ```javascript
-const greet = function(name) {
+const greet = function (name) {
   return `Hello ${name}`;
 };
 ```

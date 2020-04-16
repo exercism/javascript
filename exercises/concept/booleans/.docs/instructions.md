@@ -19,7 +19,7 @@ Implement a function named `canExecuteFastAttack` that takes a boolean value whi
 
 ```javascript
 const knightIsAwake = true;
-canExecuteFastAttack(knightIsAwake)
+canExecuteFastAttack(knightIsAwake);
 // => false
 ```
 
@@ -31,7 +31,7 @@ Implement a function named `canSpy` that takes three boolean values, indicating 
 const knightIsAwake = false;
 const archerIsAwake = true;
 const prisonerIsAwake = false;
-canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)
+canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake);
 // => true
 ```
 
@@ -42,7 +42,7 @@ Implement a function named `canSignalPrisoner` that takes two boolean values, in
 ```javascript
 const archerIsAwake = false;
 const prisonerIsAwake = true;
-canSignalPrisoner(archerIsAwake, prisonerIsAwake)
+canSignalPrisoner(archerIsAwake, prisonerIsAwake);
 // => true
 ```
 
@@ -55,6 +55,6 @@ const knightIsAwake = false;
 const archerIsAwake = true;
 const prisonerIsAwake = false;
 const petDogIsPresent = false;
-canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent)
+canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent);
 // => false
 ```

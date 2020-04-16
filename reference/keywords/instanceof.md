@@ -4,16 +4,16 @@ The `instanceof` operator tests whether the prototype property of a [_constructo
 
 ```javascript
 function Car(make, model, year) {
-  this.make = make
-  this.model = model
-  this.year = year
+  this.make = make;
+  this.model = model;
+  this.year = year;
 }
 
-const mycar = new Car('Honda', 'Accord', 1998)
+const mycar = new Car("Honda", "Accord", 1998);
 
-mycar instanceof Car
+mycar instanceof Car;
 // => true
-mycar instanceof Object
+mycar instanceof Object;
 // => true
 ```
 

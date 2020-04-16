@@ -19,7 +19,7 @@
 - **arrays**: the required output of the exercise is an array of verses (also used methods and properties of the Array object: push, concat, length)
 - **conditionals**: if-else (used for returning a certain part of a verse based on the current verse number or based on the number of bottles left)
 - **duck typing**: using duck typing whenever methods or properties of String or Array objects are called
-- **arithmetic operators**: using '-' operator for computing number of verses/bottles in different contexts. 
+- **arithmetic operators**: using '-' operator for computing number of verses/bottles in different contexts.
   Using '--' operator inside the for statement
 - **comparision operators**: using '>' operator to test if the number of verses inside the array is larger than 0
 
@@ -27,13 +27,13 @@
 
 [Example of implementation](https://exercism.io/tracks/javascript/exercises/beer-song/solutions/0312dfd0df224103af59e74c77491ee9)
 
-- **switch statement**: used as an alternative to the *if-else* statement (for returning a certain part of a verse based on the current verse number or based on the number of bottles left)
+- **switch statement**: used as an alternative to the _if-else_ statement (for returning a certain part of a verse based on the current verse number or based on the number of bottles left)
 
 ## Using a while statement
 
 [Example of implementation](https://exercism.io/tracks/javascript/exercises/beer-song/solutions/2d6047008b934a10b1855304264fca88)
 
-- **while statement**: used as an alternative to an *indexed for* looping statement (for building the required array of verses)
+- **while statement**: used as an alternative to an _indexed for_ looping statement (for building the required array of verses)
 
 ## Using anonymous functions
 
