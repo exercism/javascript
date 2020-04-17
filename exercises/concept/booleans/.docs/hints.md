@@ -8,4 +8,4 @@
 
 ### 3. Check if the 'Signal Prisoner' action is possible
 
-- Logical Operators in the order of their precedence (from highest to lowest): `!`, `&&`, `||`.
+- Logical operators in the order of their precedence (from highest to lowest): `!`, `&&`, `||`.
