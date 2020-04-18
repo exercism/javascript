@@ -15,7 +15,7 @@ export function dayRate(ratePerHour) {
  *
  * @param {number} ratePerHour
  * @param {string} discount for example 20%
- * @returns {number} the rounded down monthly rate
+ * @returns {number} the rounded up monthly rate
  */
 export function monthRate(ratePerHour, discount) {
   const monthly = dayRate(ratePerHour) * 22
