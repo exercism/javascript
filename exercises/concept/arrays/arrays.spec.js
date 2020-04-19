@@ -5,9 +5,9 @@ import {
   removeItem,
   removeItemFromTop,
   checkLengthOfStack
-} from './arrays-basic';
+} from './arrays';
 
-describe('arrays-basic', () => {
+describe('arrays', () => {
   describe('getItem', () => {
     const getItemTestCases = [
       [[1, 2, 3], 0, 1],
