@@ -2,6 +2,16 @@
   "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
+      "github_username": "rishiosaur",
+      "alumnus": true,
+      "show_on_website": true,
+      "name": "Rishi Kothari",
+      "link_text": "Website",
+      "link_url": "https://rishi.js.org",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15793261?s=460&u=dce39daca78b2f794644abdf061eed9a425d2a2c&v=4",
+      "bio": "I program JS, Rust and Swift by day, and my own languages by night. 👋I'm Rishi, a JS developer with a passion for helping people! It's great to meet you :)"
+    },
+    {
       "github_username": "rchavarria",
       "alumnus": true,
       "show_on_website": true,
@@ -100,6 +110,7 @@
       "link_url": "https://jocelo.dev",
       "avatar_url": null,
       "bio": "Frontend developer, wearing whatever hat is required at any time. Always looking for new challenges and ready to keep learning and sharing."
-    }
+    },
+    
   ]
 }
