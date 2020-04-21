@@ -4,7 +4,7 @@
     {
       "github_username": "rishiosaur",
       "alumnus": true,
-      "show_on_website": true,
+      "show_on_website": false,
       "name": "Rishi Kothari",
       "link_text": "Website",
       "link_url": "https://rishi.js.org",
