@@ -1,10 +1,12 @@
 import {
   getItem,
   setItem,
-  prefilledArray,
+  insertItemAtTop,
   removeItem,
   removeItemFromTop,
-  checkLengthOfStack
+  insertItemAtBottom,
+  removeItemAtBottom,
+  checkSizeOfStack
 } from './arrays';
 
 describe('arrays', () => {
@@ -29,24 +31,24 @@ describe('arrays', () => {
       [[1, 2, 3], 2, 9, [1, 2, 9]]
     ];
 
-    setItemTestCases.forEach(([array, index, newValue, expected]) => {
-      test(`setItem([${array}], ${index}, ${newValue})`, () => {
-        expect(setItem(array, index, newValue)).toStrictEqual(expected);
+    setItemTestCases.forEach(([array, index, newCard, expected]) => {
+      test(`setItem([${array}], ${index}, ${newCard})`, () => {
+        expect(setItem(array, index, newCard)).toStrictEqual(expected);
       });
     });
   });
 
-  describe('prefilledArray', () => {
-    const prefilledArrayTestCases = [
-      [1, 0, []],
-      [2, 1, [2]],
-      [3, 2, [3, 3]],
-      [5, 6, [5, 5, 5, 5, 5, 5]]
+  describe('insertItemAtTop', () => {
+    const iinsertItemAtTopTopCases = [
+      [[1], 2, [1, 2]],
+      [[2, 5], 3, [2, 5, 3]],
+      [[3, 4, 9, 7], 8, [3, 4, 9, 7, 8]],
+      [[5, 9, 7, 1], 8, [5, 9, 7, 1, 8]]
     ];
 
-    prefilledArrayTestCases.forEach(([value, length, expected]) => {
-      test(`prefilledArray([${value}], ${length})`, () => {
-        expect(prefilledArray(value, length)).toStrictEqual(expected);
+    insertItemAtTopCases.forEach(([array, newCard, expected]) => {
+      test(`insertItemAtTop([${array}], ${newCard})`, () => {
+        expect(insertItemAtTop(array, newCard)).toStrictEqual(expected);
       });
     });
   });
@@ -80,8 +82,38 @@ describe('arrays', () => {
     });
   });
 
-  describe('checkLengthOfStack', () => {
-    const checkLengthOfStackTestCases = [
+  describe('insertItemAtBottom', () => {
+    const insertItemAtBottomCases = [
+      [[1], 2, [2, 1]],
+      [[3, 1, 2], 1, [1, 3, 1, 2]],
+      [[9, 9, 9, 9], 9, [9, 9, 9, 9, 9]],
+      [[5, 9, 7, 1], 8, [8, 5, 9, 7, 1]]
+    ];
+
+    insertItemAtBottomCases.forEach(([array, newCard, expected]) => {
+      test(`insertItemAtBottom([${array}], ${newCard})`, () => {
+        expect(insertItemAtBottom(array, newCard)).toStrictEqual(expected);
+      });
+    });
+  });
+
+  describe('removeItemAtBottom', () => {
+    const removeItemAtBottomCases = [
+      [[], []],
+      [[3, 1, 2], [1, 2]],
+      [[8, 8, 8, 8], [8, 8, 8]],
+      [[8, 5, 9, 7, 1], [5, 9, 7, 1]]
+    ];
+
+    removeItemAtBottomCases.forEach(([array, expected]) => {
+      test(`removeItemAtBottom([${array}]])`, () => {
+        expect(removeItemAtBottom(array)).toStrictEqual(expected);
+      });
+    });
+  });
+
+  describe('checkSizeOfStack', () => {
+    const ccheckSizeOfStackTestCases = [
       [[], 0, true],
       [[], 1, false],
       [[9], 0, false],
@@ -92,9 +124,9 @@ describe('arrays', () => {
       [[9, 8, 7, 1, 4], 6, false],
     ];
 
-    checkLengthOfStackTestCases.forEach(([array, stackLength, expected]) => {
-      test(`checkLengthOfStack([${array}], ${stackLength})`, () => {
-        expect(checkLengthOfStack(array, stackLength)).toBe(expected);
+    checkSizeOfStackTestCases.forEach(([array, stackSize, expected]) => {
+      test(`checkSizeOfStack([${array}], ${stackSize})`, () => {
+        expect(checkSizeOfStack(array, stackSize)).toBe(expected);
       });
     });
   });

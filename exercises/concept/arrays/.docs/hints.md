@@ -8,7 +8,7 @@
 - The array is a mutable structure, you can change its content anytime.
 - You can find an example [here][change_array_elements_resource], inside the 'Changing an Array Element' section.
 
-### 3. Create a stack of cards
+### 3. Insert a card at the top of the stack
 
 - There is a [built-in][push_method_docs] method to add a new value to the end of the array.
 
@@ -20,7 +20,15 @@
 
 - There is a [built-in][pop_method_docs] method to remove the last element from the array.
 
-### 6. Check size of the stack
+### 6. Insert a card at the bottom of the stack
+
+- There is a [built-in][unshift_method_docs] method to add a new value to the beginning of the array.
+
+### 7. Remove a card from the bottom of the stack
+
+- There is a [built-in][shift_method_docs] method to remove the first element from the array.
+
+### 8. Check size of the stack
 
 - Arrays have a [property][length_property_docs] to retrieve their length.
 
@@ -29,4 +37,6 @@
 [push_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 [splice_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 [pop_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
+[unshift_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+[shift_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 [length_property_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
