@@ -34,17 +34,7 @@ function capitalize(word) {
 }
 
 /**
- * Reverses a word
- *
- * @param {string} word
- * @returns {string}
- */
-function reverse(word) {
-  throw new Error('Implement the reverse function')
-}
-
-/**
-  * Give the password for the front-door, given the responses.
+ * Give the password for the front-door, given the responses.
  *
  * @param {string} responses the responses
  * @returns {string} the password
@@ -60,5 +50,5 @@ export function frontDoorPassword(responses) {
  * @returns {string} the password
  */
 export function backDoorPassword(responses) {
-  return capitalize(reverse(responses))
+  return capitalize(responses)
 }

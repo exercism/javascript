@@ -23,7 +23,7 @@ class Poem {
   }
 
   get telestich() {
-    return this.lines.map((line) => [...line].pop()).join('')
+    return this.lines.map((line) => [...line.trim()].pop()).join('')
   }
 
   *[Symbol.iterator] () {
@@ -92,8 +92,7 @@ class BackDoorGuard {
   }
 
   assert() {
-    const key = stringify(generateReversal(this.recite()))
-    const password = backDoorPassword(key)
+    const password = backDoorPassword(this.recite())
 
     expect(password).toBe(
       stringify(
@@ -108,10 +107,10 @@ class BackDoorGuard {
 }
 
 const SHIRE_HORSE = new Poem(`
-Stands so high
+Stands so high  
 Huge hooves too
 Impatiently waits for
-Reins and harness
+Reins and harness   
 Eager to leave
 
 Michael Lockwood
@@ -119,10 +118,10 @@ Michael Lockwood
 
 const SUMMER = new Poem(`
 Sunshine warming my toes,
-Underwater fun with my friends.
+Underwater fun with my friends.  
 Making homemade ice cream on the porch,
 Many long nights catching fireflies.
-Early morning walks to the creek,
+Early morning walks to the creek, 
 Reveling in the freedom of lazy days.
 
 John Albert Caballero
@@ -131,19 +130,19 @@ John Albert Caballero
 const SOPHIA = new Poem(`
 Serene, calming quality
 Organized, you always have it together
-Picturesque, strikingly beautiful
+Picturesque, strikingly beautiful 
 Honest, so genuine
-Imaginative, a creative mind
+Imaginative, a creative mind 
 Alluring, so attractive
 
 John Albert Caballero
 `.trim())
 
 const CODE_WORK = new Poem(`
-Compilers intensily bestow
+Compilers intensily bestow 
 On commencing without ego
-Different processes ajar
-Exit with zero quick
+Different processes ajar   
+Exit with zero quick 
 
 Derk-Jan Karrenbeld
 `.trim())
