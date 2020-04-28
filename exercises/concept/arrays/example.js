@@ -7,17 +7,9 @@ export function setItem(array, index, newValue) {
   return array;
 }
 
-export function prefilledArray(value, length) {
-  if (length < 1) {
-    return [];
-  }
-
-  const prefilledArray = [];
-  for (let i = 0; i < length; i++) {
-    prefilledArray.push(value);
-  }
-
-  return prefilledArray;
+export function insertItemAtTop(array, newCard) {
+  array.push(newCard)
+  return array
 }
 
 export function removeItem(array, index) {
@@ -30,6 +22,16 @@ export function removeItemFromTop(array) {
   return array;
 }
 
-export function checkLengthOfStack(array, stackLength) {
+export function insertItemAtBottom(array, newCard) {
+  array.unshift(newCard);
+  return array;
+}
+
+export function removeItemAtBottom(array) {
+  array.shift();
+  return array;
+}
+
+export function checkSizeOfStack(array, stackSize) {
   return array.length === stackLength;
 }
