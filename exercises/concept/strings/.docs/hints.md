@@ -20,15 +20,10 @@
   of the last character.
 - The number of characters in a string is given by its `.length` property.
 
-### 4. Reverse a word
+### 4. Trim a sentence
 
-- There is no `.reverse()` method available on the `String.prototype` (methods
-  that work on `string`), but it _is_ available on the `Array.prototype` (those
-  that work on `array`).
-- It's possible to cut the string into character-sized pieces as an `array`,
-  reverse the `array`, and glue them back together.
-- `.split('')` can cut up a string
-- `.join('')` can glue an array into a string
+- `.trim()` method is available on the `String.prototype` (methods
+  that work on `string`).
 
 ### 5. Be polite
 

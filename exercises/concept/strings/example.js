@@ -17,11 +17,12 @@ export function frontDoorResponse(blurb) {
  * @returns {string}
  */
 export function backDoorResponse(blurb) {
-  return blurb[blurb.length - 1]
+  const trimmed = blurb.trim()
+  return trimmed[trimmed.length - 1]
 }
 
 /**
-  * Give the password for the front-door, given the responses.
+ * Give the password for the front-door, given the responses.
  *
  * @param {string} responses the responses
  * @returns {string} the password
@@ -37,7 +38,7 @@ export function frontDoorPassword(responses) {
  * @returns {string} the password
  */
 export function backDoorPassword(responses) {
-  return `${capitalize(reverse(responses))}, please`
+  return `${capitalize(responses)}, please`
 }
 
 /**
@@ -49,16 +50,4 @@ export function backDoorPassword(responses) {
  */
 function capitalize(word) {
   return word[0].toUpperCase() + word.slice(1).toLowerCase()
-}
-
-/**
- * Reverses a word
- *
- * @param {string} word
- * @returns {string}
- */
-function reverse(word) {
-  return [...word].reverse().join('')
-
-  // or word.split('').reverse().join('')
 }
