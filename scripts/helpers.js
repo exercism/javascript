@@ -4,11 +4,9 @@
  */
 
 const shell = require('shelljs');
-const fs = require('fs');
 
 const exerciseDirs = shell.ls('-d', 'exercises/*');
 
-const config = JSON.parse(fs.readFileSync('config.json'))['exercises'];
 const assignments = exerciseDirs.map(dir => dir.split('/')[1])
       .filter(exercise => !exercise.deprecated);
 
