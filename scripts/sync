@@ -3,8 +3,11 @@
 /**
  * Run this script (from root directory): npx @babel/node scripts/sync
  *
- * This script is used to propagate any change to root package.json to
- * all exercises and keep them in sync.
+ * This script is used to copy following files to all exercises & keep them in sync:
+ * 1. package.json
+ * 2. babel.config.js
+ * 3. .eslintrc
+ * 4. .npmrc
  * There is a CI step which checks that package.json in root & exercises match
  * (see checksum script for more info).
  */
@@ -23,12 +26,12 @@ function copyConfigForAssignment(assignment) {
 
   shell.cp('babel.config.js', destination);
   shell.cp('.eslintrc', destination);
+  shell.cp('.npmrc', destination);
 }
 
 function getAssignmentVersion(assignmentPackageFilename) {
   const packageFile = shell.cat(assignmentPackageFilename).toString();
   const packageJson = JSON.parse(packageFile);
-  console.debug(packageJson)
   return packageJson['version'];
 }
 

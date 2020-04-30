@@ -54,5 +54,6 @@ helpers.createExercisePackageJson();
 checkSumAll('package.json', 'exercise-package.json');
 shell.rm('exercise-package.json');
 
-checkSumAll('.eslintrc');
 checkSumAll('babel.config.js');
+checkSumAll('.eslintrc');
+checkSumAll('.npmrc');
