@@ -5,6 +5,7 @@ node_js:
   - '11'
   - '12'
   - '13'
+  - '14'
 
 before_install:
   - npm i -g npm@latest
