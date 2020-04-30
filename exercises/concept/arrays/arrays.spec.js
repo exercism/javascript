@@ -39,7 +39,7 @@ describe('arrays', () => {
   });
 
   describe('insertItemAtTop', () => {
-    const iinsertItemAtTopTopCases = [
+    const insertItemAtTopCases = [
       [[1], 2, [1, 2]],
       [[2, 5], 3, [2, 5, 3]],
       [[3, 4, 9, 7], 8, [3, 4, 9, 7, 8]],
@@ -113,7 +113,7 @@ describe('arrays', () => {
   });
 
   describe('checkSizeOfStack', () => {
-    const ccheckSizeOfStackTestCases = [
+    const checkSizeOfStackTestCases = [
       [[], 0, true],
       [[], 1, false],
       [[9], 0, false],
