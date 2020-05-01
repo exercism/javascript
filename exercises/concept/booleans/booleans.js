@@ -1,5 +1,5 @@
 /**
- * If the knight is sleeping, then the fast attack is not available.
+ * The fast attack is available when the knight is sleeping
  *
  * @param {boolean} knightIsAwake
  * 
