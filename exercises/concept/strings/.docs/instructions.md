@@ -93,7 +93,7 @@ backDoorResponse('Stands so high')
 
 ### 4. Trim a sentence
 
-Implement a function that trim a sentence:
+Improve the previous function so that it removes whitespace from the end of a sentence and returns the last character:
 
 ```javascript
 backDoorResponse('Stands so high   ')
