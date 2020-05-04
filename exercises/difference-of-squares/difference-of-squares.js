@@ -1,5 +1,5 @@
 //
-// This is only a SKELETON file for the 'Difference of Squares' exercise. It's been provided as a
+// This is only a SKELETON file for the 'Difference Of Squares' exercise. It's been provided as a
 // convenience to get you started writing code faster.
 //
 

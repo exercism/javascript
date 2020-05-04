@@ -1,5 +1,5 @@
 //
-// This is only a SKELETON file for the 'Variable length Quantity' exercise. It's been provided as a
+// This is only a SKELETON file for the 'Variable Length Quantity' exercise. It's been provided as a
 // convenience to get you started writing code faster.
 //
 
