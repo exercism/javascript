@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/javascript-arrays",
+  "name": "@exercism/javascript-concept-arrays",
   "description": "Exercism concept exercise on arrays",
   "author": "Ovidiu Miu",
   "version": "1.0.0",
@@ -11,16 +11,16 @@
     "directory": "languages/javascript/exercises/concept/arrays"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.14",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1"
   },
   "dependencies": {},
   "jest": {
