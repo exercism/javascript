@@ -3,7 +3,7 @@ import {
   remainingMinutesInOven,
   preparationTimeInMinutes,
   totalTimeInMinutes,
-} from './example'
+} from './basics'
 
 describe('basics', () => {
   it('EXPECTED_MINUTES_IN_OVEN', () => {
