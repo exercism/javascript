@@ -6,7 +6,7 @@ describe('difference-of-squares', () => {
   const squares100 = new Squares(100);
 
   describe('Square the sum of the numbers up to the given number', () => {
-    xtest('square of sum 1', () => {
+    test('square of sum 1', () => {
       expect(squares1.squareOfSum).toBe(1);
     });
 
