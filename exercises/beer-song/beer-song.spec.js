@@ -10,28 +10,28 @@ describe('Beer Song', () => {
         ]);
       });
 
-      test('last generic verse', () => {
+      xtest('last generic verse', () => {
         expect(recite(3, 1)).toEqual([
           '3 bottles of beer on the wall, 3 bottles of beer.',
           'Take one down and pass it around, 2 bottles of beer on the wall.'
         ]);
       });
 
-      test('verse with 2 bottles', () => {
+      xtest('verse with 2 bottles', () => {
         expect(recite(2, 1)).toEqual([
           '2 bottles of beer on the wall, 2 bottles of beer.',
           'Take one down and pass it around, 1 bottle of beer on the wall.'
         ]);
       });
 
-      test('verse with 1 bottle', () => {
+      xtest('verse with 1 bottle', () => {
         expect(recite(1, 1)).toEqual([
           '1 bottle of beer on the wall, 1 bottle of beer.',
           'Take it down and pass it around, no more bottles of beer on the wall.'
         ]);
       });
 
-      test('verse with 0 bottles', () => {
+      xtest('verse with 0 bottles', () => {
         expect(recite(0, 1)).toEqual([
           'No more bottles of beer on the wall, no more bottles of beer.',
           'Go to the store and buy some more, 99 bottles of beer on the wall.'
@@ -42,7 +42,7 @@ describe('Beer Song', () => {
 
   describe('lyrics', () => {
     describe('multiple verses', () => {
-      test('first two verses', () => {
+      xtest('first two verses', () => {
         expect(recite(99, 2)).toEqual([
           '99 bottles of beer on the wall, 99 bottles of beer.',
           'Take one down and pass it around, 98 bottles of beer on the wall.',
@@ -52,7 +52,7 @@ describe('Beer Song', () => {
         ]);
       });
 
-      test('last three verses', () => {
+      xtest('last three verses', () => {
         expect(recite(2, 3)).toEqual([
           '2 bottles of beer on the wall, 2 bottles of beer.',
           'Take one down and pass it around, 1 bottle of beer on the wall.',
@@ -65,7 +65,7 @@ describe('Beer Song', () => {
         ]);
       });
 
-      test('all verses', () => {
+      xtest('all verses', () => {
         expect(recite(99, 100)).toEqual([
           '99 bottles of beer on the wall, 99 bottles of beer.',
           'Take one down and pass it around, 98 bottles of beer on the wall.',

@@ -4,7 +4,7 @@ import { Cipher } from './simple-cipher';
 describe('Random key cipher', () => {
   const cipher = new Cipher();
 
-  xtest('can encode', () => {
+  test('can encode', () => {
     // Here we take advantage of the fact that plaintext of "aaa..."
     // outputs the key. This is a critical problem with shift ciphers, some
     // characters will always output the key verbatim.
@@ -22,7 +22,7 @@ describe('Random key cipher', () => {
     expect(cipher.decode(cipher.encode(plaintext))).toEqual(plaintext);
   });
 
-  test('key is made only of lowercase letters', () => {
+  xtest('key is made only of lowercase letters', () => {
     expect(cipher.key).toMatch(/^[a-z]+$/);
   });
 });

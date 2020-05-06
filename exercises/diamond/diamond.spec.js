@@ -5,15 +5,15 @@ describe('Diamond', () => {
     expect(rows('A')).toEqual(['A']);
   });
 
-  test('Degenerate case with no row containing 3 distinct groups of spaces', () => {
+  xtest('Degenerate case with no row containing 3 distinct groups of spaces', () => {
     expect(rows('B')).toEqual([' A ', 'B B', ' A ']);
   });
 
-  test('Smallest non-degenerate case with odd diamond side length', () => {
+  xtest('Smallest non-degenerate case with odd diamond side length', () => {
     expect(rows('C')).toEqual(['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']);
   });
 
-  test('Smallest non-degenerate case with even diamond side length', () => {
+  xtest('Smallest non-degenerate case with even diamond side length', () => {
     expect(rows('D')).toEqual([
       '   A   ',
       '  B B  ',
@@ -25,7 +25,7 @@ describe('Diamond', () => {
     ]);
   });
 
-  test('Largest possible diamond', () => {
+  xtest('Largest possible diamond', () => {
     expect(rows('Z')).toEqual([
       '                         A                         ',
       '                        B B                        ',
@@ -81,4 +81,3 @@ describe('Diamond', () => {
     ]);
   });
 });
-
