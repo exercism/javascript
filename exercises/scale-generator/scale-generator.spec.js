@@ -31,17 +31,17 @@ describe('ScaleGenerator', () => {
 
     xtest('Minor scale with sharps', () => {
       const expected = ['F#', 'G#', 'A', 'B', 'C#', 'D', 'E']
-      expect(new Scale('f#').interval('MmMMmMM')).toEqual(expected)
+      expect(new Scale('F#').interval('MmMMmMM')).toEqual(expected)
     })
 
     xtest('Minor scale with flats', () => {
       const expected = ['Bb', 'C', 'Db', 'Eb', 'F', 'Gb', 'Ab']
-      expect(new Scale('bb').interval('MmMMmMM')).toEqual(expected)
+      expect(new Scale('Bb').interval('MmMMmMM')).toEqual(expected)
     })
 
     xtest('Dorian mode', () => {
       const expected = ['D', 'E', 'F', 'G', 'A', 'B', 'C']
-      expect(new Scale('d').interval('MmMMMmM')).toEqual(expected)
+      expect(new Scale('D').interval('MmMMMmM')).toEqual(expected)
     })
 
     xtest('Mixolydian mode', () => {
@@ -51,7 +51,7 @@ describe('ScaleGenerator', () => {
 
     xtest('Lydian mode', () => {
       const expected = ['A', 'B', 'C#', 'D#', 'E', 'F#', 'G#']
-      expect(new Scale('a').interval('MMMmMMm')).toEqual(expected)
+      expect(new Scale('A').interval('MMMmMMm')).toEqual(expected)
     })
 
     xtest('Phrygian mode', () => {
@@ -61,12 +61,12 @@ describe('ScaleGenerator', () => {
 
     xtest('Locrian mode', () => {
       const expected = ['G', 'Ab', 'Bb', 'C', 'Db', 'Eb', 'F']
-      expect(new Scale('g').interval('mMMmMMM')).toEqual(expected)
+      expect(new Scale('G').interval('mMMmMMM')).toEqual(expected)
     })
 
     xtest('Harmonic minor', () => {
       const expected = ['D', 'E', 'F', 'G', 'A', 'Bb', 'Db']
-      expect(new Scale('d').interval('MmMMmAm')).toEqual(expected)
+      expect(new Scale('D').interval('MmMMmAm')).toEqual(expected)
     })
 
     xtest('Octatonic', () => {
