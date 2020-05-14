@@ -1,6 +1,6 @@
 {
   "name": "@exercism/javascript-array-analysis",
-  "description": "Exercism concept exercise on arrays",
+  "description": "Exercism concept exercise on array analysis",
   "author": "Peterchu999",
   "version": "1.0.0",
   "license": "MIT",
@@ -11,16 +11,16 @@
     "directory": "languages/javascript/exercises/concept/arrays-analysis"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.14",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1"
   },
   "dependencies": {},
   "jest": {

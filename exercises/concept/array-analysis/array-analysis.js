@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Get the position (index) of the card in the given stack
  *
@@ -34,7 +36,7 @@ export function isEachCardEven(stack) {
 }
 
 /**
- * Check if stack conatains odd-value card
+ * Check if stack contains odd-value card
  *
  * @param {number[]} stack
  *

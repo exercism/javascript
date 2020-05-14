@@ -1,14 +1,27 @@
+// @ts-check
+
 import {
   getCardPosition,
   doesStackIncludeCard,
   isEachCardEven,
-  doesStackIncludesOddCard,
+  doesStackIncludeOddCard,
   getFirstOddCard,
   getFirstEvenCardPosition,
 } from './array-analysis'
 
+/**
+ * @template T the expected return type
+ * @typedef {Array<[number[], number, T]>} TestSingleMatrix
+ */
+
+/**
+ * @template T the expected return type
+ * @typedef {Array<[number[], T]>} TestAllMatrix
+ **/
+
 describe('arrays-analysis', () => {
   describe('getCardPosition', () => {
+    /** @type {TestSingleMatrix<number>} */
     const getCardPositionTestCases = [
       [[1, 2, 3], 1, 0],
       [[1, 2, 2], 2, 1],
@@ -23,6 +36,7 @@ describe('arrays-analysis', () => {
   })
 
   describe('doesStackIncludeCard', () => {
+    /** @type {TestSingleMatrix<boolean>} */
     const doesStackIncludeCardTestCases = [
       [[1, 2, 3], 1, true],
       [[1, 2, 3], 4, false],
@@ -36,6 +50,7 @@ describe('arrays-analysis', () => {
   })
 
   describe('isEachCardEven', () => {
+    /** @type {TestAllMatrix<boolean>} */
     const isEachCardEvenTestCases = [
       [[1], false],
       [[2, 5], false],
@@ -49,7 +64,8 @@ describe('arrays-analysis', () => {
     })
   })
 
-  describe('doesStackIncludesOddCard', () => {
+  describe('doesStackIncludeOddCard', () => {
+    /** @type {TestAllMatrix<boolean>} */
     const doesStackIncludesOddCardTestCases = [
       [[2, 4, 6], false],
       [[2, 5], true],
@@ -57,13 +73,14 @@ describe('arrays-analysis', () => {
     ]
 
     doesStackIncludesOddCardTestCases.forEach(([array, expected]) => {
-      test(`doesStackIncludesOddCard([${array}])`, () => {
-        expect(doesStackIncludesOddCard(array)).toStrictEqual(expected)
+      test(`doesStackIncludeOddCard([${array}])`, () => {
+        expect(doesStackIncludeOddCard(array)).toStrictEqual(expected)
       })
     })
   })
 
   describe('getFirstOddCard', () => {
+    /** @type {TestAllMatrix<number | undefined>} */
     const getFirstOddCardTestCases = [
       [[2, 4, 1, 3], 1],
       [[1, 2], 1],
@@ -78,6 +95,7 @@ describe('arrays-analysis', () => {
   })
 
   describe('getFirstEvenCardPosition', () => {
+    /** @type {TestAllMatrix<number>} */
     const getFirstEvenCardPositionTestCases = [
       [[2, 4, 1, 3], 0],
       [[1, 2], 1],
