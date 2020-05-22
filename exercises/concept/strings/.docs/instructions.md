@@ -61,7 +61,7 @@ with the renowned poets.
 
 ## Tasks
 
-### 1. Get the first letter of a sentence
+## 1. Get the first letter of a sentence
 
 Implement a function that returns first letter of a sentence:
 
@@ -70,7 +70,7 @@ frontDoorResponse('Stands so high')
 // => "S"
 ```
 
-### 2. Capitalize a word
+## 2. Capitalize a word
 
 Implement a function that correctly capitalizes a word:
 
@@ -82,7 +82,7 @@ capitalize('horse')
 // => "Horse"
 ```
 
-### 3. Get the last letter of a sentence
+## 3. Get the last letter of a sentence
 
 Implement a function that returns the last letter of a sentence:
 
@@ -91,7 +91,7 @@ backDoorResponse('Stands so high')
 // => "h"
 ```
 
-### 4. Trim a sentence
+## 4. Trim a sentence
 
 Improve the previous function so that it removes whitespace from the end of a sentence and returns the last character:
 
@@ -100,7 +100,7 @@ backDoorResponse('Stands so high   ')
 // => "h"
 ```
 
-### 5. Be polite
+## 5. Be polite
 
 Change the implementation of the `backDoorPassword` function so that it's polite:
 

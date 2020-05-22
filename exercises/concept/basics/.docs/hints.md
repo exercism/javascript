@@ -1,20 +1,20 @@
-### 1. Define the expected oven time in minutes
+## 1. Define the expected oven time in minutes
 
 - Define a [constant][constants] which should contain the [`number`][numbers] value specified in the recipe.
 - [`export`][export] the constant.
 
-### 2. Calculate the remaining oven time in minutes
+## 2. Calculate the remaining oven time in minutes
 
 - [Explicitly return a number][return] from the function.
 - Use the [mathematical operator for subtraction][operators] to subtract values.
 
-### 3. Calculate the preparation time in minutes
+## 3. Calculate the preparation time in minutes
 
 - [Explicitly return a number][return] from the function.
 - Use the [mathematical operator for multiplication][operators] to multiply values.
 - Use the extra constant for the time in minutes per layer.
 
-### 4. Calculate the total working time in minutes
+## 4. Calculate the total working time in minutes
 
 - [Explicitly return a number][return] from the function.
 - [Invoke][invocation] one of the other methods implemented previously.

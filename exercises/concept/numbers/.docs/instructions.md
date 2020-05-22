@@ -16,7 +16,7 @@ between `0.0%` (no discount) and `90.0%` (maximum discount).
 
 ## Tasks
 
-### 1. Calculate the day rate given an hourly rate
+## 1. Calculate the day rate given an hourly rate
 
 Implement a function to calculate the day rate given an hourly rate:
 
@@ -27,7 +27,7 @@ dayRate(89)
 
 The day rate does not need to be rounded or changed to a "fixed" precision.
 
-### 2. Calculate the month rate, given an hourly rate and a discount
+## 2. Calculate the month rate, given an hourly rate and a discount
 
 Implement a function to calculate the month rate, and apply a discount:
 
@@ -39,7 +39,7 @@ monthRate(89, '42%')
 The discount is always passed as a `string`. The result _must_ be rounded up to
 the nearest whole number.
 
-### 3. Calculate the number of workdays given a budget, rate and discount
+## 3. Calculate the number of workdays given a budget, rate and discount
 
 Implement a function that takes a budget, a rate per hour and a discount, and
 calculates how many days of work that covers, to one decimal place.

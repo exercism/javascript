@@ -1,6 +1,6 @@
-### 1. Calculate the day rate given an hourly rate
+## 1. Calculate the day rate given an hourly rate
 
-### 2. Calculate the month rate, given an hourly rate and a discount
+## 2. Calculate the month rate, given an hourly rate and a discount
 
 - There is a global built-in function to _parse_ a `string` to a fractional
   number, ignoring non-numeric characters, such as the `%` (percent)-sign.
@@ -10,7 +10,7 @@
 
 [ref-math-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
-### 3. Calculate the number of workdays given a budget, rate and discount
+## 3. Calculate the number of workdays given a budget, rate and discount
 
 - There is a function on the `number` (proto)type to return a "fixed" number of
   decimals.
