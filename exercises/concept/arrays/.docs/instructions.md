@@ -2,7 +2,7 @@ As a magician-to-be, Elyse needs to practice some basics. She has a stack of car
 
 To make things a bit easier she only uses the cards 1 to 10.
 
-### 1. Retrieve a card from a stack
+## 1. Retrieve a card from a stack
 
 Return the card at position `index` from the given stack.
 
@@ -12,7 +12,7 @@ getItem([1, 2, 4, 1], index)
 // => 4
 ```
 
-### 2. Exchange a card in the stack
+## 2. Exchange a card in the stack
 
 Exchange the card at position `index` with the new card provided and return the adjusted stack.
 Note that this will also change the input slice which is ok.
@@ -24,7 +24,7 @@ setItem([1, 2, 4, 1], index, newCard)
 // => [1, 2, 6, 1]
 ```
 
-### 3. Insert a card at the of top the stack
+## 3. Insert a card at the of top the stack
 
 Insert new card at the top of the stack and return the stack.
 
@@ -34,7 +34,7 @@ insertItemAtTop([5, 9, 7, 1], newCard)
 // => [5, 9, 7, 1, 8]
 ```
 
-### 4. Remove a card from the stack
+## 4. Remove a card from the stack
 
 Remove the card at position `index` from the stack and return the stack.
 
@@ -44,7 +44,7 @@ removeItem([3, 2, 6, 4, 8], index)
 // => [3, 2, 4, 8]
 ```
 
-### 5. Remove the top card from the stack
+## 5. Remove the top card from the stack
 
 Remove the card at the top of the stack and return the stack.
 
@@ -53,7 +53,7 @@ removeItemFromTop([3, 2, 6, 4, 8])
 // => [3, 2, 6, 4]
 ```
 
-### 6. Insert a card at the bottom of the stack
+## 6. Insert a card at the bottom of the stack
 
 Insert new card at the bottom of the stack and return the stack.
 
@@ -63,7 +63,7 @@ insertItemAtBottom([5, 9, 7, 1], newCard)
 // => [8, 5, 9, 7, 1]
 ```
 
-### 7. Remove a card from the bottom of the stack
+## 7. Remove a card from the bottom of the stack
 
 Remove the card at the bottom of the stack and return the stack.
 
@@ -72,7 +72,7 @@ removeItemAtBottom([8, 5, 9, 7, 1])
 // => [5, 9, 7, 1]
 ```
 
-### 8. Check size of the stack
+## 8. Check size of the stack
 
 Check whether the size of the stack is equal a given `stackSize` or not.
 
