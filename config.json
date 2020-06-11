@@ -1454,6 +1454,16 @@
         "filtering",
         "games"
       ]
+    },
+    {
+      "slug": "dominoes",
+      "uuid": "3d155146-f3a9-43c6-a662-2a0679949a12",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 6,
+      "topics": [
+        "graph_theory"
+      ]
     }
   ]
 }
