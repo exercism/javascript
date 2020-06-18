@@ -35,6 +35,8 @@ dependencies:
 
 ## Requirements
 
+Please `cd` into exercise directory before running all below commands.
+
 Install assignment dependencies:
 
 ```bash
@@ -54,11 +56,21 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-## Source
 
-An unsolved problem in mathematics named after mathematician Lothar Collatz [https://en.wikipedia.org/wiki/3x_%2B_1_problem](https://en.wikipedia.org/wiki/3x_%2B_1_problem)
+## Submitting Solutions
+
+Once you have a solution ready, you can submit it using:
+
+```bash
+exercism submit collatz-conjecture.js
+```
 
 ## Submitting Incomplete Solutions
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
+
+## Exercise Source Credits
+
+An unsolved problem in mathematics named after mathematician Lothar Collatz [https://en.wikipedia.org/wiki/3x_%2B_1_problem](https://en.wikipedia.org/wiki/3x_%2B_1_problem)
+
