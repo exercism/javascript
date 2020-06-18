@@ -26,6 +26,8 @@ dependencies:
 
 ## Requirements
 
+Please `cd` into exercise directory before running all below commands.
+
 Install assignment dependencies:
 
 ```bash
@@ -45,11 +47,21 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-## Source
 
-Taken from Chapter 2 of Functional Thinking by Neal Ford. [http://shop.oreilly.com/product/0636920029687.do](http://shop.oreilly.com/product/0636920029687.do)
+## Submitting Solutions
+
+Once you have a solution ready, you can submit it using:
+
+```bash
+exercism submit perfect-numbers.js
+```
 
 ## Submitting Incomplete Solutions
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
+
+## Exercise Source Credits
+
+Taken from Chapter 2 of Functional Thinking by Neal Ford. [http://shop.oreilly.com/product/0636920029687.do](http://shop.oreilly.com/product/0636920029687.do)
+

@@ -30,6 +30,8 @@ dependencies:
 
 ## Requirements
 
+Please `cd` into exercise directory before running all below commands.
+
 Install assignment dependencies:
 
 ```bash
@@ -49,11 +51,21 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-## Source
 
-Inspired by 'Data Structures and Algorithms with Object-Oriented Design Patterns in Ruby', singly linked-lists. [http://www.brpreiss.com/books/opus8/html/page96.html#SECTION004300000000000000000](http://www.brpreiss.com/books/opus8/html/page96.html#SECTION004300000000000000000)
+## Submitting Solutions
+
+Once you have a solution ready, you can submit it using:
+
+```bash
+exercism submit simple-linked-list.js
+```
 
 ## Submitting Incomplete Solutions
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
+
+## Exercise Source Credits
+
+Inspired by 'Data Structures and Algorithms with Object-Oriented Design Patterns in Ruby', singly linked-lists. [https://web.archive.org/web/20160731005714/http://brpreiss.com/books/opus8/html/page96.html](https://web.archive.org/web/20160731005714/http://brpreiss.com/books/opus8/html/page96.html)
+

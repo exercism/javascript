@@ -7,6 +7,8 @@ dependencies:
 
 ## Requirements
 
+Please `cd` into exercise directory before running all below commands.
+
 Install assignment dependencies:
 
 ```bash
