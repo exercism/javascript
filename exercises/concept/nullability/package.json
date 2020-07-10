@@ -1,0 +1,37 @@
+{
+  "name": "@exercism/javascript-concept-nullability",
+  "description": "Exercism concept exercise on nullability",
+  "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/v3.git",
+    "directory": "languages/javascript/exercises/concept/nullability"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1"
+  },
+  "dependencies": {},
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.json"
+    ]
+  },
+  "scripts": {
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint .",
+    "lint-test": "eslint . && jest --no-cache ./* "
+  }
+}
