@@ -7,9 +7,9 @@ Example of analysis using a for loop :
 ```javascript
 const numbers = [1, 'two', 3, 'four']
 for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] === 'two'){
-        return numbers.[i]
-    }
+  if (numbers[i] === 'two') {
+    return i
+  }
 }
 // => 1
 ```
