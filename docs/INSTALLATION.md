@@ -108,7 +108,7 @@ $ npm install
 > and placed into the `node_modules` folder.
 >
 > The scripts in the `package.json` use the binaries from the local 
-> `node_modules` folder, and its these scripts that are used to run the tests,
+> `node_modules` folder, and it's these scripts that are used to run the tests,
 > as listed in the `exercise` description.
 
 [web-nodejs]: https://nodejs.org/
