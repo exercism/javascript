@@ -26,13 +26,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install project dependencies
-      run: npm ci
+      run: | 
+        npm ci
+        bin/fetch-configlet
 
-    - name: Fetch configlet
-      uses: exercism/github-actions/configlet-ci@master
-
-    - name: Run exercism/configlet linter
-      run: configlet lint .
+    - name: Run exercism/configlet Linter
+      run: bin/configlet lint .
 
     - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
       run: npx @babel/node scripts/ci
