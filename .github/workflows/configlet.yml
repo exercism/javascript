@@ -2,9 +2,7 @@
 
 name: exercism/configlet lint
 
-on:
-  push:
-  pull_request:
+on: [push, pull_request]
 
 jobs:
   configlet:
