@@ -1,17 +1,16 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# This workflow will do a clean install of node dependencies and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: exercism/javascript ci
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,20 +18,14 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install project dependencies
-      run: npm ci
+      - name: Install project dependencies
+        run: npm ci
 
-    - name: Fetch configlet
-      uses: exercism/github-actions/configlet-ci@master
-
-    - name: Run exercism/configlet linter
-      run: configlet lint .
-
-    - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
-      run: npx @babel/node scripts/ci
+      - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
+        run: npx @babel/node scripts/ci
