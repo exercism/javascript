@@ -25,5 +25,5 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-      - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
+      - name: Run exercism/javascript ci (checks config, lint code, and runs tests) for all exercises
         run: npx babel-node scripts/ci
