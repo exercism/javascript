@@ -32,15 +32,15 @@ export class ComplexNumber {
     throw new Error("Remove this statement and implement this function");
   }
 
-  abs() {
+  get abs() {
     throw new Error("Remove this statement and implement this function");
   }
 
-  conj() {
+  get conj() {
     throw new Error("Remove this statement and implement this function");
   }
 
-  exp() {
+  get exp() {
     throw new Error("Remove this statement and implement this function");
   }
 }
