@@ -1,6 +1,7 @@
 # This workflow will do a clean install of node dependencies and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
+<<<<<<< HEAD
 name: javascript / pr
 
 on: pull_request
@@ -29,6 +30,14 @@ jobs:
             xargs -r npx babel-node scripts/pr-check
 
   ci:
+=======
+name: exercism/javascript pull-request/ci
+
+on: [push, pull_request]
+
+jobs:
+  build:
+>>>>>>> Add PR script that runs only exercises that are important
     runs-on: ubuntu-latest
 
     strategy:
@@ -36,9 +45,13 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
+<<<<<<< HEAD
       - name: Checkout PR
         uses: actions/checkout@v2
 
+=======
+      - uses: actions/checkout@v2
+>>>>>>> Add PR script that runs only exercises that are important
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -47,9 +60,17 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
+<<<<<<< HEAD
       - name: Run exercism/javascript ci (runs tests) for changed/added exercises
         run: |
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
             xargs -r npx babel-node scripts/pr
+=======
+      - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
+        run: PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+          jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
+          xargs -r npx @babel/node scripts/pr
+>>>>>>> Add PR script that runs only exercises that are important
