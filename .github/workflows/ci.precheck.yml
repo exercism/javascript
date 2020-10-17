@@ -1,0 +1,24 @@
+# This workflow will check stub files, integrity, and potentially other checks
+
+name: exercism/javascript ci/precheck
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Run exercism/javascript ci precheck (checks config, lint code, and runs tests) for all exercises
+        run: npx babel-node scripts/ci-check

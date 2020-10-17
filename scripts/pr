@@ -6,23 +6,26 @@
  * npx babel-node scripts/pr path/1 path/2 path/3
  *
  * This will run following checks:
+ *
  * 1. Find the exercises at all the paths provided
- * 1. Check config for those exercises
- * 2. Run eslint for those exercises to check code-style
- * 3. Run tests for those exercises against sample solutions
+ * 2. Run tests for those exercises against sample solutions
  */
 
+const {
+  findExerciseDirectory,
+  prepareAndRun,
+  prepare,
+  cleanUp,
+  registerExitHandler,
+} = require("./helpers");
+
 const shell = require("shelljs");
-const { findExerciseDirectory } = require("./helpers");
 const path = require("path");
-
-// shell.shell.env["ASSIGNMENT"] = slug;
-
 const files = process.argv.slice(2);
 
 if (files.length === 0) {
   shell.echo(
-    "No files passed in. Pass in paths to exercise directories or its file."
+    "[Failure] No files passed in. Pass in paths to exercise directories or its file."
   );
   shell.exit(-1);
 }
@@ -36,17 +39,31 @@ const exercises = files
   .filter((exercise, index, array) => array.indexOf(exercise) === index);
 
 if (exercises.length === 0) {
-  shell.echo("None of the files are inside an exercise directory.");
+  shell.echo("[Skip] None of the files are inside an exercise directory.");
   shell.exit(0);
 }
 
-/**
- * CLEANUP=true removes tmp_exercises folder
- */
-shell.env["CLEANUP"] = true;
+registerExitHandler();
 
-const testResult = shell.exec(`npx babel-node ${path.join("scripts", "test")}`)
-  .code;
-if (testResult != 0) {
-  shell.exit(testResult);
-}
+shell.env["PREPARE"] = false;
+shell.env["CLEANUP"] = false;
+
+const infoStr = `Running tests for ${
+  exercises.length === 1 ? exercises[0] : `${exercises.length} exercises\n`
+}`;
+const failureStr = "[Failure] Tests failed!";
+
+// Prepare exercises
+exercises.forEach(prepare);
+
+// Run tests
+prepareAndRun("npx jest --bail tmp_exercises", infoStr, failureStr);
+
+shell.echo(
+  exercises.length === 1
+    ? `[Success] Tests passed for ${exercises[0]}`
+    : `[Success] Tests passed for all ${exercises.length} exercises`
+);
+
+// Cleanup
+cleanUp();

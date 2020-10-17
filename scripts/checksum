@@ -32,7 +32,7 @@ function checksum(filename, assignment, rootChecksum) {
   const assignmentChecksum = sha(assignmentConfig);
 
   if (assignmentChecksum !== rootChecksum) {
-    shell.echo(`${filename} did not match for ${assignment}`);
+    shell.echo(`[Failure] ${filename} did not match for ${assignment}`);
     shell.exit(1);
   }
 }
@@ -40,11 +40,12 @@ function checksum(filename, assignment, rootChecksum) {
 // Check all assignments by default
 // or single if ASSIGNMENT is given
 function checkSumAll(filename, rootFileName = filename) {
-  shell.echo("\nChecking integrity of " + filename + "...");
+  const assignment = shell.env["ASSIGNMENT"];
+
+  shell.echo(`Checking integrity of ${assignment}/${filename}...`);
 
   const config = shell.cat(rootFileName).toString();
   const rootChecksum = sha(config);
-  const assignment = shell.env["ASSIGNMENT"];
 
   if (assignment) {
     checksum(filename, assignment, rootChecksum);
