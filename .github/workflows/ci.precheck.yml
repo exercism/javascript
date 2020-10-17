@@ -1,6 +1,6 @@
 # This workflow will check stub files, integrity, and potentially other checks
 
-name: exercism/javascript ci/precheck
+name: javascript ci/precheck
 
 on:
   push:
