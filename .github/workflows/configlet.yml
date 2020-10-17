@@ -1,11 +1,11 @@
 # This workflow will do a fetch the latest configlet binary and lint this repository.
 
-name: configlet lint
+name: configlet
 
 on: [push, pull_request]
 
 jobs:
-  configlet:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
