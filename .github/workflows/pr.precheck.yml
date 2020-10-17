@@ -9,13 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout PR
+        uses: actions/checkout@v2
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
+
       - name: Use Node.js LTS (12.x)
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
 
       - name: Install project dependencies
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         run: npm ci
 
       - name: Run exercism/javascript ci precheck (stub files, config integrity) for changed exercises

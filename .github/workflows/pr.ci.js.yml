@@ -40,11 +40,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install project dependencies
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         run: npm ci
 
       - name: Run exercism/javascript ci (runs tests) for changed/added exercises
