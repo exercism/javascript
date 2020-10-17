@@ -1,5 +1,5 @@
 # JavaScript
-[![javascript/ci](https://github.com/exercism/javascript/workflows/exercism/javascript%20ci/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22exercism%2Fjavascript+ci%22)
+[![javascript/ci](https://github.com/exercism/javascript/workflows/exercism/javascript%20ci/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22exercism%2Fjavascript+ci%22) [![configlet lint](https://github.com/exercism/javascript/workflows/exercism/configlet%20lint/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22exercism%2Fconfiglet+lint%22) [![CodeQL](https://github.com/exercism/javascript/workflows/CodeQL/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3ACodeQL)
 
 **Exercism exercises in JavaScript**
 
