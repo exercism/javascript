@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx @babel/node scripts/ci
+ * Run this script (from root directory): npx babel-node scripts/ci
  *
  * This will run following checks:
  * 1. Check config in all exercises matches
@@ -9,14 +9,18 @@
  * 3. Run tests against sample solutions
  */
 
-const shell = require('shelljs');
-const helpers = require('./helpers');
+const shell = require("shelljs");
+const helpers = require("./helpers");
 
-const stubResult = shell.exec('scripts/stub-check').code;
-if(stubResult != 0) { shell.exit(stubResult); }
+const stubResult = shell.exec("scripts/stub-check").code;
+if (stubResult != 0) {
+  shell.exit(stubResult);
+}
 
-const checkResult = shell.exec('scripts/checksum').code;
-if(checkResult != 0) { shell.exit(checkResult); }
+const checkResult = shell.exec("scripts/checksum").code;
+if (checkResult != 0) {
+  shell.exit(checkResult);
+}
 
 // Cleanup tmp directory if any exists
 helpers.cleanUp();
@@ -26,11 +30,15 @@ helpers.cleanUp();
  * This allows running the test command together for all files
  * which is way faster than running once for each exercise
  */
-const lintResult = shell.exec('PREPARE=true scripts/lint').code;
-if(lintResult != 0) { shell.exit(lintResult); }
+const lintResult = shell.exec("PREPARE=true scripts/lint").code;
+if (lintResult != 0) {
+  shell.exit(lintResult);
+}
 
 /**
  * CLEANUP=true removes tmp_exercises folder
  */
-const testResult = shell.exec('CLEANUP=true scripts/test').code;
-if(testResult != 0) { shell.exit(testResult); }
+const testResult = shell.exec("CLEANUP=true scripts/test").code;
+if (testResult != 0) {
+  shell.exit(testResult);
+}
