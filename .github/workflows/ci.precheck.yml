@@ -1,13 +1,13 @@
 # This workflow will check stub files, integrity, and potentially other checks
 
-name: javascript ci/precheck
+name: javascript ci
 
 on:
   push:
     branches: [master]
 
 jobs:
-  build:
+  precheck:
     runs-on: ubuntu-latest
 
     steps:
