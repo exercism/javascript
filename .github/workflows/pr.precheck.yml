@@ -1,11 +1,11 @@
 # This workflow will check stub files, integrity, and potentially other checks
 
-name: javascript pr/precheck
+name: javascript pr
 
 on: pull_request
 
 jobs:
-  build:
+  precheck:
     runs-on: ubuntu-latest
 
     steps:
