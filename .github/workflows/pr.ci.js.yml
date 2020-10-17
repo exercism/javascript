@@ -47,21 +47,9 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-<<<<<<< HEAD
       - name: Run exercism/javascript ci (runs tests) for changed/added exercises
         run: |
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
             xargs -r npx babel-node scripts/pr
-=======
-      - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
-        run: PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-          jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
-<<<<<<< HEAD
-          xargs -r npx @babel/node scripts/pr
->>>>>>> Add PR script that runs only exercises that are important
-=======
-          xargs -r npx babel-node scripts/pr
->>>>>>> Actually use babel-node
