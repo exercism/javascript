@@ -4,13 +4,14 @@
  */
 
 const shell = require("shelljs");
+const path = require("path");
 
-const exerciseDirs = shell.ls("-d", "exercises/*");
+const exerciseDirs = shell.ls("-d", path.join("exercises", "*"));
 
 export const assignments = shell.env["ASSIGNMENT"]
   ? [shell.env["ASSIGNMENT"]]
   : exerciseDirs
-      .map((dir) => dir.split("/")[1])
+      .map((dir) => path.basename(dir))
       .filter((exercise) => !exercise.deprecated);
 
 export function findExerciseDirectory(input) {
@@ -19,9 +20,29 @@ export function findExerciseDirectory(input) {
   });
 }
 
+export function hasStub(assignment) {
+  return shell.test("-f", `exercises/${assignment}/${assignment}.js`);
+}
+
+export function envIsThruthy(key, unset = false) {
+  if (shell.env[key] === undefined) {
+    return unset;
+  }
+
+  return !["0", 0, "false", false, null, "null"].includes(shell.env[key]);
+}
+
+export function shouldPrepare() {
+  return envIsThruthy("PREPARE");
+}
+
+export function shouldCleanup() {
+  return envIsThruthy("CLEANUP");
+}
+
 // Preapre all exercises (see above) & run a given command
 export function prepareAndRun(command, infoStr, failureStr) {
-  if (shell.env["PREPARE"]) {
+  if (shouldPrepare()) {
     const assignment = shell.env["ASSIGNMENT"];
 
     if (assignment) {
@@ -36,7 +57,7 @@ export function prepareAndRun(command, infoStr, failureStr) {
   }
   const result = shell.exec(command);
 
-  if (shell.env["CLEANUP"] && shell.env["CLEANUP"] !== "false") {
+  if (shouldCleanup()) {
     cleanUp();
   }
 
@@ -72,34 +93,62 @@ export function createExercisePackageJson(assignmentVersion) {
   shellStr.to("exercise-package.json");
 }
 
-// PRIVATE
-
 /**
  * Copy sample solution and specs for given assignment to tmp_exercises
  */
-function prepare(assignment) {
+export function prepare(assignment) {
   if (!assignment) {
-    shell.echo("assignment not provided");
+    shell.echo("[Failure] Assignment not provided");
     shell.exit(1);
   }
-  const exampleFile = ["exercises", assignment, "example.js"].join("/");
-  const specFile = ["exercises", assignment, assignment + ".spec.js"].join("/");
+  const exampleFile = path.join("exercises", assignment, "example.js");
+  const specFile = path.join("exercises", assignment, assignment + ".spec.js");
 
-  shell.mkdir("-p", "tmp_exercises/lib");
-  shell.cp(exampleFile, ["tmp_exercises", assignment + ".js"].join("/"));
+  shell.mkdir("-p", path.join("tmp_exercises", "lib"));
+  shell.cp(exampleFile, path.join("tmp_exercises", assignment + ".js"));
   shell
     .sed("xtest", "test", specFile)
-    .to(["tmp_exercises", assignment + ".spec.js"].join("/"));
+    .to(path.join("tmp_exercises", assignment + ".spec.js"));
 
-  const libDir = ["exercises", assignment, "lib"].join("/");
+  const libDir = path.join("exercises", assignment, "lib");
   if (shell.test("-d", libDir)) {
-    shell.cp(libDir + "/*.js", "tmp_exercises/lib");
+    shell.cp(path.join(libDir, "*.js"), path.join("tmp_exercises", "lib"));
   }
 
-  shell.mkdir("-p", "tmp_exercises/data");
-  const dataDir = ["exercises", assignment, "data"].join("/");
+  shell.mkdir("-p", path.join("tmp_exercises", "data"));
+  const dataDir = path.join("exercises", assignment, "data");
 
   if (shell.test("-d", dataDir)) {
-    shell.cp([dataDir, "*"].join("/"), "tmp_exercises/data");
+    shell.cp(path.join(dataDir, "*"), path.join("tmp_exercises", "data"));
   }
+}
+
+export function registerExitHandler() {
+  function exitHandler(options, exitCode) {
+    cleanUp();
+
+    if (options.cleanup) {
+      /* clean exit */
+    }
+    if (exitCode || exitCode === 0) {
+      /* exit code given */
+    }
+    if (options.exit) {
+      /* should exit forcefully */
+      process.exit();
+    }
+  }
+
+  //do something when app is closing
+  process.on("exit", exitHandler.bind(null, { cleanup: true }));
+
+  //catches ctrl+c event
+  process.on("SIGINT", exitHandler.bind(null, { exit: true }));
+
+  // catches "kill pid" (for example: nodemon restart)
+  process.on("SIGUSR1", exitHandler.bind(null, { exit: true }));
+  process.on("SIGUSR2", exitHandler.bind(null, { exit: true }));
+
+  //catches uncaught exceptions
+  process.on("uncaughtException", exitHandler.bind(null, { exit: true }));
 }

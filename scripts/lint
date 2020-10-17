@@ -10,16 +10,18 @@ const shell = require("shelljs");
 const helpers = require("./helpers");
 const assignment = shell.env["ASSIGNMENT"];
 
+helpers.registerExitHandler();
+
 const infoStr = assignment
-  ? "\nRunning lint for " + assignment + "..."
-  : "\nRunning lint for all exercises...";
-const failureStr = "Lint check failed!";
+  ? "Running lint for " + assignment + "..."
+  : "Running lint for all exercises...";
+const failureStr = "[Failure] Lint check failed!";
 
 // Copies the necessary files
 shell.env["PREPARE"] = true;
 
 // Cleans up after
-if (!shell.env["CLEANUP"] || shell.env["CLEANUP"] !== "false") {
+if (shell.env["CLEANUP"] === undefined) {
   shell.env["CLEANUP"] = true;
 }
 

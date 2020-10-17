@@ -11,16 +11,17 @@ const shell = require("shelljs");
 const helpers = require("./helpers");
 
 const noStubs = helpers.assignments.filter(
-  (assignment) => !shell.test("-f", `exercises/${assignment}/${assignment}.js`)
+  (assignment) => !helpers.hasStub(assignment)
 );
+
 if (noStubs.length > 0) {
   shell.echo("[Error]: No stub files found for following exercises:");
   shell.echo(noStubs.join("\n"));
   shell.exit(1);
+}
+
+if (shell.env["ASSIGNMENT"]) {
+  shell.echo(`[Success]: Stub file present for ${shell.env["ASSIGNMENT"]}`);
 } else {
-  if (shell.env["ASSIGNMENT"]) {
-    shell.echo(`[Success]: Stub file present for ${shell.env["ASSIGNMENT"]}`);
-  } else {
-    shell.echo("[Success]: Stub files present for all exercises!");
-  }
+  shell.echo("[Success]: Stub files present for all exercises!");
 }

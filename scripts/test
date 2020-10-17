@@ -13,7 +13,7 @@ const assignment = shell.env["ASSIGNMENT"];
 const infoStr = assignment
   ? "\nRunning tests for " + assignment + "..."
   : "\nRunning tests for all exercises...";
-const failureStr = "Tests failed!";
+const failureStr = "[Failure] Tests failed!";
 
 // Copies the necessary files
 shell.env["PREPARE"] = true;

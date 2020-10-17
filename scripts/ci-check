@@ -1,44 +1,27 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory):
- *
- * npx babel-node scripts/pr-check path/1 path/2 path/3
+ * Run this script (from root directory): npx babel-node scripts/ci-check
  *
  * This will run following checks:
- * 1. Find the exercises at all the paths provided
- * 2. Check stub existance for those exercises
- * 3. Check integrity of configuration for those exercises
- * 4. Run eslint for those exercises to check code-style
+ *
+ * 1. Check config in all exercises matches
+ * 2. Run eslint to check code-style
+ * 3. Run tests against sample solutions
  */
-
-const {
-  findExerciseDirectory,
-  cleanUp,
-  registerExitHandler,
-  envIsThruthy,
-  hasStub,
-} = require("./helpers");
 
 const shell = require("shelljs");
 const path = require("path");
-const files = process.argv.slice(2);
 
-if (files.length === 0) {
-  shell.echo(
-    "[Failure] No files passed in. Pass in paths to exercise directories or its file."
-  );
-  shell.exit(-1);
-}
+const {
+  assignments,
+  registerExitHandler,
+  envIsThruthy,
+  hasStub,
+  cleanUp,
+} = require("./helpers");
 
-const exercises = files
-  .map((file) => {
-    const directory = findExerciseDirectory(file);
-    return directory ? path.basename(directory) : null;
-  })
-  .filter(Boolean)
-  .filter((exercise, index, array) => array.indexOf(exercise) === index);
-
+const exercises = assignments;
 if (exercises.length === 0) {
   shell.echo("[Skip] None of the files are inside an exercise directory.");
   shell.exit(0);
