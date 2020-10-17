@@ -24,7 +24,9 @@ jobs:
         run: npm ci
 
       - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
-        run: PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-          jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
-          xargs -r npx babel-node scripts/pr
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
+            xargs -r npx babel-node scripts/pr
