@@ -14,13 +14,18 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout PR
+        uses: actions/checkout@v2
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
+
       - name: Use Node.js ${{ matrix.node-version }}
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install project dependencies
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         run: npm ci
 
       - name: Run exercism/javascript ci (runs tests) for changed/added exercises
