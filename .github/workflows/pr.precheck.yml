@@ -1,0 +1,27 @@
+# This workflow will check stub files, integrity, and potentially other checks
+
+name: exercism/javascript pull-request/precheck
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js LTS (12.x)
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
+            xargs -r npx babel-node scripts/pr
