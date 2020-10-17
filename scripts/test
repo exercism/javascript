@@ -1,24 +1,24 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx @babel/node scripts/test
+ * Run this script (from root directory): npx babel-node scripts/test
  *
  * This runs `jest` tests for all sample solutions
  */
 
-const shell = require('shelljs');
-const helpers = require('./helpers');
-const assignment = shell.env['ASSIGNMENT'];
+const shell = require("shelljs");
+const helpers = require("./helpers");
+const assignment = shell.env["ASSIGNMENT"];
 
-const infoStr =
-    assignment ? '\nRunning tests for ' + assignment + '...':
-    '\nRunning tests for all exercises...';
-const failureStr = 'Tests failed!';
+const infoStr = assignment
+  ? "\nRunning tests for " + assignment + "..."
+  : "\nRunning tests for all exercises...";
+const failureStr = "Tests failed!";
 
 // Copies the necessary files
-shell.env['PREPARE'] = true
+shell.env["PREPARE"] = true;
 
 // Cleans up after
-shell.env['CLEANUP'] = true
+shell.env["CLEANUP"] = true;
 
-helpers.prepareAndRun('npx jest --bail tmp_exercises', infoStr, failureStr);
+helpers.prepareAndRun("npx jest --bail tmp_exercises", infoStr, failureStr);
