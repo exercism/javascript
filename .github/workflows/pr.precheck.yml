@@ -1,6 +1,6 @@
 # This workflow will check stub files, integrity, and potentially other checks
 
-name: exercism/javascript pull-request/precheck
+name: javascript pr/precheck
 
 on: pull_request
 
