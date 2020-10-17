@@ -1,6 +1,6 @@
 # This workflow will do a fetch the latest configlet binary and lint this repository.
 
-name: exercism/configlet lint
+name: configlet lint
 
 on: [push, pull_request]
 
