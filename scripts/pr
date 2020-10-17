@@ -40,53 +40,6 @@ if (exercises.length === 0) {
   shell.exit(0);
 }
 
-if (shell.env["STUB"] !== "0") {
-  exercises.forEach((exercise) => {
-    shell.env["ASSIGNMENT"] = exercise;
-
-    const stubResult = shell.exec(
-      `npx babel-node ${path.join("scripts", "stub-check")}`
-    ).code;
-    if (stubResult != 0) {
-      shell.exit(stubResult);
-    }
-  });
-}
-
-if (shell.env["INTEGRITY"] !== "0") {
-  exercises.forEach((exercise) => {
-    shell.env["ASSIGNMENT"] = exercise;
-
-    const checkResult = shell.exec(
-      `npx babel-node ${path.join("scripts", "checksum")}`
-    ).code;
-    if (checkResult != 0) {
-      shell.exit(checkResult);
-    }
-  });
-}
-
-// Cleanup tmp directory if any exists
-cleanUp();
-
-/**
- * Moves all example and test files to single directory - tmp_exercises
- * This allows running the test command together for all files
- * which is way faster than running once for each exercise
- */
-
-exercises.forEach((exercise) => {
-  shell.env["ASSIGNMENT"] = exercise;
-  shell.env["CLEANUP"] = false;
-
-  const checkResult = shell.exec(
-    `npx babel-node ${path.join("scripts", "lint")}`
-  ).code;
-  if (checkResult != 0) {
-    shell.exit(checkResult);
-  }
-});
-
 /**
  * CLEANUP=true removes tmp_exercises folder
  */
