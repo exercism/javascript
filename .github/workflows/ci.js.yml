@@ -26,4 +26,4 @@ jobs:
         run: npm ci
 
       - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
-        run: npx @babel/node scripts/ci
+        run: npx babel-node scripts/ci
