@@ -15,10 +15,11 @@
 const shell = require("shelljs");
 const assignment = shell.env["ASSIGNMENT"];
 const helpers = require("./helpers");
+const path = require("path");
 
 function copyConfigForAssignment(assignment) {
-  const destination = "exercises/" + assignment;
-  const assignmentPackageFilename = destination + "/package.json";
+  const destination = path.join("exercises", assignment);
+  const assignmentPackageFilename = path.join(destination, "package.json");
   const assignmentVersion = getAssignmentVersion(assignmentPackageFilename);
   helpers.createExercisePackageJson(assignmentVersion);
   shell.cat("exercise-package.json").to(assignmentPackageFilename);
@@ -37,7 +38,7 @@ function getAssignmentVersion(assignmentPackageFilename) {
 
 if (assignment) {
   shell.echo("Syncing " + assignment + "...");
-  copyConfigForAssignment("exercises/" + assignment);
+  copyConfigForAssignment(assignment);
 } else {
   shell.echo("Syncing all assignments...");
   helpers.assignments.forEach(copyConfigForAssignment);
