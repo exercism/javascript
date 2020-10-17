@@ -18,7 +18,7 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-      - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
+      - name: Run exercism/javascript ci precheck (stub files, config integrity) for changed exercises
         if: github.ref != 'refs/heads/master' && github.event.pull_request.url
         run: |
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
