@@ -13,7 +13,7 @@
  */
 
 const shell = require("shelljs");
-const { findExerciseDirectory, cleanUp } = require("./helpers");
+const { findExerciseDirectory } = require("./helpers");
 const path = require("path");
 
 // shell.shell.env["ASSIGNMENT"] = slug;
