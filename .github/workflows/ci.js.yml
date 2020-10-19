@@ -1,19 +1,19 @@
 # This workflow will do a clean install of node dependencies and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: javascript / ci
+name: javascript / master
 
-on: pull_request
+on:
+  push:
+    branches: [master]
 
 jobs:
   precheck:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout commit
-        uses: actions/checkout@v2
-
-      - name: Use Node.js LTS (12.x)
+      - uses: actions/checkout@v2
+      - name: Use Node.js LTS
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
@@ -21,7 +21,7 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-      - name: Run exercism/javascript ci precheck (stub files, config integrity)
+      - name: Run exercism/javascript ci precheck (checks config, lint code, and runs tests) for all exercises
         run: npx babel-node scripts/ci-check
 
   ci:
@@ -32,9 +32,7 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
-      - name: Checkout PR
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -43,5 +41,5 @@ jobs:
       - name: Install project dependencies
         run: npm ci
 
-      - name: Run exercism/javascript ci (runs tests)
-        run: npx babel-node scripts/pr
+      - name: Run exercism/javascript ci (checks config, lint code, and runs tests) for all exercises
+        run: npx babel-node scripts/ci
