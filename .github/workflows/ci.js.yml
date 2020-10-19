@@ -1,17 +1,30 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# This workflow will do a clean install of node dependencies and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: exercism/javascript ci
+name: javascript / ci
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: pull_request
 
 jobs:
-  build:
+  precheck:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout commit
+        uses: actions/checkout@v2
+
+      - name: Use Node.js LTS (12.x)
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Run exercism/javascript ci precheck (stub files, config integrity)
+        run: npx babel-node scripts/ci-check
+
+  ci:
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,20 +32,16 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Checkout PR
+        uses: actions/checkout@v2
 
-    - name: Install project dependencies
-      run: npm ci
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Fetch configlet
-      uses: exercism/github-actions/configlet-ci@master
+      - name: Install project dependencies
+        run: npm ci
 
-    - name: Run exercism/configlet linter
-      run: configlet lint .
-
-    - name: Run exercism/javascript ci (checks config, lint code, and runs tests)
-      run: npx @babel/node scripts/ci
+      - name: Run exercism/javascript ci (runs tests)
+        run: npx babel-node scripts/pr
