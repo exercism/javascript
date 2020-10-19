@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx @babel/node scripts/checksum
+ * Run this script (from root directory): npx babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -9,26 +9,30 @@
  * See `SKIP_PACKAGES_FOR_CHECKSUM` in helpers.js for list of skipped packages.
  */
 
-const shell = require('shelljs');
-const helpers = require('./helpers');
-const crypto = require('crypto');
+const shell = require("shelljs");
+const helpers = require("./helpers");
+const crypto = require("crypto");
 
-const sha = str => crypto.createHash('md5').update(str).digest("hex");
+const sha = (str) => crypto.createHash("md5").update(str).digest("hex");
 
 // Helper function to check single assignment
 function checksum(filename, assignment, rootChecksum) {
-  if(!assignment) { return; }
+  if (!assignment) {
+    return;
+  }
 
-  let assignmentConfig = shell.cat(['exercises', assignment, filename].join('/')).toString();
-  if(filename === 'package.json') {
+  let assignmentConfig = shell
+    .cat(["exercises", assignment, filename].join("/"))
+    .toString();
+  if (filename === "package.json") {
     const json = JSON.parse(assignmentConfig);
-    delete json['version'];
-    assignmentConfig = JSON.stringify(json, null, 2) + '\n';
+    delete json["version"];
+    assignmentConfig = JSON.stringify(json, null, 2) + "\n";
   }
   const assignmentChecksum = sha(assignmentConfig);
 
-  if(assignmentChecksum !== rootChecksum) {
-    shell.echo(filename + ' did not match for ' + assignment);
+  if (assignmentChecksum !== rootChecksum) {
+    shell.echo(`[Failure] ${filename} did not match for ${assignment}`);
     shell.exit(1);
   }
 }
@@ -36,24 +40,26 @@ function checksum(filename, assignment, rootChecksum) {
 // Check all assignments by default
 // or single if ASSIGNMENT is given
 function checkSumAll(filename, rootFileName = filename) {
-  shell.echo('\nChecking integrity of ' + filename + '...');
+  const assignment = shell.env["ASSIGNMENT"];
+
+  shell.echo(`Checking integrity of ${assignment}/${filename}...`);
 
   const config = shell.cat(rootFileName).toString();
   const rootChecksum = sha(config);
-  const assignment = shell.env['ASSIGNMENT'];
 
-  if(assignment) {
+  if (assignment) {
     checksum(filename, assignment, rootChecksum);
-  }
-  else {
-    helpers.assignments.forEach(assignment => checksum(filename, assignment, rootChecksum));
+  } else {
+    helpers.assignments.forEach((assignment) =>
+      checksum(filename, assignment, rootChecksum)
+    );
   }
 }
 
 helpers.createExercisePackageJson();
-checkSumAll('package.json', 'exercise-package.json');
-shell.rm('exercise-package.json');
+checkSumAll("package.json", "exercise-package.json");
+shell.rm("exercise-package.json");
 
-checkSumAll('babel.config.js');
-checkSumAll('.eslintrc');
-checkSumAll('.npmrc');
+checkSumAll("babel.config.js");
+checkSumAll(".eslintrc");
+checkSumAll(".npmrc");

@@ -1,0 +1,84 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): npx babel-node scripts/ci-check
+ *
+ * This will run following checks:
+ *
+ * 1. Check config in all exercises matches
+ * 2. Run eslint to check code-style
+ * 3. Run tests against sample solutions
+ */
+
+const shell = require("shelljs");
+const path = require("path");
+
+const {
+  assignments,
+  registerExitHandler,
+  envIsThruthy,
+  hasStub,
+  cleanUp,
+} = require("./helpers");
+
+const exercises = assignments;
+if (exercises.length === 0) {
+  shell.echo("[Skip] None of the files are inside an exercise directory.");
+  shell.exit(0);
+}
+
+registerExitHandler();
+
+if (!envIsThruthy("SKIP_STUB", false)) {
+  shell.echo("\n==========\nEnsure stubs are present\n");
+
+  // Inline the stub check instead of running scripts/stub-check, to save a
+  // few seconds.
+  const noStubs = exercises.filter((assignment) => !hasStub(assignment));
+
+  if (noStubs.length > 0) {
+    shell.echo(`[FAILURE] ${noStubs.length} missing a stub`);
+    noStubs.forEach((stub) => shell.echo(`${stub} is missing a stub file`));
+    shell.exit(-1);
+  } else {
+    shell.echo("[SUCCES] All stubs are present");
+  }
+}
+
+if (!envIsThruthy("SKIP_INTEGRITY", false)) {
+  shell.echo("\n==========\nCheck configuration and packages integrity\n");
+
+  exercises.forEach((exercise) => {
+    shell.env["ASSIGNMENT"] = exercise;
+
+    const checkResult = shell.exec(
+      `npx babel-node ${path.join("scripts", "checksum")}`
+    ).code;
+    if (checkResult != 0) {
+      shell.exit(checkResult);
+    }
+  });
+}
+
+// Cleanup tmp directory if any exists
+cleanUp();
+
+/**
+ * Moves all example and test files to single directory - tmp_exercises
+ * This allows running the test command together for all files
+ * which is way faster than running once for each exercise
+ */
+
+shell.echo("\n==========\nLint all the files\n");
+
+exercises.forEach((exercise) => {
+  shell.env["ASSIGNMENT"] = exercise;
+  shell.env["CLEANUP"] = true;
+
+  const checkResult = shell.exec(
+    `npx babel-node ${path.join("scripts", "lint")}`
+  ).code;
+  if (checkResult != 0) {
+    shell.exit(checkResult);
+  }
+});

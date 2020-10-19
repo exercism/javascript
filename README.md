@@ -1,11 +1,12 @@
 # JavaScript
-[![javascript/ci](https://github.com/exercism/javascript/workflows/exercism/javascript%20ci/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22exercism%2Fjavascript+ci%22)
+
+[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / ci](https://github.com/exercism/javascript/workflows/javascript%20/%20ci/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+ci%22) [![codeql](https://github.com/exercism/javascript/workflows/codql/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Acodeql)
 
 **Exercism exercises in JavaScript**
 
-This is the JavaScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **core** exercises - the ones a student _must_ complete - and each **core** exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config].
+This is the JavaScript track, one of the many tracks on [Exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **core** exercises - the ones a student _must_ complete - and each **core** exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config].
 
-> In version 3 of exercism, the above no longer holds. See the [`exercism/v3`][git-v3] repository for more information.
+> In version 3 of Exercism, the above no longer holds. See the [`exercism/v3`][git-v3] repository for more information.
 
 ## Tools
 

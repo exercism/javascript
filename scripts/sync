@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx @babel/node scripts/sync
+ * Run this script (from root directory): npx babel-node scripts/sync
  *
  * This script is used to copy following files to all exercises & keep them in sync:
  * 1. package.json
@@ -12,34 +12,34 @@
  * (see checksum script for more info).
  */
 
-const shell = require('shelljs');
-const assignment = shell.env['ASSIGNMENT'];
-const helpers = require('./helpers');
+const shell = require("shelljs");
+const assignment = shell.env["ASSIGNMENT"];
+const helpers = require("./helpers");
+const path = require("path");
 
 function copyConfigForAssignment(assignment) {
-  const destination = 'exercises/' + assignment;
-  const assignmentPackageFilename = destination + '/package.json';
+  const destination = path.join("exercises", assignment);
+  const assignmentPackageFilename = path.join(destination, "package.json");
   const assignmentVersion = getAssignmentVersion(assignmentPackageFilename);
   helpers.createExercisePackageJson(assignmentVersion);
-  shell.cat('exercise-package.json').to(assignmentPackageFilename);
-  shell.rm('exercise-package.json');
+  shell.cat("exercise-package.json").to(assignmentPackageFilename);
+  shell.rm("exercise-package.json");
 
-  shell.cp('babel.config.js', destination);
-  shell.cp('.eslintrc', destination);
-  shell.cp('.npmrc', destination);
+  shell.cp("babel.config.js", destination);
+  shell.cp(".eslintrc", destination);
+  shell.cp(".npmrc", destination);
 }
 
 function getAssignmentVersion(assignmentPackageFilename) {
   const packageFile = shell.cat(assignmentPackageFilename).toString();
   const packageJson = JSON.parse(packageFile);
-  return packageJson['version'];
+  return packageJson["version"];
 }
 
-if(assignment) {
-  shell.echo('Syncing ' + assignment + '...');
-  copyConfig('exercises/' + assignment);
-}
-else {
-  shell.echo('Syncing all assignments...');
+if (assignment) {
+  shell.echo("Syncing " + assignment + "...");
+  copyConfigForAssignment(assignment);
+} else {
+  shell.echo("Syncing all assignments...");
   helpers.assignments.forEach(copyConfigForAssignment);
 }

@@ -3,25 +3,40 @@
 /**
  * Run this script (from root directory):
  *
- * npx babel-node scripts/pr
+ * npx babel-node scripts/pr path/1 path/2 path/3
  *
  * This will run following checks:
  *
- * 1. Find the exercises
- * 2. Run tests against sample solutions
+ * 1. Find the exercises at all the paths provided
+ * 2. Run tests for those exercises against sample solutions
  */
 
 const {
+  findExerciseDirectory,
   prepareAndRun,
   prepare,
   cleanUp,
   registerExitHandler,
-  assignments,
 } = require("./helpers");
 
 const shell = require("shelljs");
+const path = require("path");
+const files = process.argv.slice(2);
 
-const exercises = assignments;
+if (files.length === 0) {
+  shell.echo(
+    "[Failure] No files passed in. Pass in paths to exercise directories or its file."
+  );
+  shell.exit(-1);
+}
+
+const exercises = files
+  .map((file) => {
+    const directory = findExerciseDirectory(file);
+    return directory ? path.basename(directory) : null;
+  })
+  .filter(Boolean)
+  .filter((exercise, index, array) => array.indexOf(exercise) === index);
 
 if (exercises.length === 0) {
   shell.echo("[Skip] None of the files are inside an exercise directory.");

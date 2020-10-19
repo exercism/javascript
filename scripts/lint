@@ -1,24 +1,28 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx @babel/node scripts/lint
+ * Run this script (from root directory): npx babel-node scripts/lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
 
-const shell = require('shelljs');
-const helpers = require('./helpers');
-const assignment = shell.env['ASSIGNMENT'];
+const shell = require("shelljs");
+const helpers = require("./helpers");
+const assignment = shell.env["ASSIGNMENT"];
 
-const infoStr =
-    assignment ? '\nRunning lint for ' + assignment + '...':
-    '\nRunning lint for all exercises...';
-const failureStr = 'Lint check failed!';
+helpers.registerExitHandler();
+
+const infoStr = assignment
+  ? "Running lint for " + assignment + "..."
+  : "Running lint for all exercises...";
+const failureStr = "[Failure] Lint check failed!";
 
 // Copies the necessary files
-shell.env['PREPARE'] = true
+shell.env["PREPARE"] = true;
 
 // Cleans up after
-shell.env['CLEANUP'] = true
+if (shell.env["CLEANUP"] === undefined) {
+  shell.env["CLEANUP"] = true;
+}
 
-helpers.prepareAndRun('npx eslint tmp_exercises', infoStr, failureStr);
+helpers.prepareAndRun("npx eslint tmp_exercises", infoStr, failureStr);
