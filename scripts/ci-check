@@ -19,6 +19,7 @@ const {
   envIsThruthy,
   hasStub,
   cleanUp,
+  prepare,
 } = require("./helpers");
 
 const exercises = assignments;
@@ -71,14 +72,15 @@ cleanUp();
 
 shell.echo("\n==========\nLint all the files\n");
 
-exercises.forEach((exercise) => {
-  shell.env["ASSIGNMENT"] = exercise;
-  shell.env["CLEANUP"] = true;
+shell.env["PREPARE"] = false;
+shell.env["CLEANUP"] = false;
 
-  const checkResult = shell.exec(
-    `npx babel-node ${path.join("scripts", "lint")}`
-  ).code;
-  if (checkResult != 0) {
-    shell.exit(checkResult);
-  }
-});
+exercises.forEach(prepare);
+
+shell.env["CLEANUP"] = true;
+
+const checkResult = shell.exec(`npx babel-node ${path.join("scripts", "lint")}`)
+  .code;
+if (checkResult != 0) {
+  shell.exit(checkResult);
+}
