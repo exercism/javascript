@@ -18,60 +18,84 @@ const checkCoprime = (a, b) => {
 }
 
 const isNumber = (candidate) => {
-  if (candidate === '') {
-    return false;
-  }
-
   return !isNaN(Number(candidate));
+}
+
+const findMMI = (a) => {
+  let i = 1;
+
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    i++;
+
+    if ((a * i - 1) % m === 0) {
+      return i;
+    }
+  }
+}
+
+const positiveModulo = (a, b) => {
+  return ((a % b) + b) % b;
+}
+
+const groupBy = (elements, groupLength) => {
+  const result = [[]];
+  let i = 0;
+
+  elements.forEach(el => {
+    if (result[i] && result[i].length < groupLength ) {
+      result[i].push(el);
+    } else {
+      i++;
+      result[i] = [el];
+    }
+  });
+
+  return result;
 }
 
 export const encode = (phrase, { a, b }) => {
   checkCoprime(a, m);
 
-  return phrase.toLowerCase().split('').filter(letter => letter !== ' ').map(letter => {
-    const index = ALPHABET.indexOf(letter);
+  let encodedText = '';
 
-    if (index !== -1) {
-      return ALPHABET[(a * index + b) % m];
-    } else {
-      return isNumber(letter) ? letter : null;
-    }
-  }).filter(item => item !== null).map(((letter, idx) => {
-    if (idx > 0 && idx % 5 === 0) {
-      return ' ' + letter;
-    } else {
-      return letter;
-    }
-  })).join('')
+  phrase
+    .toLowerCase()
+    .split('')
+    .filter(char => char !== ' ')
+    .forEach(char => {
+      if (ALPHABET.includes(char)) {
+        const x = ALPHABET.indexOf(char);
+        const encodedIndex = (a * x + b) % m;
+
+        encodedText += ALPHABET[encodedIndex];
+      } else if (isNumber(char)) {
+        encodedText += char;
+      }
+    });
+
+  return groupBy(encodedText.split(''), 5)
+    .map(group => group.join(''))
+    .join(' ');
 };
-
-const findMMI = (a) => {
-  let i = 1;
-  let found = false;
-
-  while (!found) {
-    i++;
-
-    if ((a * i - 1) % m === 0) {
-      found = true;
-    }
-  }
-
-  return i;
-}
 
 export const decode = (phrase, { a, b }) => {
   checkCoprime(a, m);
 
   const mmi = findMMI(a);
 
-  return phrase.split('').filter(letter => letter !== ' ').map(letter => {
-    const index = ALPHABET.indexOf(letter);
+  return phrase
+    .split('')
+    .filter(char => char !== ' ')
+    .map(char => {
+      if (isNumber(char)) {
+        return char;
+      }
 
-    if (index !== -1) {
-      return ALPHABET[(((mmi * (index - b)) % m) + m) % m];
-    } else {
-      return letter;
-    }
-  }).join('');
+      const y = ALPHABET.indexOf(char);
+      const decodedIndex = positiveModulo(mmi * (y - b), m);
+
+      return ALPHABET[decodedIndex];
+    })
+    .join('');
 }

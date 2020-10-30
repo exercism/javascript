@@ -1464,6 +1464,16 @@
       "topics": [
         "graph_theory"
       ]
+    },
+    {
+      "slug": "affine-cipher",
+      "uuid": "37f26dda-6d5b-4b8a-a548-20758c5b6178",
+      "core": false,
+      "difficulty": 4,
+      "unlocked_by": "luhn",
+      "topics": [
+
+      ]
     }
   ]
 }
