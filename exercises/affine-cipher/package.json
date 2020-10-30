@@ -1,7 +1,7 @@
 {
   "name": "exercism-javascript",
   "description": "Exercism exercises in Javascript.",
-  "author": "Tom Pradat",
+  "author": "Katrina Owen",
   "private": true,
   "repository": {
     "type": "git",
