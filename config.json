@@ -1470,9 +1470,12 @@
       "uuid": "37f26dda-6d5b-4b8a-a548-20758c5b6178",
       "core": false,
       "difficulty": 4,
-      "unlocked_by": "luhn",
+      "unlocked_by": "simple-cipher",
       "topics": [
-
+        "algorithms",
+        "arrays",
+        "filtering",
+        "math"
       ]
     }
   ]
