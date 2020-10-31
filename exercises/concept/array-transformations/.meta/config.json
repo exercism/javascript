@@ -5,5 +5,9 @@
       "github_username": "yyyc514",
       "exercism_username": "ajoshguy"
     }
-  ]
+  ],
+  "editor": {
+    "solution_files": ["array-transformations.js"],
+    "test_files": ["array-transformations.spec.js"]
+  }
 }

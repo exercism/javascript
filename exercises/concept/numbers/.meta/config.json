@@ -4,5 +4,9 @@
       "github_username": "SleeplessByte",
       "exercism_username": "SleeplessByte"
     }
-  ]
+  ],
+  "editor": {
+    "solution_files": ["numbers.js"],
+    "test_files": ["numbers.spec.js"]
+  }
 }
