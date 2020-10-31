@@ -2,19 +2,21 @@
 
 export class QualityThresholdNotMet extends Error {
   constructor(text) {
-    super(`
+    super(
+      `
 The translation of ${text} does not meet the requested quality threshold.
     `.trim()
-    )
+    );
   }
 }
 
 export class BatchIsEmpty extends Error {
   constructor() {
-    super(`
+    super(
+      `
 Requested a batch translation, but there are no texts in the batch.
     `.trim()
-    )
+    );
   }
 }
 
@@ -24,7 +26,7 @@ export class TranslationService {
    * @param {ExternalApi} api
    */
   constructor(api) {
-    this.api = api
+    this.api = api;
   }
 
   /**
@@ -37,8 +39,8 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   async free(text) {
-    const { translation } = await this.api.fetch(text)
-    return translation
+    const { translation } = await this.api.fetch(text);
+    return translation;
   }
 
   /**
@@ -53,20 +55,19 @@ export class TranslationService {
    */
   async premium(text, miniumQuality) {
     try {
-      const { translation, quality } = await this.api.fetch(text)
+      const { translation, quality } = await this.api.fetch(text);
 
       if (miniumQuality > quality) {
-        throw new QualityThresholdNotMet(text)
+        throw new QualityThresholdNotMet(text);
       }
-      return translation
-    }
-    catch (err) {
+      return translation;
+    } catch (err) {
       if (err instanceof QualityThresholdNotMet) {
-        throw err
+        throw err;
       }
 
-      await this.request(text)
-      return await this.premium(text, miniumQuality)
+      await this.request(text);
+      return await this.premium(text, miniumQuality);
     }
   }
 
@@ -82,10 +83,10 @@ export class TranslationService {
    */
   async batch(texts) {
     if (texts.length === 0) {
-      throw new BatchIsEmpty()
+      throw new BatchIsEmpty();
     }
 
-    return await Promise.all(texts.map(this.free.bind(this)))
+    return await Promise.all(texts.map(this.free.bind(this)));
   }
 
   /**
@@ -100,16 +101,15 @@ export class TranslationService {
     try {
       await new Promise((resolve, reject) =>
         this.api.request(text, (err) => {
-          err ? reject(err) : resolve()
+          err ? reject(err) : resolve();
         })
-      )
+      );
     } catch (err) {
       if (attempt === 3) {
-        throw err
+        throw err;
       }
 
-      return await this.request(text, attempt + 1)
+      return await this.request(text, attempt + 1);
     }
   }
 }
-

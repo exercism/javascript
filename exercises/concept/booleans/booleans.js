@@ -1,12 +1,18 @@
+// @ts-check
+//
+// The line above enables type checking for this file. Various IDEs interpret
+// the @ts-check directive. It will give you helpful autocompletion when 
+// implementing this exercise.
+
 /**
  * The fast attack is available when the knight is sleeping
  *
  * @param {boolean} knightIsAwake
- * 
+ *
  * @return {boolean} Whether or not you can execute a fast attack.
  */
 export function canExecuteFastAttack(knightIsAwake) {
-  throw new Error('Implement the canExecuteFastAttack function')
+  throw new Error('Implement the canExecuteFastAttack function');
 }
 
 /**
@@ -15,11 +21,11 @@ export function canExecuteFastAttack(knightIsAwake) {
  * @param {boolean} knightIsAwake
  * @param {boolean} archerIsAwake
  * @param {boolean} prisonerIsAwake
- * 
+ *
  * @returns {boolean} Whether or not you can spy on someone.
  */
 export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
-  throw new Error('Implement the canSpy function')
+  throw new Error('Implement the canSpy function');
 }
 
 /**
@@ -27,23 +33,28 @@ export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
  *
  * @param {boolean} archerIsAwake
  * @param {boolean} prisonerIsAwake
- * 
+ *
  * @returns {boolean} Whether or not you can send a signal to the prisoner.
  */
 export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
-  throw new Error('Implement the canSignalPrisoner function')
+  throw new Error('Implement the canSignalPrisoner function');
 }
 
 /**
  * The final stage in the plan: freeing Annalyn's best friend.
- * 
+ *
  * @param {boolean} knightIsAwake
  * @param {boolean} archerIsAwake
  * @param {boolean} prisonerIsAwake
  * @param {boolean} petDogIsPresent
- * 
+ *
  * @returns {boolean} Whether or not you can free Annalyn's friend.
  */
-export function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent) {
-  throw new Error('Implement the canFreePrisoner function')
+export function canFreePrisoner(
+  knightIsAwake,
+  archerIsAwake,
+  prisonerIsAwake,
+  petDogIsPresent
+) {
+  throw new Error('Implement the canFreePrisoner function');
 }

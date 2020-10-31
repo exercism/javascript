@@ -8,7 +8,7 @@
  * @returns {string} the text to print on the badge
  */
 export function printBadge(id, name, department) {
-  const worksAt = department?.toLocaleUpperCase() || 'OWNER'
+  const worksAt = department?.toLocaleUpperCase() || 'OWNER';
 
   // prettier-ignore
   return id === null 

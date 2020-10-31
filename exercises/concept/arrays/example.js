@@ -8,8 +8,8 @@ export function setItem(array, index, newValue) {
 }
 
 export function insertItemAtTop(array, newCard) {
-  array.push(newCard)
-  return array
+  array.push(newCard);
+  return array;
 }
 
 export function removeItem(array, index) {

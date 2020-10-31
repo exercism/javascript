@@ -1,13 +1,17 @@
+/// <reference path="./global.d.ts" />
 // @ts-check
+//
+// The lines above enable type checking for this file. Various IDEs interpret
+// the @ts-check and reference directives. Together, they give you helpful
+// autocompletion when implementing this exercise.
 
 export class TranslationService {
-
   /**
    * Creates a new service
    * @param {ExternalApi} api the original api
    */
   constructor(api) {
-    this.api = api
+    this.api = api;
   }
 
   /**
@@ -20,7 +24,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    throw new Error('Implement the free function')
+    throw new Error('Implement the free function');
   }
 
   /**
@@ -34,7 +38,7 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function')
+    throw new Error('Implement the batch function');
   }
 
   /**
@@ -47,7 +51,7 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    throw new Error('Implement the request function')
+    throw new Error('Implement the request function');
   }
 
   /**
@@ -61,38 +65,39 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, miniumQuality) {
-    throw new Error('Implement the premium function')
+    throw new Error('Implement the premium function');
   }
 }
 
- /**
-  * This error is used to indicate a translation was found, but its quality does
-  * not meet a certain threshold. Do not change the name of this error.
-  */
- export class QualityThresholdNotMet extends Error {
-
+/**
+ * This error is used to indicate a translation was found, but its quality does
+ * not meet a certain threshold. Do not change the name of this error.
+ */
+export class QualityThresholdNotMet extends Error {
   /**
    * @param {string} text
    */
   constructor(text) {
-    super(`
+    super(
+      `
 The translation of ${text} does not meet the requested quality threshold.
     `.trim()
-    )
+    );
 
-    this.text = text
+    this.text = text;
   }
 }
 
- /**
-  * This error is used to indicate the batch service was called without any
-  * texts to translate (it was empty). Do not change the name of this error.
-  */
+/**
+ * This error is used to indicate the batch service was called without any
+ * texts to translate (it was empty). Do not change the name of this error.
+ */
 export class BatchIsEmpty extends Error {
   constructor() {
-    super(`
+    super(
+      `
 Requested a batch translation, but there are no texts in the batch.
     `.trim()
-    )
+    );
   }
 }

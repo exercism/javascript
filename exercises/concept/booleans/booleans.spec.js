@@ -2,11 +2,11 @@ import {
   canExecuteFastAttack,
   canSpy,
   canSignalPrisoner,
-  canFreePrisoner
-} from "./booleans";
+  canFreePrisoner,
+} from './booleans';
 
-describe("booleans", () => {
-  describe("canExecuteFastAttack", () => {
+describe('booleans', () => {
+  describe('canExecuteFastAttack', () => {
     let knightIsAwake = true;
     let expected = false;
     test(`canExecuteFastAttack(${knightIsAwake})`, () => {
@@ -20,7 +20,7 @@ describe("booleans", () => {
     });
   });
 
-  describe("canSpy", () => {
+  describe('canSpy', () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false, false],
       [false, false, true, true],
@@ -28,26 +28,26 @@ describe("booleans", () => {
       [false, true, true, true],
       [true, false, false, true],
       [true, false, true, true],
-      [true, true, true, true]
+      [true, true, true, true],
     ];
 
     CHARACTERS_STATE_COMBINATIONS.forEach(
       ([knightIsAwake, archerIsAwake, prisonerIsAwake, expected]) => {
         test(`canSpy(${knightIsAwake}, ${archerIsAwake}, ${prisonerIsAwake})`, () => {
-          expect(
-            canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)
-          ).toBe(expected);
+          expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+            expected
+          );
         });
       }
     );
   });
 
-  describe("canSignalPrisoner", () => {
+  describe('canSignalPrisoner', () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false],
       [false, true, true],
       [true, false, false],
-      [true, true, false]
+      [true, true, false],
     ];
 
     CHARACTERS_STATE_COMBINATIONS.forEach(
@@ -61,7 +61,7 @@ describe("booleans", () => {
     );
   });
 
-  describe("canFreePrisoner", () => {
+  describe('canFreePrisoner', () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false, false, false],
       [false, false, false, true, true],
@@ -78,7 +78,7 @@ describe("booleans", () => {
       [true, true, false, false, false],
       [true, true, false, true, false],
       [true, true, true, false, false],
-      [true, true, true, true, false]
+      [true, true, true, true, false],
     ];
 
     CHARACTERS_STATE_COMBINATIONS.forEach(
@@ -87,7 +87,7 @@ describe("booleans", () => {
         archerIsAwake,
         prisonerIsAwake,
         petDogIsPresent,
-        expected
+        expected,
       ]) => {
         test(`canFreePrisoner(${knightIsAwake}, ${archerIsAwake}, ${prisonerIsAwake}, ${petDogIsPresent})`, () => {
           expect(

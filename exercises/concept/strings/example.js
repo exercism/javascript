@@ -6,7 +6,7 @@
  * @returns {string}
  */
 export function frontDoorResponse(blurb) {
-  return blurb[0]
+  return blurb[0];
 }
 
 /**
@@ -17,8 +17,8 @@ export function frontDoorResponse(blurb) {
  * @returns {string}
  */
 export function backDoorResponse(blurb) {
-  const trimmed = blurb.trim()
-  return trimmed[trimmed.length - 1]
+  const trimmed = blurb.trim();
+  return trimmed[trimmed.length - 1];
 }
 
 /**
@@ -28,7 +28,7 @@ export function backDoorResponse(blurb) {
  * @returns {string} the password
  */
 export function frontDoorPassword(responses) {
-  return capitalize(responses)
+  return capitalize(responses);
 }
 
 /**
@@ -38,7 +38,7 @@ export function frontDoorPassword(responses) {
  * @returns {string} the password
  */
 export function backDoorPassword(responses) {
-  return `${capitalize(responses)}, please`
+  return `${capitalize(responses)}, please`;
 }
 
 /**
@@ -49,5 +49,5 @@ export function backDoorPassword(responses) {
  * @returns {string}
  */
 function capitalize(word) {
-  return word[0].toUpperCase() + word.slice(1).toLowerCase()
+  return word[0].toUpperCase() + word.slice(1).toLowerCase();
 }

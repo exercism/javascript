@@ -1,60 +1,66 @@
-@ts-check
+/// <reference path="./global.d.ts" />
+// @ts-check
+//
+// The lines above enable type checking for this file. Various IDEs interpret
+// the @ts-check and reference directives. Together, they give you helpful
+// autocompletion when implementing this exercise.
+
 
 /**
  * Get the first card in the given deck
  *
- * @param {number[]} deck
+ * @param {Card[]} deck
  *
- * @returns {number} the first card in the deck
+ * @returns {Card} the first card in the deck
  */
 export function getFirstCard(deck) {
-  throw new Error('Implement the getFirstCard function')
+  throw new Error('Implement the getFirstCard function');
 }
 
 /**
  * Get the second card in the given deck
  *
- * @param {number[]} deck
+ * @param {Card[]} deck
  *
- * @returns {number} the second card in the deck
+ * @returns {Card} the second card in the deck
  */
 export function getSecondCard(deck) {
-  throw new Error('Implement the getSecondCard function')
+  throw new Error('Implement the getSecondCard function');
 }
 
 /**
  * Switch the position of the first two cards in the given deck
  *
- * @param {number[]} deck
+ * @param {Card[]} deck
  *
- * @returns {number[]} new deck with reordered cards
+ * @returns {Card[]} new deck with reordered cards
  */
 export function swapTopTwoCards(deck) {
-  throw new Error('Implement the swapTopTwoCards function')
+  throw new Error('Implement the swapTopTwoCards function');
 }
 
 /**
  * Put the top card of the given deck into a separate discard pile
  *
- * @param {number[]} deck
+ * @param {Card[]} deck
  *
- * @returns {[number, number[]]} the top card of the given
+ * @returns {[Card, Card[]]} the top card of the given
  * deck and a new deck containing all the other cards
  */
 export function discardTopCard(deck) {
-  throw new Error('Implement the discardTopCard function')
+  throw new Error('Implement the discardTopCard function');
 }
 
-const FACE_CARDS = ['jack', 'queen', 'king']
+const FACE_CARDS = ['jack', 'queen', 'king'];
 
 /**
  * Insert face cards into the given deck
  *
- * @param {number[]} deck
+ * @param {Card[]} deck
  *
- * @returns {number[]} new deck where the second,
+ * @returns {Card[]} new deck where the second,
  * third, and fourth cards are the face cards
  */
 export function insertFaceCards(deck) {
-  throw new Error('Implement the insertFaceCards function')
+  throw new Error('Implement the insertFaceCards function');
 }
