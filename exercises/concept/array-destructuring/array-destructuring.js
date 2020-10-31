@@ -5,7 +5,6 @@
 // the @ts-check and reference directives. Together, they give you helpful
 // autocompletion when implementing this exercise.
 
-
 /**
  * Get the first card in the given deck
  *

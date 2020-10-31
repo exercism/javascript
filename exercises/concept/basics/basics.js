@@ -1,7 +1,7 @@
 // @ts-check
 //
 // The line above enables type checking for this file. Various IDEs interpret
-// the @ts-check directive. It will give you helpful autocompletion when 
+// the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise. You don't need to understand types or TypeScript
 // in order to complete this JavaScript exercise.
 
