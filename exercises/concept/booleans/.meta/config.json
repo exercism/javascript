@@ -14,5 +14,9 @@
       "github_username": "ovidiu141",
       "exercism_username": "ovidiu141"
     }
-  ]
+  ],
+  "editor": {
+    "solution_files": ["booleans.js"],
+    "test_files": ["booleans.spec.js"]
+  }
 }

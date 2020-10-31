@@ -9,5 +9,9 @@
       "github_username": "SleeplessByte",
       "exercism_username": "SleeplessByte"
     }
-  ]
+  ],
+  "editor": {
+    "solution_files": ["array-analysis.js"],
+    "test_files": ["array-analysis.spec.js"]
+  }
 }
