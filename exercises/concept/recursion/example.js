@@ -7,7 +7,7 @@ const PIZZA_PRICES = {
   Margherita: 7,
   Caprese: 9,
   Formaggio: 10,
-}
+};
 
 /**
  * Determine the prize of the pizza given the pizza and optional extras
@@ -20,13 +20,13 @@ const PIZZA_PRICES = {
 export function pizzaPrice(pizza, ...[extra, ...otherExtras]) {
   switch (extra) {
     case 'ExtraSauce': {
-      return 1 + pizzaPrice(pizza, ...otherExtras)
+      return 1 + pizzaPrice(pizza, ...otherExtras);
     }
     case 'ExtraToppings': {
-      return 2 + pizzaPrice(pizza, ...otherExtras)
+      return 2 + pizzaPrice(pizza, ...otherExtras);
     }
     default: {
-      return PIZZA_PRICES[pizza]
+      return PIZZA_PRICES[pizza];
     }
   }
 }
@@ -41,5 +41,5 @@ export function orderPrice(pizzaOrders) {
   return pizzaOrders.reduce(
     (result, order) => result + pizzaPrice(order.pizza, ...order.extras),
     0
-  )
+  );
 }

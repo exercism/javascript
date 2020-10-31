@@ -10,8 +10,8 @@
  */
 export function translate2d(dx, dy) {
   return function (x, y) {
-    return [x + dx, y + dy]
-  }
+    return [x + dx, y + dy];
+  };
 }
 
 /**
@@ -26,8 +26,8 @@ export function translate2d(dx, dy) {
  */
 export function scale2d(sx, sy) {
   return function (x, y) {
-    return [x * sx, y * sy]
-  }
+    return [x * sx, y * sy];
+  };
 }
 
 /**
@@ -42,9 +42,9 @@ export function scale2d(sx, sy) {
  */
 export function composeTransform(f, g) {
   return function (x, y) {
-    const fResult = f(x, y)
-    return g(fResult[0], fResult[1])
-  }
+    const fResult = f(x, y);
+    return g(fResult[0], fResult[1]);
+  };
 }
 
 /**
@@ -57,18 +57,18 @@ export function composeTransform(f, g) {
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 export function memoizeTransform(f) {
-  let lastX = undefined
-  let lastY = undefined
-  let lastResult = undefined
+  let lastX = undefined;
+  let lastY = undefined;
+  let lastResult = undefined;
 
   return function (x, y) {
     if (x === lastX && y === lastY) {
-      return lastResult
+      return lastResult;
     }
 
-    lastX = x
-    lastY = y
-    lastResult = f(x, y)
-    return lastResult
-  }
+    lastX = x;
+    lastY = y;
+    lastResult = f(x, y);
+    return lastResult;
+  };
 }

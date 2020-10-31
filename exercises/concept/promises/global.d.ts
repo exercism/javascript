@@ -5,15 +5,17 @@
  */
 
 interface ExternalApi {
-  fetch: fetchTranslation
-  request: requestTranslation
+  fetch: fetchTranslation;
+  request: requestTranslation;
 }
 
 interface Translation {
-  translation: string
-  quality: number
+  translation: string;
+  quality: number;
 }
 
-type fetchTranslation = (text: string) => Promise<Translation>
-type requestTranslation = (text: string, callback: (err?: Error) => void) => void
-
+type fetchTranslation = (text: string) => Promise<Translation>;
+type requestTranslation = (
+  text: string,
+  callback: (err?: Error) => void
+) => void;

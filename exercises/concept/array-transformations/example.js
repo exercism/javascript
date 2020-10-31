@@ -6,7 +6,7 @@
  * @returns {number[]} deck with every card doubled
  */
 export function seeingDouble(deck) {
-  return deck.map((card) => card * 2)
+  return deck.map((card) => card * 2);
 }
 
 /**
@@ -19,12 +19,12 @@ export function seeingDouble(deck) {
 export function threeOfEachThree(deck) {
   return deck.reduce((newDeck, card) => {
     if (card === 3) {
-      newDeck.push(3, 3, 3)
+      newDeck.push(3, 3, 3);
     } else {
-      newDeck.push(card)
+      newDeck.push(card);
     }
-    return newDeck
-  }, [])
+    return newDeck;
+  }, []);
 }
 
 /**
@@ -39,7 +39,7 @@ export function middleTwo(deck) {
   // TODO: which implementation?
   // const middle = Math.floor(deck.length / 2)
   // return deck.slice(middle,  middle + 1)
-  return deck.slice(4, 5)
+  return deck.slice(4, 5);
 }
 
 /**
@@ -51,9 +51,9 @@ export function middleTwo(deck) {
  */
 
 export function sandwichTrick(deck) {
-  const firstCard = deck.shift()
-  const lastCard = deck.pop()
-  return deck.splice(3, 0, lastCard, firstCard)
+  const firstCard = deck.shift();
+  const lastCard = deck.pop();
+  return deck.splice(3, 0, lastCard, firstCard);
 }
 
 /**
@@ -64,7 +64,7 @@ export function sandwichTrick(deck) {
  * @returns {number[]} deck with only 2s
  */
 export function twoIsSpecial(deck) {
-  return deck.filter((card) => card === 2)
+  return deck.filter((card) => card === 2);
 }
 
 /**
@@ -75,7 +75,7 @@ export function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
-  return deck.sort()
+  return deck.sort();
 }
 
 /**
@@ -86,5 +86,5 @@ export function perfectlyOrdered(deck) {
  * @returns {number[]} deck
  */
 export function countingCards(deck) {
-  return deck.fill(deck.length)
+  return deck.fill(deck.length);
 }

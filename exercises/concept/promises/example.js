@@ -2,30 +2,31 @@
 
 export class QualityThresholdNotMet extends Error {
   constructor(text) {
-    super(`
+    super(
+      `
 The translation of ${text} does not meet the requested quality threshold.
     `.trim()
-    )
+    );
   }
 }
 
 export class BatchIsEmpty extends Error {
   constructor() {
-    super(`
+    super(
+      `
 Requested a batch translation, but there are no texts in the batch.
     `.trim()
-    )
+    );
   }
 }
 
 export class TranslationService {
-
   /**
    *
    * @param {ExternalApi} api
    */
   constructor(api) {
-    this.api = api
+    this.api = api;
   }
 
   /**
@@ -38,8 +39,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    return this.api.fetch(text)
-      .then(({ translation }) => translation)
+    return this.api.fetch(text).then(({ translation }) => translation);
   }
 
   /**
@@ -53,17 +53,16 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, miniumQuality) {
-    return this.api.fetch(text)
-      .then(
-        ({ translation, quality }) => {
-          if (miniumQuality > quality) {
-            throw new QualityThresholdNotMet(text)
-          }
+    return this.api.fetch(text).then(
+      ({ translation, quality }) => {
+        if (miniumQuality > quality) {
+          throw new QualityThresholdNotMet(text);
+        }
 
-          return translation
-        },
-        () => this.request(text).then(() => this.premium(text, miniumQuality))
-      )
+        return translation;
+      },
+      () => this.request(text).then(() => this.premium(text, miniumQuality))
+    );
   }
 
   /**
@@ -77,10 +76,10 @@ export class TranslationService {
    */
   batch(texts) {
     if (texts.length === 0) {
-      return Promise.reject(new BatchIsEmpty())
+      return Promise.reject(new BatchIsEmpty());
     }
 
-    return Promise.all(texts.map(this.free.bind(this)))
+    return Promise.all(texts.map(this.free.bind(this)));
   }
 
   /**
@@ -94,18 +93,16 @@ export class TranslationService {
   request(text, attempt = 1) {
     return new Promise((resolve, reject) => {
       this.api.request(text, (err) => {
-
         if (err) {
           if (attempt < 3) {
-            return this.request(text, attempt + 1)
-              .then(resolve, reject)
+            return this.request(text, attempt + 1).then(resolve, reject);
           }
 
-          return reject(err)
+          return reject(err);
         }
 
-        return resolve()
-      })
-    })
+        return resolve();
+      });
+    });
   }
 }

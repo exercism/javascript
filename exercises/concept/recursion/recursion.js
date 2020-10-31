@@ -1,3 +1,10 @@
+/// <reference path="./global.d.ts" />
+// @ts-check
+//
+// The lines above enable type checking for this file. Various IDEs interpret
+// the @ts-check and reference directives. Together, they give you helpful
+// autocompletion when implementing this exercise.
+
 /**
  * Determine the prize of the pizza given the pizza and optional extras
  *
@@ -7,7 +14,7 @@
  * @returns {number} the price of the pizza
  */
 export function pizzaPrice(pizza, ...extras) {
-  throw new Error('Please implement the pizzaPrice function')
+  throw new Error('Please implement the pizzaPrice function');
 }
 
 /**
@@ -17,5 +24,5 @@ export function pizzaPrice(pizza, ...extras) {
  * @returns {number} the price of the total order
  */
 export function orderPrice(pizzaOrders) {
-  throw new Error('Please implement the orderPrice function')
+  throw new Error('Please implement the orderPrice function');
 }

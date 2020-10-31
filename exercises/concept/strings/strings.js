@@ -1,4 +1,8 @@
 // @ts-check
+//
+// The line above enables type checking for this file. Various IDEs interpret
+// the @ts-check directive. It will give you helpful autocompletion when 
+// implementing this exercise.
 
 /**
  * Respond with the correct character, given the blurb, if this were said at
@@ -8,7 +12,7 @@
  * @returns {string}
  */
 export function frontDoorResponse(blurb) {
-  throw new Error('Implement the frontDoorResponse function')
+  throw new Error('Implement the frontDoorResponse function');
 }
 
 /**
@@ -19,7 +23,7 @@ export function frontDoorResponse(blurb) {
  * @returns {string}
  */
 export function backDoorResponse(blurb) {
-  throw new Error('Implement the backDoorResponse function')
+  throw new Error('Implement the backDoorResponse function');
 }
 
 /**
@@ -30,7 +34,7 @@ export function backDoorResponse(blurb) {
  * @returns {string}
  */
 function capitalize(word) {
-  throw new Error('Implement the capitalize function')
+  throw new Error('Implement the capitalize function');
 }
 
 /**
@@ -40,7 +44,7 @@ function capitalize(word) {
  * @returns {string} the password
  */
 export function frontDoorPassword(responses) {
-  return capitalize(responses)
+  return capitalize(responses);
 }
 
 /**
@@ -50,5 +54,5 @@ export function frontDoorPassword(responses) {
  * @returns {string} the password
  */
 export function backDoorPassword(responses) {
-  return capitalize(responses)
+  return capitalize(responses);
 }
