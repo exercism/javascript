@@ -1,5 +1,5 @@
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
-const m = ALPHABET.length;
+const ALPHABET_LENGTH = ALPHABET.length;
 
 const areCoprimes = (a, b) => {
   for (let i = Math.min(a, b); i > 1; i--) {
@@ -28,7 +28,7 @@ const findMMI = (a) => {
   while (true) {
     i++;
 
-    if ((a * i - 1) % m === 0) {
+    if ((a * i - 1) % ALPHABET_LENGTH === 0) {
       return i;
     }
   }
@@ -55,7 +55,7 @@ const groupBy = (elements, groupLength) => {
 }
 
 export const encode = (phrase, { a, b }) => {
-  checkCoprime(a, m);
+  checkCoprime(a, ALPHABET_LENGTH);
 
   let encodedText = '';
 
@@ -66,7 +66,7 @@ export const encode = (phrase, { a, b }) => {
     .forEach(char => {
       if (ALPHABET.includes(char)) {
         const x = ALPHABET.indexOf(char);
-        const encodedIndex = (a * x + b) % m;
+        const encodedIndex = (a * x + b) % ALPHABET_LENGTH;
 
         encodedText += ALPHABET[encodedIndex];
       } else if (isNumber(char)) {
@@ -80,7 +80,7 @@ export const encode = (phrase, { a, b }) => {
 };
 
 export const decode = (phrase, { a, b }) => {
-  checkCoprime(a, m);
+  checkCoprime(a, ALPHABET_LENGTH);
 
   const mmi = findMMI(a);
 
@@ -93,7 +93,7 @@ export const decode = (phrase, { a, b }) => {
       }
 
       const y = ALPHABET.indexOf(char);
-      const decodedIndex = positiveModulo(mmi * (y - b), m);
+      const decodedIndex = positiveModulo(mmi * (y - b), ALPHABET_LENGTH);
 
       return ALPHABET[decodedIndex];
     })
