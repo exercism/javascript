@@ -4,4 +4,4 @@ export const encode = (phrase, key) => {
 
 export const decode = (phrase, key) => {
   throw new Error("Remove this statement and implement this function");
-}
+};
