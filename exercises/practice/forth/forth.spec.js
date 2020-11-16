@@ -253,6 +253,9 @@ describe('Forth', () => {
       expect(() => {
         forth.evaluate(': 1 2 ;');
       }).toThrow(new Error('Invalid definition'));
+      expect(() => {
+        forth.evaluate(': -1 2 ;');
+      }).toThrow(new Error('Invalid definition'));
     });
 
     xtest('errors if executing a non-existent word', () => {
