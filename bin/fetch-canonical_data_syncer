@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -eo pipefail
 
-readonly LATEST='https://api.github.com/repos/exercism/configlet/releases/latest'
+readonly LATEST='https://api.github.com/repos/exercism/canonical-data-syncer/releases/latest'
 
 case "$(uname)" in
     (Darwin*)   OS='mac'     ;;
@@ -32,7 +32,7 @@ else
     HEADER="authorization: Bearer ${GITHUB_TOKEN}"
 fi
 
-FILENAME="configlet-${OS}-${ARCH}.${EXT}"
+FILENAME="canonical_data_syncer-${OS}-${ARCH}.${EXT}"
 
 get_url () {
     curl --header "$HEADER" -s "$LATEST" |
@@ -44,9 +44,9 @@ URL=$(get_url)
 
 case "$EXT" in
     (*zip)
-        curl --header "$HEADER" -s --location "$URL" -o bin/latest-configlet.zip
-        unzip bin/latest-configlet.zip -d bin/
-        rm bin/latest-configlet.zip
+        curl --header "$HEADER" -s --location "$URL" -o bin/latest-canonical_data_syncer.zip
+        unzip bin/latest-canonical_data_syncer.zip -d bin/
+        rm bin/latest-canonical_data_syncer.zip
         ;;
     (*) curl --header "$HEADER" -s --location "$URL" | tar xz -C bin/ ;;
 esac
