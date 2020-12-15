@@ -1,6 +1,5 @@
 {
-  "name": "exercism-javascript",
-  "version": "2.1.0",
+  "name": "@exercism/javascript",
   "description": "Exercism exercises in Javascript.",
   "author": "Katrina Owen",
   "private": true,
@@ -9,18 +8,18 @@
     "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.12.3",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
     "@babel/plugin-syntax-bigint": "^7.8.3",
-    "@babel/preset-env": "^7.12.1",
-    "@types/jest": "^26.0.14",
-    "@types/node": "^14.11.10",
+    "@babel/preset-env": "^7.12.10",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.14",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.5.2",
-    "core-js": "^3.6",
-    "eslint": "^7.11.0",
+    "babel-jest": "^26.6.3",
+    "core-js": "^3.8.1",
+    "eslint": "^7.15.0",
     "eslint-plugin-import": "^2.22.1",
-    "jest": "^26.5.3"
+    "jest": "^26.6.3"
   },
   "jest": {
     "modulePathIgnorePatterns": [
@@ -30,9 +29,9 @@
   "scripts": {
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
-    "lint": "eslint .",
-    "lint-test": "eslint . && jest --no-cache ./* "
+    "lint": "eslint ."
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "version": "2.1.0"
 }
