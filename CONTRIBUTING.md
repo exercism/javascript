@@ -6,27 +6,29 @@ We welcome contributions of all sorts and sizes, from reporting issues to submit
 
 ---
 
-- [Code of Conduct](#code-of-conduct)
-- [Exercises](#exercises)
-  - [New exercise](#new-exercise)
-    - [Implementing existing exercise](#implementing-existing-exercise)
-    - [ Creating a track-specific exercise](#creating-a-track-specific-exercise)
-  - [Existing exercises](#existing-exercises)
-    - [Improving the README.md](#improving-the-readmemd)
-    - [Syncing the exercise](#syncing-the-exercise)
-    - [Improving or adding mentor notes](#improving-or-adding-mentor-notes)
-    - [Improving or adding automated test analyzers](#improving-or-adding-automated-test-analyzers)
-- [Documentation](#documentation)
-- [Tools](#tools)
-  - [Fetch `configlet`](#fetch-configlet)
-  - [Fetch `canonical_data_syncer`](#fetch-canonical-data-syncer)
-  - [Scripts](#scripts)
-    - [`lint`](#lint)
-    - [`test`](#test)
-    - [`sync`](#sync)
-    - [`checksum`](#checksum)
-    - [`ci-check`](#ci-check)
-    - [`ci`](#ci)
+- [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
+  - [Exercises](#exercises)
+    - [New exercise](#new-exercise)
+      - [Implementing existing exercise](#implementing-existing-exercise)
+      - [Creating a track-specific exercise](#creating-a-track-specific-exercise)
+    - [Existing exercises](#existing-exercises)
+      - [Improving the README.md](#improving-the-readmemd)
+      - [Syncing the exercise](#syncing-the-exercise)
+      - [Improving or adding mentor notes](#improving-or-adding-mentor-notes)
+      - [Improving or adding automated test analyzers](#improving-or-adding-automated-test-analyzers)
+  - [Documentation](#documentation)
+  - [Tools](#tools)
+    - [Fetch configlet](#fetch-configlet)
+    - [Fetch canonical data syncer](#fetch-canonical-data-syncer)
+    - [Scripts](#scripts)
+      - [`format`](#format)
+      - [`lint`](#lint)
+      - [`test`](#test)
+      - [`sync`](#sync)
+      - [`checksum`](#checksum)
+      - [`ci-check`](#ci-check)
+      - [`ci`](#ci)
 
 ---
 
@@ -70,6 +72,7 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug npx babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug npx babel-node scripts/lint`.
 1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
+1. Format the files, using `scripts/format`: `npx babel-node scripts/format`.
 
 The final step is opening a Pull Request, with these items all checked off. Make sure the tests run and the linter is happy. It will run automatically on your PR.
 
@@ -128,6 +131,8 @@ You'll need LTS or higher NodeJS in order to contribute to the _code_ in this re
 - `jest` to run all the test files on all example implementations
 - `babel` to transpile everything so it works _regardless of your version of NodeJS_.
 
+We also use `prettier` to format the files. **Prettier is _NOT_ installed when using `npm install`**, because the CI will enforce a certain version. Instead use `npx babel-node scripts/format` to run prettier. If you want to auto-format using your editor, match the version in the GitHub Workflow `verify-code-formatting.yml`.
+
 ### Fetch configlet
 
 If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet] binary. It will run on Linux, Mac OSX and Windows, and download `configlet` to your local drive. Find more information about [configlet][configlet] [here][configlet].
@@ -154,6 +159,19 @@ If you'd like to download [`canonical_data_syncer`][canonical-data-syncer], you 
 ### Scripts
 
 We have various `scripts` for you in order to aid with maintaining and contributing to this repository.
+
+#### `format`
+
+```js
+/*
+ * Run this script (from root directory): npx babel-node scripts/format
+ *
+ * This runs `prettier` on all applicable files, FORCES using the same version
+ * as the CI uses to check if the files have been formatted.
+ */
+```
+
+Use this action to format all the files using the correct version of prettier. If you want your editor to do this automatically, make sure you install `prettier` (e.g. `npm install prettier@2.2.1`), where the version matches `.github/workflows/verify-code-formatting.yml`.
 
 #### `lint`
 

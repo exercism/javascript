@@ -1,10 +1,43 @@
 #!/usr/bin/env node
 
+/*
+ * Run this script (from root directory): npx babel-node scripts/format
+ *
+ * This runs `prettier` on all applicable files, FORCES using the same version
+ * as the CI uses to check if the files have been formatted.
+ */
+
 const shell = require('shelljs');
 const path = require('path');
 const { basename } = require('path');
 
 const basedir = path.resolve(basename(__dirname), '..');
+const workflow = path.join(
+  basedir,
+  '.github',
+  'workflows',
+  'verify-code-formatting.yml'
+);
 
-const command = path.join(basedir, 'bin', 'format.sh');
-shell.exec(command);
+const versionLine = shell
+  .cat(workflow)
+  .stdout.split('\n')
+  .map((line) => line.trim())
+  .find((line) => line.startsWith('EXERCISM_PRETTIER_VERSION:'));
+
+if (!versionLine) {
+  shell.echo('[format] Expected workflow to contain EXERCISM_PRETTIER_VERSION');
+  shell.echo(`[format] Path: ${workflow}`);
+  shell.exit(-1);
+}
+
+const EXERCISM_PRETTIER_VERSION = versionLine
+  .split(':')[1]
+  .trim()
+  .replace(/'/g, '');
+
+const command = `npx "prettier@${EXERCISM_PRETTIER_VERSION}" --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"`;
+shell.echo(`[format] ${command}`);
+
+const result = shell.exec(command);
+shell.echo(`[format] ${result}`);
