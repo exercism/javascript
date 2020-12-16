@@ -27,7 +27,10 @@ const letterScores = {
   z: 10,
 };
 
-const letterScore = letter => letterScores[letter] || 0;
+const letterScore = (letter) => letterScores[letter] || 0;
 
-export const score = word => [...word.toLowerCase()]
-  .reduce((sum, currChar) => sum + letterScore(currChar), 0);
+export const score = (word) =>
+  [...word.toLowerCase()].reduce(
+    (sum, currChar) => sum + letterScore(currChar),
+    0
+  );

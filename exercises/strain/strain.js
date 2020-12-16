@@ -4,9 +4,9 @@
 //
 
 export const keep = () => {
-  throw new Error("Remove this statement and implement this function");
+  throw new Error('Remove this statement and implement this function');
 };
 
 export const discard = () => {
-  throw new Error("Remove this statement and implement this function");
+  throw new Error('Remove this statement and implement this function');
 };

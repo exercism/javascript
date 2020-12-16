@@ -6,7 +6,7 @@ describe('Proverb Test Suite', () => {
 
     expect(result).toEqual(
       `For want of a nail the shoe was lost.
-And all for the want of a nail.`,
+And all for the want of a nail.`
     );
   });
 
@@ -16,7 +16,7 @@ And all for the want of a nail.`,
     expect(result).toEqual(
       `For want of a nail the shoe was lost.
 For want of a shoe the horse was lost.
-And all for the want of a nail.`,
+And all for the want of a nail.`
     );
   });
 
@@ -26,7 +26,7 @@ And all for the want of a nail.`,
       `For want of a nail the shoe was lost.
 For want of a shoe the horse was lost.
 For want of a horse the rider was lost.
-And all for the want of a nail.`,
+And all for the want of a nail.`
     );
   });
 
@@ -35,13 +35,20 @@ And all for the want of a nail.`,
 
     expect(result).toEqual(
       `For want of a key the value was lost.
-And all for the want of a key.`,
+And all for the want of a key.`
     );
   });
 
   xtest('the whole proveb', () => {
-    const result = proverb('nail', 'shoe', 'horse', 'rider',
-      'message', 'battle', 'kingdom');
+    const result = proverb(
+      'nail',
+      'shoe',
+      'horse',
+      'rider',
+      'message',
+      'battle',
+      'kingdom'
+    );
 
     expect(result).toEqual(
       `For want of a nail the shoe was lost.
@@ -50,7 +57,7 @@ For want of a horse the rider was lost.
 For want of a rider the message was lost.
 For want of a message the battle was lost.
 For want of a battle the kingdom was lost.
-And all for the want of a nail.`,
+And all for the want of a nail.`
     );
   });
 
@@ -59,9 +66,16 @@ And all for the want of a nail.`,
   });
 
   xtest('the use of an optional qualifier in the final consequence', () => {
-    const result = proverb('nail', 'shoe', 'horse', 'rider',
-      'message', 'battle', 'kingdom',
-      { qualifier: 'horseshoe' });
+    const result = proverb(
+      'nail',
+      'shoe',
+      'horse',
+      'rider',
+      'message',
+      'battle',
+      'kingdom',
+      { qualifier: 'horseshoe' }
+    );
 
     expect(result).toEqual(
       `For want of a nail the shoe was lost.
@@ -70,7 +84,7 @@ For want of a horse the rider was lost.
 For want of a rider the message was lost.
 For want of a message the battle was lost.
 For want of a battle the kingdom was lost.
-And all for the want of a horseshoe nail.`,
+And all for the want of a horseshoe nail.`
     );
   });
 });

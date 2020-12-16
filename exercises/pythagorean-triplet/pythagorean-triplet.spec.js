@@ -19,19 +19,19 @@ describe('Triplet', () => {
 
   xtest('can make triplets up to 10', () => {
     const triplets = Triplet.where({ maxFactor: 10 });
-    const products = triplets.sort().map(triplet => triplet.product());
+    const products = triplets.sort().map((triplet) => triplet.product());
     expect(products).toEqual([60, 480]);
   });
 
   xtest('can make triplets 11 through 20', () => {
     const triplets = Triplet.where({ minFactor: 11, maxFactor: 20 });
-    const products = triplets.sort().map(triplet => triplet.product());
+    const products = triplets.sort().map((triplet) => triplet.product());
     expect(products).toEqual([3840]);
   });
 
   xtest('can filter on sum', () => {
     const triplets = Triplet.where({ sum: 180, maxFactor: 100 });
-    const products = triplets.sort().map(triplet => triplet.product());
+    const products = triplets.sort().map((triplet) => triplet.product());
     expect(products).toEqual([118080, 168480, 202500]);
   });
 });

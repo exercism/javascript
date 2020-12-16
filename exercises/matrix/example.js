@@ -12,7 +12,9 @@ function columnsFromRows(rows) {
 }
 
 function parseRows(description) {
-  return description.split('\n').map(row => row.split(' ').map(char => Number(char)));
+  return description
+    .split('\n')
+    .map((row) => row.split(' ').map((char) => Number(char)));
 }
 
 export class Matrix {

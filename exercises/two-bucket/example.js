@@ -39,7 +39,7 @@ export class TwoBucket {
       } else if (j === this.x) {
         j = 0;
       } else if (k > this.x && (j !== 0 || k > this.x) && bool) {
-        k -= (this.x - j);
+        k -= this.x - j;
         j = this.x;
       } else if (k > this.x || j === 0) {
         j = k;

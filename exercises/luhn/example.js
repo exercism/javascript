@@ -1,10 +1,10 @@
-export const valid = number => {
+export const valid = (number) => {
   const trimmed = number.replace(/\s/g, '');
   const digits = [...trimmed];
 
   const sum = digits
     // convert to integers
-    .map(d => parseInt(d, 10))
+    .map((d) => parseInt(d, 10))
     // double the second digits, starting from right
     .map((d, i) => {
       if ((i + digits.length) % 2 === 0) {
@@ -13,7 +13,7 @@ export const valid = number => {
       return d;
     })
     // limit to digits less than 10
-    .map(d => {
+    .map((d) => {
       if (d > 9) {
         return d - 9;
       }

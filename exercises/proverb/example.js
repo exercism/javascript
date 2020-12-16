@@ -3,7 +3,8 @@ const lastArgIsOptions = (args) => {
   return typeof last === 'object';
 };
 
-const conclusion = (firstArg, qualifier = '') => `And all for the want of a ${qualifier}${firstArg}.`;
+const conclusion = (firstArg, qualifier = '') =>
+  `And all for the want of a ${qualifier}${firstArg}.`;
 
 export const proverb = (...args) => {
   let options = {};
@@ -12,9 +13,13 @@ export const proverb = (...args) => {
   }
 
   const allExceptLastArg = args.slice(0, -1);
-  const chainOfEvents = allExceptLastArg.map((arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`);
+  const chainOfEvents = allExceptLastArg.map(
+    (arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`
+  );
 
-  const qualifier = options.qualifier ? `${options.qualifier} ` : options.qualifier;
+  const qualifier = options.qualifier
+    ? `${options.qualifier} `
+    : options.qualifier;
   chainOfEvents.push(conclusion(args[0], qualifier));
 
   return chainOfEvents.join('\n');

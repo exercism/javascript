@@ -7,7 +7,7 @@ const encodeOne = (val) => {
   let left = val;
 
   while (left) {
-    const bits = left & DATA_BITS | CONT_BITS; // set continuation everywhere
+    const bits = (left & DATA_BITS) | CONT_BITS; // set continuation everywhere
     left = left >>> LENGTH;
     buf.push(bits);
   }
@@ -19,7 +19,7 @@ const decodeOne = (buf) => {
   let val = 0;
 
   for (let i = 0; i < buf.length; i++) {
-    val = val << LENGTH | buf[i] & DATA_BITS;
+    val = (val << LENGTH) | (buf[i] & DATA_BITS);
   }
   return val >>> 0; // convert to unsigned 32-bit
 };
@@ -31,7 +31,7 @@ export const encode = (data) => {
     buf = buf.concat(encodeOne(data[i]));
   }
   return buf;
-}
+};
 
 export const decode = (data) => {
   let start = 0;
@@ -47,4 +47,4 @@ export const decode = (data) => {
     throw new Error('Incomplete sequence');
   }
   return vals;
-}
+};

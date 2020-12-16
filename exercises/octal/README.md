@@ -4,7 +4,7 @@ Convert an octal number, represented as a string (e.g. '1735263'), to its
 decimal equivalent using first principles (i.e. no, you may not use built-in or
 external libraries to accomplish the conversion).
 
-Implement octal to decimal conversion.  Given an octal input
+Implement octal to decimal conversion. Given an octal input
 string, your program should produce a decimal output.
 
 ## Note
@@ -23,7 +23,7 @@ as a linear combination of powers of 10:
 - The rightmost digit gets multiplied by 10^0 = 1
 - The next number gets multiplied by 10^1 = 10
 - ...
-- The *n*th number gets multiplied by 10^*(n-1)*.
+- The *n*th number gets multiplied by 10^_(n-1)_.
 - All these values are summed.
 
 So:
@@ -76,7 +76,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -93,4 +92,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 All of Computer Science [http://www.wolframalpha.com/input/?i=base+8](http://www.wolframalpha.com/input/?i=base+8)
-

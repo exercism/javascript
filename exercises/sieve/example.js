@@ -30,4 +30,4 @@ function sieve(n) {
   return primes;
 }
 
-export const primes = n => sieve(n);
+export const primes = (n) => sieve(n);

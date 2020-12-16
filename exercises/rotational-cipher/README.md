@@ -24,8 +24,8 @@ Ciphertext is written out in the same formatting as the input including spaces a
 
 ## Examples
 
-- ROT5  `omg` gives `trl`
-- ROT0  `c` gives `c`
+- ROT5 `omg` gives `trl`
+- ROT0 `c` gives `c`
 - ROT26 `Cool` gives `Cool`
 - ROT13 `The quick brown fox jumps over the lazy dog.` gives `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.`
 - ROT13 `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.` gives `The quick brown fox jumps over the lazy dog.`
@@ -60,7 +60,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -77,4 +76,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Wikipedia [https://en.wikipedia.org/wiki/Caesar_cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
-

@@ -1,4 +1,4 @@
-export const clean = number => {
+export const clean = (number) => {
   if (/[a-zA-Z]/.test(number)) {
     throw new Error('Letters not permitted');
   } else if (/[@:!]/.test(number)) {

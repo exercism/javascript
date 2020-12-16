@@ -9,7 +9,7 @@ export class List {
   constructor(arr) {
     this.head = null;
     if (arr) {
-      arr.forEach(el => this.add(new Element(el)));
+      arr.forEach((el) => this.add(new Element(el)));
     }
   }
 

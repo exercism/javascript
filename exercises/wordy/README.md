@@ -49,15 +49,15 @@ left-to-right, _ignoring the typical order of operations._
 
 > What is 3 plus 2 multiplied by 3?
 
-15  (i.e. not 9)
+15 (i.e. not 9)
 
 ## Iteration 4 — Errors
 
 The parser should reject:
 
-* Unsupported operations ("What is 52 cubed?")
-* Non-math questions ("Who is the President of the United States")
-* Word problems with invalid syntax ("What is 1 plus plus 2?")
+- Unsupported operations ("What is 52 cubed?")
+- Non-math questions ("Who is the President of the United States")
+- Word problems with invalid syntax ("What is 1 plus plus 2?")
 
 ## Bonus — Exponentials
 
@@ -97,7 +97,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -114,4 +113,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Inspired by one of the generated questions in the Extreme Startup game. [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
-

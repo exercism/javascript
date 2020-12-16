@@ -4,7 +4,7 @@ Creating a zipper for a binary tree.
 
 [Zippers](https://en.wikipedia.org/wiki/Zipper_%28data_structure%29) are
 a purely functional way of navigating within a data structure and
-manipulating it.  They essentially contain a data structure and a
+manipulating it. They essentially contain a data structure and a
 pointer into that data structure (called the focus).
 
 For example given a rose tree (where each node contains a value and a
@@ -57,7 +57,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -70,4 +69,3 @@ exercism submit zipper.js
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
-

@@ -20,10 +20,9 @@ function adjacentSquareHasMine(board, x, y, d) {
 }
 
 function countAdjacentMines(board, x, y) {
-  return DELTAS
-    .filter(d => adjacentSquareIsOnBoard(board, x, d))
-    .filter(d => adjacentSquareHasMine(board, x, y, d))
-    .length;
+  return DELTAS.filter((d) =>
+    adjacentSquareIsOnBoard(board, x, d)
+  ).filter((d) => adjacentSquareHasMine(board, x, y, d)).length;
 }
 
 function cellToMineOrCount(cell, inputBoard, x, y) {
@@ -35,7 +34,7 @@ function cellToMineOrCount(cell, inputBoard, x, y) {
 }
 
 function stringify(board) {
-  return board.map(row => row.join(''));
+  return board.map((row) => row.join(''));
 }
 
 function noDataPresent(rows) {
@@ -47,11 +46,11 @@ export function annotate(rows) {
     return rows;
   }
 
-  const inputBoard = rows.map(row => [...row]);
+  const inputBoard = rows.map((row) => [...row]);
 
   return stringify(
-    inputBoard.map(
-      (row, x) => [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y)),
-    ),
+    inputBoard.map((row, x) =>
+      [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y))
+    )
   );
 }

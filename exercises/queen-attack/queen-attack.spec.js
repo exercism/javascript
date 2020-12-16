@@ -22,28 +22,32 @@ describe('Queens', () => {
   xtest('toString representation', () => {
     const positioning = { white: [2, 4], black: [6, 6] };
     const queens = new QueenAttack(positioning);
-    const board = ['_ _ _ _ _ _ _ _',
+    const board = [
+      '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ W _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ B _',
-      '_ _ _ _ _ _ _ _\n'].join('\n');
+      '_ _ _ _ _ _ _ _\n',
+    ].join('\n');
     expect(queens.toString()).toEqual(board);
   });
 
   xtest('toString representation edge case', () => {
     const positioning = { white: [7, 7], black: [0, 0] };
     const queens = new QueenAttack(positioning);
-    const board = ['B _ _ _ _ _ _ _',
+    const board = [
+      'B _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
       '_ _ _ _ _ _ _ _',
-      '_ _ _ _ _ _ _ W\n'].join('\n');
+      '_ _ _ _ _ _ _ W\n',
+    ].join('\n');
     expect(queens.toString()).toEqual(board);
   });
 

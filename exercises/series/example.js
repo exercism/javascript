@@ -5,7 +5,7 @@ export class Series {
   }
 
   getDigits() {
-    return [...this.numberString].map(digit => parseInt(digit, 10));
+    return [...this.numberString].map((digit) => parseInt(digit, 10));
   }
 
   slices(sliceSize) {

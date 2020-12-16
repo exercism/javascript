@@ -116,8 +116,12 @@ describe('Robot', () => {
   });
 
   xtest('series of instructions', () => {
-    expect(Robot.instructions('RAAL'))
-      .toEqual(['turnRight', 'advance', 'advance', 'turnLeft']);
+    expect(Robot.instructions('RAAL')).toEqual([
+      'turnRight',
+      'advance',
+      'advance',
+      'turnLeft',
+    ]);
   });
 
   xtest('instruct robot', () => {

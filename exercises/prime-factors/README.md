@@ -24,8 +24,8 @@ factors of 60: 2, 2, 3, and 5.
 
 You can check this yourself:
 
-- 2 * 2 * 3 * 5
-- = 4 * 15
+- 2 _ 2 _ 3 \* 5
+- = 4 \* 15
 - = 60
 - Success!
 
@@ -59,7 +59,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -76,4 +75,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
-

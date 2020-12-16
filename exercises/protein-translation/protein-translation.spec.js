@@ -18,7 +18,12 @@ describe('ProteinTranslation', () => {
   });
 
   xtest('Serine codons translate into protein', () => {
-    expect(translate('UCUUCCUCAUCG')).toEqual(['Serine', 'Serine', 'Serine', 'Serine']);
+    expect(translate('UCUUCCUCAUCG')).toEqual([
+      'Serine',
+      'Serine',
+      'Serine',
+      'Serine',
+    ]);
   });
 
   xtest('Tyrosine codons translate into protein', () => {
@@ -46,11 +51,19 @@ describe('ProteinTranslation', () => {
   });
 
   xtest('Small RNA strand', () => {
-    expect(translate('AUGUUUUCU')).toEqual(['Methionine', 'Phenylalanine', 'Serine']);
+    expect(translate('AUGUUUUCU')).toEqual([
+      'Methionine',
+      'Phenylalanine',
+      'Serine',
+    ]);
   });
 
   xtest('Stop codon ends translation', () => {
-    expect(translate('AUGUUUUCUUAAAUG')).toEqual(['Methionine', 'Phenylalanine', 'Serine']);
+    expect(translate('AUGUUUUCUUAAAUG')).toEqual([
+      'Methionine',
+      'Phenylalanine',
+      'Serine',
+    ]);
   });
 
   xtest('Invalid codon throws error', () => {

@@ -22,8 +22,8 @@ function constructBoard() {
 
 function placePieces(self) {
   const board = self.board;
-  board[(self.black[0] * W * 2) + (self.black[1] * 2)] = 'B';
-  board[(self.white[0] * W * 2) + (self.white[1] * 2)] = 'W';
+  board[self.black[0] * W * 2 + self.black[1] * 2] = 'B';
+  board[self.white[0] * W * 2 + self.white[1] * 2] = 'W';
 }
 
 export class QueenAttack {
@@ -41,7 +41,10 @@ export class QueenAttack {
       if (this.black[0] === this.white[0] || this.black[1] === this.white[1]) {
         return true;
       }
-      return Math.abs(this.black[0] - this.white[0]) === Math.abs(this.black[1] - this.white[1]);
+      return (
+        Math.abs(this.black[0] - this.white[0]) ===
+        Math.abs(this.black[1] - this.white[1])
+      );
     };
 
     this.toString = () => this.board.join('');

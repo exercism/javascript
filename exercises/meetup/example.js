@@ -5,14 +5,14 @@ const weekday = [
   'Wednesday',
   'Thursday',
   'Friday',
-  'Saturday'
+  'Saturday',
 ];
 
 const daysInMonth = (year, month) => {
   return new Date(year, month, 0).getDate();
 };
 
-const getDayOfWeekCount = dayOfWeek => {
+const getDayOfWeekCount = (dayOfWeek) => {
   return weekday.indexOf(dayOfWeek);
 };
 

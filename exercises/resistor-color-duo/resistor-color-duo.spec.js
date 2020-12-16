@@ -19,5 +19,5 @@ describe('Resistor Colors', () => {
 
   xtest('Ignore additional colors', () => {
     expect(decodedValue(['green', 'brown', 'orange'])).toEqual(51);
-  })
+  });
 });

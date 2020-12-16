@@ -1,4 +1,4 @@
-const isPrime = number => {
+const isPrime = (number) => {
   if (number === 2 || number === 3) {
     return true;
   }
@@ -13,7 +13,7 @@ const isPrime = number => {
   return true;
 };
 
-export const prime = ordinal => {
+export const prime = (ordinal) => {
   if (ordinal === 0) {
     throw new Error('there is no zeroth prime');
   }

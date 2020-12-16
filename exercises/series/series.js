@@ -5,14 +5,14 @@
 
 export class Series {
   constructor() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   get digits() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   slices() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 }

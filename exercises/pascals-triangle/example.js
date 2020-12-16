@@ -1,4 +1,4 @@
-export const rows = size => {
+export const rows = (size) => {
   if (size === 0) {
     return [];
   } else if (size === 1) {
@@ -7,7 +7,7 @@ export const rows = size => {
 
   let triangleRows = [[1]];
 
-  const getNextRow = row => {
+  const getNextRow = (row) => {
     let nextRow = [];
     nextRow.push(1);
     for (let i = 0; i <= row.length - 2; i++) {

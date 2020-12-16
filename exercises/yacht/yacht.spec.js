@@ -1,4 +1,4 @@
-import { score } from './yacht'
+import { score } from './yacht';
 
 describe('Yacht', () => {
   test('Yacht', () => {

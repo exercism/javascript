@@ -9,11 +9,10 @@ function generateKey() {
 const mod = (n, m) => ((n % m) + m) % m;
 
 function xCode(key, inText, sign) {
-  return [...inText]
-    .reduce((outText, letter, ii) => {
-      const offset = sign * ALPHA.indexOf(key[mod(ii, key.length)]);
-      return outText + ALPHA[mod(ALPHA.indexOf(letter) + offset, ALPHA.length)];
-    }, '');
+  return [...inText].reduce((outText, letter, ii) => {
+    const offset = sign * ALPHA.indexOf(key[mod(ii, key.length)]);
+    return outText + ALPHA[mod(ALPHA.indexOf(letter) + offset, ALPHA.length)];
+  }, '');
 }
 
 export class Cipher {

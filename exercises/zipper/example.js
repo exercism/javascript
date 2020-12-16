@@ -1,5 +1,5 @@
 function fromTrail(tree, last) {
-  if (last[0] === "left") {
+  if (last[0] === 'left') {
     return {
       value: last[1],
       left: tree,
@@ -43,7 +43,7 @@ export class Zipper {
 
     return new Zipper(
       this.tree.left,
-      [["left", this.tree.value, this.tree.right]].concat(this.trail)
+      [['left', this.tree.value, this.tree.right]].concat(this.trail)
     );
   }
 
@@ -52,7 +52,7 @@ export class Zipper {
 
     return new Zipper(
       this.tree.right,
-      [["right", this.tree.value, this.tree.left]].concat(this.trail)
+      [['right', this.tree.value, this.tree.left]].concat(this.trail)
     );
   }
 

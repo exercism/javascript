@@ -5,12 +5,11 @@ export const commands = (handshake) => {
     throw new Error('Handshake must be a number');
   }
 
-  const shakeWith = handshakeCommands.filter((_, i) => (
-    handshake & (Math.pow(2, i))
-  ));
+  const shakeWith = handshakeCommands.filter(
+    (_, i) => handshake & Math.pow(2, i)
+  );
 
-  if (handshake & (Math.pow(2, 4)))
-    shakeWith.reverse();
+  if (handshake & Math.pow(2, 4)) shakeWith.reverse();
 
   return shakeWith;
 };

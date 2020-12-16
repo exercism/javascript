@@ -1,9 +1,9 @@
-const getScoreForTheYachtCategory = dices => {
+const getScoreForTheYachtCategory = (dices) => {
   const isYacht = new Set(dices).size === 1;
   return isYacht ? 50 : 0;
 };
 
-const mapDicesToCounterArray = dices => {
+const mapDicesToCounterArray = (dices) => {
   let counterArray = [0, 0, 0, 0, 0, 0];
   for (let item of dices) {
     counterArray[item - 1]++;
@@ -12,14 +12,14 @@ const mapDicesToCounterArray = dices => {
 };
 
 const getNoOfAppearances = (dices, diceValue) => {
-  return dices.filter(value => value === diceValue).length;
+  return dices.filter((value) => value === diceValue).length;
 };
 
-const getSumOfDices = dices => {
+const getSumOfDices = (dices) => {
   return dices.reduce((a, b) => a + b, 0);
 };
 
-const getScoreForTheFourOfAKindCategory = dices => {
+const getScoreForTheFourOfAKindCategory = (dices) => {
   const counterArray = mapDicesToCounterArray(dices);
   for (let i = 0; i < counterArray.length; i++) {
     if (counterArray[i] >= 4) {
@@ -29,15 +29,25 @@ const getScoreForTheFourOfAKindCategory = dices => {
   return 0;
 };
 
-const getScoreForTheLittleStraightCategory = dices => {
+const getScoreForTheLittleStraightCategory = (dices) => {
   const counterArray = mapDicesToCounterArray(dices);
-  const isLittleStraight = arrayIsFilledWithValue(counterArray, 0, counterArray.length - 1, 1);
+  const isLittleStraight = arrayIsFilledWithValue(
+    counterArray,
+    0,
+    counterArray.length - 1,
+    1
+  );
   return isLittleStraight ? 30 : 0;
 };
 
-const getScoreForTheBigStraightCategory = dices => {
+const getScoreForTheBigStraightCategory = (dices) => {
   const counterArray = mapDicesToCounterArray(dices);
-  const isBigStraight = arrayIsFilledWithValue(counterArray, 1, counterArray.length, 1);
+  const isBigStraight = arrayIsFilledWithValue(
+    counterArray,
+    1,
+    counterArray.length,
+    1
+  );
   return isBigStraight ? 30 : 0;
 };
 
@@ -50,7 +60,7 @@ const arrayIsFilledWithValue = (array, startPos, endPos, value) => {
   return true;
 };
 
-const getScoreForTheFullHouseCategory = dices => {
+const getScoreForTheFullHouseCategory = (dices) => {
   const counterArray = mapDicesToCounterArray(dices);
   let hasTwoOfAKind = false;
   let hasThreeOfAKind = false;

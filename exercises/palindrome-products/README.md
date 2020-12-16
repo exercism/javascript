@@ -62,7 +62,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -79,4 +78,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Problem 4 at Project Euler [http://projecteuler.net/problem=4](http://projecteuler.net/problem=4)
-
