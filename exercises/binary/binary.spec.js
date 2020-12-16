@@ -23,14 +23,26 @@ describe('binary', () => {
   xtest('10001101000 is decimal 1128', () =>
     expect(new Binary('10001101000').toDecimal()).toEqual(1128));
 
-  xtest('00011111 is decimal 31', () =>
+  xtest('ignores leading zeros', () =>
     expect(new Binary('00011111').toDecimal()).toEqual(31));
 
-  xtest('invalid inputs are decimal 0', () => {
-    expect(new Binary('carrot').toDecimal()).toEqual(0);
-    expect(new Binary('012').toDecimal()).toEqual(0);
-    expect(new Binary('10nope').toDecimal()).toEqual(0);
-    expect(new Binary('nope10').toDecimal()).toEqual(0);
-    expect(new Binary('10nope10').toDecimal()).toEqual(0);
+  xtest('invalid inputs are null', () => {
+    // "2 is not a valid binary digit
+    expect(new Binary('2').toDecimal()).toEqual(null);
+
+    // a number containing a non-binary digit is invalid
+    expect(new Binary('01201').toDecimal()).toEqual(null);
+
+    // a number with trailing non-binary characters is invalid
+    expect(new Binary('10nope').toDecimal()).toEqual(null);
+
+    // a number with leading non-binary characters is invalid
+    expect(new Binary('nope10').toDecimal()).toEqual(null);
+
+    // a number with internal non-binary characters is invalid
+    expect(new Binary('10nope10').toDecimal()).toEqual(null);
+
+    // a number and a word whitespace separated is invalid
+    expect(new Binary('001nope').toDecimal()).toEqual(null);
   });
 });

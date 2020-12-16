@@ -108,28 +108,4 @@ describe('Converter', () => {
       convert([1], -2, -7);
     }).toThrow(new Error('Wrong input base'));
   });
-
-  xtest('missing input base throws an error', () => {
-    expect(() => {
-      convert([0]);
-    }).toThrow(new Error('Wrong input base'));
-  });
-
-  xtest('wrong input_base base not integer', () => {
-    expect(() => {
-      convert([0], 2.5);
-    }).toThrow(new Error('Wrong input base'));
-  });
-
-  xtest('missing output base throws an error', () => {
-    expect(() => {
-      convert([0], 2);
-    }).toThrow(new Error('Wrong output base'));
-  });
-
-  xtest('wrong output_base base not integer', () => {
-    expect(() => {
-      convert([0], 3, 2.5);
-    }).toThrow(new Error('Wrong output base'));
-  });
 });

@@ -7,6 +7,6 @@ export class Binary {
 
   toDecimal() {
     const out = Number(this.binary.toString(10));
-    return Number.isNaN(out) ? 0 : out;
+    return Number.isNaN(out) ? null : out;
   }
 }
