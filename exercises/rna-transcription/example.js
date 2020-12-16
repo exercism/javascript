@@ -5,4 +5,5 @@ const DNA_TO_RNA = {
   A: 'U',
 };
 
-export const toRna = (dna) => dna.replace(/./g, nucleotide => DNA_TO_RNA[nucleotide]);
+export const toRna = (dna) =>
+  dna.replace(/./g, (nucleotide) => DNA_TO_RNA[nucleotide]);

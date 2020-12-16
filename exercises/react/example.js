@@ -13,8 +13,8 @@ class InputCell {
   }
 
   notify() {
-    this.subscribers.forEach(sub => sub.markForUpdate());
-    this.subscribers.forEach(sub => sub.update());
+    this.subscribers.forEach((sub) => sub.markForUpdate());
+    this.subscribers.forEach((sub) => sub.update());
   }
 
   addSubscriber(sub) {
@@ -22,12 +22,11 @@ class InputCell {
   }
 }
 
-
 class ComputeCell {
   constructor(inputCells, fn) {
     this.fn = fn;
     this.inputCells = inputCells;
-    this.inputCells.forEach(cell => cell.addSubscriber(this));
+    this.inputCells.forEach((cell) => cell.addSubscriber(this));
     this.subscribers = [];
     this.value = fn(inputCells);
     this.callbacks = [];
@@ -45,27 +44,28 @@ class ComputeCell {
   }
 
   notify() {
-    this.subscribers.forEach(sub => sub.markForUpdate());
-    this.subscribers.forEach(sub => sub.update());
+    this.subscribers.forEach((sub) => sub.markForUpdate());
+    this.subscribers.forEach((sub) => sub.update());
     this.runCallbacks();
   }
 
   markForUpdate() {
     this.updated = false;
-    this.subscribers.forEach(sub => sub.markForUpdate());
+    this.subscribers.forEach((sub) => sub.markForUpdate());
   }
 
   runCallbacks() {
     if (this.allInputsUpdated() && this.valueChanged()) {
       this.lastValue = this.value;
-      this.callbacks.forEach(cb => cb.run(this));
+      this.callbacks.forEach((cb) => cb.run(this));
     }
   }
 
   allInputsUpdated() {
-    return this.inputCells
-      .filter(cell => cell.updated)
-      .length === this.inputCells.length;
+    return (
+      this.inputCells.filter((cell) => cell.updated).length ===
+      this.inputCells.length
+    );
   }
 
   valueChanged() {
@@ -81,10 +81,9 @@ class ComputeCell {
   }
 
   removeCallback(cb) {
-    this.callbacks = this.callbacks.filter(c => c !== cb);
+    this.callbacks = this.callbacks.filter((c) => c !== cb);
   }
 }
-
 
 class CallbackCell {
   constructor(fn) {
@@ -96,6 +95,5 @@ class CallbackCell {
     this.values.push(this.fn(cell));
   }
 }
-
 
 export { InputCell, ComputeCell, CallbackCell };

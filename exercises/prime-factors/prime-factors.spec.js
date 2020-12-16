@@ -1,7 +1,8 @@
 import { primeFactors } from './prime-factors';
 
 describe('primeFactors', () => {
-  test('returns an empty array for 1', () => expect(primeFactors(1)).toEqual([]));
+  test('returns an empty array for 1', () =>
+    expect(primeFactors(1)).toEqual([]));
 
   xtest('factors 2', () => expect(primeFactors(2)).toEqual([2]));
 
@@ -19,7 +20,9 @@ describe('primeFactors', () => {
 
   xtest('factors 625', () => expect(primeFactors(625)).toEqual([5, 5, 5, 5]));
 
-  xtest('factors 901255', () => expect(primeFactors(901255)).toEqual([5, 17, 23, 461]));
+  xtest('factors 901255', () =>
+    expect(primeFactors(901255)).toEqual([5, 17, 23, 461]));
 
-  xtest('factors 93819012551', () => expect(primeFactors(93819012551)).toEqual([11, 9539, 894119]));
+  xtest('factors 93819012551', () =>
+    expect(primeFactors(93819012551)).toEqual([11, 9539, 894119]));
 });

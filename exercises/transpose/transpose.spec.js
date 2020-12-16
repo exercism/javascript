@@ -25,19 +25,66 @@ describe('Transpose', () => {
 
   xtest('single line', () => {
     const input = ['Single line.'];
-    const expected = ['S', 'i', 'n', 'g', 'l', 'e', ' ', 'l', 'i', 'n', 'e', '.'];
+    const expected = [
+      'S',
+      'i',
+      'n',
+      'g',
+      'l',
+      'e',
+      ' ',
+      'l',
+      'i',
+      'n',
+      'e',
+      '.',
+    ];
     expect(transpose(input)).toEqual(expected);
   });
 
   xtest('first line longer than second line', () => {
     const input = ['The fourth line.', 'The fifth line.'];
-    const expected = ['TT', 'hh', 'ee', '  ', 'ff', 'oi', 'uf', 'rt', 'th', 'h ', ' l', 'li', 'in', 'ne', 'e.', '.'];
+    const expected = [
+      'TT',
+      'hh',
+      'ee',
+      '  ',
+      'ff',
+      'oi',
+      'uf',
+      'rt',
+      'th',
+      'h ',
+      ' l',
+      'li',
+      'in',
+      'ne',
+      'e.',
+      '.',
+    ];
     expect(transpose(input)).toEqual(expected);
   });
 
   xtest('second line longer than first line', () => {
     const input = ['The first line.', 'The second line.'];
-    const expected = ['TT', 'hh', 'ee', '  ', 'fs', 'ie', 'rc', 'so', 'tn', ' d', 'l ', 'il', 'ni', 'en', '.e', ' .'];
+    const expected = [
+      'TT',
+      'hh',
+      'ee',
+      '  ',
+      'fs',
+      'ie',
+      'rc',
+      'so',
+      'tn',
+      ' d',
+      'l ',
+      'il',
+      'ni',
+      'en',
+      '.e',
+      ' .',
+    ];
     expect(transpose(input)).toEqual(expected);
   });
 
@@ -49,18 +96,49 @@ describe('Transpose', () => {
 
   xtest('rectangle', () => {
     const input = ['FRACTURE', 'OUTLINED', 'BLOOMING', 'SEPTETTE'];
-    const expected = ['FOBS', 'RULE', 'ATOP', 'CLOT', 'TIME', 'UNIT', 'RENT', 'EDGE'];
+    const expected = [
+      'FOBS',
+      'RULE',
+      'ATOP',
+      'CLOT',
+      'TIME',
+      'UNIT',
+      'RENT',
+      'EDGE',
+    ];
     expect(transpose(input)).toEqual(expected);
   });
 
   xtest('triangle', () => {
     const input = ['T', 'EE', 'AAA', 'SSSS', 'EEEEE', 'RRRRRR'];
-    const expected = ['TEASER', ' EASER', '  ASER', '   SER', '    ER', '     R'];
+    const expected = [
+      'TEASER',
+      ' EASER',
+      '  ASER',
+      '   SER',
+      '    ER',
+      '     R',
+    ];
     expect(transpose(input)).toEqual(expected);
   });
 
   xtest('many lines', () => {
-    const input = ['Chor. Two households, both alike in dignity,', 'In fair Verona, where we lay our scene,', 'From ancient grudge break to new mutiny,', 'Where civil blood makes civil hands unclean.', 'From forth the fatal loins of these two foes', 'A pair of star-cross\'d lovers take their life;', 'Whose misadventur\'d piteous overthrows', 'Doth with their death bury their parents\' strife.', 'The fearful passage of their death-mark\'d love,', 'And the continuance of their parents\' rage,', 'Which, but their children\'s end, naught could remove,', 'Is now the two hours\' traffic of our stage;', 'The which if you with patient ears attend,', 'What here shall miss, our toil shall strive to mend.'];
+    const input = [
+      'Chor. Two households, both alike in dignity,',
+      'In fair Verona, where we lay our scene,',
+      'From ancient grudge break to new mutiny,',
+      'Where civil blood makes civil hands unclean.',
+      'From forth the fatal loins of these two foes',
+      "A pair of star-cross'd lovers take their life;",
+      "Whose misadventur'd piteous overthrows",
+      "Doth with their death bury their parents' strife.",
+      "The fearful passage of their death-mark'd love,",
+      "And the continuance of their parents' rage,",
+      "Which, but their children's end, naught could remove,",
+      "Is now the two hours' traffic of our stage;",
+      'The which if you with patient ears attend,',
+      'What here shall miss, our toil shall strive to mend.',
+    ];
     const expected = [
       'CIFWFAWDTAWITW',
       'hnrhr hohnhshh',
@@ -79,15 +157,15 @@ describe('Transpose', () => {
       'e,ro -trsui ol',
       'h uofcu sarhu ',
       'owddarrdan o m',
-      'lhg to\'egccuwi',
+      "lhg to'egccuwi",
       'deemasdaeehris',
       'sr als t  ists',
-      ',ebk \'phool\'h,',
+      ",ebk 'phool'h,",
       '  reldi ffd   ',
       'bweso tb  rtpo',
       'oea ileutterau',
       't kcnoorhhnatr',
-      'hl isvuyee\'fi ',
+      "hl isvuyee'fi ",
       ' atv es iisfet',
       'ayoior trr ino',
       'l  lfsoh  ecti',
@@ -98,11 +176,11 @@ describe('Transpose', () => {
       'ismdsehphnnosa',
       'ncuse ra-tau l',
       ' et  tormsural',
-      'dniuthwea\'g t ',
+      "dniuthwea'g t ",
       'iennwesnr hsts',
       'g,ycoi tkrttet',
-      'n ,l r s\'a anr',
-      'i  ef  \'dgcgdi',
+      "n ,l r s'a anr",
+      "i  ef  'dgcgdi",
       't  aol   eoe,v',
       'y  nei sl,u; e',
       ',  .sf to l   ',

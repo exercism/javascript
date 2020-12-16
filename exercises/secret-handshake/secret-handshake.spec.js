@@ -39,7 +39,7 @@ describe('Secret Handshake', () => {
         'wink',
         'double blink',
         'close your eyes',
-        'jump'
+        'jump',
       ]);
     });
 
@@ -48,7 +48,7 @@ describe('Secret Handshake', () => {
         'jump',
         'close your eyes',
         'double blink',
-        'wink'
+        'wink',
       ]);
     });
 

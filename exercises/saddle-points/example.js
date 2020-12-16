@@ -1,4 +1,4 @@
-export const saddlePoints = matrix => {
+export const saddlePoints = (matrix) => {
   const maximumRowValues = [];
   const minimumColumnValues = [];
 

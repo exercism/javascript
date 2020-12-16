@@ -1,4 +1,4 @@
-import { toRna } from './rna-transcription'
+import { toRna } from './rna-transcription';
 
 describe('Transcription', () => {
   test('empty rna sequence', () => {
@@ -24,4 +24,4 @@ describe('Transcription', () => {
   xtest('transcribes all dna nucleotides to their rna complements', () => {
     expect(toRna('ACGTGGTCTTAA')).toEqual('UGCACCAGAAUU');
   });
-})
+});

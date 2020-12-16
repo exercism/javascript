@@ -9,8 +9,7 @@ Numbers.
 
 The task is to check if a given string is valid.
 
-Validating a Number
-------
+## Validating a Number
 
 Strings of length 1 or less are not valid. Spaces are allowed in the input,
 but they should be stripped before checking. All other non-digit characters
@@ -94,7 +93,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -111,4 +109,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 The Luhn Algorithm on Wikipedia [http://en.wikipedia.org/wiki/Luhn_algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm)
-

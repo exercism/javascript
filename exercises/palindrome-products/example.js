@@ -1,4 +1,4 @@
-const reverseString = str => str.split('').reverse().join('');
+const reverseString = (str) => str.split('').reverse().join('');
 
 class Palindrome {
   constructor(factor1, factor2) {
@@ -18,7 +18,7 @@ class Palindrome {
   }
 
   merge(other) {
-    other.factors.forEach(f => this.factors.push(f));
+    other.factors.forEach((f) => this.factors.push(f));
     this.factors = this.factors.sort();
     return this;
   }

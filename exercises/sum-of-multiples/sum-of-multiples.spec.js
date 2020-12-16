@@ -65,4 +65,3 @@ describe('Sum Of Multiples', () => {
     expect(sum([2, 3, 5, 7, 11], 10000)).toEqual(39614537);
   });
 });
-

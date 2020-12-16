@@ -1,13 +1,13 @@
-
 export const encode = (plainText) => {
   const consecutiveChars = /([\w\s])\1*/g;
-  return plainText.replace(consecutiveChars,
-    match => (match.length > 1 ? match.length + match[0] : match[0]));
+  return plainText.replace(consecutiveChars, (match) =>
+    match.length > 1 ? match.length + match[0] : match[0]
+  );
 };
-
 
 export const decode = (encodedText) => {
   const countAndChar = /(\d+)(\w|\s)/g;
-  return encodedText.replace(countAndChar,
-    (match, repeats, char) => new Array(+repeats + 1).join(char));
+  return encodedText.replace(countAndChar, (match, repeats, char) =>
+    new Array(+repeats + 1).join(char)
+  );
 };

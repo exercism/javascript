@@ -1,6 +1,5 @@
 import WordSearch from './word-search';
 
-
 describe('single line grids', () => {
   test('Should accept an initial game grid', () => {
     const grid = ['jefblpepre'];
@@ -70,10 +69,7 @@ describe('single line grids', () => {
 
 describe('multi line grids', () => {
   xtest('can locate a left to right word in a two line grid', () => {
-    const grid = [
-      'jefblpepre',
-      'clojurermt',
-    ];
+    const grid = ['jefblpepre', 'clojurermt'];
 
     const expectedResults = {
       clojure: {
@@ -87,10 +83,7 @@ describe('multi line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
   xtest('can locate a left to right word in a different position in a two line grid', () => {
-    const grid = [
-      'jefblpepre',
-      'tclojurerm',
-    ];
+    const grid = ['jefblpepre', 'tclojurerm'];
     const expectedResults = {
       clojure: {
         start: [2, 2],
@@ -102,11 +95,7 @@ describe('multi line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
   xtest('can locate a left to right word in a three line grid', () => {
-    const grid = [
-      'camdcimgtc',
-      'jefblpepre',
-      'clojurermt',
-    ];
+    const grid = ['camdcimgtc', 'jefblpepre', 'clojurermt'];
     const expectedResults = {
       clojure: {
         start: [3, 1],
@@ -191,7 +180,6 @@ describe('multi line grids', () => {
     expect(wordSearch.find(['scree'])).toEqual(expectedResults);
   });
 });
-
 
 describe('can find multiple words', () => {
   xtest('can find two words written left to right', () => {
@@ -296,7 +284,9 @@ describe('vertical directions', () => {
     };
     const wordSearch = new WordSearch(grid);
 
-    expect(wordSearch.find(['elixir', 'clojure', 'ecmascript'])).toEqual(expectedResults);
+    expect(wordSearch.find(['elixir', 'clojure', 'ecmascript'])).toEqual(
+      expectedResults
+    );
   });
   xtest('should locate words written bottom to top', () => {
     const grid = [
@@ -331,7 +321,9 @@ describe('vertical directions', () => {
     };
     const wordSearch = new WordSearch(grid);
 
-    expect(wordSearch.find(['elixir', 'clojure', 'ecmascript', 'rust'])).toEqual(expectedResults);
+    expect(
+      wordSearch.find(['elixir', 'clojure', 'ecmascript', 'rust'])
+    ).toEqual(expectedResults);
   });
   xtest('should locate words written top left to bottom right', () => {
     const grid = [
@@ -370,13 +362,9 @@ describe('vertical directions', () => {
     };
     const wordSearch = new WordSearch(grid);
 
-    expect(wordSearch.find([
-      'clojure',
-      'elixir',
-      'ecmascript',
-      'rust',
-      'java',
-    ])).toEqual(expectedResults);
+    expect(
+      wordSearch.find(['clojure', 'elixir', 'ecmascript', 'rust', 'java'])
+    ).toEqual(expectedResults);
   });
   xtest('should locate words written bottom right to top left', () => {
     const grid = [
@@ -420,14 +408,16 @@ describe('vertical directions', () => {
     };
     const wordSearch = new WordSearch(grid);
 
-    expect(wordSearch.find([
-      'clojure',
-      'elixir',
-      'ecmascript',
-      'rust',
-      'java',
-      'lua',
-    ])).toEqual(expectedResults);
+    expect(
+      wordSearch.find([
+        'clojure',
+        'elixir',
+        'ecmascript',
+        'rust',
+        'java',
+        'lua',
+      ])
+    ).toEqual(expectedResults);
   });
   xtest('should locate words written bottom left to top right', () => {
     const grid = [
@@ -475,15 +465,17 @@ describe('vertical directions', () => {
 
     const wordSearch = new WordSearch(grid);
 
-    expect(wordSearch.find([
-      'clojure',
-      'elixir',
-      'ecmascript',
-      'rust',
-      'java',
-      'lua',
-      'lisp',
-    ])).toEqual(expectedResults);
+    expect(
+      wordSearch.find([
+        'clojure',
+        'elixir',
+        'ecmascript',
+        'rust',
+        'java',
+        'lua',
+        'lisp',
+      ])
+    ).toEqual(expectedResults);
   });
   xtest('should locate words written top right to bottom left', () => {
     const grid = [
@@ -535,15 +527,17 @@ describe('vertical directions', () => {
     };
     const wordSearch = new WordSearch(grid);
 
-    expect(wordSearch.find([
-      'clojure',
-      'elixir',
-      'ecmascript',
-      'rust',
-      'java',
-      'lua',
-      'lisp',
-      'ruby',
-    ])).toEqual(expectedResults);
+    expect(
+      wordSearch.find([
+        'clojure',
+        'elixir',
+        'ecmascript',
+        'rust',
+        'java',
+        'lua',
+        'lisp',
+        'ruby',
+      ])
+    ).toEqual(expectedResults);
   });
 });

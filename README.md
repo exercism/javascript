@@ -16,7 +16,7 @@ contribute to this track. It also has a list of tools you can use, of which the
 
 ## Running the test suite
 
-This runs `jest` tests for all sample solutions. This *does not* use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
+This runs `jest` tests for all sample solutions. This _does not_ use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
 ```shell
 npx babel-node scripts/test
@@ -36,18 +36,17 @@ ASSIGNMENT=two-fer npx babel-node scripts/test
 
 ## Related repositories
 
-* [Website Copy][git-website-copy] (Mentor Notes)
-* [The JavaScript Analyzer][git-javascript-analyzer] (Automated Code Analysis)
-* [The JavaScript Test Runner][git-javascript-test-runner]
-* [The TypeScript track][git-typescript]
-* [The TypeScript Analyzer][git-typescript-analyzer]
+- [Website Copy][git-website-copy] (Mentor Notes)
+- [The JavaScript Analyzer][git-javascript-analyzer] (Automated Code Analysis)
+- [The JavaScript Test Runner][git-javascript-test-runner]
+- [The TypeScript track][git-typescript]
+- [The TypeScript Analyzer][git-typescript-analyzer]
 
 [web-exercism]: https://exercism.io
 [git-configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
 [file-config]: https://github.com/exercism/javascript/blob/master/config.json
 [file-contributing]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
-
 [git-javascript]: https://github.com/exercism/javascript
 [git-javascript-analyzer]: https://github.com/exercism/javascript-analyzer
 [git-javascript-test-runner]: https://github.com/exercism/javascript-test-runner

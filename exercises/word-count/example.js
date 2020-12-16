@@ -1,11 +1,11 @@
-export const countWords = phrase => {
+export const countWords = (phrase) => {
   let map = {};
   phrase
     .trim()
     .toLowerCase()
     .split(/[ ,\n]+/g)
-    .forEach(element => {
-      element = element.replace(/[.,!:"&@$%^]|^'|'$/g, "");
+    .forEach((element) => {
+      element = element.replace(/[.,!:"&@$%^]|^'|'$/g, '');
       if (element) {
         if (Object.prototype.hasOwnProperty.call(map, element)) {
           map[element]++;

@@ -21,5 +21,3 @@ describe('nth-prime', () => {
     expect(() => prime(0)).toThrow(new Error('there is no zeroth prime'));
   });
 });
-
-

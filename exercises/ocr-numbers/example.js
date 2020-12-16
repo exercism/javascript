@@ -1,44 +1,14 @@
 const PATTERNS = {
-  0: [' _ ',
-    '| |',
-    '|_|',
-    '   '],
-  1: ['   ',
-    '  |',
-    '  |',
-    '   '],
-  2: [' _ ',
-    ' _|',
-    '|_ ',
-    '   '],
-  3: [' _ ',
-    ' _|',
-    ' _|',
-    '   '],
-  4: ['   ',
-    '|_|',
-    '  |',
-    '   '],
-  5: [' _ ',
-    '|_ ',
-    ' _|',
-    '   '],
-  6: [' _ ',
-    '|_ ',
-    '|_|',
-    '   '],
-  7: [' _ ',
-    '  |',
-    '  |',
-    '   '],
-  8: [' _ ',
-    '|_|',
-    '|_|',
-    '   '],
-  9: [' _ ',
-    '|_|',
-    ' _|',
-    '   '],
+  0: [' _ ', '| |', '|_|', '   '],
+  1: ['   ', '  |', '  |', '   '],
+  2: [' _ ', ' _|', '|_ ', '   '],
+  3: [' _ ', ' _|', ' _|', '   '],
+  4: ['   ', '|_|', '  |', '   '],
+  5: [' _ ', '|_ ', ' _|', '   '],
+  6: [' _ ', '|_ ', '|_|', '   '],
+  7: [' _ ', '  |', '  |', '   '],
+  8: [' _ ', '|_|', '|_|', '   '],
+  9: [' _ ', '|_|', ' _|', '   '],
 };
 
 const splitIntoRows = (text) => {
@@ -68,9 +38,8 @@ const splitIntoDigits = (row) => {
 };
 
 const getDigit = (text) => {
-  const digit = Object
-    .values(PATTERNS)
-    .map(x => x.join(''))
+  const digit = Object.values(PATTERNS)
+    .map((x) => x.join(''))
     .indexOf(text);
   if (digit === -1) {
     return '?';
@@ -78,6 +47,6 @@ const getDigit = (text) => {
   return digit;
 };
 
-const valuesInRow = row => splitIntoDigits(row).map(getDigit).join('');
+const valuesInRow = (row) => splitIntoDigits(row).map(getDigit).join('');
 
-export const convert = text => splitIntoRows(text).map(valuesInRow).join(',');
+export const convert = (text) => splitIntoRows(text).map(valuesInRow).join(',');

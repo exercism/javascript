@@ -1,8 +1,8 @@
 /**
-  * Calculate all the divisors for a given number.
-  * @param {number} number - natural number.
-  * @returns {array} that contains the divisors for a given number excluding the number itself.
-  */
+ * Calculate all the divisors for a given number.
+ * @param {number} number - natural number.
+ * @returns {array} that contains the divisors for a given number excluding the number itself.
+ */
 function getDivisors(number) {
   const divs = [];
 
@@ -25,11 +25,11 @@ function getDivisors(number) {
 }
 
 /**
-  * Classify a given number as perfect, abundant or deficient.
-  * @param {number} - number to be classified. Note: if the number is equal or smaller than 0,
-  * then returns an error: Classification is only possible for natural numbers.
-  * @returns {string} - string that contains the classification (perfect, abundant or deficient).
-  */
+ * Classify a given number as perfect, abundant or deficient.
+ * @param {number} - number to be classified. Note: if the number is equal or smaller than 0,
+ * then returns an error: Classification is only possible for natural numbers.
+ * @returns {string} - string that contains the classification (perfect, abundant or deficient).
+ */
 export const classify = (number) => {
   // Check if the input is valid
   if (number <= 0) {

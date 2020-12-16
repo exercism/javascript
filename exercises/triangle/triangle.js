@@ -5,18 +5,18 @@
 
 export class Triangle {
   constructor() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   isEquilateral() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   isIsosceles() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   isScalene() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 }

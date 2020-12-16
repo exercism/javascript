@@ -1,7 +1,6 @@
 import { countWords } from './word-count';
 
 describe('countWords', () => {
-
   test('count one word', () => {
     const expectedCounts = { word: 1 };
     expect(countWords('word')).toEqual(expectedCounts);
@@ -18,7 +17,7 @@ describe('countWords', () => {
       fish: 4,
       two: 1,
       red: 1,
-      blue: 1
+      blue: 1,
     };
     expect(countWords('one fish two fish red fish blue fish')).toEqual(
       expectedCounts
@@ -29,7 +28,7 @@ describe('countWords', () => {
     const expectedCounts = {
       one: 1,
       two: 1,
-      three: 1
+      three: 1,
     };
     expect(countWords('one,two,three')).toEqual(expectedCounts);
   });
@@ -38,7 +37,7 @@ describe('countWords', () => {
     const expectedCounts = {
       one: 1,
       two: 1,
-      three: 1
+      three: 1,
     };
     expect(countWords('one,\ntwo,\nthree')).toEqual(expectedCounts);
   });
@@ -49,7 +48,7 @@ describe('countWords', () => {
       carpet: 1,
       as: 1,
       java: 1,
-      javascript: 1
+      javascript: 1,
     };
     expect(countWords('car: carpet as java: javascript!!&@$%^&')).toEqual(
       expectedCounts
@@ -59,8 +58,8 @@ describe('countWords', () => {
   xtest('include numbers', () => {
     const expectedCounts = {
       testing: 2,
-      '1': 1,
-      '2': 1
+      1: 1,
+      2: 1,
     };
     expect(countWords('testing, 1, 2 testing')).toEqual(expectedCounts);
   });
@@ -68,7 +67,7 @@ describe('countWords', () => {
   xtest('normalize case', () => {
     const expectedCounts = {
       go: 3,
-      stop: 2
+      stop: 2,
     };
     expect(countWords('go Go GO Stop stop')).toEqual(expectedCounts);
   });
@@ -76,12 +75,12 @@ describe('countWords', () => {
   xtest('with apostrophes', () => {
     const expectedCounts = {
       first: 1,
-      'don\'t': 2,
+      "don't": 2,
       laugh: 1,
       then: 1,
-      cry: 1
+      cry: 1,
     };
-    expect(countWords('First: don\'t laugh. Then: don\'t cry.')).toEqual(
+    expect(countWords("First: don't laugh. Then: don't cry.")).toEqual(
       expectedCounts
     );
   });
@@ -89,13 +88,13 @@ describe('countWords', () => {
   xtest('with quotations', () => {
     const expectedCounts = {
       joe: 1,
-      'can\'t': 1,
+      "can't": 1,
       tell: 1,
       between: 1,
       large: 2,
-      and: 1
+      and: 1,
     };
-    expect(countWords('Joe can\'t tell between \'large\' and large.')).toEqual(
+    expect(countWords("Joe can't tell between 'large' and large.")).toEqual(
       expectedCounts
     );
   });
@@ -103,15 +102,15 @@ describe('countWords', () => {
   xtest('substrings from the beginning', () => {
     const expectedCounts = {
       joe: 1,
-      'can\'t': 1,
+      "can't": 1,
       tell: 1,
       between: 1,
       app: 1,
       apple: 1,
       and: 1,
-      a: 1
+      a: 1,
     };
-    expect(countWords('Joe can\'t tell between app, apple and a.')).toEqual(
+    expect(countWords("Joe can't tell between app, apple and a.")).toEqual(
       expectedCounts
     );
   });
@@ -119,7 +118,7 @@ describe('countWords', () => {
   xtest('multiple spaces not detected as a word', () => {
     const expectedCounts = {
       multiple: 1,
-      whitespaces: 1
+      whitespaces: 1,
     };
     expect(countWords(' multiple   whitespaces')).toEqual(expectedCounts);
   });
@@ -128,8 +127,8 @@ describe('countWords', () => {
     const expectedCounts = {
       one: 1,
       two: 1,
-      three: 1
+      three: 1,
     };
-    expect(countWords(',\n,one,\n ,two \n \'three\'')).toEqual(expectedCounts);
+    expect(countWords(",\n,one,\n ,two \n 'three'")).toEqual(expectedCounts);
   });
 });

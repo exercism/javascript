@@ -47,7 +47,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -64,4 +63,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Taken from Chapter 2 of Functional Thinking by Neal Ford. [http://shop.oreilly.com/product/0636920029687.do](http://shop.oreilly.com/product/0636920029687.do)
-

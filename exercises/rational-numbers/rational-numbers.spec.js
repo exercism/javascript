@@ -1,6 +1,5 @@
 import { Rational } from './rational-numbers';
 
-
 describe('Addition', () => {
   test('Add two positive rational numbers', () => {
     const expected = new Rational(7, 6);

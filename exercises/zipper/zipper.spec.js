@@ -48,10 +48,7 @@ describe('Zipper', () => {
   });
 
   xtest('left, right and up', () => {
-    expect(zipper.left().up().right().up()
-      .left()
-      .right()
-      .value()).toEqual(3);
+    expect(zipper.left().up().right().up().left().right().value()).toEqual(3);
   });
 
   xtest('setValue', () => {
@@ -59,8 +56,7 @@ describe('Zipper', () => {
   });
 
   xtest('setValue after traversing up', () => {
-    expect(zipper.left().right().up().setValue(5)
-      .toTree()).toEqual(t2);
+    expect(zipper.left().right().up().setValue(5).toTree()).toEqual(t2);
   });
 
   xtest('setLeft with leaf', () => {

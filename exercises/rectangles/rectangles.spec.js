@@ -24,11 +24,7 @@ describe('Rectangles', () => {
 
   xtest('one rectangle', () => {
     const expected = 1;
-    const actual = Rectangles.count([
-      '+-+',
-      '| |',
-      '+-+',
-    ]);
+    const actual = Rectangles.count(['+-+', '| |', '+-+']);
 
     expect(actual).toEqual(expected);
   });
@@ -61,31 +57,21 @@ describe('Rectangles', () => {
 
   xtest('rectangle of height 1 is counted', () => {
     const expected = 1;
-    const actual = Rectangles.count([
-      '+--+',
-      '+--+',
-    ]);
+    const actual = Rectangles.count(['+--+', '+--+']);
 
     expect(actual).toEqual(expected);
   });
 
   xtest('rectangle of width 1 is counted', () => {
     const expected = 1;
-    const actual = Rectangles.count([
-      '++',
-      '||',
-      '++',
-    ]);
+    const actual = Rectangles.count(['++', '||', '++']);
 
     expect(actual).toEqual(expected);
   });
 
   xtest('1x1 square is counted', () => {
     const expected = 1;
-    const actual = Rectangles.count([
-      '++',
-      '++',
-    ]);
+    const actual = Rectangles.count(['++', '++']);
 
     expect(actual).toEqual(expected);
   });

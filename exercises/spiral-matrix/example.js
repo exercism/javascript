@@ -1,6 +1,8 @@
 export class SpiralMatrix {
   static ofSize(size) {
-    const spiral = Array(size).fill().map(() => Array(0));
+    const spiral = Array(size)
+      .fill()
+      .map(() => Array(0));
 
     const totalNumbers = size ** 2;
     let currentNumber = 1;

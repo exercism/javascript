@@ -18,7 +18,7 @@ const ACID_PROTEIN_MAP = {
   UGA: 'STOP',
 };
 
-const getProtein = codon => ACID_PROTEIN_MAP[codon] || 'INVALID';
+const getProtein = (codon) => ACID_PROTEIN_MAP[codon] || 'INVALID';
 
 export const translate = (rnaStrand) => {
   const proteins = [];

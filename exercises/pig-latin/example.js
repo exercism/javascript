@@ -12,9 +12,6 @@ function translateWord(word) {
 
 export const translator = {
   translate(english) {
-    return english
-      .split(' ')
-      .map(translateWord)
-      .join(' ');
+    return english.split(' ').map(translateWord).join(' ');
   },
 };
