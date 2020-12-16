@@ -21,7 +21,10 @@ export function findExerciseDirectory(input) {
 }
 
 export function hasStub(assignment) {
-  return shell.test("-f", `exercises/${assignment}/${assignment}.js`);
+  return shell.test(
+    "-f",
+    path.join("exercises", assignment, `${assignment}.js`)
+  );
 }
 
 export function envIsThruthy(key, unset = false) {
@@ -102,13 +105,23 @@ export function prepare(assignment) {
     shell.exit(1);
   }
   const exampleFile = path.join("exercises", assignment, "example.js");
-  const specFile = path.join("exercises", assignment, assignment + ".spec.js");
+  const specFile = path.join("exercises", assignment, `${assignment}.spec.js`);
+  const specFileDestination = path.join(
+    "tmp_exercises",
+    `${assignment}.spec.js`
+  );
 
   shell.mkdir("-p", path.join("tmp_exercises", "lib"));
-  shell.cp(exampleFile, path.join("tmp_exercises", assignment + ".js"));
+  shell.cp(exampleFile, path.join("tmp_exercises", `${assignment}.js`));
+  shell.cp(specFile, specFileDestination);
+
+  // Enable tests
   shell
-    .sed(/x(test|it)\(/, "test(", specFile)
-    .to(path.join("tmp_exercises", assignment + ".spec.js"));
+    .sed(/x(test|it)\(/, "test(", specFileDestination)
+    .to(specFileDestination);
+  shell
+    .sed("xdescribe", "describe", specFileDestination)
+    .to(specFileDestination);
 
   const libDir = path.join("exercises", assignment, "lib");
   if (shell.test("-d", libDir)) {
