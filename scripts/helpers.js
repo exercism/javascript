@@ -107,7 +107,7 @@ export function prepare(assignment) {
   shell.mkdir("-p", path.join("tmp_exercises", "lib"));
   shell.cp(exampleFile, path.join("tmp_exercises", assignment + ".js"));
   shell
-    .sed("xtest", "test", specFile)
+    .sed(/x(test|it)\(/, "test(", specFile)
     .to(path.join("tmp_exercises", assignment + ".spec.js"));
 
   const libDir = path.join("exercises", assignment, "lib");

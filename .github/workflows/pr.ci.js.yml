@@ -13,10 +13,10 @@ jobs:
       - name: Checkout PR
         uses: actions/checkout@v2
 
-      - name: Use Node.js LTS (12.x)
+      - name: Use Node.js LTS (14.x)
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 14.x
 
       - name: Install project dependencies
         run: npm ci
@@ -24,7 +24,7 @@ jobs:
       - name: Run exercism/javascript ci precheck (stub files, config integrity) for changed exercises
         run: |
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+          curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
             xargs -r npx babel-node scripts/pr-check
 
@@ -33,7 +33,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x, 15.x]
 
     steps:
       - name: Checkout PR

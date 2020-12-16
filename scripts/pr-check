@@ -19,6 +19,7 @@ const {
   envIsThruthy,
   hasStub,
   prepare,
+  assignments,
 } = require("./helpers");
 
 const shell = require("shelljs");
@@ -32,13 +33,34 @@ if (files.length === 0) {
   shell.exit(-1);
 }
 
-const exercises = files
+shell.echo("[Files] The files passed in are as follows:");
+files.forEach((file) => {
+  shell.echo(`[Files] ${file}`);
+});
+
+const _exercises = files
   .map((file) => {
     const directory = findExerciseDirectory(file);
     return directory ? path.basename(directory) : null;
   })
   .filter(Boolean)
   .filter((exercise, index, array) => array.indexOf(exercise) === index);
+
+const hasRootFile = files.some((file) => file === "package.json");
+
+if (hasRootFile) {
+  shell.echo(
+    "[Root PR] When package.json is changed, all exercises need to be checked"
+  );
+} else if (_exercises.length > 8) {
+  shell.echo(
+    "[Big PR] When more than 8 exercises are being checked, all of them are " +
+      "checked as this is likely a PR affecting everything."
+  );
+}
+
+const exercises =
+  hasRootFile || _exercises.length > 8 ? assignments : _exercises;
 
 if (exercises.length === 0) {
   shell.echo("[Skip] None of the files are inside an exercise directory.");
