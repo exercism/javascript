@@ -17,3 +17,12 @@
 
 # Measure using bucket one of size 2 and bucket two of size 3 - start with bucket one and end with bucket two
 "eb329c63-5540-4735-b30b-97f7f4df0f84" = true
+
+# Not possible to reach the goal
+"449be72d-b10a-4f4b-a959-ca741e333b72" = true
+
+# With the same buckets but a different goal, then it is possible
+"aac38b7a-77f4-4d62-9b91-8846d533b054" = true
+
+# Goal larger than both buckets is impossible
+"74633132-0ccf-49de-8450-af4ab2e3b299" = true

@@ -76,4 +76,11 @@ describe('School', () => {
     const expectedDb = { 2: ['Aimee'] };
     expect(school.roster()).toEqual(expectedDb);
   });
+
+  xtest("a student can't be in two different grades", () => {
+    school.add('Aimee', 2);
+    school.add('Aimee', 1);
+    const expectedDb = { 2: ['Aimee'] };
+    expect(school.roster()).toEqual(expectedDb);
+  });
 });

@@ -3,24 +3,22 @@ export class Crypto {
     this.input = input;
   }
 
-  normalizePlaintext() {
+  get plaintext() {
     return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
   }
 
-  size() {
-    const realLength = Math.sqrt(this.normalizePlaintext().length);
+  get ciphertext() {
+    const chunkSize = this.size;
+    const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g');
+    return this.ciphertextSegments().join('').match(splitRegex).join(' ');
+  }
+
+  get size() {
+    const realLength = Math.sqrt(this.plaintext.length);
     return Math.ceil(realLength);
   }
 
-  plaintextSegments() {
-    const plainText = this.normalizePlaintext();
-    const chunkSize = this.size();
-
-    const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g');
-    return plainText.match(splitRegex);
-  }
-
-  ciphertext() {
+  ciphertextSegments() {
     const textSegments = this.plaintextSegments();
     const columns = [];
     let i;
@@ -28,7 +26,7 @@ export class Crypto {
     let currentSegment;
     let currentLetter;
 
-    for (i = 0; i < this.size(); i += 1) {
+    for (i = 0; i < this.size; i += 1) {
       columns.push([]);
     }
 
@@ -45,12 +43,14 @@ export class Crypto {
       columns[i] = columns[i].join('');
     }
 
-    return columns.join('');
+    return columns;
   }
 
-  normalizeCiphertext() {
-    const chunkSize = this.size();
+  plaintextSegments() {
+    const plainText = this.plaintext;
+    const chunkSize = this.size;
+
     const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g');
-    return this.ciphertext().match(splitRegex).join(' ');
+    return plainText.match(splitRegex);
   }
 }

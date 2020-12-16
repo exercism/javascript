@@ -8,19 +8,11 @@ export class Crypto {
     throw new Error('Remove this statement and implement this function');
   }
 
-  normalizePlaintext() {
+  get plaintext() {
     throw new Error('Remove this statement and implement this function');
   }
 
-  size() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  plaintextSegments() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  ciphertext() {
+  get ciphertext() {
     throw new Error('Remove this statement and implement this function');
   }
 }

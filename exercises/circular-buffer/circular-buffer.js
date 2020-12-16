@@ -16,7 +16,7 @@ class CircularBuffer {
     throw new Error('Remove this statement and implement this function');
   }
 
-  forceWrite() {
+  overwrite() {
     throw new Error('Remove this statement and implement this function');
   }
 
