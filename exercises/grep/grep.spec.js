@@ -1,42 +1,69 @@
+// @ts-check
+
 const { spawnSync } = require("child_process");
-const path = require("path");
+const { resolve, relative } = require("path");
 
-const BASE_DIR = path.resolve(__dirname);
+const BASE_DIR = resolve(__dirname);
 
-const resolveDataFile = (file) => path.resolve(BASE_DIR, "data", file);
-
-const spawn_grep = (config) => {
+/**
+ * Spawns a new node process, emulating `grep`.
+ *
+ * node /path/to/grep.js -f -l -a -g -s **pattern** files1 files2 files3
+ *
+ * @param {{ flags: string[], pattern: string, files: string[] }} config
+ */
+function spawnGrep(config) {
   const args = [
-    path.resolve(BASE_DIR, "grep.js"),
+    resolve(BASE_DIR, "grep.js"),
     ...config.flags,
     config.pattern,
-    ...config.files.map((file) => path.resolve(BASE_DIR, "data", file)),
+    ...config.files.map((file) =>
+      relative(BASE_DIR, resolve(BASE_DIR, "data", file))
+    ),
   ];
 
   return new Promise((resolve, reject) => {
-    const child = spawnSync("node", args, { stdio: "pipe" });
+    const child = spawnSync("node", args, { stdio: "pipe", cwd: BASE_DIR });
     const stderr = child.stderr.toString().trim();
     const stdout = child.stdout.toString().trim().split(/\r?\n/).join("\n");
 
+    // If anything is written to stderr, consider the entire process as failed.
+    //
+    // Normally you'd check the status code (exit code) and reject/fail if it's
+    // not equal to "0".
     if (stderr) {
       reject(stderr);
     } else {
       resolve(stdout);
     }
   });
-};
+}
 
-const formatStringTemplate = (stringTemplate) =>
-  stringTemplate
+/**
+ * Formats a string template cross-env
+ *
+ * @param {string} stringTemplate
+ */
+function formatStringTemplate(stringTemplate) {
+  return stringTemplate
     .split(/\r?\n/)
     .map((sentence) => sentence.trim())
     .join("\n");
+}
+
+/**
+ * Path to a data file
+ * @param {string} file
+ */
+function resolveDataFile(file) {
+  return relative(BASE_DIR, resolve(BASE_DIR, "data", file));
+}
 
 describe("grep exercise", () => {
   describe("Test grepping a single file", () => {
     it("One file, one match, no flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Agamemnon",
           flags: [],
           files: ["iliad.txt"],
@@ -44,9 +71,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("Of Atreus, Agamemnon, King of men.");
     });
 
-    it("One file, one match, print line numbers flag", () => {
+    xit("One file, one match, print line numbers flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Forbidden",
           flags: ["-n"],
           files: ["paradise-lost.txt"],
@@ -54,9 +81,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("2:Of that Forbidden Tree, whose mortal tast");
     });
 
-    it("One file, one match, case-insensitive flag", () => {
+    xit("One file, one match, case-insensitive flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "FORBIDDEN",
           flags: ["-i"],
           files: ["paradise-lost.txt"],
@@ -64,9 +91,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("Of that Forbidden Tree, whose mortal tast");
     });
 
-    it("One file, one match, print file names flag", () => {
+    xit("One file, one match, print file names flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Forbidden",
           flags: ["-l"],
           files: ["paradise-lost.txt"],
@@ -74,9 +101,9 @@ describe("grep exercise", () => {
       ).resolves.toBe(resolveDataFile("paradise-lost.txt"));
     });
 
-    it("One file, one match, match entire lines flag", () => {
+    xit("One file, one match, match entire lines flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "With loss of Eden, till one greater Man",
           flags: ["-x"],
           files: ["paradise-lost.txt"],
@@ -84,9 +111,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("With loss of Eden, till one greater Man");
     });
 
-    it("One file, one match, multiple flags", () => {
+    xit("One file, one match, multiple flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "OF ATREUS, Agamemnon, KIng of MEN.",
           flags: ["-n", "-i", "-x"],
           files: ["iliad.txt"],
@@ -94,9 +121,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("9:Of Atreus, Agamemnon, King of men.");
     });
 
-    it("One file, several matches, no flags", () => {
+    xit("One file, several matches, no flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "may",
           flags: [],
           files: ["midsummer-night.txt"],
@@ -108,9 +135,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("One file, several matches, print line numbers flag", () => {
+    xit("One file, several matches, print line numbers flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "may",
           flags: ["-n"],
           files: ["midsummer-night.txt"],
@@ -122,9 +149,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("One file, several matches, match entire lines flag", () => {
+    xit("One file, several matches, match entire lines flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "may",
           flags: ["-x"],
           files: ["midsummer-night.txt"],
@@ -132,9 +159,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("");
     });
 
-    it("One file, several matches, case-insensitive flag", () => {
+    xit("One file, several matches, case-insensitive flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "ACHILLES",
           flags: ["-i"],
           files: ["iliad.txt"],
@@ -145,9 +172,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("One file, several matches, inverted flag", () => {
+    xit("One file, several matches, inverted flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Of",
           flags: ["-v"],
           files: ["paradise-lost.txt"],
@@ -161,9 +188,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("One file, no matches, various flags", () => {
+    xit("One file, no matches, various flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Gandalf",
           flags: ["-n", "-l", "-x", "-i"],
           files: ["iliad.txt"],
@@ -171,9 +198,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("");
     });
 
-    it("One file, one match, file flag takes precedence over line flag", () => {
+    xit("One file, one match, file flag takes precedence over line flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "ten",
           flags: ["-n", "-l"],
           files: ["iliad.txt"],
@@ -181,9 +208,9 @@ describe("grep exercise", () => {
       ).resolves.toBe(resolveDataFile("iliad.txt"));
     });
 
-    it("One file, several matches, inverted and match entire lines flags", () => {
+    xit("One file, several matches, inverted and match entire lines flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Illustrious into Ades premature,",
           flags: ["-x", "-v"],
           files: ["iliad.txt"],
@@ -202,9 +229,9 @@ describe("grep exercise", () => {
   });
 
   describe("Test grepping multiples files at once", () => {
-    it("Multiple files, one match, no flags", () => {
+    xit("Multiple files, one match, no flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Agamemnon",
           flags: [],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -214,9 +241,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, several matches, no flags", () => {
+    xit("Multiple files, several matches, no flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "may",
           flags: [],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -234,9 +261,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, several matches, print line numbers flag", () => {
+    xit("Multiple files, several matches, print line numbers flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "that",
           flags: ["-n"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -259,7 +286,7 @@ describe("grep exercise", () => {
 
     it("Multiple files, one match, print file names flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "who",
           flags: ["-l"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -270,9 +297,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, several matches, case-insensitive flag", () => {
+    xit("Multiple files, several matches, case-insensitive flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "TO",
           flags: ["-i"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -307,9 +334,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, several matches, inverted flag", () => {
+    xit("Multiple files, several matches, inverted flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "a",
           flags: ["-v"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -325,9 +352,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, one match, match entire lines flag", () => {
+    xit("Multiple files, one match, match entire lines flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "But I beseech your grace that I may know",
           flags: ["-x"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -339,9 +366,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, one match, multiple flags", () => {
+    xit("Multiple files, one match, multiple flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "WITH LOSS OF EDEN, TILL ONE GREATER MAN",
           flags: ["-n", "-i", "-x"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -353,9 +380,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, no matches, various flags", () => {
+    xit("Multiple files, no matches, various flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Frodo",
           flags: ["-n", "-l", "-x", "-i"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -363,9 +390,9 @@ describe("grep exercise", () => {
       ).resolves.toBe("");
     });
 
-    it("Multiple files, several matches, file flag takes precedence over line number flag", () => {
+    xit("Multiple files, several matches, file flag takes precedence over line number flag", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "who",
           flags: ["-n", "-l"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
@@ -376,9 +403,9 @@ describe("grep exercise", () => {
       );
     });
 
-    it("Multiple files, several matches, inverted and match entire lines flags", () => {
+    xit("Multiple files, several matches, inverted and match entire lines flags", () => {
       return expect(
-        spawn_grep({
+        spawnGrep({
           pattern: "Illustrious into Ades premature,",
           flags: ["-x", "-v"],
           files: ["iliad.txt", "midsummer-night.txt", "paradise-lost.txt"],
