@@ -7,7 +7,6 @@ on:
 
 jobs:
   verify:
-    name: Verify formatting
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout code'
