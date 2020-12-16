@@ -32,7 +32,7 @@ const infoStr = assignment
 const failureStr = "[Failure] Lint check failed!";
 
 // Run lint all at once
-prepareAndRun("npx eslint tmp_exercises", infoStr, failureStr);
+prepareAndRun("npx eslint tmp_exercises -c .eslintrc", infoStr, failureStr);
 
 shell.echo(
   assignment
