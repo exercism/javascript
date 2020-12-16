@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const shell = require('shelljs');
+const path = require('path');
+const { basename } = require('path');
+
+const basedir = path.resolve(basename(__dirname), '..');
+
+const command = path.join(basedir, 'bin', 'format.sh');
+shell.exec(command);
