@@ -3,8 +3,21 @@
 // convenience to get you started writing code faster.
 //
 
-export class SimpleLinkedList {
+export class Element {
+  constructor() {
+    throw new Error("Remove this statement and implement this function");
+  }
 
+  get value() {
+    throw new Error("Remove this statement and implement this function");
+  }
+
+  get next() {
+    throw new Error("Remove this statement and implement this function");
+  }
+}
+
+export class List {
   constructor() {
     throw new Error("Remove this statement and implement this function");
   }
@@ -28,6 +41,4 @@ export class SimpleLinkedList {
   reverse() {
     throw new Error("Remove this statement and implement this function");
   }
-
 }
-
