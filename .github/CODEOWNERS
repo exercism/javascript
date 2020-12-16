@@ -1,5 +1,6 @@
-# Maintainers 
+# Maintainers
 config/maintainers.json @exercism/maintainers-admin
 
 # Code owners
 .github/CODEOWNERS      @exercism/maintainers-admin
+.github/workflows       @exercism/javascript
