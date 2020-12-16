@@ -5,10 +5,10 @@
 Given a name, return a string with the message:
 
 ```text
-One for X, one for me.
+One for name, one for me.
 ```
 
-Where X is the given name.
+Where "name" is the given name.
 
 However, if the name is missing, return the string:
 
@@ -18,12 +18,12 @@ One for you, one for me.
 
 Here are some examples:
 
-| Name   | String to return            |
-| :----- | :-------------------------- |
-| Alice  | One for Alice, one for me.  |
-| Bob    | One for Bob, one for me.    |
-|        | One for you, one for me.    |
-| Zaphod | One for Zaphod, one for me. |
+|Name    |String to return
+|:-------|:------------------
+|Alice   |One for Alice, one for me.
+|Bob     |One for Bob, one for me.
+|        |One for you, one for me.
+|Zaphod  |One for Zaphod, one for me.
 
 ## Setup
 
@@ -55,6 +55,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -71,3 +72,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 [https://github.com/exercism/problem-specifications/issues/757](https://github.com/exercism/problem-specifications/issues/757)
+

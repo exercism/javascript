@@ -41,7 +41,7 @@ Now handle inserting the appropriate scale word between those chunks.
 
 So `1234567890` should yield `'1 billion 234 million 567 thousand 890'`
 
-The program must also report any values that are out of range. It's
+The program must also report any values that are out of range.  It's
 fine to stop at "trillion".
 
 ## Step 4
@@ -92,6 +92,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -108,3 +109,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 A variation on JavaRanch CattleDrive, exercise 4a [http://www.javaranch.com/say.jsp](http://www.javaranch.com/say.jsp)
+

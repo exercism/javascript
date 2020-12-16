@@ -40,10 +40,10 @@ Update your program to recognize multi-character binary strings, replacing garbl
 Update your program to recognize all numbers 0 through 9, both individually and as part of a larger string.
 
 ```text
- _
+ _ 
  _|
-|_
-
+|_ 
+   
 ```
 
 Is converted to "2"
@@ -62,18 +62,18 @@ Is converted to "1234567890"
 Update your program to handle multiple numbers, one per line. When converting several lines, join the lines with commas.
 
 ```text
-    _  _
+    _  _ 
   | _| _|
   ||_  _|
-
-    _  _
-|_||_ |_
+         
+    _  _ 
+|_||_ |_ 
   | _||_|
-
- _  _  _
+         
+ _  _  _ 
   ||_||_|
   ||_| _|
-
+         
 ```
 
 Is converted to "123,456,789"
@@ -108,6 +108,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -124,3 +125,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 Inspired by the Bank OCR kata [http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR](http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR)
+

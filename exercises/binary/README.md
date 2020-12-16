@@ -21,7 +21,7 @@ as a linear combination of powers of 10:
 - The rightmost digit gets multiplied by 10^0 = 1
 - The next number gets multiplied by 10^1 = 10
 - ...
-- The *n*th number gets multiplied by 10^_(n-1)_.
+- The *n*th number gets multiplied by 10^*(n-1)*.
 - All these values are summed.
 
 So: `23 => 2*10^1 + 3*10^0 => 2*10 + 3*1 = 23 base 10`
@@ -60,6 +60,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -75,4 +76,5 @@ completed the exercise.
 
 ## Exercise Source Credits
 
-All of Computer Science [http://www.wolframalpha.com/input/?i=binary&a=*C.binary-\_*MathWorld-](http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-)
+All of Computer Science [http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-](http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-)
+

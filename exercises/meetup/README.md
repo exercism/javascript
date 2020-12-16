@@ -2,7 +2,7 @@
 
 Calculate the date of meetups.
 
-Typically meetups happen on the same day of the week. In this exercise, you
+Typically meetups happen on the same day of the week.  In this exercise, you
 will take a description of a meetup date, and return the actual meetup date.
 
 Examples of general descriptions are:
@@ -23,7 +23,7 @@ that end in '-teenth'. Therefore, one is guaranteed that each day of the week
 in every month.
 
 Given examples of a meetup dates, each containing a month, day, year, and
-descriptor calculate the date of the actual meetup. For example, if given
+descriptor calculate the date of the actual meetup.  For example, if given
 "The first Monday of January 2017", the correct meetup date is 2017/1/2.
 
 In Javascript, the Date object month's index ranges from 0 to 11.
@@ -37,6 +37,7 @@ date.getMonth();
 date.getDate();
 // => 13
 ```
+
 
 ## Setup
 
@@ -68,6 +69,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -84,3 +86,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month [https://twitter.com/copiousfreetime](https://twitter.com/copiousfreetime)
+

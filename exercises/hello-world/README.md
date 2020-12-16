@@ -44,6 +44,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -59,4 +60,5 @@ completed the exercise.
 
 ## Exercise Source Credits
 
-This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,\_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
+This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
+
