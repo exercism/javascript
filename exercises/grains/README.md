@@ -12,7 +12,6 @@ of grains doubling on each successive square.
 There are 64 squares on a chessboard (where square 1 has one grain, square 2 has two grains, and so on).
 
 Write code that shows:
-
 - how many grains were on a given square, and
 - the total number of grains on the chessboard
 
@@ -57,6 +56,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -73,3 +73,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 JavaRanch Cattle Drive, exercise 6 [http://www.javaranch.com/grains.jsp](http://www.javaranch.com/grains.jsp)
+

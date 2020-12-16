@@ -6,7 +6,7 @@ A palindromic number is a number that remains the same when its digits are
 reversed. For example, `121` is a palindromic number but `112` is not.
 
 Given a range of numbers, find the largest and smallest palindromes which
-are products of numbers within that range.
+are products of two numbers within that range.
 
 Your solution should return the largest and smallest palindromes, along with the
 factors of each within the range. If the largest or smallest palindrome has more
@@ -62,6 +62,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -78,3 +79,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 Problem 4 at Project Euler [http://projecteuler.net/problem=4](http://projecteuler.net/problem=4)
+

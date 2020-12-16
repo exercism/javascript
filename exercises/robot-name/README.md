@@ -2,17 +2,17 @@
 
 Manage robot factory settings.
 
-When robots come off the factory floor, they have no name.
+When a robot comes off the factory floor, it has no name.
 
-The first time you boot them up, a random name is generated in the format
+The first time you turn on a robot, a random name is generated in the format
 of two uppercase letters followed by three digits, such as RX837 or BC811.
 
 Every once in a while we need to reset a robot to its factory settings,
-which means that their name gets wiped. The next time you ask, it will
+which means that its name gets wiped. The next time you ask, that robot will
 respond with a new random name.
 
 The names must be random: they should not follow a predictable sequence.
-Random names means a risk of collisions. Your solution must ensure that
+Using random names means a risk of collisions. Your solution must ensure that
 every existing robot has a unique name.
 
 ## Setup
@@ -45,6 +45,7 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
+
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -61,3 +62,4 @@ completed the exercise.
 ## Exercise Source Credits
 
 A debugging session with Paul Blackwell at gSchool.
+
