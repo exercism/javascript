@@ -1,4 +1,4 @@
-const isValidBase = base => !base || base < 2 || Math.floor(base) !== base;
+const isValidBase = (base) => !base || base < 2 || Math.floor(base) !== base;
 
 const isInputValid = (array, base) => {
   if (!array || !array.length) {
@@ -33,8 +33,7 @@ export const convert = (array, inputBase, outputBase) => {
   }
   const regexp = new RegExp('^0.', 'g');
   const str = array.join('');
-  if (str.match(regexp)
-    || !isInputValid(array, inputBase)) {
+  if (str.match(regexp) || !isInputValid(array, inputBase)) {
     throw new Error('Input has wrong format');
   }
   if (str === '0') {
@@ -43,7 +42,9 @@ export const convert = (array, inputBase, outputBase) => {
   if (str === '1') {
     return [1];
   }
-  const decimalValue = array
-    .reduce((accumulator, value) => accumulator * inputBase + value, 0);
+  const decimalValue = array.reduce(
+    (accumulator, value) => accumulator * inputBase + value,
+    0
+  );
   return convertFromDecimalToBase(decimalValue, outputBase);
 };

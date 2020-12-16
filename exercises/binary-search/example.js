@@ -12,5 +12,5 @@ export const find = (array, element) => {
       start = middle + 1;
     }
   }
-  throw new Error("Value not in array");
+  throw new Error('Value not in array');
 };

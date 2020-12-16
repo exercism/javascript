@@ -18,7 +18,7 @@ export const largestProduct = (digits, seriesLength) => {
     const product = digits
       .substring(i, i + seriesLength)
       .split('')
-      .map(digit => Number(digit))
+      .map((digit) => Number(digit))
       .reduce((a, b) => a * b);
     if (product > largestProduct) {
       largestProduct = product;

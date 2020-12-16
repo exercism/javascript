@@ -43,7 +43,7 @@ describe('Bob', () => {
 
   xtest('forceful question', () => {
     const result = hey('WHAT THE HELL WERE YOU THINKING?');
-    expect(result).toEqual('Calm down, I know what I\'m doing!');
+    expect(result).toEqual("Calm down, I know what I'm doing!");
   });
 
   xtest('shouting numbers', () => {

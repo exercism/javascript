@@ -65,5 +65,5 @@ export class Bob {
 
 You can find more information about modules in the
 [Babel documentation](https://babeljs.io/docs/learn-es2015/#modules).
-To make it easier to get started, there is a *skeleton* JavaScript file in the
+To make it easier to get started, there is a _skeleton_ JavaScript file in the
 directory for the first exercise.

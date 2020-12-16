@@ -3,7 +3,7 @@ import { BinarySearchTree } from './binary-search-tree';
 function recordAllData(bst) {
   const out = [];
 
-  bst.each(data => out.push(data));
+  bst.each((data) => out.push(data));
 
   return out;
 }

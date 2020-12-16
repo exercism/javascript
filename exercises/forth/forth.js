@@ -4,7 +4,6 @@
 //
 
 export class Forth {
-
   constructor() {
     throw Error('Remove this statement and implement this function');
   }
@@ -16,5 +15,4 @@ export class Forth {
   get stack() {
     throw Error('Remove this statement and implement this function');
   }
-
 }

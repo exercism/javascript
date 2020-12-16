@@ -1,23 +1,34 @@
 export function solve(puzzle) {
   const parts = puzzle
     .split(/[+|==]/g)
-    .map(o => o.trim())
-    .filter(o => o !== '');
+    .map((o) => o.trim())
+    .filter((o) => o !== '');
 
   if (parts.length < 3) {
     return null;
   }
 
   const uniqueLetters = new Set(parts.join('').split(''));
-  const firstLetters = new Set(parts.map(p => p[0]));
+  const firstLetters = new Set(parts.map((p) => p[0]));
 
-  const numberCombinations = getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.size);
+  const numberCombinations = getNumberCombinations(
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    uniqueLetters.size
+  );
 
   while (numberCombinations.length) {
-    const permutations = generate(Array(uniqueLetters.size).fill().map((_, i) => i));
+    const permutations = generate(
+      Array(uniqueLetters.size)
+        .fill()
+        .map((_, i) => i)
+    );
     const numberCombination = numberCombinations.pop();
     for (const permutation of permutations) {
-      const newNumbers = assignNumbers(numberCombination, uniqueLetters, permutation);
+      const newNumbers = assignNumbers(
+        numberCombination,
+        uniqueLetters,
+        permutation
+      );
       if (testNumbers(newNumbers, parts, firstLetters)) {
         return newNumbers;
       }
@@ -44,15 +55,19 @@ function testNumbers(numbers, puzzleParts, firstLetters) {
   }
   const replaceRegex = new RegExp(`[${keys.join('')}]`, 'g');
 
-  puzzleParts = puzzleParts.join(',')
-    .replace(replaceRegex, input => numbers[input])
+  puzzleParts = puzzleParts
+    .join(',')
+    .replace(replaceRegex, (input) => numbers[input])
     .split(',')
-    .map(t => parseInt(t));
+    .map((t) => parseInt(t));
 
   const total = puzzleParts.slice(puzzleParts.length - 1)[0];
-  return total === puzzleParts
-    .slice(0, puzzleParts.length - 1)
-    .reduce((acc, val) => acc + val, 0);
+  return (
+    total ===
+    puzzleParts
+      .slice(0, puzzleParts.length - 1)
+      .reduce((acc, val) => acc + val, 0)
+  );
 }
 function* generate(A) {
   const c = [];
@@ -91,8 +106,9 @@ function getNumberCombinations(arr, size) {
   if (size == len) return [arr];
 
   return arr.reduce((acc, val, i) => {
-    const res = getNumberCombinations(arr.slice(i + 1), size - 1)
-      .map(comb => [val].concat(comb));
+    const res = getNumberCombinations(arr.slice(i + 1), size - 1).map((comb) =>
+      [val].concat(comb)
+    );
 
     return acc.concat(res);
   }, []);

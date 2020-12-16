@@ -9,17 +9,17 @@ const areCoprimes = (a, b) => {
   }
 
   return true;
-}
+};
 
 const checkCoprime = (a, b) => {
   if (!areCoprimes(a, b)) {
     throw new Error('a and m must be coprime.');
   }
-}
+};
 
 const isNumber = (candidate) => {
   return !isNaN(Number(candidate));
-}
+};
 
 const findMMI = (a) => {
   let i = 1;
@@ -32,18 +32,18 @@ const findMMI = (a) => {
       return i;
     }
   }
-}
+};
 
 const positiveModulo = (a, b) => {
   return ((a % b) + b) % b;
-}
+};
 
 const groupBy = (elements, groupLength) => {
   const result = [[]];
   let i = 0;
 
-  elements.forEach(el => {
-    if (result[i] && result[i].length < groupLength ) {
+  elements.forEach((el) => {
+    if (result[i] && result[i].length < groupLength) {
       result[i].push(el);
     } else {
       i++;
@@ -52,7 +52,7 @@ const groupBy = (elements, groupLength) => {
   });
 
   return result;
-}
+};
 
 export const encode = (phrase, { a, b }) => {
   checkCoprime(a, ALPHABET_LENGTH);
@@ -62,8 +62,8 @@ export const encode = (phrase, { a, b }) => {
   phrase
     .toLowerCase()
     .split('')
-    .filter(char => char !== ' ')
-    .forEach(char => {
+    .filter((char) => char !== ' ')
+    .forEach((char) => {
       if (ALPHABET.includes(char)) {
         const x = ALPHABET.indexOf(char);
         const encodedIndex = (a * x + b) % ALPHABET_LENGTH;
@@ -75,7 +75,7 @@ export const encode = (phrase, { a, b }) => {
     });
 
   return groupBy(encodedText.split(''), 5)
-    .map(group => group.join(''))
+    .map((group) => group.join(''))
     .join(' ');
 };
 
@@ -86,8 +86,8 @@ export const decode = (phrase, { a, b }) => {
 
   return phrase
     .split('')
-    .filter(char => char !== ' ')
-    .map(char => {
+    .filter((char) => char !== ' ')
+    .map((char) => {
       if (isNumber(char)) {
         return char;
       }
@@ -98,4 +98,4 @@ export const decode = (phrase, { a, b }) => {
       return ALPHABET[decodedIndex];
     })
     .join('');
-}
+};

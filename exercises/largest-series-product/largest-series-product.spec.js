@@ -71,4 +71,3 @@ describe('Largest Series Product', () => {
     );
   });
 });
-

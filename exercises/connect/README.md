@@ -60,7 +60,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -73,4 +72,3 @@ exercism submit connect.js
 
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
-

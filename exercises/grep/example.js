@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 const VALID_OPTIONS = [
-  "n", // add line numbers
-  "l", // print file names where pattern is found
-  "i", // ignore case
-  "v", // reverse files results
-  "x", // match entire line
+  'n', // add line numbers
+  'l', // print file names where pattern is found
+  'i', // ignore case
+  'v', // reverse files results
+  'x', // match entire line
 ];
 
 const ARGS = process.argv;
@@ -17,13 +17,13 @@ function checkLineMatchesPattern(line, pattern) {
   let right = pattern;
 
   // ignore case
-  if (isOptionSet("i")) {
+  if (isOptionSet('i')) {
     left = line.toLowerCase();
     right = pattern.toLowerCase();
   }
 
   // match entire line
-  if (isOptionSet("x")) {
+  if (isOptionSet('x')) {
     return left === right;
   }
 
@@ -39,13 +39,13 @@ function checkLineMatchesPattern(line, pattern) {
  * @returns {string[]} the lines
  */
 function readLines(file) {
-  const data = fs.readFileSync(path.resolve(file), { encoding: "utf-8" });
+  const data = fs.readFileSync(path.resolve(file), { encoding: 'utf-8' });
   return data.split(/\r?\n/);
 }
 
 function getConfigFromArgs() {
   const config = {
-    pattern: "",
+    pattern: '',
     options: [],
     files: [],
   };
@@ -58,8 +58,8 @@ function getConfigFromArgs() {
       return;
     }
 
-    if (val.indexOf("-") !== -1) {
-      const option = val.replace("-", "");
+    if (val.indexOf('-') !== -1) {
+      const option = val.replace('-', '');
 
       if (!VALID_OPTIONS.includes(option)) {
         throw new Error(`Unknown option ${option}`);
@@ -83,12 +83,12 @@ files.forEach((file) => {
   const lines = readLines(file);
 
   // print file names where pattern is found
-  if (isOptionSet("l")) {
+  if (isOptionSet('l')) {
     const foundMatch = lines.find((line) => {
       const lineMatchesPattern = checkLineMatchesPattern(line, pattern);
 
       // reverse files results
-      return isOptionSet("v") ? !lineMatchesPattern : lineMatchesPattern;
+      return isOptionSet('v') ? !lineMatchesPattern : lineMatchesPattern;
     });
 
     if (foundMatch) {
@@ -99,11 +99,11 @@ files.forEach((file) => {
   }
 
   lines.forEach((line, index) => {
-    let result = "";
+    let result = '';
     let shouldOutputLine = checkLineMatchesPattern(line, pattern);
 
     // reverse files results
-    if (isOptionSet("v")) {
+    if (isOptionSet('v')) {
       shouldOutputLine = !shouldOutputLine;
     }
 
@@ -113,7 +113,7 @@ files.forEach((file) => {
       }
 
       // add line numbers
-      if (isOptionSet("n")) {
+      if (isOptionSet('n')) {
         result += `${index + 1}:`;
       }
 

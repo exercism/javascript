@@ -4,7 +4,7 @@ Search a file for lines matching a regular expression pattern. Return the line
 number and contents of each matching line.
 
 The Unix [`grep`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/grep.html) command can be used to search for lines in one or more files
-that match a user-provided search query (known as the *pattern*).
+that match a user-provided search query (known as the _pattern_).
 
 The `grep` command takes three arguments:
 
@@ -106,7 +106,6 @@ In order to write output use
 
 The tests consider execution to be successful (resolved) if nothing is written to the standard error stream, and not successful (rejected) if something is written to the standard error stream.
 
-
 ## Setup
 
 Go through the setup instructions for Javascript to install the necessary
@@ -137,7 +136,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -154,4 +152,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Conversation with Nate Foster. [http://www.cs.cornell.edu/Courses/cs3110/2014sp/hw/0/ps0.pdf](http://www.cs.cornell.edu/Courses/cs3110/2014sp/hw/0/ps0.pdf)
-

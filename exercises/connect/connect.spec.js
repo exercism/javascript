@@ -13,26 +13,17 @@ describe('Judging a game of connect', () => {
   });
 
   xtest('X can win on a 1x1 board', () => {
-    const board = [
-      'X',
-    ];
+    const board = ['X'];
     expect(new Board(board).winner()).toEqual('X');
   });
 
   xtest('O can win on a 1x1 board', () => {
-    const board = [
-      'O',
-    ];
+    const board = ['O'];
     expect(new Board(board).winner()).toEqual('O');
   });
 
   xtest('only edges does not make a winner', () => {
-    const board = [
-      'O O O X',
-      ' X . . X',
-      '  X . . X',
-      '   X O O O',
-    ];
+    const board = ['O O O X', ' X . . X', '  X . . X', '   X O O O'];
     expect(new Board(board).winner()).toEqual('');
   });
 

@@ -255,7 +255,7 @@ describe('Allergies', () => {
         'tomatoes',
         'chocolate',
         'pollen',
-        'cats'
+        'cats',
       ]);
     });
 
@@ -269,7 +269,7 @@ describe('Allergies', () => {
         'tomatoes',
         'chocolate',
         'pollen',
-        'cats'
+        'cats',
       ]);
     });
 
@@ -282,7 +282,7 @@ describe('Allergies', () => {
         'tomatoes',
         'chocolate',
         'pollen',
-        'cats'
+        'cats',
       ]);
     });
   });

@@ -311,9 +311,9 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
 Did you get the tests passing and the code clean? If you want to, these
 are some additional things you could try:
 
-* Remove as much duplication as you possibly can.
-* Optimize for readability, even if it means introducing duplication.
-* If you've removed all the duplication, do you have a lot of
+- Remove as much duplication as you possibly can.
+- Optimize for readability, even if it means introducing duplication.
+- If you've removed all the duplication, do you have a lot of
   conditionals? Try replacing the conditionals with polymorphism, if it
   applies in this language. How readable is it?
 
@@ -350,7 +350,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -367,4 +366,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Learn to Program by Chris Pine [http://pine.fm/LearnToProgram/?Chapter=06](http://pine.fm/LearnToProgram/?Chapter=06)
-

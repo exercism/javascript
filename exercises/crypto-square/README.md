@@ -7,7 +7,7 @@ Given an English text, output the encoded version of that text.
 First, the input is normalized: the spaces and punctuation are removed
 from the English text and the message is downcased.
 
-Then, the normalized characters are broken into rows.  These rows can be
+Then, the normalized characters are broken into rows. These rows can be
 regarded as forming a rectangle when printed with intervening newlines.
 
 For example, the sentence
@@ -22,7 +22,7 @@ is normalized to:
 "ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots"
 ```
 
-The plaintext should be organized in to a rectangle.  The size of the
+The plaintext should be organized in to a rectangle. The size of the
 rectangle (`r x c`) should be decided by the length of the message,
 such that `c >= r` and `c - r <= 1`, where `c` is the number of columns
 and `r` is the number of rows.
@@ -102,7 +102,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -119,4 +118,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 J Dalbey's Programming Practice problems [http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html](http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html)
-

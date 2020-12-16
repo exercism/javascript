@@ -55,20 +55,26 @@ describe('diffie-hellman', () => {
   });
 
   xtest('when given a private key, returns the correct public one', () => {
-    expect(diffieHellman.getPublicKeyFromPrivateKey(alicePrivateKey)).toEqual(alicePublicKey);
+    expect(diffieHellman.getPublicKeyFromPrivateKey(alicePrivateKey)).toEqual(
+      alicePublicKey
+    );
   });
 
   xtest('when given a different private key, returns the correct public one', () => {
-    expect(diffieHellman.getPublicKeyFromPrivateKey(bobPrivateKey)).toEqual(bobPublicKey);
+    expect(diffieHellman.getPublicKeyFromPrivateKey(bobPrivateKey)).toEqual(
+      bobPublicKey
+    );
   });
 
   xtest('can generate a shared secret from our private key and their public key', () => {
     const sharedSecret = 2;
 
-    expect(diffieHellman.getSharedSecret(alicePrivateKey, bobPublicKey))
-      .toEqual(sharedSecret);
+    expect(
+      diffieHellman.getSharedSecret(alicePrivateKey, bobPublicKey)
+    ).toEqual(sharedSecret);
 
-    expect(diffieHellman.getSharedSecret(bobPrivateKey, alicePublicKey))
-      .toEqual(sharedSecret);
+    expect(
+      diffieHellman.getSharedSecret(bobPrivateKey, alicePublicKey)
+    ).toEqual(sharedSecret);
   });
 });

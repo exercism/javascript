@@ -5,22 +5,22 @@
 
 export class Crypto {
   constructor() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   normalizePlaintext() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   size() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   plaintextSegments() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   ciphertext() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 }

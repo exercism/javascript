@@ -1,13 +1,13 @@
 export class BufferEmptyError extends Error {
   constructor(message) {
     super();
-    this.message = message || "Buffer is empty.";
+    this.message = message || 'Buffer is empty.';
   }
 }
 export class BufferFullError extends Error {
   constructor(message) {
     super();
-    this.message = message || "Buffer is full.";
+    this.message = message || 'Buffer is full.';
   }
 }
 

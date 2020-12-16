@@ -31,7 +31,9 @@ function getPlants(pots, index) {
 }
 
 function parse(diagram) {
-  return diagram.split('\n').map(row => [...row].map(sign => plantCodes[sign]));
+  return diagram
+    .split('\n')
+    .map((row) => [...row].map((sign) => plantCodes[sign]));
 }
 
 export class Garden {

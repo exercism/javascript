@@ -53,4 +53,3 @@ describe('Darts', () => {
     expect(score(0.5, -4)).toEqual(5);
   });
 });
-
