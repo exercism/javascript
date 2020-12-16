@@ -58,7 +58,7 @@ if (hasRootFile) {
 }
 
 const exercises =
-  hasRootFile || _exercises.length > 8 ? assignments : exercises;
+  hasRootFile || _exercises.length > 8 ? assignments : _exercises;
 
 if (exercises.length === 0) {
   shell.echo("[Skip] None of the files are inside an exercise directory.");
