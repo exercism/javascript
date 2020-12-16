@@ -10,6 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/format')
     steps:
+      - name: 'Post acknowledgement that it will format code'
+        continue-on-error: true # Never fail the build if this fails
+        uses: actions/github-script@6e5ee1dc1cb3740e5e5e76ad668e3f526edbfe45 # 2.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'The "Format code" action has started running.'
+            })
+
       - name: 'Download PR data'
         run: |
           PR_DATA="/tmp/pr.json"
@@ -50,7 +63,7 @@ jobs:
       - name: 'Format code'
         run: ./bin/format.sh
         env:
-          EXERCISM_PRETTIER_VERSION: '2.2.1'
+          EXERCISM_PRETTIER_VERSION: '2.1.2'
 
       - name: 'Commit formatted code'
         run: |
@@ -69,6 +82,19 @@ jobs:
           git commit -m "[CI] Format code"
           git push
 
+      - name: 'Post acknowledgement that it has formatted the code'
+        continue-on-error: true # Never fail the build if this fails
+        uses: actions/github-script@6e5ee1dc1cb3740e5e5e76ad668e3f526edbfe45 # 2.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'The "Format code" action has finished running.'
+            })
+
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
@@ -80,5 +106,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'For security reasons, `/format` does not trigger CI builds when the PR has been submitted from a fork. To make the required checks pass, you need to trigger a build through one of the following ways:\n\n- Push an empty commit to this branch: `git commit --allow-empty -m "Trigger builds"`.\n- Close and reopen the PR.\n- Push a regular commit to this branch.'
+              body: 'For security reasons, `/format` does not trigger CI builds when the PR has been submitted from a fork. If checks were not passing due to code format, trigger a build to make the required checks pass, through one of the following ways:\n\n- Push an empty commit to this branch: `git commit --allow-empty -m "Trigger builds"`.\n- Close and reopen the PR.\n- Push a regular commit to this branch.'
             })
