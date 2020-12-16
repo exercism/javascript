@@ -24,11 +24,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-        "optional_values",
-        "strings",
-        "text_formatting"
-      ]
+      "topics": ["optional_values", "strings", "text_formatting"]
     },
     {
       "slug": "resistor-color",
@@ -36,10 +32,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-        "arrays",
-        "strings"
-      ]
+      "topics": ["arrays", "strings"]
     },
     {
       "slug": "resistor-color-duo",
@@ -47,10 +40,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-        "strings",
-        "arrays"
-      ]
+      "topics": ["strings", "arrays"]
     },
     {
       "slug": "gigasecond",
@@ -58,9 +48,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-        "time"
-      ]
+      "topics": ["time"]
     },
     {
       "slug": "rna-transcription",
@@ -68,10 +56,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-        "strings",
-        "transforming"
-      ]
+      "topics": ["strings", "transforming"]
     },
     {
       "slug": "space-age",
@@ -79,9 +64,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-        "floating_point_numbers"
-      ]
+      "topics": ["floating_point_numbers"]
     },
     {
       "slug": "pangram",
@@ -105,10 +88,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 3,
-      "topics": [
-        "classes",
-        "conditionals"
-      ]
+      "topics": ["classes", "conditionals"]
     },
     {
       "slug": "matrix",
@@ -144,13 +124,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "math",
-        "strings",
-        "text_formatting"
-      ]
+      "topics": ["conditionals", "loops", "math", "strings", "text_formatting"]
     },
     {
       "slug": "linked-list",
@@ -174,11 +148,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": [
-        "arrays",
-        "maps",
-        "sorting"
-      ]
+      "topics": ["arrays", "maps", "sorting"]
     },
     {
       "slug": "list-ops",
@@ -186,12 +156,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 6,
-      "topics": [
-        "data_structures",
-        "loops",
-        "lists",
-        "recursion"
-      ]
+      "topics": ["data_structures", "loops", "lists", "recursion"]
     },
     {
       "slug": "robot-name",
@@ -260,11 +225,7 @@
       "core": false,
       "unlocked_by": "resistor-color",
       "difficulty": 1,
-      "topics": [
-        "booleans",
-        "integers",
-        "logic"
-      ]
+      "topics": ["booleans", "integers", "logic"]
     },
     {
       "slug": "reverse-string",
@@ -272,10 +233,7 @@
       "core": false,
       "unlocked_by": "resistor-color",
       "difficulty": 2,
-      "topics": [
-        "loops",
-        "strings"
-      ]
+      "topics": ["loops", "strings"]
     },
     {
       "slug": "collatz-conjecture",
@@ -298,12 +256,7 @@
       "core": false,
       "unlocked_by": "resistor-color",
       "difficulty": 3,
-      "topics": [
-        "conditionals",
-        "loops",
-        "exception_handling",
-        "integers"
-      ]
+      "topics": ["conditionals", "loops", "exception_handling", "integers"]
     },
     {
       "slug": "clock",
@@ -311,11 +264,7 @@
       "core": false,
       "unlocked_by": "gigasecond",
       "difficulty": 5,
-      "topics": [
-        "dates",
-        "globalization",
-        "time"
-      ]
+      "topics": ["dates", "globalization", "time"]
     },
     {
       "slug": "meetup",
@@ -338,12 +287,7 @@
       "core": false,
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
-      "topics": [
-        "loops",
-        "integers",
-        "maps",
-        "transforming"
-      ]
+      "topics": ["loops", "integers", "maps", "transforming"]
     },
     {
       "slug": "hamming",
@@ -351,12 +295,7 @@
       "core": false,
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
-      "topics": [
-        "conditionals",
-        "loops",
-        "equality",
-        "strings"
-      ]
+      "topics": ["conditionals", "loops", "equality", "strings"]
     },
     {
       "slug": "raindrops",
@@ -364,12 +303,7 @@
       "core": false,
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
-      "topics": [
-        "conditionals",
-        "integers",
-        "strings",
-        "transforming"
-      ]
+      "topics": ["conditionals", "integers", "strings", "transforming"]
     },
     {
       "slug": "nucleotide-count",
@@ -391,12 +325,7 @@
       "core": false,
       "unlocked_by": "rna-transcription",
       "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "loops",
-        "maps",
-        "strings"
-      ]
+      "topics": ["conditionals", "loops", "maps", "strings"]
     },
     {
       "slug": "allergies",
@@ -404,12 +333,7 @@
       "core": false,
       "unlocked_by": "rna-transcription",
       "difficulty": 6,
-      "topics": [
-        "arrays",
-        "bitwise_operations",
-        "conditionals",
-        "loops"
-      ]
+      "topics": ["arrays", "bitwise_operations", "conditionals", "loops"]
     },
     {
       "slug": "word-count",
@@ -417,12 +341,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 1,
-      "topics": [
-        "loops",
-        "lists",
-        "regular_expressions",
-        "strings"
-      ]
+      "topics": ["loops", "lists", "regular_expressions", "strings"]
     },
     {
       "slug": "difference-of-squares",
@@ -430,12 +349,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 3,
-      "topics": [
-        "algorithms",
-        "loops",
-        "integers",
-        "math"
-      ]
+      "topics": ["algorithms", "loops", "integers", "math"]
     },
     {
       "slug": "perfect-numbers",
@@ -443,13 +357,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 3,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "loops",
-        "integers",
-        "math"
-      ]
+      "topics": ["arrays", "conditionals", "loops", "integers", "math"]
     },
     {
       "slug": "complex-numbers",
@@ -457,9 +365,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 4,
-      "topics": [
-        "math"
-      ]
+      "topics": ["math"]
     },
     {
       "slug": "luhn",
@@ -467,12 +373,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "integers",
-        "strings"
-      ]
+      "topics": ["conditionals", "loops", "integers", "strings"]
     },
     {
       "slug": "prime-factors",
@@ -480,13 +381,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 4,
-      "topics": [
-        "algorithms",
-        "conditionals",
-        "loops",
-        "integers",
-        "math"
-      ]
+      "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
     },
     {
       "slug": "grains",
@@ -494,10 +389,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 5,
-      "topics": [
-        "loops",
-        "integers"
-      ]
+      "topics": ["loops", "integers"]
     },
     {
       "slug": "pythagorean-triplet",
@@ -505,13 +397,7 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 5,
-      "topics": [
-        "algorithms",
-        "conditionals",
-        "loops",
-        "integers",
-        "math"
-      ]
+      "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
     },
     {
       "slug": "palindrome-products",
@@ -534,10 +420,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 1,
-      "topics": [
-        "filtering",
-        "strings"
-      ]
+      "topics": ["filtering", "strings"]
     },
     {
       "slug": "acronym",
@@ -545,12 +428,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 2,
-      "topics": [
-        "loops",
-        "regular_expressions",
-        "strings",
-        "transforming"
-      ]
+      "topics": ["loops", "regular_expressions", "strings", "transforming"]
     },
     {
       "slug": "high-scores",
@@ -558,9 +436,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 2,
-      "topics": [
-        "arrays"
-      ]
+      "topics": ["arrays"]
     },
     {
       "slug": "isogram",
@@ -568,10 +444,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 2,
-      "topics": [
-        "filtering",
-        "strings"
-      ]
+      "topics": ["filtering", "strings"]
     },
     {
       "slug": "matching-brackets",
@@ -593,10 +466,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 3,
-      "topics": [
-        "parsing",
-        "transforming"
-      ]
+      "topics": ["parsing", "transforming"]
     },
     {
       "slug": "series",
@@ -604,12 +474,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 3,
-      "topics": [
-        "loops",
-        "exception_handling",
-        "strings",
-        "text_formatting"
-      ]
+      "topics": ["loops", "exception_handling", "strings", "text_formatting"]
     },
     {
       "slug": "largest-series-product",
@@ -648,13 +513,7 @@
       "core": false,
       "unlocked_by": "matrix",
       "difficulty": 4,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "loops",
-        "matrices",
-        "strings"
-      ]
+      "topics": ["arrays", "conditionals", "loops", "matrices", "strings"]
     },
     {
       "slug": "spiral-matrix",
@@ -709,11 +568,7 @@
       "core": false,
       "unlocked_by": "matrix",
       "difficulty": 8,
-      "topics": [
-        "domain_specific_languages",
-        "parsing",
-        "stacks"
-      ]
+      "topics": ["domain_specific_languages", "parsing", "stacks"]
     },
     {
       "slug": "food-chain",
@@ -721,10 +576,7 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 4,
-      "topics": [
-        "algorithms",
-        "text_formatting"
-      ]
+      "topics": ["algorithms", "text_formatting"]
     },
     {
       "slug": "house",
@@ -732,13 +584,7 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 4,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "loops",
-        "recursion",
-        "strings"
-      ]
+      "topics": ["arrays", "conditionals", "loops", "recursion", "strings"]
     },
     {
       "slug": "isbn-verifier",
@@ -804,11 +650,7 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "loops",
-        "strings"
-      ]
+      "topics": ["conditionals", "loops", "strings"]
     },
     {
       "slug": "resistor-color-trio",
@@ -816,10 +658,7 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "loops"
-      ]
+      "topics": ["conditionals", "loops"]
     },
     {
       "slug": "say",
@@ -858,11 +697,7 @@
       "core": false,
       "unlocked_by": "pascals-triangle",
       "difficulty": 5,
-      "topics": [
-        "algorithms",
-        "floating_point_numbers",
-        "math"
-      ]
+      "topics": ["algorithms", "floating_point_numbers", "math"]
     },
     {
       "slug": "sublist",
@@ -870,10 +705,7 @@
       "core": false,
       "unlocked_by": "linked-list",
       "difficulty": 4,
-      "topics": [
-        "arrays",
-        "lists"
-      ]
+      "topics": ["arrays", "lists"]
     },
     {
       "slug": "binary-search-tree",
@@ -881,12 +713,7 @@
       "core": false,
       "unlocked_by": "linked-list",
       "difficulty": 6,
-      "topics": [
-        "algorithms",
-        "conditionals",
-        "loops",
-        "recursion"
-      ]
+      "topics": ["algorithms", "conditionals", "loops", "recursion"]
     },
     {
       "slug": "custom-set",
@@ -911,13 +738,7 @@
       "core": false,
       "unlocked_by": "linked-list",
       "difficulty": 7,
-      "topics": [
-        "algorithms",
-        "arrays",
-        "conditionals",
-        "loops",
-        "recursion"
-      ]
+      "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
     },
     {
       "slug": "circular-buffer",
@@ -940,11 +761,7 @@
       "core": false,
       "unlocked_by": "linked-list",
       "difficulty": 8,
-      "topics": [
-        "arrays",
-        "data_structures",
-        "lists"
-      ]
+      "topics": ["arrays", "data_structures", "lists"]
     },
     {
       "slug": "word-search",
@@ -968,10 +785,7 @@
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 5,
-      "topics": [
-        "bitwise_operations",
-        "transforming"
-      ]
+      "topics": ["bitwise_operations", "transforming"]
     },
     {
       "slug": "two-bucket",
@@ -995,10 +809,7 @@
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 7,
-      "topics": [
-        "algorithms",
-        "games"
-      ]
+      "topics": ["algorithms", "games"]
     },
     {
       "slug": "scale-generator",
@@ -1006,12 +817,7 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 3,
-      "topics": [
-        "loops",
-        "pattern_recognition",
-        "strings",
-        "arrays"
-      ]
+      "topics": ["loops", "pattern_recognition", "strings", "arrays"]
     },
     {
       "slug": "connect",
@@ -1019,14 +825,7 @@
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 7,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "loops",
-        "games",
-        "maps",
-        "parsing"
-      ]
+      "topics": ["arrays", "conditionals", "loops", "games", "maps", "parsing"]
     },
     {
       "slug": "bowling",
@@ -1066,12 +865,7 @@
       "core": false,
       "unlocked_by": "list-ops",
       "difficulty": 5,
-      "topics": [
-        "algorithms",
-        "callbacks",
-        "loops",
-        "lists"
-      ]
+      "topics": ["algorithms", "callbacks", "loops", "lists"]
     },
     {
       "slug": "flatten-array",
@@ -1079,10 +873,7 @@
       "core": false,
       "unlocked_by": "list-ops",
       "difficulty": 5,
-      "topics": [
-        "arrays",
-        "recursion"
-      ]
+      "topics": ["arrays", "recursion"]
     },
     {
       "slug": "nth-prime",
@@ -1105,13 +896,7 @@
       "core": false,
       "unlocked_by": "robot-name",
       "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "loops",
-        "integers",
-        "math",
-        "recursion"
-      ]
+      "topics": ["conditionals", "loops", "integers", "math", "recursion"]
     },
     {
       "slug": "rotational-cipher",
@@ -1119,12 +904,7 @@
       "core": false,
       "unlocked_by": "simple-cipher",
       "difficulty": 2,
-      "topics": [
-        "conditionals",
-        "strings",
-        "text_formatting",
-        "transforming"
-      ]
+      "topics": ["conditionals", "strings", "text_formatting", "transforming"]
     },
     {
       "slug": "diffie-hellman",
@@ -1147,12 +927,7 @@
       "core": false,
       "difficulty": 4,
       "unlocked_by": "simple-cipher",
-      "topics": [
-        "algorithms",
-        "arrays",
-        "filtering",
-        "math"
-      ]
+      "topics": ["algorithms", "arrays", "filtering", "math"]
     },
     {
       "slug": "atbash-cipher",
@@ -1221,13 +996,7 @@
       "core": false,
       "unlocked_by": "secret-handshake",
       "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "loops",
-        "integers",
-        "lists",
-        "math"
-      ]
+      "topics": ["conditionals", "loops", "integers", "lists", "math"]
     },
     {
       "slug": "change",
@@ -1235,11 +1004,7 @@
       "core": false,
       "unlocked_by": "secret-handshake",
       "difficulty": 8,
-      "topics": [
-        "algorithms",
-        "performance",
-        "searching"
-      ]
+      "topics": ["algorithms", "performance", "searching"]
     },
     {
       "slug": "protein-translation",
@@ -1247,12 +1012,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-        "algorithms",
-        "conditionals",
-        "loops",
-        "strings"
-      ]
+      "topics": ["algorithms", "conditionals", "loops", "strings"]
     },
     {
       "slug": "armstrong-numbers",
@@ -1260,10 +1020,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-        "algorithms",
-        "math"
-      ]
+      "topics": ["algorithms", "math"]
     },
     {
       "slug": "run-length-encoding",
@@ -1295,12 +1052,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": [
-        "conditionals",
-        "loops",
-        "pattern_recognition",
-        "transforming"
-      ]
+      "topics": ["conditionals", "loops", "pattern_recognition", "transforming"]
     },
     {
       "slug": "all-your-base",
@@ -1323,11 +1075,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 7,
-      "topics": [
-        "algorithms",
-        "arrays",
-        "games"
-      ]
+      "topics": ["algorithms", "arrays", "games"]
     },
     {
       "slug": "queen-attack",
@@ -1351,11 +1099,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": [
-        "algorithms",
-        "events",
-        "reactive_programming"
-      ]
+      "topics": ["algorithms", "events", "reactive_programming"]
     },
     {
       "slug": "zipper",
@@ -1363,11 +1107,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": [
-        "recursion",
-        "searching",
-        "trees"
-      ]
+      "topics": ["recursion", "searching", "trees"]
     },
     {
       "slug": "dnd-character",
@@ -1375,10 +1115,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-        "classes",
-        "randomness"
-      ]
+      "topics": ["classes", "randomness"]
     },
     {
       "slug": "trinary",
@@ -1460,11 +1197,7 @@
       "core": false,
       "unlocked_by": "matrix",
       "difficulty": 4,
-      "topics": [
-        "files",
-        "searching",
-        "text_formatting"
-      ]
+      "topics": ["files", "searching", "text_formatting"]
     },
     {
       "slug": "yacht",
@@ -1472,12 +1205,7 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 4,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "filtering",
-        "games"
-      ]
+      "topics": ["arrays", "conditionals", "filtering", "games"]
     },
     {
       "slug": "dominoes",
@@ -1485,9 +1213,7 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 6,
-      "topics": [
-        "graph_theory"
-      ]
+      "topics": ["graph_theory"]
     }
   ]
 }

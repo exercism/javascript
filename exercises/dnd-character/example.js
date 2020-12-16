@@ -23,7 +23,7 @@ export class Character {
   }
 }
 
-export const abilityModifier = abilityScore => {
+export const abilityModifier = (abilityScore) => {
   if (abilityScore < 3) {
     throw new Error('Ability scores must be at least 3');
   }

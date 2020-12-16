@@ -1,4 +1,4 @@
-export const rows = input => {
+export const rows = (input) => {
   const inputIndex = input.charCodeAt() - 65;
   let output = [];
   let i = 0;
@@ -13,9 +13,9 @@ export const rows = input => {
 
 function getLine(inputIndex, index) {
   const difference = inputIndex - index;
-  return `${spaceTimes(difference) +
-    printAlphabets(index) +
-    spaceTimes(difference)}`;
+  return `${
+    spaceTimes(difference) + printAlphabets(index) + spaceTimes(difference)
+  }`;
 }
 
 function printAlphabets(index) {

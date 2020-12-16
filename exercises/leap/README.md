@@ -10,7 +10,7 @@ on every year that is evenly divisible by 4
     unless the year is also evenly divisible by 400
 ```
 
-For example, 1997 is not a leap year, but 1996 is.  1900 is not a leap
+For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap
 year, but 2000 is.
 
 ## Notes
@@ -53,7 +53,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -70,4 +69,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 JavaRanch Cattle Drive, exercise 3 [http://www.javaranch.com/leap.jsp](http://www.javaranch.com/leap.jsp)
-

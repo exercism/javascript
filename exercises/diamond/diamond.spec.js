@@ -21,7 +21,7 @@ describe('Diamond', () => {
       'D     D',
       ' C   C ',
       '  B B  ',
-      '   A   '
+      '   A   ',
     ]);
   });
 
@@ -77,7 +77,7 @@ describe('Diamond', () => {
       '                      D     D                      ',
       '                       C   C                       ',
       '                        B B                        ',
-      '                         A                         '
+      '                         A                         ',
     ]);
   });
 });

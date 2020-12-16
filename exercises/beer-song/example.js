@@ -41,8 +41,8 @@ function verse(number) {
 export const recite = (startBottles, takeDown) => {
   let verses = [];
   for (let i = startBottles; i > startBottles - takeDown; i--) {
-    if(verses.length > 0) {
-      verses.push('')
+    if (verses.length > 0) {
+      verses.push('');
     }
     verses = verses.concat(verse(i));
   }

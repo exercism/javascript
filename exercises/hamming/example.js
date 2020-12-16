@@ -14,5 +14,6 @@ export const compute = (strand1, strand2) => {
     throw new Error('left and right strands must be of equal length');
   }
 
-  return [...strand1].filter((element, index) => element !== strand2[index]).length;
+  return [...strand1].filter((element, index) => element !== strand2[index])
+    .length;
 };

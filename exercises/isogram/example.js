@@ -1,4 +1,4 @@
-export const isIsogram = string => {
+export const isIsogram = (string) => {
   const stringNoSpaceOrHyphen = string.replace(/ |-/g, '');
   const uniqueLetters = stringNoSpaceOrHyphen
     .toLowerCase()

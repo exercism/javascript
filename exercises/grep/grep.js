@@ -15,8 +15,8 @@
 //
 // Read more about shebangs here: https://en.wikipedia.org/wiki/Shebang_(Unix)
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 /**
  * Reads the given file and returns lines.
@@ -27,16 +27,16 @@ const path = require("path");
  * @returns {string[]} the lines
  */
 function readLines(file) {
-  const data = fs.readFileSync(path.resolve(file), { encoding: "utf-8" });
+  const data = fs.readFileSync(path.resolve(file), { encoding: 'utf-8' });
   return data.split(/\r?\n/);
 }
 
 const VALID_OPTIONS = [
-  "n", // add line numbers
-  "l", // print file names where pattern is found
-  "i", // ignore case
-  "v", // reverse files results
-  "x", // match entire line
+  'n', // add line numbers
+  'l', // print file names where pattern is found
+  'i', // ignore case
+  'v', // reverse files results
+  'x', // match entire line
 ];
 
 const ARGS = process.argv;

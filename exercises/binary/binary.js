@@ -5,10 +5,10 @@
 
 export class Binary {
   constructor() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 
   toDecimal() {
-    throw new Error("Remove this statement and implement this function");
+    throw new Error('Remove this statement and implement this function');
   }
 }

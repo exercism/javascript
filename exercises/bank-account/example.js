@@ -1,5 +1,4 @@
 export class BankAccount {
-
   open() {
     if (this._open) {
       throw new ValueError();
@@ -51,7 +50,6 @@ export class BankAccount {
   get isOpen() {
     return this._open;
   }
-
 }
 
 export class ValueError extends Error {}

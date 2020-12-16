@@ -1,4 +1,7 @@
-import CircularBuffer, { BufferFullError, BufferEmptyError } from './circular-buffer';
+import CircularBuffer, {
+  BufferFullError,
+  BufferEmptyError,
+} from './circular-buffer';
 
 describe('CircularBuffer', () => {
   test('reading an empty buffer throws a BufferEmptyError', () => {
@@ -52,11 +55,11 @@ describe('CircularBuffer', () => {
     expect(buffer.read()).toBe('3');
   });
 
-  xtest('writes of undefined or null don\'t occupy buffer', () => {
+  xtest("writes of undefined or null don't occupy buffer", () => {
     const buffer = new CircularBuffer(3);
     buffer.write(null);
     buffer.write(undefined);
-    [1, 2, 3].map(i => buffer.write(i.toString()));
+    [1, 2, 3].map((i) => buffer.write(i.toString()));
     expect(buffer.read()).toBe('1');
   });
 
@@ -88,12 +91,12 @@ describe('CircularBuffer', () => {
 
   xtest('alternate force write and read into full buffer', () => {
     const buffer = new CircularBuffer(5);
-    [1, 2, 3].map(i => buffer.write(i.toString()));
+    [1, 2, 3].map((i) => buffer.write(i.toString()));
     buffer.read();
     buffer.read();
     buffer.write('4');
     buffer.read();
-    [5, 6, 7, 8].map(i => buffer.write(i.toString()));
+    [5, 6, 7, 8].map((i) => buffer.write(i.toString()));
     buffer.forceWrite('A');
     buffer.forceWrite('B');
     expect(buffer.read()).toBe('6');

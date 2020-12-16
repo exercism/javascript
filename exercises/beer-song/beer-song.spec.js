@@ -6,35 +6,35 @@ describe('Beer Song', () => {
       test('first generic verse', () => {
         expect(recite(99, 1)).toEqual([
           '99 bottles of beer on the wall, 99 bottles of beer.',
-          'Take one down and pass it around, 98 bottles of beer on the wall.'
+          'Take one down and pass it around, 98 bottles of beer on the wall.',
         ]);
       });
 
       xtest('last generic verse', () => {
         expect(recite(3, 1)).toEqual([
           '3 bottles of beer on the wall, 3 bottles of beer.',
-          'Take one down and pass it around, 2 bottles of beer on the wall.'
+          'Take one down and pass it around, 2 bottles of beer on the wall.',
         ]);
       });
 
       xtest('verse with 2 bottles', () => {
         expect(recite(2, 1)).toEqual([
           '2 bottles of beer on the wall, 2 bottles of beer.',
-          'Take one down and pass it around, 1 bottle of beer on the wall.'
+          'Take one down and pass it around, 1 bottle of beer on the wall.',
         ]);
       });
 
       xtest('verse with 1 bottle', () => {
         expect(recite(1, 1)).toEqual([
           '1 bottle of beer on the wall, 1 bottle of beer.',
-          'Take it down and pass it around, no more bottles of beer on the wall.'
+          'Take it down and pass it around, no more bottles of beer on the wall.',
         ]);
       });
 
       xtest('verse with 0 bottles', () => {
         expect(recite(0, 1)).toEqual([
           'No more bottles of beer on the wall, no more bottles of beer.',
-          'Go to the store and buy some more, 99 bottles of beer on the wall.'
+          'Go to the store and buy some more, 99 bottles of beer on the wall.',
         ]);
       });
     });
@@ -48,7 +48,7 @@ describe('Beer Song', () => {
           'Take one down and pass it around, 98 bottles of beer on the wall.',
           '',
           '98 bottles of beer on the wall, 98 bottles of beer.',
-          'Take one down and pass it around, 97 bottles of beer on the wall.'
+          'Take one down and pass it around, 97 bottles of beer on the wall.',
         ]);
       });
 
@@ -61,7 +61,7 @@ describe('Beer Song', () => {
           'Take it down and pass it around, no more bottles of beer on the wall.',
           '',
           'No more bottles of beer on the wall, no more bottles of beer.',
-          'Go to the store and buy some more, 99 bottles of beer on the wall.'
+          'Go to the store and buy some more, 99 bottles of beer on the wall.',
         ]);
       });
 
@@ -365,7 +365,7 @@ describe('Beer Song', () => {
           'Take it down and pass it around, no more bottles of beer on the wall.',
           '',
           'No more bottles of beer on the wall, no more bottles of beer.',
-          'Go to the store and buy some more, 99 bottles of beer on the wall.'
+          'Go to the store and buy some more, 99 bottles of beer on the wall.',
         ]);
       });
     });

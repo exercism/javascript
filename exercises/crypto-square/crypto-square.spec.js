@@ -33,7 +33,13 @@ describe('Crypto', () => {
 
   xtest('plain text segments', () => {
     const crypto = new Crypto('Never vex thine heart with idle woes');
-    expect(crypto.plaintextSegments()).toEqual(['neverv', 'exthin', 'eheart', 'withid', 'lewoes']);
+    expect(crypto.plaintextSegments()).toEqual([
+      'neverv',
+      'exthin',
+      'eheart',
+      'withid',
+      'lewoes',
+    ]);
   });
 
   xtest('plain text segments', () => {

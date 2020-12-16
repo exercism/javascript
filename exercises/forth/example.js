@@ -1,5 +1,5 @@
 export class Forth {
-  constructor(){
+  constructor() {
     this.stack = [];
     this.commands = Forth.basicCommands();
   }
@@ -16,7 +16,10 @@ export class Forth {
         // word definition
         const semicolon = words.indexOf(';', t);
         if (semicolon === -1) throw new Error('Unterminated definition');
-        this.defineCommand(words[t + 1], words.slice(t + 2, semicolon).join(' '));
+        this.defineCommand(
+          words[t + 1],
+          words.slice(t + 2, semicolon).join(' ')
+        );
         t = semicolon;
       } else {
         // commands
@@ -26,12 +29,12 @@ export class Forth {
       }
     }
   }
-  defineCommand(word, subprogram){
+  defineCommand(word, subprogram) {
     if (Forth.isKeyword(word)) throw new Error('Invalid definition');
     this.commands[word] = {
       arity: 0, // handled inside the call
-      execute: this.evaluate.bind(this, subprogram)
-    }
+      execute: this.evaluate.bind(this, subprogram),
+    };
   }
   performCommand(command) {
     if (command.arity > this.stack.length) throw new Error('Stack empty');
@@ -48,14 +51,17 @@ export class Forth {
       '+': { arity: 2, execute: (a, b) => [a + b] },
       '-': { arity: 2, execute: (a, b) => [a - b] },
       '*': { arity: 2, execute: (a, b) => [a * b] },
-      '/': { arity: 2, execute: (a, b) => {
-        if (b === 0) throw new Error('Division by zero');
-        return [Math.floor(a / b)];
-      } },
-      dup: { arity: 1, execute: a => [a, a] },
+      '/': {
+        arity: 2,
+        execute: (a, b) => {
+          if (b === 0) throw new Error('Division by zero');
+          return [Math.floor(a / b)];
+        },
+      },
+      dup: { arity: 1, execute: (a) => [a, a] },
       drop: { arity: 1, execute: () => {} },
       swap: { arity: 2, execute: (a, b) => [b, a] },
-      over: { arity: 2, execute: (a, b) => [a, b, a] }
+      over: { arity: 2, execute: (a, b) => [a, b, a] },
     };
   }
 }

@@ -5,7 +5,7 @@
  *
  * @return {BigInt} Square of num
  */
-export const square = num => {
+export const square = (num) => {
   if (num < 1 || num > 64) {
     throw new Error('square must be between 1 and 64');
   }

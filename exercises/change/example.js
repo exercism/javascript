@@ -45,7 +45,7 @@ export class Change {
     candidates[target] = 0;
     candidates.fill(0);
 
-    const isNumber = element => typeof (element) === 'number';
+    const isNumber = (element) => typeof element === 'number';
 
     // save a new candidate to the candidates array
     const saveCandidate = (candidate) => {
@@ -72,14 +72,16 @@ export class Change {
     };
 
     // is everthing searched?
-    const isDone = () => (
-      candidates.every(candidate => isNumber(candidate) || candidate.isSearched())
-    );
+    const isDone = () =>
+      candidates.every(
+        (candidate) => isNumber(candidate) || candidate.isSearched()
+      );
 
     // get the next unsearched member of the candidate array
-    const getNext = () => (
-      candidates.find(candidate => !isNumber(candidate) && !candidate.isSearched())
-    );
+    const getNext = () =>
+      candidates.find(
+        (candidate) => !isNumber(candidate) && !candidate.isSearched()
+      );
 
     // for the candidate, generate another candate for each of the possible coins
     const branch = (current) => {
@@ -103,9 +105,10 @@ export class Change {
     }
 
     if (target < Math.min.apply(null, coinArray)) {
-      throw new Error(`The total ${target} cannot be represented in the given currency.`);
+      throw new Error(
+        `The total ${target} cannot be represented in the given currency.`
+      );
     }
-
 
     initialize();
 
@@ -118,6 +121,8 @@ export class Change {
 
     // print the result
     if (!isNumber(candidates[target])) return candidates[target].getCoins();
-    throw new Error(`The total ${target} cannot be represented in the given currency.`);
+    throw new Error(
+      `The total ${target} cannot be represented in the given currency.`
+    );
   }
 }

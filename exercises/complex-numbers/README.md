@@ -22,9 +22,9 @@ Dividing a complex number `a + i * b` by another `c + i * d` gives:
 Raising e to a complex exponent can be expressed as `e^(a + i * b) = e^a * e^(i * b)`, the last term of which is given by Euler's formula `e^(i * b) = cos(b) + i * sin(b)`.
 
 Implement the following operations:
- - addition, subtraction, multiplication and division of two complex numbers,
- - conjugate, absolute value, exponent of a given complex number.
 
+- addition, subtraction, multiplication and division of two complex numbers,
+- conjugate, absolute value, exponent of a given complex number.
 
 Assume the programming language you are using does not have an implementation of complex numbers.
 
@@ -58,7 +58,6 @@ In the test suites all tests but the first have been skipped.
 Once you get a test passing, you can enable the next one by changing `xtest` to
 `test`.
 
-
 ## Submitting Solutions
 
 Once you have a solution ready, you can submit it using:
@@ -75,4 +74,3 @@ completed the exercise.
 ## Exercise Source Credits
 
 Wikipedia [https://en.wikipedia.org/wiki/Complex_number](https://en.wikipedia.org/wiki/Complex_number)
-

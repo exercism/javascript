@@ -10,7 +10,7 @@ describe('Anagram', () => {
   xtest('detects two anagrams', () => {
     expect(findAnagrams('master', ['stream', 'pigeon', 'maters'])).toEqual([
       'stream',
-      'maters'
+      'maters',
     ]);
   });
 
@@ -32,7 +32,7 @@ describe('Anagram', () => {
         'regally',
         'clergy',
         'largely',
-        'leading'
+        'leading',
       ])
     ).toEqual(['gallery', 'regally', 'largely']);
   });
@@ -77,7 +77,7 @@ describe('Anagram', () => {
 
   xtest('words other than themselves can be anagrams', () => {
     expect(findAnagrams('LISTEN', ['Listen', 'Silent', 'LISTEN'])).toEqual([
-      'Silent'
+      'Silent',
     ]);
   });
 });

@@ -1,7 +1,7 @@
 export class CustomSet {
   constructor(data = []) {
     this.data = {};
-    data.forEach(el => this.add(el));
+    data.forEach((el) => this.add(el));
   }
 
   add(el) {
@@ -31,7 +31,9 @@ export class CustomSet {
   }
 
   difference(other) {
-    return new CustomSet(Object.keys(this.data).filter(el => other.data[el] === undefined));
+    return new CustomSet(
+      Object.keys(this.data).filter((el) => other.data[el] === undefined)
+    );
   }
 
   disjoint(other) {
