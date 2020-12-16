@@ -1,4 +1,4 @@
-name: CI
+name: javascript / format
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  verify-code-formatting:
+  verify:
     name: Verify formatting
     runs-on: ubuntu-latest
     steps:
