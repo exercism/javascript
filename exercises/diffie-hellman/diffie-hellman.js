@@ -4,15 +4,15 @@
 //
 
 export class DiffieHellman {
-  constructor() {
+  constructor(p, g) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  getPublicKeyFromPrivateKey() {
+  getPublicKey(privateKey) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  getSharedSecret() {
+  getSecret(theirPublicKey, myPrivateKey) {
     throw new Error('Remove this statement and implement this function');
   }
 }
