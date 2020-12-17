@@ -79,39 +79,32 @@ describe('D&D Character', () => {
     });
   });
 
-  describe('Ability scores calculated properly', () => {
-    xtest('ability within range', () => {
-      expect(Character.rollAbility()).toBeLessThanOrEqual(18);
-      expect(Character.rollAbility()).toBeGreaterThanOrEqual(3);
-    });
-
-    xtest('ability scores only calculated once', () => {
-      const Drizzt = new Character();
-
-      expect(Drizzt.strength).toEqual(Drizzt.strength);
-    });
+  xtest('random ability within range', () => {
+    expect(Character.rollAbility()).toBeLessThanOrEqual(18);
+    expect(Character.rollAbility()).toBeGreaterThanOrEqual(3);
   });
 
-  describe('Random character is valid', () => {
-    xtest('character is valid', () => {
-      const Drizzt = new Character();
+  xtest('random character is valid', () => {
+    const Drizzt = new Character();
 
-      expect(Drizzt.strength).toBeLessThanOrEqual(18);
-      expect(Drizzt.strength).toBeGreaterThanOrEqual(3);
-      expect(Drizzt.dexterity).toBeLessThanOrEqual(18);
-      expect(Drizzt.dexterity).toBeGreaterThanOrEqual(3);
-      expect(Drizzt.constitution).toBeLessThanOrEqual(18);
-      expect(Drizzt.constitution).toBeGreaterThanOrEqual(3);
-      expect(Drizzt.intelligence).toBeLessThanOrEqual(18);
-      expect(Drizzt.intelligence).toBeGreaterThanOrEqual(3);
-      expect(Drizzt.wisdom).toBeLessThanOrEqual(18);
-      expect(Drizzt.wisdom).toBeGreaterThanOrEqual(3);
-      expect(Drizzt.charisma).toBeLessThanOrEqual(18);
-      expect(Drizzt.charisma).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.strength).toBeLessThanOrEqual(18);
+    expect(Drizzt.strength).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.dexterity).toBeLessThanOrEqual(18);
+    expect(Drizzt.dexterity).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.constitution).toBeLessThanOrEqual(18);
+    expect(Drizzt.constitution).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.intelligence).toBeLessThanOrEqual(18);
+    expect(Drizzt.intelligence).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.wisdom).toBeLessThanOrEqual(18);
+    expect(Drizzt.wisdom).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.charisma).toBeLessThanOrEqual(18);
+    expect(Drizzt.charisma).toBeGreaterThanOrEqual(3);
+    expect(Drizzt.hitpoints).toEqual(10 + abilityModifier(Drizzt.constitution));
+  });
 
-      expect(Drizzt.hitpoints).toEqual(
-        10 + abilityModifier(Drizzt.constitution)
-      );
-    });
+  xtest('each ability is only calculated once', () => {
+    const Drizzt = new Character();
+
+    expect(Drizzt.strength).toEqual(Drizzt.strength);
   });
 });
