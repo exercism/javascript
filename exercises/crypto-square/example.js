@@ -9,8 +9,16 @@ export class Crypto {
 
   get ciphertext() {
     const chunkSize = this.size;
+    if (chunkSize === 0) {
+      return '';
+    }
+
     const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g');
-    return this.ciphertextSegments().join('').match(splitRegex).join(' ');
+    return this.ciphertextSegments()
+      .join('')
+      .match(splitRegex)
+      .map((item) => item.padEnd(chunkSize, ' '))
+      .join(' ');
   }
 
   get size() {
