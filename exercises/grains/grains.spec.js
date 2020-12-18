@@ -30,32 +30,32 @@
 import { square, total } from './grains';
 
 describe('Grains', () => {
-  describe('Returns The Number Of Grains On The Square', () => {
-    test('1', () => {
+  describe('returns the number of grains on the square', () => {
+    test('grains on square 1', () => {
       expect(square(1).toString()).toEqual('1');
     });
 
-    xtest('2', () => {
+    xtest('grains on square 2', () => {
       expect(square(2).toString()).toEqual('2');
     });
 
-    xtest('3', () => {
+    xtest('grains on square 3', () => {
       expect(square(3).toString()).toEqual('4');
     });
 
-    xtest('4', () => {
+    xtest('grains on square 4', () => {
       expect(square(4).toString()).toEqual('8');
     });
 
-    xtest('16', () => {
+    xtest('grains on square 16', () => {
       expect(square(16).toString()).toEqual('32768');
     });
 
-    xtest('32', () => {
+    xtest('grains on square 32', () => {
       expect(square(32).toString()).toEqual('2147483648');
     });
 
-    xtest('64', () => {
+    xtest('grains on square 64', () => {
       expect(square(64).toString()).toEqual('9223372036854775808');
     });
 
