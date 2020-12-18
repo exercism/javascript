@@ -1,21 +1,28 @@
-function clone(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
-
 export class GradeSchool {
   constructor() {
-    this.db = {};
+    this.students = new Map();
   }
 
   add(student, level) {
-    this.db[level] = this.grade(level).concat(student).sort();
+    this.students.set(student, level);
   }
 
   grade(level) {
-    return this.db[level] ? clone(this.db[level]).sort() : [];
+    return Array.from(this.students.entries())
+      .filter(([, studentGrade]) => studentGrade === level)
+      .map(([student]) => student)
+      .sort();
   }
 
   roster() {
-    return clone(this.db);
+    const result = {};
+
+    Array.from(this.students.entries()).forEach(([, studentGrade]) => {
+      if (!result[studentGrade]) {
+        result[studentGrade] = this.grade(studentGrade);
+      }
+    });
+
+    return result;
   }
 }
