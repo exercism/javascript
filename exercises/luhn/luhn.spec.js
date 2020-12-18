@@ -29,6 +29,10 @@ describe('Luhn', () => {
     expect(valid('8273 1232 7352 0569')).toEqual(false);
   });
 
+  xtest('invalid long number with an even remainder', () => {
+    expect(valid('1 2345 6789 1234 5678 9012')).toEqual(false);
+  });
+
   xtest('valid number with an even number of digits', () => {
     expect(valid('095 245 88')).toEqual(true);
   });
