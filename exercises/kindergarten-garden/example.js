@@ -1,4 +1,4 @@
-const defaultChildren = [
+const DEFAULT_STUDENTS = [
   'Alice',
   'Bob',
   'Charlie',
@@ -13,7 +13,7 @@ const defaultChildren = [
   'Larry',
 ];
 
-const plantCodes = {
+const PLANT_CODES = {
   G: 'grass',
   V: 'violets',
   R: 'radishes',
@@ -33,16 +33,22 @@ function getPlants(pots, index) {
 function parse(diagram) {
   return diagram
     .split('\n')
-    .map((row) => [...row].map((sign) => plantCodes[sign]));
+    .map((row) => [...row].map((sign) => PLANT_CODES[sign]));
 }
 
 export class Garden {
-  constructor(diagram, students) {
-    this.students = students || defaultChildren;
+  constructor(diagram, students = DEFAULT_STUDENTS) {
+    this.students = students;
     this.students.sort();
 
+    this.plots = {};
+
     this.students.forEach((student, index) => {
-      this[student.toLowerCase()] = getPlants(parse(diagram), index);
+      this.plots[student] = getPlants(parse(diagram), index);
     });
+  }
+
+  plants(student) {
+    return this.plots[student];
   }
 }
