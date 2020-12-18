@@ -2,7 +2,7 @@
 
 export class Binary {
   constructor(binary) {
-    this.binary = binary.match(/^[01]*$/) ? parseInt(binary, 2) : 0;
+    this.binary = binary.match(/^[01]*$/) ? parseInt(binary, 2) : null;
   }
 
   toDecimal() {
