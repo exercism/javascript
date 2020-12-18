@@ -2,7 +2,7 @@ import { flatten } from './flatten-array.js';
 
 describe('FlattenArray', () => {
   xtest('empty', () => {
-    expect(flatten([]).toEqual([]));
+    expect(flatten([])).toEqual([]);
   });
 
   xtest('no nesting', () => {
