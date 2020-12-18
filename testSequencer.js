@@ -1,4 +1,7 @@
 // testSequencer.js
+//
+// This test sequencer can be used to debug tests.
+//
 const Sequencer = require('@jest/test-sequencer').default;
 
 class CustomSequencer extends Sequencer {
