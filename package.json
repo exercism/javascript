@@ -26,7 +26,8 @@
   "jest": {
     "modulePathIgnorePatterns": [
       "package.json"
-    ]
+    ],
+    "testSequencer": "./testSequencer.js"
   },
   "scripts": {
     "test": "jest --no-cache ./*",
