@@ -15,7 +15,7 @@ describe(')', () => {
     expect(annotate(input)).toEqual(expected);
   });
 
-  xtest('handles board with only mines', () => {
+  xtest('handles minefield with only mines', () => {
     const input = ['***', '***', '***'];
     const expected = ['***', '***', '***'];
     expect(annotate(input)).toEqual(expected);
@@ -63,7 +63,7 @@ describe(')', () => {
     expect(annotate(input)).toEqual(expected);
   });
 
-  xtest('handles large board', () => {
+  xtest('handles large minefield', () => {
     const input = [' *  * ', '  *   ', '    * ', '   * *', ' *  * ', '      '];
     const expected = [
       '1*22*1',
