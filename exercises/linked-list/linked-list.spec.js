@@ -93,8 +93,8 @@ describe('LinkedList', () => {
     const list = new LinkedList();
     list.push(41);
     list.push(59);
-    list.pop();
-    list.pop();
+    list.shift();
+    list.shift();
 
     list.push(47);
     expect(list.count()).toBe(1);
@@ -119,6 +119,32 @@ describe('LinkedList', () => {
     expect(list.count()).toBe(2);
     expect(list.pop()).toBe(79);
     expect(list.shift()).toBe(71);
+  });
+
+  xtest('deletes the element with the specified value from the list, re-assigns tail', () => {
+    const list = new LinkedList();
+    list.push(71);
+    list.push(83);
+    list.push(79);
+
+    list.delete(83);
+
+    expect(list.count()).toBe(2);
+    expect(list.pop()).toBe(79);
+    expect(list.pop()).toBe(71);
+  });
+
+  xtest('deletes the element with the specified value from the list, re-assigns head', () => {
+    const list = new LinkedList();
+    list.push(71);
+    list.push(83);
+    list.push(79);
+
+    list.delete(83);
+
+    expect(list.count()).toBe(2);
+    expect(list.shift()).toBe(71);
+    expect(list.shift()).toBe(79);
   });
 
   xtest('deletes the first of two elements', () => {
