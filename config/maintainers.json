@@ -140,6 +140,16 @@
       "link_url": null,
       "avatar_url": null,
       "bio": "Full-stack developer and lover of all things linguistic. Teaching is the best way to learn."
+    },
+    {
+      "github_username": "evelynstender",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Evelyn Stender",
+      "link_text": "Website",
+      "link_url": "https://evelynstender.com",
+      "avatar_url": null,
+      "bio": "Full-stack developer passionate about Javascript. Studying Go on my free time."
     }
   ]
 }
