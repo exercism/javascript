@@ -1,37 +1,70 @@
-import { Triplet } from './pythagorean-triplet';
+import { triplets } from './pythagorean-triplet';
+
+function tripletsWithSum(sum, options = {}) {
+  return triplets({ ...options, sum }).map((triplet) =>
+    triplet.toArray().sort((a, b) => a - b)
+  );
+}
 
 describe('Triplet', () => {
-  test('calculates the sum', () => {
-    expect(new Triplet(3, 4, 5).sum()).toBe(12);
+  test('triplets whose sum is 12', () => {
+    expect(tripletsWithSum(12)).toEqual([[3, 4, 5]]);
   });
 
-  xtest('calculates the product', () => {
-    expect(new Triplet(3, 4, 5).product()).toBe(60);
+  xtest('triplets whose sum is 108', () => {
+    expect(tripletsWithSum(108)).toEqual([[27, 36, 45]]);
   });
 
-  xtest('can recognize a pythagorean triplet', () => {
-    expect(new Triplet(3, 4, 5).isPythagorean()).toBe(true);
+  xtest('triplets whose sum is 1000', () => {
+    expect(tripletsWithSum(1000)).toEqual([[200, 375, 425]]);
   });
 
-  xtest('can recognize a non pythagorean triplet', () => {
-    expect(new Triplet(5, 6, 7).isPythagorean()).toBe(false);
+  xtest('no matching triplets for 1001', () => {
+    expect(tripletsWithSum(1001)).toEqual([]);
   });
 
-  xtest('can make triplets up to 10', () => {
-    const triplets = Triplet.where({ maxFactor: 10 });
-    const products = triplets.sort().map((triplet) => triplet.product());
-    expect(products).toEqual([60, 480]);
+  xtest('returns all matching triplets', () => {
+    expect(tripletsWithSum(90)).toEqual([
+      [9, 40, 41],
+      [15, 36, 39],
+    ]);
   });
 
-  xtest('can make triplets 11 through 20', () => {
-    const triplets = Triplet.where({ minFactor: 11, maxFactor: 20 });
-    const products = triplets.sort().map((triplet) => triplet.product());
-    expect(products).toEqual([3840]);
+  xtest('several matching triplets', () => {
+    expect(tripletsWithSum(840)).toEqual([
+      [40, 399, 401],
+      [56, 390, 394],
+      [105, 360, 375],
+      [120, 350, 370],
+      [140, 336, 364],
+      [168, 315, 357],
+      [210, 280, 350],
+      [240, 252, 348],
+    ]);
   });
 
-  xtest('can filter on sum', () => {
-    const triplets = Triplet.where({ sum: 180, maxFactor: 100 });
-    const products = triplets.sort().map((triplet) => triplet.product());
-    expect(products).toEqual([118080, 168480, 202500]);
+  xtest('returns triplets with no factor smaller than minimum factor', () => {
+    expect(tripletsWithSum(90, { minFactor: 10 })).toEqual([[15, 36, 39]]);
+  });
+
+  xtest('returns triplets with no factor larger than maximum factor', () => {
+    expect(tripletsWithSum(840, { maxFactor: 349 })).toEqual([[240, 252, 348]]);
+  });
+
+  xtest('returns triplets with factors in range', () => {
+    expect(tripletsWithSum(840, { maxFactor: 352, minFactor: 150 })).toEqual([
+      [210, 280, 350],
+      [240, 252, 348],
+    ]);
+  });
+
+  test.skip('triplets for large number', () => {
+    expect(tripletsWithSum(30000)).toEqual([
+      [1200, 14375, 14425],
+      [1875, 14000, 14125],
+      [5000, 12000, 13000],
+      [6000, 11250, 12750],
+      [7500, 10000, 12500],
+    ]);
   });
 });

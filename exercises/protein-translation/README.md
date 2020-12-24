@@ -41,6 +41,14 @@ UAA, UAG, UGA         | STOP
 
 Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki/Translation_(biology))
 
+If an invalid character or codon is encountered _during_ translation, it should `throw` an error with the message `Invalid codon`.
+
+```javascript
+translate('AAA')
+// => Error: Invalid codon
+```
+
+
 ## Setup
 
 Go through the setup instructions for Javascript to install the necessary

@@ -3,24 +3,16 @@
 // convenience to get you started writing code faster.
 //
 
-export class Triplet {
-  constructor() {
+export function triplets({ minFactor, maxFactor, sum }) {
+  throw new Error('Remove this statement and implement this function');
+}
+
+class Triplet {
+  constructor(a, b, c) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  sum() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  product() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  isPythagorean() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  static where() {
+  get toArray() {
     throw new Error('Remove this statement and implement this function');
   }
 }
