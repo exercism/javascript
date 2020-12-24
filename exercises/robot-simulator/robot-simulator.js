@@ -4,16 +4,13 @@
 //
 
 export class InvalidInputError extends Error {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(message) {
+    super();
+    this.message = message || 'Invalid Input';
   }
 }
 
 export class Robot {
-  orient() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
   get bearing() {
     throw new Error('Remove this statement and implement this function');
   }
@@ -22,31 +19,11 @@ export class Robot {
     throw new Error('Remove this statement and implement this function');
   }
 
-  turnRight() {
+  place({ x, y, direction }) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  turnLeft() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  at() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  advance() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  instructions() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  place() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  evaluate() {
+  evaluate(instructions) {
     throw new Error('Remove this statement and implement this function');
   }
 }

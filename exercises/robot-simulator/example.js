@@ -6,61 +6,6 @@ export class InvalidInputError extends Error {
 }
 
 export class Robot {
-  constructor() {
-    this.coordinates = [0, 0];
-    this.bearing = 'north';
-  }
-
-  at(xcoord, ycoord) {
-    this.coordinates = [xcoord, ycoord];
-  }
-
-  orient(direction) {
-    const validDirections = ['north', 'south', 'east', 'west'];
-    if (!validDirections.includes(direction)) {
-      throw new InvalidInputError('Invalid Robot Bearing');
-    }
-
-    this.bearing = direction;
-    return `The robot is pointed ${direction}`;
-  }
-
-  advance() {
-    if (this.bearing === 'north') {
-      this.coordinates[1] += 1;
-    } else if (this.bearing === 'south') {
-      this.coordinates[1] -= 1;
-    } else if (this.bearing === 'east') {
-      this.coordinates[0] += 1;
-    } else if (this.bearing === 'west') {
-      this.coordinates[0] -= 1;
-    }
-  }
-
-  turnLeft() {
-    if (this.bearing === 'north') {
-      this.orient('west');
-    } else if (this.bearing === 'south') {
-      this.orient('east');
-    } else if (this.bearing === 'east') {
-      this.orient('north');
-    } else if (this.bearing === 'west') {
-      this.orient('south');
-    }
-  }
-
-  turnRight() {
-    if (this.bearing === 'north') {
-      this.orient('east');
-    } else if (this.bearing === 'south') {
-      this.orient('west');
-    } else if (this.bearing === 'east') {
-      this.orient('south');
-    } else if (this.bearing === 'west') {
-      this.orient('north');
-    }
-  }
-
   static instructions(s) {
     return [...s].map((character) => {
       switch (character) {
@@ -78,9 +23,59 @@ export class Robot {
     });
   }
 
+  constructor() {
+    this.coordinates = [0, 0];
+    this.bearing = 'north';
+  }
+
+  set direction(next) {
+    const validDirections = ['north', 'south', 'east', 'west'];
+    if (!validDirections.includes(next)) {
+      throw new InvalidInputError('Invalid Robot Bearing');
+    }
+
+    this.bearing = next;
+  }
+
+  advance() {
+    if (this.bearing === 'north') {
+      this.coordinates[1] += 1;
+    } else if (this.bearing === 'south') {
+      this.coordinates[1] -= 1;
+    } else if (this.bearing === 'east') {
+      this.coordinates[0] += 1;
+    } else if (this.bearing === 'west') {
+      this.coordinates[0] -= 1;
+    }
+  }
+
+  turnLeft() {
+    if (this.bearing === 'north') {
+      this.direction = 'west';
+    } else if (this.bearing === 'south') {
+      this.direction = 'east';
+    } else if (this.bearing === 'east') {
+      this.direction = 'north';
+    } else if (this.bearing === 'west') {
+      this.direction = 'south';
+    }
+  }
+
+  turnRight() {
+    if (this.bearing === 'north') {
+      this.direction = 'east';
+    } else if (this.bearing === 'south') {
+      this.direction = 'west';
+    } else if (this.bearing === 'east') {
+      this.direction = 'south';
+    } else if (this.bearing === 'west') {
+      this.direction = 'north';
+    }
+  }
+
   place(args) {
     this.coordinates = [args.x, args.y];
-    this.bearing = args.direction;
+    this.direction = args.direction;
   }
 
   evaluate(s) {
