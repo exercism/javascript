@@ -10,6 +10,7 @@ describe('toRoman()', () => {
   xtest('converts 9', () => expect(toRoman(9)).toEqual('IX'));
   xtest('converts 27', () => expect(toRoman(27)).toEqual('XXVII'));
   xtest('converts 48', () => expect(toRoman(48)).toEqual('XLVIII'));
+  xtest('converts 49', () => expect(toRoman(48)).toEqual('XLIX'));
   xtest('converts 59', () => expect(toRoman(59)).toEqual('LIX'));
   xtest('converts 93', () => expect(toRoman(93)).toEqual('XCIII'));
   xtest('converts 141', () => expect(toRoman(141)).toEqual('CXLI'));
