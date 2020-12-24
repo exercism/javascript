@@ -4,7 +4,10 @@
 //
 
 export class QueenAttack {
-  constructor() {
+  constructor({
+    black: [blackRow, blackColumn],
+    white: [whiteRow, whiteColumn],
+  } = {}) {
     throw new Error('Remove this statement and implement this function');
   }
 
@@ -12,7 +15,7 @@ export class QueenAttack {
     throw new Error('Remove this statement and implement this function');
   }
 
-  canAttack() {
+  get canAttack() {
     throw new Error('Remove this statement and implement this function');
   }
 }

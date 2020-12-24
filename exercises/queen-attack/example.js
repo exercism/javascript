@@ -1,33 +1,43 @@
 const W = 8;
 const H = 8;
-const STARTING = { black: [7, 3], white: [0, 3] };
+const STARTING = { black: [0, 3], white: [7, 3] };
+
+function invalidPosition({ white, black }) {
+  if (white[0] < 0 || white[0] >= H || white[1] < 0 || white[1] >= W) {
+    return true;
+  }
+
+  if (black[0] < 0 || black[0] >= H || black[1] < 0 || black[1] >= W) {
+    return true;
+  }
+
+  return false;
+}
 
 function samePosition({ white, black }) {
   return white[0] === black[0] && white[1] === black[1];
 }
 
-function buildRow(cell, colCount) {
-  return Array(...Array(colCount)).map(() => cell);
-}
-
-function concatRows(row, rowCount) {
-  return [...Array.prototype.concat.apply(buildRow(row, rowCount)).join('')];
-}
-
 function constructBoard() {
-  let row = buildRow('_ ', W).join('');
-  row = `${row.substring(0, row.length - 1)}\n`;
-  return concatRows(row, H);
+  return new Array(W * H).fill('_');
 }
 
 function placePieces(self) {
   const board = self.board;
-  board[self.black[0] * W * 2 + self.black[1] * 2] = 'B';
-  board[self.white[0] * W * 2 + self.white[1] * 2] = 'W';
+  const [blackRow, blackColumn] = self.black;
+  const [whiteRow, whiteColumn] = self.white;
+
+  board[blackRow * W + blackColumn] = 'B';
+  board[whiteRow * W + whiteColumn] = 'W';
 }
 
 export class QueenAttack {
-  constructor(params = STARTING) {
+  constructor(params = {}) {
+    params = { ...STARTING, ...params };
+    if (invalidPosition(params)) {
+      throw new Error('Queen must be placed on the board');
+    }
+
     if (samePosition(params)) {
       throw new Error('Queens cannot share the same space');
     }
@@ -35,20 +45,28 @@ export class QueenAttack {
     this.black = params.black;
     this.white = params.white;
     this.board = constructBoard();
+
     placePieces(this);
 
-    this.canAttack = () => {
-      if (this.black[0] === this.white[0] || this.black[1] === this.white[1]) {
-        return true;
-      }
-      return (
-        Math.abs(this.black[0] - this.white[0]) ===
-        Math.abs(this.black[1] - this.white[1])
-      );
-    };
-
-    this.toString = () => this.board.join('');
-
     return this;
+  }
+
+  get canAttack() {
+    // Same row or column
+    if (this.black[0] === this.white[0] || this.black[1] === this.white[1]) {
+      return true;
+    }
+
+    // Diagonally
+    return (
+      Math.abs(this.black[0] - this.white[0]) ===
+      Math.abs(this.black[1] - this.white[1])
+    );
+  }
+
+  toString() {
+    return Array.from({ length: H }, (_, row) =>
+      this.board.slice(row * H, row * H + W).join(' ')
+    ).join('\n');
   }
 }
