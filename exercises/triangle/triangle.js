@@ -4,19 +4,19 @@
 //
 
 export class Triangle {
-  constructor() {
+  constructor(...sides) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  isEquilateral() {
+  get isEquilateral() {
     throw new Error('Remove this statement and implement this function');
   }
 
-  isIsosceles() {
+  get isIsosceles() {
     throw new Error('Remove this statement and implement this function');
   }
 
-  isScalene() {
+  get isScalene() {
     throw new Error('Remove this statement and implement this function');
   }
 }
