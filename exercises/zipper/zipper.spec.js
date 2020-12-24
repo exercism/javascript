@@ -1,7 +1,5 @@
 import { Zipper } from './zipper';
 
-// Tests adapted from `problem-specifications/zipper/canonical-data.json` @ v1.0.0
-
 function bt(value, left, right) {
   return {
     value,
@@ -25,36 +23,6 @@ describe('Zipper', () => {
 
   beforeEach(() => {
     zipper = Zipper.fromTree(t1);
-  });
-
-  test('left returns a new Zipper', () => {
-    let left = zipper.left();
-    expect(left).not.toBe(zipper);
-  });
-
-  test('right returns a new Zipper', () => {
-    let right = zipper.right();
-    expect(right).not.toBe(zipper);
-  });
-
-  test('setValue returns a new Zipper', () => {
-    let anotherZipper = zipper.setValue(99);
-    expect(anotherZipper).not.toBe(zipper);
-  });
-
-  test('setRight returns a new Zipper', () => {
-    let right = zipper.setRight(bt(55, null, null));
-    expect(right).not.toBe(zipper);
-  });
-
-  test('setLeft returns a new Zipper', () => {
-    let left = zipper.setLeft(bt(55, null, null));
-    expect(left).not.toBe(zipper);
-  });
-
-  test('up returns a new Zipper', () => {
-    let up = zipper.right().up();
-    expect(zipper).not.toBe(up);
   });
 
   test('data is retained', () => {
@@ -103,5 +71,35 @@ describe('Zipper', () => {
 
   xtest('setValue on deep focus', () => {
     expect(zipper.left().right().setValue(5).toTree()).toEqual(t6);
+  });
+
+  xtest('left returns a new Zipper', () => {
+    const left = zipper.left();
+    expect(left).not.toBe(zipper);
+  });
+
+  xtest('right returns a new Zipper', () => {
+    const right = zipper.right();
+    expect(right).not.toBe(zipper);
+  });
+
+  xtest('setValue returns a new Zipper', () => {
+    const anotherZipper = zipper.setValue(99);
+    expect(anotherZipper).not.toBe(zipper);
+  });
+
+  xtest('setRight returns a new Zipper', () => {
+    const right = zipper.setRight(bt(55, null, null));
+    expect(right).not.toBe(zipper);
+  });
+
+  xtest('setLeft returns a new Zipper', () => {
+    const left = zipper.setLeft(bt(55, null, null));
+    expect(left).not.toBe(zipper);
+  });
+
+  xtest('up returns a new Zipper', () => {
+    const up = zipper.right().up();
+    expect(zipper).not.toBe(up);
   });
 });
