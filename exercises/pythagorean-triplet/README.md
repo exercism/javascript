@@ -23,6 +23,9 @@ Given an input integer N, find all Pythagorean triplets for which `a + b + c = N
 
 For example, with N = 1000, there is exactly one Pythagorean triplet for which `a + b + c = 1000`: `{200, 375, 425}`.
 
+By default, only `sum` is given to the `triplets` function, but it may optionally also receive `minFactor` and/or `maxFactor`. When these are given, make sure _each_ factor of the triplet is at least `minFactor` and at most `maxFactor`.
+
+
 ## Setup
 
 Go through the setup instructions for Javascript to install the necessary
