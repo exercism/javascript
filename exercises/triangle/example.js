@@ -3,7 +3,7 @@ export class Triangle {
     this.sides = sides;
   }
 
-  isValid() {
+  get isValid() {
     const [s1, s2, s3] = this.sides;
     const sidesArePositive = s1 > 0 && s2 > 0 && s3 > 0;
     const validatesTriangleInequality =
@@ -11,26 +11,26 @@ export class Triangle {
     return sidesArePositive && validatesTriangleInequality;
   }
 
-  isEquilateral() {
-    if (!this.isValid()) {
+  get isEquilateral() {
+    if (!this.isValid) {
       return false;
     }
     const [s1, s2, s3] = this.sides;
     return s1 === s2 && s2 === s3 && s1 === s3;
   }
 
-  isIsosceles() {
-    if (!this.isValid()) {
+  get isIsosceles() {
+    if (!this.isValid) {
       return false;
     }
     const [s1, s2, s3] = this.sides;
     return s1 === s2 || s1 === s3 || s2 === s3;
   }
 
-  isScalene() {
-    if (!this.isValid()) {
+  get isScalene() {
+    if (!this.isValid) {
       return false;
     }
-    return !this.isIsosceles();
+    return !this.isIsosceles;
   }
 }
