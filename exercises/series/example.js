@@ -1,5 +1,9 @@
 export class Series {
   constructor(numberString) {
+    if (!numberString) {
+      throw new Error('series cannot be empty');
+    }
+
     this.numberString = numberString;
     this.digits = this.getDigits();
   }
@@ -12,8 +16,16 @@ export class Series {
     const result = [];
     let slice = [];
 
+    if (sliceSize < 0) {
+      throw new Error('slice length cannot be negative');
+    }
+
+    if (sliceSize == 0) {
+      throw new Error('slice length cannot be zero');
+    }
+
     if (sliceSize > this.digits.length) {
-      throw new Error('Slice size is too big.');
+      throw new Error('slice length cannot be greater than series length');
     }
 
     for (let i = 0; i < this.digits.length - sliceSize + 1; i += 1) {

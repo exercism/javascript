@@ -4,15 +4,11 @@
 //
 
 export class Series {
-  constructor() {
+  constructor(series) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  get digits() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  slices() {
+  slices(sliceLength) {
     throw new Error('Remove this statement and implement this function');
   }
 }
