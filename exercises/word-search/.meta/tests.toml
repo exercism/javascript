@@ -57,5 +57,3 @@
 # Should locate words written top right to bottom left
 "69e1d994-a6d7-4e24-9b5a-db76751c2ef8" = true
 
-# Should fail to locate a word that is not in the puzzle
-"695531db-69eb-463f-8bad-8de3bf5ef198" = true
