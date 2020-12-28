@@ -75,7 +75,7 @@ describe('TwoBucket', () => {
     test.skip('Not possible to reach the goal', () => {
       const goal = 5;
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toThrow();
+      expect(() => twoBucket.moves()).toThrow();
     });
 
     xtest('With the same buckets but a different goal, then it is possible', () => {
@@ -90,7 +90,7 @@ describe('TwoBucket', () => {
   describe('Goal larger than both buckets', () => {
     test.skip('Is impossible', () => {
       const twoBucket = new TwoBucket(5, 7, 8, 'one');
-      expect(twoBucket.moves()).toThrow();
+      expect(() => twoBucket.moves()).toThrow();
     });
   });
 });
