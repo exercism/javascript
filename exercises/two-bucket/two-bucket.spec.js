@@ -59,7 +59,7 @@ describe('TwoBucket', () => {
   });
 
   describe('Measure using bucket one of size 2 and bucket two of size 3', () => {
-    test.skip('start with bucket one and end with bucket two', () => {
+    xtest('start with bucket one and end with bucket two', () => {
       const twoBucket = new TwoBucket(2, 3, 3, 'one');
       expect(twoBucket.moves()).toEqual(2);
       expect(twoBucket.goalBucket).toEqual('two');
@@ -72,10 +72,10 @@ describe('TwoBucket', () => {
     const buckTwo = 15;
     const starterBuck = 'one';
 
-    test.skip('Not possible to reach the goal', () => {
+    xtest('Not possible to reach the goal', () => {
       const goal = 5;
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toThrow();
+      expect(() => twoBucket.moves()).toThrow();
     });
 
     xtest('With the same buckets but a different goal, then it is possible', () => {
@@ -88,9 +88,9 @@ describe('TwoBucket', () => {
   });
 
   describe('Goal larger than both buckets', () => {
-    test.skip('Is impossible', () => {
+    xtest('Is impossible', () => {
       const twoBucket = new TwoBucket(5, 7, 8, 'one');
-      expect(twoBucket.moves()).toThrow();
+      expect(() => twoBucket.moves()).toThrow();
     });
   });
 });
