@@ -8,6 +8,9 @@ Check out the Wikipedia pages on [square root](https://en.wikipedia.org/wiki/Squ
 
 Recall also that natural numbers are positive real whole numbers (i.e. 1, 2, 3 and up).
 
+The idea is not to use the built-in javascript function `Math.sqrt(x)`, it's to build your own.
+
+
 ## Setup
 
 Go through the setup instructions for Javascript to install the necessary
