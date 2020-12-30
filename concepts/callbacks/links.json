@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "url": "http://callbackhell.com/",
+    "description": "Callback Hell"
+  },
+  {
+    "url": "https://www.educative.io/edpresso/what-are-callbacks-in-javascript",
+    "description": "Edspresso: What are callbacks in JavaScript?"
+  },
+  {
+    "url": "https://javascript.info/callbacks",
+    "description": "JavaScript.info: Callbacks"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Callback_function",
+    "description": "MDN: Callback function"
+  },
+  {
+    "url": "https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/",
+    "description": "Node Callbacks"
+  },
+  {
+    "url": "https://nodejs.org/en/knowledge/errors/what-are-the-error-conventions/",
+    "description": "Callback Error Convention"
+  },
+  {
+    "url": "https://www.twilio.com/blog/asynchronous-javascript-understanding-callbacks",
+    "description": "Twilio: Asynchronous JavaScript: Understanding Callbacks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8aGhZQkoFbQ",
+    "description": "JSConf EU: What the heck is the event loop anyway? -Philip Roberts"
+  }
+]
