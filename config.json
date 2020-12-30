@@ -228,6 +228,14 @@
       "topics": ["booleans", "integers", "logic"]
     },
     {
+      "slug": "square-root",
+      "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": ["bitwise_operations", "algorithms", "loops", "math"]
+    },
+    {
       "slug": "reverse-string",
       "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
       "core": false,
