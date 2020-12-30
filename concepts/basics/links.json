@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
+    "description": "mdn-primitive"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Immutable_object",
+    "description": "wiki-mutability"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
+    "description": "mdn-primitive"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
+    "description": "mdn-primitive"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze",
+    "description": "mdn-object-freeze"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+    "description": "mdn-module"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports",
+    "description": "mdn-renaming-modules"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Imports",
+    "description": "mdn-dynamic-imports"
+  },
+  {
+    "url": "https://bitsofco.de/what-is-tree-shaking/",
+    "description": "blog-tree-shaking"
+  },
+  {
+    "url": "https://2ality.com/2015/07/es6-module-exports.html#es6-modules-export-immutable-bindings",
+    "description": "blog-live-bindings"
+  }
+]
