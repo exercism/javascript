@@ -1,0 +1,19 @@
+[canonical-tests]
+
+# root of 1
+"9b748478-7b0a-490c-b87a-609dacf631fd" = true
+
+# root of 2
+"7d3aa9ba-9ac6-4e93-a18b-2e8b477139bb" = true
+
+# root of 25
+"6624aabf-3659-4ae0-a1c8-25ae7f33c6ef" = true
+
+# root of 81
+"93beac69-265e-4429-abb1-94506b431f81" = true
+
+# root of 196
+"fbddfeda-8c4f-4bc4-87ca-6991af35360e" = true
+
+# root of 65025
+"c03d0532-8368-4734-a8e0-f96a9eb7fc1d" = true
