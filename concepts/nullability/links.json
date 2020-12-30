@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "description": "Nullability - MDN Docs"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator",
+    "description": "Nullish coalescing operator - MDN Docs"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining",
+    "description": "Optional chaining - MDN Docs"
+  }
+]
