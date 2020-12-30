@@ -231,9 +231,9 @@
       "slug": "square-root",
       "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
       "core": false,
-      "unlocked_by": "space-age",
-      "difficulty": 1,
-      "topics": ["math"]
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": ["bitwise_operations", "algorithms", "loops", "math"]
     },
     {
       "slug": "reverse-string",
