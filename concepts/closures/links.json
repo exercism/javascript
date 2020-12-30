@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "url": "https://en.wikipedia.org/wiki/%CE%9B-calculus",
+    "description": "wiki-lambda-calculus"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Scheme_(programming_language)",
+    "description": "wiki-scheme"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Closure_(computer_programming)",
+    "description": "wiki-closure"
+  },
+  {
+    "url": "https://whatthefork.is/closure",
+    "description": "what-the-fork-is-a-closure"
+  },
+  {
+    "url": "https://javascript.info/closure",
+    "description": "javascript-info-scope-closure"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+    "description": "mdn-closures"
+  }
+]
