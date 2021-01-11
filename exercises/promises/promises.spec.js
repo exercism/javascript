@@ -2,8 +2,8 @@ import {
   promisify,
   all,
   allSettled,
-  any,
-  race
+  race,
+  any
 } from './promises';
 
 describe('promises', () => {
