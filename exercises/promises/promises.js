@@ -15,10 +15,10 @@ export const allSettled = () => {
   throw new Error('Remove this statement and implement this function');
 };
 
-export const any = () => {
+export const race = () => {
   throw new Error('Remove this statement and implement this function');
 };
 
-export const race = () => {
+export const any = () => {
   throw new Error('Remove this statement and implement this function');
 };
