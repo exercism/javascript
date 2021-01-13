@@ -13,6 +13,6 @@ export const race = promises => new Promise((resolve, reject) => promises
   .forEach(promise => promise.then(resolve, reject)));
 
 export const any = promises => new Promise((resolve, reject) => {
-  promises.forEach(promise => promise.then(resolve).catch(err => err));
+  promises.forEach(promise => promise.then(resolve).catch(() => null));
   allSettled(promises).then(reject);
 });
