@@ -1,17 +1,11 @@
-import {
-  promisify,
-  all,
-  allSettled,
-  race,
-  any
-} from './promises';
+import { promisify, all, allSettled, race, any } from './promises';
 
 describe('promises', () => {
   const failedCallback = new Error('Failed callback');
 
-  const createCallbackFn = speed => (value, callback) =>
+  const createCallbackFn = (speed) => (value, callback) =>
     setTimeout(() => callback(null, value), speed);
-  const createFailedCallback = speed => (_, callback) =>
+  const createFailedCallback = (speed) => (_, callback) =>
     setTimeout(() => callback(failedCallback), speed);
 
   const slowestCallbackFn = createCallbackFn(20);
@@ -29,21 +23,25 @@ describe('promises', () => {
       expect(fastPromise('fast')).toBeInstanceOf(Promise);
     });
 
-    xtest('promisified function resolves to a callback\'s success value', () => {
+    xtest("promisified function resolves to a callback's success value", () => {
       const SUCCESS = 'success';
       const fastPromise = promisify(fastCallbackFn);
       expect(fastPromise(SUCCESS)).resolves.toEqual(SUCCESS);
     });
 
-    xtest('promisified function rejects a callback\'s error', () => {
+    xtest("promisified function rejects a callback's error", () => {
       const failedPromise = promisify(failedCallbackFn);
       expect(failedPromise(null)).rejects.toEqual(failedCallback);
     });
   });
 
   describe('all', () => {
-    const [slowestPromise, slowerPromise, fastPromise, failedPromise] =
-      [slowestCallbackFn, slowerCallbackFn, fastCallbackFn, failedCallbackFn].map(fn => promisify(fn));
+    const [slowestPromise, slowerPromise, fastPromise, failedPromise] = [
+      slowestCallbackFn,
+      slowerCallbackFn,
+      fastCallbackFn,
+      failedCallbackFn,
+    ].map((fn) => promisify(fn));
 
     xtest('returns a Promise', () => {
       expect(all([])).toBeInstanceOf(Promise);
@@ -53,7 +51,11 @@ describe('promises', () => {
       const FIRST = 'FIRST';
       const SECOND = 'SECOND';
       const THIRD = 'THIRD';
-      const result = all([slowestPromise(FIRST), slowerPromise(SECOND), fastPromise(THIRD)]);
+      const result = all([
+        slowestPromise(FIRST),
+        slowerPromise(SECOND),
+        fastPromise(THIRD),
+      ]);
       expect(result).resolves.toEqual([FIRST, SECOND, THIRD]);
     });
 
@@ -64,8 +66,12 @@ describe('promises', () => {
   });
 
   describe('allSettled', () => {
-    const [slowestPromise, slowerPromise, fastPromise, failedPromise] =
-      [slowestCallbackFn, slowerCallbackFn, fastCallbackFn, failedCallbackFn].map(fn => promisify(fn));
+    const [slowestPromise, slowerPromise, fastPromise, failedPromise] = [
+      slowestCallbackFn,
+      slowerCallbackFn,
+      fastCallbackFn,
+      failedCallbackFn,
+    ].map((fn) => promisify(fn));
 
     xtest('returns a Promise', () => {
       expect(allSettled([])).toBeInstanceOf(Promise);
@@ -75,7 +81,11 @@ describe('promises', () => {
       const FIRST = 'FIRST';
       const SECOND = 'SECOND';
       const THIRD = 'THIRD';
-      const result = allSettled([slowestPromise(FIRST), slowerPromise(SECOND), fastPromise(THIRD)]);
+      const result = allSettled([
+        slowestPromise(FIRST),
+        slowerPromise(SECOND),
+        fastPromise(THIRD),
+      ]);
       expect(result).resolves.toEqual([FIRST, SECOND, THIRD]);
     });
 
@@ -87,8 +97,12 @@ describe('promises', () => {
   });
 
   describe('race', () => {
-    const [slowestPromise, slowerPromise, fastPromise, failedPromise] =
-      [slowestCallbackFn, slowerCallbackFn, fastCallbackFn, failedCallbackFn].map(fn => promisify(fn));
+    const [slowestPromise, slowerPromise, fastPromise, failedPromise] = [
+      slowestCallbackFn,
+      slowerCallbackFn,
+      fastCallbackFn,
+      failedCallbackFn,
+    ].map((fn) => promisify(fn));
 
     xtest('returns a Promise', () => {
       expect(race([])).toBeInstanceOf(Promise);
@@ -96,22 +110,36 @@ describe('promises', () => {
 
     xtest('resolves with value of the fastest successful promise', () => {
       const FAST = 'FAST';
-      expect(race([slowestPromise('SLOWEST'), slowerPromise('SLOWER'), fastPromise(FAST)])).resolves.toEqual(FAST);
+      expect(
+        race([
+          slowestPromise('SLOWEST'),
+          slowerPromise('SLOWER'),
+          fastPromise(FAST),
+        ])
+      ).resolves.toEqual(FAST);
     });
 
     xtest('resolves with value of the fastest promise even if other slower promises fail', () => {
       const FAST = 'FAST';
-      expect(race([failedPromise(null), fastPromise(FAST)])).resolves.toEqual(FAST);
+      expect(race([failedPromise(null), fastPromise(FAST)])).resolves.toEqual(
+        FAST
+      );
     });
 
     xtest('rejects if the fastest promise fails even if other slower promises succeed', () => {
-      expect(race([slowestPromise('SLOWEST'), failedPromise(null)])).rejects.toEqual(failedCallback);
+      expect(
+        race([slowestPromise('SLOWEST'), failedPromise(null)])
+      ).rejects.toEqual(failedCallback);
     });
   });
 
   describe('any', () => {
-    const [slowestPromise, slowerPromise, fastPromise, failedPromise] =
-      [slowestCallbackFn, slowerCallbackFn, fastCallbackFn, failedCallbackFn].map(fn => promisify(fn));
+    const [slowestPromise, slowerPromise, fastPromise, failedPromise] = [
+      slowestCallbackFn,
+      slowerCallbackFn,
+      fastCallbackFn,
+      failedCallbackFn,
+    ].map((fn) => promisify(fn));
 
     xtest('returns a Promise', () => {
       expect(any([])).toBeInstanceOf(Promise);
@@ -119,21 +147,34 @@ describe('promises', () => {
 
     xtest('resolves with value of fastest successful promise', () => {
       const FAST = 'FAST';
-      expect(race([slowestPromise('SLOWEST'), slowerPromise('SLOWER'), fastPromise(FAST)])).resolves.toEqual(FAST);
+      expect(
+        race([
+          slowestPromise('SLOWEST'),
+          slowerPromise('SLOWER'),
+          fastPromise(FAST),
+        ])
+      ).resolves.toEqual(FAST);
     });
 
     xtest('resolves with value of the fastest successful promise even if slower promises fail', () => {
       const FAST = 'FAST';
-      expect(race([failedPromise(null), fastPromise(FAST)])).resolves.toEqual(FAST);
+      expect(race([failedPromise(null), fastPromise(FAST)])).resolves.toEqual(
+        FAST
+      );
     });
 
     xtest('resolves with value of fastest successful promise even if faster promises fail', () => {
       const SLOWEST = 'SLOWEST';
-      expect(race([failedPromise(null), slowestPromise(SLOWEST)])).resolves.toEqual(SLOWEST);
+      expect(
+        race([failedPromise(null), slowestPromise(SLOWEST)])
+      ).resolves.toEqual(SLOWEST);
     });
 
     xtest('rejects with array of errors if all promises fail', () => {
-      expect(race([failedPromise(null), failedPromise(null)])).rejects.toEqual([failedCallback, failedCallback]);
+      expect(race([failedPromise(null), failedPromise(null)])).rejects.toEqual([
+        failedCallback,
+        failedCallback,
+      ]);
     });
   });
 });
