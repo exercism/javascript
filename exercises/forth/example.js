@@ -51,8 +51,10 @@ export class Forth {
 
     // Evaluate subprogram immediately if possible, otherwise evaluate later
     try {
+      const stackSize = this.stack.length;
       this.evaluate(subprogram);
-      execute = () => null;
+      const result = this.stack.splice(stackSize);
+      execute = () => result;
     } catch {
       execute = this.evaluate.bind(this, subprogram);
     }
@@ -93,7 +95,7 @@ export class Forth {
         },
       },
       dup: { arity: 1, execute: (a) => [a, a] },
-      drop: { arity: 1, execute: () => {} },
+      drop: { arity: 1, execute: () => { } },
       swap: { arity: 2, execute: (a, b) => [b, a] },
       over: { arity: 2, execute: (a, b) => [a, b, a] },
     };
