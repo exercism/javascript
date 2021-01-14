@@ -234,6 +234,21 @@ describe('Forth', () => {
       expect(forth.stack).toEqual([12]);
     });
 
+    xtest('can use different words with the same name', () => {
+      forth.evaluate(': foo 5 ;');
+      forth.evaluate(': bar foo ;');
+      forth.evaluate(': foo 6 ;');
+      forth.evaluate('bar foo');
+      expect(forth.stack).toEqual([5, 6]);
+    });
+
+    xtest('can define word that uses word with the same name', () => {
+      forth.evaluate(': foo 10 ;');
+      forth.evaluate(': foo foo 1 + ;');
+      forth.evaluate('foo');
+      expect(forth.stack).toEqual([11]);
+    });
+
     xtest('cannot redefine numbers', () => {
       expect(() => {
         forth.evaluate(': 1 2 ;');
