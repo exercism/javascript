@@ -7,11 +7,7 @@
     }
   ],
   "editor": {
-    "solution_files": [
-      "enchantments.js"
-    ],
-    "test_files": [
-      "enchantments.spec.js"
-    ]
+    "solution_files": [],
+    "test_files": []
   }
 }
