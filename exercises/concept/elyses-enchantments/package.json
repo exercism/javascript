@@ -1,14 +1,14 @@
 {
-  "name": "@exercism/javascript-array-analysis",
-  "description": "Exercism concept exercise on array analysis",
-  "author": "Peterchu999",
+  "name": "@exercism/javascript-elyses-enchantments",
+  "description": "Exercism concept exercise on arrays",
+  "author": "Ovidiu Miu",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/v3.git",
-    "directory": "languages/javascript/exercises/concept/arrays-analysis"
+    "directory": "languages/javascript/exercises/concept/elyses-enchantments"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

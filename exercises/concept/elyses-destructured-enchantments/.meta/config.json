@@ -10,5 +10,13 @@
       "github_username": "SleeplessByte",
       "exercism_username": "SleeplessByte"
     }
-  ]
+  ],
+  "editor": {
+    "solution_files": [
+      "enchantments.js"
+    ],
+    "test_files": [
+      "enchantments.spec.js"
+    ]
+  }
 }
