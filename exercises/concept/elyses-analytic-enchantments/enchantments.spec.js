@@ -7,7 +7,7 @@ import {
   doesStackIncludeOddCard,
   getFirstOddCard,
   getFirstEvenCardPosition,
-} from './array-analysis';
+} from './enchantments';
 
 /**
  * @template T the expected return type
@@ -19,7 +19,7 @@ import {
  * @typedef {Array<[number[], T]>} TestAllMatrix
  **/
 
-describe('arrays-analysis', () => {
+describe('elyses analytic enchantments', () => {
   describe('getCardPosition', () => {
     /** @type {TestSingleMatrix<number>} */
     const getCardPositionTestCases = [

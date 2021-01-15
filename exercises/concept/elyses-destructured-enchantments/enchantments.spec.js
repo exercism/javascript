@@ -18,7 +18,7 @@ import {
   getSecondCard,
   insertFaceCards,
   swapTopTwoCards,
-} from './array-destructuring';
+} from './enchantments';
 
 describe('array-destructuring', () => {
   describe('getFirstCard', () => {

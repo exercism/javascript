@@ -36,7 +36,9 @@ export function determineUniqueCards(stack) {
 
   let uniques = 0;
 
-  Object.values(counts).forEach((v) => v === 0 && uniques++);
+  Object.keys(counts)
+    .map((key) => counts[key])
+    .forEach((v) => v === 0 && uniques++);
 
   return uniques;
 }

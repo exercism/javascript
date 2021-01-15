@@ -15,9 +15,15 @@
       "exercism_username": "ovidiu141"
     }
   ],
-  "forked_from": ["go/basic-slices"],
+  "forked_from": [
+    "go/basic-slices"
+  ],
   "editor": {
-    "solution_files": ["arrays.js"],
-    "test_files": ["arrays.spec.js"]
+    "solution_files": [
+      "enchantments.js"
+    ],
+    "test_files": [
+      "enchantments.spec.js"
+    ]
   }
 }

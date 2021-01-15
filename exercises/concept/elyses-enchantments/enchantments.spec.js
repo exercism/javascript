@@ -9,7 +9,7 @@ import {
   insertItemAtBottom,
   removeItemAtBottom,
   checkSizeOfStack,
-} from './arrays';
+} from './enchantments';
 
 /**
  * @template T the expected return type
@@ -26,7 +26,7 @@ import {
  * @typedef {Array<[number[], number, number, T]>} TestSetMatrix
  **/
 
-describe('arrays', () => {
+describe('elyses enchantments', () => {
   describe('getItem', () => {
     /** @type {TestSingleMatrix<number>} */
     const getItemTestCases = [

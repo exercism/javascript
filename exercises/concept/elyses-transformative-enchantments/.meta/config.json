@@ -7,7 +7,11 @@
     }
   ],
   "editor": {
-    "solution_files": ["array-transformations.js"],
-    "test_files": ["array-transformations.spec.js"]
+    "solution_files": [
+      "enchantments.js"
+    ],
+    "test_files": [
+      "enchantments.spec.js"
+    ]
   }
 }
