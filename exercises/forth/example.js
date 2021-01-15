@@ -47,9 +47,21 @@ export class Forth {
       throw new Error('Invalid definition');
     }
 
+    let execute;
+
+    // Evaluate subprogram immediately if possible, otherwise evaluate later
+    try {
+      const stackSize = this.stack.length;
+      this.evaluate(subprogram);
+      const result = this.stack.splice(stackSize);
+      execute = () => result;
+    } catch {
+      execute = this.evaluate.bind(this, subprogram);
+    }
+
     this.commands[word] = {
       arity: 0, // handled inside the call
-      execute: this.evaluate.bind(this, subprogram),
+      execute,
     };
   }
 
