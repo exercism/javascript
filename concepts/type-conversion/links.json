@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_Conversion",
+    "description": "MDN Web Docs: Type Conversion"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion",
+    "description": "MDN Web Docs: Type Coercion"
+  },
+  {
+    "url": "https://www.ecma-international.org/ecma-262/#sec-abstract-operations",
+    "description": "ECMA: Abstract Operations"
+  }
+]

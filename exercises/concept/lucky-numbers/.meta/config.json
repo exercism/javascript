@@ -1,0 +1,22 @@
+{
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    },
+    {
+      "github_username": "SleeplessByte",
+      "exercism_username": "sleeplessbyte"
+    }
+  ],
+  "authors": [
+    {
+      "github_username": "shubhsk88",
+      "exercism_username": "shubhsk88"
+    }
+  ],
+  "editor": {
+    "solution_files": ["lucky-numbers.js"],
+    "test_files": ["lucky-numbers.spec.js"]
+  }
+}
