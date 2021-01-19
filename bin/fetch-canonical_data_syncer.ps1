@@ -1,6 +1,6 @@
 Function DownloadUrl ([string] $FileName, $Headers) {
-    $latestUrl = "https://api.github.com/repos/exercism/canonical-data-syncer/releases/latest"
-    $json = Invoke-RestMethod -Headers $Headers -Uri $latestUrl
+    $finalReleaseUrl = "https://api.github.com/repos/exercism/canonical-data-syncer/releases/33439231" # v0.17.0
+    $json = Invoke-RestMethod -Headers $Headers -Uri $finalReleaseUrl
     $json.assets | Where-Object { $_.browser_download_url -match $FileName } | Select-Object -ExpandProperty browser_download_url
 }
 
