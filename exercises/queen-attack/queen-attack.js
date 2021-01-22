@@ -5,8 +5,8 @@
 
 export class QueenAttack {
   constructor({
-    black: [blackRow, blackColumn],
-    white: [whiteRow, whiteColumn],
+    black: [blackRow, blackColumn] = [],
+    white: [whiteRow, whiteColumn] = [],
   } = {}) {
     throw new Error('Remove this statement and implement this function');
   }
