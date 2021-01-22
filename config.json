@@ -908,9 +908,11 @@
       },
       {
         "slug": "promises",
-        "uuid": "",
+        "name": "Promises",
+        "uuid": "ad21018c-e538-4ce5-a33a-949b4293df8c",
         "core": false,
-        "unlocked_by": "grep",
+        "practices": [],
+        "prerequisites": [],
         "difficulty": 4,
         "topics": ["promises", "error_handling", "higher_order_functions"]
       },
