@@ -142,7 +142,7 @@ describe('promises', () => {
     ].map((fn) => promisify(fn));
 
     xtest('returns a Promise', () => {
-      expect(any([])).toBeInstanceOf(Promise);
+      expect(any([]).catch(() => null)).toBeInstanceOf(Promise);
     });
 
     xtest('resolves with value of fastest successful promise', () => {
