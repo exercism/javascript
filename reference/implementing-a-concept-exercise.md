@@ -47,7 +47,7 @@ languages
                 ├── .eslintrc
                 ├── .gitignore
                 ├── babel.config.js
-                ├── example.js
+                ├── exemplar.js
                 ├── &lt;slug&gt;.js
                 ├── &lt;slug&gt;.spec.js
                 ├── package.json
@@ -87,7 +87,7 @@ Now create the following three files:
 
 - `<slug>.cs`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `<slug>.spec.js`: the test suite.
-- `example.js`: an example implementation that passes all the tests.
+- `exemplar.js`: an exemplar implementation that passes all the tests.
 
 ## Step 2: Add documentation files
 
