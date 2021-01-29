@@ -28,7 +28,8 @@
           "booleans",
           "callbacks",
           "numbers"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "elyses-destructured-enchantments",
@@ -40,7 +41,8 @@
         ],
         "prerequisites": [
           "arrays"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "elyses-enchantments",
@@ -50,7 +52,8 @@
         ],
         "prerequisites": [
           "numbers"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "basics",
@@ -58,7 +61,8 @@
         "concepts": [
           "basics"
         ],
-        "prerequisites": []
+        "prerequisites": [],
+        "status": "wip"
       },
       {
         "slug": "booleans",
@@ -68,7 +72,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "nullability",
@@ -80,7 +85,8 @@
           "conditionals",
           "strings",
           "string-formatting"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "numbers",
@@ -90,7 +96,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "promises",
@@ -103,7 +110,8 @@
           "callbacks",
           "errors",
           "recursion"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "recursion",
@@ -117,7 +125,8 @@
           "array-loops",
           "numbers",
           "variable-parameters"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "fruit-picker",
@@ -134,7 +143,8 @@
           "errors",
           "nullability",
           "conditionals"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "strings",
@@ -144,7 +154,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "closures",
@@ -155,7 +166,8 @@
         "prerequisites": [
           "arrays",
           "booleans"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "lucky-numbers",
@@ -167,7 +179,8 @@
           "arrays",
           "strings",
           "numbers"
-        ]
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
