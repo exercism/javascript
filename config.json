@@ -1419,7 +1419,8 @@
         "regular_expressions",
         "strings"
       ],
-      "deprecated": true
+      "deprecated": true,
+      "status": "deprecated"
     },
     {
       "slug": "octal",
@@ -1435,7 +1436,8 @@
         "regular_expressions",
         "strings"
       ],
-      "deprecated": true
+      "deprecated": true,
+      "status": "deprecated"
     },
     {
       "slug": "hexadecimal",
@@ -1451,7 +1453,8 @@
         "regular_expressions",
         "strings"
       ],
-      "deprecated": true
+      "deprecated": true,
+      "status": "deprecated"
     },
     {
       "slug": "point-mutations",
@@ -1460,7 +1463,8 @@
       "unlocked_by": null,
       "difficulty": 0,
       "topics": null,
-      "deprecated": true
+      "deprecated": true,
+      "status": "deprecated"
     },
     {
       "slug": "binary",
@@ -1477,7 +1481,8 @@
         "regular_expressions",
         "strings"
       ],
-      "deprecated": true
+      "deprecated": true,
+      "status": "deprecated"
     },
     {
       "slug": "grep",
