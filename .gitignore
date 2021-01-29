@@ -23,6 +23,7 @@ node_modules
 
 # Ignore npm error/log
 npm-debug.log
+debug.log
 
 # Ignore yarn lockfile and error, in case someone accidentally runs yarn
 yarn.lock
