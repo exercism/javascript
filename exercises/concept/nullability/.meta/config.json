@@ -10,8 +10,9 @@
     }
   ],
   "forked_from": ["csharp/nullability"],
-  "editor": {
-    "solution_files": ["nullability.js"],
-    "test_files": ["nullability.spec.js"]
+  "files": {
+    "solution": ["nullability.js"],
+    "test": ["nullability.spec.js"],
+    "exemplar": []
   }
 }

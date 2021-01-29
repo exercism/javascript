@@ -15,8 +15,9 @@
       "exercism_username": "shubhsk88"
     }
   ],
-  "editor": {
-    "solution_files": ["lucky-numbers.js"],
-    "test_files": ["lucky-numbers.spec.js"]
+  "files": {
+    "solution": ["lucky-numbers.js"],
+    "test": ["lucky-numbers.spec.js"],
+    "exemplar": []
   }
 }

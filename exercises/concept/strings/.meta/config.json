@@ -11,8 +11,9 @@
       "exercism_username": "SleeplessByte"
     }
   ],
-  "editor": {
-    "solution_files": ["strings.js"],
-    "test_files": ["strings.spec.js"]
+  "files": {
+    "solution": ["strings.js"],
+    "test": ["strings.spec.js"],
+    "exemplar": []
   }
 }

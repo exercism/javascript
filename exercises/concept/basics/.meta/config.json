@@ -6,8 +6,9 @@
     }
   ],
   "forked_from": ["ruby/basics"],
-  "editor": {
-    "solution_files": ["basics.js"],
-    "test_files": ["basics.spec.js"]
+  "files": {
+    "solution": ["basics.js"],
+    "test": ["basics.spec.js"],
+    "exemplar": []
   }
 }

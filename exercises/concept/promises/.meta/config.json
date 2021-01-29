@@ -5,8 +5,9 @@
       "exercism_username": "SleeplessByte"
     }
   ],
-  "editor": {
-    "solution_files": ["promises.js"],
-    "test_files": ["promises.spec.js"]
+  "files": {
+    "solution": ["promises.js"],
+    "test": ["promises.spec.js"],
+    "exemplar": []
   }
 }
