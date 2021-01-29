@@ -22,7 +22,7 @@ Because JavaScript is a [prototype-based][info-prototype-inheritance] language, 
 ## Why `null` is `"object"`
 
 ```javascript
-typeof null
+typeof null;
 // => 'object'
 ```
 

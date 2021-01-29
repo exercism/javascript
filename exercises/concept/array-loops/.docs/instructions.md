@@ -17,8 +17,8 @@ Write a function that takes in two parameters: an array of cards (Elyse's deck),
 This function will return the number of cards in the deck that are of a given type.
 
 ```javascript
-const cardType = 3
-cardTypeCheck([1, 2, 3, 4], cardType)
+const cardType = 3;
+cardTypeCheck([1, 2, 3, 4], cardType);
 // => 1
 ```
 
@@ -29,7 +29,7 @@ Write a function that takes in one parameter: an array of cards (Elyse's deck).
 This function should return an array of card types that only occur once in the entire deck (i.e. unique cards).
 
 ```javascript
-uniqueCards([1, 2, 3, 1, 5, 6])
+uniqueCards([1, 2, 3, 1, 5, 6]);
 // => [2, 3, 5, 6]
 ```
 
@@ -40,9 +40,9 @@ Write a function that takes in two parameters: an array of cards (Elyse's deck),
 This function should return a single number: the number of odd or even cards there are (depending on the value of the second argument) in the deck.
 
 ```javascript
-oddEvenCards([1, 2, 3, 1, 5, 6], true)
+oddEvenCards([1, 2, 3, 1, 5, 6], true);
 // => 2
 
-oddEvenCards([1, 2, 3, 1, 5, 6], false)
+oddEvenCards([1, 2, 3, 1, 5, 6], false);
 // => 4
 ```

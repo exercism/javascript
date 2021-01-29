@@ -66,7 +66,7 @@ with the renowned poets.
 Implement a function that returns first letter of a sentence:
 
 ```javascript
-frontDoorResponse('Stands so high')
+frontDoorResponse('Stands so high');
 // => "S"
 ```
 
@@ -75,10 +75,10 @@ frontDoorResponse('Stands so high')
 Implement a function that correctly capitalizes a word:
 
 ```javascript
-capitalize('SHIRE')
+capitalize('SHIRE');
 // => "Shire"
 
-capitalize('horse')
+capitalize('horse');
 // => "Horse"
 ```
 
@@ -87,7 +87,7 @@ capitalize('horse')
 Implement a function that returns the last letter of a sentence:
 
 ```javascript
-backDoorResponse('Stands so high')
+backDoorResponse('Stands so high');
 // => "h"
 ```
 
@@ -96,7 +96,7 @@ backDoorResponse('Stands so high')
 Improve the previous function so that it removes whitespace from the end of a sentence and returns the last character:
 
 ```javascript
-backDoorResponse('Stands so high   ')
+backDoorResponse('Stands so high   ');
 // => "h"
 ```
 
@@ -105,6 +105,6 @@ backDoorResponse('Stands so high   ')
 Change the implementation of the `backDoorPassword` function so that it's polite:
 
 ```javascript
-backDoorPassword('esroh')
+backDoorPassword('esroh');
 // => "Horse, please"
 ```

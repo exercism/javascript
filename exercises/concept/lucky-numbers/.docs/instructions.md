@@ -9,7 +9,7 @@ Given two arrays made up of digits, write a function that turns the digits into 
 Implement a function to calculate the sum of two array element given the array of two numbers:
 
 ```javascript
-twoSum([1, 2, 3], [0, 0, 7])
+twoSum([1, 2, 3], [0, 0, 7]);
 //=> 130
 ```
 
@@ -22,9 +22,9 @@ After the calculator the owner would like to know the sum that he got is a lucky
 Implement a function to determine whether the number is lucky.
 
 ```javascript
-luckyNumber(1441)
+luckyNumber(1441);
 //=>  true
-luckyNumber(123)
+luckyNumber(123);
 //=> false
 ```
 
@@ -33,6 +33,6 @@ luckyNumber(123)
 Implement a function that interpolates a dash between each number, converting it to a string.
 
 ```javascript
-dashify(1466)
+dashify(1466);
 //=> "1-4-6-6"
 ```

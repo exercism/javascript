@@ -3,12 +3,12 @@
 The `let` keyword declares a block scoped local [variable][concept-variable], optionally initializing it to a value.
 
 ```javascript
-let arrow
-arrow = '->'
+let arrow;
+arrow = '->';
 
 // or
 
-let arrow = '->'
+let arrow = '->';
 ```
 
 Variables declared using the `let` keyword have [scope][concept-scope] in the block in which they are defined, and any contained sub-blocks. The main difference between `let` and [`var`][keyword-var] is that the scope of `var` is the entire function in which it was declared.
@@ -16,18 +16,18 @@ Variables declared using the `let` keyword have [scope][concept-scope] in the bl
 ```javascript
 function bob() {
   {
-    let name = 'Bob'
+    let name = 'Bob';
   }
-  console.log(name) // Variable name is undefined
+  console.log(name); // Variable name is undefined
 }
 ```
 
 ```javascript
 function steve() {
   {
-    var name = 'Steve'
+    var name = 'Steve';
   }
-  console.log(name) // Variable name is defined, as "Steve"
+  console.log(name); // Variable name is defined, as "Steve"
 }
 ```
 

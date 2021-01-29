@@ -8,8 +8,8 @@ In this exercise, use built-in methods to analyse the contents of an array.
 Elyse wants to know the position (index) of a card in the stack
 
 ```javascript
-const card = 2
-getCardPosition([9, 7, 3, 2], card)
+const card = 2;
+getCardPosition([9, 7, 3, 2], card);
 // => 3
 ```
 
@@ -18,8 +18,8 @@ getCardPosition([9, 7, 3, 2], card)
 Elyse wants to determine if a card is present in the stack -- in other words, if the stack contains a specific `number`.
 
 ```javascript
-const card = 3
-doesStackIncludeCard([2, 3, 4, 5], card)
+const card = 3;
+doesStackIncludeCard([2, 3, 4, 5], card);
 // => true
 ```
 
@@ -28,7 +28,7 @@ doesStackIncludeCard([2, 3, 4, 5], card)
 Elyse wants to know if every card is even -- in other words, if each number in the stack is an even `number`.
 
 ```javascript
-isEachCardEven([2, 4, 6, 7])
+isEachCardEven([2, 4, 6, 7]);
 // => false
 ```
 
@@ -37,7 +37,7 @@ isEachCardEven([2, 4, 6, 7])
 Elyse wants to know if there is an odd number in the stack
 
 ```javascript
-doesStackIncludeOddCard([3, 2, 6, 4, 8])
+doesStackIncludeOddCard([3, 2, 6, 4, 8]);
 // => true
 ```
 
@@ -46,7 +46,7 @@ doesStackIncludeOddCard([3, 2, 6, 4, 8])
 Elyse wants to know the value of the first card that is odd
 
 ```javascript
-getFirstOddCard([4, 2, 8, 7, 9])
+getFirstOddCard([4, 2, 8, 7, 9]);
 // => 7
 ```
 
@@ -55,6 +55,6 @@ getFirstOddCard([4, 2, 8, 7, 9])
 Elyse wants to know the position of the first card that is even
 
 ```javascript
-getFirstEvenCardPosition([5, 2, 3, 1])
+getFirstEvenCardPosition([5, 2, 3, 1]);
 // => 1
 ```

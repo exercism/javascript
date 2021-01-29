@@ -40,10 +40,10 @@ Implement a function to fetch a translation, ignoring the quality, and
 forwarding any errors thrown by the API:
 
 ```javascript
-service.free('jIyaj')
+service.free('jIyaj');
 // => Promise<...> resolves "I understand."
 
-service.free("jIyajbe'")
+service.free("jIyajbe'");
 // => Promise<...> rejects Error("Not yet translated")
 ```
 
@@ -56,13 +56,13 @@ Implement a function that batch translates the given texts using the free
 service, returning all the translations, or a single error.
 
 ```javascript
-service.batch(['jIyaj', "majQa'"])
+service.batch(['jIyaj', "majQa'"]);
 // => Promise<...> resolves ["I understand.", "Well done!"]
 
-service.batch(['jIyaj', "jIyajbe'"])
+service.batch(['jIyaj', "jIyajbe'"]);
 // => Promise<...> rejects new Error("Not yet translated")
 
-service.batch([])
+service.batch([]);
 // => Promise<...> rejects BatchIsEmpty()
 ```
 
@@ -75,7 +75,7 @@ service.batch([])
 Implement a function that requests a translation, with automatic retries, up to a total of 3 calls for the same request.
 
 ```javascript
-service.request("jIyajbe'")
+service.request("jIyajbe'");
 // => Promise<...> resolves (with nothing), can now be retrieved using the fetch API
 ```
 
@@ -85,13 +85,13 @@ Implement the function for premium users which fetch a translation, request it
 if it's not available, and only return it if it meets a certain threshold.
 
 ```javascript
-service.premium("jIyajbe'", 100)
+service.premium("jIyajbe'", 100);
 // => Promise<...> resolves "I don't understand."
 
-service.premium("'arlogh Qoylu'pu'?", 100)
+service.premium("'arlogh Qoylu'pu'?", 100);
 // => Promise<...> rejects QualityThresholdNotMet()
 
-service.premium("'arlogh Qoylu'pu'?", 40)
+service.premium("'arlogh Qoylu'pu'?", 40);
 // => Promise<...> resolves "What time is it?"
 ```
 

@@ -15,13 +15,13 @@ Note that because `forEach` doesn't directly expose the underlying `for` loops, 
 ## Basic example of `Array.prototype.forEach`:
 
 ```js
-const numbers = [1, 2, 3, 4, 6, 7, 8, 9]
+const numbers = [1, 2, 3, 4, 6, 7, 8, 9];
 
 numbers.forEach((currentValue, currentIndex, fullArray) => {
   if ((currentIndex-- = currentValue)) {
-    console.log(fullArray)
+    console.log(fullArray);
   }
-})
+});
 ```
 
 ---
@@ -31,12 +31,12 @@ Sometimes, efficiency is more valuable than convenience (for instance, when you'
 ## Using a `for` loop to iterate over an `Array`
 
 ```js
-const answersToEverything = [42, 42, 42]
+const answersToEverything = [42, 42, 42];
 
 for (let index = 0; index < answersToEverything.length; index++) {
-  const currentValue = answersToEverything[index]
+  const currentValue = answersToEverything[index];
   // Recall that Arrays are 0-indexed. As such, get the current element using the index.
-  console.log(currentValue)
+  console.log(currentValue);
 }
 ```
 
@@ -49,11 +49,11 @@ A `for .. of` loop is syntactical sugar that creates a regular `for` loop over a
 ## Using a `for .. of` loop using `const`
 
 ```js
-const numbers = [6.0221515, 10, 23]
+const numbers = [6.0221515, 10, 23];
 
 // Because re-assigning number inside the loop will be very confusing, disallowing that via const is preferable.
 for (const number of numbers) {
-  console.log(number)
+  console.log(number);
 }
 
 // Output:

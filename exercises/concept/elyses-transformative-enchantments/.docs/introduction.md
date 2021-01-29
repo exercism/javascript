@@ -3,19 +3,19 @@ In Javascript, the `Array` class has many powerful built-in functions for transf
 Example of transformation using a for loop and second array:
 
 ```javascript
-const numbers = [1, 2, 3]
-const result = []
+const numbers = [1, 2, 3];
+const result = [];
 for (let i = 0; i < numbers.length; i++) {
-  result[i] = numbers[i] + 5
+  result[i] = numbers[i] + 5;
 }
-result
+result;
 // => [6, 7, 8]
 ```
 
 Example of transformation using a built-in method:
 
 ```javascript
-const numbers = [1, 2, 3]
-numbers.map((n) => n + 5)
+const numbers = [1, 2, 3];
+numbers.map((n) => n + 5);
 // => [6, 7, 8]
 ```

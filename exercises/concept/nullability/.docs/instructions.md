@@ -11,6 +11,6 @@ The employee's name is always provided, but the employee `id` number and departm
 An owner's badge should not have an `id` or `department`.
 
 ```javascript
-printBadge(20, 'Bob', 'Marketing')
+printBadge(20, 'Bob', 'Marketing');
 // => '[20] Bob - MARKETING'
 ```

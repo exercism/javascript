@@ -8,7 +8,7 @@ The grocer's application programming interface [API] provides a function to chec
 - if the status is `'OFFLINE'`, return `false`
 
 ```javascript
-isServiceOnline()
+isServiceOnline();
 // => true or false
 ```
 
@@ -22,7 +22,7 @@ The query takes the form of an _object_:
 const query = {
   variety: string,
   quantity: number,
-}
+};
 ```
 
 For your `pickFruit` function, you have decided to generalize it and just pass along a callback. So using the arguments `variety` and `quantity` finish the function to call the `checkInventory` API.
@@ -32,7 +32,7 @@ function action(err, data) {
   // logic
 }
 
-pickFruit('pineapple', 20, action)
+pickFruit('pineapple', 20, action);
 // calls the checkInventory function with the query and passing along the `action` callback function
 ```
 
@@ -43,13 +43,13 @@ Finish the `purchaseInventoryIfAvailable` callback function to be used with the 
 To finish `purchaseInventoryIfAvailable`, throw a new error if `err` is not null. Otherwise, return `'PURCHASE'` if `isAvailable` is _true_ or `'NOOP'` if _false_.
 
 ```javascript
-purchaseInventoryIfAvailable('Server Offline', undefined)
+purchaseInventoryIfAvailable('Server Offline', undefined);
 // => Throws new error "Server Offline"
 
-purchaseInventoryIfAvailable(null, true)
+purchaseInventoryIfAvailable(null, true);
 // => 'PURCHASE'
 
-purchaseInventoryIfAvailable(null, false)
+purchaseInventoryIfAvailable(null, false);
 // => 'NOOP'
 ```
 
@@ -58,6 +58,6 @@ purchaseInventoryIfAvailable(null, false)
 You notice that you're using `pickFruit` and `purchaseInventoryIfAvailable` so you decide to DRY up your code by extracting the code into a separate function called `pickAndPurchaseFruit`. Reuse `pickFruit` and `purchaseInventoryIfAvailable` to finish this function.
 
 ```javascript
-pickAndPurchaseFruit('Red Delicious Apples', 42)
+pickAndPurchaseFruit('Red Delicious Apples', 42);
 // 'PURCHASE' if available or 'NOOP' if not available
 ```
