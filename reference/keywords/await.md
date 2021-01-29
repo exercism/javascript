@@ -5,6 +5,6 @@ The `await` operator is used to wait for a [`Promise`][global-objects-promise]. 
 See [concurrency][concept-concurrency].
 
 [concept-concurrency]: ../info/concurrency.md
-[concept-functions]: ../../../../reference/concepts/functions.md
+[concept-functions]: https://github.com/exercism/v3/blob/main/reference/concepts/functions.md
 [global-objects-promise]: ../objects/promise.md
 [keyword-async]: ./async.md

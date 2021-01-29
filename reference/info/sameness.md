@@ -31,7 +31,7 @@ Same-value equality addresses a final use case: determining whether two values a
 
 Similar to same-value equality, but `+0` and `-0` are considered equal.
 
-[concept-sameness]: ../../../../reference/concepts/sameness.md
-[concept-type-casting]: ../../../../reference/concepts/type_casting.md
+[concept-sameness]: https://github.com/exercism/v3/blob/main/reference/concepts/sameness.md
+[concept-type-casting]: https://github.com/exercism/v3/blob/main/reference/concepts/type_casting.md
 [language-javascript]: ../../README.md
 [wiki-liskov]: http://en.wikipedia.org/wiki/Liskov_substitution_principle

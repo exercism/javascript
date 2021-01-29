@@ -18,11 +18,11 @@ A falsy value is a value that is considered `false` when encountered in a [Boole
 | `undefined` | `undefined` - the primitive value                                                                                                                                              |
 | `NaN`       | `NaN` - not a number                                                                                                                                                           |
 
-[concept-conditionals]: ../../../../reference/concepts/conditionals.md
-[concept-loops]: ../../../../reference/concepts/loops.md
-[concept-type-coercion]: ../../../../reference/concepts/type_casting.md
+[concept-conditionals]: https://github.com/exercism/v3/blob/main/reference/concepts/conditionals.md
+[concept-loops]: https://github.com/exercism/v3/blob/main/reference/concepts/loops.md
+[concept-type-coercion]: https://github.com/exercism/v3/blob/main/reference/concepts/type_casting.md
 [language-javascript]: ../../README.md
-[type-bigint]: ../../../../reference/types/big_integer.md
-[type-boolean]: ../../../../reference/types/boolean.md
-[type-null]: ../../../../reference/types/null.md
-[type-string]: ../../../../reference/types/string.md
+[type-bigint]: https://github.com/exercism/v3/blob/main/reference/types/big_integer.md
+[type-boolean]: https://github.com/exercism/v3/blob/main/reference/types/boolean.md
+[type-null]: https://github.com/exercism/v3/blob/main/reference/types/null.md
+[type-string]: https://github.com/exercism/v3/blob/main/reference/types/string.md
