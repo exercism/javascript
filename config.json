@@ -112,17 +112,6 @@
       ]
     },
     {
-      "slug": "bank-account",
-      "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
-      "core": false,
-      "unlocked_by": "space-age",
-      "difficulty": 3,
-      "topics": [
-        "classes",
-        "conditionals"
-      ]
-    },
-    {
       "slug": "matrix",
       "uuid": "dd0b5e67-81f6-437e-8334-2ec0dfeb862a",
       "core": true,
@@ -276,19 +265,6 @@
         "booleans",
         "integers",
         "logic"
-      ]
-    },
-    {
-      "slug": "square-root",
-      "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "bitwise_operations",
-        "algorithms",
-        "loops",
-        "math"
       ]
     },
     {
@@ -447,6 +423,17 @@
         "lists",
         "regular_expressions",
         "strings"
+      ]
+    },
+    {
+      "slug": "bank-account",
+      "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 3,
+      "topics": [
+        "classes",
+        "conditionals"
       ]
     },
     {
@@ -624,6 +611,19 @@
       ]
     },
     {
+      "slug": "scale-generator",
+      "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
+      "topics": [
+        "loops",
+        "pattern_recognition",
+        "strings",
+        "arrays"
+      ]
+    },
+    {
       "slug": "series",
       "uuid": "5178ae53-5364-46c9-bee3-70e6e8a8c2e3",
       "core": false,
@@ -664,6 +664,18 @@
         "loops",
         "matrices",
         "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "grep",
+      "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
+      "core": false,
+      "unlocked_by": "matrix",
+      "difficulty": 4,
+      "topics": [
+        "files",
+        "searching",
         "text_formatting"
       ]
     },
@@ -824,6 +836,19 @@
       ]
     },
     {
+      "slug": "yacht",
+      "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "filtering",
+        "games"
+      ]
+    },
+    {
       "slug": "beer-song",
       "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
       "core": false,
@@ -844,6 +869,16 @@
       "topics": [
         "conditionals",
         "loops"
+      ]
+    },
+    {
+      "slug": "dominoes",
+      "uuid": "3d155146-f3a9-43c6-a662-2a0679949a12",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 6,
+      "topics": [
+        "graph_theory"
       ]
     },
     {
@@ -1023,19 +1058,6 @@
       "topics": [
         "algorithms",
         "games"
-      ]
-    },
-    {
-      "slug": "scale-generator",
-      "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
-      "core": false,
-      "unlocked_by": "pangram",
-      "difficulty": 3,
-      "topics": [
-        "loops",
-        "pattern_recognition",
-        "strings",
-        "arrays"
       ]
     },
     {
@@ -1267,6 +1289,16 @@
       ]
     },
     {
+      "slug": "point-mutations",
+      "uuid": "6d43709b-3809-4a6a-ab41-2a5ab841b5fb",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null,
+      "deprecated": true,
+      "status": "deprecated"
+    },
+    {
       "slug": "protein-translation",
       "uuid": "775ae0ec-8db7-4568-a188-963931cf5ee1",
       "core": false,
@@ -1288,6 +1320,17 @@
       "topics": [
         "algorithms",
         "math"
+      ]
+    },
+    {
+      "slug": "dnd-character",
+      "uuid": "b373e13c-f179-4b36-b6e8-2a0f41540344",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "classes",
+        "randomness"
       ]
     },
     {
@@ -1326,6 +1369,88 @@
         "pattern_recognition",
         "transforming"
       ]
+    },
+    {
+      "slug": "binary",
+      "uuid": "0ba4d3b9-2519-49ac-bd93-f960aca6c11f",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "loops",
+        "exception_handling",
+        "integers",
+        "math",
+        "regular_expressions",
+        "strings"
+      ],
+      "deprecated": true,
+      "status": "deprecated"
+    },
+    {
+      "slug": "hexadecimal",
+      "uuid": "8ed2c9fe-a13f-4313-abf9-125f351c85c9",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "loops",
+        "integers",
+        "math",
+        "regular_expressions",
+        "strings"
+      ],
+      "deprecated": true,
+      "status": "deprecated"
+    },
+    {
+      "slug": "octal",
+      "uuid": "dec66f89-39d0-4857-9679-a035cf4259d7",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "loops",
+        "integers",
+        "math",
+        "regular_expressions",
+        "strings"
+      ],
+      "deprecated": true,
+      "status": "deprecated"
+    },
+    {
+      "slug": "square-root",
+      "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "bitwise_operations",
+        "algorithms",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "trinary",
+      "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "loops",
+        "integers",
+        "math",
+        "regular_expressions",
+        "strings"
+      ],
+      "deprecated": true,
+      "status": "deprecated"
     },
     {
       "slug": "all-your-base",
@@ -1392,131 +1517,6 @@
         "recursion",
         "searching",
         "trees"
-      ]
-    },
-    {
-      "slug": "dnd-character",
-      "uuid": "b373e13c-f179-4b36-b6e8-2a0f41540344",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "classes",
-        "randomness"
-      ]
-    },
-    {
-      "slug": "trinary",
-      "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "integers",
-        "math",
-        "regular_expressions",
-        "strings"
-      ],
-      "deprecated": true,
-      "status": "deprecated"
-    },
-    {
-      "slug": "octal",
-      "uuid": "dec66f89-39d0-4857-9679-a035cf4259d7",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "integers",
-        "math",
-        "regular_expressions",
-        "strings"
-      ],
-      "deprecated": true,
-      "status": "deprecated"
-    },
-    {
-      "slug": "hexadecimal",
-      "uuid": "8ed2c9fe-a13f-4313-abf9-125f351c85c9",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "integers",
-        "math",
-        "regular_expressions",
-        "strings"
-      ],
-      "deprecated": true,
-      "status": "deprecated"
-    },
-    {
-      "slug": "point-mutations",
-      "uuid": "6d43709b-3809-4a6a-ab41-2a5ab841b5fb",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 0,
-      "topics": null,
-      "deprecated": true,
-      "status": "deprecated"
-    },
-    {
-      "slug": "binary",
-      "uuid": "0ba4d3b9-2519-49ac-bd93-f960aca6c11f",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "exception_handling",
-        "integers",
-        "math",
-        "regular_expressions",
-        "strings"
-      ],
-      "deprecated": true,
-      "status": "deprecated"
-    },
-    {
-      "slug": "grep",
-      "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
-      "core": false,
-      "unlocked_by": "matrix",
-      "difficulty": 4,
-      "topics": [
-        "files",
-        "searching",
-        "text_formatting"
-      ]
-    },
-    {
-      "slug": "yacht",
-      "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
-      "core": false,
-      "unlocked_by": "bob",
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "filtering",
-        "games"
-      ]
-    },
-    {
-      "slug": "dominoes",
-      "uuid": "3d155146-f3a9-43c6-a662-2a0679949a12",
-      "core": false,
-      "unlocked_by": "bob",
-      "difficulty": 6,
-      "topics": [
-        "graph_theory"
       ]
     }
   ]
