@@ -11,5 +11,10 @@
       "exercism_username": "SleeplessByte"
     }
   ],
-  "forked_from": []
+  "forked_from": [],
+  "files": {
+    "solution": [],
+    "test": [],
+    "exemplar": [".meta/exemplar.js"]
+  }
 }

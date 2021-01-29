@@ -11,8 +11,9 @@
       "exercism_username": "sleeplessbyte"
     }
   ],
-  "editor": {
-    "solution_files": ["fruit-picker.js"],
-    "test_files": ["fruit-picker.spec.js"]
+  "files": {
+    "solution": ["fruit-picker.js"],
+    "test": ["fruit-picker.spec.js"],
+    "exemplar": []
   }
 }

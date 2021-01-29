@@ -6,8 +6,9 @@
     }
   ],
   "forked_from": ["csharp/nullability"],
-  "editor": {
-    "solution_files": ["recursion.js"],
-    "test_files": ["recursion.spec.js"]
+  "files": {
+    "solution": ["recursion.js"],
+    "test": ["recursion.spec.js"],
+    "exemplar": []
   }
 }

@@ -5,8 +5,9 @@
       "exercism_username": "SleeplessByte"
     }
   ],
-  "editor": {
-    "solution_files": ["numbers.js"],
-    "test_files": ["numbers.spec.js"]
+  "files": {
+    "solution": ["numbers.js"],
+    "test": ["numbers.spec.js"],
+    "exemplar": []
   }
 }
