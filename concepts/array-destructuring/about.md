@@ -1,40 +1,40 @@
 Array [destructuring assignment][array_destructuring_docs] is a concise way of extracting values from an array. Its syntax is similar to an [array literal][array_literal_resource] expression, but on the left-hand side of the assignment instead of the right.
 
 ```javascript
-const frenchNumbers = ['quatre-vingts', 'quatre-vingt-dix', 'cent']
-const [french80, french90, french100] = frenchNumbers
+const frenchNumbers = ['quatre-vingts', 'quatre-vingt-dix', 'cent'];
+const [french80, french90, french100] = frenchNumbers;
 
-french80
+french80;
 // => 'quatre-vingts'
-french90
+french90;
 // => 'quatre-vingt-dix'
-french100
+french100;
 // => 'cent'
 ```
 
 Because variables are mapped to values in the array by position, destructuring syntax can be used to assign or re-assign multiple variables in a single expression.
 
 ```javascript
-let [a, b] = ['world', 'hello']
-;[b, a] = [a, b]
+let [a, b] = ['world', 'hello'];
+[b, a] = [a, b];
 
-a
+a;
 // => 'hello'
-b
+b;
 // => 'world'
 ```
 
 This works for nested arrays too.
 
 ```javascript
-let [a, b, c] = ['orange', 'purple', 'green']
-;[[a, b], c] = [[c, a], b]
+let [a, b, c] = ['orange', 'purple', 'green'];
+[[a, b], c] = [[c, a], b];
 
-a
+a;
 // => 'green'
-b
+b;
 // => 'orange'
-c
+c;
 // => 'purple'
 ```
 
@@ -64,19 +64,19 @@ lastName
 It's even possible to extract _more_ values than the array contains; the leftover variables will be assigned `undefined`. This may be useful when the amount of values isn't known ahead of time.
 
 ```javascript
-const pickAtLeastOne = ['first choice', 'second choice']
-const [first, second, third, fourth] = pickAtLeastOne
+const pickAtLeastOne = ['first choice', 'second choice'];
+const [first, second, third, fourth] = pickAtLeastOne;
 
-first
+first;
 // => "first choice"
 
-second
+second;
 // => "second choice"
 
-third
+third;
 // => undefined
 
-fourth
+fourth;
 // => undefined
 ```
 

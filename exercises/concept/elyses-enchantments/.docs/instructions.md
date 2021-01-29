@@ -7,8 +7,8 @@ To make things a bit easier she only uses the cards 1 to 10.
 Return the card at position `index` from the given stack.
 
 ```javascript
-const index = 2
-getItem([1, 2, 4, 1], index)
+const index = 2;
+getItem([1, 2, 4, 1], index);
 // => 4
 ```
 
@@ -18,9 +18,9 @@ Exchange the card at position `index` with the new card provided and return the 
 Note that this will also change the input slice which is ok.
 
 ```javascript
-const index = 2
-const newCard = 6
-setItem([1, 2, 4, 1], index, newCard)
+const index = 2;
+const newCard = 6;
+setItem([1, 2, 4, 1], index, newCard);
 // => [1, 2, 6, 1]
 ```
 
@@ -29,8 +29,8 @@ setItem([1, 2, 4, 1], index, newCard)
 Insert new card at the top of the stack and return the stack.
 
 ```javascript
-const newCard = 8
-insertItemAtTop([5, 9, 7, 1], newCard)
+const newCard = 8;
+insertItemAtTop([5, 9, 7, 1], newCard);
 // => [5, 9, 7, 1, 8]
 ```
 
@@ -39,8 +39,8 @@ insertItemAtTop([5, 9, 7, 1], newCard)
 Remove the card at position `index` from the stack and return the stack.
 
 ```javascript
-const index = 2
-removeItem([3, 2, 6, 4, 8], index)
+const index = 2;
+removeItem([3, 2, 6, 4, 8], index);
 // => [3, 2, 4, 8]
 ```
 
@@ -49,7 +49,7 @@ removeItem([3, 2, 6, 4, 8], index)
 Remove the card at the top of the stack and return the stack.
 
 ```javascript
-removeItemFromTop([3, 2, 6, 4, 8])
+removeItemFromTop([3, 2, 6, 4, 8]);
 // => [3, 2, 6, 4]
 ```
 
@@ -58,8 +58,8 @@ removeItemFromTop([3, 2, 6, 4, 8])
 Insert new card at the bottom of the stack and return the stack.
 
 ```javascript
-const newCard = 8
-insertItemAtBottom([5, 9, 7, 1], newCard)
+const newCard = 8;
+insertItemAtBottom([5, 9, 7, 1], newCard);
 // => [8, 5, 9, 7, 1]
 ```
 
@@ -68,7 +68,7 @@ insertItemAtBottom([5, 9, 7, 1], newCard)
 Remove the card at the bottom of the stack and return the stack.
 
 ```javascript
-removeItemAtBottom([8, 5, 9, 7, 1])
+removeItemAtBottom([8, 5, 9, 7, 1]);
 // => [5, 9, 7, 1]
 ```
 
@@ -77,7 +77,7 @@ removeItemAtBottom([8, 5, 9, 7, 1])
 Check whether the size of the stack is equal a given `stackSize` or not.
 
 ```javascript
-const stackSize = 4
-checkSizeOfStack([3, 2, 6, 4, 8], stackSize)
+const stackSize = 4;
+checkSizeOfStack([3, 2, 6, 4, 8], stackSize);
 // => false
 ```

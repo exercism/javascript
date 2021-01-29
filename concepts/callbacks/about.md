@@ -14,11 +14,11 @@ A synchronous call is when one function is executed after the other. The order i
 
 ```javascript
 function triangleArea(height, base) {
-  return (height * base) / 2
+  return (height * base) / 2;
 }
 
-triangleArea(2, 10) // => 10
-triangleArea(40, 3) // => 60
+triangleArea(2, 10); // => 10
+triangleArea(40, 3); // => 60
 ```
 
 ## Asynchronous Code
@@ -27,23 +27,23 @@ When an asynchronous function is invoked, there is no way to know for certain wh
 
 ```javascript
 // This is broken, it may or may not return your value in time to be used
-let area = asynchronousTriangleArea(4, 7)
-console.log(area)
+let area = asynchronousTriangleArea(4, 7);
+console.log(area);
 ```
 
 So we can use callbacks to control the order of execution:
 
 ```javascript
 function areaCallback(area) {
-  console.log(area)
+  console.log(area);
 }
 
 function asynchronousTriangleArea(height, base, areaCallback) {
-  areaCallback((height * base) / 2)
+  areaCallback((height * base) / 2);
 }
 
 // This outputs the area of the triangle to the console as expected.
-asynchronousCallback(4, 7, areaCallback)
+asynchronousCallback(4, 7, areaCallback);
 ```
 
 ## Specific callback forms

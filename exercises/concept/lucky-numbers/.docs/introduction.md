@@ -4,9 +4,9 @@ JavaScript will implicitly coerce types transparently to a programmer, which may
 
 ```javascript
 // Examples of implicit type coercion:
-true + false // => 1
-12 == '12' // => true
-'number' + 5 // => "number5"
+true + false; // => 1
+12 == '12'; // => true
+'number' + 5; // => "number5"
 ```
 
 How a type is coerced is often dependent on the order of the values and the operator causing the types to be coerced.
@@ -21,12 +21,12 @@ How a type is coerced is often dependent on the order of the values and the oper
 Generally, it is best to _avoid_ _implicit type coercion_ and use explicit type conversion functions.
 
 ```javascript
-const a = 46
-String(a) // => "46"
+const a = 46;
+String(a); // => "46"
 
-const b = '3.4'
-Number(b) //=> 3.4
-Boolean(b) // => true
+const b = '3.4';
+Number(b); //=> 3.4
+Boolean(b); // => true
 ```
 
 Other functions also exist to convert a value from one type to another:

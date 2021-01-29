@@ -21,7 +21,7 @@ between `0.0%` (no discount) and `90.0%` (maximum discount).
 Implement a function to calculate the day rate given an hourly rate:
 
 ```javascript
-dayRate(89)
+dayRate(89);
 // => 712
 ```
 
@@ -32,7 +32,7 @@ The day rate does not need to be rounded or changed to a "fixed" precision.
 Implement a function to calculate the month rate, and apply a discount:
 
 ```javascript
-monthRate(89, '42%')
+monthRate(89, '42%');
 // => 9086
 ```
 
@@ -45,7 +45,7 @@ Implement a function that takes a budget, a rate per hour and a discount, and
 calculates how many days of work that covers, to one decimal place.
 
 ```javascript
-daysInBudget(20000, 89, '20.02%')
+daysInBudget(20000, 89, '20.02%');
 // => "35.1"
 ```
 

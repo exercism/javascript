@@ -7,10 +7,10 @@ The built-in functions are meant to be used _instead of a `for` loop_ or the bui
 Example of analysis using a for loop :
 
 ```javascript
-const numbers = [1, 'two', 3, 'four']
+const numbers = [1, 'two', 3, 'four'];
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] === 'two') {
-    return i
+    return i;
   }
 }
 // => 1
@@ -19,8 +19,8 @@ for (var i = 0; i < numbers.length; i++) {
 Example of analysis using a built-in method:
 
 ```javascript
-const numbers = [1, 'two', 3, 'four']
-numbers.indexOf('two')
+const numbers = [1, 'two', 3, 'four'];
+numbers.indexOf('two');
 // => 1
 ```
 

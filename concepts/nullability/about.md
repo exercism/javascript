@@ -1,12 +1,12 @@
 Null is a primitive value, used to represent an intentional absence of an object value. It's _falsy_, and its `typeof` is `object`.
 
 ```javascript
-var person = null
+var person = null;
 
 if (person) {
-  console.log('person is not null')
+  console.log('person is not null');
 } else {
-  console.log('person is null')
+  console.log('person is null');
 }
 ```
 
@@ -18,10 +18,10 @@ The `null` value has to be differentiated from the variable `undefined`. The dis
 value of an uninitialized variable or type, while `null` represents a missing object.
 
 ```javascript
-typeof null // => "object"
-typeof undefined // => "undefined"
-null === undefined // => evaluates to false by identity comparison
-null == undefined // => evaluates to true by truthy comparison
+typeof null; // => "object"
+typeof undefined; // => "undefined"
+null === undefined; // => evaluates to false by identity comparison
+null == undefined; // => evaluates to true by truthy comparison
 ```
 
 ## Nullish coalescing operator (??)
@@ -30,8 +30,8 @@ The nullish coalescing operator returns its right-hand side operand if and only 
 or `undefined`.
 
 ```javascript
-const foo = null ?? 'left-hand side operand is null'
-foo // => "left-hand side operand is null"
+const foo = null ?? 'left-hand side operand is null';
+foo; // => "left-hand side operand is null"
 ```
 
 You can find more about the nullish coalescing operator in the [MDN docs][nullish coalescing].
@@ -45,10 +45,10 @@ reference is `null`, it will return the `undefined` value.
 const person = {
   name: 'Bob',
   nationality: 'Belgian',
-}
+};
 
-person.gender // => error
-person?.gender // => "undefined"
+person.gender; // => error
+person?.gender; // => "undefined"
 ```
 
 You can find more about the optional chaining in the [MDN docs][optional chaining].

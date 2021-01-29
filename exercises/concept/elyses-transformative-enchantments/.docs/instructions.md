@@ -6,8 +6,8 @@ To make things easier, she usually only starts with cards numbered 1 to 10, alth
 Elyse wants to double the number of every card in the deck. This may result in higher cards than 1-10.
 
 ```javascript
-const deck = [1, 2, 3, 4, 10]
-seeingDouble(deck)
+const deck = [1, 2, 3, 4, 10];
+seeingDouble(deck);
 // => [2, 4, 6, 8, 20]
 ```
 
@@ -16,8 +16,8 @@ seeingDouble(deck)
 Elyse wants to triplicate every 3 found in the deck. If a deck started with a single 3, after the trick the deck would have three 3's in place of original.
 
 ```javascript
-const deck = [1, 3, 9, 3, 7]
-threeOfEachThree(deck)
+const deck = [1, 3, 9, 3, 7];
+threeOfEachThree(deck);
 // => [1, 3, 3, 3, 9, 3, 3, 3, 7]
 ```
 
@@ -26,8 +26,8 @@ threeOfEachThree(deck)
 Elyse will take a deck of ten cards, and make every card disappear except the middle two cards.
 
 ```javascript
-const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-middleTwo(deck)
+const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+middleTwo(deck);
 // => [5, 6]
 ```
 
@@ -36,8 +36,8 @@ middleTwo(deck)
 Elyse wants to move the top and bottom cards of the deck into the middle, in reverse order.
 
 ```javascript
-const deck = [1, 2, 3, 5, 6, 10]
-sandwichTrick(deck)
+const deck = [1, 2, 3, 5, 6, 10];
+sandwichTrick(deck);
 // => [2, 3, 10, 1, 5, 6]
 ```
 
@@ -46,8 +46,8 @@ sandwichTrick(deck)
 Elyse's favorite number today is 2. In this trick every card that isn't a 2 will disappear from the deck.
 
 ```javascript
-const deck = [1, 2, 3, 4, 10, 2]
-twoIsSpecial(deck)
+const deck = [1, 2, 3, 4, 10, 2];
+twoIsSpecial(deck);
 // => [2, 2]
 ```
 
@@ -56,8 +56,8 @@ twoIsSpecial(deck)
 Elyse wishes to demonstrate her mastery of reordering the cards perfectly - no matter how well shuffled.
 
 ```javascript
-const deck = [10, 1, 5, 3, 2, 8, 7]
-perfectlyOrdered(deck)
+const deck = [10, 1, 5, 3, 2, 8, 7];
+perfectlyOrdered(deck);
 // => [1, 2, 3, 5, 7, 8, 10]
 ```
 
@@ -67,7 +67,7 @@ Elyse will transform the whole deck into only cards that match the deck size.
 Hand her 7 random cards and you'll get back 7 sevens.
 
 ```javascript
-const deck = [10, 1, 5, 3, 2, 8, 7] // 7 cards
-countingCards(deck)
+const deck = [10, 1, 5, 3, 2, 8, 7]; // 7 cards
+countingCards(deck);
 // => [7, 7, 7, 7, 7, 7, 7]
 ```

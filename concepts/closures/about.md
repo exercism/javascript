@@ -11,14 +11,14 @@ The name **closure** is historically derived from [_λ-calculus_][wiki-lambda-ca
 
    const saveNumber = (number) => {
      // The saved value is unaccessible by the outer lexical scope.
-     const value = number
+     const value = number;
 
      // We can provide access to the primitive value with a function, but the original will never change
-     return () => value
-   }
+     return () => value;
+   };
 
    // Attempting to set the variable outside of its lexical scope results in an error
-   value = 42
+   value = 42;
    ```
 
 2. Partial Application
@@ -30,19 +30,19 @@ The name **closure** is historically derived from [_λ-calculus_][wiki-lambda-ca
    function partialBuildUri(scheme) {
      return function (domain) {
        return function (path) {
-         return `${scheme}://${domain}/${path}`
-       }
-     }
+         return `${scheme}://${domain}/${path}`;
+       };
+     };
    }
 
    // A function could apply them all at once.
    function buildUri(scheme, domain, path) {
-     return partialBuildUri(scheme)(domain)(path)
+     return partialBuildUri(scheme)(domain)(path);
    }
 
    // Or apply a few to create a flexible system of functions for reuse.
    function buildHttpsExercismUri(path) {
-     return partialBuildUri('https')('exercism.io')
+     return partialBuildUri('https')('exercism.io');
    }
    ```
 
@@ -62,11 +62,11 @@ The `var` keyword defines **function-scoped** variable. This means that variable
 
 ```javascript
 {
-  var five = 5
+  var five = 5;
 }
 
 // This will succeed because 'five' exists in the same scope
-var tenTimes = five * 10
+var tenTimes = five * 10;
 ```
 
 ### Block-scope
@@ -77,25 +77,25 @@ Consider this block:
 
 ```javascript
 // 'two' is defined at the top-level, therefore available to the global-scope
-const two = 2
+const two = 2;
 
 {
   // This succeeds, as 'two' is available from the outer lexical scope
-  const oneLess = two - 1
+  const oneLess = two - 1;
 }
 
 // This throws an error, because oneLess is not defined outside of the previous inner lexical scope
-console.log(oneLess)
+console.log(oneLess);
 ```
 
 While we can use braces (`{...}`) arbitrarily to create blocks, they are most often encountered surrounding _if-statements_, _functions_, and _classes_.
 
 ```javascript
-const PI = 3.14
+const PI = 3.14;
 
 // This function uses a closure for the value of PI (π)
 function areaOfCircle(radius) {
-  return PI * radius * radius
+  return PI * radius * radius;
 }
 ```
 

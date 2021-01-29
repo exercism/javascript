@@ -11,11 +11,11 @@ There are two approaches for solving Pangram so I divided concepts into common p
 ## Concepts for Using Array#every
 
 ```javascript
-const ALPHABET = [...'qwertyuiopasdfghjklzxcvbnm']
+const ALPHABET = [...'qwertyuiopasdfghjklzxcvbnm'];
 
 export function isPangram(input) {
-  const normalised = input.toLowerCase()
-  return ALPHABET.every((letter) => normalised.includes(letter))
+  const normalised = input.toLowerCase();
+  return ALPHABET.every((letter) => normalised.includes(letter));
 }
 ```
 
@@ -27,12 +27,12 @@ export function isPangram(input) {
 ## Concepts for Using Set
 
 ```javascript
-const ALPHABET_SIZE = 26
-const ALPHABET_TEST = /[a-z]/g
+const ALPHABET_SIZE = 26;
+const ALPHABET_TEST = /[a-z]/g;
 
 export function isPangram(input) {
-  const normalised = input.toLowerCase()
-  return new Set(normalised.match(ALPHABET_TEST)).size >= ALPHABET_SIZE
+  const normalised = input.toLowerCase();
+  return new Set(normalised.match(ALPHABET_TEST)).size >= ALPHABET_SIZE;
 }
 ```
 

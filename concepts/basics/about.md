@@ -9,24 +9,24 @@ The `const` keyword is mentioned _both_ for variables and constants. Another con
 The `const` keyword only makes the _binding_ immutable, that is, you can only assign a value to a `const` variable once. In JavaScript, only [primitive][mdn-primitive] values are immutable. However, [non primitive][mdn-primitive] values can still be mutated.
 
 ```javascript
-const MY_MUTABLE_VALUE_CONSTANT = { food: 'apple' }
+const MY_MUTABLE_VALUE_CONSTANT = { food: 'apple' };
 
 // This is possible
-MY_MUTABLE_VALUE_CONSTANT.food = 'pear'
+MY_MUTABLE_VALUE_CONSTANT.food = 'pear';
 
-MY_MUTABLE_VALUE_CONSTANT
+MY_MUTABLE_VALUE_CONSTANT;
 // => { food: "pear" }
 ```
 
 As a rule, we don't mutate values that look like `const SCREAMING_SNAKE_CASE`. When we _must_ to enforce this, use [`Object.freeze(value)`][mdn-object-freeze].
 
 ```javascript
-const MY_VALUE_CONSTANT = Object.freeze({ food: 'apple' })
+const MY_VALUE_CONSTANT = Object.freeze({ food: 'apple' });
 
 // This silently fails
-MY_MUTABLE_VALUE_CONSTANT.food = 'pear'
+MY_MUTABLE_VALUE_CONSTANT.food = 'pear';
 
-MY_MUTABLE_VALUE_CONSTANT
+MY_MUTABLE_VALUE_CONSTANT;
 // => { food: "apple" }
 ```
 

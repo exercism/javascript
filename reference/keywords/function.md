@@ -4,8 +4,8 @@ The `function` keyword can be used to define a [function][concept-functions] ins
 
 ```javascript
 const greet = function (name) {
-  return `Hello ${name}`
-}
+  return `Hello ${name}`;
+};
 ```
 
 You can also define functions using the `Function` constructor and a function declaration.
@@ -16,7 +16,7 @@ The function declaration (function statement) defines a function with the specif
 
 ```javascript
 function greet(name) {
-  return `Hello ${name}`
+  return `Hello ${name}`;
 }
 ```
 
@@ -25,7 +25,7 @@ function greet(name) {
 The `Function` constructor creates a new Function **object**. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues to eval. However, unlike `eval`, the Function constructor creates functions which execute in the [global scope][concept-scope] only.
 
 ```javascript
-const greet = new Function('name', 'return `Hello ${name}`')
+const greet = new Function('name', 'return `Hello ${name}`');
 ```
 
 [concept-scope]: https://github.com/exercism/v3/blob/main/reference/concepts/scope.md

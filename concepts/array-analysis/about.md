@@ -4,21 +4,21 @@ Instead of manually iterating over those indexed properties, use array analysis.
 In general, using the abstractions/built-in methods is more idiomatic, readable and maintainable than using a `for` or `.forEach` equivalent.
 
 ```javascript
-const values = [1, 2, 5, 8, 8, 10]
+const values = [1, 2, 5, 8, 8, 10];
 
 // Array#some stops iteration as soon as the given predicate returns true; it
 // returns false if none of the elements in the array pass the predicate. In
 // other words: return true if for some item the given function returns true.
 //
-const isOdd = (item) => item % 2 === 1
-const areSomeOdd = values.some(isOdd)
+const isOdd = (item) => item % 2 === 1;
+const areSomeOdd = values.some(isOdd);
 // => true
 
 // Array#every stops iteration as soon as the given predicate returns false; it
 // returns true if each and every element passes the predicate. In other words:
 // return true if for every item the given function returns true
 //
-const areAllPositive = values.every((item) => item >= 0)
+const areAllPositive = values.every((item) => item >= 0);
 // => true
 
 // Most array analysis predicates get more than one argument as their input. In
@@ -44,10 +44,10 @@ const areAllPositive = values.every((item) => item >= 0)
 //   // => true
 //
 function isDuplicate(item, index, self) {
-  return self.indexOf(item) !== index
+  return self.indexOf(item) !== index;
 }
 
-const indexOfFirstDuplicate = values.findIndex(isDuplicate)
+const indexOfFirstDuplicate = values.findIndex(isDuplicate);
 // => 4
 
 // Some of the analysis functions don't take a predicate but instead take a
@@ -62,7 +62,7 @@ const indexOfFirstDuplicate = values.findIndex(isDuplicate)
 //
 //   values.findIndex((item) => item === 42) !== 1
 //
-const hasValue42 = values.includes(42)
+const hasValue42 = values.includes(42);
 // => false
 ```
 
