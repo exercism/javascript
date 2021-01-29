@@ -1682,5 +1682,109 @@
         ]
       }
     ]
-  }
+  },
+  "concepts": [
+    {
+      "uuid": "e1b15569-387c-4833-8c3b-9a94e0ee1583",
+      "slug": "array-analysis",
+      "name": "Array Analysis",
+      "blurb": "TODO: add blurb for array-analysis concept"
+    },
+    {
+      "uuid": "9f8f96bb-db13-485a-bfe4-6ae3fe2fbf46",
+      "slug": "array-destructuring",
+      "name": "Array Destructuring",
+      "blurb": "TODO: add blurb for array-destructuring concept"
+    },
+    {
+      "uuid": "5b0ab681-f44f-4910-b2cf-0b1fcd19ba55",
+      "slug": "array-loops",
+      "name": "Array Loops",
+      "blurb": "TODO: add blurb for array-loops concept"
+    },
+    {
+      "uuid": "c7c56d2a-636f-4976-9e08-931258a47923",
+      "slug": "arrays",
+      "name": "Arrays",
+      "blurb": "TODO: add blurb for arrays concept"
+    },
+    {
+      "uuid": "611d6b3d-1241-4432-90f6-8fcffb36917c",
+      "slug": "basics",
+      "name": "Basics",
+      "blurb": "TODO: add blurb for basics concept"
+    },
+    {
+      "uuid": "791d215c-6813-479a-a126-d9ad9cdc49a9",
+      "slug": "booleans",
+      "name": "Booleans",
+      "blurb": "TODO: add blurb for booleans concept"
+    },
+    {
+      "uuid": "fba5ca5c-849c-44ee-91be-3d6c81a3cf4e",
+      "slug": "callbacks",
+      "name": "Callbacks",
+      "blurb": "TODO: add blurb for callbacks concept"
+    },
+    {
+      "uuid": "bffd6d06-c10a-469c-812b-9b75010c8416",
+      "slug": "closures",
+      "name": "Closures",
+      "blurb": "TODO: add blurb for closures concept"
+    },
+    {
+      "uuid": "2d0b9f1f-c135-4014-b87c-25b081387002",
+      "slug": "conditionals",
+      "name": "Conditionals",
+      "blurb": "TODO: add blurb for conditionals concept"
+    },
+    {
+      "uuid": "95ba7bed-c370-4f20-9173-79cbd5c2416e",
+      "slug": "errors",
+      "name": "Errors",
+      "blurb": "TODO: add blurb for errors concept"
+    },
+    {
+      "uuid": "008f1c88-7c14-48b2-a88d-49ecb5e3b122",
+      "slug": "nullability",
+      "name": "Nullability",
+      "blurb": "TODO: add blurb for nullability concept"
+    },
+    {
+      "uuid": "8da586c3-9327-46e2-ad32-c8423061912d",
+      "slug": "numbers",
+      "name": "Numbers",
+      "blurb": "TODO: add blurb for numbers concept"
+    },
+    {
+      "uuid": "b3aa57d9-74b2-4d04-a673-ae2402630d8b",
+      "slug": "promises",
+      "name": "Promises",
+      "blurb": "TODO: add blurb for promises concept"
+    },
+    {
+      "uuid": "cfbc96fa-717e-4f29-a91d-760ebea88822",
+      "slug": "recursion",
+      "name": "Recursion",
+      "blurb": "TODO: add blurb for recursion concept"
+    },
+    {
+      "uuid": "19085ad2-038a-4e08-ad34-47ff2a78fec6",
+      "slug": "string-formatting",
+      "name": "String Formatting",
+      "blurb": "TODO: add blurb for string-formatting concept"
+    },
+    {
+      "uuid": "7d5c1533-c7cf-418e-b0f2-080da1e5bdc5",
+      "slug": "strings",
+      "name": "Strings",
+      "blurb": "TODO: add blurb for strings concept"
+    },
+    {
+      "uuid": "a8cdc468-c950-43d7-a1b8-99a5e0de651a",
+      "slug": "variable-parameters",
+      "name": "Variable Parameters",
+      "blurb": "TODO: add blurb for variable-parameters concept"
+    }
+  ]
 }
