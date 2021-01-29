@@ -1,5 +1,6 @@
 {
   "language": "JavaScript",
+  "slug": "javascript",
   "active": true,
   "status": {
     "concept_exercises": false,
