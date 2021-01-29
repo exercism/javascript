@@ -36,4 +36,4 @@ The value held by a variable declared using `let` can only be referenced _after_
 [keyword-var]: ./var.md
 [concept-scope]: ../info/scope.md
 [concept-temporal-dead-zone]: ../info/scope.md#temporal-dead-zone
-[concept-variable]: ../../../../reference/concepts/variables.md
+[concept-variable]: https://github.com/exercism/v3/blob/main/reference/concepts/variables.md

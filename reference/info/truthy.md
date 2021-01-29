@@ -5,6 +5,6 @@ In [JavaScript][language-javascript], a truthy value is a value that is consider
 JavaScript uses [type coercion][concept-type-coercion] in Boolean contexts.
 
 [concept-falsy]: ./falsy.md
-[concept-type-coercion]: ../../../../reference/concepts/type_casting.md
+[concept-type-coercion]: https://github.com/exercism/v3/blob/main/reference/concepts/type_casting.md
 [language-javascript]: ../../README.md
-[type-boolean]: ../../../../reference/types/boolean.md
+[type-boolean]: https://github.com/exercism/v3/blob/main/reference/types/boolean.md

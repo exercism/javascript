@@ -32,9 +32,9 @@ The `import` keyword, just like `export`, can only be used in a module, which me
 
 > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
-[concept-function]: ../../../../reference/concepts/functions.md
-[concept-variable]: ../../../../reference/concepts/variables.md
-[concept-class]: ../../../../reference/concepts/classes.md
+[concept-function]: https://github.com/exercism/v3/blob/main/reference/concepts/functions.md
+[concept-variable]: https://github.com/exercism/v3/blob/main/reference/concepts/variables.md
+[concept-class]: https://github.com/exercism/v3/blob/main/reference/concepts/classes.md
 [concept-module]: ../info/modules.md
 [concept-export]: ./export.md
 [deno]: https://deno.land

@@ -5,6 +5,6 @@
 A [variable][concept-variables] that has not been assigned a value is of type `undefined`. A [method][concept-functions] or statement also returns `undefined` if the variable that is being evaluated does not have an assigned value. A function returns `undefined` if a value was not returned.
 
 [language-javascript]: ../../README.md
-[concept-functions]: ../../../../reference/concepts/functions.md
-[concept-variables]: ../../../../reference/concepts/variables.md
-[type-null]: ../../../../reference/types/null.md
+[concept-functions]: https://github.com/exercism/v3/blob/main/reference/concepts/functions.md
+[concept-variables]: https://github.com/exercism/v3/blob/main/reference/concepts/variables.md
+[type-null]: https://github.com/exercism/v3/blob/main/reference/types/null.md

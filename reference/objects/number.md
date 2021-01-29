@@ -6,5 +6,5 @@ See [prototype-based inheritance][concept-prototype-inheritance] and the general
 
 [concept-prototype-inheritance]: ../info/prototype_inheritance.md
 [concept-global-objects]: ../info/global_objects.md
-[type-number]: ../../../../reference/types/number.md
-[type-object]: ../../../../reference/types/object.md
+[type-number]: https://github.com/exercism/v3/blob/main/reference/types/number.md
+[type-object]: https://github.com/exercism/v3/blob/main/reference/types/object.md

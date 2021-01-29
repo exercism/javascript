@@ -37,4 +37,4 @@ function steve() {
 [keyword-let]: ./let.md
 [concept-scope]: ../info/scope.md
 [concept-global-scope]: ../info/scope.md#global-scope
-[concept-variable]: ../../../../reference/concepts/variables.md
+[concept-variable]: https://github.com/exercism/v3/blob/main/reference/concepts/variables.md
