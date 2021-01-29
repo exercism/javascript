@@ -10,6 +10,10 @@
   },
   "blurb": "JavaScript is a scripting language, primarily used for creating dynamic websites and programming web servers. It's a very popular language, and supports a variety of programming paradigms.",
   "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 2
+  },
   "test_pattern": ".*[.]spec[.]js$",
   "exercises": [
     {
