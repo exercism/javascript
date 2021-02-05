@@ -7,8 +7,8 @@
     }
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": ["enchantments.js"],
+    "test": ["enchantments.spec.js"],
+    "exemplar": ["exemplar.js"]
   }
 }
