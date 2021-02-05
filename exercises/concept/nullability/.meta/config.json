@@ -13,6 +13,6 @@
   "files": {
     "solution": ["nullability.js"],
     "test": ["nullability.spec.js"],
-    "exemplar": []
+    "exemplar": ["exemplar.js"]
   }
 }

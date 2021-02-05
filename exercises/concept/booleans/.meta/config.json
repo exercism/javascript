@@ -18,6 +18,6 @@
   "files": {
     "solution": ["booleans.js"],
     "test": ["booleans.spec.js"],
-    "exemplar": []
+    "exemplar": ["exemplar.js"]
   }
 }

@@ -9,6 +9,6 @@
   "files": {
     "solution": ["basics.js"],
     "test": ["basics.spec.js"],
-    "exemplar": []
+    "exemplar": ["exemplar.js"]
   }
 }

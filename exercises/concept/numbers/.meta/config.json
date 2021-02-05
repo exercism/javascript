@@ -8,6 +8,6 @@
   "files": {
     "solution": ["numbers.js"],
     "test": ["numbers.spec.js"],
-    "exemplar": []
+    "exemplar": ["exemplar.js"]
   }
 }
