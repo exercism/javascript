@@ -1,3 +1,5 @@
+# Introduction
+
 In Javascript, the `Array` class has many powerful built-in functions for transforming arrays. These functions make it much easier to do things than it otherwise would be using a simple for loop or more direct manipulation.
 
 Example of transformation using a for loop and second array:

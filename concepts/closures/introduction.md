@@ -1,3 +1,5 @@
+# Introduction
+
 TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
 
 **Closures** are a programming pattern in JavaScript which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a nested block of code. JavaScript supports closures transparently, and they are often used without knowing what they are.

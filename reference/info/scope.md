@@ -1,3 +1,5 @@
+# Scope
+
 ## Scope / Visibility
 
 ## Global Scope

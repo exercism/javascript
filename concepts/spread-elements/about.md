@@ -1,3 +1,5 @@
+# About
+
 When `...` appears on the right-hand side of an assignment, it's known as the `spread` operator. It expands an array into a list of elements. Unlike the rest element, it can appear anywhere in an array literal expression, and there can be more than one.
 
 ```javascript

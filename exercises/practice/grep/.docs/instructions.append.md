@@ -1,3 +1,5 @@
+# Instructions append
+
 ### Node process
 
 Unlike other exercises, `grep.js` is _not_ imported inside the test file `grep.spec.js`. Instead, it will be used as if it's an executable. To facilitate that, the `grep.js` file has been set-up with a shebang, and a comment that explains what this does:

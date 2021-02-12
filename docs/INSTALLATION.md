@@ -1,3 +1,5 @@
+# Installation
+
 This track relies on [NodeJS][web-nodejs] throughout to provide a runtime for
 JavaScript. This means that we assume all execution of JavaScript on your
 computer will happen using [NodeJS][web-nodejs].

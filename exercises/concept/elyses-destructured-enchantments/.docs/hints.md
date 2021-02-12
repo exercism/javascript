@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Get the first card
 
 - [This article][destructuring_overview_resource] has a good overview of array destructuring. You can find an example of basic variable assignment in the 'Basic Array Destructuring' section.

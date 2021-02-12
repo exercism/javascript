@@ -1,3 +1,5 @@
+# Introduction
+
 Strings are useful for holding data that can be represented in text form.
 There are two ways to access an individual character in a string.
 

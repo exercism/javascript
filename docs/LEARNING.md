@@ -1,3 +1,5 @@
+# Learning
+
 If you want to learn JavaScript, check out the following resources.
 
 - [Exploring ES6](https://leanpub.com/exploring-es6) book, by Axel Rauschmayer

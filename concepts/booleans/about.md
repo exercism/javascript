@@ -1,3 +1,5 @@
+# About
+
 JavaScript uses `true` and `false` to represent the two truth values of logic.
 
 In JavaScript, for each of the three logical operations (AND, OR and NOT) there is a corresponding operator: `&&`, `||` and `!`. In general, there are rules regarding the order of the operations and, in this case, `!` (negation) is applied first, and then `&&` (conjunction) and then `||` (disjunction).

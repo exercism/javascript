@@ -1,3 +1,5 @@
+# Instructions
+
 Elyse, magician-to-be, continues her training. She will be given a deck of cards and attempt to transform that deck. She will make certain cards appear, disappear, change their values, or completely rearrange themselves.
 To make things easier, she usually only starts with cards numbered 1 to 10, although some of the tricks may result in larger cards being created.
 

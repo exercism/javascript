@@ -1,3 +1,5 @@
+# Introduction
+
 There are two different types of numbers in JavaScript:
 
 - `number`: a numeric data type in the double-precision 64-bit floating point

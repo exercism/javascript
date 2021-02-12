@@ -1,3 +1,5 @@
+# Introduction
+
 **Closures** are a programming pattern in JavaScript which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a nested block of code. JavaScript supports closures transparently, and they are often used without knowing what they are.
 
 ```javascript

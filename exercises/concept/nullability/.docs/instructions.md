@@ -1,3 +1,5 @@
+# Instructions
+
 While working for a factory, a need arises to create the printed message on employee badges. You decide to implement this function in JavaScript.
 
 A badge requires the `id` of the employee, the `name` of the employee, as well as the department in which they are working.

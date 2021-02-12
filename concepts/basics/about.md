@@ -1,3 +1,5 @@
+# About
+
 JavaScript is a dynamic, prototype based language. It has a few [primitives][mdn-primitive], and everything else is considered an object.
 
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js. The language is actively being developed; and because of it's multi-paradigm property, allows for many styles of programming.

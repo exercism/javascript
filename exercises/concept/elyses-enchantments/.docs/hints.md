@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Retrieve a card from a stack
 
 - Array indices start at `0`.

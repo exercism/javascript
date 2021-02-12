@@ -1,3 +1,5 @@
+# About
+
 In JavaScript, instances of an `Array` are regular objects, decorated with lots of [useful methods][array-docs] from the `Array.prototype`. It includes the `length` property, as well as methods for traversing, analyzing and mutating the array. The array's elements are indexed properties of that array.
 Instead of manually iterating over those indexed properties, use array analysis.
 

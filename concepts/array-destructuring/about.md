@@ -1,3 +1,5 @@
+# About
+
 Array [destructuring assignment][array_destructuring_docs] is a concise way of extracting values from an array. Its syntax is similar to an [array literal][array_literal_resource] expression, but on the left-hand side of the assignment instead of the right.
 
 ```javascript

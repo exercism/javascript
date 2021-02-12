@@ -1,3 +1,5 @@
+# About
+
 The name **closure** is historically derived from [_λ-calculus_][wiki-lambda-calculus] and popularized by [_scheme_][wiki-scheme] ([source][wiki-closure]) to reference a function's open and closed variable bindings. There are various reasons to use **closures**, not limited to:
 
 ## Reasons to use closures in JavaScript

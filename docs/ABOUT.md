@@ -1,3 +1,5 @@
+# About
+
 ECMAScript is the [standard][web-ecma] that defines JavaScript, a programming
 language that allows web pages to be dynamic. It is an interpreted language,
 which means that it doesn't need to be compiled: instead the

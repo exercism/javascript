@@ -1,3 +1,5 @@
+# About
+
 Javascript has a built-in operator that makes it easier to work with indefinite numbers of elements. When `...` appears on the left-hand side of an assignment, those three dots are known as the `rest` operator. The three dots together with a variable name is called a rest element. It collects zero or more values, and stores them into a single array.
 
 ```javascript
