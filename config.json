@@ -155,7 +155,7 @@
         "name": "Hello World",
         "uuid": "9ce0f408-6d7b-4466-a390-75aeaf9492f2",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["basics"],
         "difficulty": 1,
         "topics": [
           "conditionals",
