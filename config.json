@@ -240,7 +240,7 @@
         "name": "Matrix",
         "uuid": "dd0b5e67-81f6-437e-8334-2ec0dfeb862a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "arrays", "classes"],
         "difficulty": 3,
         "topics": [
           "arrays",
