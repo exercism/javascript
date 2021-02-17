@@ -270,7 +270,7 @@
         "name": "Pascals Triangle",
         "uuid": "99493160-4673-402f-acda-62db5378148d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops"],
         "difficulty": 4,
         "topics": [
           "conditionals",
