@@ -213,11 +213,8 @@
         "slug": "space-age",
         "name": "Space Age",
         "uuid": "d9d757ed-ebe6-4d4a-aa73-f6834221cd54",
-<<<<<<< HEAD
         "practices": [],
-=======
         "prerequisites": ["objects", "numbers"],
->>>>>>> space-age
         "difficulty": 2,
         "topics": ["floating_point_numbers"]
       },
