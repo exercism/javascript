@@ -196,7 +196,7 @@
         "name": "Gigasecond",
         "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["dates"],
         "difficulty": 1,
         "topics": ["time"]
       },
