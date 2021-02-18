@@ -285,7 +285,7 @@
         "name": "Linked List",
         "uuid": "ec60a578-8889-46a1-b7b8-306dbd8551d5",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "while-loops"],
         "difficulty": 5,
         "topics": [
           "algorithms",
