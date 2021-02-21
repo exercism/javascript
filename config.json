@@ -311,7 +311,7 @@
         "name": "List Ops",
         "uuid": "7d9db056-5398-41b6-af3b-9707f5eb0dbc",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "arrays", "functions"],
         "difficulty": 6,
         "topics": ["data_structures", "loops", "lists", "recursion"]
       },
