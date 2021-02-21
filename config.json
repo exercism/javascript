@@ -302,7 +302,7 @@
         "name": "Grade School",
         "uuid": "64637322-33bc-401f-8cec-1f9810a41f75",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "objects", "arrays"],
         "difficulty": 5,
         "topics": ["arrays", "maps", "sorting"]
       },
