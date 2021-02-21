@@ -7,6 +7,7 @@ This document describes how to implement a Concept Exercise for the JavaScript t
 - [The features of v3][docs-features-of-v3].
 - [Rationale for v3][docs-rationale-for-v3].
 - [What are concept exercise and how they are structured?][docs-concept-exercises]
+- [What are Concepts and how are they structured?][docs-concepts]
 
 Please also watch the following video:
 
@@ -14,7 +15,7 @@ Please also watch the following video:
 
 As this document is generic, the following placeholders are used:
 
-- `<slug>`: the name of the exercise in snake_case (e.g. `anonymous-methods`).
+- `<slug>`: the **simplified** name of the exercise in snake_case (e.g. `lasagna`).
 - `<concepts>`: the Concepts the exercise is about (e.g. `loops`),
 - `<concept-1>`: a single Concept slug,
 - `<prerequisite-n>`: a single Concept slug,
@@ -27,11 +28,12 @@ Before implementing the exercise, please make sure you have a good understanding
 To implement a Concept Exercise, the following files must be added:
 
 <pre>
-languages
+github/exercism
 └── javascript
     ├── concepts
     |   └── &lt;concept-1&gt;
     |       ├── about.md
+    |       ├── introduction.md
     |       └── links.json
     └── exercises
         └── concept
@@ -40,14 +42,15 @@ languages
                 |   ├── instructions.md
                 |   ├── introduction.md
                 |   ├── hints.md
-                |   └── source.md (required if there are third-party sources)
+                |   └── source.md (required only if there are third-party sources)
                 ├── .meta
                 |   |── config.json
-                |   └── design.md
+                |   |── design.md
+                |   └── exemplar.js
                 ├── .eslintrc
                 ├── .gitignore
                 ├── babel.config.js
-                ├── exemplar.js
+                ├── global.d.ts (only if there are complex types required)
                 ├── &lt;slug&gt;.js
                 ├── &lt;slug&gt;.spec.js
                 ├── package.json
@@ -58,6 +61,8 @@ languages
 
 The configuration files may be copied from another exercise. We aim to keep these in sync:
 
+> ⚠ Just like with _practice_ exericses, we will provide a script for you to run. This script needs to be updated from its v2 version, which has not yet been done.
+
 - `.eslintrc`
 - `.gitignore`
 - `babel.config.js`
@@ -67,7 +72,7 @@ The configuration files may be copied from another exercise. We aim to keep thes
 The `package.json` file must be edited:
 
 ```diff
--  "name": "@exercism/javascript-numbers",
+-  "name": "@exercism/javascript-lasagna",
 +  "name": "@exercism/javascript-<slug>",
 -  "description": "Exercism Concept Exercise on <concepts>",
 -  "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
@@ -78,7 +83,7 @@ The `package.json` file must be edited:
    "repository": {
      "type": "git",
      "url": "https://github.com/exercism/language-concepts.git",
--    "directory": "languages/javascript/exercises/concept/numbers"
+-    "directory": "languages/javascript/exercises/concept/lasagna"
 +    "directory": "languages/javascript/exercises/concept/<slug>"
    },
 ```
@@ -87,7 +92,7 @@ Now create the following three files:
 
 - `<slug>.cs`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `<slug>.spec.js`: the test suite.
-- `exemplar.js`: an exemplar implementation that passes all the tests.
+- `.meta/exemplar.js`: an exemplar implementation that passes all the tests. It **should** be an idiomatic solution.
 
 ## Step 2: Add documentation files
 
@@ -115,9 +120,10 @@ If you have any questions regarding implementing the exercise, please post them 
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
 [representer]: https://github.com/exercism/javascript-representer
-[concept-exercises]: ../exercises/concept/README.md
+[concept-exercises]: https://github.com/exercism/v3/blob/main/languages/javascript/exercises/concept/README.md
 [how-to-implement-a-concept-exercise]: https://github.com/exercism/v3/blob/main/docs/maintainers/generic-how-to-implement-a-concept-exercise.md
-[docs-concept-exercises]: https://github.com/exercism/v3/blob/main/docs/concept-exercises.md
+[docs-concepts]: https://github.com/exercism/docs/blob/main/anatomy/tracks/concepts.md
+[docs-concept-exercises]: https://github.com/exercism/docs/blob/main/anatomy/tracks/concept-exercises.md
 [docs-rationale-for-v3]: https://github.com/exercism/v3/blob/main/docs/rationale-for-v3.md
 [docs-features-of-v3]: https://github.com/exercism/v3/blob/main/docs/features-of-v3.md
 [anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA
