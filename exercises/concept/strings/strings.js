@@ -2,7 +2,10 @@
 //
 // The line above enables type checking for this file. Various IDEs interpret
 // the @ts-check directive. It will give you helpful autocompletion when
-// implementing this exercise.
+// implementing this exercise. You don't need to understand it in order to
+// benefit from it.
+//
+// In your own projects, files, and code, you can play with @ts-check as well.
 
 /**
  * Respond with the correct character, given the blurb, if this were said at

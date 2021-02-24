@@ -1,6 +1,6 @@
 // @ts-check
 
-import { checkStatus, checkInventory } from './grocer';
+import { checkStatus, checkInventory } from '../grocer';
 
 /**
  * Returns the service status as a boolean value

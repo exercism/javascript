@@ -5,9 +5,16 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "SleeplessByte",
+      "exercism_username": "SleeplessByte"
+    }
+  ],
   "files": {
     "solution": ["closures.js"],
     "test": ["closures.spec.js"],
-    "exemplar": []
-  }
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
 }

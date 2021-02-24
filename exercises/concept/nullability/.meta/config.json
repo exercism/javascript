@@ -9,10 +9,11 @@
       "exercism_username": "Jlamon"
     }
   ],
-  "forked_from": ["csharp/nullability"],
+  "contributors": [],
   "files": {
     "solution": ["nullability.js"],
     "test": ["nullability.spec.js"],
-    "exemplar": []
-  }
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["csharp/nullability"]
 }

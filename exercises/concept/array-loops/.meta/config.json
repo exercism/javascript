@@ -11,10 +11,10 @@
       "exercism_username": "SleeplessByte"
     }
   ],
-  "forked_from": [],
   "files": {
-    "solution": [],
-    "test": [],
+    "solution": ["array-loops.js"],
+    "test": ["array-loops.spec.js"],
     "exemplar": [".meta/exemplar.js"]
-  }
+  },
+  "forked_from": []
 }

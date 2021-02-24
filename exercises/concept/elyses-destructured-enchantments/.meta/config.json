@@ -15,5 +15,6 @@
     "solution": ["enchantments.js"],
     "test": ["enchantments.spec.js"],
     "exemplar": [".meta/exemplar.js"]
-  }
+  },
+  "forked_from": []
 }

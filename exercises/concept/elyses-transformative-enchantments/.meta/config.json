@@ -1,14 +1,20 @@
 {
-  "contributors": [],
   "authors": [
     {
       "github_username": "yyyc514",
       "exercism_username": "ajoshguy"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "SleeplessByte",
+      "exercism_username": "SleeplessByte"
+    }
+  ],
   "files": {
     "solution": ["enchantments.js"],
     "test": ["enchantments.spec.js"],
-    "exemplar": ["exemplar.js"]
-  }
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
 }

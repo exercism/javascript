@@ -1,19 +1,20 @@
 {
-  "contributors": [
-    {
-      "github_username": "hayashi-ay",
-      "exercism_username": "hayashi-ay"
-    }
-  ],
   "authors": [
     {
       "github_username": "SleeplessByte",
       "exercism_username": "SleeplessByte"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "hayashi-ay",
+      "exercism_username": "hayashi-ay"
+    }
+  ],
   "files": {
     "solution": ["strings.js"],
     "test": ["strings.spec.js"],
-    "exemplar": []
-  }
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
 }

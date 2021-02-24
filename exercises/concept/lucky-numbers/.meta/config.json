@@ -1,4 +1,10 @@
 {
+  "authors": [
+    {
+      "github_username": "shubhsk88",
+      "exercism_username": "shubhsk88"
+    }
+  ],
   "contributors": [
     {
       "github_username": "neenjaw",
@@ -9,15 +15,10 @@
       "exercism_username": "sleeplessbyte"
     }
   ],
-  "authors": [
-    {
-      "github_username": "shubhsk88",
-      "exercism_username": "shubhsk88"
-    }
-  ],
   "files": {
     "solution": ["lucky-numbers.js"],
     "test": ["lucky-numbers.spec.js"],
-    "exemplar": []
-  }
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
 }

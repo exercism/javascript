@@ -1,5 +1,4 @@
 {
-  "contributors": [],
   "authors": [
     {
       "github_username": "peterchu999",
@@ -10,9 +9,11 @@
       "exercism_username": "SleeplessByte"
     }
   ],
+  "contributors": [],
   "files": {
     "solution": ["enchantments.js"],
     "test": ["enchantments.spec.js"],
     "exemplar": [".meta/exemplar.js"]
-  }
+  },
+  "forked_from": []
 }

@@ -1,12 +1,13 @@
-import { twoSum, luckyNumber, dashify } from './type-conversion';
+import { twoSum, luckyNumber, dashify } from './lucky-numbers';
 
 describe('typeConversion', () => {
   describe('first input', () => {
-    const arr1 = [1, 5, 7, 2, 1],
-      arr2 = [2, 4, 0, 0];
-    let expected = 18121;
-    test(`twoSum(${arr1},${arr2})`, () => {
-      expect(twoSum(arr1, arr2)).toBe(expected);
+    const leftInput = [1, 5, 7, 2, 1];
+    const rightInput = [2, 4, 0, 0];
+    const expected = 18121;
+
+    test(`test summation`, () => {
+      expect(twoSum(leftInput, rightInput)).toBe(expected);
     });
     test(`luckyNumber(${expected})`, () => {
       expect(luckyNumber(expected)).toBe(false);

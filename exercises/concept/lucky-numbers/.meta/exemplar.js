@@ -1,15 +1,16 @@
 // @ts-check
 
 /**
- * The two array of number
+ * Calculates the sum of the two input arrays
+ *
  * @param {number[]} array1
  * @param {number[]} array2
- * @returns {number} Sum of two number
+ * @returns {number} sum of the two arrays
  */
 
 export function twoSum(array1, array2) {
-  let firstNumber = array1.join('');
-  let secondNumber = array2.join('');
+  const firstNumber = array1.join('');
+  const secondNumber = array2.join('');
 
   return Number(firstNumber) + Number(secondNumber);
 }
@@ -20,7 +21,8 @@ export function twoSum(array1, array2) {
  */
 
 export function luckyNumber(value) {
-  let strValue = String(value);
+  const strValue = String(value);
+
   return strValue === strValue.split('').reverse().join('');
 }
 
@@ -30,6 +32,7 @@ export function luckyNumber(value) {
  */
 
 export function dashify(value) {
-  let strValue = String(value);
+  const strValue = String(value);
+
   return strValue.split('').join('-');
 }
