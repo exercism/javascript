@@ -12,7 +12,7 @@ This document aims to provide reasoning why `config.json` contains the `"tags"` 
 
 ## Typing
 
-- [ ] `typing/static`: it doesn't check types at compile time; there is no real compile-time  (ignoring JIT)
+- [ ] `typing/static`: it doesn't check types at compile time; there is no real compile-time (ignoring JIT)
 - [x] `typing/dynamic`: type checking, if any, is done at runtime
 - [ ] `typing/strong`: there are no type tokens in JavaScript
 - [x] `typing/weak`: usually untyped languages are considered weakly typed too.
