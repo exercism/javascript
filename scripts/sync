@@ -15,34 +15,51 @@
  * (see checksum script for more info).
  */
 
-const shell = require("shelljs");
-const assignment = shell.env["ASSIGNMENT"];
-const helpers = require("./helpers");
-const path = require("path");
+const shell = require('shelljs');
+const assignment = shell.env['ASSIGNMENT'];
+const helpers = require('./helpers');
+const path = require('path');
 
 function copyConfigForAssignment(assignment) {
-  const destination = path.join("exercises", assignment);
-  const assignmentPackageFilename = path.join(destination, "package.json");
-  const assignmentVersion = getAssignmentVersion(assignmentPackageFilename);
-  helpers.createExercisePackageJson(assignmentVersion);
-  shell.cat("exercise-package.json").to(assignmentPackageFilename);
-  shell.rm("exercise-package.json");
+  const destination = path.join('exercises', assignment);
+  const assignmentPackageFilename = path.join(destination, 'package.json');
 
-  shell.cp("babel.config.js", destination);
-  shell.cp(".eslintrc", destination);
-  shell.cp(".npmrc", destination);
+  const packageJson = getCurrentPackageJson(assignmentPackageFilename);
+  const basePackageJson = JSON.parse(
+    shell.cat('exercise-package.json').toString()
+  );
+  const mergedPackageJson = helpers.mergePackageJsons(
+    basePackageJson,
+    packageJson
+  );
+
+  shell
+    .ShellString(JSON.stringify(mergedPackageJson, undefined, 2) + '\n')
+    .to(assignmentPackageFilename);
+
+  shell.rm('exercise-package.json');
+
+  ['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE'].forEach((file) => {
+    shell.cp(file, destination);
+  });
 }
 
-function getAssignmentVersion(assignmentPackageFilename) {
+function getCurrentPackageJson(assignmentPackageFilename) {
   const packageFile = shell.cat(assignmentPackageFilename).toString();
-  const packageJson = JSON.parse(packageFile);
-  return packageJson["version"];
+  return JSON.parse(packageFile);
 }
+
+helpers.registerExitHandler();
+helpers.createExercisePackageJson(false);
 
 if (assignment) {
-  shell.echo("Syncing " + assignment + "...");
+  if (!helpers.assertAssignment(assignment)) {
+    shell.exit(1);
+  }
+
+  shell.echo('Syncing ' + assignment + '...');
   copyConfigForAssignment(assignment);
 } else {
-  shell.echo("Syncing all assignments...");
+  shell.echo('Syncing all assignments...');
   helpers.assignments.forEach(copyConfigForAssignment);
 }

@@ -27,3 +27,8 @@ npm-debug.log
 # Ignore yarn lockfile and error, in case someone accidentally runs yarn
 yarn.lock
 yarn-error.log
+
+# Script generated files
+/exercises/**/*.sha
+/exercise-package.json
+/exercise-package.json.sha
