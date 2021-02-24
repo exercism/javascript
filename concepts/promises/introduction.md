@@ -1,7 +1,5 @@
 # Introduction
 
-TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
-
 The `Promise` object represents the eventual completion (or failure) of an
 asynchronous operation, and its resulting value.
 
