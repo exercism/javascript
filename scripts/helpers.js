@@ -162,7 +162,7 @@ export function prepareAndRun(command, infoStr, failureStr) {
 }
 
 export function cleanUp() {
-  // shell.rm('-rf', 'tmp_exercises');
+  shell.rm('-rf', 'tmp_exercises');
   shell.rm('-f', 'exercise-package.json');
   shell.rm('-f', 'exercise-package.json.sha');
 }
@@ -299,7 +299,6 @@ export function prepare(assignment) {
 
   exampleFiles.forEach((exampleFileName, i) => {
     const exampleFile = path.join('exercises', assignment, exampleFileName);
-
 
     shell.cp(exampleFile, path.join('tmp_exercises', files.solution[i]));
   });
