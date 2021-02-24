@@ -7,7 +7,7 @@ Given an English text, output the encoded version of that text.
 First, the input is normalized: the spaces and punctuation are removed
 from the English text and the message is downcased.
 
-Then, the normalized characters are broken into rows.  These rows can be
+Then, the normalized characters are broken into rows. These rows can be
 regarded as forming a rectangle when printed with intervening newlines.
 
 For example, the sentence
@@ -22,7 +22,7 @@ is normalized to:
 "ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots"
 ```
 
-The plaintext should be organized in to a rectangle.  The size of the
+The plaintext should be organized in to a rectangle. The size of the
 rectangle (`r x c`) should be decided by the length of the message,
 such that `c >= r` and `c - r <= 1`, where `c` is the number of columns
 and `r` is the number of rows.

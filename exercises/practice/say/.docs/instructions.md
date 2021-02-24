@@ -41,7 +41,7 @@ Now handle inserting the appropriate scale word between those chunks.
 
 So `1234567890` should yield `'1 billion 234 million 567 thousand 890'`
 
-The program must also report any values that are out of range.  It's
+The program must also report any values that are out of range. It's
 fine to stop at "trillion".
 
 ## Step 4

@@ -49,15 +49,15 @@ left-to-right, _ignoring the typical order of operations._
 
 > What is 3 plus 2 multiplied by 3?
 
-15  (i.e. not 9)
+15 (i.e. not 9)
 
 ## Iteration 4 — Errors
 
 The parser should reject:
 
-* Unsupported operations ("What is 52 cubed?")
-* Non-math questions ("Who is the President of the United States")
-* Word problems with invalid syntax ("What is 1 plus plus 2?")
+- Unsupported operations ("What is 52 cubed?")
+- Non-math questions ("Who is the President of the United States")
+- Word problems with invalid syntax ("What is 1 plus plus 2?")
 
 ## Bonus — Exponentials
 

@@ -36,7 +36,7 @@ VR......................
 RG......................
 ```
 
-In the first row, nearest the windows, she has a violet and a radish.  In the
+In the first row, nearest the windows, she has a violet and a radish. In the
 second row she has a radish and some grass.
 
 Your program will be given the plants from left-to-right starting with

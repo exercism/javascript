@@ -13,7 +13,7 @@ guanine (**G**) and uracil (**U**).
 Given a DNA strand, its transcribed RNA strand is formed by replacing
 each nucleotide with its complement:
 
-* `G` -> `C`
-* `C` -> `G`
-* `T` -> `A`
-* `A` -> `U`
+- `G` -> `C`
+- `C` -> `G`
+- `T` -> `A`
+- `A` -> `U`
