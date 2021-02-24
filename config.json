@@ -3,10 +3,10 @@
   "slug": "javascript",
   "active": true,
   "status": {
-    "concept_exercises": false,
-    "test_runner": false,
-    "representer": false,
-    "analyzer": false
+    "concept_exercises": true,
+    "test_runner": true,
+    "representer": true,
+    "analyzer": true
   },
   "blurb": "JavaScript is a scripting language, primarily used for creating dynamic websites and programming web servers. It's a very popular language, and supports a variety of programming paradigms.",
   "version": 3,
