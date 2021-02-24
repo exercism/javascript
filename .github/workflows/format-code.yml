@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: 'Post acknowledgement that it will format code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@6e5ee1dc1cb3740e5e5e76ad668e3f526edbfe45 # 2.0.0
+        uses: actions/github-script@47f7cf65b5ced0830a325f705cad64f2f58dddf7 # 2.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -84,7 +84,7 @@ jobs:
 
       - name: 'Post acknowledgement that it has formatted the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@6e5ee1dc1cb3740e5e5e76ad668e3f526edbfe45 # 2.0.0
+        uses: actions/github-script@47f7cf65b5ced0830a325f705cad64f2f58dddf7 # 2.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -98,7 +98,7 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@6e5ee1dc1cb3740e5e5e76ad668e3f526edbfe45 # 2.0.0
+        uses: actions/github-script@47f7cf65b5ced0830a325f705cad64f2f58dddf7 # 2.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
