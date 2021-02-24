@@ -1,7 +1,5 @@
 # Instructions
 
-
-
 ## Tasks
 
 ## 1. Find the sum of two arrays
