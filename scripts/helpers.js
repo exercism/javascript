@@ -299,8 +299,12 @@ export function prepare(assignment) {
 
   exampleFiles.forEach((exampleFileName, i) => {
     const exampleFile = path.join('exercises', assignment, exampleFileName);
+    const exampleFileDestination = path.join(
+      'tmp_exercises',
+      files.solution[i]
+    );
 
-    shell.cp(exampleFile, path.join('tmp_exercises', files.solution[i]));
+    shell.sed("from '../", "from './", exampleFile).to(exampleFileDestination);
   });
 
   const libDir = path.join('exercises', assignment, 'lib');
