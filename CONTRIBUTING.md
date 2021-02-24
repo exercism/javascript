@@ -4,6 +4,8 @@ This is the JavaScript track, one of the many tracks on [exercism][web-exercism]
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
+> :warning: This guide is slightly outdated and doesn't hold the V3 changes yet.
+
 ---
 
 - [Contributing](#contributing)
