@@ -1,6 +1,6 @@
 # JavaScript
 
-[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / master](https://github.com/exercism/javascript/workflows/javascript%20/%20master/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+master%22) 
+[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / master](https://github.com/exercism/javascript/workflows/javascript%20/%20master/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+master%22)
 
 **Exercism exercises in JavaScript**
 
