@@ -24,7 +24,7 @@ factors of 60: 2, 2, 3, and 5.
 
 You can check this yourself:
 
-- 2 * 2 * 3 * 5
-- = 4 * 15
+- 2 _ 2 _ 3 \* 5
+- = 4 \* 15
 - = 60
 - Success!
