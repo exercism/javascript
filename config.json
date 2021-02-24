@@ -19,7 +19,7 @@
     "solution": ["%{kebab_slug}.js"],
     "test": ["%{kebab_slug}.spec.js"],
     "example": [".meta/proof.ci.js"],
-    "exemplar": [".meta/examplar.js"]
+    "exemplar": [".meta/exemplar.js"]
   },
   "exercises": {
     "concept": [
