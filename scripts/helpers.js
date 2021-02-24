@@ -190,7 +190,7 @@ export function mergePackageJsons(basePackageJson, packageJson) {
     mergedPackageJson[key] = packageJson[key];
   });
 
-  const extraRepositoryKeys = Object.keys(packageJson.repository).filter(
+  const extraRepositoryKeys = Object.keys(packageJson.repository || {}).filter(
     (key) => !basePackageJson.repository[key]
   );
 

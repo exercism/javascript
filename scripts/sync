@@ -37,8 +37,6 @@ function copyConfigForAssignment(assignment) {
     .ShellString(JSON.stringify(mergedPackageJson, undefined, 2) + '\n')
     .to(assignmentPackageFilename);
 
-  shell.rm('exercise-package.json');
-
   ['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE'].forEach((file) => {
     shell.cp(file, destination);
   });
@@ -61,5 +59,8 @@ if (assignment) {
   copyConfigForAssignment(assignment);
 } else {
   shell.echo('Syncing all assignments...');
-  helpers.assignments.forEach(copyConfigForAssignment);
+  helpers.assignments.forEach((assignment) => {
+    shell.echo('Syncing ' + assignment + '...');
+    copyConfigForAssignment(assignment);
+  });
 }
