@@ -102,6 +102,10 @@ function checksumAll(filename, rootFileName = filename) {
     return checksumAssignment(assignment, filename, rootFileName, expectedSha);
   }
 
+  shell.echo(
+    `Checking integrity of ${filename} in all ${helpers.assignments.length} exercises`
+  );
+
   helpers.assignments.forEach((assignment) =>
     checksumAssignment(assignment, filename, rootFileName, expectedSha)
   );
@@ -115,3 +119,5 @@ checksumAll('package.json', 'exercise-package.json');
 ['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE'].forEach((fileToCheck) => {
   checksumAll(fileToCheck);
 });
+
+shell.echo('All files passed the checksum test');
