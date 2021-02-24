@@ -30,30 +30,30 @@ describe('array-loops', () => {
     });
   });
 
-  describe('uniqueCards', () => {
+  describe('oddEvenCards', () => {
     /** @type {Array<Array<Array<number>, boolean, number>>>} */
     const oddEvenCardsTestCases = [
       [[1, 2, 3], true, 1],
-      [[1, 2, 3, -1, 32, 1, 2, 3], false, 2],
+      [[1, 2, 3, -1, 32, 1, 2, 3], false, 4],
     ];
 
     oddEvenCardsTestCases.forEach(([array, isEven, expected]) => {
-      test(`oddEvenCards([${array}], isEven)`, () => {
-        expect(oddEvenCards(array, isEven)).toBe(expected);
+      test(`determineOddEvenCards([${array}], isEven)`, () => {
+        expect(determineOddEvenCards(array, isEven)).toBe(expected);
       });
     });
   });
 
-  describe('oddEvenCards', () => {
+  describe('uniqueCards', () => {
     /** @type {Array<Array} */
     const uniqueCardTestCases = [
-      [[1, 2, 3], true, 3],
-      [[1, 2, 3, -1, 32, 1, 2, 3], 2],
+      [[1, 2, 3], 3],
+      [[1, 2, 3, -1, 32, 1, 2, 3], 5],
     ];
 
     uniqueCardTestCases.forEach(([array, expected]) => {
-      test(`uniqueCards([${array}])`, () => {
-        expect(uniqueCards(array)).toBe(expected);
+      test(`determineUniqueCards([${array}])`, () => {
+        expect(determineUniqueCards(array)).toBe(expected);
       });
     });
   });

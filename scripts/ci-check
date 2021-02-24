@@ -10,28 +10,35 @@
  * 3. Run tests against sample solutions
  */
 
-const shell = require("shelljs");
-const path = require("path");
+const shell = require('shelljs');
+const path = require('path');
 
 const {
   assignments,
+  assertAssignment,
   registerExitHandler,
   envIsThruthy,
   hasStub,
   cleanUp,
   prepare,
-} = require("./helpers");
+} = require('./helpers');
 
 const exercises = assignments;
 if (exercises.length === 0) {
-  shell.echo("[Skip] None of the files are inside an exercise directory.");
+  shell.echo('[Skip] None of the files are inside an exercise directory.');
   shell.exit(0);
+}
+
+if (exercises.length === 1) {
+  if (!assertAssignment(exercises[0], true)) {
+    shell.exit(1);
+  }
 }
 
 registerExitHandler();
 
-if (!envIsThruthy("SKIP_STUB", false)) {
-  shell.echo("\n==========\nEnsure stubs are present\n");
+if (!envIsThruthy('SKIP_STUB', false)) {
+  shell.echo('\n==========\nEnsure stubs are present\n');
 
   // Inline the stub check instead of running scripts/stub-check, to save a
   // few seconds.
@@ -42,23 +49,36 @@ if (!envIsThruthy("SKIP_STUB", false)) {
     noStubs.forEach((stub) => shell.echo(`${stub} is missing a stub file`));
     shell.exit(-1);
   } else {
-    shell.echo("[SUCCES] All stubs are present");
+    shell.echo('[SUCCES] All stubs are present');
   }
 }
 
-if (!envIsThruthy("SKIP_INTEGRITY", false)) {
-  shell.echo("\n==========\nCheck configuration and packages integrity\n");
+if (!envIsThruthy('SKIP_INTEGRITY', false)) {
+  shell.echo('\n==========\nCheck configuration and packages integrity\n');
 
-  exercises.forEach((exercise) => {
-    shell.env["ASSIGNMENT"] = exercise;
-
+  // If > 8 exercises, checksum everything as its faster than subprocessing
+  // TODO: be able to pass in any amount of exercises at once
+  if (exercises.length >= 8) {
     const checkResult = shell.exec(
-      `npx babel-node ${path.join("scripts", "checksum")}`
+      `npx babel-node ${path.join('scripts', 'checksum')}`
     ).code;
+
     if (checkResult != 0) {
       shell.exit(checkResult);
     }
-  });
+  } else {
+    exercises.forEach((exercise) => {
+      shell.env['ASSIGNMENT'] = exercise;
+
+      const checkResult = shell.exec(
+        `npx babel-node ${path.join('scripts', 'checksum')}`
+      ).code;
+
+      if (checkResult != 0) {
+        shell.exit(checkResult);
+      }
+    });
+  }
 }
 
 // Cleanup tmp directory if any exists
@@ -70,16 +90,16 @@ cleanUp();
  * which is way faster than running once for each exercise
  */
 
-shell.echo("\n==========\nLint all the files\n");
+shell.echo('\n==========\nLint all the files\n');
 
-shell.env["PREPARE"] = false;
-shell.env["CLEANUP"] = false;
+shell.env['PREPARE'] = false;
+shell.env['CLEANUP'] = false;
 
 exercises.forEach(prepare);
 
-shell.env["CLEANUP"] = true;
+shell.env['CLEANUP'] = true;
 
-const checkResult = shell.exec(`npx babel-node ${path.join("scripts", "lint")}`)
+const checkResult = shell.exec(`npx babel-node ${path.join('scripts', 'lint')}`)
   .code;
 if (checkResult != 0) {
   shell.exit(checkResult);

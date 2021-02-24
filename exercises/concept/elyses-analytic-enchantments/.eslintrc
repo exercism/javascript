@@ -5,6 +5,9 @@
     "ecmaVersion": 7,
     "sourceType": "module"
   },
+  "globals": {
+    "BigInt": true
+  },
   "env": {
     "es6": true,
     "node": true,
@@ -17,6 +20,7 @@
   ],
   "rules": {
     "linebreak-style": "off",
+
     "import/extensions": "off",
     "import/no-default-export": "off",
     "import/no-unresolved": "off",

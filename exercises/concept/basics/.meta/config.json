@@ -8,7 +8,7 @@
   "files": {
     "solution": ["basics.js"],
     "test": ["basics.spec.js"],
-    "exemplar": [".meta/examplar.js"]
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": ["ruby/basics"]
 }

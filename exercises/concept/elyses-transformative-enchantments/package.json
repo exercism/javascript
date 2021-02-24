@@ -1,0 +1,35 @@
+{
+  "name": "@exercism/javascript-concept-elyses-transformative-enchantments",
+  "description": "Exercism concept exercise on elyses-transformative-enchantments",
+  "author": "Katrina Owen",
+  "contributors": [
+    "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)",
+    "Tejas Bubane (https://tejasbubane.github.io/)"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/javascript"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-syntax-bigint": "^7.8.3",
+    "@babel/preset-env": "^7.13.5",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "core-js": "^3.9.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "dependencies": {}
+}

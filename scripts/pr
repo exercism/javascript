@@ -37,10 +37,7 @@ files.forEach((file) => {
 });
 
 const _exercises = files
-  .map((file) => {
-    const directory = findExerciseDirectory(file);
-    return directory ? path.basename(directory) : null;
-  })
+  .map(findExerciseDirectory)
   .filter(Boolean)
   .filter((exercise, index, array) => array.indexOf(exercise) === index);
 

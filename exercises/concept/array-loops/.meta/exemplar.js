@@ -24,23 +24,8 @@ export function cardTypeCheck(stack, card) {
  * @returns {number} the number of unique cards there any in the stack
  */
 export function determineUniqueCards(stack) {
-  let counts = {};
-
-  stack.forEach((c) => {
-    if (counts[c.toString()] > 0) {
-      counts[c.toString()]++;
-    } else {
-      counts[c.toString()] = 1;
-    }
-  });
-
-  let uniques = 0;
-
-  Object.keys(counts)
-    .map((key) => counts[key])
-    .forEach((v) => v === 0 && uniques++);
-
-  return uniques;
+  return stack.filter((card, index, self) => self.indexOf(card) === index)
+    .length;
 }
 
 /**
