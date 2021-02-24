@@ -39,7 +39,7 @@ describe('array-loops', () => {
 
     oddEvenCardsTestCases.forEach(([array, isEven, expected]) => {
       test(`oddEvenCards([${array}], isEven)`, () => {
-        expect(oddEvenCards(array, isEven)).toBe(expected);
+        expect(determineOddEvenCards(array, isEven)).toBe(expected);
       });
     });
   });
@@ -53,7 +53,7 @@ describe('array-loops', () => {
 
     uniqueCardTestCases.forEach(([array, expected]) => {
       test(`uniqueCards([${array}])`, () => {
-        expect(uniqueCards(array)).toBe(expected);
+        expect(determineUniqueCards(array)).toBe(expected);
       });
     });
   });
