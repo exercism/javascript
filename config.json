@@ -17,16 +17,16 @@
   "test_pattern": ".*[.]spec[.]js$",
   "files": {
     "solution": [
-      "path/to/%{kebab_slug}.ext"
+      "%{kebab_slug}.js"
     ],
     "test": [
-      "path/to/%{kebab_slug}.ext"
+      "%{kebab_slug}.spec.js"
     ],
     "example": [
-      "path/to/%{kebab_slug}.ext"
+      ".meta/proof.ci.js"
     ],
     "exemplar": [
-      "path/to/%{kebab_slug}.ext"
+      ".meta/examplar.js"
     ]
   },
   "exercises": {
