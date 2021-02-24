@@ -1585,7 +1585,38 @@
       "blurb": "TODO: add blurb for variable-parameters concept"
     }
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "icon": "features-cross-platform",
+      "title": "Runs almost everywhere",
+      "content": "Build web-pages, write backend, create database scripts, make mobile apps, design CLI-s, and more."
+    },
+    {
+      "icon": "features-multi-paradigm",
+      "title": "Use any programming style",
+      "content": "Use prototype-based, object-oriented, functional, or declarative programming styles, and more."
+    },
+    {
+      "icon": "features-weakly-typed",
+      "title": "No types required",
+      "content": "Dynamically and weakly typed by default, gain typed confidence using Flow, JSDoc, or TypeScript."
+    },
+    {
+      "icon": "features-concurrency",
+      "title": "Concurrency is safe",
+      "content": "Async/await, dedicated workers, or state sync in shared workers. No deadlocks or race conditions."
+    },
+    {
+      "icon": "features-packages",
+      "title": "Largest package registry",
+      "content": "No need to reinvent the wheel. Build on top of > 1.3 million packages (April, 2020)."
+    },
+    {
+      "icon": "features-designed",
+      "title": "Designed by a comity",
+      "content": "Frequent updates, following ECMAScript, a general purpose, cross platform, vendor-neutral standard."
+    }
+  ],
   "tags": [
     "paradigm/declarative",
     "paradigm/functional",
