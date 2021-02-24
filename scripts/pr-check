@@ -20,42 +20,39 @@ const {
   hasStub,
   prepare,
   assignments,
-} = require("./helpers");
+} = require('./helpers');
 
-const shell = require("shelljs");
-const path = require("path");
+const shell = require('shelljs');
+const path = require('path');
 const files = process.argv.slice(2);
 
 if (files.length === 0) {
   shell.echo(
-    "[Failure] No files passed in. Pass in paths to exercise directories or its file."
+    '[Failure] No files passed in. Pass in paths to exercise directories or its file.'
   );
   shell.exit(-1);
 }
 
-shell.echo("[Files] The files passed in are as follows:");
+shell.echo('[Files] The files passed in are as follows:');
 files.forEach((file) => {
   shell.echo(`[Files] ${file}`);
 });
 
 const _exercises = files
-  .map((file) => {
-    const directory = findExerciseDirectory(file);
-    return directory ? path.basename(directory) : null;
-  })
+  .map(findExerciseDirectory)
   .filter(Boolean)
   .filter((exercise, index, array) => array.indexOf(exercise) === index);
 
-const hasRootFile = files.some((file) => file === "package.json");
+const hasRootFile = files.some((file) => file === 'package.json');
 
 if (hasRootFile) {
   shell.echo(
-    "[Root PR] When package.json is changed, all exercises need to be checked"
+    '[Root PR] When package.json is changed, all exercises need to be checked'
   );
 } else if (_exercises.length > 8) {
   shell.echo(
-    "[Big PR] When more than 8 exercises are being checked, all of them are " +
-      "checked as this is likely a PR affecting everything."
+    '[Big PR] When more than 8 exercises are being checked, all of them are ' +
+      'checked as this is likely a PR affecting everything.'
   );
 }
 
@@ -63,14 +60,14 @@ const exercises =
   hasRootFile || _exercises.length > 8 ? assignments : _exercises;
 
 if (exercises.length === 0) {
-  shell.echo("[Skip] None of the files are inside an exercise directory.");
+  shell.echo('[Skip] None of the files are inside an exercise directory.');
   shell.exit(0);
 }
 
 registerExitHandler();
 
-if (!envIsThruthy("SKIP_STUB", false)) {
-  shell.echo("\n==========\nEnsure stubs are present\n");
+if (!envIsThruthy('SKIP_STUB', false)) {
+  shell.echo('\n==========\nEnsure stubs are present\n');
 
   // Inline the stub check instead of running scripts/stub-check, to save a
   // few seconds.
@@ -81,18 +78,18 @@ if (!envIsThruthy("SKIP_STUB", false)) {
     noStubs.forEach((stub) => shell.echo(`${stub} is missing a stub file`));
     shell.exit(-1);
   } else {
-    shell.echo("[SUCCES] All stubs are present");
+    shell.echo('[SUCCES] All stubs are present');
   }
 }
 
-if (!envIsThruthy("SKIP_INTEGRITY", false)) {
-  shell.echo("\n==========\nCheck configuration and packages integrity\n");
+if (!envIsThruthy('SKIP_INTEGRITY', false)) {
+  shell.echo('\n==========\nCheck configuration and packages integrity\n');
 
   exercises.forEach((exercise) => {
-    shell.env["ASSIGNMENT"] = exercise;
+    shell.env['ASSIGNMENT'] = exercise;
 
     const checkResult = shell.exec(
-      `npx babel-node ${path.join("scripts", "checksum")}`
+      `npx babel-node ${path.join('scripts', 'checksum')}`
     ).code;
     if (checkResult != 0) {
       shell.exit(checkResult);
@@ -109,17 +106,17 @@ cleanUp();
  * which is way faster than running once for each exercise
  */
 
-shell.echo("\n==========\nLint all the files\n");
+shell.echo('\n==========\nLint all the files\n');
 
-shell.env["PREPARE"] = false;
-shell.env["CLEANUP"] = false;
-delete shell.env["ASSIGNMENT"];
+shell.env['PREPARE'] = false;
+shell.env['CLEANUP'] = false;
+delete shell.env['ASSIGNMENT'];
 
 exercises.forEach(prepare);
 
-shell.env["CLEANUP"] = true;
+shell.env['CLEANUP'] = true;
 
-const checkResult = shell.exec(`npx babel-node ${path.join("scripts", "lint")}`)
+const checkResult = shell.exec(`npx babel-node ${path.join('scripts', 'lint')}`)
   .code;
 if (checkResult != 0) {
   shell.exit(checkResult);
