@@ -44,6 +44,21 @@ function copyConfigForAssignment(assignment) {
 
 function getCurrentPackageJson(assignmentPackageFilename) {
   const packageFile = shell.cat(assignmentPackageFilename).toString();
+  if (!packageFile) {
+    const packageJson = JSON.parse(
+      shell.cat('exercise-package.json').toString()
+    );
+
+    const conceptName = path
+      .dirname(assignmentPackageFilename)
+      .split(/[/\\]/g)
+      .slice(1);
+
+    packageJson.name = `@exercism/javascript-${conceptName.join('-')}`;
+    packageJson.description = `Exercism ${conceptName[0]} exercise on ${conceptName[1]}`;
+    return packageJson;
+  }
+
   return JSON.parse(packageFile);
 }
 
