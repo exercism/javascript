@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@v2
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 
       - name: Use Node.js LTS (14.x)
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@46071b5c7a2e0c34e49c3cb8a0e792e86e18d5ea # v2.1.5
         with:
           node-version: 14.x
 
@@ -37,10 +37,10 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@v2
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@46071b5c7a2e0c34e49c3cb8a0e792e86e18d5ea # v2.1.5
         with:
           node-version: ${{ matrix.node-version }}
 
