@@ -41,8 +41,7 @@ class FrontDoorGuard {
   }
 
   /**
-   * Recites a poem at the door, asking the patron for
-   * a response
+   * Recites a poem at the door, asking the patron for a response
    *
    * @returns {string} key
    */
@@ -70,8 +69,7 @@ class BackDoorGuard {
   }
 
   /**
-   * Recites a poem at the door, asking the patron for
-   * a response
+   * Recites a poem at the door, asking the patron for a response
    *
    * @returns {string} key
    */
@@ -97,10 +95,10 @@ class BackDoorGuard {
 
 const SHIRE_HORSE = new Poem(
   `
-Stands so high  
+Stands so high
 Huge hooves too
 Impatiently waits for
-Reins and harness   
+Reins and harness
 Eager to leave
 
 Michael Lockwood
@@ -109,10 +107,10 @@ Michael Lockwood
 
 const SUMMER = new Poem(`
 Sunshine warming my toes,
-Underwater fun with my friends.  
+Underwater fun with my friends.
 Making homemade ice cream on the porch,
 Many long nights catching fireflies.
-Early morning walks to the creek, 
+Early morning walks to the creek,
 Reveling in the freedom of lazy days.
 
 John Albert Caballero
@@ -122,9 +120,9 @@ const SOPHIA = new Poem(
   `
 Serene, calming quality
 Organized, you always have it together
-Picturesque, strikingly beautiful 
+Picturesque, strikingly beautiful
 Honest, so genuine
-Imaginative, a creative mind 
+Imaginative, a creative mind
 Alluring, so attractive
 
 John Albert Caballero
@@ -133,10 +131,10 @@ John Albert Caballero
 
 const CODE_WORK = new Poem(
   `
-Compilers intensily bestow 
+Compilers intensily bestow
 On commencing without ego
-Different processes ajar   
-Exit with zero quick 
+Different processes ajar
+Exit with zero quick
 
 Derk-Jan Karrenbeld
 `.trim()
@@ -207,16 +205,6 @@ describe('strings', () => {
     });
   });
 });
-
-/**
- * @param {string} input
- */
-function* generateReversal(input) {
-  const stream = [...input];
-  while (stream.length > 0) {
-    yield stream.pop();
-  }
-}
 
 /**
  * @param {string} input

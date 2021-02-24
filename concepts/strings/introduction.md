@@ -1,7 +1,5 @@
 # Introduction
 
-TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
-
 Strings are useful for holding data that can be represented in text form.
 There are two ways to access an individual character in a string.
 

@@ -5,9 +5,11 @@
       "exercism_username": "SleeplessByte"
     }
   ],
+  "contributors": [],
   "files": {
     "solution": ["numbers.js"],
     "test": ["numbers.spec.js"],
-    "exemplar": []
-  }
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
 }

@@ -11,7 +11,7 @@ export function printBadge(id, name, department) {
   const worksAt = department?.toLocaleUpperCase() || 'OWNER';
 
   // prettier-ignore
-  return id === null 
-    ? `${name} - ${worksAt}` 
+  return id === null
+    ? `${name} - ${worksAt}`
     : `[${id}] ${name} - ${worksAt}`
 }

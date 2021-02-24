@@ -5,10 +5,10 @@
       "exercism_username": "SleeplessByte"
     }
   ],
-  "forked_from": ["ruby/basics"],
   "files": {
     "solution": ["basics.js"],
     "test": ["basics.spec.js"],
-    "exemplar": []
-  }
+    "exemplar": [".meta/examplar.js"]
+  },
+  "forked_from": ["ruby/basics"]
 }

@@ -2,11 +2,11 @@
 
 /**
  * Respond with the sum of the array of two number
+ *
  * @param {number[]} array1
  * @param {number[]} array2
  * @returns {number}
  */
-
 export function twoSum(array1, array2) {
   throw new Error('Implement the twoSum function');
 }
