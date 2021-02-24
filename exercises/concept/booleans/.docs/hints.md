@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Check if the 'Fast Attack' action is possible
 
 - The logical NOT operator (`!`) can be placed before an expression to negate its value.

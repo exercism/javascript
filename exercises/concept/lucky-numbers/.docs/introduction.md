@@ -1,3 +1,5 @@
+# Introduction
+
 In JavaScript, values may be of different types. To change them from one type to another, we may either _explicitly convert_ or _implicitly coerce_ from one type to another type.
 
 JavaScript will implicitly coerce types transparently to a programmer, which may introduce unexpected behavior into code.

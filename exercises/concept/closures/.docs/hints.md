@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - For each task, each function should return a function closure, using the supplied arguments.

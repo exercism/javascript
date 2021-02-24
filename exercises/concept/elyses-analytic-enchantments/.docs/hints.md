@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Find the position of a card
 
 - Array indices starts at `0`.

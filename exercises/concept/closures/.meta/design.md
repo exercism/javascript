@@ -1,3 +1,5 @@
+# Design
+
 This issue describes how to implement the `closures` concept exercise for the `javascript` track.
 
 ## Goal

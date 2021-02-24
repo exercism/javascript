@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Find the sum of two arrays
 
 - There is a built-in function to join the `array` and convert it to a string doing the implicit type conversion to make it string

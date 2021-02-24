@@ -1,3 +1,5 @@
+# About
+
 Null is a primitive value, used to represent an intentional absence of an object value. It's _falsy_, and its `typeof` is `object`.
 
 ```javascript

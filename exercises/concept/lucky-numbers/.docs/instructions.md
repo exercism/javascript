@@ -1,3 +1,5 @@
+# Instructions
+
 In this exercise you'll be writing code to understand the concepts of type conversion that you might encounter in your everyday code
 
 Given two arrays made up of digits, write a function that turns the digits into numbers and then sums the numbers.

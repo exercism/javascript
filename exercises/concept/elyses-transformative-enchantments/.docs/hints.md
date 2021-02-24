@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Double every single card
 
 - There is a [built-in][map_method_docs] method great for simple transforms like this.

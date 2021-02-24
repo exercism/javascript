@@ -1,3 +1,5 @@
+# Design
+
 ## Goal
 
 The goal of this exercise is to teach the student how _callbacks_ are implemented in `JavaScript`.

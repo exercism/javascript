@@ -1,3 +1,5 @@
+# Hints
+
 <!--
 This is the markdown file with the hints for students to use while completing this concept challenge.
 

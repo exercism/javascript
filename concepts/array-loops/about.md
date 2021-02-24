@@ -1,3 +1,5 @@
+# About
+
 In JavaScript, looping over `Array`s is extremely common, seeing as they are some of the most widely-used and efficient structures to store data.
 
 Looping over an array doesn't need to be accomplished using a `for` loop. JavaScript provides various methods that handle some of the more common use cases for array looping in a more idiomatic way, such as `Set`s, `Array.prototype.some`, and `Array.prototype.every`, as well as some immutable state prototypal functions.

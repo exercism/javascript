@@ -1,4 +1,4 @@
-## 1. Create the badge text.
+# 1. Create the badge text.
 
 - Be careful about the differences between equality (`==`) and identity (`===`) operators.
 - [Strings][strings] in JavaScript have several methods to change between upper and lower cases.

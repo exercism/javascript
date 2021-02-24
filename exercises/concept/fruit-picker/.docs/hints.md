@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Callback functions are functions passed as an argument to a calling function.
