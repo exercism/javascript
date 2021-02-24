@@ -82,7 +82,7 @@ function checksumAssignment(assignment, filename, baseFile, expectedSha) {
  * @param rootFileName filename in the root directory
  */
 function checksumAll(filename, rootFileName = filename) {
-  const assignment = shell.env['ASSIGNMENT'];
+  const assignments = [shell.env['ASSIGNMENT']].filter(Boolean);
 
   let expectedSha;
 
@@ -93,13 +93,22 @@ function checksumAll(filename, rootFileName = filename) {
     expectedSha = helpers.sha(fileContents);
   }
 
-  if (assignment) {
-    if (!helpers.assertAssignment(assignment)) {
+  if (assignments.length > 0) {
+    if (
+      !assignments.every((assignment) => helpers.assertAssignment(assignment))
+    ) {
       shell.exit();
     }
 
-    shell.echo(`Checking integrity of ${assignment}/${filename}...`);
-    return checksumAssignment(assignment, filename, rootFileName, expectedSha);
+    return assignments.every((assignment) => {
+      shell.echo(`Checking integrity of ${assignment}/${filename}...`);
+      return checksumAssignment(
+        assignment,
+        filename,
+        rootFileName,
+        expectedSha
+      );
+    });
   }
 
   shell.echo(

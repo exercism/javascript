@@ -79,10 +79,41 @@ export function findExerciseDirectory(input) {
   );
 }
 
+export function fileConfiguration(assignment) {
+  const pathToConfig = path.join(
+    'exercises',
+    assignment,
+    '.meta',
+    'config.json'
+  );
+
+  let files = undefined;
+
+  if (shell.test('-f', pathToConfig)) {
+    const configuration = JSON.parse(shell.cat(pathToConfig).toString());
+    if (configuration.files && configuration.files.test.length > 0) {
+      files = configuration.files;
+    }
+  }
+
+  files = files || JSON.parse(shell.cat('config.json').toString()).files;
+
+  Object.keys(files).forEach((key) => {
+    files[key] = files[key].map((value) =>
+      value
+        .replace('%{kebab_slug}', path.basename(assignment))
+        .replace(/[/\\]/g, path.sep)
+    );
+  });
+
+  return files;
+}
+
 export function hasStub(assignment) {
-  return shell.test(
-    '-f',
-    path.join('exercises', assignment, `${assignment}.js`)
+  const stubFiles = fileConfiguration(assignment).solution;
+
+  return stubFiles.every((stubFile) =>
+    shell.test('-f', path.join('exercises', assignment, stubFile))
   );
 }
 
@@ -131,7 +162,7 @@ export function prepareAndRun(command, infoStr, failureStr) {
 }
 
 export function cleanUp() {
-  shell.rm('-rf', 'tmp_exercises');
+  // shell.rm('-rf', 'tmp_exercises');
   shell.rm('-f', 'exercise-package.json');
   shell.rm('-f', 'exercise-package.json.sha');
 }
@@ -232,24 +263,46 @@ export function prepare(assignment) {
     shell.echo('[Failure] Assignment not provided');
     shell.exit(1);
   }
-  const exampleFile = path.join('exercises', assignment, 'example.js');
-  const specFile = path.join('exercises', assignment, `${assignment}.spec.js`);
-  const specFileDestination = path.join(
-    'tmp_exercises',
-    `${assignment}.spec.js`
-  );
+
+  if (!assertAssignment(assignment, true)) {
+    shell.exit(1);
+  }
+
+  const files = fileConfiguration(assignment);
+  const [type] = assignment.split(/[/\\]/g);
+
+  const exampleFiles = type === 'concept' ? files.exemplar : files.example;
+
+  files.test.forEach((specFileName) => {
+    const specFile = path.join('exercises', assignment, specFileName);
+    const specFileDestination = path.join('tmp_exercises', specFileName);
+
+    shell.mkdir('-p', path.dirname(specFileDestination));
+    shell.cp(specFile, specFileDestination);
+
+    // Enable tests
+    //
+    // This purposefully does not replace describe.skip or test.skip, so we can
+    // have test cases that are _always_ skipped, including CI. Use case?
+    // - platform dependent tests
+    // - test cases that don't yet work with our solution
+    //
+    shell
+      .sed(/x(test|it)\(/, 'test(', specFileDestination)
+      .to(specFileDestination);
+    shell
+      .sed('xdescribe', 'describe', specFileDestination)
+      .to(specFileDestination);
+  });
 
   shell.mkdir('-p', path.join('tmp_exercises', 'lib'));
-  shell.cp(exampleFile, path.join('tmp_exercises', `${assignment}.js`));
-  shell.cp(specFile, specFileDestination);
 
-  // Enable tests
-  shell
-    .sed(/x(test|it)\(/, 'test(', specFileDestination)
-    .to(specFileDestination);
-  shell
-    .sed('xdescribe', 'describe', specFileDestination)
-    .to(specFileDestination);
+  exampleFiles.forEach((exampleFileName, i) => {
+    const exampleFile = path.join('exercises', assignment, exampleFileName);
+
+
+    shell.cp(exampleFile, path.join('tmp_exercises', files.solution[i]));
+  });
 
   const libDir = path.join('exercises', assignment, 'lib');
   if (shell.test('-d', libDir)) {
