@@ -307,6 +307,18 @@ export function prepare(assignment) {
     shell.sed("from '../", "from './", exampleFile).to(exampleFileDestination);
   });
 
+  if (files.solution.length > exampleFiles.length) {
+    files.solution.slice(exampleFiles.length).forEach((extraLibFileName) => {
+      const solutionFile = path.join('exercises', assignment, extraLibFileName);
+      const solutionFileDestination = path.join(
+        'tmp_exercises',
+        extraLibFileName
+      );
+
+      shell.cp(solutionFile, solutionFileDestination);
+    });
+  }
+
   const libDir = path.join('exercises', assignment, 'lib');
   if (shell.test('-d', libDir)) {
     shell.cp(path.join(libDir, '*.js'), path.join('tmp_exercises', 'lib'));

@@ -1,4 +1,4 @@
-import { pizzaPrice, orderPrice } from './example';
+import { pizzaPrice, orderPrice } from './recursion';
 
 class PizzaOrder {
   /**
