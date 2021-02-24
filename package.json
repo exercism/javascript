@@ -2,6 +2,10 @@
   "name": "@exercism/javascript",
   "description": "Exercism exercises in Javascript.",
   "author": "Katrina Owen",
+  "contributors": [
+    "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)",
+    "Tejas Bubane (https://tejasbubane.github.io/)"
+  ],
   "private": true,
   "repository": {
     "type": "git",
