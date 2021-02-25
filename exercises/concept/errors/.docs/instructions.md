@@ -1,3 +1,5 @@
+# Instructions
+
 Elena is the new quality manager of a newspaper factory. As she has just arrived in the company, she has decided to review some of the processes in the factory to see what could be improved. She found out that technicians are doing a lot of quality checks by hand. She sees there is a good oportunity for automation and asks you, a freelance developer, to develop a piece of software to monitor some of the machines.
 
 ## Check the humidity level of the production room
@@ -37,12 +39,12 @@ Implements a function `checkHumidityLevel` that takes the humidity percentage as
 You should throw an error (the message isn't important) if the percentage exceeds 70%.
 
 ```javascript
-checkHumidityLevel(60)
+checkHumidityLevel(60);
 // Returns undefined
 ```
 
 ```javascript
-checkHumidityLevel(100)
+checkHumidityLevel(100);
 // Throws an error
 ```
 
@@ -55,12 +57,12 @@ If the sensor is broken, the temperature will be null. In this case you should t
 When everything works, if the temperature exceeds 500°C, you should throw a `OverheatingError`. This error class will be instanciated with a temperature argument. Make sure that the `OverheatingError` you throw has a temperature property attached to it.
 
 ```javascript
-reportOverheating(null)
+reportOverheating(null);
 // Throws an ArgumentError
 ```
 
 ```javascript
-reportOverheating(800)
+reportOverheating(800);
 // Throws an OverheatingError
 ```
 
@@ -91,5 +93,5 @@ monitorTheMachine({
   alertDeadSensor,
   alertOverheating,
   shutdown,
-})
+});
 ```

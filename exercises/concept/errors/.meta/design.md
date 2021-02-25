@@ -1,3 +1,5 @@
+# Design
+
 ## Goal
 
 The goal of this exercise is to teach the student how to handle errors / exception, throw them and create their own.

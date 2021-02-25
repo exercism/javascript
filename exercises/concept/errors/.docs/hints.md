@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Monitor the humidity level of the room
 
 - You might want to use an [if...else condition][if-else-condition] to check if the humidity percentage is higher than the maximum allowed value.
