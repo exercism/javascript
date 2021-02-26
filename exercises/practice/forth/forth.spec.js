@@ -253,6 +253,8 @@ describe('Forth', () => {
       expect(() => {
         forth.evaluate(': 1 2 ;');
       }).toThrow(new Error('Invalid definition'));
+    });
+    xtest('cannot redefine negative numbers', () => {
       expect(() => {
         forth.evaluate(': -1 2 ;');
       }).toThrow(new Error('Invalid definition'));
