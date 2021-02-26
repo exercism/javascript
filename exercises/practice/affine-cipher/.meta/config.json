@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "affine-cipher.js"
-    ],
-    "test": [
-      "affine-cipher.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["affine-cipher.js"],
+    "test": ["affine-cipher.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Affine_cipher"

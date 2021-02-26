@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "difference-of-squares.js"
-    ],
-    "test": [
-      "difference-of-squares.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["difference-of-squares.js"],
+    "test": ["difference-of-squares.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Problem 6 at Project Euler",
   "source_url": "http://projecteuler.net/problem=6"

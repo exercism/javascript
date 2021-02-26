@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "grade-school.js"
-    ],
-    "test": [
-      "grade-school.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["grade-school.js"],
+    "test": ["grade-school.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "A pairing session with Phil Battos at gSchool",
   "source_url": "http://gschool.it"

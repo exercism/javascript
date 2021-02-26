@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "protein-translation.js"
-    ],
-    "test": [
-      "protein-translation.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["protein-translation.js"],
+    "test": ["protein-translation.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Tyler Long"
 }

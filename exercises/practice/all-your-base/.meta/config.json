@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "all-your-base.js"
-    ],
-    "test": [
-      "all-your-base.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["all-your-base.js"],
+    "test": ["all-your-base.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

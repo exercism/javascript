@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "secret-handshake.js"
-    ],
-    "test": [
-      "secret-handshake.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["secret-handshake.js"],
+    "test": ["secret-handshake.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Bert, in Mary Poppins",
   "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047"

@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "custom-set.js"
-    ],
-    "test": [
-      "custom-set.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["custom-set.js"],
+    "test": ["custom-set.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

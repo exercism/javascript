@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "hamming.js"
-    ],
-    "test": [
-      "hamming.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["hamming.js"],
+    "test": ["hamming.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "The Calculating Point Mutations problem at Rosalind",
   "source_url": "http://rosalind.info/problems/hamm/"

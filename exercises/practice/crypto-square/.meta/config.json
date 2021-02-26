@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "crypto-square.js"
-    ],
-    "test": [
-      "crypto-square.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["crypto-square.js"],
+    "test": ["crypto-square.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"

@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "strain.js"
-    ],
-    "test": [
-      "strain.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["strain.js"],
+    "test": ["strain.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Conversation with James Edward Gray II",
   "source_url": "https://twitter.com/jeg2"

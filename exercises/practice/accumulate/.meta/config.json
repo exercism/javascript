@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "accumulate.js"
-    ],
-    "test": [
-      "accumulate.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["accumulate.js"],
+    "test": ["accumulate.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Conversation with James Edward Gray II",
   "source_url": "https://twitter.com/jeg2"

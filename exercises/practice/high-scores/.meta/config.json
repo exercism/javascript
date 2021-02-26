@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "high-scores.js"
-    ],
-    "test": [
-      "high-scores.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["high-scores.js"],
+    "test": ["high-scores.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Tribute to the eighties' arcade game Frogger"
 }

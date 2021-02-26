@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "yacht.js"
-    ],
-    "test": [
-      "yacht.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["yacht.js"],
+    "test": ["yacht.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "James Kilfiger, using wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"

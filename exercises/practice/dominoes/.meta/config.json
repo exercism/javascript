@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "dominoes.js"
-    ],
-    "test": [
-      "dominoes.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["dominoes.js"],
+    "test": ["dominoes.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

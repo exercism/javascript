@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "etl.js"
-    ],
-    "test": [
-      "etl.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["etl.js"],
+    "test": ["etl.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"

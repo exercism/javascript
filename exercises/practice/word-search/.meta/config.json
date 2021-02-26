@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "word-search.js"
-    ],
-    "test": [
-      "word-search.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["word-search.js"],
+    "test": ["word-search.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

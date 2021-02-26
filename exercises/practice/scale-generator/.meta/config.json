@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "scale-generator.js"
-    ],
-    "test": [
-      "scale-generator.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["scale-generator.js"],
+    "test": ["scale-generator.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "connect.js"
-    ],
-    "test": [
-      "connect.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["connect.js"],
+    "test": ["connect.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

@@ -1,14 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "rectangles.js"
-    ],
-    "test": [
-      "rectangles.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["rectangles.js"],
+    "test": ["rectangles.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

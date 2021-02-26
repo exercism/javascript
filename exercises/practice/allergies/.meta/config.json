@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "allergies.js"
-    ],
-    "test": [
-      "allergies.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["allergies.js"],
+    "test": ["allergies.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Jumpstart Lab Warm-up",
   "source_url": "http://jumpstartlab.com"

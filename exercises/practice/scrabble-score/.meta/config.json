@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "scrabble-score.js"
-    ],
-    "test": [
-      "scrabble-score.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["scrabble-score.js"],
+    "test": ["scrabble-score.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Inspired by the Extreme Startup game",
   "source_url": "https://github.com/rchatley/extreme_startup"

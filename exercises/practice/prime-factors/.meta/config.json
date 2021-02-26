@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "prime-factors.js"
-    ],
-    "test": [
-      "prime-factors.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["prime-factors.js"],
+    "test": ["prime-factors.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"

@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "phone-number.js"
-    ],
-    "test": [
-      "phone-number.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["phone-number.js"],
+    "test": ["phone-number.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Event Manager by JumpstartLab",
   "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"

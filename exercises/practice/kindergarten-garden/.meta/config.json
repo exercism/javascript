@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "kindergarten-garden.js"
-    ],
-    "test": [
-      "kindergarten-garden.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["kindergarten-garden.js"],
+    "test": ["kindergarten-garden.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Random musings during airplane trip.",
   "source_url": "http://jumpstartlab.com"

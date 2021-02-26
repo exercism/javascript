@@ -1,15 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [
-      "change.js"
-    ],
-    "test": [
-      "change.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["change.js"],
+    "test": ["change.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Software Craftsmanship - Coin Change Kata",
   "source_url": "https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata"
