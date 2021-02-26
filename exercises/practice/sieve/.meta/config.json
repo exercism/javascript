@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["sieve.js"],
+    "test": ["sieve.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Sieve of Eratosthenes at Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"

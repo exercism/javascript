@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["resistor-color.js"],
+    "test": ["resistor-color.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Maud de Vries, Erik Schierboom",
   "source_url": "https://github.com/exercism/problem-specifications/issues/1458"

@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["pascals-triangle.js"],
+    "test": ["pascals-triangle.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Pascal's Triangle at Wolfram Math World",
   "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"

@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["flatten-array.js"],
+    "test": ["flatten-array.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Interview Question",
   "source_url": "https://reference.wolfram.com/language/ref/Flatten.html"

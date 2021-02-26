@@ -1,8 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["minesweeper.js"],
+    "test": ["minesweeper.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

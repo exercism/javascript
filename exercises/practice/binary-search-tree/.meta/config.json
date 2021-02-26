@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["binary-search-tree.js"],
+    "test": ["binary-search-tree.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Josh Cheek",
   "source_url": "https://twitter.com/josh_cheek"

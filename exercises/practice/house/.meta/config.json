@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["house.js"],
+    "test": ["house.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "British nursery rhyme",
   "source_url": "http://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built"

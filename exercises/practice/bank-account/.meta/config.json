@@ -1,8 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["bank-account.js"],
+    "test": ["bank-account.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

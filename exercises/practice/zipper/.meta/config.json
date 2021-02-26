@@ -1,8 +1,8 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["zipper.js"],
+    "test": ["zipper.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

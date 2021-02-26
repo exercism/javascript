@@ -1,9 +1,9 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": ["ocr-numbers.js"],
+    "test": ["ocr-numbers.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Inspired by the Bank OCR kata",
   "source_url": "http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR"
