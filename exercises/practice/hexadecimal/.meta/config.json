@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "hexadecimal.js"
+    ],
+    "test": [
+      "hexadecimal.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/examples/NumberBases.html"

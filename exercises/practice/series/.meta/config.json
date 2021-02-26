@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "series.js"
+    ],
+    "test": [
+      "series.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A subset of the Problem 8 at Project Euler",
   "source_url": "http://projecteuler.net/problem=8"

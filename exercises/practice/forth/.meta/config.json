@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "forth.js"
+    ],
+    "test": [
+      "forth.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

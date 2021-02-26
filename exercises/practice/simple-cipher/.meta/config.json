@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "simple-cipher.js"
+    ],
+    "test": [
+      "simple-cipher.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Substitution Cipher at Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Substitution_cipher"

@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "list-ops.js"
+    ],
+    "test": [
+      "list-ops.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

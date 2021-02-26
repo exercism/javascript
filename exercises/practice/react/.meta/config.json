@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "react.js"
+    ],
+    "test": [
+      "react.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

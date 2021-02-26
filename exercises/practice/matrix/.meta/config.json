@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "matrix.js"
+    ],
+    "test": [
+      "matrix.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Warmup to the `saddle-points` warmup.",
   "source_url": "http://jumpstartlab.com"

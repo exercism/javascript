@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "diffie-hellman.js"
+    ],
+    "test": [
+      "diffie-hellman.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia, 1024 bit key from www.cryptopp.com/wiki.",
   "source_url": "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"

@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "sum-of-multiples.js"
+    ],
+    "test": [
+      "sum-of-multiples.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A variation on Problem 1 at Project Euler",
   "source_url": "http://projecteuler.net/problem=1"
