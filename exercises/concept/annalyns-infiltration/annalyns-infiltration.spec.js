@@ -3,24 +3,26 @@ import {
   canSpy,
   canSignalPrisoner,
   canFreePrisoner,
-} from './booleans';
+} from './annalyns-infiltration';
 
-describe('booleans', () => {
-  describe('canExecuteFastAttack', () => {
-    let knightIsAwake = true;
-    let expected = false;
-    test(`canExecuteFastAttack(${knightIsAwake})`, () => {
+describe("Annalyn's infiltration", () => {
+  describe('can execute fast attack', () => {
+    test(`when the knight is awake`, () => {
+      const knightIsAwake = true;
+      const expected = false;
+
       expect(canExecuteFastAttack(knightIsAwake)).toBe(expected);
     });
 
-    knightIsAwake = false;
-    expected = true;
-    test(`canExecuteFastAttack(${knightIsAwake})`, () => {
+    test(`when the knight is asleep`, () => {
+      const knightIsAwake = false;
+      const expected = true;
+
       expect(canExecuteFastAttack(knightIsAwake)).toBe(expected);
     });
   });
 
-  describe('canSpy', () => {
+  describe('can spy', () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false, false],
       [false, false, true, true],
@@ -42,7 +44,7 @@ describe('booleans', () => {
     );
   });
 
-  describe('canSignalPrisoner', () => {
+  describe('can signal prisoner', () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false],
       [false, true, true],
@@ -61,7 +63,7 @@ describe('booleans', () => {
     );
   });
 
-  describe('canFreePrisoner', () => {
+  describe('can free prisoner', () => {
     const CHARACTERS_STATE_COMBINATIONS = [
       [false, false, false, false, false],
       [false, false, false, true, true],
