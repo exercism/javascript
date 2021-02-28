@@ -30,7 +30,7 @@ MY_FIRST_CONSTANT = 20;
 
 ## Function declarations
 
-In JavaScript, units of functionality are encapsulated in _functions_, usually grouping functions together in the same file if they belong together. These functions can take arguments, and can return a value using the `return` keyword. Functions are invoked using `()` syntax.
+In JavaScript, units of functionality are encapsulated in _functions_, usually grouping functions together in the same file if they belong together. These functions can take parameters (arguments), and can _return_ a value using the `return` keyword. Functions are invoked using `()` syntax.
 
 ```javascript
 function add(num1, num2) {
