@@ -1511,7 +1511,7 @@
       "uuid": "611d6b3d-1241-4432-90f6-8fcffb36917c",
       "slug": "basics",
       "name": "Basics",
-      "blurb": "TODO: add blurb for basics concept"
+      "blurb": "The minimal knowledge required to get started in JavaScript. Function declarations, variable assignment, and a few operators for numbers. "
     },
     {
       "uuid": "791d215c-6813-479a-a126-d9ad9cdc49a9",
