@@ -8,8 +8,8 @@
   ],
   "contributors": [],
   "files": {
-    "solution": ["numbers.js"],
-    "test": ["numbers.spec.js"],
+    "solution": ["freelancer-rates.js"],
+    "test": ["freelancer-rates.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
