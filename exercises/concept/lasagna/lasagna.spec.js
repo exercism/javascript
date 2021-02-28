@@ -3,9 +3,9 @@ import {
   remainingMinutesInOven,
   preparationTimeInMinutes,
   totalTimeInMinutes,
-} from './basics';
+} from './lasagna';
 
-describe('basics', () => {
+describe('lasagna', () => {
   it('EXPECTED_MINUTES_IN_OVEN', () => {
     expect(EXPECTED_MINUTES_IN_OVEN).toBe(40);
   });
