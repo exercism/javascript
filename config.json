@@ -53,7 +53,8 @@
         "status": "active"
       },
       {
-        "slug": "booleans",
+        "slug": "annalyns-infiltration",
+        "name": "Annalyn's Infiltration",
         "uuid": "5acafcbb-20a0-45b9-b276-3d167e0de313",
         "concepts": ["booleans"],
         "prerequisites": ["basics"],
