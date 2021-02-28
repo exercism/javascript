@@ -7,9 +7,9 @@
     }
   ],
   "files": {
-    "solution": ["basics.js"],
-    "test": ["basics.spec.js"],
+    "solution": ["lasagna.js"],
+    "test": ["lasagna.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["ruby/basics"]
+  "forked_from": ["ruby/lasagna"]
 }
