@@ -1,12 +1,12 @@
 {
-  "name": "@exercism/javascript-concept-basics",
+  "name": "@exercism/javascript-lasagna",
   "description": "Exercism concept exercise on basics",
   "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "languages/javascript/exercises/concept/basics"
+    "directory": "exercises/concept/lasagna"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",
