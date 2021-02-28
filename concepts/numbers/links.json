@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "description": "MDN: Number (Built-in object)"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math",
+    "description": "MDN: Math (Built-in object)"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals",
+    "description": "MDN: Lexical grammar for numeric literals"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness",
+    "description": "MDN: Equality comparisons and sameness"
+  }
+]
