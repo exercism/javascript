@@ -1,12 +1,15 @@
 {
-  "name": "@exercism/javascript-concept-booleans",
+  "name": "@exercism/javascript-annalyns-infiltration",
   "description": "Exercism concept exercise on booleans",
   "author": "Ovidiu Miu",
+  "contributors": [
+    "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)"
+  ],
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "languages/javascript/exercises/concept/booleans"
+    "directory": "exercises/concept/annalyns-infiltration"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",
