@@ -45,7 +45,8 @@
         "status": "beta"
       },
       {
-        "slug": "basics",
+        "slug": "lasagna",
+        "name": "Lucian's Luscious Lasagna",
         "uuid": "97bf898a-36fc-47fc-b870-01fc0c7fe554",
         "concepts": ["basics"],
         "prerequisites": [],
