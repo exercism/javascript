@@ -17,8 +17,8 @@
     }
   ],
   "files": {
-    "solution": ["booleans.js"],
-    "test": ["booleans.spec.js"],
+    "solution": ["annalyns-infiltration.js"],
+    "test": ["annalyns-infiltration.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
