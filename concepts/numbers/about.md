@@ -100,6 +100,7 @@ Normally these would be put in a list, but it renders better when it's next to e
 
 [built-in-number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+[comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 [lexical-grammar]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals
 [string-formatting]: https://exercism.lol/tracks/javascript/concepts/string-formating
 [type-checking]: https://exercism.lol/tracks/javascript/concepts/type-checking
