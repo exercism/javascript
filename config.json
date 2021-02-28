@@ -1518,7 +1518,7 @@
       "uuid": "791d215c-6813-479a-a126-d9ad9cdc49a9",
       "slug": "booleans",
       "name": "Booleans",
-      "blurb": "TODO: add blurb for booleans concept"
+      "blurb": "A boolean represents one of two values. JavaScript has various logical operators that return a boolean value."
     },
     {
       "uuid": "fba5ca5c-849c-44ee-91be-3d6c81a3cf4e",
