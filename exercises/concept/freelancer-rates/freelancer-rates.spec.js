@@ -1,6 +1,6 @@
 // @ts-check
 
-import { dayRate, monthRate, daysInBudget } from './numbers';
+import { dayRate, monthRate, daysInBudget } from './freelancer-rates';
 
 describe('numbers', () => {
   /** @type {Array<[number, number]>} */
