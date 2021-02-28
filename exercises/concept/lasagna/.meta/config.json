@@ -6,6 +6,7 @@
       "exercism_username": "SleeplessByte"
     }
   ],
+  "contributors": [],
   "files": {
     "solution": ["lasagna.js"],
     "test": ["lasagna.spec.js"],
