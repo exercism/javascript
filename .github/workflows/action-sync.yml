@@ -1,4 +1,4 @@
-name: 'Format code'
+name: 'javascript / sync'
 
 on:
   issue_comment:
@@ -6,11 +6,11 @@ on:
 
 jobs:
   format:
-    name: 'Format code'
+    name: 'Sync all exercises'
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/format')
+    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/sync')
     steps:
-      - name: 'Post acknowledgement that it will format code'
+      - name: 'Post acknowledgement that it will sync exercises'
         continue-on-error: true # Never fail the build if this fails
         uses: actions/github-script@47f7cf65b5ced0830a325f705cad64f2f58dddf7 # 3.1
         with:
@@ -20,7 +20,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'The "Format code" action has started running.'
+              body: 'The "Sync all exercises" action has started running.'
             })
 
       - name: 'Download PR data'
@@ -60,16 +60,16 @@ jobs:
           git clone $HEAD_REPO .
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
-      - name: 'Format code'
-        run: ./bin/format.sh
-        env:
-          EXERCISM_PRETTIER_VERSION: '2.2.1'
+      - name: 'Install dependencies'
+        run: yarn install
+      - name: 'Sync exercises'
+        run: npx babel-node scripts/sync
 
-      - name: 'Commit formatted code'
+      - name: 'Commit changes'
         run: |
-          # Check if there is nothing to commit (i.e. no formatting changes made)
+          # Check if there is nothing to commit (i.e. no syncing changes made)
           if [ -z "$(git status --porcelain)" ]; then
-            echo "Code is already formatted correctly"
+            echo "Exercises are already synced correctly"
             exit 0
           fi
 
@@ -79,10 +79,10 @@ jobs:
 
           # Commit the changes made by prettier
           git add .
-          git commit -m "[CI] Format code"
+          git commit -m "[CI] Sync exercises"
           git push
 
-      - name: 'Post acknowledgement that it has formatted the code'
+      - name: 'Post acknowledgement that it has synced the code'
         continue-on-error: true # Never fail the build if this fails
         uses: actions/github-script@47f7cf65b5ced0830a325f705cad64f2f58dddf7 # 3.1
         with:
@@ -92,7 +92,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'The "Format code" action has finished running.'
+              body: 'The "Sync all exercises" action has finished running.'
             })
 
       - name: 'Post reminder to trigger build manually'
@@ -106,5 +106,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'For security reasons, `/format` does not trigger CI builds when the PR has been submitted from a fork. If checks were not passing due to code format, trigger a build to make the required checks pass, through one of the following ways:\n\n- Push an empty commit to this branch: `git commit --allow-empty -m "Trigger builds"`.\n- Close and reopen the PR.\n- Push a regular commit to this branch.'
+              body: 'For security reasons, `/sync` does not trigger CI builds when the PR has been submitted from a fork. If checks were not passing due to code format, trigger a build to make the required checks pass, through one of the following ways:\n\n- Push an empty commit to this branch: `git commit --allow-empty -m "Trigger builds"`.\n- Close and reopen the PR.\n- Push a regular commit to this branch.'
             })
