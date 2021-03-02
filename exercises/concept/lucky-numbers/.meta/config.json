@@ -17,15 +17,9 @@
     }
   ],
   "files": {
-    "solution": [
-      "lucky-numbers.js"
-    ],
-    "test": [
-      "lucky-numbers.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["lucky-numbers.js"],
+    "test": ["lucky-numbers.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

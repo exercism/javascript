@@ -8,15 +8,9 @@
   ],
   "contributors": [],
   "files": {
-    "solution": [
-      "numbers.js"
-    ],
-    "test": [
-      "numbers.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["numbers.js"],
+    "test": ["numbers.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

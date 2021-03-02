@@ -13,15 +13,9 @@
     }
   ],
   "files": {
-    "solution": [
-      "array-loops.js"
-    ],
-    "test": [
-      "array-loops.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["array-loops.js"],
+    "test": ["array-loops.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

@@ -13,15 +13,8 @@
     }
   ],
   "files": {
-    "solution": [
-      "fruit-picker.js",
-      "grocer.js"
-    ],
-    "test": [
-      "fruit-picker.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["fruit-picker.js", "grocer.js"],
+    "test": ["fruit-picker.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   }
 }

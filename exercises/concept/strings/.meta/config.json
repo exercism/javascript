@@ -13,15 +13,9 @@
     }
   ],
   "files": {
-    "solution": [
-      "strings.js"
-    ],
-    "test": [
-      "strings.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["strings.js"],
+    "test": ["strings.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

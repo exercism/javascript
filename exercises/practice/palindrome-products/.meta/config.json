@@ -2,15 +2,9 @@
   "blurb": "Detect palindrome products in a given range.",
   "authors": [],
   "files": {
-    "solution": [
-      "palindrome-products.js"
-    ],
-    "test": [
-      "palindrome-products.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["palindrome-products.js"],
+    "test": ["palindrome-products.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Problem 4 at Project Euler",
   "source_url": "http://projecteuler.net/problem=4"

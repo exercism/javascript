@@ -2,15 +2,9 @@
   "blurb": "Given a natural radicand, return its square root.",
   "authors": [],
   "files": {
-    "solution": [
-      "square-root.js"
-    ],
-    "test": [
-      "square-root.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["square-root.js"],
+    "test": ["square-root.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "wolf99",
   "source_url": "https://github.com/exercism/problem-specifications/pull/1582"

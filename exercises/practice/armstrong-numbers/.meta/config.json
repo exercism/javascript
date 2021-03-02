@@ -2,15 +2,9 @@
   "blurb": "Determine if a number is an Armstrong number",
   "authors": [],
   "files": {
-    "solution": [
-      "armstrong-numbers.js"
-    ],
-    "test": [
-      "armstrong-numbers.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["armstrong-numbers.js"],
+    "test": ["armstrong-numbers.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"

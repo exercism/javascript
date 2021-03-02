@@ -2,15 +2,9 @@
   "blurb": "Make sure the brackets and braces all match.",
   "authors": [],
   "files": {
-    "solution": [
-      "matching-brackets.js"
-    ],
-    "test": [
-      "matching-brackets.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["matching-brackets.js"],
+    "test": ["matching-brackets.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Ginna Baker"
 }

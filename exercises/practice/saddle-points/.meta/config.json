@@ -2,15 +2,9 @@
   "blurb": "Detect saddle points in a matrix.",
   "authors": [],
   "files": {
-    "solution": [
-      "saddle-points.js"
-    ],
-    "test": [
-      "saddle-points.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["saddle-points.js"],
+    "test": ["saddle-points.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"

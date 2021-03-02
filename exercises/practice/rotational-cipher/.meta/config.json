@@ -2,15 +2,9 @@
   "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",
   "authors": [],
   "files": {
-    "solution": [
-      "rotational-cipher.js"
-    ],
-    "test": [
-      "rotational-cipher.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["rotational-cipher.js"],
+    "test": ["rotational-cipher.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Caesar_cipher"

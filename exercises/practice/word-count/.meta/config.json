@@ -2,15 +2,9 @@
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
   "authors": [],
   "files": {
-    "solution": [
-      "word-count.js"
-    ],
-    "test": [
-      "word-count.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["word-count.js"],
+    "test": ["word-count.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

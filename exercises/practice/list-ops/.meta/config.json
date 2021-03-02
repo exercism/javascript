@@ -2,14 +2,8 @@
   "blurb": "Implement basic list operations",
   "authors": [],
   "files": {
-    "solution": [
-      "list-ops.js"
-    ],
-    "test": [
-      "list-ops.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["list-ops.js"],
+    "test": ["list-ops.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

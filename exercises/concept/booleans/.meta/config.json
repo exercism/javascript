@@ -17,15 +17,9 @@
     }
   ],
   "files": {
-    "solution": [
-      "booleans.js"
-    ],
-    "test": [
-      "booleans.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["booleans.js"],
+    "test": ["booleans.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }
