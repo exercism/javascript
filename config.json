@@ -385,7 +385,7 @@
         "name": "Leap",
         "uuid": "7c8294ee-5924-4bf8-a72f-31d0e2d7d9a0",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers"],
         "difficulty": 1,
         "topics": ["booleans", "integers", "logic"]
       },
