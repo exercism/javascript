@@ -1,9 +1,16 @@
 {
+  "blurb": "Implement a binary search algorithm.",
   "authors": [],
   "files": {
-    "solution": ["binary-search.js"],
-    "test": ["binary-search.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "binary-search.js"
+    ],
+    "test": [
+      "binary-search.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"

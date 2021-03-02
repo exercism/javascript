@@ -1,9 +1,16 @@
 {
+  "blurb": "Given a number n, determine what the nth prime is.",
   "authors": [],
   "files": {
-    "solution": ["nth-prime.js"],
-    "test": ["nth-prime.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "nth-prime.js"
+    ],
+    "test": [
+      "nth-prime.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A variation on Problem 7 at Project Euler",
   "source_url": "http://projecteuler.net/problem=7"

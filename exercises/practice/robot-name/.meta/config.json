@@ -1,9 +1,16 @@
 {
+  "blurb": "Manage robot factory settings.",
   "authors": [],
   "files": {
-    "solution": ["robot-name.js"],
-    "test": ["robot-name.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "robot-name.js"
+    ],
+    "test": [
+      "robot-name.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }

@@ -1,9 +1,16 @@
 {
+  "blurb": "Implement a clock that handles times without dates.",
   "authors": [],
   "files": {
-    "solution": ["clock.js"],
-    "test": ["clock.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "clock.js"
+    ],
+    "test": [
+      "clock.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Pairing session with Erin Drummond",
   "source_url": "https://twitter.com/ebdrummond"

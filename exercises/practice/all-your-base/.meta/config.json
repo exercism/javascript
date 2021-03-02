@@ -1,8 +1,15 @@
 {
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
   "authors": [],
   "files": {
-    "solution": ["all-your-base.js"],
-    "test": ["all-your-base.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "all-your-base.js"
+    ],
+    "test": [
+      "all-your-base.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

@@ -1,9 +1,16 @@
 {
+  "blurb": "Implement variable length quantity encoding and decoding.",
   "authors": [],
   "files": {
-    "solution": ["variable-length-quantity.js"],
-    "test": ["variable-length-quantity.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "variable-length-quantity.js"
+    ],
+    "test": [
+      "variable-length-quantity.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A poor Splice developer having to implement MIDI encoding/decoding.",
   "source_url": "https://splice.com"

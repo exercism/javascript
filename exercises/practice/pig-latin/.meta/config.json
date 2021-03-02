@@ -1,9 +1,16 @@
 {
+  "blurb": "Implement a program that translates from English to Pig Latin",
   "authors": [],
   "files": {
-    "solution": ["pig-latin.js"],
-    "test": ["pig-latin.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "pig-latin.js"
+    ],
+    "test": [
+      "pig-latin.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "The Pig Latin exercise at Test First Teaching by Ultrasaurus",
   "source_url": "https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/"

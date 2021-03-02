@@ -1,8 +1,15 @@
 {
+  "blurb": "Implement a basic reactive system.",
   "authors": [],
   "files": {
-    "solution": ["react.js"],
-    "test": ["react.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "react.js"
+    ],
+    "test": [
+      "react.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }
