@@ -26,7 +26,7 @@ MY_FIRST_CONSTANT = 20;
 // => TypeError: Assignment to constant variable.
 ```
 
-> 💡 In a later Concept exercise the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
+> 💡 In a later Concept Exercise the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
 
 ## Function declarations
 
