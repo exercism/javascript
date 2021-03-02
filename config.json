@@ -394,7 +394,7 @@
         "name": "Reverse String",
         "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "arrays"],
         "difficulty": 2,
         "topics": ["loops", "strings"]
       },
