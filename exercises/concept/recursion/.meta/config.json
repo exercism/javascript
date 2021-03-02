@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for recursion exercise",
   "authors": [
     {
       "github_username": "SleeplessByte",
@@ -7,9 +8,17 @@
   ],
   "contributors": [],
   "files": {
-    "solution": ["recursion.js"],
-    "test": ["recursion.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "recursion.js"
+    ],
+    "test": [
+      "recursion.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["csharp/nullability"]
+  "forked_from": [
+    "csharp/nullability"
+  ]
 }

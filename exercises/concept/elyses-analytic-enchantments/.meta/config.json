@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for elyses-analytic-enchantments exercise",
   "authors": [
     {
       "github_username": "peterchu999",
@@ -11,9 +12,15 @@
   ],
   "contributors": [],
   "files": {
-    "solution": ["enchantments.js"],
-    "test": ["enchantments.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "enchantments.js"
+    ],
+    "test": [
+      "enchantments.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "forked_from": []
 }

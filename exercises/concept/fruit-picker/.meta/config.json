@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for fruit-picker exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,8 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["fruit-picker.js", "grocer.js"],
-    "test": ["fruit-picker.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "fruit-picker.js",
+      "grocer.js"
+    ],
+    "test": [
+      "fruit-picker.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   }
 }

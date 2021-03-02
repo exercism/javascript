@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for closures exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["closures.js"],
-    "test": ["closures.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "closures.js"
+    ],
+    "test": [
+      "closures.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "forked_from": []
 }

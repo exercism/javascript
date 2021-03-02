@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for elyses-enchantments exercise",
   "authors": [
     {
       "github_username": "ovidiu141",
@@ -16,9 +17,17 @@
     }
   ],
   "files": {
-    "solution": ["enchantments.js"],
-    "test": ["enchantments.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "enchantments.js"
+    ],
+    "test": [
+      "enchantments.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["go/basic-slices"]
+  "forked_from": [
+    "go/basic-slices"
+  ]
 }

@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for lucky-numbers exercise",
   "authors": [
     {
       "github_username": "shubhsk88",
@@ -16,9 +17,15 @@
     }
   ],
   "files": {
-    "solution": ["lucky-numbers.js"],
-    "test": ["lucky-numbers.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "lucky-numbers.js"
+    ],
+    "test": [
+      "lucky-numbers.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "forked_from": []
 }
