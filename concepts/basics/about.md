@@ -32,7 +32,7 @@ MY_MUTABLE_VALUE_CONSTANT;
 
 ## Constant value (immutability)
 
-As a rule, on Exercism, and many other organisations and project style guides, don't mutate values that look like `const SCREAMING_SNAKE_CASE`. Technically the values _can_ be changed, but for clarity and expectation managment on Exercism this is discouraged. When this _must_ be enforced, use [`Object.freeze(value)`][mdn-object-freeze].
+As a rule, on Exercism, and many other organisations and project style guides, don't mutate values that look like `const SCREAMING_SNAKE_CASE`. Technically the values _can_ be changed, but for clarity and expectation management on Exercism this is discouraged. When this _must_ be enforced, use [`Object.freeze(value)`][mdn-object-freeze].
 
 ```javascript
 const MY_VALUE_CONSTANT = Object.freeze({ food: 'apple' });
