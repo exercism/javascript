@@ -18,7 +18,7 @@
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.13.9",
     "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.31",
+    "@types/node": "^14.14.32",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "chalk": "^4.1.0",
