@@ -12,7 +12,7 @@
     "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.0",
+    "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.8",
     "@babel/node": "^7.13.0",
     "@babel/plugin-syntax-bigint": "^7.8.3",
