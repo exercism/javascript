@@ -31,7 +31,7 @@ if(condition1) {
 }
 ```
 
-The condition can just be a [boolean][concept-booleans] variable but often times some comparison is done...
+The condition can just be a boolean variable but often times some comparison is done...
 
 ```javascript
 if(num >= 0) {
@@ -39,7 +39,7 @@ if(num >= 0) {
 }
 ```
 
-... and/or [logical operators][concept-logical-operators] are used.
+... and/or logical operators are used.
 
 ```javascript
 const isPositive = num >= 0;
@@ -48,6 +48,3 @@ if(isPositive && isSmall) {
     // ...
 }
 ```
-
-[concept-booleans]: /tracks/javascript/concepts/booleans
-[concept-logical-operators]: /tracks/javascript/concepts/logical-operators

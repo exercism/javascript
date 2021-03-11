@@ -1,0 +1,16 @@
+{
+  "blurb": "Learn about comparison and conditionals while preparing your next vehicle purchase",
+  "authors": [
+    {
+      "github_username": "junedev",
+      "exercism_username": "junedev"
+    }
+  ],
+  "contributors": [],
+  "files": {
+    "solution": ["vehicle-purchase.js"],
+    "test": ["vehicle-purchase.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["julia/vehicle-purchase"]
+}
