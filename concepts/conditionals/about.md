@@ -49,22 +49,17 @@ if(condition1) {
 ```
 
 ## Condition
-The condition can just be a [boolean][concept-booleans] variable but often times some comparison is done...
+FIXME include operator precedence reference 
 
-```javascript
-if(num >= 0) {
-    // ...
-}
-```
-
-... and/or [logical operators][concept-logical-operators] are used.
+When constructing complex conditions, consider using additional variables to make them more readable.
 
 ```javascript
 if(num >= 0 && num < 1) {
     // ...
 }
 
-// Alternatively, variables can be used to make this more readable.
+// Can be written as ...
+
 const isPositive = num >= 0;
 const isSmall = num < 1;
 if(isPositive && isSmall) {
@@ -120,8 +115,6 @@ function checkNumber(num) {
 }
 ```
 
-[concept-booleans]: /tracks/javascript/concepts/booleans
-[concept-logical-operators]: /tracks/javascript/concepts/logical-operators
 [concept-type-coercion]: /tracks/javascript/concepts/type-coercion
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [MDN-NaN]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN

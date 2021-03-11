@@ -35,17 +35,6 @@ In JavaScript the comparison operators can also be used to compare strings. In t
 // => false
 ```
 
-```javascript
-"Apple" > "Pear"
-// => false
-
-"a" < "above"
-// => true
-
-"a" === "A"
-// => false
-```
-
 You might wonder about the three equal signs for checking equality in JavaScript. `===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
 
 There is also `==` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. This leads to strange results that are difficult to reason about.
@@ -85,24 +74,6 @@ if(condition1) {
     // but "condition1" was false
 } else {
     // code that is executed otherwise
-}
-```
-
-The condition can just be a boolean variable but often times some comparison is done...
-
-```javascript
-if(num >= 0) {
-    // ...
-}
-```
-
-... and/or logical operators are used.
-
-```javascript
-const isPositive = num >= 0;
-const isSmall = num < 1;
-if(isPositive && isSmall) {
-    // ...
 }
 ```
 
