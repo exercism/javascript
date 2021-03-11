@@ -19,7 +19,7 @@ if(condition) {
 ```
 
 ## Nested If-Statements
-To nest another condition into the `else` statement you can use `else if`.
+To nest another condition into the `else` statement you can use `else if`. Note that there is no `elseif` keyword in JavaScript. It is literally just `else` followed by another `if` statement.
 
 ```javascript
 if(condition1) {
@@ -73,6 +73,13 @@ if(isPositive && isSmall) {
 ```
 
 In JavaScript the condition does not have to be of type boolean. If any other type than boolean is provided in a boolean context like the if-statement, JavaScript will implicitly convert the value to boolean. Refer to the [type coercion concept][concept-type-coercion] for details on which values are _truthy_ and _falsy_, respectively.
+
+```javascript
+const num = 4;
+if(num) {
+    // this code block will be executed because 4 is truthy
+}
+```
 
 ## Short-Hand Notations
 If you only want to execute one statement in the code block for `if` or `else`, it is possible in JavaScript to omit the curly brackets.
