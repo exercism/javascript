@@ -1,4 +1,5 @@
 {
+  "blurb": "Convert color codes, as used on resistors, to a human-readable label.",
   "authors": [],
   "files": {
     "solution": ["resistor-color-trio.js"],

@@ -1,4 +1,5 @@
 {
+  "blurb": "Given a natural radicand, return its square root.",
   "authors": [],
   "files": {
     "solution": ["square-root.js"],

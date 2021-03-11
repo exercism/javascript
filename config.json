@@ -45,14 +45,16 @@
         "status": "beta"
       },
       {
-        "slug": "basics",
+        "slug": "lasagna",
+        "name": "Lucian's Luscious Lasagna",
         "uuid": "97bf898a-36fc-47fc-b870-01fc0c7fe554",
         "concepts": ["basics"],
         "prerequisites": [],
         "status": "active"
       },
       {
-        "slug": "booleans",
+        "slug": "annalyns-infiltration",
+        "name": "Annalyn's Infiltration",
         "uuid": "5acafcbb-20a0-45b9-b276-3d167e0de313",
         "concepts": ["booleans"],
         "prerequisites": ["basics"],
@@ -1510,13 +1512,13 @@
       "uuid": "611d6b3d-1241-4432-90f6-8fcffb36917c",
       "slug": "basics",
       "name": "Basics",
-      "blurb": "TODO: add blurb for basics concept"
+      "blurb": "The minimal knowledge required to get started in JavaScript. Function declarations, variable assignment, and a few operators for numbers. "
     },
     {
       "uuid": "791d215c-6813-479a-a126-d9ad9cdc49a9",
       "slug": "booleans",
       "name": "Booleans",
-      "blurb": "TODO: add blurb for booleans concept"
+      "blurb": "A boolean represents one of two values. JavaScript has various logical operators that return a boolean value."
     },
     {
       "uuid": "fba5ca5c-849c-44ee-91be-3d6c81a3cf4e",

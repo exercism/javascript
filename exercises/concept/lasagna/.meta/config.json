@@ -1,14 +1,16 @@
 {
+  "blurb": "TODO: add blurb for basics exercise",
   "authors": [
     {
       "github_username": "SleeplessByte",
       "exercism_username": "SleeplessByte"
     }
   ],
+  "contributors": [],
   "files": {
-    "solution": ["basics.js"],
-    "test": ["basics.spec.js"],
+    "solution": ["lasagna.js"],
+    "test": ["lasagna.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["ruby/basics"]
+  "forked_from": ["ruby/lasagna"]
 }

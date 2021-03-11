@@ -1,42 +1,34 @@
 [
   {
     "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
-    "description": "mdn-primitive"
-  },
-  {
-    "url": "https://en.wikipedia.org/wiki/Immutable_object",
-    "description": "wiki-mutability"
-  },
-  {
-    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
-    "description": "mdn-primitive"
-  },
-  {
-    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
-    "description": "mdn-primitive"
+    "description": "MDN Glossary: JavaScript Primitive"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze",
-    "description": "mdn-object-freeze"
+    "description": "MDN: JavaScript Object freezing"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
-    "description": "mdn-module"
+    "description": "MDN: JavaScript Module System"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports",
-    "description": "mdn-renaming-modules"
+    "description": "MDN: Renaming modules when importing or exporting"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Imports",
-    "description": "mdn-dynamic-imports"
+    "description": "MDN: JavaScript Dynamic imports"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Immutable_object",
+    "description": "About immutable objects"
   },
   {
     "url": "https://bitsofco.de/what-is-tree-shaking/",
-    "description": "blog-tree-shaking"
+    "description": "About tree shaking"
   },
   {
     "url": "https://2ality.com/2015/07/es6-module-exports.html#es6-modules-export-immutable-bindings",
-    "description": "blog-live-bindings"
+    "description": "About live bindings (JavaScript exports)"
   }
 ]
