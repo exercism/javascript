@@ -29,19 +29,19 @@ The day rate does not need to be rounded or changed to a "fixed" precision.
 Implement a function to calculate the month rate, and apply a discount:
 
 ```javascript
-monthRate(89, '42%');
+monthRate(89, 0.42);
 // => 9086
 ```
 
-The discount is always passed as a `string`. The result _must_ be rounded up to the nearest whole number.
+The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be rounded up to the nearest whole number.
 
 ## 3. Calculate the number of workdays given a budget, rate and discount
 
-Implement a function that takes a budget, a rate per hour and a discount, and calculates how many days of work that covers, to one decimal place.
+Implement a function that takes a budget, a rate per hour and a discount, and calculates how many full days of work that covers.
 
 ```javascript
-daysInBudget(20000, 89, '20.02%');
-// => "35.1"
+daysInBudget(20000, 89, 0.2002);
+// => 35
 ```
 
-The discount is always passed as a `string`. The result is the number of days to one decimal place, as a `string`.
+The discount is always passed as a `number`. `20.02%` is passed as `0.2002`. The result is the number of days should be rounded down to full days of work.
