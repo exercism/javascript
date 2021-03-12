@@ -46,7 +46,7 @@ There is also `==` which represents checking for _loose equality_. You should av
 
 ## Conditionals
 
-The most commonly used way to conditionally execute logic in JavaScript is the If-statement. It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets. The code block will only be executed if the condition evaluates to `true`.
+A common way to conditionally execute logic in JavaScript is the If-statement. It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets. The code block will only be executed if the condition evaluates to `true`.
 
 ```javascript
 if(condition) {
