@@ -2,6 +2,8 @@
 
 import { dayRate, monthRate, daysInBudget } from './freelancer-rates';
 
+const DIFFERENCE_PRECISION_IN_DIGITS = 6;
+
 describe('freelancer rates', () => {
   describe('day rate', () => {
     test('at 16/hour', () => {
@@ -16,17 +18,17 @@ describe('freelancer rates', () => {
 
     test('at 31.40/hour', () => {
       const actual = dayRate(31.4);
-      expect(actual).toBeCloseTo(251.2, 6);
+      expect(actual).toBeCloseTo(251.2, DIFFERENCE_PRECISION_IN_DIGITS);
     });
 
     test('at 89.89/hour', () => {
       const actual = dayRate(89.89);
-      expect(actual).toBeCloseTo(719.12, 6);
+      expect(actual).toBeCloseTo(719.12, DIFFERENCE_PRECISION_IN_DIGITS);
     });
 
     test('at 97.654321/hour', () => {
       const actual = dayRate(97.654321);
-      expect(actual).toBeCloseTo(781.234568, 6);
+      expect(actual).toBeCloseTo(781.234568, DIFFERENCE_PRECISION_IN_DIGITS);
     });
   });
 
@@ -78,21 +80,21 @@ describe('freelancer rates', () => {
         const actual = daysInBudget(1280, 16, 0);
         const expected = 10;
 
-        expect(actual).toBeCloseTo(expected, 6);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
 
       test('at 25/hour', () => {
         const actual = daysInBudget(1280, 25, 0);
         const expected = 6;
 
-        expect(actual).toBeCloseTo(expected, 6);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
 
       test('at 25/hour with 30% discount', () => {
-        const actual = daysInBudget(1280, 30, 0);
+        const actual = daysInBudget(1280, 25, 0.3);
         const expected = 9;
 
-        expect(actual).toBeCloseTo(expected, 6);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
     });
 
@@ -101,28 +103,28 @@ describe('freelancer rates', () => {
         const actual = daysInBudget(10000, 25, 0.05);
         const expected = 52;
 
-        expect(actual).toBeCloseTo(expected, 6);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
 
       test('at 31.40/hour with 5% discount', () => {
         const actual = daysInBudget(10000, 31.4, 0.05);
-        const expected = 6;
+        const expected = 41;
 
-        expect(actual).toBeCloseTo(expected, 41);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
 
       test('at 89.89/hour with 5% discount', () => {
         const actual = daysInBudget(10000, 89.89, 0.05);
-        const expected = 9;
+        const expected = 14;
 
-        expect(actual).toBeCloseTo(expected, 14);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
 
       test('at 97.654321/hour with 5% discount', () => {
         const actual = daysInBudget(10000, 97.654321, 0.05);
-        const expected = 9;
+        const expected = 13;
 
-        expect(actual).toBeCloseTo(expected, 13);
+        expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
     });
   });
