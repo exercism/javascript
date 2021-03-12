@@ -68,7 +68,7 @@
         "status": "active"
       },
       {
-        "slug": "numbers",
+        "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "uuid": "0aff2fa7-55ea-47e9-af4a-78927d916baf",
         "concepts": ["numbers"],
