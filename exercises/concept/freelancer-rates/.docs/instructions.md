@@ -1,13 +1,13 @@
 # Instructions
 
-In this exercise you'll be writing code to help a freelancer communicate with a project manager by providing a few utilities to quickly calculate day- and month rates, optionally with a given discount.
+In this exercise you will be writing code to help a freelancer communicate with a project manager by providing a few utility functions to quickly calculate day- and month rates, optionally with a given discount.
 
 We first establish a few rules between the freelancer and the project manager:
 
 - The daily rate is 8 times the hourly rate;
 - A month has 22 billable days.
 
-The freelancer is offering to apply a discount if the project manager chooses to let the freelancer bill per month, which can come in handy if there is a certain budget the project manager has to work with.
+If the freelancer bills the project manager per month, there is a discount applied. This can be handy if the project manager has a fixed budget.
 
 Discounts are modeled as fractional numbers followed by a `%` (percentage) between `0.0%` (no discount) and `90.0%` (maximum discount).
 
