@@ -130,6 +130,13 @@
         "concepts": ["type-conversion"],
         "prerequisites": ["arrays", "strings", "numbers"],
         "status": "wip"
+      },
+      {
+        "slug": "vehicle-purchase",
+        "uuid": "f75a7e2c-053a-411e-8b3d-f978a2c5100e",
+        "concepts": ["comparison", "conditionals"],
+        "prerequisites": ["booleans", "numbers", "strings"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1590,7 +1597,7 @@
       "uuid": "ef1e44db-5fd0-4550-9135-7522303e7e42",
       "slug": "comparison",
       "name": "Comparison",
-      "blurb": "Compare values using operators to check greater than, less than, equal and not equal"
+      "blurb": "Compare values using operators to check greater than, less than, equals and not equals"
     }
   ],
   "key_features": [
