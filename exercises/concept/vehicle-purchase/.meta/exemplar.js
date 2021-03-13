@@ -51,5 +51,5 @@ export function calculateResellPrice(originalPrice, age) {
     percentage = 70;
   }
 
-  return percentage/100 * originalPrice;
+  return (percentage / 100) * originalPrice;
 }
