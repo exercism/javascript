@@ -53,17 +53,23 @@ if (condition1) {
 
 ## Condition
 
-FIXME include operator precedence reference
-
-When constructing complex conditions, consider using additional variables to make them more readable.
+When constructing complex conditions, refer to the [operator precedence table][mdn-operator-precedence] to avoid unnecessary brackets.
 
 ```javascript
 if (num >= 0 && num < 1) {
   // ...
 }
 
-// Can be written as ...
+// The inner brackets are obsolete because relational operators
+// have higher precedence than logical operators.
+if (num >= 0 && num < 1) {
+  // ...
+}
+```
 
+Also consider using additional variables to make the code more readable.
+
+```javascript
 const isPositive = num >= 0;
 const isSmall = num < 1;
 if (isPositive && isSmall) {
@@ -122,3 +128,4 @@ function checkNumber(num) {
 [concept-type-coercion]: /tracks/javascript/concepts/type-coercion
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [mdn-nan]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+[mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
