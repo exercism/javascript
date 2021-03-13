@@ -1,69 +1,49 @@
-FIXME
-
 # Instructions
 
-In this exercise you're going to write some code to help you help you prepare to buy a new vehicle.
+In this exercise you are going to write some code to help you prepare to buy a new vehicle.
 
-You have three tasks, one to help you determine the price of the vehicle you can afford, one to determine if you will need to get a licence, and one to help you compute your registration fee.
+You have three tasks, one to determine if you will need to get a licence, one to help you choose between two vehicles and one to estimate the acceptable price for a used vehicle.
 
-## 1. Compute whether or not you can afford the monthly payments on a given vehicle
+## 1. Determine if you will need a drivers licence
 
-The transport vehicle dealers in your town are all running a five year, 0% interest promotion that you would like to take advantage of.
-Implement the `canibuy(vehicle, price, monthly_budget)` function that takes the name of the vehicle you are looking at, its price, and your monthly budget and returns a string letting you know whether you can afford the vehicle or not, if the monthly payment is within 10 of your monthly budget you will want to return a special reminder to be frugal:
+Some kinds of vehicles require a drivers license to operate them. Assume only the kinds `'car'` and `'truck'` require a license, everything else can be operated without a license.
 
-```julia
-julia> canibuy("1974 Ford Pinto", 516, 100)
-"Yes! I'm getting a 1974 Ford Pinto."
+Implement the `needsLicense(kind)` function that takes the kind of vehicle and returns a boolean indicating whether you need a license for that kind of vehicle.
 
-julia> canibuy("2014 Bugatti Veyron", 562_500, 5000)
-"Damn! No 2014 Bugatti Veryon for me."
+```javascript
+needsLicense('car');
+// => true
 
-julia> canibuy("2020 Gazelle Medeo", 3000, 50)
-"I'll have to be frugal if I want a 2020 Gazelle Medeo."
+needsLicense('bike');
+// => false
 ```
 
-<!-- prettier-ignore -->
-!!! info
-    Numbers in Julia can contain `_` to group digits together.
-    E.g. `562_500` equals `562500`.
+## 2. Choose between two potential vehicles to buy
 
-## 2. Determine if you will need a drivers licence
+You evaluate your options of available vehicles. You manage to narrow it down to two options but you need help making the final decision.
+For that implement the function `chooseVehicle(option1, option2)` that takes two vehicles as arguments and returns a decision that includes the option that comes first in dictionary order.
 
-If you decide to buy a car, you will require a drivers licence.
-Bicycles do not require licences.
-Implement the `licence(vehicle, kind)` function that takes the name of the vehicle and what kind of vehicle it is (either `"car"` or `"bike"`) and returns if you need a licence:
+```javascript
+chooseVehicle('Wuling Hongguang', 'Toyota Corolla');
+// =>  'Toyota Corolla is clearly the better choice.'
 
-```julia
-julia> licence("2014 Bugatti Veyron", "car")
-"The 2014 Bugatti Veyron requires a licence to operate."
-
-julia> licence("2020 Gazelle Medeo", "bike")
-"The 2020 Gazelle Medeo requires no licence to operate."
+chooseVehicle('Volkswagen Beetle', 'Volkswagen Golf');
+// =>  'Volkswagen Beetle is clearly the better choice.'
 ```
 
-## 3. Calculate the registration fee for your new vehicle
+## 3. Calculate an estimation for the price of a used vehicle
 
-The registration fee for your new vehicle is based on the following formula:
+Now that you made your decision you want to make sure you get a fair price at the dealership. Since you are interested in buying a used vehicle, the price depends on how old the vehicle is. For a rough estimate, assume if the vehicle is less than 3 years old, it costs 80% of the original price it had when it was brand new. If it is more than 10 years old, it costs 50%. If the vehicle is at least 3 years old but not older than 10 years, it costs 70% of the original price.
 
-- Bicycles do not need to be registered. Therefore the fee is 0€.
-- For any car 10 years or older, the fee is a flat 25€.
-- For any newer car:
-  1. Start with a base cost that is either Manufacturer's Standard Retail Price (MSRP) for the car, or 25&nbsp;000€ whichever is greater.
-  2. For each year of age, subtract 10% of the base price.
-  3. Divide that value by 100. This is the registration fee you will have to pay.
+Implement the `calculateResellPrice(originalPrice, age)` function that applies this logic. It takes the original price and the age of the vehicle as arguments and returns the estimated price in the dealership.
 
-Implement the `fee(msrp, age, kind)` function that takes the MSRP of the vehicle, its age in years and the kind of the vehicle (either `"car"` or `"bike"`), and returns the registration fee for that vehicle, according to the formula above.
+```javascript
+calculateResellPrice(1000, 1);
+// => 800
 
-```julia
-julia> fee(562_500, 6, "car")
-2250
+calculateResellPrice(1000, 5);
+// => 700
 
-julia> fee(25_000, 3, "car")
-175
-
-julia> fee(34_000, 30, "car")
-25
-
-julia> fee(3000, 0, "bike")
-0
+calculateResellPrice(1000, 15);
+// => 500
 ```
