@@ -1,6 +1,7 @@
 # Introduction
 
 ## Comparison
+
 In JavaScript numbers can be compared using the following relational and equality operators.
 
 | Comparison             | Operator  |
@@ -15,23 +16,23 @@ In JavaScript numbers can be compared using the following relational and equalit
 The result of the comparison is always a boolean value, so either `true` or `false`.
 
 ```javascript
-1 < 3
+1 < 3;
 // => true
 
-2 !== 2
+2 !== 2;
 // => false
 ```
 
-In JavaScript the comparison operators can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][UTF-16-list].
+In JavaScript the comparison operators can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
-"Apple" > "Pear"
+'Apple' > 'Pear';
 // => false
 
-"a" < "above"
+'a' < 'above';
 // => true
 
-"a" === "A"
+'a' === 'A';
 // => false
 ```
 
@@ -40,41 +41,41 @@ You might wonder about the three equal signs for checking equality in JavaScript
 There is also `==` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. This leads to strange results that are difficult to reason about.
 
 ```javascript
-0 == false
+0 == false;
 // => true
 ```
 
 ## Conditionals
 
-A common way to conditionally execute logic in JavaScript is the If-statement. It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets. The code block will only be executed if the condition evaluates to `true`.
+A common way to conditionally execute logic in JavaScript is the if-statement. It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets. The code block will only be executed if the condition evaluates to `true`.
 
 ```javascript
-if(condition) {
-    // code that is executed if "condition" is true
+if (condition) {
+  // code that is executed if "condition" is true
 }
 ```
 
 It can be used stand-alone or combined with the `else` keyword.
 
 ```javascript
-if(condition) {
-    // code that is executed if "condition" is true
+if (condition) {
+  // code that is executed if "condition" is true
 } else {
-    // code that is executed otherwise
+  // code that is executed otherwise
 }
 ```
 
 To nest another condition into the `else` statement you can use `else if`.
 
 ```javascript
-if(condition1) {
-    // code that is executed if "condition1" is true
+if (condition1) {
+  // code that is executed if "condition1" is true
 } else if (condition2) {
-    // code that is executed if "condition2" is true
-    // but "condition1" was false
+  // code that is executed if "condition2" is true
+  // but "condition1" was false
 } else {
-    // code that is executed otherwise
+  // code that is executed otherwise
 }
 ```
 
-[UTF-16-list]: https://www.fileformat.info/info/charset/UTF-16/list.htm
+[utf-16-list]: https://www.fileformat.info/info/charset/UTF-16/list.htm
