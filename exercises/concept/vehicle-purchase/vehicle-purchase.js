@@ -10,7 +10,7 @@
  * @param {string} kind
  * @returns {boolean} whether a license is required
  */
- export function needsLicense(kind) {
+export function needsLicense(kind) {
   throw new Error('Please implement the needsLicense method');
 }
 
