@@ -1,5 +1,3 @@
-FIXME
-
 // @ts-check
 //
 // The line above enables type checking for this file. Various IDEs interpret
@@ -7,39 +5,35 @@ FIXME
 // implementing this exercise.
 
 /**
- * The amount of minutes it takes to prepare a single layer.
- */
-const PREPARATION_MINUTES_PER_LAYER = 2;
-
-/**
- * Determine the amount of minutes the lasagna still needs to remain in the
- * oven to be properly prepared.
+ * Determines whether or not you need a licence to operate a certain kind of vehicle.
  *
- * @param {number} actualMinutesInOven
- * @returns {number} the number of minutes remaining
+ * @param {string} kind
+ * @returns {boolean} whether a license is required
  */
-export function remainingMinutesInOven (actualMinutesInOven) {
-  throw new Error('Please implement the remainingMinutesInOven method');
+ export function needsLicense(kind) {
+  throw new Error('Please implement the needsLicense method');
 }
 
 /**
- * Given a number of layers, determine the total preparation time.
+ * Helps choosing between two options by recommending the one that
+ * comes first in dictionary order.
  *
- * @param {number} numberOfLayers
- * @returns {number} the total preparation time
+ * @param {string} option1
+ * @param {string} option2
+ * @returns {string} a sentence of advice which option to choose
  */
-export function preparationTimeInMinutes (numberOfLayers) {
-  throw new Error('Please implement the preparationTimeInMinutes method');
+export function chooseVehicle(option1, option2) {
+  throw new Error('Please implement the chooseVehicle method');
 }
 
 /**
- * Calculate the total working time. That is, the time to prepare all the layers
- * of lasagna, and the time already spent in the oven.
+ * Calculates an estimate for the price of a used car in the dealership
+ * based on the original price and the age of the car.
  *
- * @param {number} numberOfLayers
- * @param {number} actualMinutesInOven
- * @returns {number} the total working time
+ * @param {number} originalPrice
+ * @param {number} age
+ * @returns expected resell price in the dealership
  */
-export function totalTimeInMinutes (numberOfLayers, actualMinutesInOven) {
-  throw new Error('Please implement the totalTimeInMinutes method');
+export function calculateResellPrice(originalPrice, age) {
+  throw new Error('Please implement the calculateResellPrice method');
 }

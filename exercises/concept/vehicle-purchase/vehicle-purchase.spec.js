@@ -1,54 +1,56 @@
-FIXME
-
 import {
-  EXPECTED_MINUTES_IN_OVEN,
-  remainingMinutesInOven,
-  preparationTimeInMinutes,
-  totalTimeInMinutes,
+  needsLicense,
+  chooseVehicle,
+  calculateResellPrice,
 } from './vehicle-purchase';
 
-describe('lasagna', () => {
-  it('EXPECTED_MINUTES_IN_OVEN', () => {
-    expect(EXPECTED_MINUTES_IN_OVEN).toBe(40);
-  });
+describe('vehicle purchase', () => {
+  describe('needsLicense', () => {
+    const testCases = [
+      ['car', true],
+      ['truck', true],
+      ['bike', false],
+      ['stroller', false],
+      ['e-scooter', false],
+    ];
 
-  describe('remainingMinutesInOven', () => {
-    [
-      [25, 15],
-      [20, 20],
-      [39, 1],
-      [5, 35],
-    ].forEach(([actualMinutesInOven, expected]) => {
-      xit(`remainingMinutesInOven(${actualMinutesInOven})`, () => {
-        expect(remainingMinutesInOven(actualMinutesInOven)).toBe(expected);
+    testCases.forEach(([kind, expected]) => {
+      xtest(`needsLicense(${kind})`, () => {
+        expect(needsLicense(kind)).toBe(expected);
       });
     });
   });
 
-  describe('preparationTimeInMinutes', () => {
-    [
-      [1, 2],
-      [2, 4],
-      [4, 8],
-      [8, 16],
-    ].forEach(([numberOfLayers, expected]) => {
-      xit(`preparationTimeInMinutes(${numberOfLayers})`, () => {
-        expect(preparationTimeInMinutes(numberOfLayers)).toBe(expected);
-      });
-    });
-  });
+  describe('chooseVehicle', () => {
+    const testCases = [
+      ['Bugatti Veyron', 'Ford Pinto', 'Bugatti Veyron'],
+      ['Ford Pinto', 'Bugatti Veyron', 'Bugatti Veyron'],
+      ['2020 Gazelle Medeo', '2018 Bergamont City', '2018 Bergamont City'],
+      ['Chery EQ', 'Kia Niro Elektro ', 'Chery EQ'],
+    ];
 
-  describe('totalTimeInMinutes', () => {
-    [
-      [1, 5, 7],
-      [2, 10, 14],
-      [4, 15, 23],
-      [1, 35, 37],
-    ].forEach(([numberOfLayers, actualMinutesInOven, expected]) => {
-      xit(`totalTimeInMinutes(${numberOfLayers}, ${actualMinutesInOven})`, () => {
-        expect(totalTimeInMinutes(numberOfLayers, actualMinutesInOven)).toBe(
-          expected
+    testCases.forEach(([option1, option2, selected]) => {
+      xtest(`chooseVehicle(${option1}, ${option2})`, () => {
+        expect(chooseVehicle(option1, option2)).toBe(
+          selected + ' is clearly the better choice.'
         );
+      });
+    });
+  });
+
+  describe('calculateResellPrice', () => {
+    const testCases = [
+      [40000, 2, 32000],
+      [40000, 2.5, 32000],
+      [25000, 12, 12500],
+      [25000, 7, 17500],
+      [25000, 10, 17500],
+      [40000, 3, 28000],
+    ];
+
+    testCases.forEach(([originalPrice, age, expected]) => {
+      xtest(`calculateResellPrice(${originalPrice}, ${age})`, () => {
+        expect(calculateResellPrice(originalPrice, age)).toBe(expected);
       });
     });
   });
