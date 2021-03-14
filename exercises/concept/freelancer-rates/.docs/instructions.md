@@ -9,7 +9,7 @@ We first establish a few rules between the freelancer and the project manager:
 
 If the freelancer bills the project manager per month, there is a discount applied. This can be handy if the project manager has a fixed budget.
 
-Discounts are modeled as fractional numbers followed by a `%` (percentage) between `0.0%` (no discount) and `90.0%` (maximum discount).
+Discounts are modeled as fractional numbers (percentage) between `0.0` (`0%`, no discount) and `0.90` (`90%`, maximum discount).
 
 ## Tasks
 
