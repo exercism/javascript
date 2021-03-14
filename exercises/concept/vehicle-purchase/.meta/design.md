@@ -6,7 +6,6 @@
 
 - How to compare numbers and strings with relational operators (`<`, `>`, `>=`, `<=`)
 - Equality checks with strict equals (`===`) and not strict equals (`!==`)
-- Why to avoid loose equals (`==`) and comparing values of different types
 
 ### Conditionals
 

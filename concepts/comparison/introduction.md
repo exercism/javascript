@@ -1,5 +1,7 @@
 # Introduction
 
+## Comparing Numbers
+
 In JavaScript numbers can be compared using the following relational and equality operators.
 
 | Comparison             | Operator  |
@@ -19,9 +21,16 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 
 2 !== 2;
 // => false
+
+1 === 1.0;
+// => true
+// All numbers are floating-points, so this is different syntax for
+// the exact same value.
 ```
 
-In JavaScript the comparison operators can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
+## Comparing Strings
+
+In JavaScript the comparison operators above can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
 'Apple' > 'Pear';
@@ -34,9 +43,23 @@ In JavaScript the comparison operators can also be used to compare strings. In t
 // => false
 ```
 
+## Strict Equality
+
 You might wonder about the three equal signs for checking equality in JavaScript. `===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
 
-There is also `==` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. This leads to strange results that are difficult to reason about.
+```javascript
+'3' === 3;
+// => false
+// The value on the left has type string, the value on the right has type number.
+
+1 === 1n;
+// => false
+// The value on the left has type number, the value on the right has type bigint.
+```
+
+Using `===` and `!==` is the recommended way of checking equality in JavaScript.
+
+There is also `==` and `!=` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. The outcomes in these cases are hard to predict and sometimes not what you would expect.
 
 ```javascript
 0 == false;

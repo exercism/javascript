@@ -90,17 +90,20 @@ if (num) {
 
 If you only want to execute one statement in the code block for `if` or `else`, it is possible in JavaScript to omit the curly brackets.
 
+<!-- prettier-ignore-start -->
 ```javascript
 if (condition) doSomething();
 
 // or
 
-if (condition) doSomething();
+if (condition)
+  doSomething();
 ```
+<!-- prettier-ignore-end -->
 
-This is sometimes used when checking for an error condition for example. In general it is not recommended because it is easy to forgot to add the brackets back in when adding a second statement. Without the brackets the second statement will always be executed independent of the condition which might be unintended.
+This is sometimes used when checking for an error condition for example. In general it is not recommended because it is easy to forgot to add the brackets back in when adding a second statement that should depend on the same condition.
 
-When writing functions, it is a common pattern to omit the `else` part and use an early `return` in the `if` block instead.
+When writing functions, it is a common pattern to omit the `else` block and use an early `return` in the `if` block instead.
 
 ```javascript
 function checkNumber(num) {

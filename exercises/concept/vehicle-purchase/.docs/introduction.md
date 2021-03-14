@@ -21,9 +21,14 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 
 2 !== 2;
 // => false
+
+1 === 1.0;
+// => true
+// All numbers are floating-points, so this is different syntax for
+// the exact same value.
 ```
 
-In JavaScript the comparison operators can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
+In JavaScript the comparison operators above can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
 'Apple' > 'Pear';
@@ -34,15 +39,6 @@ In JavaScript the comparison operators can also be used to compare strings. In t
 
 'a' === 'A';
 // => false
-```
-
-You might wonder about the three equal signs for checking equality in JavaScript. `===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
-
-There is also `==` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. This leads to strange results that are difficult to reason about.
-
-```javascript
-0 == false;
-// => true
 ```
 
 ## Conditionals
