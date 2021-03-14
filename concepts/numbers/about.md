@@ -25,7 +25,7 @@ Number may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Lear
 
 There are two built-in objects that are useful when dealing with numbers:
 
-- [`Number`][built-in-number]: static properties for common / useful values, static methods for [type-checking][type-checking] and [type-conversion][type-conversion], instance methods for [type-conversion][type-conversion] and [formatting numbers as strings][string-formatting].
+- [`Number`][built-in-number]: static properties for common / useful values, static methods for [type-checking][concept-type-checking] and [type-conversion][concept-type-conversion], instance methods for [type-conversion][type-conversion] and [formatting numbers as strings][string-formatting].
 - [`Math`][built-in-math]: properties and methods for mathematical constants and functions, does **not** work with `BigInt`.
 
 The `Number` built-in global `object` is _also_ a global `function` that can be used to convert _almost anything_ number-like to a `number`. It is less forgiving than _parsing_ a `string` to a `number`.
@@ -92,6 +92,6 @@ Normally these would be put in a list, but it renders better when it's next to e
 [comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 [lexical-grammar]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals
 [string-formatting]: https://exercism.lol/tracks/javascript/concepts/string-formating
-[concept-comparison]: ..
+[concept-comparison]: https://exercism.lol/tracks/javascript/concepts/comparison
 [concept-type-checking]: https://exercism.lol/tracks/javascript/concepts/type-checking
 [concept-type-conversion]: https://exercism.lol/tracks/javascript/concepts/type-conversion
