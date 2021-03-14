@@ -68,7 +68,8 @@
         "status": "active"
       },
       {
-        "slug": "numbers",
+        "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
         "uuid": "0aff2fa7-55ea-47e9-af4a-78927d916baf",
         "concepts": ["numbers"],
         "prerequisites": ["basics"],
@@ -1561,7 +1562,7 @@
       "uuid": "8da586c3-9327-46e2-ad32-c8423061912d",
       "slug": "numbers",
       "name": "Numbers",
-      "blurb": "TODO: add blurb for numbers concept"
+      "blurb": "There are two different kinds of numbers in JavaScript - numbers and bigints. Numbers are for everyday use and are always floating point numbers."
     },
     {
       "uuid": "b3aa57d9-74b2-4d04-a673-ae2402630d8b",

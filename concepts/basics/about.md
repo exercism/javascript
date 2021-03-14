@@ -89,9 +89,12 @@ add(MY_VALUE, 5);
 
 [blog-live-bindings]: https://2ality.com/2015/07/es6-module-exports.html#es6-modules-export-immutable-bindings
 [blog-tree-shaking]: https://bitsofco.de/what-is-tree-shaking/
+[mdn-const]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 [mdn-dynamic-imports]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Dynamic_Imports
+[mdn-let]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
 [mdn-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 [mdn-object-freeze]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
 [mdn-primitive]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 [mdn-renaming-modules]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports
+[mdn-var]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
 [wiki-mutability]: https://en.wikipedia.org/wiki/Immutable_object
