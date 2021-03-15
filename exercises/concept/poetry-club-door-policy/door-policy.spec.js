@@ -5,7 +5,7 @@ import {
   backDoorResponse as backDoorPatron,
   frontDoorPassword,
   backDoorPassword,
-} from './strings';
+} from './door-policy';
 
 class Poem {
   constructor(poem) {
