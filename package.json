@@ -24,7 +24,7 @@
     "chalk": "^4.1.0",
     "core-js": "^3.9.1",
     "diff": "^5.0.0",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
