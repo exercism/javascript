@@ -80,7 +80,7 @@ Using `===` and `!==` is the recommended way of checking equality in JavaScript.
 
 There is also `==` and `!=` which represents checking for _loose equality_.
 You should avoid it because it will apply implicit type conversion before performing the comparison.
-The outcomes in these cases are hard to predict and sometimes not what you would expect. 
+The outcomes in these cases are hard to predict and sometimes not what you would expect.
 You can read more about it [here][mdn-loose-equals].
 
 ```javascript
@@ -94,7 +94,7 @@ Just as checking for loose equality, this is also not recommended for the same r
 
 What should you do instead?
 You can apply [explicit type conversion][concept-type-conversion].
-With that you can then ensure values have the correct type before performing the comparison. 
+With that you can then ensure values have the correct type before performing the comparison.
 Then your code will be easier to understand and less error prone.
 
 [mdn-loose-equals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality
