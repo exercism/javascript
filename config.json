@@ -131,6 +131,14 @@
         "concepts": ["type-conversion"],
         "prerequisites": ["arrays", "strings", "numbers"],
         "status": "wip"
+      },
+      {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "f75a7e2c-053a-411e-8b3d-f978a2c5100e",
+        "concepts": ["comparison", "conditionals"],
+        "prerequisites": ["booleans", "numbers", "strings"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1537,7 +1545,7 @@
       "uuid": "2d0b9f1f-c135-4014-b87c-25b081387002",
       "slug": "conditionals",
       "name": "Conditionals",
-      "blurb": "TODO: add blurb for conditionals concept"
+      "blurb": "Conditional code execution using if-else statements"
     },
     {
       "uuid": "95ba7bed-c370-4f20-9173-79cbd5c2416e",
@@ -1586,6 +1594,12 @@
       "slug": "variable-parameters",
       "name": "Variable Parameters",
       "blurb": "TODO: add blurb for variable-parameters concept"
+    },
+    {
+      "uuid": "ef1e44db-5fd0-4550-9135-7522303e7e42",
+      "slug": "comparison",
+      "name": "Comparison",
+      "blurb": "Compare values using operators to check greater than, less than, equals and not equals"
     }
   ],
   "key_features": [

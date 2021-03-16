@@ -1,6 +1,6 @@
 # Introduction
 
-## Comparing Numbers
+## Comparison
 
 In JavaScript numbers can be compared using the following relational and equality operators.
 
@@ -28,8 +28,6 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 // the exact same value.
 ```
 
-## Comparing Strings
-
 In JavaScript the comparison operators above can also be used to compare strings.
 In that case a dictionary (lexicographical) order is applied.
 You can find a list of the exact order of all the characters [here][utf-16-list].
@@ -45,30 +43,39 @@ You can find a list of the exact order of all the characters [here][utf-16-list]
 // => false
 ```
 
-## Strict Equality
+## Conditionals
 
-You might wonder about the three equal signs for checking equality in JavaScript.
-`===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
+A common way to conditionally execute logic in JavaScript is the if-statement.
+It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets.
+The code block will only be executed if the condition evaluates to `true`.
 
 ```javascript
-'3' === 3;
-// => false
-// The value on the left has type string, the value on the right has type number.
-
-1 === 1n;
-// => false
-// The value on the left has type number, the value on the right has type bigint.
+if (condition) {
+  // code that is executed if "condition" is true
+}
 ```
 
-Using `===` and `!==` is the recommended way of checking equality in JavaScript.
-
-There is also `==` and `!=` which represents checking for _loose equality_.
-You should avoid it because it will apply implicit type conversion before performing the comparison.
-The outcomes in these cases are hard to predict and sometimes not what you would expect.
+It can be used stand-alone or combined with the `else` keyword.
 
 ```javascript
-0 == false;
-// => true
+if (condition) {
+  // code that is executed if "condition" is true
+} else {
+  // code that is executed otherwise
+}
+```
+
+To nest another condition into the `else` statement you can use `else if`.
+
+```javascript
+if (condition1) {
+  // code that is executed if "condition1" is true
+} else if (condition2) {
+  // code that is executed if "condition2" is true
+  // but "condition1" was false
+} else {
+  // code that is executed otherwise
+}
 ```
 
 [utf-16-list]: https://www.fileformat.info/info/charset/UTF-16/list.htm

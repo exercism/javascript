@@ -1,0 +1,32 @@
+{
+  "name": "@exercism/javascript-vehicle-purchase",
+  "description": "Exercism concept exercise on conditionals and comparision",
+  "author": "Franziska Obbarius <12543047+junedev@users.noreply.github.com>",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/javascript",
+    "directory": "exercises/concept/vehicle-purchase"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-syntax-bigint": "^7.8.3",
+    "@babel/preset-env": "^7.13.10",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.35",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "core-js": "^3.9.1",
+    "eslint": "^7.22.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "dependencies": {}
+}

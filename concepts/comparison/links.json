@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators",
+    "description": "MDN: Relational operators"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators",
+    "description": "MDN: Equality operators"
+  },
+  {
+    "url": "https://www.fileformat.info/info/charset/UTF-16/list.htm",
+    "description": "List of UTF-16 character order"
+  }
+]
