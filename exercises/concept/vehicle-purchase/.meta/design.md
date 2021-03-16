@@ -39,13 +39,19 @@ The Concepts this exercise unlocks are:
 
 This exercise could benefit from the following rules in the [analyzer][analyzer]:
 
-- Verify that `needsLicense` does include an unnecessary if-statement where the student returns `true`/`false`.
+- Verify that `needsLicense` does not include an unnecessary if-statement where the student returns `true`/`false`.
 - Verify that in `chooseVehicle` the string `' is clearly the better choice'` only appears once.
-- Verify that in `calculateResellPrice` the student actually practiced if/else if/else and did not use early returns.
+- Verify that in `chooseVehicle` and `calculateResellPrice` the student actually practiced if/else and did not use early returns. E.g., show a comment like this
+  ```
+  Nice.
+  That's an _early return_.
+  For the purpose of the Concept that this exercise aims to teach, try solving this using an `else` statement.
+  ```
 
 ## Notes
 
-The exercise is inspired by [Vehicle Purchase Exercise in the Julia track][julia-vehicle-purchase] but the original exercise included more concepts and the tasks were more difficult to transfer into code. To keep the concept exercise rather trivial as it should be, the tasks were extremely simplified or replaced.
+The exercise is inspired by [Vehicle Purchase Exercise in the Julia track][julia-vehicle-purchase] but the original exercise included more concepts and the tasks were more difficult to transfer into code.
+To keep the concept exercise rather trivial as it should be, the tasks were extremely simplified or replaced.
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
 [julia-vehicle-purchase]: https://github.com/exercism/julia/blob/main/exercises/concept/vehicle-purchase/.docs/instructions.md

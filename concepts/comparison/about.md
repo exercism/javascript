@@ -45,7 +45,7 @@ You can find a list of the exact order of all the characters [here][utf-16-list]
 // => false
 ```
 
-You need to be careful when you compare two variables that contain numeric values but are of type string.
+You need to be careful when you compare two variables that appear to contain numeric values but are of type string.
 Due to the dictionary order the result will not be the same as comparing values of type number.
 
 ```javascript
@@ -55,6 +55,9 @@ Due to the dictionary order the result will not be the same as comparing values 
 '10' < '2';
 // => true (because "1" comes before "2")
 ```
+
+Another way to compare strings is the [localeCompare][mdn-locale-compare] method.
+It allows to set a variety of [options][mdn-locale-compare-options] to adjust the way strings are compared.
 
 ## Strict Equality
 
@@ -97,3 +100,5 @@ Then your code will be easier to understand and less error prone.
 [mdn-loose-equals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality
 [concept-type-conversion]: /tracks/javascript/concepts/type-conversion
 [utf-16-list]: https://www.fileformat.info/info/charset/UTF-16/list.htm
+[mdn-locale-compare]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+[mdn-locale-compare-options]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#parameters

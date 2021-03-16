@@ -134,6 +134,7 @@
       },
       {
         "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
         "uuid": "f75a7e2c-053a-411e-8b3d-f978a2c5100e",
         "concepts": ["comparison", "conditionals"],
         "prerequisites": ["booleans", "numbers", "strings"],
