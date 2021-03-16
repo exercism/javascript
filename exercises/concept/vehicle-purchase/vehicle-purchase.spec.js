@@ -6,52 +6,69 @@ import {
 
 describe('vehicle purchase', () => {
   describe('needsLicense', () => {
-    const testCases = [
-      ['car', true],
-      ['truck', true],
-      ['bike', false],
-      ['stroller', false],
-      ['e-scooter', false],
-    ];
+    xtest('requires a license for a car', () => {
+      expect(needsLicense('car')).toBe(true);
+    });
 
-    testCases.forEach(([kind, expected]) => {
-      xtest(`needsLicense(${kind})`, () => {
-        expect(needsLicense(kind)).toBe(expected);
-      });
+    xtest('requires a license for a truck', () => {
+      expect(needsLicense('truck')).toBe(true);
+    });
+
+    xtest('does not require a license for a bike', () => {
+      expect(needsLicense('bike')).toBe(false);
+    });
+
+    xtest('does not require a license for a stroller', () => {
+      expect(needsLicense('stroller')).toBe(false);
+    });
+
+    xtest('does not require a license for an e-scooter', () => {
+      expect(needsLicense('e-scooter')).toBe(false);
     });
   });
 
   describe('chooseVehicle', () => {
-    const testCases = [
-      ['Bugatti Veyron', 'Ford Pinto', 'Bugatti Veyron'],
-      ['Ford Pinto', 'Bugatti Veyron', 'Bugatti Veyron'],
-      ['2020 Gazelle Medeo', '2018 Bergamont City', '2018 Bergamont City'],
-      ['Chery EQ', 'Kia Niro Elektro ', 'Chery EQ'],
-    ];
+    const rest = ' is clearly the better choice.';
 
-    testCases.forEach(([option1, option2, selected]) => {
-      xtest(`chooseVehicle(${option1}, ${option2})`, () => {
-        expect(chooseVehicle(option1, option2)).toBe(
-          selected + ' is clearly the better choice.'
-        );
-      });
+    xtest('correctly recommends the first option', () => {
+      expect(chooseVehicle('Bugatti Veyron', 'Ford Pinto')).toBe(
+        'Bugatti Veyron' + rest
+      );
+      expect(chooseVehicle('Chery EQ', 'Kia Niro Elektro')).toBe(
+        'Chery EQ' + rest
+      );
+    });
+
+    xtest('correctly recommends the second option', () => {
+      expect(chooseVehicle('Ford Pinto', 'Bugatti Veyron')).toBe(
+        'Bugatti Veyron' + rest
+      );
+      expect(chooseVehicle('2020 Gazelle Medeo', '2018 Bergamont City')).toBe(
+        '2018 Bergamont City' + rest
+      );
     });
   });
 
   describe('calculateResellPrice', () => {
-    const testCases = [
-      [40000, 2, 32000],
-      [40000, 2.5, 32000],
-      [25000, 12, 12500],
-      [25000, 7, 17500],
-      [25000, 10, 17500],
-      [40000, 3, 28000],
-    ];
+    xtest('price is reduced to 80% for age below 3', () => {
+      expect(calculateResellPrice(40000, 2)).toBe(32000);
+      expect(calculateResellPrice(40000, 2.5)).toBe(32000);
+    });
 
-    testCases.forEach(([originalPrice, age, expected]) => {
-      xtest(`calculateResellPrice(${originalPrice}, ${age})`, () => {
-        expect(calculateResellPrice(originalPrice, age)).toBe(expected);
-      });
+    xtest('price is reduced to 50% for age above 10', () => {
+      expect(calculateResellPrice(40000, 2)).toBe(32000);
+    });
+
+    xtest('price is reduced to 70% for between 3 and 10', () => {
+      expect(calculateResellPrice(25000, 7)).toBe(17500);
+    });
+
+    xtest('works correctly for threshold age 3', () => {
+      expect(calculateResellPrice(40000, 3)).toBe(28000);
+    });
+
+    xtest('works correctly for threshold age 10', () => {
+      expect(calculateResellPrice(25000, 10)).toBe(17500);
     });
   });
 });
