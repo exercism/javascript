@@ -28,7 +28,9 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 // the exact same value.
 ```
 
-In JavaScript the comparison operators above can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
+In JavaScript the comparison operators above can also be used to compare strings.
+In that case a dictionary (lexicographical) order is applied.
+You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
 'Apple' > 'Pear';
@@ -43,7 +45,9 @@ In JavaScript the comparison operators above can also be used to compare strings
 
 ## Conditionals
 
-A common way to conditionally execute logic in JavaScript is the if-statement. It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets. The code block will only be executed if the condition evaluates to `true`.
+A common way to conditionally execute logic in JavaScript is the if-statement.
+It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets.
+The code block will only be executed if the condition evaluates to `true`.
 
 ```javascript
 if (condition) {

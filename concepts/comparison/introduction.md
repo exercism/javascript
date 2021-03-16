@@ -30,7 +30,9 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 
 ## Comparing Strings
 
-In JavaScript the comparison operators above can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
+In JavaScript the comparison operators above can also be used to compare strings.
+In that case a dictionary (lexicographical) order is applied.
+You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
 'Apple' > 'Pear';
@@ -45,7 +47,8 @@ In JavaScript the comparison operators above can also be used to compare strings
 
 ## Strict Equality
 
-You might wonder about the three equal signs for checking equality in JavaScript. `===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
+You might wonder about the three equal signs for checking equality in JavaScript.
+`===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
 
 ```javascript
 '3' === 3;
@@ -59,7 +62,9 @@ You might wonder about the three equal signs for checking equality in JavaScript
 
 Using `===` and `!==` is the recommended way of checking equality in JavaScript.
 
-There is also `==` and `!=` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. The outcomes in these cases are hard to predict and sometimes not what you would expect.
+There is also `==` and `!=` which represents checking for _loose equality_.
+You should avoid it because it will apply implicit type conversion before performing the comparison.
+The outcomes in these cases are hard to predict and sometimes not what you would expect.
 
 ```javascript
 0 == false;

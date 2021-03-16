@@ -30,7 +30,9 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 
 ## Comparing Strings
 
-In JavaScript the comparison operators above can also be used to compare strings. In that case a dictionary (lexicographical) order is applied. You can find a list of the exact order of all the characters [here][utf-16-list].
+In JavaScript the comparison operators above can also be used to compare strings.
+In that case a dictionary (lexicographical) order is applied.
+You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
 'Apple' > 'Pear';
@@ -43,7 +45,8 @@ In JavaScript the comparison operators above can also be used to compare strings
 // => false
 ```
 
-You need to be careful when you compare two variables that contain numeric values but are of type string. Due to the dictionary order the result will not be the same as comparing values of type number.
+You need to be careful when you compare two variables that contain numeric values but are of type string.
+Due to the dictionary order the result will not be the same as comparing values of type number.
 
 ```javascript
 10 < 2;
@@ -55,7 +58,8 @@ You need to be careful when you compare two variables that contain numeric value
 
 ## Strict Equality
 
-You might wonder about the three equal signs for checking equality in JavaScript. `===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
+You might wonder about the three equal signs for checking equality in JavaScript.
+`===` represents the check for _strict equality_ which means that no type conversion is performed and values of different types are always unequal.
 
 ```javascript
 '3' === 3;
@@ -71,16 +75,24 @@ Using `===` and `!==` is the recommended way of checking equality in JavaScript.
 
 ## Avoiding Implicit Type Conversion
 
-TThere is also `==` and `!=` which represents checking for _loose equality_. You should avoid it because it will apply implicit type conversion before performing the comparison. The outcomes in these cases are hard to predict and sometimes not what you would expect. You can read more about it [here][mdn-loose-equals].
+There is also `==` and `!=` which represents checking for _loose equality_.
+You should avoid it because it will apply implicit type conversion before performing the comparison.
+The outcomes in these cases are hard to predict and sometimes not what you would expect. 
+You can read more about it [here][mdn-loose-equals].
 
 ```javascript
 0 == false;
 // => true
 ```
 
-In theory you can also compare values of different types (e.g., `"1" < 2`). Then the values will be implicitly converted to determine whether the result is true or false. Just as checking for loose equality, this is also not recommended for the same reason as mentioned above.
+In theory you can also compare values of different types (e.g., `"1" < 2`).
+Then the values will be implicitly converted to determine whether the result is true or false.
+Just as checking for loose equality, this is also not recommended for the same reason as mentioned above.
 
-What should you do instead? You will learn later how to do [explicit type conversion][concept-type-conversion]. With that you can then ensure values have the correct type before performing the comparison. Then your code will be easier to understand and less error prone.
+What should you do instead?
+You can apply [explicit type conversion][concept-type-conversion].
+With that you can then ensure values have the correct type before performing the comparison. 
+Then your code will be easier to understand and less error prone.
 
 [mdn-loose-equals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality
 [concept-type-conversion]: /tracks/javascript/concepts/type-conversion
