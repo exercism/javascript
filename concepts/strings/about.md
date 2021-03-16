@@ -27,6 +27,24 @@ Some of the most-used operations on strings are to check their `length` and to c
 // => "I like cats"
 ```
 
-You can find all the methods in the [MDN docs][mdn docs].
+You can find all the methods in the [MDN docs][mdn-docs].
 
-[mdn docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
+## String interpolation
+
+Strings in JavaScript support interpolation using [string template literals][mdn-template-strings].
+
+```javascript
+const NUMBER_OF_CATS = 4;
+const concatenation = 'I have ' + NUMBER_OF_CATS + ' cats';
+// => "I have 4 cats"
+
+const interpolation = `I have ${NUMBER_OF_CATS} cats`;
+// => I have 4 cats
+```
+
+[mdn-docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
+[mdn-template-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+```
+
+```
