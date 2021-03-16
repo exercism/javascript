@@ -1596,7 +1596,7 @@
       "uuid": "7d5c1533-c7cf-418e-b0f2-080da1e5bdc5",
       "slug": "strings",
       "name": "Strings",
-      "blurb": "TODO: add blurb for strings concept"
+      "blurb": "Strings are useful for holding data that can be represented in text form. "
     },
     {
       "uuid": "a8cdc468-c950-43d7-a1b8-99a5e0de651a",
