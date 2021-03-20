@@ -9,7 +9,11 @@ dependencies:
 
 ## Requirements
 
-Please `cd` into exercise directory before running all below commands.
+`cd` into exercise directory:
+
+```bash
+$ cd $(exercism workspace)/javascript/*
+```
 
 Install assignment dependencies:
 
