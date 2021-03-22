@@ -144,7 +144,7 @@
         "slug": "bird-watcher",
         "name": "Bird Watcher",
         "uuid": "3e648aa0-9ce7-4041-93d2-2b95f3832824",
-        "concepts": ["for-loops", "increment-decrement-operators"],
+        "concepts": ["for-loops", "increment-decrement"],
         "prerequisites": ["arrays", "comparison", "conditionals"],
         "status": "beta"
       }
@@ -1617,7 +1617,7 @@
     },
     {
       "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
-      "slug": "increment-decrement-operators",
+      "slug": "increment-decrement",
       "name": "Increment and Decrement Operators",
       "blurb": "Shorthand notation to increment and decrement numbers using special operators"
     }
