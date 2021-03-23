@@ -1,21 +1,21 @@
 {
   "blurb": "TODO: add blurb for closures exercise",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "SleeplessByte",
-      "exercism_username": "SleeplessByte"
-    }
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["closures.js"],
-    "test": ["closures.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "closures.js"
+    ],
+    "test": [
+      "closures.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "forked_from": []
 }

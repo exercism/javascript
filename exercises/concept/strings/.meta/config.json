@@ -1,21 +1,21 @@
 {
   "blurb": "TODO: add blurb for strings exercise",
   "authors": [
-    {
-      "github_username": "SleeplessByte",
-      "exercism_username": "SleeplessByte"
-    }
+    "SleeplessByte"
   ],
   "contributors": [
-    {
-      "github_username": "hayashi-ay",
-      "exercism_username": "hayashi-ay"
-    }
+    "hayashi-ay"
   ],
   "files": {
-    "solution": ["strings.js"],
-    "test": ["strings.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "strings.js"
+    ],
+    "test": [
+      "strings.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "forked_from": []
 }
