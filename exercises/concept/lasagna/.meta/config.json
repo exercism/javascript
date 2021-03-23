@@ -1,16 +1,21 @@
 {
   "blurb": "Learn the basics of JavaScript cooking a brilliant lasagna from your favorite cooking book",
   "authors": [
-    {
-      "github_username": "SleeplessByte",
-      "exercism_username": "SleeplessByte"
-    }
+    "SleeplessByte"
   ],
   "contributors": [],
   "files": {
-    "solution": ["lasagna.js"],
-    "test": ["lasagna.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "lasagna.js"
+    ],
+    "test": [
+      "lasagna.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["ruby/lasagna"]
+  "forked_from": [
+    "ruby/lasagna"
+  ]
 }

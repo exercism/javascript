@@ -1,25 +1,22 @@
 {
   "blurb": "TODO: add blurb for lucky-numbers exercise",
   "authors": [
-    {
-      "github_username": "shubhsk88",
-      "exercism_username": "shubhsk88"
-    }
+    "shubhsk88"
   ],
   "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    },
-    {
-      "github_username": "SleeplessByte",
-      "exercism_username": "sleeplessbyte"
-    }
+    "neenjaw",
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["lucky-numbers.js"],
-    "test": ["lucky-numbers.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "lucky-numbers.js"
+    ],
+    "test": [
+      "lucky-numbers.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "forked_from": []
 }
