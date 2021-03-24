@@ -1,10 +1,39 @@
 {
   "blurb": "Implement a doubly linked list",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "bdjnk",
+    "cmccandless",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "jcshih",
+    "junedev",
+    "lantran",
+    "monte-hayward",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "thanhcng",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["linked-list.js"],
-    "test": ["linked-list.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "linked-list.js"
+    ],
+    "test": [
+      "linked-list.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Classic computer science topic"
 }

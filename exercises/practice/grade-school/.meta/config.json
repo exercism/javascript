@@ -1,10 +1,39 @@
 {
   "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
-  "authors": [],
+  "authors": [
+    "rchavarria"
+  ],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "draalger",
+    "ee7",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "kytrinyx",
+    "lantran",
+    "matthewmorgan",
+    "mgmatola",
+    "paparomeo",
+    "PSalant726",
+    "ryanplusplus",
+    "SleeplessByte",
+    "StevenACoffman",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
-    "solution": ["grade-school.js"],
-    "test": ["grade-school.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "grade-school.js"
+    ],
+    "test": [
+      "grade-school.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A pairing session with Phil Battos at gSchool",
   "source_url": "http://gschool.it"

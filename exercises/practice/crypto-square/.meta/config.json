@@ -1,10 +1,35 @@
 {
   "blurb": "Implement the classic method for composing secret messages called a square code.",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "andreasolund",
+    "diego-caceres",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "lantran",
+    "ntshcalleia",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "rpottsoh",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["crypto-square.js"],
-    "test": ["crypto-square.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "crypto-square.js"
+    ],
+    "test": [
+      "crypto-square.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"

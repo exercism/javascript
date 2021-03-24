@@ -1,10 +1,36 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "rchavarria"
+  ],
+  "contributors": [
+    "andreasolund",
+    "austinratcliff",
+    "designfrontier",
+    "draalger",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "kytrinyx",
+    "lantran",
+    "matthewmorgan",
+    "paparomeo",
+    "PSalant726",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["hello-world.js"],
-    "test": ["hello-world.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "hello-world.js"
+    ],
+    "test": [
+      "hello-world.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "This is an exercise to introduce users to using Exercism",
   "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"

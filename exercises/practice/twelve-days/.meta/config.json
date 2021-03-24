@@ -1,10 +1,34 @@
 {
   "blurb": "Output the lyrics to 'The Twelve Days of Christmas'",
-  "authors": [],
+  "authors": [
+    "AakashMallik"
+  ],
+  "contributors": [
+    "ankorGH",
+    "cmccandless",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "lantran",
+    "matthewmorgan",
+    "paparomeo",
+    "PatrickMcSweeny",
+    "PSalant726",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["twelve-days.js"],
-    "test": ["twelve-days.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "twelve-days.js"
+    ],
+    "test": [
+      "twelve-days.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)"

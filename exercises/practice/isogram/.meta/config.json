@@ -1,10 +1,35 @@
 {
   "blurb": "Determine if a word or phrase is an isogram.",
   "authors": [],
+  "contributors": [
+    "amscotti",
+    "ankorGH",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "lantran",
+    "matthewmorgan",
+    "ovidiu141",
+    "PakkuDon",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["isogram.js"],
-    "test": ["isogram.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "isogram.js"
+    ],
+    "test": [
+      "isogram.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"

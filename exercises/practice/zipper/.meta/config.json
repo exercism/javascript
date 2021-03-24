@@ -1,9 +1,32 @@
 {
   "blurb": "Creating a zipper for a binary tree.",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "felbit",
+    "G-Rath",
+    "ganderzz",
+    "gargrave",
+    "hyuko21",
+    "iagocavalcante",
+    "joshgoebel",
+    "paparomeo",
+    "PSalant726",
+    "rpottsoh",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["zipper.js"],
-    "test": ["zipper.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "zipper.js"
+    ],
+    "test": [
+      "zipper.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

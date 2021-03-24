@@ -1,10 +1,36 @@
 {
   "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "lantran",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "rpottsoh",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
-    "solution": ["series.js"],
-    "test": ["series.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "series.js"
+    ],
+    "test": [
+      "series.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A subset of the Problem 8 at Project Euler",
   "source_url": "http://projecteuler.net/problem=8"

@@ -1,10 +1,35 @@
 {
   "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "lantran",
+    "msomji",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "rpottsoh",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["say.js"],
-    "test": ["say.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "say.js"
+    ],
+    "test": [
+      "say.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",
   "source_url": "http://www.javaranch.com/say.jsp"

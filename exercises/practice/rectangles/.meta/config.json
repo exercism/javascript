@@ -1,9 +1,31 @@
 {
   "blurb": "Count the rectangles in an ASCII diagram.",
-  "authors": [],
+  "authors": [
+    "MattH-be"
+  ],
+  "contributors": [
+    "ankorGH",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "matthewmorgan",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
-    "solution": ["rectangles.js"],
-    "test": ["rectangles.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "rectangles.js"
+    ],
+    "test": [
+      "rectangles.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

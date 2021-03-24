@@ -1,10 +1,35 @@
 {
   "blurb": "Convert a hexadecimal number, represented as a string (e.g. \"10af8c\"), to its decimal equivalent using first principles (i.e. no, you may not use built-in or external libraries to accomplish the conversion).",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "lantran",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "smb26",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
-    "solution": ["hexadecimal.js"],
-    "test": ["hexadecimal.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "hexadecimal.js"
+    ],
+    "test": [
+      "hexadecimal.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/examples/NumberBases.html"

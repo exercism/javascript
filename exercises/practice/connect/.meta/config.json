@@ -1,9 +1,33 @@
 {
   "blurb": "Compute the result for a game of Hex / Polygon",
-  "authors": [],
+  "authors": [
+    "arthurchipdean"
+  ],
+  "contributors": [
+    "diego-caceres",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "joeljuca",
+    "lantran",
+    "matthewmorgan",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
-    "solution": ["connect.js"],
-    "test": ["connect.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "connect.js"
+    ],
+    "test": [
+      "connect.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

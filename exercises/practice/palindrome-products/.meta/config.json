@@ -1,10 +1,39 @@
 {
   "blurb": "Detect palindrome products in a given range.",
   "authors": [],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "cmccandless",
+    "draalger",
+    "ErikSchierboom",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "javaeeeee",
+    "kytrinyx",
+    "lantran",
+    "matthewmorgan",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "smb26",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
-    "solution": ["palindrome-products.js"],
-    "test": ["palindrome-products.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "palindrome-products.js"
+    ],
+    "test": [
+      "palindrome-products.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Problem 4 at Project Euler",
   "source_url": "http://projecteuler.net/problem=4"

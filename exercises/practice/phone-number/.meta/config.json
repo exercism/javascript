@@ -1,10 +1,38 @@
 {
   "blurb": "Clean up user-entered phone numbers so that they can be sent SMS messages.",
-  "authors": [],
+  "authors": [
+    "rchavarria"
+  ],
+  "contributors": [
+    "andreasolund",
+    "ankorGH",
+    "draalger",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "kytrinyx",
+    "lantran",
+    "LyleCharlesScott",
+    "matthewmorgan",
+    "ovidiu141",
+    "paparomeo",
+    "PSalant726",
+    "ryanplusplus",
+    "saylerb",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["phone-number.js"],
-    "test": ["phone-number.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "phone-number.js"
+    ],
+    "test": [
+      "phone-number.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Event Manager by JumpstartLab",
   "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"

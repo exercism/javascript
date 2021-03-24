@@ -1,10 +1,39 @@
 {
   "blurb": "Given the position of two queens on a chess board, indicate whether or not they are positioned so that they can attack each other.",
-  "authors": [],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "abhnvgupta",
+    "alexashley",
+    "andreasolund",
+    "BoDaly",
+    "ErikSchierboom",
+    "G-Rath",
+    "gargrave",
+    "iagocavalcante",
+    "IndelicateArgot",
+    "javaeeeee",
+    "lantran",
+    "paparomeo",
+    "PSalant726",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "smb26",
+    "tejasbubane",
+    "Tyresius92"
+  ],
   "files": {
-    "solution": ["queen-attack.js"],
-    "test": ["queen-attack.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "queen-attack.js"
+    ],
+    "test": [
+      "queen-attack.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
