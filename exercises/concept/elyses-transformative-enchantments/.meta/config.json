@@ -1,21 +1,11 @@
 {
   "blurb": "TODO: add blurb for elyses-transformative-enchantments exercise",
-  "authors": [
-    "yyyc514"
-  ],
-  "contributors": [
-    "SleeplessByte"
-  ],
+  "authors": ["yyyc514"],
+  "contributors": ["SleeplessByte"],
   "files": {
-    "solution": [
-      "enchantments.js"
-    ],
-    "test": [
-      "enchantments.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["enchantments.js"],
+    "test": ["enchantments.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

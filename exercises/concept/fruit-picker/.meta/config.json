@@ -1,21 +1,10 @@
 {
   "blurb": "TODO: add blurb for fruit-picker exercise",
-  "authors": [
-    "neenjaw"
-  ],
-  "contributors": [
-    "SleeplessByte"
-  ],
+  "authors": ["neenjaw"],
+  "contributors": ["SleeplessByte"],
   "files": {
-    "solution": [
-      "fruit-picker.js",
-      "grocer.js"
-    ],
-    "test": [
-      "fruit-picker.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["fruit-picker.js", "grocer.js"],
+    "test": ["fruit-picker.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   }
 }

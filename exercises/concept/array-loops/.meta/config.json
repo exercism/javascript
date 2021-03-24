@@ -1,21 +1,11 @@
 {
   "blurb": "TODO: add blurb for array-loops exercise",
-  "authors": [
-    "rishiosaur"
-  ],
-  "contributors": [
-    "SleeplessByte"
-  ],
+  "authors": ["rishiosaur"],
+  "contributors": ["SleeplessByte"],
   "files": {
-    "solution": [
-      "array-loops.js"
-    ],
-    "test": [
-      "array-loops.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["array-loops.js"],
+    "test": ["array-loops.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

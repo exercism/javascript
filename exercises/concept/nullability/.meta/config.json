@@ -1,22 +1,11 @@
 {
   "blurb": "TODO: add blurb for nullability exercise",
-  "authors": [
-    "SleeplessByte",
-    "Jlamon"
-  ],
+  "authors": ["SleeplessByte", "Jlamon"],
   "contributors": [],
   "files": {
-    "solution": [
-      "nullability.js"
-    ],
-    "test": [
-      "nullability.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["nullability.js"],
+    "test": ["nullability.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": [
-    "csharp/nullability"
-  ]
+  "forked_from": ["csharp/nullability"]
 }

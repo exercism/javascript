@@ -1,21 +1,11 @@
 {
   "blurb": "TODO: add blurb for elyses-destructured-enchantments exercise",
-  "authors": [
-    "kristinaborn"
-  ],
-  "contributors": [
-    "SleeplessByte"
-  ],
+  "authors": ["kristinaborn"],
+  "contributors": ["SleeplessByte"],
   "files": {
-    "solution": [
-      "enchantments.js"
-    ],
-    "test": [
-      "enchantments.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["enchantments.js"],
+    "test": ["enchantments.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }

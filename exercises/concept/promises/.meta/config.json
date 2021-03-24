@@ -1,19 +1,11 @@
 {
   "blurb": "TODO: add blurb for promises exercise",
-  "authors": [
-    "SleeplessByte"
-  ],
+  "authors": ["SleeplessByte"],
   "contributors": [],
   "files": {
-    "solution": [
-      "promises.js"
-    ],
-    "test": [
-      "promises.spec.js"
-    ],
-    "exemplar": [
-      ".meta/exemplar.js"
-    ]
+    "solution": ["promises.js"],
+    "test": ["promises.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
 }
