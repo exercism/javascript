@@ -1,83 +1,33 @@
-FIXME
-
 # Introduction
 
-## Comparison
-
-In JavaScript numbers can be compared using the following relational and equality operators.
-
-| Comparison             | Operator  |
-| ---------------------- | --------- |
-| Greater than           | `a > b`   |
-| Greater than or equals | `a >= b`  |
-| Less than              | `a < b`   |
-| Less than or equals    | `a <= b`  |
-| (Strict) Equals        | `a === b` |
-| Not (strict) equals    | `a !== b` |
-
-The result of the comparison is always a boolean value, so either `true` or `false`.
+The for loop is one of the most commonly used statements to repeatedly execute some logic.
+In JavaScript it consists of the `for` keyword, a _header_ wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
 
 ```javascript
-1 < 3;
-// => true
-
-2 !== 2;
-// => false
-
-1 === 1.0;
-// => true
-// All numbers are floating-points, so this is different syntax for
-// the exact same value.
-```
-
-In JavaScript the comparison operators above can also be used to compare strings.
-In that case a dictionary (lexicographical) order is applied.
-You can find a list of the exact order of all the characters [here][utf-16-list].
-
-```javascript
-'Apple' > 'Pear';
-// => false
-
-'a' < 'above';
-// => true
-
-'a' === 'A';
-// => false
-```
-
-## Conditionals
-
-A common way to conditionally execute logic in JavaScript is the if-statement.
-It consists of the `if` keyword, a condition wrapped in round brackets and a code block wrapped in curly brackets.
-The code block will only be executed if the condition evaluates to `true`.
-
-```javascript
-if (condition) {
-  // code that is executed if "condition" is true
+for (initialization; condition; step) {
+  // code that is executed repeatedly as long as the condition is true
 }
 ```
 
-It can be used stand-alone or combined with the `else` keyword.
+The initialization usually sets up a counter variable, the condition checks whether the loop should be continued or stopped and the step increments the counter at the end of each repetition.
+The individual parts of the header are separated by semicolons.
 
 ```javascript
-if (condition) {
-  // code that is executed if "condition" is true
-} else {
-  // code that is executed otherwise
+const list = ['a', 'b', 'c'];
+for (let i = 0; i < list.length; i++) {
+  // code that should be executed for each item list[i]
 }
 ```
 
-To nest another condition into the `else` statement you can use `else if`.
+Defining the step is often done using JavaScripts increment or decrement operator as shown in the example above.
+`++` adds one to a number, `--` subtracts one from a number.
 
 ```javascript
-if (condition1) {
-  // code that is executed if "condition1" is true
-} else if (condition2) {
-  // code that is executed if "condition2" is true
-  // but "condition1" was false
-} else {
-  // code that is executed otherwise
-}
-```
+let i = 3;
+i++;
+// i is now 4
 
-[utf-16-list]: https://www.fileformat.info/info/charset/UTF-16/list.htm
+let j = 0;
+j--;
+// j is now -1
+```

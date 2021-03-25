@@ -1,5 +1,3 @@
-FIXME
-
 // @ts-check
 //
 // The line above enables type checking for this file. Various IDEs interpret
@@ -7,51 +5,45 @@ FIXME
 // implementing this exercise.
 
 /**
- * Determines whether or not you need a licence to operate a certain kind of vehicle.
+ * Calculates the total bird count.
  *
- * @param {string} kind
- * @returns {boolean} whether a license is required
+ * @param {number[]} birdsPerDay
+ * @returns {number} total bird count
  */
-export function needsLicense(kind) {
-  return kind === 'car' || kind === 'truck';
+export function totalBirdCount(birdsPerDay) {
+  let sum = 0;
+  for (let i = 0; i <= birdsPerDay.length; i++) {
+    sum += birdsPerDay[i];
+  }
+  return sum;
 }
 
 /**
- * Helps choosing between two options by recommending the one that
- * comes first in dictionary order.
+ * Calculates the total number of birds seen in a specific week.
  *
- * @param {string} option1
- * @param {string} option2
- * @returns {string} a sentence of advice which option to choose
+ * @param {number[]} birdsPerDay
+ * @param {number} week
+ * @returns {number} birds counted in the given week
  */
-export function chooseVehicle(option1, option2) {
-  let selection;
-  if (option1 < option2) {
-    selection = option1;
-  } else {
-    selection = option2;
+export function birdsInWeek(birdsPerDay, week) {
+  let sum = 0;
+  const start = 7 * (week - 1);
+  for (let i = start; i < start + 7; i++) {
+    sum += birdsPerDay[i];
   }
-
-  return selection + ' is clearly the better choice.';
+  return sum;
 }
 
 /**
- * Calculates an estimate for the price of a used vehicle in the dealership
- * based on the original price and the age of the vehicle.
+ * Fixes the counting mistake by increasing the bird count
+ * by one for every second day.
  *
- * @param {number} originalPrice
- * @param {number} age
- * @returns expected resell price in the dealership
+ * @param {number[]} birdsPerDay
+ * @returns {number[]} corrected bird count data
  */
-export function calculateResellPrice(originalPrice, age) {
-  let percentage;
-  if (age < 3) {
-    percentage = 80;
-  } else if (age > 10) {
-    percentage = 50;
-  } else {
-    percentage = 70;
+export function fixBirdCountLog(birdsPerDay) {
+  for (let i = 0; i < birdsPerDay.length; i += 2) {
+    birdsPerDay[i]++;
   }
-
-  return (percentage / 100) * originalPrice;
+  return birdsPerDay;
 }
