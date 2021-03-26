@@ -35,7 +35,10 @@ packageFiles.forEach(filePath => {
   const exerciseName = filePath.split('/')[2];
   const expectedName = `@exercism/javascript-${exerciseName}`;
 
-  if(givenName == expectedName) return;
+  if(givenName == expectedName) {
+    shell.echo(`[Success]: Package name ${givenName} is in correct format`);
+    return;
+  }
 
   if(fix) {
     file['name'] = expectedName;
@@ -48,9 +51,5 @@ packageFiles.forEach(filePath => {
     shell.echo(`[Failure]: Package name in ${filePath} must be ${expectedName}"`);
   }
 });
-
-if(exitCode == 0) {
-  shell.echo('[Success] All package names are in proper format.');
-}
 
 shell.exit(exitCode);
