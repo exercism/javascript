@@ -6,7 +6,7 @@ const shell = require('shelljs');
 const path = require('path');
 const crypto = require('crypto');
 
-const exerciseDirs = shell.ls(
+export const exerciseDirs = shell.ls(
   '-d',
   path.join('exercises', '{practice,concept}', '*')
 );

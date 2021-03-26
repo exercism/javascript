@@ -1,0 +1,64 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): npx babel-node scripts/name-check
+ *
+ * This will run following checks:
+ *
+ * 1. Package name if of the format "@exercism/javascript-<exercise>"
+ * 2. Package name is not duplicated
+ */
+
+const shell = require('shelljs');
+
+const { exerciseDirs } = require('./helpers');
+
+let exitCode = 0;
+const allNames = [];
+
+// First 2 arguments are node and script name skip them
+// Check if rest has --fix
+const fix = process.argv.slice(2).includes('--fix');
+
+// Check if package name in each exercises' package.json is of the format "@exercism/javascript-<exercise>"
+exerciseDirs.forEach(dir => {
+  const filePath = `${dir}/package.json`;
+  const file = JSON.parse(shell.cat(filePath).toString());
+
+  const givenName = file['name'];
+  const exerciseName = dir.split('/')[2];
+  const expectedName = `@exercism/javascript-${exerciseName}`;
+
+  allNames.push(givenName);
+
+  if(givenName == expectedName) return;
+
+  if(fix) {
+    file['name'] = expectedName;
+    const fileWithFixedName = new shell.ShellString(JSON.stringify(file, undefined, 2) + '\n');
+    fileWithFixedName.to(filePath);
+    shell.echo(`[Success]: Fixed package name in ${filePath}`);
+  }
+  else {
+    exitCode = 1;
+    shell.echo(`[Failure]: Package name in ${filePath} must be ${expectedName}"`);
+  }
+});
+
+// Check if all exercises have unique package names
+const duplicates = allNames.filter((e, i) => allNames.indexOf(e) !== i)
+if(duplicates.length !== 0 && !fix) {
+  exitCode = 1
+  shell.echo(`[Failure] Duplicate package names found: ${duplicates.join(', ')}`);
+}
+
+if(exitCode == 0) {
+  if(fix) {
+    shell.echo('[Success] All package names fixed.');
+  }
+  else {
+    shell.echo('[Success] All package names verified.');
+  }
+}
+
+shell.exit(exitCode);
