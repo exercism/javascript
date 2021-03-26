@@ -1,8 +1,6 @@
 {
   "blurb": "Implement rational numbers.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "ankorGH",
     "G-Rath",
@@ -16,15 +14,9 @@
     "Tyresius92"
   ],
   "files": {
-    "solution": [
-      "rational-numbers.js"
-    ],
-    "test": [
-      "rational-numbers.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["rational-numbers.js"],
+    "test": ["rational-numbers.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Rational_number"

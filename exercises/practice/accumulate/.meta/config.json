@@ -1,8 +1,6 @@
 {
   "blurb": "Implement the `accumulate` operation, which, given a collection and an operation to perform on each element of the collection, returns a new collection containing the result of applying that operation to each element of the input collection.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "andreasolund",
     "ankorGH",
@@ -20,15 +18,9 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "accumulate.js"
-    ],
-    "test": [
-      "accumulate.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["accumulate.js"],
+    "test": ["accumulate.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Conversation with James Edward Gray II",
   "source_url": "https://twitter.com/jeg2"

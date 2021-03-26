@@ -1,8 +1,6 @@
 {
   "blurb": "Given two buckets of different size, demonstrate how to measure an exact number of liters.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "andreasolund",
     "ankorGH",
@@ -22,15 +20,9 @@
     "Tyresius92"
   ],
   "files": {
-    "solution": [
-      "two-bucket.js"
-    ],
-    "test": [
-      "two-bucket.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["two-bucket.js"],
+    "test": ["two-bucket.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Water Pouring Problem",
   "source_url": "http://demonstrations.wolfram.com/WaterPouringProblem/"

@@ -1,22 +1,10 @@
 {
   "blurb": "Generate musical scales, given a starting note and a set of intervals. ",
-  "authors": [
-    "seeksort"
-  ],
-  "contributors": [
-    "paparomeo",
-    "SleeplessByte",
-    "tejasbubane"
-  ],
+  "authors": ["seeksort"],
+  "contributors": ["paparomeo", "SleeplessByte", "tejasbubane"],
   "files": {
-    "solution": [
-      "scale-generator.js"
-    ],
-    "test": [
-      "scale-generator.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["scale-generator.js"],
+    "test": ["scale-generator.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

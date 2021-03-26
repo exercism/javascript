@@ -1,8 +1,6 @@
 {
   "blurb": "Calculate the date of meetups.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "andreasolund",
     "G-Rath",
@@ -21,15 +19,9 @@
     "Tyresius92"
   ],
   "files": {
-    "solution": [
-      "meetup.js"
-    ],
-    "test": [
-      "meetup.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["meetup.js"],
+    "test": ["meetup.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month",
   "source_url": "https://twitter.com/copiousfreetime"

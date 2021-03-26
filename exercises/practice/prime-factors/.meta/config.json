@@ -1,8 +1,6 @@
 {
   "blurb": "Compute the prime factors of a given natural number.",
-  "authors": [
-    "rchavarria"
-  ],
+  "authors": ["rchavarria"],
   "contributors": [
     "andreasolund",
     "ankorGH",
@@ -20,15 +18,9 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "prime-factors.js"
-    ],
-    "test": [
-      "prime-factors.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["prime-factors.js"],
+    "test": ["prime-factors.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"

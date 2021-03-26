@@ -1,8 +1,6 @@
 {
   "blurb": "Convert a long phrase to its acronym",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "andreasolund",
     "ankorGH",
@@ -21,15 +19,9 @@
     "Tyresius92"
   ],
   "files": {
-    "solution": [
-      "acronym.js"
-    ],
-    "test": [
-      "acronym.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["acronym.js"],
+    "test": ["acronym.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"

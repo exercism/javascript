@@ -1,8 +1,6 @@
 {
   "blurb": "Convert a octal number, represented as a string (e.g. '1735263'), to its decimal equivalent using first principles (i.e. no, you may not use built-in or external libraries to accomplish the conversion).",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "andreasolund",
     "ankorGH",
@@ -20,15 +18,9 @@
     "Tyresius92"
   ],
   "files": {
-    "solution": [
-      "octal.js"
-    ],
-    "test": [
-      "octal.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["octal.js"],
+    "test": ["octal.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/input/?i=base+8"

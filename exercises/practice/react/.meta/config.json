@@ -1,8 +1,6 @@
 {
   "blurb": "Implement a basic reactive system.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "Boto1",
     "G-Rath",
@@ -18,14 +16,8 @@
     "Tyresius92"
   ],
   "files": {
-    "solution": [
-      "react.js"
-    ],
-    "test": [
-      "react.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["react.js"],
+    "test": ["react.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

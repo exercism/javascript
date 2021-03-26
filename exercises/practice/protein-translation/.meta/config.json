@@ -1,8 +1,6 @@
 {
   "blurb": "Translate RNA sequences into proteins.",
-  "authors": [
-    "RobinCsl"
-  ],
+  "authors": ["RobinCsl"],
   "contributors": [
     "ankorGH",
     "G-Rath",
@@ -19,15 +17,9 @@
     "WebCu"
   ],
   "files": {
-    "solution": [
-      "protein-translation.js"
-    ],
-    "test": [
-      "protein-translation.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["protein-translation.js"],
+    "test": ["protein-translation.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Tyler Long"
 }
