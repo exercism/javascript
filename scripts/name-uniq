@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): npx babel-node scripts/name-check
+ *
+ * This will run following checks:
+ *
+ * 1. All exercises have unique package names in their package.json files.
+ */
+
+const shell = require('shelljs');
+const { packageFiles, registerExitHandler } = require('./helpers');
+
+registerExitHandler();
+
+let exitCode = 0;
+const allNames = packageFiles.map(filePath => JSON.parse(shell.cat(filePath).toString())['name']);
+
+// Check if all exercises have unique package names
+const duplicates = allNames.filter((e, i) => allNames.indexOf(e) !== i)
+if(duplicates.length !== 0) {
+  exitCode = 1
+  shell.echo(`[Failure] Duplicate package names found: ${duplicates.join(', ')}`);
+}
+
+if(exitCode == 0) {
+  shell.echo('[Success] All package names are unique.');
+}

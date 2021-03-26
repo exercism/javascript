@@ -6,10 +6,12 @@ const shell = require('shelljs');
 const path = require('path');
 const crypto = require('crypto');
 
-export const exerciseDirs = shell.ls(
+const exerciseDirs = shell.ls(
   '-d',
   path.join('exercises', '{practice,concept}', '*')
 );
+
+export const packageFiles = exerciseDirs.map(dir => `${dir}/package.json`);
 
 export const assignments = shell.env['ASSIGNMENT']
   ? [shell.env['ASSIGNMENT']]

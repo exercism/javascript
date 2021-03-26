@@ -74,8 +74,15 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
         `npx babel-node ${path.join('scripts', 'checksum')}`
       ).code;
 
-      if (checkResult != 0) {
+      const nameResult = shell.exec(
+        `npx babel-node ${path.join('scripts', 'name-uniq')}`
+      ).code;
+
+      if (checkResult !== 0) {
         shell.exit(checkResult);
+      }
+      if (nameResult !== 0) {
+        shell.exit(nameResult);
       }
     });
   }
