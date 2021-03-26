@@ -6,7 +6,8 @@
  * This will run following checks:
  *
  * 1. Package name if of the format "@exercism/javascript-<exercise>"
- * 2. Package name is not duplicated
+ *
+ * This script also allows fixing these names: npx babel-node scripts/name-check --fix
  */
 
 const shell = require('shelljs');
