@@ -1,27 +1,24 @@
-FIXME
-
 # Hints
 
-## 1. Determine if you will need a drivers licence
+## 1. Determine the total number of birds that you counted so far
 
-- Use the [strict equals operator][mdn-equality-operators] to check whether your input equals a certain string.
-- Use one of the two [logical operators][mdn-logical-operators] you learned about in the boolean concept to combine the two requirements.
-- You do **not** need an if-statement to solve this task. You can return the boolean expression you build directly.
+- Refer to the exercise introduction for an example how to use a for loop to iterate over an array.
+- Use a helper variable to store the total count and increase that variable as you go through the array.
+- Think about the correct initial value for that helper variable.
+- Refer back to the [array concept][concept-arrays] to recap how to retrieve values from an array.
 
-## 2. Choose between two potential vehicles to buy
+## 2. Calculate the number of visiting birds in a specific week
 
-- Use a [relational operator][mdn-relational-operators] to determine which option comes first in dictionary order.
-- Then set the value of a helper variable depending of the outcome of that comparison with the help of an an [if-else statement][mdn-if-statement].
-- Finally construct the recommendation sentence. For that you can use the [addition operator][mdn-addition] to concatenate the two strings.
+- This task is similar to the first one, you can copy your code as a starting point.
+- Think about which indexes in the array you would need to take into account for week number 1 and 2, respectively.
+- Now find a general way to calculate the first and the last index that should be considered.
+- With that you can set up the for loop to only iterate over the relevant section of the array.
 
-## 3. Calculate an estimation for the price of a used vehicle
+## 3. Fix a counting mistake
 
-- Start with determining the percentage based on the age of the vehicle. Save it in a helper variable. Use an [if-else if-else statement][mdn-if-statement] as mentioned in the instructions.
-- In the two if conditions use [relational operators][mdn-relational-operators] to compare the age of the car to the threshold values.
-- To calculate the result, apply the percentage to the original price. For example `30% of x` can be calculated by dividing `30` by `100` and multiplying with `x`.
+- Again you need to set up a for loop to iterate over the whole bird count array.
+- This time you only need to visit every second entry in the array.
+- Change the step so the counter variable is increased accordingly after each iteration.
+- In the body of the for loop you can use the increment operator to change the value of an element in an array in place.
 
-[mdn-equality-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators
-[mdn-logical-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators
-[mdn-relational-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators
-[mdn-addition]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition
-[mdn-if-statement]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+[concept-arrays]: /tracks/javascript/concepts/arrays
