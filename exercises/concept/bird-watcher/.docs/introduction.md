@@ -20,6 +20,7 @@ for (let i = 0; i < list.length; i++) {
 ```
 
 Defining the step is often done using JavaScripts increment or decrement operator as shown in the example above.
+These operators modify a variable in place.
 `++` adds one to a number, `--` subtracts one from a number.
 
 ```javascript
