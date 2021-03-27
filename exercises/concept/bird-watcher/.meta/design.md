@@ -1,59 +1,60 @@
-FIXME
-
 # Design
 
 ## Learning objectives
 
-### Comparison
-
-- How to compare numbers and strings with relational operators (`<`, `>`, `>=`, `<=`)
-- Equality checks with strict equals (`===`) and not strict equals (`!==`)
-
-### Conditionals
-
-How to write if-statements
-
-- `if(){}`
-- `if(){} else{}`
-- `if(){} else if(){} else{}`
+- What does a for loop do
+- Syntax `for(...){...}`
+- What are the different parts of the for loop header
+- How to iterate over an array with a for loop
+- What is the increment/decrement operator `i++`/`i--`
 
 ## Out of Scope
 
-- Details about loose equality `==` and truthy/falsy (can be taught later when the student learn more about type coercion)
-- Shallow/deep comparison of objects
-- Ternary operator `x ? y : z` (will be taught later to avoid overloading this early exercise)
-- `switch`, `for`
+The following topics are out of scope because they are covered by another concept exercise.
+
+- Other loops like `while`
+- Other possibilities of iterating over an array
 
 ## Concepts
 
 The Concepts this exercise unlocks are:
 
-- `comparison`
-- `conditionals`
+- `for-loops`
+- `increment-decrement`
 
 ## Prerequisites
 
-- `booleans` because they are the result of the comparison and used in the conditions
-- `numbers` because they are used to practice comparison
-- `strings` also because they are used to practice comparison
+- `arrays` because they are used to iterate over them in the exercise
+- `comparison` for writing the condition in the loop header
+- `conditionals` because they introduced the student to the concept of conditional execution
 
 ## Analyzer
 
 This exercise could benefit from the following rules in the [analyzer][analyzer]:
 
-- Verify that `needsLicense` does not include an unnecessary if-statement where the student returns `true`/`false`.
-- Verify that in `chooseVehicle` the string `' is clearly the better choice'` only appears once.
-- Verify that in `chooseVehicle` and `calculateResellPrice` the student actually practiced if/else and did not use early returns. E.g., show a comment like this
-  ```
-  Nice.
-  That's an _early return_.
-  For the purpose of the Concept that this exercise aims to teach, try solving this using an `else` statement.
-  ```
+For all tasks check that the student actually used a for loop.
+
+1. `totalBirdCount`
+
+   - Verify that the condition is written with `< x.length` instead of `<= y.length -1`.
+   - Check whether a shorthand assignment `+=` was used to increase the sum (non-essential feedback).
+   - Verify the total was properly initialized with `0` instead of e.g. `null`
+   - Verify the increment operator was used in loop header step
+
+2. `birdsInWeek`
+
+   - Verify a helper variable was used instead of duplicating the calculation in the initialization and condition of the loop
+   - Other checks should be the same as for `totalBirdCount`
+
+3. `fixBirdCountLog`
+
+   - Check whether a shorthand assignment `+=` was used to increase the loop counter (non-essential feedback)
+   - Check whether the increment operator was used in the loop body
 
 ## Notes
 
-The exercise is inspired by [Vehicle Purchase Exercise in the Julia track][julia-vehicle-purchase] but the original exercise included more concepts and the tasks were more difficult to transfer into code.
-To keep the concept exercise rather trivial as it should be, the tasks were extremely simplified or replaced.
+The exercise is inspired by [Bird Watcher Exercise in the C# track][csharp-bird-watcher] but the original exercise included more concepts and subsequently also tasks that cover all of these concepts.
+Since the exercise for the JavaScript track should be focussed on the for loop, the tasks where reduced and changed accordingly.
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
-[julia-vehicle-purchase]: https://github.com/exercism/julia/blob/main/exercises/concept/vehicle-purchase/.docs/instructions.md
+[csharp-bird-watcher]: https://github.com/exercism/csharp/blob/main/exercises/concept/bird-watcher/.docs/instructions.md
