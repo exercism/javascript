@@ -5,7 +5,7 @@
  *
  * This will run following checks:
  *
- * 1. Package name if of the format "@exercism/javascript-<exercise>"
+ * 1. Package name is of the format "@exercism/javascript-<exercise>"
  *
  * This script also allows fixing these names: npx babel-node scripts/name-check --fix
  */

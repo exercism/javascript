@@ -31,6 +31,8 @@ We welcome contributions of all sorts and sizes, from reporting issues to submit
       - [`checksum`](#checksum)
       - [`ci-check`](#ci-check)
       - [`ci`](#ci)
+      - [`name-check`](#name-check)
+      - [`name-uniq`](#name-uniq)
 
 ---
 
@@ -269,6 +271,36 @@ Run this script to check stubs, configuration integrity and lint the code.
 ```
 
 Run this script to test all exercises.
+
+#### `name-check`
+
+```js
+/**
+ * Run this script (from root directory): npx babel-node scripts/name-check
+ *
+ * This will run following checks:
+ *
+ * 1. Package name is of the format "@exercism/javascript-<exercise>"
+ *
+ * This script also allows fixing these names: npx babel-node scripts/name-check --fix
+ */
+```
+
+Run this script to check if package name in package.json of exercises is in expected format or to fix it.
+
+#### `name-uniq`
+
+```js
+/**
+ * Run this script (from root directory): npx babel-node scripts/name-uniq
+ *
+ * This will run following checks:
+ *
+ * 1. All exercises have unique package names in their package.json files.
+ */
+```
+
+Run this script to check if there is any duplicate package name.
 
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
 [canonical-data-syncer]: https://github.com/exercism/canonical-data-syncer
