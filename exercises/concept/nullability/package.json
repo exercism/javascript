@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/javascript-concept-nullability",
+  "name": "@exercism/javascript-nullability",
   "description": "Exercism concept exercise on nullability",
   "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
   "private": true,

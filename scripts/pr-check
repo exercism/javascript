@@ -91,10 +91,27 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     const checkResult = shell.exec(
       `npx babel-node ${path.join('scripts', 'checksum')}`
     ).code;
-    if (checkResult != 0) {
+
+    if (checkResult !== 0) {
       shell.exit(checkResult);
     }
+
+    const nameCheckResult = shell.exec(
+      `npx babel-node ${path.join('scripts', 'name-check')}`
+    ).code;
+
+    if (nameCheckResult !== 0) {
+      shell.exit(nameCheckResult);
+    }
   });
+
+  const nameUniqResult = shell.exec(
+    `npx babel-node ${path.join('scripts', 'name-uniq')}`
+  ).code;
+
+  if (nameUniqResult !== 0) {
+    shell.exit(nameUniqResult);
+  }
 }
 
 // Cleanup tmp directory if any exists

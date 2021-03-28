@@ -11,6 +11,8 @@ const exerciseDirs = shell.ls(
   path.join('exercises', '{practice,concept}', '*')
 );
 
+export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`);
+
 export const assignments = shell.env['ASSIGNMENT']
   ? [shell.env['ASSIGNMENT']]
   : knownAssignments();
