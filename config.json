@@ -352,7 +352,7 @@
         "name": "Wordy",
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "regexps", "errors"],
         "difficulty": 7,
         "topics": [
           "conditionals",
