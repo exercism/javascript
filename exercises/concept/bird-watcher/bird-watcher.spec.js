@@ -1,76 +1,84 @@
-FIXME
-
 import {
-  needsLicense,
-  chooseVehicle,
-  calculateResellPrice,
-} from './bird-watcher';
+  totalBirdCount,
+  birdsInWeek,
+  fixBirdCountLog,
+} from './bird-watcher.js';
 
-describe('vehicle purchase', () => {
-  describe('needsLicense', () => {
-    xtest('requires a license for a car', () => {
-      expect(needsLicense('car')).toBe(true);
+describe('bird watcher', () => {
+  describe('totalBirdCount', () => {
+    xtest('calculates the correct total number of birds', () => {
+      const birdsPerDay = [9, 0, 8, 4, 5, 1, 3];
+      expect(totalBirdCount(birdsPerDay)).toBe(30);
     });
 
-    xtest('requires a license for a truck', () => {
-      expect(needsLicense('truck')).toBe(true);
+    xtest('works for a short bird count list', () => {
+      const birdsPerDay = [2];
+      expect(totalBirdCount(birdsPerDay)).toBe(2);
     });
 
-    xtest('does not require a license for a bike', () => {
-      expect(needsLicense('bike')).toBe(false);
-    });
-
-    xtest('does not require a license for a stroller', () => {
-      expect(needsLicense('stroller')).toBe(false);
-    });
-
-    xtest('does not require a license for an e-scooter', () => {
-      expect(needsLicense('e-scooter')).toBe(false);
+    xtest('works for a long bird count list', () => {
+      // prettier-ignore
+      const birdsPerDay = [2, 8, 4, 1, 3, 5, 0, 4, 1, 6, 0, 3, 0, 1, 5, 4, 1, 1, 2, 6];
+      expect(totalBirdCount(birdsPerDay)).toBe(57);
     });
   });
 
-  describe('chooseVehicle', () => {
-    const rest = ' is clearly the better choice.';
-
-    xtest('correctly recommends the first option', () => {
-      expect(chooseVehicle('Bugatti Veyron', 'Ford Pinto')).toBe(
-        'Bugatti Veyron' + rest
-      );
-      expect(chooseVehicle('Chery EQ', 'Kia Niro Elektro')).toBe(
-        'Chery EQ' + rest
-      );
+  describe('birdsInWeek', () => {
+    xtest('calculates the number of birds in the first week', () => {
+      const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0, 8, 0];
+      expect(birdsInWeek(birdsPerDay, 1)).toBe(14);
     });
 
-    xtest('correctly recommends the second option', () => {
-      expect(chooseVehicle('Ford Pinto', 'Bugatti Veyron')).toBe(
-        'Bugatti Veyron' + rest
-      );
-      expect(chooseVehicle('2020 Gazelle Medeo', '2018 Bergamont City')).toBe(
-        '2018 Bergamont City' + rest
-      );
+    xtest('calculates the number of birds for a week in the middle of the log', () => {
+      // prettier-ignore
+      const birdsPerDay = [4, 7, 3, 2, 1, 1, 2, 0, 2, 3, 2, 7, 1, 3, 0, 6, 5, 3, 7, 2, 3];
+      expect(birdsInWeek(birdsPerDay, 2)).toBe(18);
+    });
+
+    xtest('works when there is only one week', () => {
+      const birdsPerDay = [3, 0, 3, 3, 2, 1, 0];
+      expect(birdsInWeek(birdsPerDay, 1)).toBe(12);
+    });
+
+    xtest('works for a long bird count list', () => {
+      const week21 = [2, 0, 1, 4, 1, 3, 0];
+      const birdsPerDay = randomArray(20 * 7)
+        .concat(week21)
+        .concat(randomArray(10 * 7));
+
+      expect(birdsInWeek(birdsPerDay, 21)).toBe(11);
     });
   });
 
-  describe('calculateResellPrice', () => {
-    xtest('price is reduced to 80% for age below 3', () => {
-      expect(calculateResellPrice(40000, 2)).toBe(32000);
-      expect(calculateResellPrice(40000, 2.5)).toBe(32000);
+  describe('fixBirdCountLog', () => {
+    xtest('returns a bird count list with the corrected values', () => {
+      const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0];
+      const expected = [4, 0, 6, 1, 1, 4, 2, 0, 4, 4, 4, 0];
+      expect(fixBirdCountLog(birdsPerDay)).toEqual(expected);
     });
 
-    xtest('price is reduced to 50% for age above 10', () => {
-      expect(calculateResellPrice(40000, 2)).toBe(32000);
+    xtest('does not create a new array', () => {
+      const birdsPerDay = [2, 0, 1, 4, 1, 3, 0];
+
+      // this follows the suggestion from the Jest docs to avoid a confusing test report
+      // https://jestjs.io/docs/expect#tobevalue
+      expect(Object.is(fixBirdCountLog(birdsPerDay), birdsPerDay)).toBe(true);
     });
 
-    xtest('price is reduced to 70% for between 3 and 10', () => {
-      expect(calculateResellPrice(25000, 7)).toBe(17500);
+    xtest('works for a short bird count list', () => {
+      expect(fixBirdCountLog([4, 2])).toEqual([5, 2]);
     });
 
-    xtest('works correctly for threshold age 3', () => {
-      expect(calculateResellPrice(40000, 3)).toBe(28000);
-    });
-
-    xtest('works correctly for threshold age 10', () => {
-      expect(calculateResellPrice(25000, 10)).toBe(17500);
+    xtest('works for a long bird count list', () => {
+      // prettier-ignore
+      const birdsPerDay = [2, 8, 4, 1, 3, 5, 0, 4, 1, 6, 0, 3, 0, 1, 5, 4, 1, 1, 2, 6];
+      // prettier-ignore
+      const expected = [3, 8, 5, 1, 4, 5, 1, 4, 2, 6, 1, 3, 1, 1, 6, 4, 2, 1, 3, 6];
+      expect(fixBirdCountLog(birdsPerDay)).toEqual(expected);
     });
   });
 });
+
+function randomArray(length) {
+  return Array.from({ length: length }, () => Math.floor(Math.random() * 8));
+}

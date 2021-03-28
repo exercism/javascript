@@ -1,12 +1,12 @@
 {
   "name": "@exercism/javascript-vehicle-purchase",
-  "description": "Exercism concept exercise on conditionals and comparision",
+  "description": "Exercism concept exercise on for loops and the increment and decrement operators",
   "author": "Franziska Obbarius <12543047+junedev@users.noreply.github.com>",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/vehicle-purchase"
+    "directory": "exercises/concept/bird-watcher"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
