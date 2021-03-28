@@ -54,13 +54,13 @@ for (let i = 0; i < coords.length; i++) {
 ## Break, Continue and Labels
 
 Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
-Additionally there is the keyword `continue` to only stop the execution of the current iteration and continue with the next one.
+In contrast to this, the keyword `continue` only stops the execution of the current iteration and continues with the next one.
 
 When working with nested loops, `break` and `continue` always apply to the innermost loop by default.
 You can use labels to change that behavior.
 A label is an identifier name followed by a colon.
 It is placed in front (or above) the loop.
-Such a label can then be combined with `break` or `continue` to define which loop the statement should apply to.
+Such a label can then be combined with `break` or `continue` to define to which loop the statement should apply to.
 
 ```javascript
 outer: for (let i = 0; i < 10; i++) {
@@ -77,8 +77,8 @@ outer: for (let i = 0; i < 10; i++) {
 ## Loop Counter and Asynchronous Code
 
 You need to be careful to correctly declare your counter variable when dealing with [asynchronous code][mdn-concept-asynchronous].
-Let us look at an example where we sum up the counter variable asynchronously after waiting for 1s with `setTimeout`.
-When declaring the counter with `var` or with `let` but outside the header, the code does not lead to the expected result.
+Let us look at an example where we sum up the counter variable asynchronously with `setTimeout` after waiting for 1s.
+When declaring the counter with `var` or with `let` but outside the header, the code does not yield the expected result.
 
 <!-- prettier-ignore-start -->
 ```javascript
@@ -106,7 +106,7 @@ By the time the sum is calculated, `i` already reached its final value `4` which
 
 This problem can be avoided by declaring the counter with `let` inside the header.
 This has the special effect that each iteration gets its very own variable `let i` that is scoped to exactly that one execution of the loop body.
-So when the sum is calculated later, each of the functions refers to their own variable `i` that still holds the correct value.
+So when the sum is calculated later, each [callback][concept-callbacks] function refers to their own variable `i` that still holds the correct value.
 
 <!-- prettier-ignore-start -->
 ```javascript
@@ -120,4 +120,5 @@ for (let i = 1; i < 4; i++) {
 
 [mdn-optional-header-parts]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for#optional_for_expressions
 [concept-arrays]: /tracks/javascript/concepts/arrays
+[concept-callbacks]: /tracks/javascript/concepts/callbacks
 [mdn-concept-asynchronous]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts
