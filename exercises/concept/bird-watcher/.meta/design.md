@@ -14,6 +14,7 @@ The following topics are out of scope because they are covered by another concep
 
 - Other loops like `while`
 - Other possibilities of iterating over an array
+- `break` and `continue` are only mentioned in the about.md file here because they will be more in focus in the `while` exercise
 
 ## Concepts
 
