@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for",
+    "description": "MDN: For Loop"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break",
+    "description": "MDN: break"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue",
+    "description": "MDN: continue"
+  },
+  {
+    "url": "https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/label",
+    "description": "MDN: Label"
+  }
+]

@@ -139,6 +139,14 @@
         "concepts": ["comparison", "conditionals"],
         "prerequisites": ["booleans", "numbers", "strings"],
         "status": "beta"
+      },
+      {
+        "slug": "bird-watcher",
+        "name": "Bird Watcher",
+        "uuid": "3e648aa0-9ce7-4041-93d2-2b95f3832824",
+        "concepts": ["for-loops", "increment-decrement"],
+        "prerequisites": ["arrays", "comparison", "conditionals"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1600,6 +1608,18 @@
       "slug": "comparison",
       "name": "Comparison",
       "blurb": "Compare values using operators to check greater than, less than, equals and not equals"
+    },
+    {
+      "uuid": "be301f37-6cf4-4688-949e-75a8976a91e3",
+      "slug": "for-loops",
+      "name": "For Loops",
+      "blurb": "Execute code repeatedly for different values of an iterator"
+    },
+    {
+      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
+      "slug": "increment-decrement",
+      "name": "Increment and Decrement Operators",
+      "blurb": "Shorthand notation to increment and decrement numbers using special operators"
     }
   ],
   "key_features": [
