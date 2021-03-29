@@ -21,12 +21,7 @@ const list = ['a', 'b', 'c'];
 for (let i = 0; i < list.length; i++) {
   // code that should be executed for each item in the array
 }
-
-// i is not available here
 ```
-
-Variables that are defined in the header with `let` are scoped to the for statement.
-In the example above you would see `ReferenceError: i is not defined` if you would try to access the counter outside of the for loop.
 
 All three parts of the header are optional.
 This is rarely utilized in practice.
