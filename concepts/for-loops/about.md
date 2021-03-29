@@ -25,7 +25,7 @@ for (let i = 0; i < list.length; i++) {
 
 All three parts of the header are optional.
 This is rarely utilized in practice.
-You can read more about this in the [MDN documentation][mdn-optional-header-parts]
+You can read more about this in the [MDN documentation][mdn-optional-header-parts].
 
 ## Nested For Loops
 
@@ -49,7 +49,7 @@ for (let i = 0; i < coords.length; i++) {
 ## Break, Continue and Labels
 
 Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
-In contrast to this, the keyword `continue` only stops the execution of the current iteration and continues with the next one.
+In contrast, the keyword `continue` only stops the execution of the current iteration and continues with the next one.
 
 When working with nested loops, `break` and `continue` always apply to the innermost loop by default.
 You can use labels to change that behavior.
