@@ -147,6 +147,14 @@
         "concepts": ["for-loops", "increment-decrement"],
         "prerequisites": ["arrays", "comparison", "conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "master-mixologist",
+        "name": "Master Mixologist",
+        "uuid": "81c3fb86-af86-4c56-a45f-e021403c4070",
+        "concepts": ["while-loops", "conditionals-switch"],
+        "prerequisites": ["arrays", "comparison", "conditionals"], //FIXME review
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1620,6 +1628,18 @@
       "slug": "increment-decrement",
       "name": "Increment and Decrement Operators",
       "blurb": "Shorthand notation to increment and decrement numbers using special operators"
+    },
+    {
+      "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
+      "slug": "while-loops",
+      "name": "While Loops",
+      "blurb": "Execute code repeatedly as long as a certain condition is fulfilled. Depending on when that condition should be checked, you can use a while or a do-while loop in JavaScript."
+    },
+    {
+      "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
+      "slug": "conditionals-switch",
+      "name": "Switch Statement",
+      "blurb": "Besides the if-statement, JavaScript also has a switch-statement to conditionally execute logic. It is used when a single variable needs to be matched against multiple values."
     }
   ],
   "key_features": [
