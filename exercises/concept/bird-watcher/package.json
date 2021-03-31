@@ -9,7 +9,7 @@
     "directory": "exercises/concept/bird-watcher"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.10",
+    "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.14",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.13.12",
