@@ -1,16 +1,6 @@
 {
-  "contributors": [
-    {
-      "github_username": "SleeplessByte",
-      "exercism_username": "SleeplessByte"
-    }
-  ],
-  "authors": [
-    {
-      "github_username": "TomPradat",
-      "exercism_username": "TomPradat"
-    }
-  ],
+  "contributors": ["SleeplessByte"],
+  "authors": ["TomPradat"],
   "files": {
     "solution": ["errors.js"],
     "test": ["errors.spec.js"],
