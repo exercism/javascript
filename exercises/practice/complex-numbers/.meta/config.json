@@ -1,26 +1,26 @@
 {
   "blurb": "Implement complex numbers.",
-  "authors": ["MattH-be"],
+  "authors": [
+    "MattH-be"
+  ],
   "contributors": [
     "ankorGH",
     "burennto",
     "cmccandless",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "matthewmorgan",
-    "paparomeo",
-    "PSalant726",
-    "rpottsoh",
     "SleeplessByte",
     "tejasbubane",
-    "trvrfrd",
-    "Tyresius92"
+    "trvrfrd"
   ],
   "files": {
-    "solution": ["complex-numbers.js"],
-    "test": ["complex-numbers.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "complex-numbers.js"
+    ],
+    "test": [
+      "complex-numbers.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Complex_number"

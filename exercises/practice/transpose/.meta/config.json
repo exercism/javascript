@@ -1,25 +1,26 @@
 {
   "blurb": "Take input text and output it transposed.",
-  "authors": ["RobinCsl"],
+  "authors": [
+    "RobinCsl"
+  ],
   "contributors": [
     "ankorGH",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
     "matthewmorgan",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "SleeplessByte",
     "tejasbubane",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["transpose.js"],
-    "test": ["transpose.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "transpose.js"
+    ],
+    "test": [
+      "transpose.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Reddit r/dailyprogrammer challenge #270 [Easy].",
   "source_url": "https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text"

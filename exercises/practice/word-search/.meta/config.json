@@ -1,24 +1,24 @@
 {
   "blurb": "Create a program to solve a word search puzzle.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "G-Rath",
-    "gargrave",
     "hyuko21",
-    "iagocavalcante",
     "ivanvotti",
-    "lantran",
     "msomji",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
-    "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["word-search.js"],
-    "test": ["word-search.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "word-search.js"
+    ],
+    "test": [
+      "word-search.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

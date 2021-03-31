@@ -1,25 +1,26 @@
 {
   "blurb": "Take a nested list and return a single list with all values except nil/null",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
-    "G-Rath",
     "gabriel376",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "SleeplessByte",
     "tejasbubane",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["flatten-array.js"],
-    "test": ["flatten-array.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "flatten-array.js"
+    ],
+    "test": [
+      "flatten-array.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Interview Question",
   "source_url": "https://reference.wolfram.com/language/ref/Flatten.html"

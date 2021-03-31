@@ -1,27 +1,27 @@
 {
   "blurb": "Convert a long phrase to its acronym",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
     "cmccandless",
-    "G-Rath",
     "gargrave",
-    "iagocavalcante",
-    "lantran",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "ryanplusplus",
     "serixscorpio",
-    "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["acronym.js"],
-    "test": ["acronym.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "acronym.js"
+    ],
+    "test": [
+      "acronym.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"

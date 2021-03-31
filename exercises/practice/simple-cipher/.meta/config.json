@@ -1,34 +1,34 @@
 {
   "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
     "daveyarwood",
-    "G-Rath",
-    "gargrave",
     "hayashi-ay",
-    "iagocavalcante",
-    "lantran",
     "marocchino",
     "nicholejeannine",
     "paparomeo",
     "pawamoy",
-    "PSalant726",
     "rchavarria",
     "ryanplusplus",
     "serixscorpio",
     "SleeplessByte",
-    "tejasbubane",
     "tekerson",
-    "Tyresius92",
     "Vankog",
     "xarxziux"
   ],
   "files": {
-    "solution": ["simple-cipher.js"],
-    "test": ["simple-cipher.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "simple-cipher.js"
+    ],
+    "test": [
+      "simple-cipher.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Substitution Cipher at Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Substitution_cipher"

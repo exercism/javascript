@@ -1,30 +1,29 @@
 {
   "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "amscotti",
-    "andreasolund",
     "ankorGH",
     "brendan-c",
     "DagmarTimmreck",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
     "matthewmorgan",
-    "paparomeo",
-    "PSalant726",
     "ryanplusplus",
     "serixscorpio",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["matrix.js"],
-    "test": ["matrix.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "matrix.js"
+    ],
+    "test": [
+      "matrix.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Warmup to the `saddle-points` warmup.",
   "source_url": "http://jumpstartlab.com"

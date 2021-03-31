@@ -1,26 +1,26 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
-    "andreasolund",
     "Futuro212",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
     "matthewmorgan",
     "ovidiu141",
-    "paparomeo",
-    "PSalant726",
     "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "tejasbubane"
   ],
   "files": {
-    "solution": ["binary-search.js"],
-    "test": ["binary-search.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "binary-search.js"
+    ],
+    "test": [
+      "binary-search.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"

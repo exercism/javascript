@@ -1,10 +1,20 @@
 {
   "blurb": "Make a chain of dominoes.",
-  "authors": ["chauchakching"],
-  "contributors": ["SleeplessByte", "tejasbubane"],
+  "authors": [
+    "chauchakching"
+  ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["dominoes.js"],
-    "test": ["dominoes.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "dominoes.js"
+    ],
+    "test": [
+      "dominoes.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

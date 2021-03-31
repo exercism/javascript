@@ -1,29 +1,29 @@
 {
   "blurb": "Given a moment, determine the moment that would be after a gigasecond has passed.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
     "draalger",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
     "kytrinyx",
-    "lantran",
     "matthewmorgan",
     "paparomeo",
-    "PSalant726",
     "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
     "trvrfrd",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["gigasecond.js"],
-    "test": ["gigasecond.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "gigasecond.js"
+    ],
+    "test": [
+      "gigasecond.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=09"

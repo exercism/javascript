@@ -1,28 +1,27 @@
 {
   "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "andreasolund",
-    "G-Rath",
-    "gargrave",
     "hyuko21",
-    "iagocavalcante",
-    "lantran",
     "msomji",
     "ovidiu141",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "ryanplusplus",
     "serixscorpio",
-    "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["wordy.js"],
-    "test": ["wordy.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "wordy.js"
+    ],
+    "test": [
+      "wordy.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Inspired by one of the generated questions in the Extreme Startup game.",
   "source_url": "https://github.com/rchatley/extreme_startup"

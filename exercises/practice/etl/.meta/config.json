@@ -1,29 +1,29 @@
 {
   "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
     "draalger",
-    "G-Rath",
-    "gargrave",
     "hayashi-ay",
-    "iagocavalcante",
     "kytrinyx",
-    "lantran",
     "matthewmorgan",
-    "paparomeo",
-    "PSalant726",
     "ryanplusplus",
     "SleeplessByte",
     "tejasbubane",
-    "trvrfrd",
-    "Tyresius92"
+    "trvrfrd"
   ],
   "files": {
-    "solution": ["etl.js"],
-    "test": ["etl.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "etl.js"
+    ],
+    "test": [
+      "etl.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"

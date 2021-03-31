@@ -1,26 +1,26 @@
 {
   "blurb": "Determine if a number is an Armstrong number",
-  "authors": ["PakkuDon"],
+  "authors": [
+    "PakkuDon"
+  ],
   "contributors": [
     "ankorGH",
-    "G-Rath",
     "gargrave",
     "hayashi-ay",
-    "iagocavalcante",
-    "matthewmorgan",
     "ovidiu141",
-    "paparomeo",
-    "PSalant726",
-    "rpottsoh",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["armstrong-numbers.js"],
-    "test": ["armstrong-numbers.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "armstrong-numbers.js"
+    ],
+    "test": [
+      "armstrong-numbers.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"

@@ -1,27 +1,27 @@
 {
   "blurb": "Write a robot simulator.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
     "jscheffner",
-    "lantran",
     "matthewmorgan",
     "ntshcalleia",
-    "paparomeo",
-    "PSalant726",
     "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "tejasbubane"
   ],
   "files": {
-    "solution": ["robot-simulator.js"],
-    "test": ["robot-simulator.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "robot-simulator.js"
+    ],
+    "test": [
+      "robot-simulator.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Inspired by an interview question at a famous company.",
   "source_url": ""

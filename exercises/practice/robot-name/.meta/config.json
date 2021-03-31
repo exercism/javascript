@@ -1,28 +1,27 @@
 {
   "blurb": "Manage robot factory settings.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
-    "andreasolund",
     "draalger",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
     "kytrinyx",
-    "lantran",
     "masters3d",
     "matthewmorgan",
     "ntshcalleia",
-    "paparomeo",
-    "PSalant726",
     "ryanplusplus",
-    "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["robot-name.js"],
-    "test": ["robot-name.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "robot-name.js"
+    ],
+    "test": [
+      "robot-name.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }

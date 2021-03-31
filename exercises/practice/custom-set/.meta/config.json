@@ -1,28 +1,26 @@
 {
   "blurb": "Create a custom set type.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
     "apapirovski",
-    "ErikSchierboom",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "javaeeeee",
-    "lantran",
     "ovidiu141",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "tejasbubane"
   ],
   "files": {
-    "solution": ["custom-set.js"],
-    "test": ["custom-set.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "custom-set.js"
+    ],
+    "test": [
+      "custom-set.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

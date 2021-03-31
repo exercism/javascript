@@ -1,25 +1,25 @@
 {
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-  "authors": ["javaeeeee"],
+  "authors": [
+    "javaeeeee"
+  ],
   "contributors": [
     "ankorGH",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
     "matthewmorgan",
     "OrthoDex",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "serixscorpio",
-    "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "SleeplessByte"
   ],
   "files": {
-    "solution": ["all-your-base.js"],
-    "test": ["all-your-base.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "all-your-base.js"
+    ],
+    "test": [
+      "all-your-base.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

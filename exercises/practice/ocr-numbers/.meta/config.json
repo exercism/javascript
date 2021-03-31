@@ -1,26 +1,25 @@
 {
   "blurb": "Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is represented, or whether it is garbled.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["ocr-numbers.js"],
-    "test": ["ocr-numbers.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "ocr-numbers.js"
+    ],
+    "test": [
+      "ocr-numbers.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Inspired by the Bank OCR kata",
   "source_url": "http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR"

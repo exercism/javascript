@@ -1,25 +1,27 @@
 {
   "blurb": "Implement basic list operations",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "archanid",
-    "G-Rath",
-    "gargrave",
     "hayashi-ay",
-    "iagocavalcante",
-    "lantran",
     "paparomeo",
-    "PSalant726",
     "rchavarria",
     "SleeplessByte",
     "tejasbubane",
-    "Tyresius92",
     "xarxziux"
   ],
   "files": {
-    "solution": ["list-ops.js"],
-    "test": ["list-ops.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "list-ops.js"
+    ],
+    "test": [
+      "list-ops.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   }
 }

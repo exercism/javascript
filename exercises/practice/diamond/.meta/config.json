@@ -3,25 +3,23 @@
   "authors": [],
   "contributors": [
     "ankorGH",
-    "G-Rath",
-    "gargrave",
     "hayashi-ay",
-    "iagocavalcante",
-    "lantran",
     "matthewmorgan",
     "ovidiu141",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
-    "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "tejasbubane"
   ],
   "files": {
-    "solution": ["diamond.js"],
-    "test": ["diamond.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "diamond.js"
+    ],
+    "test": [
+      "diamond.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Seb Rose",
   "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"

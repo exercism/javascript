@@ -1,27 +1,26 @@
 {
   "blurb": "Detect saddle points in a matrix.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
-    "andreasolund",
     "ankorGH",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "lantran",
     "ovidiu141",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
-    "rpottsoh",
     "ryanplusplus",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "tejasbubane"
   ],
   "files": {
-    "solution": ["saddle-points.js"],
-    "test": ["saddle-points.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "saddle-points.js"
+    ],
+    "test": [
+      "saddle-points.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"

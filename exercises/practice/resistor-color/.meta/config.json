@@ -1,18 +1,22 @@
 {
   "blurb": "Convert a resistor band's color to its numeric representation",
-  "authors": ["SleeplessByte"],
+  "authors": [
+    "SleeplessByte"
+  ],
   "contributors": [
     "ankorGH",
-    "G-Rath",
-    "paparomeo",
-    "tejasbubane",
-    "TomPradat",
-    "Tyresius92"
+    "TomPradat"
   ],
   "files": {
-    "solution": ["resistor-color.js"],
-    "test": ["resistor-color.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "resistor-color.js"
+    ],
+    "test": [
+      "resistor-color.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "Maud de Vries, Erik Schierboom",
   "source_url": "https://github.com/exercism/problem-specifications/issues/1458"

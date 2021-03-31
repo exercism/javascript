@@ -1,23 +1,24 @@
 {
   "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
-  "authors": ["laurmurclar"],
+  "authors": [
+    "laurmurclar"
+  ],
   "contributors": [
     "ankorGH",
-    "G-Rath",
-    "gargrave",
-    "iagocavalcante",
-    "matthewmorgan",
-    "paparomeo",
-    "PSalant726",
     "rchavarria",
     "SleeplessByte",
-    "tejasbubane",
-    "Tyresius92"
+    "tejasbubane"
   ],
   "files": {
-    "solution": ["house.js"],
-    "test": ["house.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "house.js"
+    ],
+    "test": [
+      "house.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "source": "British nursery rhyme",
   "source_url": "http://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built"
