@@ -169,7 +169,7 @@
         "name": "Two Fer",
         "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
         "practices": [],
-        "prerequisites": ["strings", "functions"],
+        "prerequisites": ["strings", "functions", "default-value", "optional-parameters"],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"]
       },
