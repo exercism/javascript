@@ -169,7 +169,12 @@
         "name": "Two Fer",
         "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
         "practices": [],
-        "prerequisites": ["strings", "functions", "default-value", "optional-parameters"],
+        "prerequisites": [
+          "strings",
+          "functions",
+          "default-value",
+          "optional-parameters"
+        ],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"]
       },
@@ -240,7 +245,12 @@
         "name": "Matrix",
         "uuid": "dd0b5e67-81f6-437e-8334-2ec0dfeb862a",
         "practices": [],
-        "prerequisites": ["strings", "arrays", "classes", "array-transformations"],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "classes",
+          "array-transformations"
+        ],
         "difficulty": 3,
         "topics": [
           "arrays",
@@ -335,7 +345,13 @@
         "name": "Simple Cipher",
         "uuid": "62d60b42-93bc-4de9-90d1-1ca18a847812",
         "practices": [],
-        "prerequisites": ["strings", "arrays", "classes", "numbers", "codepoints"],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "classes",
+          "numbers",
+          "codepoints"
+        ],
         "difficulty": 6,
         "topics": [
           "algorithms",
