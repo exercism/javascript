@@ -1,0 +1,10 @@
+{
+  "contributors": ["SleeplessByte"],
+  "authors": ["TomPradat"],
+  "files": {
+    "solution": ["errors.js"],
+    "test": ["errors.spec.js"],
+    "exemplar": [".meta/example.js"]
+  },
+  "blurb": "Learn how to handle errors by creating a piece of software for a newspaper factory."
+}
