@@ -178,7 +178,7 @@
         "name": "Resistor Color",
         "uuid": "53be6837-c224-45f1-bff3-d7f74d6285ce",
         "practices": [],
-        "prerequisites": ["arrays"],
+        "prerequisites": ["arrays", "array-analysis"],
         "difficulty": 1,
         "topics": ["arrays", "strings"]
       },
