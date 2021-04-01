@@ -16,7 +16,7 @@
     "@types/node": "^14.14.37",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
-    "core-js": "^3.9.1",
+    "core-js": "^3.10.0",
     "eslint": "^7.23.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3"
