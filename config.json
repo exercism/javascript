@@ -369,7 +369,7 @@
         "name": "Secret Handshake",
         "uuid": "74bbc9e3-edc5-41e0-84d7-5b2d98dd8370",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["bit-manipulation", "array-analysis"],
         "difficulty": 6,
         "topics": [
           "algorithms",
