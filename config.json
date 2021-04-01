@@ -255,7 +255,7 @@
         "name": "Bob",
         "uuid": "a5bf36f0-5d3c-41d4-8d54-e37e484e59cd",
         "practices": [],
-        "prerequisites": ["strings", "booleans", "regexps"],
+        "prerequisites": ["strings", "booleans", "regular-expressions"],
         "difficulty": 4,
         "topics": [
           "conditionals",
