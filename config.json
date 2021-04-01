@@ -335,7 +335,7 @@
         "name": "Simple Cipher",
         "uuid": "62d60b42-93bc-4de9-90d1-1ca18a847812",
         "practices": [],
-        "prerequisites": ["strings", "arrays", "classes", "numbers"],
+        "prerequisites": ["strings", "arrays", "classes", "numbers", "codepoints"],
         "difficulty": 6,
         "topics": [
           "algorithms",
