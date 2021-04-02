@@ -1,7 +1,5 @@
 {
   "blurb": "The minimal knowledge required to get started in JavaScript. Function declarations, variable assignment, and a few operators for numbers. ",
-  "authors": [
-    "SleeplessByte"
-  ],
+  "authors": ["SleeplessByte"],
   "contributors": []
 }

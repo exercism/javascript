@@ -1,7 +1,5 @@
 {
   "blurb": "Shorthand notation to increment and decrement numbers using special operators",
-  "authors": [
-    "junedev"
-  ],
+  "authors": ["junedev"],
   "contributors": []
 }

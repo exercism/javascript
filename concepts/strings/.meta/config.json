@@ -1,9 +1,5 @@
 {
   "blurb": "TODO: add blurb for strings concept",
-  "authors": [
-    "SleeplessByte"
-  ],
-  "contributors": [
-    "hayashi-ay"
-  ]
+  "authors": ["SleeplessByte"],
+  "contributors": ["hayashi-ay"]
 }

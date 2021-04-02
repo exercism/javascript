@@ -1,7 +1,5 @@
 {
   "blurb": "Compare values using operators to check greater than, less than, equals and not equals",
-  "authors": [
-    "junedev"
-  ],
+  "authors": ["junedev"],
   "contributors": []
 }
