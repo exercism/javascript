@@ -1,6 +1,19 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "amscotti",
+    "austinratcliff",
+    "brendan-c",
+    "draalger",
+    "hayashi-ay",
+    "kytrinyx",
+    "matthewmorgan",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["bob.js"],
     "test": ["bob.spec.js"],

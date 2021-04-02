@@ -1,6 +1,7 @@
 {
   "blurb": "Given a natural radicand, return its square root.",
-  "authors": [],
+  "authors": ["evelynstender"],
+  "contributors": ["SleeplessByte", "zimmah"],
   "files": {
     "solution": ["square-root.js"],
     "test": ["square-root.spec.js"],

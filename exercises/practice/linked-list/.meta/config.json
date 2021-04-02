@@ -1,6 +1,18 @@
 {
   "blurb": "Implement a doubly linked list",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "bdjnk",
+    "cmccandless",
+    "jcshih",
+    "junedev",
+    "monte-hayward",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "thanhcng"
+  ],
   "files": {
     "solution": ["linked-list.js"],
     "test": ["linked-list.spec.js"],

@@ -1,6 +1,14 @@
 {
   "blurb": "Compute the result for a game of Hex / Polygon",
-  "authors": [],
+  "authors": ["arthurchipdean"],
+  "contributors": [
+    "diego-caceres",
+    "matthewmorgan",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["connect.js"],
     "test": ["connect.spec.js"],

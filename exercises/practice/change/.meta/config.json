@@ -1,6 +1,14 @@
 {
   "blurb": "Correctly determine change to be given using the least number of coins",
-  "authors": [],
+  "authors": ["RobinCsl"],
+  "contributors": [
+    "adamxtokyo",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "TomPradat",
+    "whatcoda"
+  ],
   "files": {
     "solution": ["change.js"],
     "test": ["change.spec.js"],

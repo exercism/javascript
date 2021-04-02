@@ -1,6 +1,15 @@
 {
   "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "hyuko21",
+    "msomji",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["wordy.js"],
     "test": ["wordy.spec.js"],

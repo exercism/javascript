@@ -1,6 +1,16 @@
 {
   "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "gabriel376",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["luhn.js"],
     "test": ["luhn.spec.js"],

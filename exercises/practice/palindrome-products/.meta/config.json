@@ -1,6 +1,20 @@
 {
   "blurb": "Detect palindrome products in a given range.",
   "authors": [],
+  "contributors": [
+    "ankorGH",
+    "cmccandless",
+    "draalger",
+    "ErikSchierboom",
+    "javaeeeee",
+    "kytrinyx",
+    "matthewmorgan",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "smb26",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["palindrome-products.js"],
     "test": ["palindrome-products.spec.js"],

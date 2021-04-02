@@ -1,6 +1,7 @@
 {
   "blurb": "Implement rational numbers.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": ["ankorGH", "SleeplessByte", "tejasbubane"],
   "files": {
     "solution": ["rational-numbers.js"],
     "test": ["rational-numbers.spec.js"],

@@ -1,6 +1,7 @@
 {
   "blurb": "Simulate a bank account supporting opening/closing, withdraws, and deposits of money. Watch out for concurrent transactions!",
-  "authors": [],
+  "authors": ["TomPradat"],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["bank-account.js"],
     "test": ["bank-account.spec.js"],

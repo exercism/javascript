@@ -1,6 +1,7 @@
 {
   "blurb": "Convert color codes, as used on resistors, to a numeric value.",
-  "authors": [],
+  "authors": ["tejasbubane"],
+  "contributors": ["ankorGH", "clockelliptic", "SleeplessByte"],
   "files": {
     "solution": ["resistor-color-duo.js"],
     "test": ["resistor-color-duo.spec.js"],

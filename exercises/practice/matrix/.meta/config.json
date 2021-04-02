@@ -1,6 +1,17 @@
 {
   "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "amscotti",
+    "ankorGH",
+    "brendan-c",
+    "DagmarTimmreck",
+    "matthewmorgan",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["matrix.js"],
     "test": ["matrix.spec.js"],

@@ -1,6 +1,7 @@
 {
   "blurb": "Implement variable length quantity encoding and decoding.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": ["ankorGH", "hayashi-ay", "SleeplessByte", "smb26"],
   "files": {
     "solution": ["variable-length-quantity.js"],
     "test": ["variable-length-quantity.spec.js"],

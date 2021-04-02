@@ -1,6 +1,17 @@
 {
   "blurb": "Calculate the Hamming difference between two DNA strands.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "draalger",
+    "gabriel376",
+    "kytrinyx",
+    "matthewmorgan",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["hamming.js"],
     "test": ["hamming.spec.js"],

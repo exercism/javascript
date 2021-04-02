@@ -1,6 +1,15 @@
 {
   "blurb": "Use the Sieve of Eratosthenes to find all the primes from 2 up to a given number.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "ntshcalleia",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "smb26"
+  ],
   "files": {
     "solution": ["sieve.js"],
     "test": ["sieve.spec.js"],

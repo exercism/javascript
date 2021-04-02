@@ -1,6 +1,13 @@
 {
   "blurb": "Implement an evaluator for a very simple subset of Forth",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "brendanmckeown",
+    "slaymance",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["forth.js"],
     "test": ["forth.spec.js"],

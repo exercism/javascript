@@ -1,6 +1,7 @@
 {
   "blurb": "Score a single throw of dice in the game Yacht",
-  "authors": [],
+  "authors": ["ovidiu141"],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["yacht.js"],
     "test": ["yacht.spec.js"],

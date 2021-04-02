@@ -1,6 +1,13 @@
 {
   "blurb": "Implement a basic reactive system.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "Boto1",
+    "joshgoebel",
+    "PakkuDon",
+    "rchavarria",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["react.js"],
     "test": ["react.spec.js"],

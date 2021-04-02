@@ -1,6 +1,15 @@
 {
   "blurb": "Given a word, compute the Scrabble score for that word.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "amscotti",
+    "ankorGH",
+    "ntshcalleia",
+    "rchavarria",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["scrabble-score.js"],
     "test": ["scrabble-score.spec.js"],

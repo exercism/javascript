@@ -1,6 +1,14 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "Futuro212",
+    "matthewmorgan",
+    "ovidiu141",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["binary-search.js"],
     "test": ["binary-search.spec.js"],

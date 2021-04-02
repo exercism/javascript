@@ -1,6 +1,7 @@
 {
   "blurb": "Make a chain of dominoes.",
-  "authors": [],
+  "authors": ["chauchakching"],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["dominoes.js"],
     "test": ["dominoes.spec.js"],

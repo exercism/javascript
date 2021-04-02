@@ -1,6 +1,7 @@
 {
   "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
-  "authors": [],
+  "authors": ["TomPradat"],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["affine-cipher.js"],
     "test": ["affine-cipher.spec.js"],

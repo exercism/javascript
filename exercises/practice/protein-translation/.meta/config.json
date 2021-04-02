@@ -1,6 +1,7 @@
 {
   "blurb": "Translate RNA sequences into proteins.",
-  "authors": [],
+  "authors": ["RobinCsl"],
+  "contributors": ["ankorGH", "SleeplessByte", "tejasbubane", "WebCu"],
   "files": {
     "solution": ["protein-translation.js"],
     "test": ["protein-translation.spec.js"],

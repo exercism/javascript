@@ -1,6 +1,15 @@
 {
   "blurb": "Convert a long phrase to its acronym",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "cmccandless",
+    "gargrave",
+    "rchavarria",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["acronym.js"],
     "test": ["acronym.spec.js"],

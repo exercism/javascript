@@ -1,6 +1,13 @@
 {
   "blurb": "Write a function that returns the earned points in a single toss of a Darts game",
-  "authors": [],
+  "authors": ["ramadis"],
+  "contributors": [
+    "ankorGH",
+    "d-vail",
+    "ovidiu141",
+    "SleeplessByte",
+    "Tyresius92"
+  ],
   "files": {
     "solution": ["darts.js"],
     "test": ["darts.spec.js"],

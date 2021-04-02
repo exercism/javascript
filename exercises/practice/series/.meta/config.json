@@ -1,6 +1,15 @@
 {
   "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "rchavarria",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["series.js"],
     "test": ["series.spec.js"],
