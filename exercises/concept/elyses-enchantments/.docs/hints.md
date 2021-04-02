@@ -9,6 +9,7 @@
 
 - The array is a mutable structure, you can change its content anytime.
 - You can find an example [here][change_array_elements_resource], inside the 'Changing an Array Element' section.
+
 ## 3. Insert a card at the top of the stack
 
 - There is a [built-in][push_method_docs] method to add a new value to the end of the array.
@@ -16,7 +17,6 @@
 ## 4. Insert a card at the bottom of the stack
 
 - There is a [built-in][unshift_method_docs] method to add a new value to the beginning of the array.
-
 
 ## 5. Remove a card from the stack
 

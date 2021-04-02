@@ -17,27 +17,27 @@ The array's object properties and list of array elements are separate, and the a
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
-names.length
+names.length;
 // => 3
 
 // Properties can be set on arrays using bracket ['property'] or dot .property
 // notation, and this will affect the length, as shown below.
 
-names.magician = 'Elyse'
-names.length
+names.magician = 'Elyse';
+names.length;
 // => 4
 
 // The property shows up when logging the array, making it seem that the
 // property is somehow incorporated in the array.
 
-names
+names;
 // => ["Jack", "Laura", "Paul", "Megan", magician: "Elyse"]
 
 // However, be aware. Properties added via non-numeric keys are NOT part of the
 // array's internal list, and are not traversed or mutated when using one of
 // the traversal or mutation operations.
 
-names.forEach((name) => console.log(name))
+names.forEach((name) => console.log(name));
 // => Jack
 // => Laura
 // => Paul
@@ -53,15 +53,15 @@ The `empty` holes are skipped when using traversal or mutation operations.
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
-delete names[1]
+delete names[1];
 
-names
+names;
 // =>  ["Jack", empty, "Paul", "Megan"]
 
-names.length
+names.length;
 // => 4
 
-names.forEach((name) => console.log(name))
+names.forEach((name) => console.log(name));
 // => Jack
 // => Paul
 // => Megan
@@ -71,15 +71,15 @@ If there should be no holes, and if the `length` should reflect the amount of it
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
-names.splice(1, 1)
+names.splice(1, 1);
 
-names
+names;
 // =>  ["Jack", "Paul", "Megan"]
 
-names.length
+names.length;
 // => 3
 
-names.forEach((name) => console.log(name))
+names.forEach((name) => console.log(name));
 // => Jack
 // => Paul
 // => Megan
@@ -94,12 +94,12 @@ When the length is decreased, it _removes_ the elements at the end of the array.
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
-names.length = 6
+names.length = 6;
 
-names
+names;
 // => ["Jack", "Laura", "Paul", "Megan", empty × 2]
 
-names.length = 2
+names.length = 2;
 // =>  ["Jack", "Laura"]
 ```
 
@@ -111,14 +111,14 @@ To check if something is an Array, use `Array.isArray`:
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 
-typeof names
+typeof names;
 // => "object"
 
-Array.isArray(names)
+Array.isArray(names);
 // => true
 
-const object = {}
-Array.isArray(object)
+const object = {};
+Array.isArray(object);
 // => false
 ```
 
