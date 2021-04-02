@@ -31,7 +31,7 @@ You can find all the methods in the [MDN docs][mdn-docs].
 
 ## String interpolation
 
-Strings in JavaScript support interpolation using [string template literals][mdn-template-strings].
+Strings in JavaScript support concatenation using [`+` and slight variations][https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#long_literal_strings] and interpolation using [string template literals][mdn-template-strings].
 
 ```javascript
 const NUMBER_OF_CATS = 4;
@@ -44,7 +44,4 @@ const interpolation = `I have ${NUMBER_OF_CATS} cats`;
 
 [mdn-docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
 [mdn-template-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
-```
-
-```
+[mdn-concatenation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#long_literal_strings
