@@ -1,6 +1,14 @@
 {
   "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "brendanmckeown",
+    "matthewmorgan",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["kindergarten-garden.js"],
     "test": ["kindergarten-garden.spec.js"],

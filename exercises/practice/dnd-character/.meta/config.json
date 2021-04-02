@@ -1,6 +1,7 @@
 {
   "blurb": "Randomly generate Dungeons & Dragons characters",
-  "authors": [],
+  "authors": ["Tyresius92"],
+  "contributors": ["ankorGH", "hayashi-ay", "SleeplessByte"],
   "files": {
     "solution": ["dnd-character.js"],
     "test": ["dnd-character.spec.js"],

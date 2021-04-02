@@ -1,6 +1,7 @@
 {
   "blurb": "Search a file for lines matching a regular expression pattern. Return the line number and contents of each matching line.",
-  "authors": [],
+  "authors": ["TomPradat"],
+  "contributors": ["iHiD", "SleeplessByte"],
   "files": {
     "solution": ["grep.js"],
     "test": ["grep.spec.js"],

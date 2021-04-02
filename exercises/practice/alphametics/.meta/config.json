@@ -1,6 +1,13 @@
 {
   "blurb": "Write a function to solve alphametics puzzles.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "rchavarria",
+    "slaymance",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["alphametics.js"],
     "test": ["alphametics.spec.js"],

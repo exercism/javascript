@@ -1,6 +1,7 @@
 {
   "blurb": "Count the rectangles in an ASCII diagram.",
-  "authors": [],
+  "authors": ["MattH-be"],
+  "contributors": ["ankorGH", "SleeplessByte", "tejasbubane", "xarxziux"],
   "files": {
     "solution": ["rectangles.js"],
     "test": ["rectangles.spec.js"],

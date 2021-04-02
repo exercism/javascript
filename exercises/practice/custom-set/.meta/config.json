@@ -1,6 +1,15 @@
 {
   "blurb": "Create a custom set type.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "apapirovski",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["custom-set.js"],
     "test": ["custom-set.spec.js"],

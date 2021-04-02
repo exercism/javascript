@@ -1,6 +1,18 @@
 {
   "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "amscotti",
+    "ankorGH",
+    "draalger",
+    "kytrinyx",
+    "matthewmorgan",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tarunvelli",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["rna-transcription.js"],
     "test": ["rna-transcription.spec.js"],

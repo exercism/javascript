@@ -1,6 +1,14 @@
 {
   "blurb": "Implement the classic method for composing secret messages called a square code.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "diego-caceres",
+    "ntshcalleia",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["crypto-square.js"],
     "test": ["crypto-square.spec.js"],

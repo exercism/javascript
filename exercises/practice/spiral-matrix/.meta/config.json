@@ -1,6 +1,13 @@
 {
   "blurb": " Given the size, return a square matrix of numbers in spiral order.",
-  "authors": [],
+  "authors": ["MattH-be"],
+  "contributors": [
+    "ankorGH",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["spiral-matrix.js"],
     "test": ["spiral-matrix.spec.js"],

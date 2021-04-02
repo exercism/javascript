@@ -1,6 +1,18 @@
 {
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "draalger",
+    "kytrinyx",
+    "matthewmorgan",
+    "ovidiu141",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tarunvelli",
+    "tejasbubane",
+    "ZacharyRSmith"
+  ],
   "files": {
     "solution": ["word-count.js"],
     "test": ["word-count.spec.js"],

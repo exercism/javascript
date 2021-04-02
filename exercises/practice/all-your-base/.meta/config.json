@@ -1,6 +1,14 @@
 {
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-  "authors": [],
+  "authors": ["javaeeeee"],
+  "contributors": [
+    "ankorGH",
+    "matthewmorgan",
+    "OrthoDex",
+    "rchavarria",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["all-your-base.js"],
     "test": ["all-your-base.spec.js"],

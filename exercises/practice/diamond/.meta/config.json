@@ -1,6 +1,15 @@
 {
   "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
   "authors": [],
+  "contributors": [
+    "ankorGH",
+    "hayashi-ay",
+    "matthewmorgan",
+    "ovidiu141",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["diamond.js"],
     "test": ["diamond.spec.js"],

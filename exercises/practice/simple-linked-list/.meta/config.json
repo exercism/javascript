@@ -1,6 +1,12 @@
 {
   "blurb": "Write a simple linked list implementation that uses Elements and a List",
-  "authors": [],
+  "authors": ["apapirovski"],
+  "contributors": [
+    "maruthimohan",
+    "matthewmorgan",
+    "rchavarria",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["simple-linked-list.js"],
     "test": ["simple-linked-list.spec.js"],

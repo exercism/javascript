@@ -3,8 +3,8 @@
   "authors": ["SleeplessByte"],
   "contributors": ["hayashi-ay"],
   "files": {
-    "solution": ["strings.js"],
-    "test": ["strings.spec.js"],
+    "solution": ["door-policy.js"],
+    "test": ["door-policy.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []

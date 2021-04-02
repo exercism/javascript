@@ -1,6 +1,7 @@
 {
   "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
-  "authors": [],
+  "authors": ["laurmurclar"],
+  "contributors": ["ankorGH", "rchavarria", "SleeplessByte", "tejasbubane"],
   "files": {
     "solution": ["house.js"],
     "test": ["house.spec.js"],

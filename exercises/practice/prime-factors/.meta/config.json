@@ -1,6 +1,13 @@
 {
   "blurb": "Compute the prime factors of a given natural number.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "matthewmorgan",
+    "ryanplusplus",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["prime-factors.js"],
     "test": ["prime-factors.spec.js"],

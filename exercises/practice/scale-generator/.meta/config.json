@@ -1,6 +1,7 @@
 {
   "blurb": "Generate musical scales, given a starting note and a set of intervals. ",
-  "authors": [],
+  "authors": ["seeksort"],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["scale-generator.js"],
     "test": ["scale-generator.spec.js"],

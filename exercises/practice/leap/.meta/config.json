@@ -1,6 +1,18 @@
 {
   "blurb": "Given a year, report if it is a leap year.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "draalger",
+    "kytrinyx",
+    "matthewmorgan",
+    "PakkuDon",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tarunvelli",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["leap.js"],
     "test": ["leap.spec.js"],

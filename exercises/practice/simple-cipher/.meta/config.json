@@ -1,6 +1,22 @@
 {
   "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "daveyarwood",
+    "hayashi-ay",
+    "marocchino",
+    "nicholejeannine",
+    "paparomeo",
+    "pawamoy",
+    "rchavarria",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte",
+    "tekerson",
+    "Vankog",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["simple-cipher.js"],
     "test": ["simple-cipher.spec.js"],

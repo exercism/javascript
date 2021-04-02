@@ -1,6 +1,15 @@
 {
   "blurb": "Manage robot factory settings.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "draalger",
+    "kytrinyx",
+    "masters3d",
+    "matthewmorgan",
+    "ntshcalleia",
+    "ryanplusplus",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["robot-name.js"],
     "test": ["robot-name.spec.js"],

@@ -1,6 +1,15 @@
 {
   "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "ovidiu141",
+    "PSalant726",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["secret-handshake.js"],
     "test": ["secret-handshake.spec.js"],

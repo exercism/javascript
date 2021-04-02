@@ -1,6 +1,14 @@
 {
   "blurb": "Implement complex numbers.",
-  "authors": [],
+  "authors": ["MattH-be"],
+  "contributors": [
+    "ankorGH",
+    "burennto",
+    "cmccandless",
+    "SleeplessByte",
+    "tejasbubane",
+    "trvrfrd"
+  ],
   "files": {
     "solution": ["complex-numbers.js"],
     "test": ["complex-numbers.spec.js"],

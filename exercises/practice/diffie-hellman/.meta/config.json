@@ -1,6 +1,13 @@
 {
   "blurb": "Diffie-Hellman key exchange.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "rchavarria",
+    "serixscorpio",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["diffie-hellman.js"],
     "test": ["diffie-hellman.spec.js"],

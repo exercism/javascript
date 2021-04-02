@@ -1,6 +1,8 @@
 # Introduction
 
 Strings are useful for holding data that can be represented in text form.
+In JavaScript, create string literals using two single quotes (`'literal'`) or two double quotes (`"literal"`).
+
 There are two ways to access an individual character in a string.
 
 The first is the `charAt()` method:
@@ -10,7 +12,8 @@ The first is the `charAt()` method:
 // => "a"
 ```
 
-The other way is to treat a `string` as a list of characters, where individual characters correspond to a numerical index (starts at zero):
+The other way is to treat a `string` as a list of characters, where individual characters correspond to a numerical index (starts at zero).
+The indexer syntax (`[index]`) can then be used to acccess the character at a specific index:
 
 ```javascript
 'cat'[1];

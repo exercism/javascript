@@ -1,6 +1,16 @@
 {
   "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "hayashi-ay",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "smb26",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["sum-of-multiples.js"],
     "test": ["sum-of-multiples.spec.js"],

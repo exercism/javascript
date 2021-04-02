@@ -112,7 +112,8 @@
         "status": "beta"
       },
       {
-        "slug": "strings",
+        "slug": "poetry-club-door-policy",
+        "name": "Poetry Club Door Policy",
         "uuid": "39549583-1889-490a-bf98-ffb2e0aefe44",
         "concepts": ["strings"],
         "prerequisites": ["basics"],
