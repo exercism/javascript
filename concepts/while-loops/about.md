@@ -22,10 +22,24 @@ do {
 } while (condition);
 ```
 
-## Break and Continue
+## Break
 
-Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
-In contrast, the keyword `continue` only stops the execution of the current iteration and continues with the next one. With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
+Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely. This is often used in combination with `true` as condition. With that, you can control when the loop should stop from any place inside the loop body.
+
+```javascript
+const winningNumber = 7;
+
+while (true) {
+  const num = readUserGuess();
+  if (num === winningNumber) break;
+}
+```
+
+The `break` keyword cannot be used inside a function that is nested in the loop, see the [MDN documentation][mdn-break-in-function] for an example.
+
+## Continue
+
+In contrast to `break`, the keyword `continue` only stops the execution of the current iteration and continues with the next one. With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
 
 ```javascript
 let i = 0;
@@ -40,10 +54,23 @@ while (i < 100) {
 }
 ```
 
-The `break` keyword cannot be used inside a function that is nested in the loop, see the [MDN documentation][mdn-break-in-function] for an example.
-
 ## Infinite Loops
 
-FIXME
+A loop that is (theoretically) repeated forever is created when the loop condition is always fulfilled and there is no break statement called in the loop body. Depending on the environment in which such code runs, the execution has to be terminated automatically or manually from the outside.
+
+```javascript
+let i = 0;
+
+while (i < 100) {
+  if (i % 3 === 0) continue;
+
+  i = i + 2;
+}
+
+// this loop runs forever since i does not change anymore
+// after it is divisible by 3 the first time
+```
+
+Spotting infinite loops might seem trivial in this toy example but is not always that easy with more complex code. It is good practice to thoroughly think about whether your condition eventually becomes false or whether your break statement is actually triggered.
 
 [mdn-break-in-function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break#break_within_functions

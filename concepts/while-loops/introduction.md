@@ -9,11 +9,29 @@ while (condition) {
 }
 ```
 
-If you want to evaluate the condition after the body was executed, you can use the do-while loop instead.
+JavaScript also has a do-while loop.
+Here the condition is evaluated after the loop body was executed.
+This is useful when the condition depends on the outcome of the code in the body.
 
 ```javascript
 do {
   // the code here will always be executed once and then repeatedly
   // if the condition is true after the last iteration
 } while (condition);
+```
+
+Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
+In contrast to this, the keyword `continue` only stops the execution of the current iteration and continues with the next one. With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
+
+```javascript
+let i = 0;
+
+while (i < 100) {
+  i = i + 2;
+
+  if (i % 3 === 0) continue;
+
+  // the code here will only executed
+  // when i was not divisible by 3 in the check above
+}
 ```
