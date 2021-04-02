@@ -1,6 +1,7 @@
 # Introduction
 
-In Javascript, an array is a list-like structure with no fixed length which can hold any type of primitives or ojects, even mixed types. The array elements can be accesed by their index.
+In Javascript, an array is a list-like structure with no fixed length which can hold any type of primitives or objects, even mixed types.
+The array elements can be accessed by their index.
 
 Example of an array declaration and accessing an element by index:
 

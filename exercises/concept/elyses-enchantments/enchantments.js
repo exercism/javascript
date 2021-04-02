@@ -1,100 +1,96 @@
 // @ts-check
-//
-// The line above enables type checking for this file. Various IDEs interpret
-// the @ts-check directive. It will give you helpful autocompletion when
-// implementing this exercise.
 
 /**
- * Retrieve card from array at position index
+ * Retrieve card from cards array at the 0-based position
  *
- * @param {number[]} array
- * @param {number} index
+ * @param {number[]} cards
+ * @param {number} position
  *
- * @returns {number} Value of card retrieved
+ * @returns {number} the card
  */
-export function getItem(array, index) {
+export function getItem(cards, position) {
   throw new Error('Implement the getItem function');
 }
 
 /**
- * Exchange card from array with newCard at position index
+ * Exchange card with replacementCard at the 0-based position
  *
- * @param {number[]} array
- * @param {number} index
- * @param {number} newCard
+ * @param {number[]} cards
+ * @param {number} position
+ * @param {number} replacementCard
  *
- * @returns {number[]} Array after exchanged card with newCard
+ * @returns {number[]} the cards with the change applied
  */
-export function setItem(array, index, newCard) {
+export function setItem(cards, position, replacementCard) {
   throw new Error('Implement the setItem function');
 }
 
 /**
- * Insert newCard at the end of array
+ * Insert newCard at the end of the cards array
  *
- * @param {number[]} array
+ * @param {number[]} cards
  * @param {number} newCard
  *
- * @returns {number[]} Array after newCard inserted
+ * @returns {number[]} the cards with the newCard applied
  */
-export function insertItemAtTop(array, newCard) {
+export function insertItemAtTop(cards, newCard) {
   throw new Error('Implement the insertItemAtTop function');
 }
 
 /**
- * Remove card from array at position index
+ * Remove the card at the 0-based position
  *
- * @param {number[]} array
- * @param {number} index
+ * @param {number[]} cards
+ * @param {number} position
  *
- * @returns {number[]} Array after card removed
+ * @returns {number[]} the cards without the removed card
  */
-export function removeItem(array, index) {
+export function removeItem(cards, position) {
   throw new Error('Implement the removeItem function');
 }
 
 /**
- * Remove card from the end of array
+ * Remove card from the end of the cards array
  *
- * @param {number[]} array
+ * @param {number[]} cards
  *
- * @returns {number[]} Array after card removed
+ * @returns {number[]} the cards without the removed card
  */
-export function removeItemFromTop(array) {
+export function removeItemFromTop(cards) {
   throw new Error('Implement the removeItemFromTop function');
 }
 
 /**
- * Insert newCard at beginning of array
+ * Insert newCard at beginning of the cards array
  *
- * @param {number[]} array
+ * @param {number[]} cards
  * @param {number} newCard
  *
- * @returns {number[]} Array after newCard inserted
+ * @returns {number[]} the cards including the new card
  */
-export function insertItemAtBottom(array, newCard) {
+export function insertItemAtBottom(cards, newCard) {
   throw new Error('Implement the insertItemAtBottom function');
 }
 
 /**
- * Remove card from the beginning of array
+ * Remove card from the beginning of the cards cards
  *
- * @param {number[]} array
+ * @param {number[]} cards
  *
- * @returns {number[]} Array after card removed
+ * @returns {number[]} the cards without the removed card
  */
-export function removeItemAtBottom(array) {
+export function removeItemAtBottom(cards) {
   throw new Error('Implement the removeItemAtBottom function');
 }
 
 /**
- * Check the size of array, Does it equals to stackSize
+ * Compare the number of cards with the given stackSize
  *
- * @param {number[]} array
+ * @param {number[]} cards
  * @param {number} stackSize
  *
- * @returns {boolean} Whether the size of array equals to stackSize
+ * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
-export function checkSizeOfStack(array, stackSize) {
-  throw new Error('Implement the checkLengthOfStack function');
+export function checkSizeOfStack(cards, stackSize) {
+  throw new Error('Implement the checkSizeOfStack function');
 }
