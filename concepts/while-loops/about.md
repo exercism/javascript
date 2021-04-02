@@ -3,6 +3,7 @@
 ## General Syntax
 
 With a while loop you can execute code repeatably as long as a certain condition is true.
+
 It is written with the `while` keyword followed by a condition wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
 
 ```javascript
@@ -24,7 +25,8 @@ do {
 
 ## Break
 
-Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely. This is often used in combination with `true` as condition. With that, you can control when the loop should stop from any place inside the loop body.
+Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely. This is often used in combination with `true` as condition.
+With that, you can control when the loop should stop from any place inside the loop body.
 
 ```javascript
 const winningNumber = 7;
@@ -39,7 +41,8 @@ The `break` keyword cannot be used inside a function that is nested in the loop,
 
 ## Continue
 
-In contrast to `break`, the keyword `continue` only stops the execution of the current iteration and continues with the next one. With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
+In contrast to `break`, the keyword `continue` only stops the execution of the current iteration and continues with the next one.
+With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
 
 ```javascript
 let i = 0;
@@ -56,7 +59,8 @@ while (i < 100) {
 
 ## Infinite Loops
 
-A loop that is (theoretically) repeated forever is created when the loop condition is always fulfilled and there is no break statement called in the loop body. Depending on the environment in which such code runs, the execution has to be terminated automatically or manually from the outside.
+A loop that is (theoretically) repeated forever is created when the loop condition is always fulfilled and there is no break statement called in the loop body.
+Depending on the environment in which such code runs, the execution has to be terminated automatically or manually from the outside.
 
 ```javascript
 let i = 0;
@@ -71,6 +75,7 @@ while (i < 100) {
 // after it is divisible by 3 the first time
 ```
 
-Spotting infinite loops might seem trivial in this toy example but is not always that easy with more complex code. It is good practice to thoroughly think about whether your condition eventually becomes false or whether your break statement is actually triggered.
+Spotting infinite loops might seem trivial in this toy example but is not always that easy with more complex code.
+It is good practice to thoroughly think about whether your condition eventually becomes false or whether your break statement is actually triggered.
 
 [mdn-break-in-function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break#break_within_functions

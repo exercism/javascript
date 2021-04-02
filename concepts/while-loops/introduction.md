@@ -21,7 +21,8 @@ do {
 ```
 
 Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
-In contrast to this, the keyword `continue` only stops the execution of the current iteration and continues with the next one. With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
+In contrast to this, the keyword `continue` only stops the execution of the current iteration and continues with the next one.
+With `continue` you can often avoid wrapping big parts of the loop body in an if-statement.
 
 ```javascript
 let i = 0;
