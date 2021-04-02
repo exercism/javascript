@@ -1,8 +1,6 @@
 {
   "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "Futuro212",
     "ovidiu141",
@@ -13,15 +11,9 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "atbash-cipher.js"
-    ],
-    "test": [
-      "atbash-cipher.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["atbash-cipher.js"],
+    "test": ["atbash-cipher.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Atbash"

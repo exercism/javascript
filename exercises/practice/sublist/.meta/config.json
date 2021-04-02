@@ -1,8 +1,6 @@
 {
   "blurb": "Write a function to determine if a list is a sublist of another list.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "ankorGH",
     "rchavarria",
@@ -11,14 +9,8 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "sublist.js"
-    ],
-    "test": [
-      "sublist.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["sublist.js"],
+    "test": ["sublist.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }

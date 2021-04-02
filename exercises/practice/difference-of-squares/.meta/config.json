@@ -1,8 +1,6 @@
 {
   "blurb": "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "ankorGH",
     "hayashi-ay",
@@ -14,15 +12,9 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "difference-of-squares.js"
-    ],
-    "test": [
-      "difference-of-squares.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["difference-of-squares.js"],
+    "test": ["difference-of-squares.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Problem 6 at Project Euler",
   "source_url": "http://projecteuler.net/problem=6"

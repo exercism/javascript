@@ -1,8 +1,6 @@
 {
   "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "ankorGH",
     "gabriel376",
@@ -14,15 +12,9 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "luhn.js"
-    ],
-    "test": [
-      "luhn.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["luhn.js"],
+    "test": ["luhn.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "The Luhn Algorithm on Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"

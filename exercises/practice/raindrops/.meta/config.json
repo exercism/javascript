@@ -1,8 +1,6 @@
 {
   "blurb": "Convert a number to a string, the content of which depends on the number's factors.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "ankorGH",
     "cmccandless",
@@ -13,15 +11,9 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": [
-      "raindrops.js"
-    ],
-    "test": [
-      "raindrops.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["raindrops.js"],
+    "test": ["raindrops.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division.",
   "source_url": "https://en.wikipedia.org/wiki/Fizz_buzz"

@@ -1,8 +1,6 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [
-    "rchavarria"
-  ],
+  "authors": ["rchavarria"],
   "contributors": [
     "amscotti",
     "ankorGH",
@@ -17,15 +15,9 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": [
-      "anagram.js"
-    ],
-    "test": [
-      "anagram.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["anagram.js"],
+    "test": ["anagram.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "source": "Inspired by the Extreme Startup game",
   "source_url": "https://github.com/rchatley/extreme_startup"

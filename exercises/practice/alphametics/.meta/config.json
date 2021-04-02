@@ -1,8 +1,6 @@
 {
   "blurb": "Write a function to solve alphametics puzzles.",
-  "authors": [
-    "matthewmorgan"
-  ],
+  "authors": ["matthewmorgan"],
   "contributors": [
     "rchavarria",
     "slaymance",
@@ -11,14 +9,8 @@
     "xarxziux"
   ],
   "files": {
-    "solution": [
-      "alphametics.js"
-    ],
-    "test": [
-      "alphametics.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["alphametics.js"],
+    "test": ["alphametics.spec.js"],
+    "example": [".meta/proof.ci.js"]
   }
 }
