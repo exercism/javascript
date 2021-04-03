@@ -1,0 +1,5 @@
+{
+  "blurb": "Besides the if-statement, JavaScript also has a switch-statement to conditionally execute logic. It is used when a single variable needs to be compared to multiple variants.",
+  "authors": ["junedev"],
+  "contributors": []
+}
