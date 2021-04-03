@@ -1,12 +1,12 @@
 {
-  "name": "@exercism/javascript-master-mixologist",
-  "description": "Exercism concept exercise on while loops and switch statements",
+  "name": "@exercism/javascript-vehicle-purchase",
+  "description": "Exercism concept exercise on conditionals and comparison",
   "author": "Franziska Obbarius <12543047+junedev@users.noreply.github.com>",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/master-mixologist"
+    "directory": "exercises/concept/vehicle-purchase"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
