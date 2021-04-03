@@ -1639,7 +1639,7 @@
       "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
       "slug": "conditionals-switch",
       "name": "Switch Statement",
-      "blurb": "Besides the if-statement, JavaScript also has a switch-statement to conditionally execute logic. It is used when a single variable needs to be matched against multiple values."
+      "blurb": "Besides the if-statement, JavaScript also has a switch-statement to conditionally execute logic. It is used when a single variable needs to be compared to multiple variants."
     }
   ],
   "key_features": [
