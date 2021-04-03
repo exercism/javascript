@@ -1,6 +1,14 @@
 {
   "blurb": "Take input text and output it transposed.",
-  "authors": [],
+  "authors": ["RobinCsl"],
+  "contributors": [
+    "ankorGH",
+    "matthewmorgan",
+    "rchavarria",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["transpose.js"],
     "test": ["transpose.spec.js"],

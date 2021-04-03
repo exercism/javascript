@@ -1,6 +1,19 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "amscotti",
+    "ankorGH",
+    "draalger",
+    "gabriel376",
+    "gargrave",
+    "kytrinyx",
+    "matthewmorgan",
+    "ovidiu141",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["anagram.js"],
     "test": ["anagram.spec.js"],

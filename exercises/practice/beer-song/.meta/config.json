@@ -1,6 +1,18 @@
 {
   "blurb": "Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "draalger",
+    "Futuro212",
+    "hayashi-ay",
+    "kytrinyx",
+    "matthewmorgan",
+    "ovidiu141",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["beer-song.js"],
     "test": ["beer-song.spec.js"],

@@ -1,6 +1,10 @@
 [
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods",
-    "description": "mdn docs"
+    "description": "MDN: Strings"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+    "description": "MDN: Template literals"
   }
 ]

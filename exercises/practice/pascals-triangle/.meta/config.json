@@ -1,6 +1,14 @@
 {
   "blurb": "Compute Pascal's triangle up to a given number of rows.",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "matthewmorgan",
+    "msomji",
+    "ovidiu141",
+    "ryanplusplus",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["pascals-triangle.js"],
     "test": ["pascals-triangle.spec.js"],

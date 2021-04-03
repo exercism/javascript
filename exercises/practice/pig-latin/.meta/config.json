@@ -1,6 +1,15 @@
 {
   "blurb": "Implement a program that translates from English to Pig Latin",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "ankorGH",
+    "konni2020",
+    "matthewmorgan",
+    "ntshcalleia",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["pig-latin.js"],
     "test": ["pig-latin.spec.js"],

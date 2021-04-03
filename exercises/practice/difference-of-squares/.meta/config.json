@@ -1,6 +1,16 @@
 {
   "blurb": "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "hayashi-ay",
+    "rchavarria",
+    "ryanplusplus",
+    "Scientifica96",
+    "SleeplessByte",
+    "tejasbubane",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["difference-of-squares.js"],
     "test": ["difference-of-squares.spec.js"],

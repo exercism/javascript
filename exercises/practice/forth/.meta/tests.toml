@@ -158,6 +158,10 @@ include = true
 description = "cannot redefine numbers"
 include = true
 
+[df5b2815-3843-4f55-b16c-c3ed507292a7]
+description = "cannot redefine negative numbers"
+include = true
+
 [5180f261-89dd-491e-b230-62737e09806f]
 description = "errors if executing a non-existent word"
 include = true

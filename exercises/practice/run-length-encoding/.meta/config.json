@@ -1,6 +1,7 @@
 {
   "blurb": "Implement run-length encoding and decoding.",
-  "authors": [],
+  "authors": ["skabbass1"],
+  "contributors": ["ankorGH", "serixscorpio", "SleeplessByte"],
   "files": {
     "solution": ["run-length-encoding.js"],
     "test": ["run-length-encoding.spec.js"],

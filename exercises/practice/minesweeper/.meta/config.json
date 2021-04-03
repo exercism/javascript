@@ -1,6 +1,14 @@
 {
   "blurb": "Add the numbers to a minesweeper board",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "brendanmckeown",
+    "cr0t",
+    "rchavarria",
+    "serixscorpio",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["minesweeper.js"],
     "test": ["minesweeper.spec.js"],

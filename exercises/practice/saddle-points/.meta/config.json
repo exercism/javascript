@@ -1,6 +1,14 @@
 {
   "blurb": "Detect saddle points in a matrix.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["saddle-points.js"],
     "test": ["saddle-points.spec.js"],

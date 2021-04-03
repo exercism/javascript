@@ -1,6 +1,16 @@
 {
   "blurb": "Implement a clock that handles times without dates.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane",
+    "Tyresius92",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["clock.js"],
     "test": ["clock.spec.js"],

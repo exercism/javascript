@@ -1,6 +1,7 @@
 {
   "blurb": "Convert a resistor band's color to its numeric representation",
-  "authors": [],
+  "authors": ["SleeplessByte"],
+  "contributors": ["ankorGH", "TomPradat"],
   "files": {
     "solution": ["resistor-color.js"],
     "test": ["resistor-color.spec.js"],

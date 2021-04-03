@@ -1,6 +1,13 @@
 {
   "blurb": "Manage a player's High Score list",
-  "authors": [],
+  "authors": ["PakkuDon"],
+  "contributors": [
+    "ankorGH",
+    "cmccandless",
+    "ffflorian",
+    "hayashi-ay",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["high-scores.js"],
     "test": ["high-scores.spec.js"],

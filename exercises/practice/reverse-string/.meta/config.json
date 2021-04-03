@@ -1,6 +1,7 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": ["gavinhenderson"],
+  "contributors": ["ankorGH", "d-vail", "ovidiu141", "SleeplessByte"],
   "files": {
     "solution": ["reverse-string.js"],
     "test": ["reverse-string.spec.js"],

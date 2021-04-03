@@ -1,6 +1,16 @@
 {
   "blurb": "Determine if a sentence is a pangram.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "amscotti",
+    "ankorGH",
+    "PakkuDon",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tarunvelli",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["pangram.js"],
     "test": ["pangram.spec.js"],

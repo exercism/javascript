@@ -1,6 +1,14 @@
 {
   "blurb": "Determine if a number is an Armstrong number",
-  "authors": [],
+  "authors": ["PakkuDon"],
+  "contributors": [
+    "ankorGH",
+    "gargrave",
+    "hayashi-ay",
+    "ovidiu141",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["armstrong-numbers.js"],
     "test": ["armstrong-numbers.spec.js"],

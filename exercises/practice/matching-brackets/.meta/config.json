@@ -1,6 +1,15 @@
 {
   "blurb": "Make sure the brackets and braces all match.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ankorGH",
+    "Futuro212",
+    "ovidiu141",
+    "rchavarria",
+    "ryanplusplus",
+    "SleeplessByte",
+    "xarxziux"
+  ],
   "files": {
     "solution": ["matching-brackets.js"],
     "test": ["matching-brackets.spec.js"],

@@ -1,6 +1,14 @@
 {
   "blurb": "Calculate the date of meetups.",
-  "authors": [],
+  "authors": ["matthewmorgan"],
+  "contributors": [
+    "ovidiu141",
+    "rchavarria",
+    "rsuttles58",
+    "ryanplusplus",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": ["meetup.js"],
     "test": ["meetup.spec.js"],

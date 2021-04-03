@@ -1,6 +1,16 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": ["rchavarria"],
+  "contributors": [
+    "austinratcliff",
+    "designfrontier",
+    "draalger",
+    "kytrinyx",
+    "matthewmorgan",
+    "ryanplusplus",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["hello-world.js"],
     "test": ["hello-world.spec.js"],

@@ -1,6 +1,7 @@
 {
   "blurb": "Score a bowling game",
-  "authors": [],
+  "authors": ["trvrfrd"],
+  "contributors": ["danielj-jordan", "SleeplessByte", "tejasbubane"],
   "files": {
     "solution": ["bowling.js"],
     "test": ["bowling.spec.js"],

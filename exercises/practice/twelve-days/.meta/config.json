@@ -1,6 +1,13 @@
 {
   "blurb": "Output the lyrics to 'The Twelve Days of Christmas'",
-  "authors": [],
+  "authors": ["AakashMallik"],
+  "contributors": [
+    "ankorGH",
+    "cmccandless",
+    "PatrickMcSweeny",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
     "solution": ["twelve-days.js"],
     "test": ["twelve-days.spec.js"],
