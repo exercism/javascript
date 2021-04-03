@@ -1,6 +1,6 @@
 # Introduction
 
-## While Statement
+## While Statements
 
 With a while loop you can execute code repeatably as long as a certain condition is true.
 It is written with the `while` keyword followed by a condition wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
@@ -39,7 +39,7 @@ while (i < 100) {
 }
 ```
 
-## Switch Statement
+## Switch Statements
 
 Besides the if-statement, JavaScript also has a switch-statement to conditionally execute logic.
 It is used when a single variable needs to be compared to multiple variants.
