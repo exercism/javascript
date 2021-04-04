@@ -5,45 +5,76 @@
 // implementing this exercise.
 
 /**
- * Calculates the total bird count.
+ * Determines how long it takes to prepare a certain juice.
  *
- * @param {number[]} birdsPerDay
- * @returns {number} total bird count
+ * @param {string} name
+ * @returns {number} time in minutes
  */
-export function totalBirdCount(birdsPerDay) {
-  let total = 0;
-  for (let i = 0; i < birdsPerDay.length; i++) {
-    total += birdsPerDay[i];
+export function timeToMixJuice(name) {
+  switch (name) {
+    case 'Pure Strawberry Joy':
+      return 0.5;
+    case 'Energizer':
+      return 1.5;
+    case 'Green Garden':
+      return 1.5;
+    case 'Tropical Island':
+      return 3;
+    case 'All or Nothing':
+      return 5;
+    default:
+      return 2.5;
   }
-  return total;
 }
 
 /**
- * Calculates the total number of birds seen in a specific week.
+ * Calculate the number of limes that need to be cut
+ * to reach a certain supply.
  *
- * @param {number[]} birdsPerDay
- * @param {number} week
- * @returns {number} birds counted in the given week
+ * @param {number} maxWedges
+ * @param {string[]} limes
+ * @returns {number} number of limes cut
  */
-export function birdsInWeek(birdsPerDay, week) {
-  let total = 0;
-  const start = 7 * (week - 1);
-  for (let i = start; i < start + 7; i++) {
-    total += birdsPerDay[i];
+export function limesToCut(maxWedges, limes) {
+  let wedges = 0;
+  let limesCut = 0;
+  while (wedges < maxWedges && limes.length > 0) {
+    limesCut++;
+    wedges += wedgesFromLime(limes.shift());
   }
-  return total;
+
+  return limesCut;
 }
 
 /**
- * Fixes the counting mistake by increasing the bird count
- * by one for every second day.
+ * Determines the number of wedges that can be cut
+ * from a lime of the given size.
  *
- * @param {number[]} birdsPerDay
- * @returns {number[]} corrected bird count data
+ * @param {string} size
+ * @returns number of wedges
  */
-export function fixBirdCountLog(birdsPerDay) {
-  for (let i = 0; i < birdsPerDay.length; i += 2) {
-    birdsPerDay[i]++;
+function wedgesFromLime(size) {
+  switch (size) {
+    case 'small':
+      return 6;
+    case 'medium':
+      return 8;
+    case 'large':
+      return 10;
   }
-  return birdsPerDay;
+}
+
+/**
+ * Determines which juices still need to be prepared after the end of the shift.
+ *
+ * @param {number} timeLeft
+ * @param {string[]} orders
+ * @returns {string[]} remaining orders after the time is up
+ */
+export function remainingOrders(timeLeft, orders) {
+  do {
+    timeLeft -= timeToMixJuice(orders.shift());
+  } while (timeLeft > 0 && orders.length > 0);
+
+  return orders;
 }
