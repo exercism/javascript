@@ -8,14 +8,14 @@
  * Removes duplicate songs from a playlist.
  *
  * @param {string[]} playlist
- * @returns {string[]} new playlist with unique entries
+ * @returns {string[]} new playlist with unique tracks
  */
 export function removeDuplicates(playlist) {
   return [...new Set(playlist)];
 }
 
 /**
- * Checks whether a playlist includes the given song.
+ * Checks whether a playlist includes a certain song.
  *
  * @param {string[]} playlist
  * @param {string} song
@@ -49,4 +49,22 @@ export function removeSong(playlist, song) {
   songSet.delete(song);
 
   return [...songSet];
+}
+
+/**
+ * Returns the list of unique artists in a playlist
+ *
+ * @param {string[]} playlist
+ * @returns {string[]} unique artists
+ */
+export function listArtists(playlist) {
+  const artists = new Set();
+
+  for (let track of playlist.values()) {
+    const [, artist] = track.split(' - ');
+
+    artists.add(artist);
+  }
+
+  return [...artists];
 }

@@ -1,14 +1,14 @@
 # Instructions
 
-Your friend Ozan is putting together a playlist for an upcoming roadtrip. He doesn't want to hear the same song more than once, but the playlist has gotten so long that he's having trouble keeping track of which songs have already been added.
+Your friend Ozan is putting together a playlist for an upcoming roadtrip. He doesn't want to hear the same track more than once, but the playlist has gotten so long that he's having trouble remembering which tracks have already been added.
 
-The API for Ozan's music player only knows how to work with arrays, so he attempts to write some code that uses `Array.indexOf()` to check for the presence of a song before adding it to the playlist. Unfortunately, his program takes much too long to execute. He needs your help!
+The API for Ozan's music player only knows how to work with arrays, so he attempts to write some code that uses `Array.indexOf()` to check for the presence of a track before adding it to the playlist. Unfortunately, his program takes much too long to execute. He needs your help!
 
-Coming to Ozan's aid, you are astonished to find that his playlist contains _half a million_ songs. Perhaps you can use an intermediate data structure to operate on the playlist more efficiently.
+Coming to Ozan's aid, you are astonished to find that his playlist contains _half a million_ tracks. Perhaps you can use an intermediate data structure to operate on the playlist more efficiently.
 
-## 1. Remove duplicate songs
+## 1. Remove duplicate tracks
 
-Implement the `removeDuplicates` function, which takes a playlist as a _parameter_ and _returns_ a new playlist where all the songs are unique.
+Implement the `removeDuplicates` function, which takes a playlist as a _parameter_ and _returns_ a new playlist where all the tracks are unique.
 
 ```javascript
 const playlist = [
@@ -21,9 +21,9 @@ removeDuplicates(playlist)
 //=> ['Court and Spark - Joni Mitchell', 'Big Yellow Taxi - Joni Mitchell']
 ```
 
-## 2. Check whether a song has already been added
+## 2. Check whether a track has already been added
 
-Implement the `hasSong` function, which takes a playlist and a song as _parameters_ and _returns_ a boolean that indicates whether the playlist contains the song.
+Implement the `hasTrack` function, which takes a playlist and a track as _parameters_ and _returns_ a boolean that indicates whether the playlist contains the track.
 
 ```javascript
 const playlist = [
@@ -31,30 +31,30 @@ const playlist = [
   'Dr. Funkenstein - Parliament',
 ];
 
-hasSong(playlist, 'Dr. Funkenstein - Parliament');
+hasTrack(playlist, 'Dr. Funkenstein - Parliament');
 //=> true
 
-hasSong(playlist, 'Walking in the Rain - Grace Jones');
+hasTrack(playlist, 'Walking in the Rain - Grace Jones');
 //=> false
 ```
 
-## 3. Add a song
+## 3. Add a track
 
-Implement the `addSong` function, which takes a playlist and a song as _parameters_ and _returns_ a new playlist containing the song. If the song was already in the playlist, it doesn't get added again.
+Implement the `addTrack` function, which takes a playlist and a track as _parameters_ and _returns_ a new playlist that includes the track.
 
 ```javascript
 const playlist = ['Selma - Bijelo Dugme'];
 
-addSong(playlist, 'Atomic Dog - George Clinton');
+addTrack(playlist, 'Atomic Dog - George Clinton');
 //=> ['Selma - Bijelo Dugme', 'Atomic Dog - George Clinton']
 
-addSong(playlist, 'Selma - Bijelo Dugme');
+addTrack(playlist, 'Selma - Bijelo Dugme');
 //=> ['Selma - Bijelo Dugme', 'Atomic Dog - George Clinton']
 ```
 
-## 4. Remove a song
+## 4. Delete a track
 
-Implement the `removeSong` function, which takes a playlist and a song as _parameters_ and _returns_ a new playlist without the song.
+Implement the `deleteTrack` function, which takes a playlist and a track as _parameters_ and _returns_ a new playlist that does not include the track.
 
 ```javascript
 const playlist = [
@@ -62,9 +62,13 @@ const playlist = [
   'After the Fall - Klaus Nomi',
 ];
 
-removeSong(playlist, 'The Treasure - Fra Lippo Lippi');
+deleteTrack(playlist, 'The Treasure - Fra Lippo Lippi');
 //=> ['After the Fall - Klaus Nomi']
 
-removeSong(playlist, 'I Feel the Magic - Belinda Carlisle');
+deleteTrack(playlist, 'I Feel the Magic - Belinda Carlisle');
 //=> ['After the Fall - Klaus Nomi']
 ```
+
+## 5. List unique artists
+
+Implement the `listArtists` function, which takes a playlist as a _parameter_ and _returns_ the list of unique artists in the playlist. Note that the names of the tracks are formatted like `<SONG> - <ARTIST>`.
