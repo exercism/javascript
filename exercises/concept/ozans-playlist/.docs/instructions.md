@@ -4,7 +4,7 @@ Your friend Ozan is putting together a playlist for an upcoming roadtrip. He doe
 
 The API for Ozan's music player only knows how to work with arrays, so he attempts to write some code that uses `Array.indexOf()` to check for the presence of a track before adding it to the playlist. Unfortunately, his program takes much too long to execute. He needs your help!
 
-Coming to Ozan's aid, you are astonished to find that his playlist contains _half a million_ tracks. Perhaps you can use an intermediate data structure to operate on the playlist more efficiently.
+Coming to Ozan's aid, you are astonished to find that his playlist contains _half a million_ tracks. Perhaps you know of a different data structure that will allow you to manipulate the playlist more efficiently?
 
 ## 1. Remove duplicate tracks
 

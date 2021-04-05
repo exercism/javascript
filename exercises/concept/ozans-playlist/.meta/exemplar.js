@@ -5,7 +5,7 @@
 // implementing this exercise.
 
 /**
- * Removes duplicate songs from a playlist.
+ * Removes duplicate tracks from a playlist.
  *
  * @param {string[]} playlist
  * @returns {string[]} new playlist with unique tracks
@@ -15,40 +15,40 @@ export function removeDuplicates(playlist) {
 }
 
 /**
- * Checks whether a playlist includes a certain song.
+ * Checks whether a playlist includes a track.
  *
  * @param {string[]} playlist
- * @param {string} song
- * @returns {boolean} whether the song is in the playlist
+ * @param {string} track
+ * @returns {boolean} whether the track is in the playlist
  */
-export function hasSong(playlist, song) {
-  return new Set(playlist).has(song);
+export function hasTrack(playlist, track) {
+  return new Set(playlist).has(track);
 }
 
 /**
- * Adds a song to a playlist.
+ * Adds a track to a playlist.
  *
  * @param {string[]} playlist
- * @param {string} song
+ * @param {string} track
  * @returns {string[]} new playlist
  */
-export function addSong(playlist, song) {
-  return [...new Set(playlist).add(song)];
+export function addTrack(playlist, track) {
+  return [...new Set(playlist).add(track)];
 }
 
 /**
- * Removes a song from a playlist.
+ * Deletes a track from a playlist.
  *
  * @param {string[]} playlist
- * @param {string} song
+ * @param {string} track
  * @returns {string[]} new playlist
  */
-export function removeSong(playlist, song) {
-  const songSet = new Set(playlist);
+export function deleteTrack(playlist, track) {
+  const trackSet = new Set(playlist);
 
-  songSet.delete(song);
+  trackSet.delete(track);
 
-  return [...songSet];
+  return [...trackSet];
 }
 
 /**

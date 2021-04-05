@@ -5,7 +5,7 @@
 // implementing this exercise.
 
 /**
- * Removes duplicate songs from a playlist.
+ * Removes duplicate tracks from a playlist.
  *
  * @param {string[]} playlist
  * @returns {string[]} new playlist with unique entries
@@ -15,34 +15,44 @@ export function removeDuplicates(playlist) {
 }
 
 /**
- * Checks whether a playlist includes the given song.
+ * Checks whether a playlist includes a track.
  *
  * @param {string[]} playlist
- * @param {string} song
- * @returns {boolean} whether the song is in the playlist
+ * @param {string} track
+ * @returns {boolean} whether the track is in the playlist
  */
-export function hasSong(playlist, song) {
-  throw new Error('Please implement the hasSong method');
+export function hasTrack(playlist, track) {
+  throw new Error('Please implement the hasTrack method');
 }
 
 /**
- * Adds a song to a playlist.
+ * Adds a track to a playlist.
  *
  * @param {string[]} playlist
- * @param {string} song
+ * @param {string} track
  * @returns {string[]} new playlist
  */
-export function addSong(playlist, song) {
-  throw new Error('Please implement the addSong method');
+export function addTrack(playlist, track) {
+  throw new Error('Please implement the addTrack method');
 }
 
 /**
- * Removes a song from a playlist.
+ * Deletes a track from a playlist.
  *
  * @param {string[]} playlist
- * @param {string} song
+ * @param {string} track
  * @returns {string[]} new playlist
  */
-export function removeSong(playlist, song) {
-  throw new Error('Please implement the removeSong method');
+export function deleteTrack(playlist, track) {
+  throw new Error('Please implement the deleteTrack method');
+}
+
+/**
+ * Lists the unique artists in a playlist.
+ *
+ * @param {string[]} playlist
+ * @returns {string[]} list of artists
+ */
+export function listArtists(playlist) {
+  throw new Error('Please implement the listArtists method');
 }
