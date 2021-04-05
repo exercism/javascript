@@ -7,7 +7,7 @@ In this exercise, use built-in methods to analyse the contents of an array.
 
 ## 1. Find the position of a card
 
-Elyse wants to know the position (index) of a card in the stack
+Elyse wants to know the position (index) of a card in the stack.
 
 ```javascript
 const card = 2;
@@ -36,7 +36,7 @@ isEachCardEven([2, 4, 6, 7]);
 
 ## 4. Check if the stack contains an odd-value card
 
-Elyse wants to know if there is an odd number in the stack
+Elyse wants to know if there is an odd number in the stack.
 
 ```javascript
 doesStackIncludeOddCard([3, 2, 6, 4, 8]);
@@ -45,7 +45,7 @@ doesStackIncludeOddCard([3, 2, 6, 4, 8]);
 
 ## 5. Get the first odd card from the stack
 
-Elyse wants to know the value of the first card that is odd
+Elyse wants to know the value of the first card that is odd.
 
 ```javascript
 getFirstOddCard([4, 2, 8, 7, 9]);
@@ -54,7 +54,7 @@ getFirstOddCard([4, 2, 8, 7, 9]);
 
 ## 6. Determine the position of the first card that is even
 
-Elyse wants to know the position of the first card that is even
+Elyse wants to know the position of the first card that is even.
 
 ```javascript
 getFirstEvenCardPosition([5, 2, 3, 1]);
