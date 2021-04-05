@@ -22,6 +22,7 @@
 
 ## 5. List unique artists
 
+- There are [a few different ways][mdn-set-iteration] to iterate over a set.
 - There is a [built-in method][mdn-string-split] for dividing a string into substrings.
 - Refer back to the [array destructuring concept][concept-array-destructuring] to recap how to skip an element when destructuring an array.
 
@@ -29,4 +30,5 @@
 [mdn-set-add]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add
 [mdn-set-delete]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete
 [mdn-set-has]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has
+[mdn-set-iteration]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#iterating_sets
 [mdn-string-split]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
