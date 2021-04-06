@@ -5,33 +5,34 @@
 // implementing this exercise.
 
 /**
- * Calculates the total bird count.
+ * Determines how long it takes to prepare a certain juice.
  *
- * @param {number[]} birdsPerDay
- * @returns {number} total bird count
+ * @param {string} name
+ * @returns {number} time in minutes
  */
-export function totalBirdCount(birdsPerDay) {
-  throw new Error('Please implement the totalBirdCount method');
+export function timeToMixJuice(name) {
+  throw new Error('Please implement the timeToMixJuice function');
 }
 
 /**
- * Calculates the total number of birds seen in a specific week.
+ * Calculates the number of limes that need to be cut
+ * to reach a certain supply.
  *
- * @param {number[]} birdsPerDay
- * @param {number} week
- * @returns {number} birds counted in the given week
+ * @param {number} maxWedges
+ * @param {string[]} limes
+ * @returns {number} number of limes cut
  */
-export function birdsInWeek(birdsPerDay, week) {
-  throw new Error('Please implement the birdsInWeek method');
+export function limesToCut(maxWedges, limes) {
+  throw new Error('Please implement the limesToCut function');
 }
 
 /**
- * Fixes the counting mistake by increasing the bird count
- * by one for every second day.
+ * Determines which juices still need to be prepared after the end of the shift.
  *
- * @param {number[]} birdsPerDay
- * @returns {number[]} corrected bird count data
+ * @param {number} timeLeft
+ * @param {string[]} orders
+ * @returns {string[]} remaining orders after the time is up
  */
-export function fixBirdCountLog(birdsPerDay) {
-  throw new Error('Please implement the fixBirdCountLog method');
+export function remainingOrders(timeLeft, orders) {
+  throw new Error('Please implement the remainingOrders function');
 }
