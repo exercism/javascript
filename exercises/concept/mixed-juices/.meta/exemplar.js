@@ -28,19 +28,18 @@ export function timeToMixJuice(name) {
 }
 
 /**
- * Calculate the number of limes that need to be cut
+ * Calculates the number of limes that need to be cut
  * to reach a certain supply.
  *
  * @param {number} maxWedges
  * @param {string[]} limes
  * @returns {number} number of limes cut
  */
-export function limesToCut(maxWedges, limes) {
-  let wedges = 0;
+export function limesToCut(wedgesNeeded, limes) {
   let limesCut = 0;
-  while (wedges < maxWedges && limes.length > 0) {
+  while (wedgesNeeded > 0 && limes.length > 0) {
     limesCut++;
-    wedges += wedgesFromLime(limes.shift());
+    wedgesNeeded -= wedgesFromLime(limes.shift());
   }
 
   return limesCut;

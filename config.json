@@ -154,7 +154,7 @@
         "name": "Mixed Juices",
         "uuid": "81c3fb86-af86-4c56-a45f-e021403c4070",
         "concepts": ["while-loops", "conditionals-switch"],
-        "prerequisites": ["comparison", "conditionals", "arrays", "for-loops"],
+        "prerequisites": ["comparison", "conditionals", "arrays"],
         "status": "beta"
       }
     ],
