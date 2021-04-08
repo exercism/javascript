@@ -25,6 +25,7 @@
     "concept": [
       {
         "slug": "elyses-analytic-enchantments",
+        "name": "Elyses Analytic Enchantments",
         "uuid": "45d956db-d4ef-4468-b1d3-47021f172c15",
         "concepts": ["array-analysis"],
         "prerequisites": ["arrays", "booleans", "callbacks", "numbers"],
@@ -32,6 +33,7 @@
       },
       {
         "slug": "elyses-destructured-enchantments",
+        "name": "Elyses Destructured Enchantments",
         "uuid": "d9b5cd13-2f2b-4034-a571-e66c847ed6f8",
         "concepts": ["array-destructuring", "spread-operator", "rest-elements"],
         "prerequisites": ["arrays"],
@@ -39,6 +41,7 @@
       },
       {
         "slug": "elyses-enchantments",
+        "name": "Elyses Enchantments",
         "uuid": "25cb0707-44f8-4800-b993-3fcb2b6d9f61",
         "concepts": ["arrays"],
         "prerequisites": ["numbers"],
@@ -62,6 +65,7 @@
       },
       {
         "slug": "nullability",
+        "name": "Employee Badges",
         "uuid": "19962010-7b8c-4db1-bdae-ffc857b268e5",
         "concepts": ["nullability"],
         "prerequisites": ["conditionals", "strings", "string-formatting"],
@@ -77,6 +81,7 @@
       },
       {
         "slug": "promises",
+        "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
         "prerequisites": ["arrays", "callbacks", "errors", "recursion"],
@@ -84,6 +89,7 @@
       },
       {
         "slug": "recursion",
+        "name": "Pizza Order",
         "uuid": "e9a9fa73-4497-43d5-a4ff-4eb319c98233",
         "concepts": ["recursion"],
         "prerequisites": [
@@ -97,6 +103,7 @@
       },
       {
         "slug": "fruit-picker",
+        "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
         "concepts": ["callbacks"],
         "prerequisites": [
@@ -121,6 +128,7 @@
       },
       {
         "slug": "closures",
+        "name": "Coordinate Transformation",
         "uuid": "5aa39e89-c601-4a66-ab72-5d8512d69e02",
         "concepts": ["closures"],
         "prerequisites": ["arrays", "booleans"],
@@ -128,6 +136,7 @@
       },
       {
         "slug": "lucky-numbers",
+        "name": "Lucky Numbers",
         "uuid": "78bbd7d2-b660-4791-a404-af5bfed31849",
         "concepts": ["type-conversion"],
         "prerequisites": ["arrays", "strings", "numbers"],
