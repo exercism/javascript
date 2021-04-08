@@ -36,7 +36,7 @@ You can find an example of this in the [MDN documentation][mdn-group-cases].
 
 ## Using Expressions
 
-Instead of simple variable, `x` could also be an expression.
+Instead of a simple variable `x`, you can also put in an expression.
 It will be evaluated once at the beginning of the switch statement and the result will be compared against the options.
 A common use of this is a "type switch" that executes different code depending on the type of a variable.
 

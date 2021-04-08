@@ -2,7 +2,7 @@
 
 ## While Loops
 
-With a while loop you can execute code repeatably as long as a certain condition is true.
+With a while loop you can execute code repeatably as long as a certain condition is fulfilled.
 It is written with the `while` keyword followed by a condition wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
 
 ```javascript

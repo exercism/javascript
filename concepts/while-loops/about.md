@@ -2,7 +2,7 @@
 
 ## General Syntax
 
-With a while loop you can execute code repeatably as long as a certain condition is true.
+With a while loop you can execute code repeatably as long as a certain condition is fulfilled.
 
 It is written with the `while` keyword followed by a condition wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
 
@@ -25,7 +25,8 @@ do {
 
 ## Break
 
-Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely. This is often used in combination with `true` as condition.
+Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
+This is often used in combination with `true` as condition.
 With that, you can control when the loop should stop from any place inside the loop body.
 
 ```javascript
@@ -59,8 +60,9 @@ while (i < 100) {
 
 ## Infinite Loops
 
-A loop that is (theoretically) repeated forever is created when the loop condition is always fulfilled and there is no break statement called in the loop body.
-Depending on the environment in which such code runs, the execution has to be terminated automatically or manually from the outside.
+A loop that is (theoretically) repeated forever is created when the loop condition is always fulfilled and no break or return statement is reached in the loop body.
+The execution has to be terminated from the outside.
+Depending on the environment in which such code runs, this will be done automatically or needs a manual intervention.
 
 ```javascript
 let i = 0;
@@ -76,6 +78,6 @@ while (i < 100) {
 ```
 
 Spotting infinite loops might seem trivial in this toy example but is not always that easy with more complex code.
-It is good practice to thoroughly think about whether your condition eventually becomes false or whether your break statement is actually triggered.
+It is good practice to thoroughly think about whether your condition eventually becomes false or whether your break or return statement is actually reached.
 
 [mdn-break-in-function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break#break_within_functions
