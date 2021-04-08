@@ -330,7 +330,13 @@
         "name": "Robot Name",
         "uuid": "03f4dfea-e6db-4754-b2c8-ca06c8b81ef1",
         "practices": [],
-        "prerequisites": ["classes", "arrays", "strings"],
+        "prerequisites": [
+          "classes",
+          "arrays",
+          "strings",
+          "randomness",
+          "codepoints"
+        ],
         "difficulty": 6,
         "topics": [
           "conditionals",
