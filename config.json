@@ -210,7 +210,7 @@
         "name": "Rna Transcription",
         "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
         "practices": [],
-        "prerequisites": ["strings", "arrays", "objects"],
+        "prerequisites": ["strings", "array-transformations", "objects"],
         "difficulty": 2,
         "topics": ["strings", "transforming"]
       },
