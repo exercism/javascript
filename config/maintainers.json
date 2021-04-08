@@ -43,7 +43,7 @@
     },
     {
       "github_username": "aimorris",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": "Adam Morris",
       "link_text": null,
@@ -53,7 +53,7 @@
     },
     {
       "github_username": "Calamari",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": "Georg Tavonius",
       "link_text": "My website",
@@ -63,7 +63,7 @@
     },
     {
       "github_username": "hayashi-ay",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": "Ayato Hayashi",
       "link_text": null,
@@ -73,7 +73,7 @@
     },
     {
       "github_username": "ovidiu141",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": "Ovidiu Miu",
       "link_text": null,
@@ -83,7 +83,7 @@
     },
     {
       "github_username": "msomji",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": false,
       "name": "Maisam Somji",
       "link_text": null,
@@ -113,7 +113,7 @@
     },
     {
       "github_username": "yyyc514",
-      "alumnus": false,
+      "alumnus": true,
       "show_on_website": true,
       "name": "Josh Goebel",
       "link_text": "Blog: Running Blind",
