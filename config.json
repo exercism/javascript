@@ -228,7 +228,7 @@
         "name": "Pangram",
         "uuid": "da5b2b34-a1a7-4970-81f9-4665d875398b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-analysis"],
         "difficulty": 2,
         "topics": [
           "algorithms",
