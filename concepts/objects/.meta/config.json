@@ -1,0 +1,5 @@
+{
+  "blurb": "Besides the primitive data types like \"number\" and \"string\", there is another data type in JavaScript called \"object\". Objects in JavaScript are not only collections of key-value pairs but also the basic building blocks of the language.",
+  "authors": ["junedev"],
+  "contributors": []
+}

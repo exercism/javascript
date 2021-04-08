@@ -1,0 +1,11 @@
+{
+  "blurb": "FIXME",
+  "authors": ["junedev"],
+  "contributors": [],
+  "files": {
+    "solution": ["high-score-board.js"],
+    "test": ["high-score-board.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["julia/high-score-board"]
+}

@@ -148,6 +148,14 @@
         "concepts": ["for-loops", "increment-decrement"],
         "prerequisites": ["arrays", "comparison", "conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "high-score-board",
+        "name": "High Score Board",
+        "uuid": "431d1f13-d280-4808-bbc6-a72e628c15c2",
+        "concepts": ["objects"],
+        "prerequisites": ["arrays"], // FIXME
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1601,6 +1609,11 @@
       "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
       "slug": "increment-decrement",
       "name": "Increment and Decrement Operators"
+    },
+    {
+      "uuid": "68dd89d3-13b8-49f5-b493-ccfdc82a073c",
+      "slug": "objects",
+      "name": "Objects"
     }
   ],
   "key_features": [
