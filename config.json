@@ -356,7 +356,8 @@
           "arrays",
           "classes",
           "numbers",
-          "codepoints"
+          "codepoints",
+          "randomness"
         ],
         "difficulty": 6,
         "topics": [
