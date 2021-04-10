@@ -21,7 +21,6 @@ const {
 } = require('./helpers');
 
 const shell = require('shelljs');
-const path = require('path');
 const files = process.argv.slice(2);
 
 if (files.length === 0) {

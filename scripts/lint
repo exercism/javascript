@@ -6,33 +6,33 @@
  * This runs `eslint` on all sample solutions (and test) files
  */
 
-const shell = require("shelljs");
+const shell = require('shelljs');
 const {
   registerExitHandler,
   prepareAndRun,
   assignments: exercises,
   shouldPrepare,
-} = require("./helpers");
+} = require('./helpers');
 
 registerExitHandler();
 
 const assignment = exercises.length === 0 ? exercises[0] : undefined;
 
 // Prepare exercises and cleanup afterwards
-shell.env["PREPARE"] =
-  shell.env["PREPARE"] === undefined || shell.env["PREPARE"];
-shell.env["CLEANUP"] =
-  shell.env["CLEANUP"] === undefined || shell.env["CLEANUP"];
+shell.env['PREPARE'] =
+  shell.env['PREPARE'] === undefined || shell.env['PREPARE'];
+shell.env['CLEANUP'] =
+  shell.env['CLEANUP'] === undefined || shell.env['CLEANUP'];
 
-const count = shouldPrepare() ? exercises.length : "all";
+const count = shouldPrepare() ? exercises.length : 'all';
 
 const infoStr = assignment
   ? `Running lint for ${assignment}...`
   : `Running lint for ${count} exercises...`;
-const failureStr = "[Failure] Lint check failed!";
+const failureStr = '[Failure] Lint check failed!';
 
 // Run lint all at once
-prepareAndRun("npx eslint tmp_exercises -c .eslintrc", infoStr, failureStr);
+prepareAndRun('npx eslint tmp_exercises -c .eslintrc', infoStr, failureStr);
 
 shell.echo(
   assignment
