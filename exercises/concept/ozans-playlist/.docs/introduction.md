@@ -5,23 +5,23 @@ In JavaScript, a [set][mdn-sets] is a list-like structure containing unique valu
 A value cannot be added to a set if it is [strictly equal][mdn-strict-equality] to any of the set's elements.
 
 ```javascript
-const values = new Set();
+const set = new Set();
 const object = { color: 'lime green' };
 const functionallyIdenticalObject = { color: 'lime green' };
 
-values.add(object);
-values.add('wow');
-values.add(77);
+set.add(object);
+set.add('wow');
+set.add(77);
 
-console.log(values.size);
+console.log(set.size);
 //=> 3
 
-values.add(functionallyIdenticalObject); // added because functionallyIdenticalObject is not strictly equal to object
-console.log(values.size);
+set.add(functionallyIdenticalObject); // added because functionallyIdenticalObject is not strictly equal to object
+console.log(set.size);
 //=> 4
 
-values.add(77); // not added because 77 is strictly equal to 77
-console.log(values.size);
+set.add(77); // not added because 77 is strictly equal to 77
+console.log(set.size);
 //=> 4
 ```
 
