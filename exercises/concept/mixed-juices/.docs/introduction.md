@@ -32,7 +32,9 @@ let i = 0;
 while (i < 100) {
   i = i + 2;
 
-  if (i % 3 === 0) continue;
+  if (i % 3 === 0) {
+    continue;
+  }
 
   // the code here will only executed
   // when i was not divisible by 3 in the check above

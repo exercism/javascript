@@ -20,10 +20,10 @@ switch (x) {
 ```
 <!-- prettier-ignore-end -->
 
-The `default` case is optional and used in case you want to execute some code if none of the other options match the variable.
+The `default` case is optional and used when you want to execute some code if none of the other options match the variable.
 
 The `break` statements above are needed because by default all cases are "fallthrough" in JavaScript.
-That means without any `break` statement all the code in the cases below the first matching option would be executed even though `x` did not match those options.
+That means that without any `break` statement all the code in the cases below the first matching option would be executed even though `x` did not match those options.
 This "fallthrough by default" behavior is a common pitfall when using `switch` in JavaScript.
 Inside a function, `return` can also be used instead of `break` to avoid this problem.
 

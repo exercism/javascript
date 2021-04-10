@@ -36,8 +36,8 @@ You can find an example of this in the [MDN documentation][mdn-group-cases].
 
 ## Using Expressions
 
-Instead of a simple variable `x`, you can also put in an expression.
-It will be evaluated once at the beginning of the switch statement and the result will be compared against the options.
+Instead of a variable `x`, you can also use an expression.
+That expression is evaluated once at the beginning of the switch statement and the result compared against the cases.
 A common use of this is a "type switch" that executes different code depending on the type of a variable.
 
 <!-- prettier-ignore-start -->

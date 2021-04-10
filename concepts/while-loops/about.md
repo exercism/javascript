@@ -13,13 +13,13 @@ while (condition) {
 ```
 
 JavaScript also has a do-while loop.
-Here the condition is evaluated after the loop body was executed.
+Here the condition is checked after the loop body was executed.
 This is useful when the condition depends on the outcome of the code in the body.
 
 ```javascript
 do {
-  // the code here will always be executed once and then repeatedly
-  // if the condition is true after the last iteration
+  // the code here will always be executed once
+  // and then repeatedly while the condition is true
 } while (condition);
 ```
 
@@ -34,7 +34,9 @@ const winningNumber = 7;
 
 while (true) {
   const num = readUserGuess();
-  if (num === winningNumber) break;
+  if (num === winningNumber) {
+    break;
+  }
 }
 ```
 
@@ -51,10 +53,12 @@ let i = 0;
 while (i < 100) {
   i = i + 2;
 
-  if (i % 3 === 0) continue;
+  if (i % 3 === 0) { 
+    continue;
+  }
 
-  // the code here will only executed
-  // when i was not divisible by 3 in the check above
+  // The code here will only executed when i was not divisible 
+  // by 3 in the check above
 }
 ```
 
@@ -68,7 +72,9 @@ Depending on the environment in which such code runs, this will be done automati
 let i = 0;
 
 while (i < 100) {
-  if (i % 3 === 0) continue;
+  if (i % 3 === 0) { 
+    continue;
+  }
 
   i = i + 2;
 }
@@ -77,7 +83,7 @@ while (i < 100) {
 // after it is divisible by 3 the first time
 ```
 
-Spotting infinite loops might seem trivial in this toy example but is not always that easy with more complex code.
+Spotting infinite loops might seem trivial in this toy example, but is not always that easy with more complex code.
 It is good practice to thoroughly think about whether your condition eventually becomes false or whether your break or return statement is actually reached.
 
 [mdn-break-in-function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break#break_within_functions
