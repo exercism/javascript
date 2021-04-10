@@ -1,6 +1,6 @@
 # Instructions
 
-Your friend Ozan is putting together a playlist for an upcoming roadtrip. He doesn't want to hear the same track more than once, but the playlist has gotten so long that he's having trouble remembering which tracks have already been added.
+Ozan is putting together a playlist for an upcoming roadtrip. He doesn't want to hear the same track more than once, but the playlist has gotten so long that he's having trouble remembering which tracks have already been added.
 
 The API for Ozan's music player only knows how to work with arrays, so he attempts to write some code that uses `Array.indexOf()` to check for the presence of a track before adding it to the playlist. Unfortunately, his program takes much too long to execute. He needs your help!
 
@@ -72,3 +72,14 @@ deleteTrack(playlist, 'I Feel the Magic - Belinda Carlisle');
 ## 5. List unique artists
 
 Implement the `listArtists` function, which takes a playlist as a _parameter_ and _returns_ the list of unique artists in the playlist. Note that the names of the tracks are formatted like `<SONG> - <ARTIST>`.
+
+```javascript
+const playlist = [
+  'All Mine - Portishead',
+  'Sight to Behold - Devendra Banhart',
+  'Sour Times - Portishead',
+];
+
+listArtists(playlist);
+//=> ['Portishead', 'Devendra Banhart']
+```
