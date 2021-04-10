@@ -32,3 +32,4 @@
 [mdn-set-has]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has
 [mdn-set-iteration]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#iterating_sets
 [mdn-string-split]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+[concept-array-destructuring]: /tracks/javascript/concepts/array-destructuring
