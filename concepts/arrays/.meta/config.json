@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for arrays concept",
-  "authors": ["ovidiu141"],
-  "contributors": ["peterchu999", "SleeplessByte"]
+  "blurb": "Arrays in JavaScript are list-like objects without a fixed length or fixed item type.",
+  "authors": ["ovidiu141", "SleeplessByte"],
+  "contributors": ["peterchu999"]
 }

@@ -1,7 +1,7 @@
 {
-  "blurb": "TODO: add blurb for elyses-enchantments exercise",
-  "authors": ["ovidiu141"],
-  "contributors": ["peterchu999", "SleeplessByte"],
+  "blurb": "Help Elyse with her Enchantments and learn about arrays in the process.",
+  "authors": ["ovidiu141", "SleeplessByte"],
+  "contributors": ["peterchu999"],
   "files": {
     "solution": ["enchantments.js"],
     "test": ["enchantments.spec.js"],

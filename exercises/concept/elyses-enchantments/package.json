@@ -2,6 +2,9 @@
   "name": "@exercism/javascript-elyses-enchantments",
   "description": "Exercism concept exercise on arrays",
   "author": "Ovidiu Miu",
+  "contributors": [
+    "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)"
+  ],
   "private": true,
   "repository": {
     "type": "git",
