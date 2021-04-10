@@ -22,4 +22,8 @@ export class BinarySearchTree {
   insert() {
     throw new Error('Remove this statement and implement this function');
   }
+
+  each() {
+    throw new Error('Remove this statement and implement this function');
+  }
 }

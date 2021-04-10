@@ -12,7 +12,7 @@ class Triplet {
     throw new Error('Remove this statement and implement this function');
   }
 
-  get toArray() {
+  toArray() {
     throw new Error('Remove this statement and implement this function');
   }
 }

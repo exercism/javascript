@@ -3,8 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export class Rectangles {
-  static count() {
-    throw new Error('Remove this statement and implement this function');
-  }
+export function count() {
+  throw new Error('Remove this statement and implement this function');
 }
