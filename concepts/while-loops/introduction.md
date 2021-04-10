@@ -10,13 +10,13 @@ while (condition) {
 ```
 
 JavaScript also has a do-while loop.
-Here the condition is evaluated after the loop body was executed.
+Here the condition is checked after the loop body was executed.
 This is useful when the condition depends on the outcome of the code in the body.
 
 ```javascript
 do {
-  // the code here will always be executed once and then repeatedly
-  // if the condition is true after the last iteration
+  // The code here will always be executed once and then
+  // repeatedly while the condition is true.
 } while (condition);
 ```
 
@@ -34,7 +34,7 @@ while (i < 100) {
     continue;
   }
 
-  // the code here will only executed when i was not 
-  // divisible by 3 in the check above
+  // The code here will only executed when i was not divisible
+  // by 3 in the check above.
 }
 ```

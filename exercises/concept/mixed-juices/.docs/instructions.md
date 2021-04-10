@@ -31,7 +31,7 @@ She can get 6 wedges from a `'small'` lime, 8 wedges from a `'medium'` lime and 
 She always cuts the limes in the order in which they appear in the list, starting with the first item.
 She keeps going until she reached the number of wedges that she needs or until she runs out of limes.
 
-Li Mei would like to know in advance how many limes she needs to cut. 
+Li Mei would like to know in advance how many limes she needs to cut.
 The `limesToCut` function should return the number of limes to cut.
 
 ```javascript
@@ -47,7 +47,7 @@ There are often drinks that have been ordered but are not prepared yet when Li M
 Dmitry will then prepare the remaining juices.
 
 To make the hand-over easier, implement a function `remainingOrders` which takes the number of minutes left in Li Mei's shift and an array of juices that have been ordered but not prepared yet.
-The function should return the orders that Li Mei can't start preparing before the end of her work day.
+The function should return the orders that Li Mei cannot start preparing before the end of her work day.
 
 The time left in the shift will always be greater than 0.
 Furthermore the orders are prepared in the order in which they appear in the array.

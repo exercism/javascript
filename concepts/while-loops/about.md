@@ -14,12 +14,12 @@ while (condition) {
 
 JavaScript also has a do-while loop.
 Here the condition is checked after the loop body was executed.
-This is useful when the condition depends on the outcome of the code in the body.
+This is useful when the condition depends on evaluations done in the body.
 
 ```javascript
 do {
-  // the code here will always be executed once
-  // and then repeatedly while the condition is true
+  // The code here will always be executed once and then
+  // repeatedly while the condition is true.
 } while (condition);
 ```
 
@@ -53,12 +53,12 @@ let i = 0;
 while (i < 100) {
   i = i + 2;
 
-  if (i % 3 === 0) { 
+  if (i % 3 === 0) {
     continue;
   }
 
-  // The code here will only executed when i was not divisible 
-  // by 3 in the check above
+  // The code here will only executed when i was not divisible
+  // by 3 in the check above.
 }
 ```
 
@@ -72,15 +72,15 @@ Depending on the environment in which such code runs, this will be done automati
 let i = 0;
 
 while (i < 100) {
-  if (i % 3 === 0) { 
+  if (i % 3 === 0) {
     continue;
   }
 
   i = i + 2;
 }
 
-// this loop runs forever since i does not change anymore
-// after it is divisible by 3 the first time
+// This loop runs forever since the variable i does not change
+// anymore after it is divisible by 3 the first time.
 ```
 
 Spotting infinite loops might seem trivial in this toy example, but is not always that easy with more complex code.
