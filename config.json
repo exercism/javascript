@@ -187,7 +187,12 @@
         "name": "Two Fer",
         "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "functions",
+          "default-value",
+          "optional-parameters"
+        ],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"]
       },
@@ -196,7 +201,7 @@
         "name": "Resistor Color",
         "uuid": "53be6837-c224-45f1-bff3-d7f74d6285ce",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "array-analysis"],
         "difficulty": 1,
         "topics": ["arrays", "strings"]
       },
@@ -205,7 +210,7 @@
         "name": "Resistor Color Duo",
         "uuid": "de800041-3dcc-41b9-b101-7314ff685c93",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["array-transformations"],
         "difficulty": 2,
         "topics": ["strings", "arrays"]
       },
@@ -214,7 +219,7 @@
         "name": "Gigasecond",
         "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["dates", "immutability", "type-conversion"],
         "difficulty": 1,
         "topics": ["time"]
       },
@@ -223,7 +228,7 @@
         "name": "Rna Transcription",
         "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-transformations", "objects"],
         "difficulty": 2,
         "topics": ["strings", "transforming"]
       },
@@ -232,7 +237,7 @@
         "name": "Space Age",
         "uuid": "d9d757ed-ebe6-4d4a-aa73-f6834221cd54",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["objects", "numbers"],
         "difficulty": 2,
         "topics": ["floating_point_numbers"]
       },
@@ -241,7 +246,7 @@
         "name": "Pangram",
         "uuid": "da5b2b34-a1a7-4970-81f9-4665d875398b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-analysis"],
         "difficulty": 2,
         "topics": [
           "algorithms",
@@ -258,7 +263,12 @@
         "name": "Matrix",
         "uuid": "dd0b5e67-81f6-437e-8334-2ec0dfeb862a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "classes",
+          "array-transformations"
+        ],
         "difficulty": 3,
         "topics": [
           "arrays",
@@ -273,7 +283,7 @@
         "name": "Bob",
         "uuid": "a5bf36f0-5d3c-41d4-8d54-e37e484e59cd",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "booleans", "regular-expressions"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -288,7 +298,7 @@
         "name": "Pascals Triangle",
         "uuid": "99493160-4673-402f-acda-62db5378148d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -303,7 +313,7 @@
         "name": "Linked List",
         "uuid": "ec60a578-8889-46a1-b7b8-306dbd8551d5",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "while-loops"],
         "difficulty": 5,
         "topics": [
           "algorithms",
@@ -320,7 +330,7 @@
         "name": "Grade School",
         "uuid": "64637322-33bc-401f-8cec-1f9810a41f75",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "objects", "arrays", "immutability"],
         "difficulty": 5,
         "topics": ["arrays", "maps", "sorting"]
       },
@@ -329,7 +339,7 @@
         "name": "List Ops",
         "uuid": "7d9db056-5398-41b6-af3b-9707f5eb0dbc",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "arrays", "functions"],
         "difficulty": 6,
         "topics": ["data_structures", "loops", "lists", "recursion"]
       },
@@ -338,7 +348,13 @@
         "name": "Robot Name",
         "uuid": "03f4dfea-e6db-4754-b2c8-ca06c8b81ef1",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "arrays",
+          "strings",
+          "randomness",
+          "codepoints"
+        ],
         "difficulty": 6,
         "topics": [
           "conditionals",
@@ -353,7 +369,14 @@
         "name": "Simple Cipher",
         "uuid": "62d60b42-93bc-4de9-90d1-1ca18a847812",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "classes",
+          "numbers",
+          "codepoints",
+          "randomness"
+        ],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -370,7 +393,7 @@
         "name": "Wordy",
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "regular-expressions", "errors"],
         "difficulty": 7,
         "topics": [
           "conditionals",
@@ -387,7 +410,7 @@
         "name": "Secret Handshake",
         "uuid": "74bbc9e3-edc5-41e0-84d7-5b2d98dd8370",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["bit-manipulation", "array-analysis"],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -403,7 +426,7 @@
         "name": "Leap",
         "uuid": "7c8294ee-5924-4bf8-a72f-31d0e2d7d9a0",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers"],
         "difficulty": 1,
         "topics": ["booleans", "integers", "logic"]
       },
@@ -412,7 +435,7 @@
         "name": "Reverse String",
         "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-transformation"],
         "difficulty": 2,
         "topics": ["loops", "strings"]
       },
