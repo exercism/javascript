@@ -907,6 +907,16 @@
         ]
       },
       {
+        "slug": "promises",
+        "name": "Promises",
+        "uuid": "ad21018c-e538-4ce5-a33a-949b4293df8c",
+        "core": false,
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": ["promises", "error_handling", "higher_order_functions"]
+      },
+      {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
