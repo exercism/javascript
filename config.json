@@ -157,6 +157,14 @@
         "concepts": ["for-loops", "increment-decrement"],
         "prerequisites": ["arrays", "comparison", "conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "mixed-juices",
+        "name": "Mixed Juices",
+        "uuid": "81c3fb86-af86-4c56-a45f-e021403c4070",
+        "concepts": ["while-loops", "conditionals-switch"],
+        "prerequisites": ["comparison", "conditionals", "arrays"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1643,6 +1651,16 @@
       "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
       "slug": "increment-decrement",
       "name": "Increment and Decrement Operators"
+    },
+    {
+      "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
+      "slug": "while-loops",
+      "name": "While Loops"
+    },
+    {
+      "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
+      "slug": "conditionals-switch",
+      "name": "Switch Statement"
     }
   ],
   "key_features": [
