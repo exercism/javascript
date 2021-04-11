@@ -7,7 +7,8 @@ In JavaScript it consists of the `for` keyword, a _header_ wrapped in round brac
 
 ```javascript
 for (initialization; condition; step) {
-  // code that is executed repeatedly as long as the condition is true
+  // code that is executed repeatedly as long as the condition is
+  // true
 }
 ```
 
