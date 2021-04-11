@@ -14,8 +14,8 @@ names[1];
 Arrays can also be created using the constructor syntax, but for most uses, the array literal syntax is recommended.
 
 ```javascript
-const names = new Array()
-names.push('Jack', 'Laura', 'Paul', 'Megan')
+const names = new Array();
+names.push('Jack', 'Laura', 'Paul', 'Megan');
 
 names[1];
 // => Laura
