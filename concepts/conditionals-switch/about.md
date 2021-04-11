@@ -34,6 +34,29 @@ Inside a function, `return` can also be used instead of `break` to avoid this pr
 You can use the fallthrough behavior to your advantage when you want to apply the same code for multiple cases.
 You can find an example of this in the [MDN documentation][mdn-group-cases].
 
+## Scope
+
+By default the variables in the different `case` statements share the same scope.
+This can lead to unexpected behavior.
+For example due to copying and pasting a case, you could end up with a `let message` declaration in two cases which results in an error, see [MDN documentation][mdn-switch-scope].
+To avoid problems due to the shared scope, you can create a separate scope for each case statement by adding code blocks with curly brackets for each case.
+
+```javascript
+switch (x) {
+  case option1: {
+    // Variables declared here are contained to this case.
+    break;
+  }
+  case option2: {
+    // ...
+    break;
+  }
+  default: {
+    // ...
+  }
+}
+```
+
 ## Using Expressions
 
 Instead of a variable `x`, you can also use an expression.
@@ -59,3 +82,4 @@ The options can be expressions as well.
 
 [concept-comparison]: /tracks/javascript/concepts/comparison
 [mdn-group-cases]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#methods_for_multi-criteria_case
+[mdn-switch-scope]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#block-scope_variables_within_switch_statements
