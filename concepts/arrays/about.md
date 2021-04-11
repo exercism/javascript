@@ -11,6 +11,16 @@ names[1];
 // => Laura
 ```
 
+Arrays can also be created using the constructor syntax, but for most uses, the array literal syntax is recommended.
+
+```javascript
+const names = new Array()
+names.push('Jack', 'Laura', 'Paul', 'Megan')
+
+names[1];
+// => Laura
+```
+
 Arrays cannot use `strings` as element indexes, but must use integers ([`number`][concept-numbers]).
 Setting or accessing via non-integers using bracket notation (or dot notation) will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's object property collection.
 The array's object properties and list of array elements are separate, and the array's traversal and mutation operations cannot be applied to these named properties.
