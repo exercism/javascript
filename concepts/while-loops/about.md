@@ -8,7 +8,8 @@ It is written with the `while` keyword followed by a condition wrapped in round 
 
 ```javascript
 while (condition) {
-  // code that is executed repeatedly as long as the condition is true
+  // code that is executed repeatedly as long as the condition is
+  // true
 }
 ```
 
