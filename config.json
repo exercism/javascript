@@ -112,6 +112,21 @@
         "status": "beta"
       },
       {
+        "slug": "elyses-looping-enchantments",
+        "name": "Elyses Looping Enchantments",
+        "uuid": "e06f8f70-019f-4cec-924b-3971414e15d9",
+        "concepts": ["array-loops"],
+        "prerequisites": [
+          "arrays",
+          "callbacks",
+          "for-loops",
+          "increment-decrement"
+        ],
+        "status": "beta"
+      },
+        "prerequisites": ["arrays", "callbacks"],
+        "status": "beta"
+      {
         "slug": "nullability",
         "name": "Employee Badges",
         "uuid": "19962010-7b8c-4db1-bdae-ffc857b268e5",

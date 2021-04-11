@@ -1,0 +1,11 @@
+{
+  "blurb": "TODO: add blurb for array-loops exercise",
+  "authors": ["rishiosaur", "SleeplessByte"],
+  "contributors": [],
+  "files": {
+    "solution": ["enchantments.js"],
+    "test": ["enchantments.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
+}
