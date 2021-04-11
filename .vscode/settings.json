@@ -1,0 +1,11 @@
+{
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.rulers": [
+      // This is the cut-off on the website for most code blocks if they are
+      // displayed to a user. The rulers at 80 and 120 make less sense here
+      // because of how whitespace is (not) rendered.
+      65
+    ]
+  }
+}

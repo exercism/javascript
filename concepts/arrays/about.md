@@ -14,8 +14,8 @@ names[1];
 Arrays can also be created using the constructor syntax, but for most uses, the array literal syntax is recommended.
 
 ```javascript
-const names = new Array()
-names.push('Jack', 'Laura', 'Paul', 'Megan')
+const names = new Array();
+names.push('Jack', 'Laura', 'Paul', 'Megan');
 
 names[1];
 // => Laura
@@ -30,22 +30,24 @@ const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 names.length;
 // => 3
 
-// Properties can be set on arrays using bracket ['property'] or dot .property
-// notation, and this will affect the length, as shown below.
+// Properties can be set on arrays using bracket ['property'] or
+// dot .property notation, and this will affect the length, as
+// shown below.
 
 names.magician = 'Elyse';
 names.length;
 // => 4
 
-// The property shows up when logging the array, making it seem that the
-// property is somehow incorporated in the array.
+// The property shows up when logging the array, making it seem
+// that the property is somehow incorporated in the array.
 
 names;
 // => ["Jack", "Laura", "Paul", "Megan", magician: "Elyse"]
 
-// However, be aware. Properties added via non-numeric keys are NOT part of the
-// array's internal list, and are not traversed or mutated when using one of
-// the traversal or mutation operations.
+// However, be aware. Properties added via non-numeric keys are
+// NOT part of the array's internal list, and are not traversed
+// or mutated when using one of the traversal or mutation
+// operations.
 
 names.forEach((name) => console.log(name));
 // => Jack
