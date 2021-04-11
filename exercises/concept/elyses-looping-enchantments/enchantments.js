@@ -28,8 +28,8 @@ export function determineUniqueCards(stack, card) {
  * Determine if each card is even
  *
  * @param {number[]} stack
- * @param {boolean} type the type of value to check for–odd or even
- * @returns {number} number of cards that are either odd or even (depending on `type`)
+ * @param {boolean} type true to check for even, false to check for odd
+ * @returns {number} number of cards that are either odd or even
  */
 export function determineOddEvenCards(stack, type) {
   throw new Error('Implement the determineOddEvenCards function');

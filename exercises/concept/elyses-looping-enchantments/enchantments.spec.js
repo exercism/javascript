@@ -4,57 +4,78 @@ import {
   cardTypeCheck,
 } from './enchantments';
 
-/**
- * @template T the expected return type
- * @typedef {Array<[number[], number, T]>} TestSingleMatrix
- */
+const TYPE_IS_ODD = false;
+const TYPE_IS_EVEN = true;
 
-/**
- * @template T the expected return type
- * @typedef {Array<[number[], T]>} TestAllMatrix
- **/
-
-describe('array-loops', () => {
+describe('Enchantments', () => {
   describe('cardTypeCheck', () => {
-    /** @type {TestSingleMatrix<number>} */
-    const cardTypeCheckTests = [
-      [[1, 2, 3, 4, 6, 7], 4, 1],
-      [[1, 2, 2, -3, -4, -4, 2], 2, 3],
-      [[1, 2, 3], 4, 0],
-    ];
+    test('a single matching card', () => {
+      expect(cardTypeCheck([1], 1)).toBe(1);
+    });
 
-    cardTypeCheckTests.forEach(([array, card, expected]) => {
-      test(`cardTypeCheck([${array}], ${card})`, () => {
-        expect(cardTypeCheck(array, card)).toStrictEqual(expected);
-      });
+    test('a single matching card among many', () => {
+      expect(cardTypeCheck([7, 4, 7, 3, 1, 2], 1)).toBe(1);
+    });
+
+    test('a single unmatched card', () => {
+      expect(cardTypeCheck([1], 2)).toBe(0);
+    });
+
+    test('multiple matching cards', () => {
+      expect(cardTypeCheck([7, 7, 7], 7)).toBe(3);
+    });
+
+    test('multiple matching cards among many', () => {
+      expect(cardTypeCheck([1, 2, 3, 7, 7, 7, 3, 2, 1], 7)).toBe(3);
+    });
+
+    test('no matching cards', () => {
+      expect(cardTypeCheck([1, 2, 3, 4, 5, 4, 3, 2, 1], 7)).toBe(0);
     });
   });
 
-  describe('oddEvenCards', () => {
-    /** @type {Array<Array<Array<number>, boolean, number>>>} */
-    const oddEvenCardsTestCases = [
-      [[1, 2, 3], true, 1],
-      [[1, 2, 3, -1, 32, 1, 2, 3], false, 4],
-    ];
+  describe('determineUniqueCards', () => {
+    test('a single unique card', () => {
+      expect(determineUniqueCards([1])).toBe(1);
+    });
 
-    oddEvenCardsTestCases.forEach(([array, isEven, expected]) => {
-      test(`determineOddEvenCards([${array}], isEven)`, () => {
-        expect(determineOddEvenCards(array, isEven)).toBe(expected);
-      });
+    test('multiple unique cards', () => {
+      expect(determineUniqueCards([1, 2, 3])).toBe(3);
+    });
+
+    test('many duplicates', () => {
+      expect(determineUniqueCards([7, 7, 7, 7])).toBe(1);
+    });
+
+    test('a mix of unique and duplicated cards', () => {
+      expect(determineUniqueCards([1, 1, 2, 3])).toBe(3);
     });
   });
 
-  describe('uniqueCards', () => {
-    /** @type {Array<Array} */
-    const uniqueCardTestCases = [
-      [[1, 2, 3], 3],
-      [[1, 2, 3, -1, 32, 1, 2, 3], 5],
-    ];
+  describe('determineOddEvenCards', () => {
+    test('a single odd card', () => {
+      expect(determineOddEvenCards([1], TYPE_IS_ODD)).toBe(1);
+      expect(determineOddEvenCards([1], TYPE_IS_EVEN)).toBe(0);
+    });
 
-    uniqueCardTestCases.forEach(([array, expected]) => {
-      test(`determineUniqueCards([${array}])`, () => {
-        expect(determineUniqueCards(array)).toBe(expected);
-      });
+    test('a single even card', () => {
+      expect(determineOddEvenCards([2], TYPE_IS_ODD)).toBe(0);
+      expect(determineOddEvenCards([2], TYPE_IS_EVEN)).toBe(1);
+    });
+
+    test('multiple odd cards', () => {
+      expect(determineOddEvenCards([1, 3, 5], TYPE_IS_ODD)).toBe(3);
+      expect(determineOddEvenCards([1, 3, 5], TYPE_IS_EVEN)).toBe(0);
+    });
+
+    test('multiple even cards', () => {
+      expect(determineOddEvenCards([2, 2, 4, 6, 6], TYPE_IS_ODD)).toBe(0);
+      expect(determineOddEvenCards([2, 2, 4, 6, 6], TYPE_IS_EVEN)).toBe(5);
+    });
+
+    test('a mix of odd and even cards', () => {
+      expect(determineOddEvenCards([1, 2, 1, 1, 2, 1, 9], TYPE_IS_ODD)).toBe(4);
+      expect(determineOddEvenCards([1, 2, 1, 1, 2, 1, 9], TYPE_IS_ODD)).toBe(2);
     });
   });
 });
