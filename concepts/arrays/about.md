@@ -103,7 +103,7 @@ names.length = 2;
 // =>  ["Jack", "Laura"]
 ```
 
-## Checking is something is an Array
+## Checking if something is an Array
 
 Because arrays are `objects`, `typeof names` gives `"object"`.
 To check if something is an Array, use `Array.isArray`:
