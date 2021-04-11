@@ -17,7 +17,8 @@ switch (x) {
     // code that is executed when "x === option2" is true
     break;
   default:
-    // code that is executed when x does not equal any of the options
+    // code that is executed when x does not equal any of the
+    // options
 }
 ```
 <!-- prettier-ignore-end -->
