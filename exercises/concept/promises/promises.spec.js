@@ -30,7 +30,7 @@ naDevvo’ yIghoS!
 
 class Untranslatable extends Error {
   constructor() {
-    super(`jIyajbe’`);
+    super('jIyajbe’');
   }
 }
 
@@ -119,19 +119,19 @@ describe('promises', () => {
   describe('free service', () => {
     const api = new ExternalApi({
       jIyaj: [{ translation: 'I understand', quality: 100 }],
-      'jIyajbe’': [null, { translation: "I don't understand", quality: 100 }],
+      'jIyajbe’': [null, { translation: 'I don\'t understand', quality: 100 }],
     });
 
     const service = new TranslationService(api);
 
-    test("service.free('jIyaj'): it can fetch a translation", () =>
+    test('service.free(\'jIyaj\'): it can fetch a translation', () =>
       expect(service.free('jIyaj')).resolves.toBe('I understand'));
 
-    xtest("service.free('jIyajbe’): it forwards errors from the API", () =>
+    xtest('service.free(\'jIyajbe’): it forwards errors from the API', () =>
       // Tests that the error returned is unaltered
       expect(service.free('jIyajbe’')).rejects.toThrow(NotAvailable));
 
-    xtest("service.free('majQa’'): it forwards errors from the API", () =>
+    xtest('service.free(\'majQa’\'): it forwards errors from the API', () =>
       // Tests that the error returned is unaltered
       expect(service.free('majQa’')).rejects.toThrow(Untranslatable));
   });
@@ -146,24 +146,24 @@ describe('promises', () => {
 
     const service = new TranslationService(api);
 
-    xtest("service.batch(['jIyaj', 'majQa’'])", () =>
+    xtest('service.batch([\'jIyaj\', \'majQa’\'])', () =>
       expect(service.batch(['jIyaj', 'majQa’'])).resolves.toEqual([
         'I understand',
         'Well done!',
       ]));
 
-    xtest("service.batch(['majQa’', 'jIyaj']): it maintains the order of input", () =>
+    xtest('service.batch([\'majQa’\', \'jIyaj\']): it maintains the order of input', () =>
       // Tests that the order is maintained
       expect(service.batch(['majQa’', 'jIyaj'])).resolves.toEqual([
         'Well done!',
         'I understand',
       ]));
 
-    xtest("service.batch(['jIyaj']): it works with just one element", () =>
+    xtest('service.batch([\'jIyaj\']): it works with just one element', () =>
       // Tests that single elements work
       expect(service.batch(['jIyaj'])).resolves.toEqual(['I understand']));
 
-    xtest("service.batch(['jIyaj', 'jIyajbe’', 'majQa’']): it's all or nothing", () =>
+    xtest('service.batch([\'jIyaj\', \'jIyajbe’\', \'majQa’\']): it\'s all or nothing', () =>
       // Tests that any error rejects the whole thing
       expect(service.batch(['jIyaj', 'jIyajbe’', 'majQa’'])).rejects.toThrow(
         NotAvailable
@@ -180,33 +180,33 @@ describe('promises', () => {
         null,
         null,
         null,
-        { translation: "I don't understand", quality: 100 },
+        { translation: 'I don\'t understand', quality: 100 },
       ],
       'ghobe’': [null, null, null, null, { translation: 'No!', quality: 100 }],
     });
 
     const service = new TranslationService(api);
 
-    xtest("service.request('majQa’')", () =>
+    xtest('service.request(\'majQa’\')', () =>
       expect(service.request('majQa’')).resolves.toBe(undefined));
 
     // Tests that it eventually ends (resolves or rejects)
-    xtest("service.request('foo'): it eventually settles", () =>
+    xtest('service.request(\'foo\'): it eventually settles', () =>
       expect(service.request('foo')).rejects.toThrow(Untranslatable));
 
     // Tests it tries 3 times
-    xtest("service.request('jIyajbe’'): it requests up to three times (retries twice)", () =>
+    xtest('service.request(\'jIyajbe’\'): it requests up to three times (retries twice)', () =>
       expect(service.request('jIyajbe’')).resolves.toBe(undefined));
 
     // Tests it _only_ tries 3 times
-    xtest("service.request('ghobe’'): it requests at most three times", () =>
+    xtest('service.request(\'ghobe’\'): it requests at most three times', () =>
       expect(service.request('ghobe’')).rejects.toThrow(Error));
   });
 
   describe('premium service', () => {
     const api = new ExternalApi({
       'majQa’': [{ translation: 'Well done', quality: 90 }],
-      'jIyajbe’': [null, { translation: "I don't understand", quality: 100 }],
+      'jIyajbe’': [null, { translation: 'I don\'t understand', quality: 100 }],
       'ghobe’': [null, null, null, null, { translation: 'No!', quality: 100 }],
       '‘arlogh Qoylu’pu’?': [
         null,
@@ -217,37 +217,37 @@ describe('promises', () => {
     const service = new TranslationService(api);
 
     // Test it can just return a fetched value
-    xtest("service.premium('majQa’', 90): it returns a translation", () =>
+    xtest('service.premium(\'majQa’\', 90): it returns a translation', () =>
       expect(service.premium('majQa’', 90)).resolves.toBe('Well done'));
 
     // Test it checks the quality
-    xtest("service.premium('majQa’', 100): it ensures the quality", () =>
+    xtest('service.premium(\'majQa’\', 100): it ensures the quality', () =>
       expect(service.premium('majQa’', 100)).rejects.toThrow(
         QualityThresholdNotMet
       ));
 
     // Test it requests then, fetches
-    xtest("service.premium('jIyajbe’', 100): it requests, then fetches", () =>
+    xtest('service.premium(\'jIyajbe’\', 100): it requests, then fetches', () =>
       expect(service.premium('jIyajbe’', 100)).resolves.toBe(
-        "I don't understand"
+        'I don\'t understand'
       ));
 
     // Tests that it eventually ends (resolves or rejects)
-    xtest("service.premium('foo', 0): it eventually settles", () =>
+    xtest('service.premium(\'foo\', 0): it eventually settles', () =>
       expect(service.premium('foo', 0)).rejects.toThrow(Untranslatable));
 
     // Test it only retries 2 times
-    xtest("service.premium('ghobe’', 100): it requests at most three times (two retries)", () =>
+    xtest('service.premium(\'ghobe’\', 100): it requests at most three times (two retries)', () =>
       expect(service.premium('ghobe’', 100)).rejects.toThrow(Error));
 
     // Test it still checks the quality if its fetched after a request
-    xtest("service.premium('‘arlogh Qoylu’pu’?', 40): it always ensures the quality", () =>
+    xtest('service.premium(\'‘arlogh Qoylu’pu’?\', 40): it always ensures the quality', () =>
       expect(service.premium('‘arlogh Qoylu’pu’?', 40)).resolves.toBe(
         'What time is it?'
       ));
 
     // Test it checks the quality
-    xtest("service.premium('‘arlogh Qoylu’pu’?', 100)", () =>
+    xtest('service.premium(\'‘arlogh Qoylu’pu’?\', 100)', () =>
       expect(service.premium('‘arlogh Qoylu’pu’?', 100)).rejects.toThrow(
         QualityThresholdNotMet
       ));

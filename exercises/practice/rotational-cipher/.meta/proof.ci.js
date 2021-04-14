@@ -8,8 +8,8 @@ export class RotationalCipher {
 
         return isAlpha
           ? String.fromCharCode(
-              ((c.charCodeAt(0) - charShift + shift) % 26) + charShift
-            )
+            ((c.charCodeAt(0) - charShift + shift) % 26) + charShift
+          )
           : c;
       })
       .join('');

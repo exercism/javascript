@@ -59,7 +59,7 @@ describe('errors', () => {
       expect(actions.check).toHaveBeenCalledTimes(1);
     });
 
-    xtest("should not call any action if the check doesn't throw", () => {
+    xtest('should not call any action if the check doesn\'t throw', () => {
       monitorTheMachine(actions);
 
       expect(actions.alertDeadSensor).not.toHaveBeenCalled();

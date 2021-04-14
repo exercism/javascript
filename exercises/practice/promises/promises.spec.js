@@ -23,13 +23,13 @@ describe('promises', () => {
       expect(fastPromise('fast')).toBeInstanceOf(Promise);
     });
 
-    xtest("promisified function resolves to a callback's success value", () => {
+    xtest('promisified function resolves to a callback\'s success value', () => {
       const SUCCESS = 'success';
       const fastPromise = promisify(fastCallbackFn);
       expect(fastPromise(SUCCESS)).resolves.toEqual(SUCCESS);
     });
 
-    xtest("promisified function rejects a callback's error", () => {
+    xtest('promisified function rejects a callback\'s error', () => {
       const failedPromise = promisify(failedCallbackFn);
       expect(failedPromise(null)).rejects.toEqual(failedCallback);
     });

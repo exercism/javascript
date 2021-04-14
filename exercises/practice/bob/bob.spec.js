@@ -32,18 +32,18 @@ describe('Bob', () => {
   });
 
   xtest('talking forcefully', () => {
-    const result = hey("Let's go make out behind the gym!");
+    const result = hey('Let\'s go make out behind the gym!');
     expect(result).toEqual('Whatever.');
   });
 
   xtest('using acronyms in regular speech', () => {
-    const result = hey("It's OK if you don't want to go to the DMV.");
+    const result = hey('It\'s OK if you don\'t want to go to the DMV.');
     expect(result).toEqual('Whatever.');
   });
 
   xtest('forceful question', () => {
     const result = hey('WHAT THE HELL WERE YOU THINKING?');
-    expect(result).toEqual("Calm down, I know what I'm doing!");
+    expect(result).toEqual('Calm down, I know what I\'m doing!');
   });
 
   xtest('shouting numbers', () => {

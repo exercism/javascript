@@ -30,7 +30,7 @@ describe('CircularBuffer', () => {
     expect(buffer.read()).toBe('2');
   });
 
-  xtest("full buffer can't be written to", () => {
+  xtest('full buffer can\'t be written to', () => {
     const buffer = new CircularBuffer(1);
     buffer.write('1');
     expect(() => buffer.write(2)).toThrow(BufferFullError);
@@ -54,7 +54,7 @@ describe('CircularBuffer', () => {
     expect(buffer.read()).toBe('3');
   });
 
-  xtest("items cleared out of buffer can't be read", () => {
+  xtest('items cleared out of buffer can\'t be read', () => {
     const buffer = new CircularBuffer(1);
     buffer.write('1');
     buffer.clear();

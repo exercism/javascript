@@ -1,4 +1,4 @@
-import { recite } from './twelve-days.js';
+import { recite } from './twelve-days';
 
 describe('TwelveDays', () => {
   test('test verse first day a partridge in a pear tree', () => {

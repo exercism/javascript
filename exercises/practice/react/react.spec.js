@@ -142,7 +142,7 @@ describe('React module', () => {
     expect(callback3.values).toEqual([42]);
   });
 
-  xtest("removing a callback multiple times doesn't interfere with other callbacks", () => {
+  xtest('removing a callback multiple times doesn\'t interfere with other callbacks', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
@@ -195,7 +195,7 @@ describe('React module', () => {
     expect(callback1.values).toEqual([10]);
   });
 
-  xtest("callbacks should not be called if dependencies change but output value doesn't change", () => {
+  xtest('callbacks should not be called if dependencies change but output value doesn\'t change', () => {
     const inputCell = new InputCell(1);
     const plusOne = new ComputeCell(
       [inputCell],

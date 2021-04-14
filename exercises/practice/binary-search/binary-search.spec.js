@@ -35,12 +35,12 @@ describe('Binary Search', () => {
     expect(() => find(array, 7)).toThrow(new Error('Value not in array'));
   });
 
-  xtest("a value smaller than the array's smallest value is not found", () => {
+  xtest('a value smaller than the array\'s smallest value is not found', () => {
     const array = [1, 3, 4, 6, 8, 9, 11];
     expect(() => find(array, 0)).toThrow(new Error('Value not in array'));
   });
 
-  xtest("a value larger than the array's largest value is not found", () => {
+  xtest('a value larger than the array\'s largest value is not found', () => {
     const array = [1, 3, 4, 6, 8, 9, 11];
     expect(() => find(array, 13)).toThrow(new Error('Value not in array'));
   });

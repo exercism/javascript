@@ -26,7 +26,7 @@ export function triplets({ minFactor, maxFactor, sum }) {
     return triplet.pythagorean && (!sum || triplet.sum === sum);
   };
 
-  const triplets = [];
+  const result = [];
 
   for (let a = min; a < max - 1; a += 1) {
     for (let b = a + 1; b < max; b += 1) {
@@ -34,11 +34,11 @@ export function triplets({ minFactor, maxFactor, sum }) {
         const triplet = new Triplet(a, b, c);
 
         if (isDesired(triplet)) {
-          triplets.push(triplet);
+          result.push(triplet);
         }
       }
     }
   }
 
-  return triplets;
+  return result;
 }

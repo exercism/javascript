@@ -1,13 +1,13 @@
 const compute = (operand1, operand2, operation) => {
   switch (operation) {
-    case 'plus':
-      return operand1 + operand2;
-    case 'minus':
-      return operand1 - operand2;
-    case 'divided by':
-      return operand1 / operand2;
-    case 'multiplied by':
-      return operand1 * operand2;
+  case 'plus':
+    return operand1 + operand2;
+  case 'minus':
+    return operand1 - operand2;
+  case 'divided by':
+    return operand1 / operand2;
+  case 'multiplied by':
+    return operand1 * operand2;
   }
 };
 

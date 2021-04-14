@@ -6,7 +6,7 @@ describe('typeConversion', () => {
     const rightInput = [2, 4, 0, 0];
     const expected = 18121;
 
-    test(`test summation`, () => {
+    test('test summation', () => {
       expect(twoSum(leftInput, rightInput)).toBe(expected);
     });
     test(`luckyNumber(${expected})`, () => {

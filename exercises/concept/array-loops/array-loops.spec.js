@@ -2,7 +2,7 @@ import {
   determineUniqueCards,
   determineOddEvenCards,
   cardTypeCheck,
-} from './array-loops.js';
+} from './array-loops';
 
 /**
  * @template T the expected return type

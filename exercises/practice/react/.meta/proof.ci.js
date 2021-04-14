@@ -13,8 +13,12 @@ class InputCell {
   }
 
   notify() {
-    this.subscribers.forEach((sub) => sub.markForUpdate());
-    this.subscribers.forEach((sub) => sub.update());
+    this.subscribers.forEach((sub) => {
+      sub.markForUpdate();
+    });
+    this.subscribers.forEach((sub) => {
+      sub.update();
+    });
   }
 
   addSubscriber(sub) {
@@ -26,7 +30,9 @@ class ComputeCell {
   constructor(inputCells, fn) {
     this.fn = fn;
     this.inputCells = inputCells;
-    this.inputCells.forEach((cell) => cell.addSubscriber(this));
+    this.inputCells.forEach((cell) => {
+      cell.addSubscriber(this);
+    });
     this.subscribers = [];
     this.value = fn(inputCells);
     this.callbacks = [];
@@ -44,20 +50,28 @@ class ComputeCell {
   }
 
   notify() {
-    this.subscribers.forEach((sub) => sub.markForUpdate());
-    this.subscribers.forEach((sub) => sub.update());
+    this.subscribers.forEach((sub) => {
+      sub.markForUpdate();
+    });
+    this.subscribers.forEach((sub) => {
+      sub.update();
+    });
     this.runCallbacks();
   }
 
   markForUpdate() {
     this.updated = false;
-    this.subscribers.forEach((sub) => sub.markForUpdate());
+    this.subscribers.forEach((sub) => {
+      sub.markForUpdate();
+    });
   }
 
   runCallbacks() {
     if (this.allInputsUpdated() && this.valueChanged()) {
       this.lastValue = this.value;
-      this.callbacks.forEach((cb) => cb.run(this));
+      this.callbacks.forEach((cb) => {
+        cb.run(this);
+      });
     }
   }
 

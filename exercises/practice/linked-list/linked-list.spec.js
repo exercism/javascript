@@ -77,7 +77,7 @@ describe('LinkedList', () => {
     expect(list.count()).toBe(0);
   });
 
-  xtest("popping to empty doesn't break the list", () => {
+  xtest('popping to empty doesn\'t break the list', () => {
     const list = new LinkedList();
     list.push(41);
     list.push(59);
@@ -89,7 +89,7 @@ describe('LinkedList', () => {
     expect(list.pop()).toBe(47);
   });
 
-  xtest("shifting to empty doesn't break the list", () => {
+  xtest('shifting to empty doesn\'t break the list', () => {
     const list = new LinkedList();
     list.push(41);
     list.push(59);

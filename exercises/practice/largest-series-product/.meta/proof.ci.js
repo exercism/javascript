@@ -13,7 +13,7 @@ export const largestProduct = (digits, seriesLength) => {
     throw new Error('Digits input must only contain digits');
   }
 
-  let largestProduct = 0;
+  let result = 0;
   for (let i = 0; i <= digits.length - seriesLength; i++) {
     const product = digits
       .substring(i, i + seriesLength)
@@ -21,8 +21,8 @@ export const largestProduct = (digits, seriesLength) => {
       .map((digit) => Number(digit))
       .reduce((a, b) => a * b);
     if (product > largestProduct) {
-      largestProduct = product;
+      result = product;
     }
   }
-  return largestProduct;
+  return result;
 };

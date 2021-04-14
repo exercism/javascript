@@ -29,7 +29,7 @@ describe('partial Garden', () => {
   });
 
   describe('multiple students for the same garden with three students', () => {
-    xtest("second student's garden", () => {
+    xtest('second student\'s garden', () => {
       expect(new Garden('VVCCGG\nVVCCGG').plants('Bob')).toEqual([
         'clover',
         'clover',
@@ -38,7 +38,7 @@ describe('partial Garden', () => {
       ]);
     });
 
-    xtest("third student's garden", () => {
+    xtest('third student\'s garden', () => {
       expect(new Garden('VVCCGG\nVVCCGG').plants('Charlie')).toEqual([
         'grass',
         'grass',
@@ -53,7 +53,7 @@ describe('full garden', () => {
   const diagram = 'VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV';
   const garden = new Garden(diagram);
 
-  xtest("for Alice, first student's garden", () => {
+  xtest('for Alice, first student\'s garden', () => {
     expect(garden.plants('Alice')).toEqual([
       'violets',
       'radishes',
@@ -62,7 +62,7 @@ describe('full garden', () => {
     ]);
   });
 
-  xtest("for Bob, second student's garden", () => {
+  xtest('for Bob, second student\'s garden', () => {
     expect(garden.plants('Bob')).toEqual([
       'clover',
       'grass',
@@ -143,7 +143,7 @@ describe('full garden', () => {
     ]);
   });
 
-  xtest("for Kincaid, second to last student's garden", () => {
+  xtest('for Kincaid, second to last student\'s garden', () => {
     expect(garden.plants('Kincaid')).toEqual([
       'grass',
       'clover',
@@ -152,7 +152,7 @@ describe('full garden', () => {
     ]);
   });
 
-  xtest("for Larry, last student's garden", () => {
+  xtest('for Larry, last student\'s garden', () => {
     expect(garden.plants('Larry')).toEqual([
       'grass',
       'violets',
