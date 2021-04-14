@@ -75,8 +75,8 @@ export class Say {
     return n < 100
       ? this.twoDigit(n)
       : `${this.smallNumbers[Math.floor(n / 100)]} hundred ${this.twoDigit(
-        n % 100
-      )}`;
+          n % 100
+        )}`;
   }
 
   sayDecade(n) {

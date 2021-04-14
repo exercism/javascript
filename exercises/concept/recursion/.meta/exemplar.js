@@ -21,15 +21,15 @@ const PIZZA_PRICES = {
  */
 export function pizzaPrice(pizza, ...[extra, ...otherExtras]) {
   switch (extra) {
-  case 'ExtraSauce': {
-    return 1 + pizzaPrice(pizza, ...otherExtras);
-  }
-  case 'ExtraToppings': {
-    return 2 + pizzaPrice(pizza, ...otherExtras);
-  }
-  default: {
-    return PIZZA_PRICES[pizza];
-  }
+    case 'ExtraSauce': {
+      return 1 + pizzaPrice(pizza, ...otherExtras);
+    }
+    case 'ExtraToppings': {
+      return 2 + pizzaPrice(pizza, ...otherExtras);
+    }
+    default: {
+      return PIZZA_PRICES[pizza];
+    }
   }
 }
 

@@ -63,7 +63,7 @@ describe('Dominoes', () => {
     runTest([[1, 1]], true);
   });
 
-  xdescribe('singleton that can\'t be chained', () => {
+  xdescribe("singleton that can't be chained", () => {
     runTest([[1, 2]], false);
   });
 
@@ -89,7 +89,7 @@ describe('Dominoes', () => {
     );
   });
 
-  xdescribe('can\'t be chained', () => {
+  xdescribe("can't be chained", () => {
     runTest(
       [
         [1, 2],

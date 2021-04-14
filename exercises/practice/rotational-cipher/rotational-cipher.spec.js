@@ -58,8 +58,8 @@ describe('Rotational cipher', () => {
   });
 
   xtest('rotate punctuation', () => {
-    const expected = 'Gzo\'n zvo, Bmviyhv!';
-    const actual = RotationalCipher.rotate('Let\'s eat, Grandma!', 21);
+    const expected = "Gzo'n zvo, Bmviyhv!";
+    const actual = RotationalCipher.rotate("Let's eat, Grandma!", 21);
 
     expect(actual).toEqual(expected);
   });

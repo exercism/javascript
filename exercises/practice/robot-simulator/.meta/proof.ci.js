@@ -9,16 +9,16 @@ export class Robot {
   static instructions(s) {
     return [...s].map((character) => {
       switch (character) {
-      case 'L':
-        return 'turnLeft';
-      case 'R':
-        return 'turnRight';
-      case 'A':
-        return 'advance';
-      default:
-        throw new InvalidInputError(
-          `${character} is not a valid instruction character.`
-        );
+        case 'L':
+          return 'turnLeft';
+        case 'R':
+          return 'turnRight';
+        case 'A':
+          return 'advance';
+        default:
+          throw new InvalidInputError(
+            `${character} is not a valid instruction character.`
+          );
       }
     });
   }

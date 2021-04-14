@@ -1,6 +1,6 @@
 export const parse = (phrase) =>
   phrase
-    .replace('\'', '')
+    .replace("'", '')
     .match(/^[A-Z]|(?<=[^A-Z])[A-Z]|\b[a-z]/g)
     .join('')
     .toUpperCase();

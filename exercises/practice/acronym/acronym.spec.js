@@ -42,7 +42,7 @@ describe('Acronyms are produced from', () => {
 
   // apostrophes
   xtest('phrases with apostrophes', () => {
-    expect(parse('Halley\'s Comet')).toEqual('HC');
+    expect(parse("Halley's Comet")).toEqual('HC');
   });
 
   // underscore emphasis

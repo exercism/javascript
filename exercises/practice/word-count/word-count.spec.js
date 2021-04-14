@@ -75,12 +75,12 @@ describe('countWords', () => {
   xtest('with apostrophes', () => {
     const expectedCounts = {
       first: 1,
-      'don\'t': 2,
+      "don't": 2,
       laugh: 1,
       then: 1,
       cry: 1,
     };
-    expect(countWords('First: don\'t laugh. Then: don\'t cry.')).toEqual(
+    expect(countWords("First: don't laugh. Then: don't cry.")).toEqual(
       expectedCounts
     );
   });
@@ -88,13 +88,13 @@ describe('countWords', () => {
   xtest('with quotations', () => {
     const expectedCounts = {
       joe: 1,
-      'can\'t': 1,
+      "can't": 1,
       tell: 1,
       between: 1,
       large: 2,
       and: 1,
     };
-    expect(countWords('Joe can\'t tell between \'large\' and large.')).toEqual(
+    expect(countWords("Joe can't tell between 'large' and large.")).toEqual(
       expectedCounts
     );
   });
@@ -102,7 +102,7 @@ describe('countWords', () => {
   xtest('substrings from the beginning', () => {
     const expectedCounts = {
       joe: 1,
-      'can\'t': 1,
+      "can't": 1,
       tell: 1,
       between: 1,
       app: 1,
@@ -110,7 +110,7 @@ describe('countWords', () => {
       and: 1,
       a: 1,
     };
-    expect(countWords('Joe can\'t tell between app, apple and a.')).toEqual(
+    expect(countWords("Joe can't tell between app, apple and a.")).toEqual(
       expectedCounts
     );
   });
@@ -129,6 +129,6 @@ describe('countWords', () => {
       two: 1,
       three: 1,
     };
-    expect(countWords(',\n,one,\n ,two \n \'three\'')).toEqual(expectedCounts);
+    expect(countWords(",\n,one,\n ,two \n 'three'")).toEqual(expectedCounts);
   });
 });

@@ -73,15 +73,15 @@ describe('ProteinTranslation', () => {
   });
 
   describe('Unexpected strands', () => {
-    xtest('Non-existing codon can\'t translate', () => {
+    xtest("Non-existing codon can't translate", () => {
       expect(() => translate('AAA')).toThrow(new Error('Invalid codon'));
     });
 
-    xtest('Unknown amino acids, not part of a codon, can\'t translate', () => {
+    xtest("Unknown amino acids, not part of a codon, can't translate", () => {
       expect(() => translate('XYZ')).toThrow(new Error('Invalid codon'));
     });
 
-    xtest('Incomplete RNA sequence can\'t translate', () => {
+    xtest("Incomplete RNA sequence can't translate", () => {
       expect(() => translate('AUGU')).toThrow(new Error('Invalid codon'));
     });
 

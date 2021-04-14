@@ -12,18 +12,18 @@
  */
 export function timeToMixJuice(name) {
   switch (name) {
-  case 'Pure Strawberry Joy':
-    return 0.5;
-  case 'Energizer':
-    return 1.5;
-  case 'Green Garden':
-    return 1.5;
-  case 'Tropical Island':
-    return 3;
-  case 'All or Nothing':
-    return 5;
-  default:
-    return 2.5;
+    case 'Pure Strawberry Joy':
+      return 0.5;
+    case 'Energizer':
+      return 1.5;
+    case 'Green Garden':
+      return 1.5;
+    case 'Tropical Island':
+      return 3;
+    case 'All or Nothing':
+      return 5;
+    default:
+      return 2.5;
   }
 }
 
@@ -54,12 +54,12 @@ export function limesToCut(wedgesNeeded, limes) {
  */
 function wedgesFromLime(size) {
   switch (size) {
-  case 'small':
-    return 6;
-  case 'medium':
-    return 8;
-  case 'large':
-    return 10;
+    case 'small':
+      return 6;
+    case 'medium':
+      return 8;
+    case 'large':
+      return 10;
   }
 }
 

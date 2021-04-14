@@ -1,7 +1,7 @@
 import { rows } from './pascals-triangle';
 
 describe('Pascals Triangle', () => {
-  describe('Given a count, return a collection of that many rows of pascal\'s triangle', () => {
+  describe("Given a count, return a collection of that many rows of pascal's triangle", () => {
     test('zero rows', () => {
       expect(rows(0)).toEqual([]);
     });

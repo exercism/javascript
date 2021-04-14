@@ -9,7 +9,7 @@ export const hey = (message) => {
   }
   if (isShouting(message)) {
     if (isAQuestion(message)) {
-      return 'Calm down, I know what I\'m doing!';
+      return "Calm down, I know what I'm doing!";
     }
     return 'Whoa, chill out!';
   }

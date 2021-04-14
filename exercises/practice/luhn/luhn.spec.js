@@ -65,11 +65,11 @@ describe('Luhn', () => {
     expect(valid('091')).toEqual(true);
   });
 
-  xtest('using ascii value for non-doubled non-digit isn\'t allowed', () => {
+  xtest("using ascii value for non-doubled non-digit isn't allowed", () => {
     expect(valid('055b 444 285')).toEqual(false);
   });
 
-  xtest('using ascii value for doubled non-digit isn\'t allowed', () => {
+  xtest("using ascii value for doubled non-digit isn't allowed", () => {
     expect(valid(':9')).toEqual(false);
   });
 });

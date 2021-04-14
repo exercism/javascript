@@ -18,7 +18,7 @@ It also has a list of tools you can use, of which the `test` tool is one of them
 
 ## Running the code quality tooling (linter)
 
-This run `eslint` for all files that *require* linting.
+This run `eslint` for all files that _require_ linting.
 
 ```shell
 npx eslint exercises/**/*.spec.js exercises/**/.meta/*.js --fix

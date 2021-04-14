@@ -20,28 +20,28 @@ const getMeetupDay = (year, month, weekOrdinal, dayOfWeek) => {
   let lowerLimit = 1;
   let upperLimit = daysInMonth(year, month);
   switch (weekOrdinal) {
-  case 'first':
-    upperLimit = 7;
-    break;
-  case 'second':
-    lowerLimit = 8;
-    upperLimit = 14;
-    break;
-  case 'third':
-    lowerLimit = 15;
-    upperLimit = 21;
-    break;
-  case 'fourth':
-    lowerLimit = 22;
-    upperLimit = 28;
-    break;
-  case 'last':
-    lowerLimit = upperLimit - 6;
-    break;
-  case 'teenth':
-    lowerLimit = 13;
-    upperLimit = 19;
-    break;
+    case 'first':
+      upperLimit = 7;
+      break;
+    case 'second':
+      lowerLimit = 8;
+      upperLimit = 14;
+      break;
+    case 'third':
+      lowerLimit = 15;
+      upperLimit = 21;
+      break;
+    case 'fourth':
+      lowerLimit = 22;
+      upperLimit = 28;
+      break;
+    case 'last':
+      lowerLimit = upperLimit - 6;
+      break;
+    case 'teenth':
+      lowerLimit = 13;
+      upperLimit = 19;
+      break;
   }
 
   for (let i = lowerLimit; i <= upperLimit; i++) {

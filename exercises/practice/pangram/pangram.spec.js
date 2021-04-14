@@ -13,13 +13,13 @@ describe('Pangram()', () => {
     expect(isPangram('the quick brown fox jumps over the lazy dog')).toBe(true);
   });
 
-  xtest('missing the letter \'x\'', () => {
+  xtest("missing the letter 'x'", () => {
     expect(
       isPangram('a quick movement of the enemy will jeopardize five gunboats')
     ).toBe(false);
   });
 
-  xtest('missing the letter \'h\'', () => {
+  xtest("missing the letter 'h'", () => {
     expect(isPangram('five boxing wizards jump quickly at it')).toBe(false);
   });
 
