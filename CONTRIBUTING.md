@@ -164,6 +164,26 @@ If you'd like to download [`canonical_data_syncer`][canonical-data-syncer], you 
 
 We have various `scripts` for you in order to aid with maintaining and contributing to this repository.
 
+> ⚠ If you into into the following error:
+>
+> ```text
+> SyntaxError: Unexpected token 'export'
+> ```
+>
+> It's because your local node version does **not** support es6
+> `import` and `export` statements in regular `.js` files, or
+> files without extension. This is one of the reasons why these
+> scripts are meant to be ran through node:
+>
+> ```shell
+> npx babel-node scripts/the-script
+> ```
+>
+> Additionally, this ensures that the code written in the scripts
+> and their dependencies can be executed by your current node
+> version, which may be different than the maintainer or
+> contributor who contributed to the script.
+
 #### `format`
 
 ```js
