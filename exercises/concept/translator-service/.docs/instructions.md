@@ -1,11 +1,8 @@
 # Instructions
 
-In this exercise you'll be providing a `TranslationService` where paid members
-have some quality assurance.
+In this exercise you'll be providing a `TranslationService` where paid members have some quality assurance.
 
-You have found a magical translation API that is able to fulfill any
-translation _request_ in a reasonable amount of time, and you
-want to capitalize on this.
+You have found a magical translation API that is able to fulfill any translation _request_ in a reasonable amount of time, and you want to capitalize on this.
 
 The magical API has a very minimal interface:
 
@@ -16,30 +13,24 @@ The magical API has a very minimal interface:
 - `translation`: the actual translation
 - `quality`: the quality expressed as a number
 
-If there is no translation available (because it has not been requested yet),
-the API throws an error. This also happens if a piece of text is untranslatable.
+If there is no translation available (because it has not been requested yet), the API throws an error. This also happens if a piece of text is untranslatable.
 
 ## Requesting a translation
 
-`api.request(text, callback)` requests the translation of `text`, calling the
-`callback` once it's ready, without a value.
+`api.request(text, callback)` requests the translation of `text`, calling the `callback` once it's ready, without a value.
 
-The `request` API is unstable, which means that sometimes the API will call the
-`callback` with an error. If that happens, it is okay to re-request.
+The `request` API is unstable, which means that sometimes the API will call the `callback` with an error.
+If that happens, it is okay to re-request.
 
 ## ⚠ Warning! ⚠
 
-Because of some previous users being lazy when programming, always requesting a
-translation, without even checking if the text was already translated, the API
-returns an error if the text has already been translated ánd blocks all access
-completely, forever.
+Because of some previous users being lazy when programming, always requesting a translation, without even checking if the text was already translated, the API returns an error if the text has already been translated ánd blocks all access completely, forever.
 
 ## Tasks
 
 ## 1. Fetch a translation, ignoring the quality
 
-Implement a function to fetch a translation, ignoring the quality, and
-forwarding any errors thrown by the API:
+Implement a function to fetch a translation, ignoring the quality, and forwarding any errors thrown by the API:
 
 ```javascript
 service.free('jIyaj');
@@ -54,8 +45,7 @@ service.free("jIyajbe'");
 
 ## 2. Fetch a batch of translations, all-or-nothing
 
-Implement a function that batch translates the given texts using the free
-service, returning all the translations, or a single error.
+Implement a function that batch translates the given texts using the free service, returning all the translations, or a single error.
 
 ```javascript
 service.batch(['jIyaj', "majQa'"]);
@@ -83,8 +73,7 @@ service.request("jIyajbe'");
 
 ## 4. Fetch a translation, inspect the quality, or request it
 
-Implement the function for premium users which fetch a translation, request it
-if it's not available, and only return it if it meets a certain threshold.
+Implement the function for premium users which fetch a translation, request it if it's not available, and only return it if it meets a certain threshold.
 
 ```javascript
 service.premium("jIyajbe'", 100);

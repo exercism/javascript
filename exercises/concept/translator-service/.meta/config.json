@@ -3,8 +3,8 @@
   "authors": ["SleeplessByte"],
   "contributors": [],
   "files": {
-    "solution": ["promises.js"],
-    "test": ["promises.spec.js"],
+    "solution": ["service.js"],
+    "test": ["service.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
