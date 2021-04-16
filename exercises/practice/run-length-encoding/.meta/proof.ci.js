@@ -8,6 +8,6 @@ export const encode = (plainText) => {
 export const decode = (encodedText) => {
   const countAndChar = /(\d+)(\w|\s)/g;
   return encodedText.replace(countAndChar, (match, repeats, char) =>
-    new Array(+repeats + 1).join(char)
+    new Array(Number(repeats) + 1).join(char)
   );
 };

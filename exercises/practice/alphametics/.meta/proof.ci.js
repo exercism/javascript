@@ -19,11 +19,11 @@ export function solve(puzzle) {
 function countLetters(terms, total) {
   const counts = {};
 
-  terms.forEach((term) =>
+  terms.forEach((term) => {
     [...term].forEach((letter, i, { length }) => {
       counts[letter] = (counts[letter] ?? 0) + 10 ** (length - 1 - i);
-    })
-  );
+    });
+  });
 
   [...total].forEach((letter, i, { length }) => {
     counts[letter] = (counts[letter] ?? 0) - 10 ** (length - 1 - i);

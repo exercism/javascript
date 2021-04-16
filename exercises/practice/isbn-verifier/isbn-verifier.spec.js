@@ -1,4 +1,4 @@
-import { isValid } from './isbn-verifier.js';
+import { isValid } from './isbn-verifier';
 
 describe('ISBN Verifier', () => {
   test('valid isbn', () => {

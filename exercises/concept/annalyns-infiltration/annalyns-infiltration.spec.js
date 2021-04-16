@@ -7,14 +7,14 @@ import {
 
 describe("Annalyn's infiltration", () => {
   describe('can execute fast attack', () => {
-    test(`when the knight is awake`, () => {
+    test('when the knight is awake', () => {
       const knightIsAwake = true;
       const expected = false;
 
       expect(canExecuteFastAttack(knightIsAwake)).toBe(expected);
     });
 
-    test(`when the knight is asleep`, () => {
+    test('when the knight is asleep', () => {
       const knightIsAwake = false;
       const expected = true;
 

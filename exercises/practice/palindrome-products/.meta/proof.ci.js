@@ -18,7 +18,9 @@ class Palindrome {
   }
 
   merge(other) {
-    other.factors.forEach((f) => this.factors.push(f));
+    other.factors.forEach((f) => {
+      this.factors.push(f);
+    });
     this.factors = this.factors.sort();
     return this;
   }

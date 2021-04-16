@@ -3,7 +3,7 @@ const ALPHABET_LENGTH = ALPHABET.length;
 
 const areCoprimes = (a, b) => {
   for (let i = Math.min(a, b); i > 1; i--) {
-    if (a % i == 0 && b % i == 0) {
+    if (a % i === 0 && b % i === 0) {
       return false;
     }
   }

@@ -30,7 +30,7 @@ naDevvo’ yIghoS!
 
 class Untranslatable extends Error {
   constructor() {
-    super(`jIyajbe’`);
+    super('jIyajbe’');
   }
 }
 

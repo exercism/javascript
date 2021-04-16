@@ -3,8 +3,8 @@ import { Robot } from './robot-name';
 const areSequential = (name1, name2) => {
   const alpha1 = name1.substr(0, 2);
   const alpha2 = name2.substr(0, 2);
-  const num1 = +name1.substr(2, 3);
-  const num2 = +name2.substr(2, 3);
+  const num1 = Number(name1.substr(2, 3));
+  const num2 = Number(name2.substr(2, 3));
 
   const numDiff = num2 - num1;
   const alphaDiff =

@@ -13,5 +13,5 @@ export function printBadge(id, name, department) {
   // prettier-ignore
   return id === null
     ? `${name} - ${worksAt}`
-    : `[${id}] ${name} - ${worksAt}`
+    : `[${id}] ${name} - ${worksAt}`;
 }
