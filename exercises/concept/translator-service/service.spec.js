@@ -4,7 +4,7 @@ import {
   TranslationService,
   QualityThresholdNotMet,
   BatchIsEmpty,
-} from './promises';
+} from './service';
 
 class NotAvailable extends Error {
   constructor(text) {
