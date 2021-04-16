@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/javascript-promises",
+  "name": "@exercism/javascript-translator-service",
   "description": "Exercism concept exercise on promises",
   "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
   "private": true,
