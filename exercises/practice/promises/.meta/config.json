@@ -1,0 +1,10 @@
+{
+  "blurb": "Compute the prime factors of a given natural number.",
+  "authors": ["slaymance"],
+  "contributors": ["SleeplessByte"],
+  "files": {
+    "solution": ["promises.js"],
+    "test": ["promises.spec.js"],
+    "example": [".meta/proof.ci.js"]
+  }
+}

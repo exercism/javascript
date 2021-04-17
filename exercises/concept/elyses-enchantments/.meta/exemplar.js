@@ -1,106 +1,102 @@
 // @ts-check
-//
-// The line above enables type checking for this file. Various IDEs interpret
-// the @ts-check directive. It will give you helpful autocompletion when
-// implementing this exercise.
 
 /**
- * Retrieve card from array at position index
+ * Retrieve card from cards array at the 0-based position
  *
- * @param {number[]} array
- * @param {number} index
+ * @param {number[]} cards
+ * @param {number} position
  *
- * @returns {number} Value of card retrieved
+ * @returns {number} the card
  */
-export function getItem(array, index) {
-  return array[index];
+export function getItem(cards, position) {
+  return cards[position];
 }
 
 /**
- * Exchange card from array with newCard at position index
+ * Exchange card with replacementCard at the 0-based position
  *
- * @param {number[]} array
- * @param {number} index
+ * @param {number[]} cards
+ * @param {number} position
+ * @param {number} replacementCard
+ *
+ * @returns {number[]} the cards with the change applied
+ */
+export function setItem(cards, position, replacementCard) {
+  cards[position] = replacementCard;
+  return cards;
+}
+
+/**
+ * Insert newCard at the end of the cards array
+ *
+ * @param {number[]} cards
  * @param {number} newCard
  *
- * @returns {number[]} Array after exchanged card with newCard
+ * @returns {number[]} the cards with the newCard applied
  */
-export function setItem(array, index, newCard) {
-  array[index] = newCard;
-  return array;
+export function insertItemAtTop(cards, newCard) {
+  cards.push(newCard);
+  return cards;
 }
 
 /**
- * Insert newCard at the end of array
+ * Remove the card at the 0-based position
  *
- * @param {number[]} array
+ * @param {number[]} cards
+ * @param {number} position
+ *
+ * @returns {number[]} the cards without the removed card
+ */
+export function removeItem(cards, position) {
+  cards.splice(position, 1);
+  return cards;
+}
+
+/**
+ * Remove card from the end of the cards array
+ *
+ * @param {number[]} cards
+ *
+ * @returns {number[]} the cards without the removed card
+ */
+export function removeItemFromTop(cards) {
+  cards.pop();
+  return cards;
+}
+
+/**
+ * Insert newCard at beginning of the cards array
+ *
+ * @param {number[]} cards
  * @param {number} newCard
  *
- * @returns {number[]} Array after newCard inserted
+ * @returns {number[]} the cards including the new card
  */
-export function insertItemAtTop(array, newCard) {
-  array.push(newCard);
-  return array;
+export function insertItemAtBottom(cards, newCard) {
+  cards.unshift(newCard);
+  return cards;
 }
 
 /**
- * Remove card from array at position index
+ * Remove card from the beginning of the cards cards
  *
- * @param {number[]} array
- * @param {number} index
+ * @param {number[]} cards
  *
- * @returns {number[]} Array after card removed
+ * @returns {number[]} the cards without the removed card
  */
-export function removeItem(array, index) {
-  array.splice(index, 1);
-  return array;
+export function removeItemAtBottom(cards) {
+  cards.shift();
+  return cards;
 }
 
 /**
- * Remove card from the end of array
+ * Compare the number of cards with the given stackSize
  *
- * @param {number[]} array
- *
- * @returns {number[]} Array after card removed
- */
-export function removeItemFromTop(array) {
-  array.pop();
-  return array;
-}
-
-/**
- * Insert newCard at beginning of array
- *
- * @param {number[]} array
- * @param {number} newCard
- *
- * @returns {number[]} Array after newCard inserted
- */
-export function insertItemAtBottom(array, newCard) {
-  array.unshift(newCard);
-  return array;
-}
-
-/**
- * Remove card from the beginning of array
- *
- * @param {number[]} array
- *
- * @returns {number[]} Array after card removed
- */
-export function removeItemAtBottom(array) {
-  array.shift();
-  return array;
-}
-
-/**
- * Check the size of array, Does it equals to stackSize
- *
- * @param {number[]} array
+ * @param {number[]} cards
  * @param {number} stackSize
  *
- * @returns {boolean} Whether the size of array equals to stackSize
+ * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
-export function checkSizeOfStack(array, stackSize) {
-  return array.length === stackSize;
+export function checkSizeOfStack(cards, stackSize) {
+  return cards.length === stackSize;
 }

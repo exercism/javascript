@@ -20,7 +20,7 @@ export class Series {
       throw new Error('slice length cannot be negative');
     }
 
-    if (sliceSize == 0) {
+    if (sliceSize === 0) {
       throw new Error('slice length cannot be zero');
     }
 

@@ -30,7 +30,7 @@ describe('closures', () => {
     const x1 = 0;
     const y1 = 0;
     const expected = [3, -5];
-    xtest(`should be predictable`, () => {
+    xtest('should be predictable', () => {
       expect(translator(x1, y1)).toEqual(expected);
     });
 
@@ -53,7 +53,7 @@ describe('closures', () => {
     const x1 = 1;
     const y1 = 1;
     const expected = [4, 2];
-    xtest(`should be predictable`, () => {
+    xtest('should be predictable', () => {
       expect(scaler(x1, y1)).toEqual(expected);
     });
 

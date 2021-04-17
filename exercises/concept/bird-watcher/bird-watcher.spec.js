@@ -1,8 +1,4 @@
-import {
-  totalBirdCount,
-  birdsInWeek,
-  fixBirdCountLog,
-} from './bird-watcher.js';
+import { totalBirdCount, birdsInWeek, fixBirdCountLog } from './bird-watcher';
 
 describe('bird watcher', () => {
   describe('totalBirdCount', () => {

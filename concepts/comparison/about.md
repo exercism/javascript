@@ -24,8 +24,8 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 
 1 === 1.0;
 // => true
-// All numbers are floating-points, so this is different syntax for
-// the exact same value.
+// All numbers are floating-points, so this is different syntax
+// for the exact same value.
 ```
 
 ## Comparing Strings
@@ -67,11 +67,13 @@ You might wonder about the three equal signs for checking equality in JavaScript
 ```javascript
 '3' === 3;
 // => false
-// The value on the left has type string, the value on the right has type number.
+// The value on the left has type string, the value on the right
+// has type number.
 
 1 === 1n;
 // => false
-// The value on the left has type number, the value on the right has type bigint.
+// The value on the left has type number, the value on the right
+// has type bigint.
 ```
 
 Using `===` and `!==` is the recommended way of checking equality in JavaScript.

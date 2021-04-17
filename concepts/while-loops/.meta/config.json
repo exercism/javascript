@@ -1,0 +1,5 @@
+{
+  "blurb": "Execute code repeatedly as long as a certain condition is fulfilled. Depending on when that condition should be checked, you can use a while or a do-while loop in JavaScript.",
+  "authors": ["junedev"],
+  "contributors": []
+}

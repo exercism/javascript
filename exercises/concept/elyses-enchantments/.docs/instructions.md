@@ -6,29 +6,30 @@ To make things a bit easier she only uses the cards 1 to 10.
 
 ## 1. Retrieve a card from a stack
 
-Return the card at position `index` from the given stack.
+In order to pick a card, return the card at position `position` from the given stack.
 
 ```javascript
-const index = 2;
-getItem([1, 2, 4, 1], index);
+const position = 2;
+getItem([1, 2, 4, 1], position);
 // => 4
 ```
 
 ## 2. Exchange a card in the stack
 
-Exchange the card at position `index` with the new card provided and return the adjusted stack.
-Note that this will also change the input slice which is ok.
+Perform some sleight of hand and exchange the card at position `position` with the new card provided.
+Return the adjusted stack.
 
 ```javascript
-const index = 2;
+const position = 2;
 const newCard = 6;
-setItem([1, 2, 4, 1], index, newCard);
+setItem([1, 2, 4, 1], position, newCard);
 // => [1, 2, 6, 1]
 ```
 
-## 3. Insert a card at the of top the stack
+## 3. Insert a card at the top of the stack
 
-Insert new card at the top of the stack and return the stack.
+Make a card appear, by inserting a new card at the top of the stack.
+Return the adjusted stack.
 
 ```javascript
 const newCard = 8;
@@ -36,28 +37,10 @@ insertItemAtTop([5, 9, 7, 1], newCard);
 // => [5, 9, 7, 1, 8]
 ```
 
-## 4. Remove a card from the stack
+## 4. Insert a card at the bottom of the stack
 
-Remove the card at position `index` from the stack and return the stack.
-
-```javascript
-const index = 2;
-removeItem([3, 2, 6, 4, 8], index);
-// => [3, 2, 4, 8]
-```
-
-## 5. Remove the top card from the stack
-
-Remove the card at the top of the stack and return the stack.
-
-```javascript
-removeItemFromTop([3, 2, 6, 4, 8]);
-// => [3, 2, 6, 4]
-```
-
-## 6. Insert a card at the bottom of the stack
-
-Insert new card at the bottom of the stack and return the stack.
+Make a card appear, by inserting a new card at the bottom of the stack.
+Return the adjusted stack.
 
 ```javascript
 const newCard = 8;
@@ -65,9 +48,31 @@ insertItemAtBottom([5, 9, 7, 1], newCard);
 // => [8, 5, 9, 7, 1]
 ```
 
+## 5. Remove a card from the stack
+
+Make a card disappear by removing the card the given `position` from the stack.
+Return the adjusted stack.
+
+```javascript
+const position = 2;
+removeItem([3, 2, 6, 4, 8], position);
+// => [3, 2, 4, 8]
+```
+
+## 6. Remove the top card from the stack
+
+Make a card disappear by removing the card at the top of the stack.
+Return the adjusted stack.
+
+```javascript
+removeItemFromTop([3, 2, 6, 4, 8]);
+// => [3, 2, 6, 4]
+```
+
 ## 7. Remove a card from the bottom of the stack
 
-Remove the card at the bottom of the stack and return the stack.
+Make a card disappear by removing the card at the bottom of the stack.
+Return the adjusted stack.
 
 ```javascript
 removeItemAtBottom([8, 5, 9, 7, 1]);

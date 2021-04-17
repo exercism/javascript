@@ -104,7 +104,7 @@ describe('recursion', () => {
   });
 
   describe('Order price for one pizza margherita with a LOT of sauce and one pizza caprese with a LOT of toppings', () => {
-    xit(`orderPrice([PizzaOrder('Margherita', 'ExtraSauce', 'ExtraSauce', 'ExtraSauce'), PizzaOrder('Caprese', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings')])`, () => {
+    xit("orderPrice([PizzaOrder('Margherita', 'ExtraSauce', 'ExtraSauce', 'ExtraSauce'), PizzaOrder('Caprese', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings')])", () => {
       const saucyMargherita = new PizzaOrder(
         'Margherita',
         'ExtraSauce',

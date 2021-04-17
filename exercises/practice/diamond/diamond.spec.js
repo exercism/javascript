@@ -1,4 +1,4 @@
-import { rows } from './diamond.js';
+import { rows } from './diamond';
 
 describe('Diamond', () => {
   test("Degenerate case with a single 'A' row", () => {

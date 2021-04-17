@@ -28,7 +28,8 @@ There are two built-in objects that are useful when dealing with numbers:
 - [`Number`][built-in-number]: static properties for common / useful values, static methods for [type-checking][concept-type-checking] and [type-conversion][concept-type-conversion], instance methods for [type-conversion][concept-type-conversion] and [formatting numbers as strings][string-formatting].
 - [`Math`][built-in-math]: properties and methods for mathematical constants and functions, does **not** work with `BigInt`.
 
-The `Number` built-in global `object` is _also_ a global `function` that can be used to convert _almost anything_ number-like to a `number`. It is less forgiving than _parsing_ a `string` to a `number`.
+The `Number` built-in global `object` is _also_ a global `function` that can be used to convert _almost anything_ number-like to a `number`.
+It is less forgiving than _parsing_ a `string` to a `number`.
 
 ```javascript
 const date = new Date('December 17, 1995 03:24:00');
@@ -57,19 +58,21 @@ Numbers are considered equal if they have the same value.
 
 1 === 1.0;
 // => true
-// Remember, all numbers are floating-points, so this is different syntax for
-// the exact same value.
+// Remember, all numbers are floating-points, so this is
+// different syntax for the exact same value.
 
 1 === 1n;
 // => false
-// Strictly checking a number against a bigint will always result in false.
+// Strictly checking a number against a bigint will always result
+// in false.
 ```
 
 See [comparison][concept-comparison] for more information on comparisons in general and comparing numeric values in JavaScript.
 
 ## Pitfalls
 
-Becuase numbers in JavaScript are floating point numbers, all math using these values is floating point math. Therefore, in JavaScript:
+Becuase numbers in JavaScript are floating point numbers, all math using these values is floating point math.
+Therefore, in JavaScript:
 
 ```javascript
 0.1 + 0.2 === 0.3;

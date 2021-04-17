@@ -1,9 +1,9 @@
 // @ts-check
 
 const { spawnSync } = require('child_process');
-const { resolve, relative } = require('path');
+const { resolve: resolvePath, relative } = require('path');
 
-const BASE_DIR = resolve(__dirname);
+const BASE_DIR = resolvePath(__dirname);
 
 /**
  * Spawns a new node process, emulating `grep`.
@@ -14,11 +14,11 @@ const BASE_DIR = resolve(__dirname);
  */
 function spawnGrep(config) {
   const args = [
-    resolve(BASE_DIR, 'grep.js'),
+    resolvePath(BASE_DIR, 'grep.js'),
     ...config.flags,
     config.pattern,
     ...config.files.map((file) =>
-      relative(BASE_DIR, resolve(BASE_DIR, 'data', file))
+      relative(BASE_DIR, resolvePath(BASE_DIR, 'data', file))
     ),
   ];
 
@@ -56,7 +56,7 @@ function formatStringTemplate(stringTemplate) {
  * @param {string} file
  */
 function resolveDataFile(file) {
-  return relative(BASE_DIR, resolve(BASE_DIR, 'data', file));
+  return relative(BASE_DIR, resolvePath(BASE_DIR, 'data', file));
 }
 
 describe('grep exercise', () => {

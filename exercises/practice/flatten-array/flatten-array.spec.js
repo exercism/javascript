@@ -1,4 +1,4 @@
-import { flatten } from './flatten-array.js';
+import { flatten } from './flatten-array';
 
 describe('FlattenArray', () => {
   xtest('empty', () => {

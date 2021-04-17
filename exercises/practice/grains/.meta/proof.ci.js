@@ -18,11 +18,11 @@ export const square = (num) => {
  * @return {BigInt} Sum of all squares
  */
 export const total = () => {
-  let total = BigInt(0);
+  let result = BigInt(0);
 
   for (let squareNum = 1; squareNum <= 64; squareNum++) {
-    total += square(squareNum);
+    result += square(squareNum);
   }
 
-  return total;
+  return result;
 };
