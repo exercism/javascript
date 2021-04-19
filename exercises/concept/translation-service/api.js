@@ -26,7 +26,11 @@ export class ExternalApi {
    * @returns {this}
    */
   register(value, translation, quality = undefined) {
-    this.values[value] = translation ? { translation, quality } : null;
+    if (typeof this.values[value] === 'undefined') {
+      this.values[value] = [];
+    }
+
+    this.values[value].push(translation ? { translation, quality } : null);
     return this;
   }
 
