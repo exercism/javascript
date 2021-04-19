@@ -5,7 +5,8 @@
   "files": {
     "solution": ["service.js"],
     "test": ["service.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "exemplar": [".meta/exemplar.js"],
+    "editor": ["api.js", "errors.js", "global.d.ts"]
   },
   "forked_from": []
 }
