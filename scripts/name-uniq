@@ -28,4 +28,4 @@ if (duplicates.length !== 0) {
 }
 
 shell.echo('[Success] All package names are unique.');
-shell.exit(1);
+shell.exit(0);

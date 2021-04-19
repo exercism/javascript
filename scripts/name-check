@@ -30,7 +30,7 @@ packageFiles.forEach((filePath) => {
   const file = JSON.parse(shell.cat(filePath).toString());
 
   const givenName = file['name'];
-  const exerciseName = filePath.split('/')[2];
+  const exerciseName = filePath.split(/[/\\]/g)[2];
   const expectedName = `@exercism/javascript-${exerciseName}`;
 
   if (givenName === expectedName) {
@@ -52,3 +52,5 @@ packageFiles.forEach((filePath) => {
     shell.exit(1);
   }
 });
+
+shell.exit(0);
