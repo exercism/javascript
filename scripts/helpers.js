@@ -277,7 +277,23 @@ export function prepare(assignment) {
 
   files.test.forEach((specFileName) => {
     const specFile = path.join('exercises', assignment, specFileName);
-    const specFileDestination = path.join('tmp_exercises', specFileName);
+
+    // Skip file if it doesn't exist
+    if (!shell.test('-f', specFile)) {
+      if (specFileName !== 'custom.spec.js') {
+        console.warn(
+          `Skipped copying test file for ${assignment}: ${specFileName} because it doesn't exist`
+        );
+      }
+
+      return;
+    }
+
+    const specFileDestination = path.join(
+      'tmp_exercises',
+      assignment,
+      specFileName
+    );
 
     shell.mkdir('-p', path.dirname(specFileDestination));
     shell.cp(specFile, specFileDestination);
@@ -297,23 +313,28 @@ export function prepare(assignment) {
       .to(specFileDestination);
   });
 
-  shell.mkdir('-p', path.join('tmp_exercises', 'lib'));
+  shell.mkdir('-p', path.join('tmp_exercises', assignment, 'lib'));
 
   exampleFiles.forEach((exampleFileName, i) => {
     const exampleFile = path.join('exercises', assignment, exampleFileName);
     const exampleFileDestination = path.join(
       'tmp_exercises',
+      assignment,
       files.solution[i]
     );
 
     shell.sed("from '../", "from './", exampleFile).to(exampleFileDestination);
   });
 
+  // If there are more solution files than example or exemplar files, copy over
+  // the remaining ones. This allows us to overwrite solution files by providing
+  // them in exemplar, but keep them
   if (files.solution.length > exampleFiles.length) {
     files.solution.slice(exampleFiles.length).forEach((extraLibFileName) => {
       const solutionFile = path.join('exercises', assignment, extraLibFileName);
       const solutionFileDestination = path.join(
         'tmp_exercises',
+        assignment,
         extraLibFileName
       );
 
@@ -321,16 +342,38 @@ export function prepare(assignment) {
     });
   }
 
-  const libDir = path.join('exercises', assignment, 'lib');
-  if (shell.test('-d', libDir)) {
-    shell.cp(path.join(libDir, '*.js'), path.join('tmp_exercises', 'lib'));
+  // Copy new-style editor files
+  if ('editor' in files) {
+    files.editor.forEach((readonlyFileName) => {
+      const readonlyFile = path.join('exercises', assignment, readonlyFileName);
+      const readonlyFileDestination = path.join(
+        'tmp_exercises',
+        assignment,
+        readonlyFileName
+      );
+
+      shell.cp(readonlyFile, readonlyFileDestination);
+    });
   }
 
-  shell.mkdir('-p', path.join('tmp_exercises', 'data'));
+  // Copy legacy lib files
+  const libDir = path.join('exercises', assignment, 'lib');
+  if (shell.test('-d', libDir)) {
+    shell.cp(
+      path.join(libDir, '*.js'),
+      path.join('tmp_exercises', assignment, 'lib')
+    );
+  }
+
+  // Copy legacy data files
+  shell.mkdir('-p', path.join('tmp_exercises', assignment, 'data'));
   const dataDir = path.join('exercises', assignment, 'data');
 
   if (shell.test('-d', dataDir)) {
-    shell.cp(path.join(dataDir, '*'), path.join('tmp_exercises', 'data'));
+    shell.cp(
+      path.join(dataDir, '*'),
+      path.join('tmp_exercises', assignment, 'data')
+    );
   }
 }
 
