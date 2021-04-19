@@ -16,7 +16,7 @@ When a `Promise` is _settled_, it means that it has either _resolved_ or _reject
 
 Unlike old-fashioned _passed-in_ callbacks, a promise comes with some guarantees, including, but not limited to:
 
-- A `Promise` can only change its state *once*, which means that a resolved promise can never become rejected.
+- A `Promise` can only change its state _once_, which means that a resolved promise can never become rejected.
 - Callbacks added with [`.then`][mdn-promise-then] are called even if the promise has already settled.
 - Multiple callback may be added using [`.then`][mdn-promise-then], and those callbacks will be invoked in the order as they were inserted.
 

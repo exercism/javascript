@@ -19,7 +19,7 @@ If there is no translation available (because it has not been requested yet, see
 An `Untranslatable` error is thrown if a piece of text is untranslatable.
 
 ```javascript
-api.fetch('jIyaj')
+api.fetch('jIyaj');
 // => Promise({ resolved: 'I understand' })
 ```
 
@@ -35,20 +35,20 @@ That's the difference between `NotAvailable` (will be available, but must be req
 > If that happens, it is okay to re-request.
 
 ```javascript
-api.request('majQa’')
+api.request('majQa’');
 // => Promise({ resolved: undefined })
 ```
 
 ### ⚠ Warning! ⚠
 
-~~~~exercism/caution
+```exercism/caution
 The API works its magic by teleporting in the various translators when a `request` comes in.
 This is a very costly action, so it shouldn't be called when a translation *is* available.
 Unfortunately not everyone reads the manual, so there is a system in place to kick-out bad actors.
 
 If a `api.request` is called for `text` is available, the API throws an `AbusiveClientError` for this call, **and every call after that**.
 Ensure that you *never* request a translation if something has already been translated.
-~~~~
+```
 
 ## 1. Fetch a translation, ignoring the quality
 
@@ -119,6 +119,6 @@ service.premium("'arlogh Qoylu'pu'?", 40);
 
 ## N.B.
 
-~~~~exercism/note
+```exercism/note
 The correct translation of `'arlogh Qoylu'pu'?` is **How many times has it been heard?**.
-~~~~
+```
