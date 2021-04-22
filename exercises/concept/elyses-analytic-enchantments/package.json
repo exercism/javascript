@@ -10,7 +10,7 @@
     "directory": "languages/javascript/exercises/concept/elyses-analytic-enchantments"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
+    "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.13.15",
