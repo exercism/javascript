@@ -22,9 +22,11 @@ The Concepts this exercise unlocks are:
 
 ## Prerequisites
 
-- `array-destructuring` because examples use array destructuring and the spread operator
-- `equality` because it is referenced in the introduction and `about.md`
-- `strings` because one task involves splitting a string
+- `array-destructuring` because examples use array destructuring
+- `comparison` because this is where equality is explained
+- `array-loops` because it introduces the for-of loop
+- `rest-and-spread-operators`
+- `arrays`
 
 ## Analyzer
 

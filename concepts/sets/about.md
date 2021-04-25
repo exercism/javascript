@@ -1,8 +1,8 @@
 # About
 
-In JavaScript, a [set][mdn-sets] is a list-like data structure that can only contain unique primitives and/or object references.
+In JavaScript, a set is a list-like data structure that can only contain unique primitives and/or object references.
 
-Sets must be created using the [set constructor][mdn-set-constructor]; they can be initialized with values by passing an array to the constructor.
+Sets must be created using the set constructor; they can be initialized with values by passing an array to the constructor.
 
 ```javascript
 const emptySet = new Set();
@@ -88,8 +88,6 @@ The short answer is that sets are optimized for searching, and arrays are not. A
 
 In practice, though, this performance difference is negligible unless the collection contains a huge amount of data.
 
-[mdn-sets]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 [mdn-strict-equality]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using
-[mdn-set-constructor]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set
 [mdn-keyed-collections]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections
 [mdn-spread-syntax]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax

@@ -163,6 +163,20 @@
         "concepts": ["promises"],
         "prerequisites": ["arrays", "callbacks", "errors", "recursion"],
         "status": "beta"
+      },
+      {
+        "slug": "ozans-playlist",
+        "name": "Ozan's Playlist",
+        "uuid": "",
+        "concepts": ["sets"],
+        "prerequisites": [
+          "array-destructuring",
+          "array-loops",
+          "comparison",
+          "rest-and-spread-operators",
+          "arrays"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
