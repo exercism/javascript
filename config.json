@@ -167,7 +167,7 @@
       {
         "slug": "ozans-playlist",
         "name": "Ozan's Playlist",
-        "uuid": "",
+        "uuid": "50dba808-070a-4873-b223-d565381c3b4c",
         "concepts": ["sets"],
         "prerequisites": [
           "array-destructuring",
