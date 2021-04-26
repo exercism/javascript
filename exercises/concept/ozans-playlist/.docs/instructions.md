@@ -14,10 +14,10 @@ Implement the `removeDuplicates` function, which takes a playlist as a _paramete
 const playlist = [
   'Court and Spark - Joni Mitchell',
   'Big Yellow Taxi - Joni Mitchell',
-  'Court and Spark - Joni Mitchell'
-]
+  'Court and Spark - Joni Mitchell',
+];
 
-removeDuplicates(playlist)
+removeDuplicates(playlist);
 //=> ['Court and Spark - Joni Mitchell', 'Big Yellow Taxi - Joni Mitchell']
 ```
 
