@@ -1673,6 +1673,11 @@
       "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
       "slug": "conditionals-switch",
       "name": "Switch Statement"
+    },
+    {
+      "uuid": "50dba808-070a-4873-b223-d565381c3b4c",
+      "slug": "sets",
+      "name": "Sets"
     }
   ],
   "key_features": [
