@@ -679,7 +679,7 @@
       {
         "slug": "high-scores",
         "name": "High Scores",
-        "uuid": "19b41c4a-1466-5c19-b547-40284189fd18",
+        "uuid": "f5af74f7-259c-48e6-828c-bcd98717d8dd",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
@@ -1017,7 +1017,7 @@
       {
         "slug": "sublist",
         "name": "Sublist",
-        "uuid": "4be85b5e-6b13-11e7-907b-a6006ad3dba0",
+        "uuid": "bb00e97f-8dcf-40ba-b8c2-c3cb72bbaf97",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
