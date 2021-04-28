@@ -167,7 +167,7 @@
       {
         "slug": "ozans-playlist",
         "name": "Ozan's Playlist",
-        "uuid": "50dba808-070a-4873-b223-d565381c3b4c",
+        "uuid": "347692fb-7b0f-4ef0-9a02-2192b59bdf5d",
         "concepts": ["sets"],
         "prerequisites": [
           "array-destructuring",
@@ -1675,7 +1675,7 @@
       "name": "Switch Statement"
     },
     {
-      "uuid": "50dba808-070a-4873-b223-d565381c3b4c",
+      "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
       "slug": "sets",
       "name": "Sets"
     }
