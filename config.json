@@ -12,7 +12,9 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "ace_editor_language": "javascript",
+    "highlightjs_language": "javascript"
   },
   "test_pattern": ".*[.]spec[.]js$",
   "files": {
