@@ -30,7 +30,7 @@ Now that your machine is able to detect errors, you will implement a function th
 - If the temperature is too high, you will either shutdown the machine if the temperature exceeds 600°C or turn on a warning light if it is less than that.
 - If another error happens, you'll rethrow it.
 
-## Tasks
+
 
 ## 1. Monitor the humidity level of the room
 
