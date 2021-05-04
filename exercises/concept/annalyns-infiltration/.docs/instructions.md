@@ -19,8 +19,6 @@ Having found the kidnappers, Annalyn considers which of the following actions sh
 
 You have four tasks: to implement the logic for determining if the above actions are available based on the state of the three characters found in the forest and whether Annalyn's pet dog is present or not.
 
-## Tasks
-
 ## 1. Check if the 'Fast Attack' action is possible
 
 Implement a function named `canExecuteFastAttack` that takes a boolean value which indicates if the knight is awake.

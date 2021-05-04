@@ -52,8 +52,6 @@ When the guard recites **Stands so high**, you'll respond **h**, when the guard 
 
 Finally the password you write down is `Horse, please`, and you can party with the renowned poets.
 
-## Tasks
-
 ## 1. Get the first letter of a sentence
 
 Implement a function that returns first letter of a sentence:
