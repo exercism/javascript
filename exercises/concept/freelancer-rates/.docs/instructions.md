@@ -11,8 +11,6 @@ If the freelancer bills the project manager per month, there is a discount appli
 
 Discounts are modeled as fractional numbers (percentage) between `0.0` (`0%`, no discount) and `0.90` (`90%`, maximum discount).
 
-
-
 ## 1. Calculate the day rate given an hourly rate
 
 Implement a function to calculate the day rate given an hourly rate:

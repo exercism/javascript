@@ -1,7 +1,5 @@
 # Instructions
 
-
-
 ## 1. Find the sum of two arrays
 
 Given two arrays made up of digits, write a function that interprets the arrays as numbers and sums them:
