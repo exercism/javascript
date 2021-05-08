@@ -1,6 +1,14 @@
 [
   {
-    "url": "...",
-    "description": "..."
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics",
+    "description": "MDN: Object Basics"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "description": "MDN: Built-In Object Helpers"
+  },
+  {
+    "url": "https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/for...in",
+    "description": "MDN: For-in Loop"
   }
 ]

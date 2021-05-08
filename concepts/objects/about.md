@@ -1,5 +1,7 @@
 # About
 
+## Explanation
+
 Besides the primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
 In other languages they are referred to as maps or dictionaries and often times values need to have the same data type.
@@ -7,8 +9,10 @@ In JavaScript only the type of the key is restricted, it has to be a string.
 The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
 
+## Creating an Object
+
 You create an object (literal) with curly brackets.
-You can also directly include some entries.
+You can also directly include some entries (key-value pairs).
 For that, write the key first followed by a colon and the value.
 
 ```javascript
@@ -70,6 +74,8 @@ const obj = {
 };
 ```
 
+## Retrieving a Value
+
 There are two ways to retrieve the value for a given key, dot notation and bracket notation.
 
 ```javascript
@@ -130,6 +136,8 @@ obj.residence?.street;
 // => undefined
 ```
 
+## Adding or Changing a Value
+
 You can add or change a value using the assignment operator `=`.
 Again, there is dot and bracket notation available.
 
@@ -142,6 +150,8 @@ obj['greeting'] = 'Welcome.';
 obj.newKey1 = 'new value 1';
 obj['new key 2'] = 'new value 2';
 ```
+
+## Deleting an Entry
 
 You can delete a key-value pair from an object using the `delete` keyword.
 
@@ -170,6 +180,8 @@ obj.hasOwnProperty('age');
 ```
 
 `hasOwnProperty` returns `false` for [inherited keys][concept-inheritance]. This is usually the desired behavior. If you want include inherited keys in the existence check you can use the [`in` operator][mdn-in-operator] instead.
+
+## Looping Through an Object
 
 There is a special `for...in` loop to iterate over all keys of an object.
 
@@ -201,6 +213,8 @@ for (let key in obj) {
 }
 ```
 
+## Keys, Values and Entries
+
 The built-in object `Object` provides helper methods to retrieve all the keys, values or entries of a given object as arrays.
 
 ```javascript
@@ -219,9 +233,9 @@ Object.entries(obj);
 // => [ [ 'name', 'Ali' ], [ 'age', 65 ] ]
 ```
 
-You might have noticed that an empty object in JavaScript is not completely empty. For example it contains the `hasOwnProperty` method and other methods like `toString`. Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
+## Truly Empty Object
 
-TODO switch
+You might have noticed that an empty object in JavaScript is not completely empty. For example it contains the `hasOwnProperty` method and other methods like `toString`. Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
 [mdn-shorthand-notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#new_notations_in_ecmascript_2015
