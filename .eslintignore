@@ -1,2 +1,5 @@
 
 !.meta
+
+/exercises/**/global.d.ts
+/exercises/**/env.d.ts

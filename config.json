@@ -12,7 +12,9 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "ace_editor_language": "javascript",
+    "highlightjs_language": "javascript"
   },
   "test_pattern": ".*[.]spec[.]js$",
   "files": {
@@ -157,7 +159,7 @@
         "status": "beta"
       },
       {
-        "slug": "promises",
+        "slug": "translation-service",
         "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
@@ -170,6 +172,20 @@
         "uuid": "431d1f13-d280-4808-bbc6-a72e628c15c2",
         "concepts": ["objects"],
         "prerequisites": ["arrays"], // FIXME
+        "status": "beta"
+      },
+      {
+        "slug": "ozans-playlist",
+        "name": "Ozan's Playlist",
+        "uuid": "347692fb-7b0f-4ef0-9a02-2192b59bdf5d",
+        "concepts": ["sets"],
+        "prerequisites": [
+          "array-destructuring",
+          "array-loops",
+          "comparison",
+          "rest-and-spread-operators",
+          "arrays"
+        ],
         "status": "beta"
       }
     ],
@@ -430,7 +446,7 @@
       {
         "slug": "leap",
         "name": "Leap",
-        "uuid": "7c8294ee-5924-4bf8-a72f-31d0e2d7d9a0",
+        "uuid": "193a0e19-462d-4d26-a117-124f07d5a3d7",
         "practices": [],
         "prerequisites": ["numbers"],
         "difficulty": 1,
@@ -673,7 +689,7 @@
       {
         "slug": "high-scores",
         "name": "High Scores",
-        "uuid": "19b41c4a-1466-5c19-b547-40284189fd18",
+        "uuid": "f5af74f7-259c-48e6-828c-bcd98717d8dd",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
@@ -1011,7 +1027,7 @@
       {
         "slug": "sublist",
         "name": "Sublist",
-        "uuid": "4be85b5e-6b13-11e7-907b-a6006ad3dba0",
+        "uuid": "bb00e97f-8dcf-40ba-b8c2-c3cb72bbaf97",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
@@ -1672,6 +1688,11 @@
       "uuid": "68dd89d3-13b8-49f5-b493-ccfdc82a073c",
       "slug": "objects",
       "name": "Objects"
+    },
+    {
+      "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
+      "slug": "sets",
+      "name": "Sets"
     }
   ],
   "key_features": [

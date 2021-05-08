@@ -1,25 +1,5 @@
 // @ts-check
 
-export class QualityThresholdNotMet extends Error {
-  constructor(text) {
-    super(
-      `
-The translation of ${text} does not meet the requested quality threshold.
-    `.trim()
-    );
-  }
-}
-
-export class BatchIsEmpty extends Error {
-  constructor() {
-    super(
-      `
-Requested a batch translation, but there are no texts in the batch.
-    `.trim()
-    );
-  }
-}
-
 export class TranslationService {
   /**
    *
@@ -104,5 +84,25 @@ export class TranslationService {
         return resolve();
       });
     });
+  }
+}
+
+export class QualityThresholdNotMet extends Error {
+  constructor(text) {
+    super(
+      `
+The translation of ${text} does not meet the requested quality threshold.
+    `.trim()
+    );
+  }
+}
+
+export class BatchIsEmpty extends Error {
+  constructor() {
+    super(
+      `
+Requested a batch translation, but there are no texts in the batch.
+    `.trim()
+    );
   }
 }

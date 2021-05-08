@@ -93,6 +93,9 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     ).code;
 
     if (checkResult !== 0) {
+      shell.echo(
+        `scripts/checksum returned a non-zero exit code: ${checkResult}`
+      );
       shell.exit(checkResult);
     }
 
@@ -101,6 +104,9 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     ).code;
 
     if (nameCheckResult !== 0) {
+      shell.echo(
+        `scripts/name-check returned a non-zero exit code: ${nameCheckResult}`
+      );
       shell.exit(nameCheckResult);
     }
   });
@@ -110,6 +116,9 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   ).code;
 
   if (nameUniqResult !== 0) {
+    shell.echo(
+      `scripts/name-uniq returned a non-zero exit code: ${nameUniqResult}`
+    );
     shell.exit(nameUniqResult);
   }
 }
@@ -135,6 +144,7 @@ shell.env['CLEANUP'] = true;
 
 const checkResult = shell.exec(`npx babel-node ${path.join('scripts', 'lint')}`)
   .code;
-if (checkResult != 0) {
+if (checkResult !== 0) {
+  shell.echo(`scripts/lint returned a non-zero exit code: ${checkResult}`);
   shell.exit(checkResult);
 }
