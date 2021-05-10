@@ -27,9 +27,7 @@ describe('Matrix', () => {
 
   xtest('can extract column from non-square matrix with no corresponding row', () => {
     expect(new Matrix('1 2 3 4\n5 6 7 8\n9 8 7 6').columns[3]).toEqual([
-      4,
-      8,
-      6,
+      4, 8, 6,
     ]);
   });
 
@@ -39,9 +37,7 @@ describe('Matrix', () => {
 
   xtest('extract column where numbers have different widths', () => {
     expect(new Matrix('89 1903 3\n18 3 1\n9 4 800').columns[1]).toEqual([
-      1903,
-      3,
-      4,
+      1903, 3, 4,
     ]);
   });
 });
