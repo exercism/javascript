@@ -15,4 +15,4 @@ jobs:
       - name: 'Verify formatting of all files'
         run: ./bin/check-formatting.sh
         env:
-          EXERCISM_PRETTIER_VERSION: '2.2.1'
+          EXERCISM_PRETTIER_VERSION: '2.3.0'

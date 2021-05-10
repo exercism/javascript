@@ -68,33 +68,15 @@ describe('VariableLengthQuantity', () => {
 
     xtest('two multi-byte values', () => {
       expect(encode([0x4000, 0x123456])).toEqual([
-        0x81,
-        0x80,
-        0,
-        0xc8,
-        0xe8,
-        0x56,
+        0x81, 0x80, 0, 0xc8, 0xe8, 0x56,
       ]);
     });
 
     xtest('many multi-byte values', () => {
       const input = [0x2000, 0x123456, 0xfffffff, 0, 0x3fff, 0x4000];
       const expected = [
-        0xc0,
-        0,
-        0xc8,
-        0xe8,
-        0x56,
-        0xff,
-        0xff,
-        0xff,
-        0x7f,
-        0,
-        0xff,
-        0x7f,
-        0x81,
-        0x80,
-        0,
+        0xc0, 0, 0xc8, 0xe8, 0x56, 0xff, 0xff, 0xff, 0x7f, 0, 0xff, 0x7f, 0x81,
+        0x80, 0,
       ];
       expect(encode(input)).toEqual(expected);
     });
@@ -135,21 +117,8 @@ describe('VariableLengthQuantity', () => {
 
     xtest('multiple values', () => {
       const input = [
-        0xc0,
-        0,
-        0xc8,
-        0xe8,
-        0x56,
-        0xff,
-        0xff,
-        0xff,
-        0x7f,
-        0,
-        0xff,
-        0x7f,
-        0x81,
-        0x80,
-        0,
+        0xc0, 0, 0xc8, 0xe8, 0x56, 0xff, 0xff, 0xff, 0x7f, 0, 0xff, 0x7f, 0x81,
+        0x80, 0,
       ];
       const expected = [0x2000, 0x123456, 0xfffffff, 0, 0x3fff, 0x4000];
       expect(decode(input)).toEqual(expected);
