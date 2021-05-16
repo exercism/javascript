@@ -16,6 +16,9 @@
     "ace_editor_language": "javascript",
     "highlightjs_language": "javascript"
   },
+  "test_runner": {
+    "average_run_time": 5.0
+  },
   "test_pattern": ".*[.]spec[.]js$",
   "files": {
     "solution": ["%{kebab_slug}.js"],
