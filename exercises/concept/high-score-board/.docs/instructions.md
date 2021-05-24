@@ -1,94 +1,110 @@
 # Instructions
 
-In this exercise, you're implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
+In this exercise, you are implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
 
-You have 7 functions to implement, all related to returning and manipulating a dictionary of high score data.
+You have 7 functions to implement, mostly related to manipulating an object that holds the high scores.
 
-## 1. Define a new high score dictionary
+## 1. Create a new high score board
 
-Create a function `newScoreBoard()` that takes no parameters and returns a new high score dictionary which uses values of type `String` for the keys and values of type `Int` as the values.
+Create a function `createScoreBoard` that takes a player's name and a high score. It returns a new object that serves as score board. One entry should already be included in that board. The name that was passed as argument should be used as a key and the score as a value.
 
-## 2. Add players to the high score dictionary
-
-To add a player to the high score dictionary, define `addPlayer`, which is a function which takes 3 parameters:
-
-- The first parameter is the dictionary of scores. This should be an in-out parameter.
-- The second parameter is the name of a player as a string.
-- The third parameter is the score as an integer. The parameter is optional, implement the third parameter with a default value of 0.
-
-```swift
-addPlayer(&highScores, "Dave Thomas")
-// Adds "Dave Thomas" to the dictionary with a high score of 0.
-addPlayer(&highScores, "José Valim", 486_373)
-// Adds "José Valim" to the dictionary with a high score of 486_373.
+```javascript
+createScoreBoard('The Best Ever', 1000000);
+// => { 'The Best Ever': 1000000 }
 ```
 
-## 3. Remove players from the score dictionary
+## 2. Add players to a score board
 
-To remove a player from the high score dictionary, define `removePlayer`, which takes 2 parameters:
+To add a player to the high score board, define the function `addPlayer`. It accepts 3 parameters:
 
-- The first parameter is the dictionary of scores. This should be an in-out parameter.
+- The first parameter is an existing score board object.
+- The second parameter is the name of a player as a string.
+- The third parameter is the score as a number.
+
+The function returns the same score board object that was passed in after adding the new player.
+
+```javascript
+addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373);
+// => {'Dave Thomas': 0, 'José Valim': 486373}
+```
+
+## 3. Reset a player's score
+
+If a player did not visit the arcade hall for a month, the score of that player is reset. To do this, define `resetScore` which takes 2 parameters:
+
+- The first parameter is an existing score board object.
+- The second parameter is the name of the player whose score you wish to reset.
+
+The function will set the score of the player to 0 and return the score board afterwards.
+
+```javascript
+resetScore({ 'Dave Thomas': 823479 }, 'Dave Thomas');
+// => { 'Dave Thomas': 0 }
+```
+
+## 4. Remove players from a score board
+
+If a player did not visit the arcade hall for one year, they are removed from the high score board. Define `removePlayer`, which takes 2 parameters:
+
+- The first parameter is an existing score board object.
 - The second parameter is the name of the player as a string.
 
-This function should remove the player from the dictionary if they are in it and do nothing otherwise.
+This function should remove the entry for the given player from the board and return board afterwards. If the player was not on the board in the first place, the board nothing should happen to the board. It should be returned as is.
 
-```swift
-removePlayer(&highScores, "Dave Thomas")
-// Removes "Dave Thomas" from thee dictionary
-removePlayer(&highScores, "Rose Fanaras")
-// Doesn't alter the dictionary as "Rose Fanaras" is not in the dictionary.
+```javascript
+removePlayer({ 'Dave Thomas': 0 }, 'Dave Thomas');
+// => {}
+
+removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras');
+// => { 'Dave Thomas': 0 }
 ```
 
-## 4. Reset a player's score
+## 5. Add to a player's score
 
-To reset a player's score, define `resetPlayer`, which takes 2 parameters:
+If a player finishes another game at the arcade hall, a certain amount of points will be added to the previous score on the board. Implement `addToScore`, which takes 3 parameters:
 
-- The first parameter is the dictionary of scores. This should be an in-out parameter.
-- The second parameter is the name of the player as a string, whose score you wish to reset.
-
-The function will set the score of the player to 0. If the player is not in the dictionary, then nothing should happen.
-
-```swift
-resetScore(&highScores, "Dave Thomas")
-// High score for "Dave Thomas" set to 0
-```
-
-## 5. Update a player's score
-
-To update a players score by adding to the previous score, define `updatePlayer`, which takes 3 parameters:
-
-- The first parameter is the dictionary of scores. This should be an in-out parameter.
-- The second parameter is the name of the player as a string, whose score you wish to update.
+- The first parameter is an existing score board object.
+- The second parameter is the name of the player whose score should be increased.
 - The third parameter is the score that you wish to **add** to the stored high score.
 
-```swift
-addPlayer(&highScores, "Freyja Ćirić", 12_771_008)
-updateScore(&highscores, "Freyja Ćirić", 73)
-// Score for "Freyja Ćirić" updated to 12_771_091
+The function should be return the score board after the update was done.
+
+```javascript
+addToScore({"Freyja Ćirić", 12771008}, "Freyja Ćirić", 73)
+// => {"Freyja Ćirić", 12771091}
 ```
 
-## 6. Get a list of players with scores ordered by player name
+## 6. Apply Monday bonus points
 
-Define the function `orderByPlayers`, which takes 1 parameter:
+The arcade hall keeps a separate score board on Mondays. At the end of the day, each player on that board gets 100 additional points.
 
-- The first parameter is the dictionary of scores.
+Implement the function `applyMondayBonus` that accepts a score board. It adds the bonus points for each player that is listed on that board. Afterwards the board is returned.
 
-The function will return an array of `(String, Int)` tuples that are the players and their high scores sorted in ascending order by the player's name.
+```javascript
+const scoreBoard = {
+  'Dave Thomas': 44,
+  'Freyja Ćirić': 539,
+  'José Valim': 265,
+};
 
-```swift
-orderByPlayers(highScores)
-// => [("Dave Thomas", 0), ("Freyja Ćirić", 12_771_091), ("José Valim", 486_373)]
+applyMondayBonus(scoreBoard);
+// => { 'Dave Thomas': 144, 'Freyja Ćirić': 639, 'José Valim': 365 }
 ```
 
-## 7. Get a list of players ordered by player score in decreasing order
+## 7. Normalize a high score
 
-To get a list of players ordered by scores in decreasing order, define `orderByScores`, which takes 1 parameter:
+Different arcade halls award different score points. To celebrate the best arcade player in town, a player's score needs to be normalized so scores from different arcade halls become comparable.
 
-- The first parameter is the dictionary of scores.
+Write a function `normalizeScore`. To practice your object skills, instead of two parameters this function should accept one object as parameter. That object contains a key `score` and a player's score (a number) as a value. There is a also second key `normalizeFn` that has a function as value. This function takes a score as argument and returns the corrected score.
 
-The function will return an array of `(String, Int)` tuples that are the players and their high scores sorted in descending order by the player's score.
+Your function `normalizeScore` should return the normalized score that you get after applying the the normalization function to the score that was passed in.
 
-```swift
-orderByScores(highScores)
-# => [("Freyja Ćirić", 12_771_091), ("José Valim", 486_373), ("Dave Thomas", 0)]
+```javascript
+function fn(score) {
+  return 2 * score + 10;
+}
+
+const input = { score: 400, normalizeFn: fn };
+normalizeScore(input);
+// => 810
 ```
