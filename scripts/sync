@@ -30,7 +30,8 @@ function copyConfigForAssignment(assignment) {
   );
   const mergedPackageJson = helpers.mergePackageJsons(
     basePackageJson,
-    packageJson
+    packageJson,
+    assignment
   );
 
   shell
