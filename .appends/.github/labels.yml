@@ -1,0 +1,116 @@
+- name: "bug :bug:"
+  description: "Something isn't working"
+  color: "b60205"
+
+- name: "chore :wrench:"
+  description: "Meta related task such as build, test, linting, maintainers.json etc."
+  color: "000000"
+
+- name: "dependencies :arrow_up_small:"
+  description: "Pull requests that update a dependency file"
+  color: "0366d6"
+
+- name: "discussion :speech_balloon:"
+  description: ""
+  color: "fbca04"
+
+- name: "do not merge :construction:"
+  description: "Don't merge until this label is removed"
+  color: "fbca04"
+
+- name: "documentation :book:"
+  description: "Documentation changes"
+  color: "1d76db"
+
+- name: "duplicate :repeat:"
+  description: "This issue or pull request already exists"
+  color: "ffffff"
+
+- name: "enhancement :unicorn:"
+  description: "Changing current behaviour, enhancing what's already there"
+  color: "a2eeef"
+
+- name: "experimental :microscope:"
+  description: "Speculative functionality or implementation"
+  color: "b60205"
+
+- name: "first-timers only :baby:"
+  description: "This issue is specifically for those who are new contributors."
+  color: "b1db51"
+
+- name: "github_actions"
+  description: "Pull requests that update Github_actions code"
+  color: "000000"
+
+- name: "good first issue"
+  description: ""
+  color: "680a9b"
+
+- name: "hacktoberfest"
+  description: "Hacktoberfest issues! Everyone allowed <3"
+  color: "000000"
+
+- name: "hacktoberfest-accepted"
+  description: "Opt-in to hacktoberfest"
+  color: "4a4a4a"
+
+- name: "help wanted"
+  description: ""
+  color: "680a9b"
+
+- name: "invalid"
+  description: ""
+  color: "ffffff"
+
+- name: "javascript"
+  description: "Pull requests that update Javascript code"
+  color: "168700"
+
+- name: "new exercise :sparkles:"
+  description: ""
+  color: "1105b7"
+
+- name: "new test case :sparkles:"
+  description: ""
+  color: "1105b7"
+
+- name: "pinned :pushpin:"
+  description: ""
+  color: "fbca04"
+
+- name: "question :thinking:"
+  description: ""
+  color: "000000"
+
+- name: "reputation/contributed_code/double_major"
+  description: ""
+  color: "947802"
+
+- name: "reputation/contributed_code/major"
+  description: ""
+  color: "921CBD"
+
+- name: "reputation/contributed_code/minor"
+  description: ""
+  color: "4F1A93"
+
+- name: "security :rotating_light:"
+  description: "Security related issue or change"
+  color: "b60205"
+
+- name: "sync :arrows_counterclockwise:"
+  description: "Sync an exercise with the latest version of the problem-spec"
+  color: "1105b7"
+
+- name: "upstream :arrow_up:"
+  description: ""
+  color: "ffffff"
+
+- name: "v3-migration 🤖"
+  description: "Preparing for Exercism v3"
+  color: "E99695"
+
+- name: "wontfix :no_good_woman:"
+  description: "This won't be applied, fixed, worked on, continued."
+  color: "ffffff"
+
