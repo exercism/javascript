@@ -624,7 +624,7 @@
         "name": "Prime Factors",
         "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["while-loops", "conditionals", "arrays"],
         "difficulty": 4,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
