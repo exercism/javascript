@@ -216,7 +216,7 @@ export function createExercisePackageJson(writeSha = false) {
   }
 }
 
-export function mergePackageJsons(basePackageJson, packageJson) {
+export function mergePackageJsons(basePackageJson, packageJson, assignment) {
   const mergedPackageJson = JSON.parse(JSON.stringify(basePackageJson));
 
   SKIP_FIELDS_FOR_CHECKSUM.forEach((key) => {
@@ -230,6 +230,8 @@ export function mergePackageJsons(basePackageJson, packageJson) {
   extraRepositoryKeys.forEach((key) => {
     mergedPackageJson.repository[key] = packageJson.repository[key];
   });
+
+  mergedPackageJson.repository.directory = `exercises/${assignment}`;
 
   return mergedPackageJson;
 }
