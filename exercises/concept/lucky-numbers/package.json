@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.14.3",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.14.2",
     "@exercism/eslint-config-javascript": "^0.3.1",
