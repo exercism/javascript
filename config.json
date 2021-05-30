@@ -606,7 +606,7 @@
         "name": "Complex Numbers",
         "uuid": "ea9a9a3e-ae6a-470d-8bb4-2afead507f24",
         "practices": [],
-        "prerequisites": ["classes", "numbers"],
+        "prerequisites": ["classes", "numbers", "math"],
         "difficulty": 4,
         "topics": ["math"]
       },
