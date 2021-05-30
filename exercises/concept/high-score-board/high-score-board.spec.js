@@ -72,7 +72,7 @@ describe('removePlayer', () => {
 });
 
 describe('updateScore', () => {
-  test('increases a player\'s score', () => {
+  test("increases a player's score", () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
       'Min-seo Shin': 0,
@@ -97,48 +97,48 @@ describe('applyMondayBonus', () => {
     const scoreBoard = {
       'Amil Pastorius': 345,
       'Min-seo Shin': 19,
-      'Jesse Johnson': 122
+      'Jesse Johnson': 122,
     };
 
     const expected = {
       'Amil Pastorius': 445,
       'Min-seo Shin': 119,
       'Jesse Johnson': 222,
-    }
+    };
 
-    const actual = applyMondayBonus(scoreBoard)
-    expect(actual).toEqual(expected)
+    const actual = applyMondayBonus(scoreBoard);
+    expect(actual).toEqual(expected);
     expect(Object.is(actual, scoreBoard)).toBe(true);
-  })
+  });
 
   test('does nothing if the score board is empty', () => {
-    const scoreBoard = {}
-    const actual = applyMondayBonus(scoreBoard)
-    expect(actual).toEqual({})
+    const scoreBoard = {};
+    const actual = applyMondayBonus(scoreBoard);
+    expect(actual).toEqual({});
     expect(Object.is(actual, scoreBoard)).toBe(true);
-  })
-})
+  });
+});
 
 describe('normalizeScore', () => {
   test('applies the normalization function', () => {
     const params = {
       score: 45,
       normalizeFn: function (score) {
-        return score * 3 - 10
-      }
-    }
+        return score * 3 - 10;
+      },
+    };
 
-    expect(normalizeScore(params)).toEqual(125)
-  })
+    expect(normalizeScore(params)).toEqual(125);
+  });
 
   test('works for different params', () => {
     const params = {
       score: 2100,
       normalizeFn: function (score) {
-        return score / 2 + 100
-      }
-    }
+        return score / 2 + 100;
+      },
+    };
 
-    expect(normalizeScore(params)).toEqual(1150)
-  })
-})
+    expect(normalizeScore(params)).toEqual(1150);
+  });
+});

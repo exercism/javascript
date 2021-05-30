@@ -5,10 +5,10 @@
  *
  * @returns {Object.<string, number>} new score board
  */
-export function createScoreBoard () {
+export function createScoreBoard() {
   return {
-    'The Best Ever': 1000000
-  }
+    'The Best Ever': 1000000,
+  };
 }
 
 /**
@@ -19,9 +19,9 @@ export function createScoreBoard () {
  * @param {number} score
  * @returns {Object.<string, number>} updated score board
  */
-export function addPlayer (scoreBoard, player, score) {
-  scoreBoard[player] = score
-  return scoreBoard
+export function addPlayer(scoreBoard, player, score) {
+  scoreBoard[player] = score;
+  return scoreBoard;
 }
 
 /**
@@ -31,9 +31,9 @@ export function addPlayer (scoreBoard, player, score) {
  * @param {string} player
  * @returns {Object.<string, number>} updated score board
  */
-export function removePlayer (scoreBoard, player) {
-  delete scoreBoard[player]
-  return scoreBoard
+export function removePlayer(scoreBoard, player) {
+  delete scoreBoard[player];
+  return scoreBoard;
 }
 
 /**
@@ -44,9 +44,9 @@ export function removePlayer (scoreBoard, player) {
  * @param {number} points
  * @returns {Object.<string, number>} updated score board
  */
-export function updateScore (scoreBoard, player, points) {
-  scoreBoard[player] += points
-  return scoreBoard
+export function updateScore(scoreBoard, player, points) {
+  scoreBoard[player] += points;
+  return scoreBoard;
 }
 
 /**
@@ -55,12 +55,12 @@ export function updateScore (scoreBoard, player, points) {
  * @param {Object.<string, number>} scoreBoard
  * @returns {Object.<string, number>} updated score board
  */
-export function applyMondayBonus (scoreBoard) {
+export function applyMondayBonus(scoreBoard) {
   for (const player in scoreBoard) {
-    scoreBoard[player] += 100
+    scoreBoard[player] += 100;
   }
 
-  return scoreBoard
+  return scoreBoard;
 }
 
 /**
@@ -71,6 +71,6 @@ export function applyMondayBonus (scoreBoard) {
  * @param {function} params.normalizeFn
  * @returns {number} normalized score
  */
-export function normalizeScore (params) {
-  return params.normalizeFn(params.score)
+export function normalizeScore(params) {
+  return params.normalizeFn(params.score);
 }

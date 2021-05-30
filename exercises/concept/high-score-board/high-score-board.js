@@ -5,7 +5,7 @@
  *
  * @returns {Object.<string, number>} new score board
  */
-export function createScoreBoard () {
+export function createScoreBoard() {
   throw new Error('Please implement the createScoreBoard function');
 }
 
@@ -17,7 +17,7 @@ export function createScoreBoard () {
  * @param {number} score
  * @returns {Object.<string, number>} updated score board
  */
-export function addPlayer (scoreBoard, player, score) {
+export function addPlayer(scoreBoard, player, score) {
   throw new Error('Please implement the addPlayer function');
 }
 
@@ -28,7 +28,7 @@ export function addPlayer (scoreBoard, player, score) {
  * @param {string} player
  * @returns {Object.<string, number>} updated score board
  */
-export function removePlayer (scoreBoard, player) {
+export function removePlayer(scoreBoard, player) {
   throw new Error('Please implement the removePlayer function');
 }
 
@@ -40,7 +40,7 @@ export function removePlayer (scoreBoard, player) {
  * @param {number} points
  * @returns {Object.<string, number>} updated score board
  */
-export function updateScore (scoreBoard, player, points) {
+export function updateScore(scoreBoard, player, points) {
   throw new Error('Please implement the addToScore function');
 }
 
@@ -50,7 +50,7 @@ export function updateScore (scoreBoard, player, points) {
  * @param {Object.<string, number>} scoreBoard
  * @returns {Object.<string, number>} updated score board
  */
-export function applyMondayBonus (scoreBoard) {
+export function applyMondayBonus(scoreBoard) {
   throw new Error('Please implement the applyMondayBonus function');
 }
 
@@ -62,6 +62,6 @@ export function applyMondayBonus (scoreBoard) {
  * @param {function} params.normalizeFn
  * @returns {number} normalized score
  */
-export function normalizeScore (params) {
+export function normalizeScore(params) {
   throw new Error('Please implement the normalizeScore function');
 }
