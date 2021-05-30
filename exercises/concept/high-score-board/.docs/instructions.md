@@ -2,20 +2,24 @@
 
 In this exercise, you are implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
 
-You have 7 functions to implement, mostly related to manipulating an object that holds the high scores.
+You have 6 functions to implement, mostly related to manipulating an object that holds the high scores.
 
 ## 1. Create a new high score board
 
-Create a function `createScoreBoard` that takes a player's name and a high score. It returns a new object that serves as score board. One entry should already be included in that board. The name that was passed as argument should be used as a key and the score as a value.
+Create a function `createScoreBoard` that creates an object that serves as high score board.
+The keys of this object will be the names of the players, the values will be their scores.
+For testing purposes you want to directly include one initial entry in the object.
+There should player `The Best Ever` with a score of `1000000` already on the board.
 
 ```javascript
-createScoreBoard('The Best Ever', 1000000);
-// => { 'The Best Ever': 1000000 }
+createScoreBoard();
+// returns an object with one initial entry
 ```
 
 ## 2. Add players to a score board
 
-To add a player to the high score board, define the function `addPlayer`. It accepts 3 parameters:
+To add a player to the high score board, define the function `addPlayer`.
+It accepts 3 parameters:
 
 - The first parameter is an existing score board object.
 - The second parameter is the name of a player as a string.
@@ -28,28 +32,17 @@ addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373);
 // => {'Dave Thomas': 0, 'José Valim': 486373}
 ```
 
-## 3. Reset a player's score
+## 3. Remove players from a score board
 
-If a player did not visit the arcade hall for a month, the score of that player is reset. To do this, define `resetScore` which takes 2 parameters:
-
-- The first parameter is an existing score board object.
-- The second parameter is the name of the player whose score you wish to reset.
-
-The function will set the score of the player to 0 and return the score board afterwards.
-
-```javascript
-resetScore({ 'Dave Thomas': 823479 }, 'Dave Thomas');
-// => { 'Dave Thomas': 0 }
-```
-
-## 4. Remove players from a score board
-
-If a player did not visit the arcade hall for one year, they are removed from the high score board. Define `removePlayer`, which takes 2 parameters:
+If a player did not visit the arcade hall for one year, they are removed from the high score board.
+Define `removePlayer`, which takes 2 parameters:
 
 - The first parameter is an existing score board object.
 - The second parameter is the name of the player as a string.
 
-This function should remove the entry for the given player from the board and return board afterwards. If the player was not on the board in the first place, the board nothing should happen to the board. It should be returned as is.
+This function should remove the entry for the given player from the board and return board afterwards.
+If the player was not on the board in the first place, the board nothing should happen to the board.
+It should be returned as is.
 
 ```javascript
 removePlayer({ 'Dave Thomas': 0 }, 'Dave Thomas');
@@ -59,9 +52,10 @@ removePlayer({ 'Dave Thomas': 0 }, 'Rose Fanaras');
 // => { 'Dave Thomas': 0 }
 ```
 
-## 5. Add to a player's score
+## 4. Increase a player's score
 
-If a player finishes another game at the arcade hall, a certain amount of points will be added to the previous score on the board. Implement `addToScore`, which takes 3 parameters:
+If a player finishes another game at the arcade hall, a certain amount of points will be added to the previous score on the board.
+Implement `updateScore`, which takes 3 parameters:
 
 - The first parameter is an existing score board object.
 - The second parameter is the name of the player whose score should be increased.
@@ -70,15 +64,18 @@ If a player finishes another game at the arcade hall, a certain amount of points
 The function should be return the score board after the update was done.
 
 ```javascript
-addToScore({"Freyja Ćirić", 12771008}, "Freyja Ćirić", 73)
+updateScore({"Freyja Ćirić", 12771008}, "Freyja Ćirić", 73)
 // => {"Freyja Ćirić", 12771091}
 ```
 
-## 6. Apply Monday bonus points
+## 5. Apply Monday bonus points
 
-The arcade hall keeps a separate score board on Mondays. At the end of the day, each player on that board gets 100 additional points.
+The arcade hall keeps a separate score board on Mondays.
+At the end of the day, each player on that board gets 100 additional points.
 
-Implement the function `applyMondayBonus` that accepts a score board. It adds the bonus points for each player that is listed on that board. Afterwards the board is returned.
+Implement the function `applyMondayBonus` that accepts a score board.
+It adds the bonus points for each player that is listed on that board.
+Afterwards the board is returned.
 
 ```javascript
 const scoreBoard = {
@@ -91,11 +88,16 @@ applyMondayBonus(scoreBoard);
 // => { 'Dave Thomas': 144, 'Freyja Ćirić': 639, 'José Valim': 365 }
 ```
 
-## 7. Normalize a high score
+## 6. Normalize a high score
 
-Different arcade halls award different score points. To celebrate the best arcade player in town, a player's score needs to be normalized so scores from different arcade halls become comparable.
+Different arcade halls award different score points.
+To celebrate the best arcade player in town, a player's score needs to be normalized so scores from different arcade halls become comparable.
 
-Write a function `normalizeScore`. To practice your object skills, instead of two parameters this function should accept one object as parameter. That object contains a key `score` and a player's score (a number) as a value. There is a also second key `normalizeFn` that has a function as value. This function takes a score as argument and returns the corrected score.
+Write a function `normalizeScore`.
+To practice your object skills, instead of two parameters this function should accept one object as parameter.
+That object contains a key `score` and a player's score (a number) as a value.
+There is a also second key `normalizeFn` that has a function as value.
+This function takes a score as argument and returns the corrected score.
 
 Your function `normalizeScore` should return the normalized score that you get after applying the the normalization function to the score that was passed in.
 
@@ -104,7 +106,7 @@ function fn(score) {
   return 2 * score + 10;
 }
 
-const input = { score: 400, normalizeFn: fn };
-normalizeScore(input);
+const params = { score: 400, normalizeFn: fn };
+normalizeScore(params);
 // => 810
 ```

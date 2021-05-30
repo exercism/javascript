@@ -7,7 +7,7 @@
  */
 export function createScoreBoard () {
   return {
-    'The best Ever': 1000000
+    'The Best Ever': 1000000
   }
 }
 
@@ -44,7 +44,7 @@ export function removePlayer (scoreBoard, player) {
  * @param {number} points
  * @returns {Object.<string, number>} updated score board
  */
-export function addToScore (scoreBoard, player, points) {
+export function updateScore (scoreBoard, player, points) {
   scoreBoard[player] += points
   return scoreBoard
 }

@@ -77,6 +77,9 @@ obj['greeting'] = 'Welcome.';
 
 obj.newKey1 = 'new value 1';
 obj['new key 2'] = 'new value 2';
+
+const key = 'new key 3';
+obj[key] = 'new value 3';
 ```
 
 You can delete a key-value pair from an object using the `delete` keyword.
@@ -118,7 +121,8 @@ for (let key in obj) {
 // age 65
 ```
 
-To avoid subtle errors you should always assume the for-in loop visits the keys in an arbitrary order. Also be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
+To avoid subtle errors you should always assume the for-in loop visits the keys in an arbitrary order.
+Also be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
 
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
 [jsinfo-map]: https://javascript.info/map-set#map

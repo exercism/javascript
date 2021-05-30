@@ -149,6 +149,9 @@ obj['greeting'] = 'Welcome.';
 
 obj.newKey1 = 'new value 1';
 obj['new key 2'] = 'new value 2';
+
+const key = 'new key 3';
+obj[key] = 'new value 3';
 ```
 
 ## Deleting an Entry
@@ -165,7 +168,8 @@ delete obj.key1;
 delete obj['key2'];
 ```
 
-Note that although `undefined` is returned for non-existing keys, setting a key to `undefined` does not remove the entry. Always use `delete` instead.
+Note that although `undefined` is returned for non-existing keys, setting a key to `undefined` does not remove the entry.
+Always use `delete` instead.
 
 You can check whether a certain key exists in an object with the `hasOwnProperty` method.
 
@@ -179,7 +183,8 @@ obj.hasOwnProperty('age');
 // => false
 ```
 
-`hasOwnProperty` returns `false` for [inherited keys][concept-inheritance]. This is usually the desired behavior. If you want include inherited keys in the existence check you can use the [`in` operator][mdn-in-operator] instead.
+`hasOwnProperty` returns `false` for [inherited keys][concept-inheritance]. This is usually the desired behavior.
+If you want include inherited keys in the existence check you can use the [`in` operator][mdn-in-operator] instead.
 
 ## Looping Through an Object
 
@@ -198,7 +203,10 @@ for (let key in obj) {
 // age 65
 ```
 
-It might seem like `for...in` always visits the keys in the order in which they appear or were added to the object (insertion order). Still you should not rely on this because there are special cases where the order will differ from the insertion order. Always write your code as if the order would be arbitrary. If you need a reliable order, use a [`Map`][jsinfo-map] or a nested [array][concept-arrays] instead of an object.
+It might seem like `for...in` always visits the keys in the order in which they appear or were added to the object (insertion order).
+Still you should not rely on this because there are special cases where the order will differ from the insertion order.
+Always write your code as if the order would be arbitrary.
+If you need a reliable order, use a [`Map`][jsinfo-map] or a nested [array][concept-arrays] instead of an object.
 
 The for-in loop has a pitfall in case the object has [inherited keys][concept-inheritance].
 Those will also be visited by the for-in loop.
@@ -235,7 +243,8 @@ Object.entries(obj);
 
 ## Truly Empty Object
 
-You might have noticed that an empty object in JavaScript is not completely empty. For example it contains the `hasOwnProperty` method and other methods like `toString`. Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
+You might have noticed that an empty object in JavaScript is not completely empty.
+For example it contains the `hasOwnProperty` method and other methods like `toString`. Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
 [mdn-shorthand-notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#new_notations_in_ecmascript_2015

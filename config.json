@@ -174,7 +174,7 @@
         "name": "High Score Board",
         "uuid": "431d1f13-d280-4808-bbc6-a72e628c15c2",
         "concepts": ["objects"],
-        "prerequisites": ["arrays"], // FIXME
+        "prerequisites": ["for-loops"],
         "status": "beta"
       },
       {

@@ -68,7 +68,9 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 
 ## Notes
 
-The exercise is inspired by the [High Score Board Exercise in the Swift track][swift-high-score]. Some tasks were removed because they did not fit the JavaScript version or our concept tree. The last two tasks were added instead in this exercise.
+The exercise is inspired by the [High Score Board Exercise in the Swift track][swift-high-score].
+Some tasks were removed because they did not fit the JavaScript version or our concept tree.
+The last two tasks were added instead in this exercise.
 
 ## Improvement
 
