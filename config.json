@@ -1322,7 +1322,7 @@
         "name": "Kindergarten Garden",
         "uuid": "13444eff-005a-405e-9737-7b64d99c1a61",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "strings"],
         "difficulty": 7,
         "topics": [
           "arrays",
