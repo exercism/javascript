@@ -35,12 +35,12 @@ addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373);
 ## 3. Remove players from a score board
 
 If a player did not visit the arcade hall for one year, they are removed from the high score board.
-Define `removePlayer`, which takes 2 parameters:
+Define `removePlayer` which takes 2 parameters:
 
 - The first parameter is an existing score board object.
 - The second parameter is the name of the player as a string.
 
-This function should remove the entry for the given player from the board and return board afterwards.
+This function should remove the entry for the given player from the board and return the board afterwards.
 If the player was not on the board in the first place, the board nothing should happen to the board.
 It should be returned as is.
 
@@ -96,7 +96,7 @@ To celebrate the best arcade player in town, a player's score needs to be normal
 Write a function `normalizeScore`.
 To practice your object skills, instead of two parameters this function should accept one object as parameter.
 That object contains a key `score` and a player's score (a number) as a value.
-There is a also second key `normalizeFn` that has a function as value.
+There is also a second key `normalizeFn` that has a function as value.
 This function takes a score as argument and returns the corrected score.
 
 Your function `normalizeScore` should return the normalized score that you get after applying the the normalization function to the score that was passed in.

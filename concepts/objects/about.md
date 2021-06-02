@@ -2,7 +2,7 @@
 
 ## Explanation
 
-Besides the primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
+Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
 In other languages they are referred to as maps or dictionaries and often times values need to have the same data type.
 In JavaScript only the type of the key is restricted, it has to be a string.
@@ -13,7 +13,7 @@ They can be primitive types like numbers but also arrays, other objects or even 
 
 You create an object (literal) with curly brackets.
 You can also directly include some entries (key-value pairs).
-For that, write the key first followed by a colon and the value.
+For that, state the key first, followed by a colon and the value.
 
 ```javascript
 const emptyObject = {};
@@ -35,7 +35,7 @@ const obj = {
 
 The trailing comma after the last entry is optional in JavaScript.
 
-You might wonder why the keys are not wrapped in quotation marks since they are supposed to be strings.
+You might wonder why the keys are not wrapped in quotation marks although they are supposed to be strings.
 This is a short-hand notation.
 If the key follows the naming rules for a JavaScript [identifier][mdn-identifier], you can omit the quotation marks.
 For keys with special characters in the name, you need to apply the usual string notation.
@@ -50,7 +50,11 @@ const obj = {
 };
 ```
 
-Often times you want to combine existing variables into an object. This would lead to key-value pairs like `name: name`. JavaScript has a short-hand notation that allows to just write `name` instead. There is also a short-hand notation for defining a function in an object. There you can omit the colon and the `function` keyword.
+Often times you want to combine existing variables into an object.
+This would often lead to key-value pairs like `name: name`.
+JavaScript has a short-hand notation that allows to just write `name` instead.
+There is also a short-hand notation for defining a function in an object.
+There you can omit the colon and the `function` keyword.
 
 ```javascript
 const x = 1;
@@ -71,6 +75,16 @@ const obj = {
   calcSum(a, b) {
     return a + b;
   },
+};
+```
+
+If you want to create an object literal with a key name that is stored in a variable or derived via an expression, you need to wrap the variable or expression in square brackets.
+
+```javascript
+const key = 'greeting';
+
+const obj = {
+  [key]: 'hello world',
 };
 ```
 
@@ -113,7 +127,7 @@ obj['address']['city'];
 // => 'Batticaloa'
 ```
 
-If you try to retrieve a key that does not exist, JavaScript does not throw an error. [`undefined`] is returned instead. However if you were trying to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`. Theoretically you would always need to check the parent key exists before you can try to retrieve the nested key. To solve this problem, [optional chaining][mdn-optional-chaining] was added to the language in 2020. With the `?.` operator you can ensure that JavaScript only tries to access the nested key if the parent was not `null` or `undefined`.
+If you try to retrieve a key that does not exist, JavaScript does not throw an error. [`undefined`][concept-null-undefined] is returned instead. However if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`. Theoretically you would always need to check the parent key exists before you can try to retrieve the nested key. To solve this problem, [optional chaining][mdn-optional-chaining] was added to the language in 2020. With the `?.` operator you can ensure that JavaScript only tries to access the nested key if the parent was not `null` or `undefined`.
 
 ```javascript
 const obj = {
@@ -171,6 +185,8 @@ delete obj['key2'];
 Note that although `undefined` is returned for non-existing keys, setting a key to `undefined` does not remove the entry.
 Always use `delete` instead.
 
+## Checking Whether a Key Exists
+
 You can check whether a certain key exists in an object with the `hasOwnProperty` method.
 
 ```javascript
@@ -204,7 +220,7 @@ for (let key in obj) {
 ```
 
 It might seem like `for...in` always visits the keys in the order in which they appear or were added to the object (insertion order).
-Still you should not rely on this because there are special cases where the order will differ from the insertion order.
+Nevertheless you should not rely on this because there are special cases where the order will differ from the insertion order.
 Always write your code as if the order would be arbitrary.
 If you need a reliable order, use a [`Map`][jsinfo-map] or a nested [array][concept-arrays] instead of an object.
 
@@ -244,12 +260,13 @@ Object.entries(obj);
 ## Truly Empty Object
 
 You might have noticed that an empty object in JavaScript is not completely empty.
-For example it contains the `hasOwnProperty` method and other methods like `toString`. Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
+For example it contains the `hasOwnProperty` method and other methods like `toString`.
+Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
-[mdn-shorthand-notation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#new_notations_in_ecmascript_2015
 [jsinfo-map]: https://javascript.info/map-set#map
 [concept-inheritance]: /tracks/javascript/concepts/inheritance
 [mdn-optional-chaining]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [mdn-in-operator]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in
 [mdn-null-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#custom_and_null_objects
+[concept-null-undefined]: /tracks/javascript/concepts/null-undefined

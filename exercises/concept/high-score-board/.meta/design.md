@@ -21,6 +21,8 @@
 - Object destructering
 - null and undefined (will be introduced in another concept exercise, including when they show up in the context of objects, it is a bit hard to tiptoe around this in this concept/exercise but the student can't learn everything at once)
 - `new Object()` / `Object.create`
+- Symbols as keys (should be covered in a separate concept)
+- JSON (should be covered in a separate concept)
 
 ## Concepts
 
@@ -78,6 +80,7 @@ There are still a couple of things open that could be added to the about.md file
 
 - Helper methods like `Object.assign` etc.
 - How to use an object as a map instead of a switch statement
+- Object vs. Map
 
 Also the story in instructions.md could need some love, e.g.,
 

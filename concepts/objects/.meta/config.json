@@ -1,5 +1,5 @@
 {
-  "blurb": "Besides the primitive data types like \"number\" and \"string\", there is another data type in JavaScript called \"object\". Objects are collections of key-value pairs but also the fundamental building blocks of the language.",
+  "blurb": "Besides primitive data types like \"number\" and \"string\", there is another data type in JavaScript called \"object\". Objects are collections of key-value pairs but also the fundamental building blocks of the language.",
   "authors": ["junedev"],
   "contributors": []
 }
