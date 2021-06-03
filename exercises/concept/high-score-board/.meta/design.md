@@ -23,6 +23,8 @@
 - `new Object()` / `Object.create`
 - Symbols as keys (should be covered in a separate concept)
 - JSON (should be covered in a separate concept)
+- "pass by reference" (will be introduced in the `functions` concept)
+- optional chaining (will be introduced in the `null-undefined` concept)
 
 ## Concepts
 

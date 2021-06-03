@@ -110,6 +110,9 @@ obj[key];
 Using the dot notation as a short-hand has the same restriction as omitting the quotation marks.
 It only works if the key follows the identifier naming rules.
 
+If you try to retrieve a key that does not exist in the object, JavaScript returns `undefined`.
+See the [Null and Undefined Concept][concept-null-undefined] for more details on this.
+
 You can chain the keys if you want to retrieve a value from a nested object.
 
 ```javascript
@@ -125,29 +128,6 @@ obj.address.city;
 
 obj['address']['city'];
 // => 'Batticaloa'
-```
-
-If you try to retrieve a key that does not exist, JavaScript does not throw an error. [`undefined`][concept-null-undefined] is returned instead. However if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`. Theoretically you would always need to check the parent key exists before you can try to retrieve the nested key. To solve this problem, [optional chaining][mdn-optional-chaining] was added to the language in 2020. With the `?.` operator you can ensure that JavaScript only tries to access the nested key if the parent was not `null` or `undefined`.
-
-```javascript
-const obj = {
-  address: {
-    street: 'Trincomalee Highway',
-    city: 'Batticaloa',
-  },
-};
-
-obj.residence;
-// => undefined
-
-obj.address.zipCode;
-// => undefined
-
-obj.residence.street;
-// => TypeError: Cannot read property 'street' of undefined
-
-obj.residence?.street;
-// => undefined
 ```
 
 ## Adding or Changing a Value
@@ -266,7 +246,6 @@ Usually that does not cause any problems but if you ever need to create a truly 
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
 [jsinfo-map]: https://javascript.info/map-set#map
 [concept-inheritance]: /tracks/javascript/concepts/inheritance
-[mdn-optional-chaining]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [mdn-in-operator]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in
 [mdn-null-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#custom_and_null_objects
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
