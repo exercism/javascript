@@ -1,60 +1,152 @@
 # About
 
-Null is a primitive value, used to represent an intentional absence of an object value. It's _falsy_, and its `typeof` is `object`.
+In contrast to many other languages, there are two different entities in JavaScript that represent the absence of a value. There is `null` and `undefined`.
+
+## Null
+
+The primitive value `null` is used as intentional "zero value" for a variable.
+In other languages a similar construct might be used only for (missing) objects or pointer types.
+In JavaScript `null` generally represents an empty value for any type.
 
 ```javascript
-var person = null;
+let name = null;
+// name is intentionally set to "empty", e.g. because the value
+// will only be defined later in the program
+```
 
-if (person) {
-  console.log('person is not null');
-} else {
-  console.log('person is null');
+You can check whether a variable is null by using the [strict equality operator][mdn-strict-equality] `===`.
+Although `null` is a primitive value, the [`typeof` operator][mdn-typeof] "wrongly" returns `object` for historic reasons.
+That means it cannot be used to check whether a variable is null.
+
+```javascript
+let name = null;
+
+name === null;
+// => true
+
+// Pitfall:
+typeof name;
+// => 'object'
+```
+
+## Undefined
+
+> A variable that has not been assigned a value is of type `undefined`.
+> [Source: [MDN][mdn-undefined]]
+
+So while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
+
+`undefined` appears in different contexts.
+
+- If a variable is declared, it is `undefined` initially.
+- If you try to access a value for a non-existing key in an object, you get `undefined`.
+- If a function does not return a value, it returns `undefined`.
+
+```javascript
+let name;
+console.log(name);
+// => undefined
+
+let obj = {
+  greeting: 'hello world',
+};
+console.log(obj.missingKey);
+// => undefined
+
+function returnNothing() {
+  return;
 }
+const result = returnNothing();
+console.log(result);
+// => undefined
 ```
 
-You can find more about nullability in the [MDN docs][mdn docs].
-
-## Null vs. Undefined
-
-The `null` value has to be differentiated from the variable `undefined`. The distinction being that `undefined` is the
-value of an uninitialized variable or type, while `null` represents a missing object.
+You can check whether a variable is undefined using the strict equality operator `===` or the `typeof` operator.
 
 ```javascript
-typeof null; // => "object"
-typeof undefined; // => "undefined"
-null === undefined; // => evaluates to false by identity comparison
-null == undefined; // => evaluates to true by truthy comparison
+let name;
+
+name === undefined;
+// => true
+
+typeof name === 'undefined';
+// => true
 ```
 
-## Nullish coalescing operator (??)
+It is not recommended to manually assign `undefined` to a variable, always use `null` instead to make it clear it is an intentional empty value.
 
-The nullish coalescing operator returns its right-hand side operand if and only if its left-hand side operand is `null`
-or `undefined`.
+## Optional Chaining
 
-```javascript
-const foo = null ?? 'left-hand side operand is null';
-foo; // => "left-hand side operand is null"
-```
+As mentioned above, accessing a non-existent key in an object returns `undefined` in JavaScript.
+However if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`.
+Theoretically you would always need to check the parent key exists before you can try to retrieve the nested key.
+This was often done with expressions like `obj.key && obj.key.nestedKey`.
+Now imagine how this looks for deeply nested values.
 
-You can find more about the nullish coalescing operator in the [MDN docs][nullish coalescing].
-
-## Optional Chaining (?.)
-
-The optional chaining operator is similar to the chaining operator, except that instead of returning and error if a
-reference is `null`, it will return the `undefined` value.
+To solve this problem, [optional chaining][mdn-optional-chaining] was added to the language specification in 2020.
+With the optional chaining operator `?.` you can ensure that JavaScript only tries to access the nested key if the parent was not `null` or `undefined`.
+Otherwise `undefined` is returned.
 
 ```javascript
-const person = {
-  name: 'Bob',
-  nationality: 'Belgian',
+const obj = {
+  address: {
+    street: 'Trincomalee Highway',
+    city: 'Batticaloa',
+  },
 };
 
-person.gender; // => error
-person?.gender; // => "undefined"
+obj.residence;
+// => undefined
+
+obj.address.zipCode;
+// => undefined
+
+obj.residence.street;
+// => TypeError: Cannot read property 'street' of undefined
+
+obj.residence?.street;
+// => undefined
+
+obj.residence?.street?.number;
+// => undefined
 ```
 
-You can find more about the optional chaining in the [MDN docs][optional chaining].
+## Nullish Coalescing
 
-[optional chaining]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
-[nullish coalescing]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-[mdn docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
+Often times there are situations where you want to apply a default value in case a variable is null undefined.
+In the past this was often times done utilizing lazy evaluation of the OR operator `||`.
+This has the disadvantage that the default value is applied in all cases where the variable is [falsy][mdn-falsy] (e.g. `''` or `0`), not only when it is null or undefined.
+It can easily cause unexpected outcomes.
+
+```javascript
+let amount = null;
+amount = amount || 1;
+// => 1
+
+amount = 0;
+amount = amount || 1;
+// => 1
+```
+
+To address this, the [nullish coalescing operator][mdn-nullish-coalescing] `??` was introduced.
+Just like optional chaining, it was added to the language specification in 2020.
+The nullish coalescing operator `??` returns the right-hand side operand only when the left-hand side operand is `null` or `undefined`. Otherwise the left-hand side operand is returned.
+With that, a default value can now be applied more specifically.
+
+```javascript
+let amount = null;
+amount = amount ?? 1;
+// => 1
+
+amount = 0;
+amount = amount ?? 1;
+// => 0
+```
+
+[concept-comparison]: /tracks/javascript/concepts/comparison
+[mdn-strict-equality]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
+[mdn-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+[mdn-undefined]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
+[mdn-optional-chaining]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+[mdn-falsy]: https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+[mdn-nullish-coalescing]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
