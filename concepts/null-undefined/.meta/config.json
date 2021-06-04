@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for nullability concept",
-  "authors": ["SleeplessByte", "Jlamon"],
+  "blurb": "In JavaScript there are two different entities that represent the absence of a value: `null` and `undefined`.",
+  "authors": ["SleeplessByte", "Jlamon", "junedev"],
   "contributors": []
 }
