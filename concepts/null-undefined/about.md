@@ -1,6 +1,7 @@
 # About
 
-In contrast to many other languages, there are two different entities in JavaScript that represent the absence of a value. There is `null` and `undefined`.
+In contrast to many other languages, there are two different entities in JavaScript that represent the absence of a (meaningful) value.
+There is `null` and `undefined`.
 
 ## Null
 
@@ -31,8 +32,7 @@ typeof name;
 
 ## Undefined
 
-> A variable that has not been assigned a value is of type `undefined`.
-> [Source: [MDN][mdn-undefined]]
+> A variable that has not been assigned a value is of type `undefined`.<sup>1</sup>
 
 So while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
 
@@ -113,7 +113,7 @@ obj.residence?.street?.number;
 
 ## Nullish Coalescing
 
-Often times there are situations where you want to apply a default value in case a variable is null undefined.
+Often times there are situations where you want to apply a default value in case a variable is null or undefined.
 In the past this was often times done utilizing lazy evaluation of the OR operator `||`.
 This has the disadvantage that the default value is applied in all cases where the variable is [falsy][mdn-falsy] (e.g. `''` or `0`), not only when it is null or undefined.
 It can easily cause unexpected outcomes.
@@ -143,10 +143,10 @@ amount = amount ?? 1;
 // => 0
 ```
 
-[concept-comparison]: /tracks/javascript/concepts/comparison
+[1] Undefined, MDN. (2021). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined (accessed June 4, 2021).
+
 [mdn-strict-equality]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
 [mdn-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-[mdn-undefined]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
 [mdn-optional-chaining]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [mdn-falsy]: https://developer.mozilla.org/en-US/docs/Glossary/Falsy
 [mdn-nullish-coalescing]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
