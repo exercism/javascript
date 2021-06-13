@@ -97,7 +97,7 @@ describe('simpleTicketStatus', () => {
     };
 
     const unexpected = 'invalid ticket !!!';
-    expect(simpleTicketStatus(tickets, '7B627X32')).not.toEqual(unexpected);
+    expect(simpleTicketStatus(tickets, 'B7627X32')).not.toEqual(unexpected);
     expect(simpleTicketStatus(tickets, 'XF1X6S2W')).not.toEqual(unexpected);
     expect(simpleTicketStatus(tickets, 'KJJIFFO0')).not.toEqual(unexpected);
   });
