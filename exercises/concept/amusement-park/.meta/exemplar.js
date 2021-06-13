@@ -1,79 +1,76 @@
 // @ts-check
-//
-// The line above enables type checking for this file. Various IDEs interpret
-// the @ts-check directive. It will give you helpful autocompletion when
-// implementing this exercise.
 
 /**
- * Determines how long it takes to prepare a certain juice.
+ * Creates a new visitor.
  *
  * @param {string} name
- * @returns {number} time in minutes
+ * @param {number} age
+ * @param {string} ticketId
+ * @returns {Object} visitor
+ * @returns {string} visitor.name
+ * @returns {number} visitor.age
+ * @returns {string} visitor.ticketId
  */
-export function timeToMixJuice(name) {
-  switch (name) {
-    case 'Pure Strawberry Joy':
-      return 0.5;
-    case 'Energizer':
-      return 1.5;
-    case 'Green Garden':
-      return 1.5;
-    case 'Tropical Island':
-      return 3;
-    case 'All or Nothing':
-      return 5;
-    default:
-      return 2.5;
-  }
+export function createVisitor(name, age, ticketId) {
+  return { name, age, ticketId };
 }
 
 /**
- * Calculates the number of limes that need to be cut
- * to reach a certain supply.
+ * Revokes a ticket for a visitor.
  *
- * @param {number} maxWedges
- * @param {string[]} limes
- * @returns {number} number of limes cut
+ * @param {Object} visitor
+ * @param {string} visitor.name
+ * @param {number} visitor.age
+ * @param {string} visitor.ticketId
+ * @returns {Object} visitor
+ * @returns {string} visitor.name
+ * @returns {number} visitor.age
+ * @returns {string} visitor.ticketId
  */
-export function limesToCut(wedgesNeeded, limes) {
-  let limesCut = 0;
-  while (wedgesNeeded > 0 && limes.length > 0) {
-    limesCut++;
-    wedgesNeeded -= wedgesFromLime(limes.shift());
-  }
-
-  return limesCut;
+export function revokeTicket(visitor) {
+  visitor.ticketId = null;
+  return visitor;
 }
 
 /**
- * Determines the number of wedges that can be cut
- * from a lime of the given size.
+ * Determines the status a ticket has in the ticket tracking object.
  *
- * @param {string} size
- * @returns number of wedges
+ * @param {Record<string, string|null>} tickets
+ * @param {string} ticketId
+ * @returns {string} ticket status
  */
-function wedgesFromLime(size) {
-  switch (size) {
-    case 'small':
-      return 6;
-    case 'medium':
-      return 8;
-    case 'large':
-      return 10;
+export function ticketStatus(tickets, ticketId) {
+  if (tickets[ticketId] === undefined) {
+    return 'unknown ticket id';
   }
+
+  if (tickets[ticketId] === null) {
+    return 'not sold';
+  }
+
+  return 'sold to ' + tickets[ticketId];
 }
 
 /**
- * Determines which juices still need to be prepared after the end of the shift.
+ * Determines the status a ticket has in the ticket tracking object
+ * and returns a simplified status message.
  *
- * @param {number} timeLeft
- * @param {string[]} orders
- * @returns {string[]} remaining orders after the time is up
+ * @param {Record<string, string|null>} tickets
+ * @param {string} ticketId
+ * @returns {string} ticket status
  */
-export function remainingOrders(timeLeft, orders) {
-  do {
-    timeLeft -= timeToMixJuice(orders.shift());
-  } while (timeLeft > 0 && orders.length > 0);
+export function simpleTicketStatus(tickets, ticketId) {
+  return tickets[ticketId] ?? 'invalid ticket !!!';
+}
 
-  return orders;
+/**
+ * Determines the version of the GTC that was signed by the visitor.
+ *
+ * @param {Object} visitor
+ * @param {Object | undefined} visitor.gtc
+ * @param {string} visitor.gtc.version
+ * @returns {string | undefined} version
+ */
+export function gtcVersion(visitor) {
+  return visitor.gtc?.version;
 }
