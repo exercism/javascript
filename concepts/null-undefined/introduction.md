@@ -26,13 +26,13 @@ name === null;
 
 > A variable that has not been assigned a value is of type `undefined`.<sup>1</sup>
 
-So while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
+That means while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
 
 `undefined` appears in different contexts.
 
 - If a variable is declared, it is `undefined` initially.
 - If you try to access a value for a non-existing key in an object, you get `undefined`.
-- If a function does not return a value, it returns `undefined`.
+- If a function does not return a value, the result is `undefined`.
 
 ```javascript
 let name;
@@ -76,7 +76,7 @@ obj.residence?.street;
 
 ## Nullish Coalescing
 
-Often times there are situations where you want to apply a default value in case a variable is null or undefined (but only then).
+There are situations where you want to apply a default value in case a variable is null or undefined (but only then).
 To address this, the nullish coalescing operator `??` was introduced in 2020.
 It returns the right-hand side operand only when the left-hand side operand is `null` or `undefined`.
 Otherwise the left-hand side operand is returned.

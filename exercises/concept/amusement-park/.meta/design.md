@@ -57,6 +57,7 @@ The comment types mentioned below only serve as a proposal.
 
 5. `gtcVersion`
    - `essential`: Check only `.?` was used and not an if-statement or something else.
+   - `essential`: Check that `undefined` is not returned "manually" via `return undefined`.
    - `actionable`: If the student used a helper variable, give feedback that the result can be returned directly.
 
 ## Notes

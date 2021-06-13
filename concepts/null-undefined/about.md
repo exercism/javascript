@@ -34,22 +34,20 @@ typeof name;
 
 > A variable that has not been assigned a value is of type `undefined`.<sup>1</sup>
 
-So while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
+That means while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
 
 `undefined` appears in different contexts.
 
 - If a variable is declared, it is `undefined` initially.
 - If you try to access a value for a non-existing key in an object, you get `undefined`.
-- If a function does not return a value, it returns `undefined`.
+- If a function does not return a value, the result is `undefined`.
 
 ```javascript
 let name;
 console.log(name);
 // => undefined
 
-let obj = {
-  greeting: 'hello world',
-};
+let obj = { greeting: 'hello world' };
 console.log(obj.missingKey);
 // => undefined
 
@@ -72,7 +70,7 @@ typeof name === 'undefined';
 // => true
 ```
 
-It is not recommended to manually assign `undefined` to a variable, always use `null` instead to make it clear it is an intentional empty value.
+It is not recommended to manually assign `undefined` to a variable, always use `null` instead to make it clear you set an empty value intentionally.
 
 ## Optional Chaining
 
@@ -112,10 +110,10 @@ obj.residence?.street?.number;
 
 ## Nullish Coalescing
 
-Often times there are situations where you want to apply a default value in case a variable is null or undefined.
+There are situations where you want to apply a default value in case a variable is null or undefined.
 In the past this was often times done utilizing lazy evaluation of the OR operator `||`.
 This has the disadvantage that the default value is applied in all cases where the variable is [falsy][mdn-falsy] (e.g. `''` or `0`), not only when it is null or undefined.
-It can easily cause unexpected outcomes.
+This can easily cause unexpected outcomes.
 
 ```javascript
 let amount = null;

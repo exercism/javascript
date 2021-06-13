@@ -127,9 +127,9 @@
         "slug": "amusement-park",
         "name": "Amusement Park",
         "uuid": "2d40b46b-9e49-431c-913c-81d1f42f74df",
-        "concepts": [],
-        "prerequisites": [],
-        "status": "deprecated"
+        "concepts": ["null-undefined"],
+        "prerequisites": ["objects"],
+        "status": "beta"
       },
       {
         "slug": "recursion",
