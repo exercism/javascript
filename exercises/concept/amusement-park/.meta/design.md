@@ -35,7 +35,8 @@ The comment types mentioned below only serve as a proposal.
 
    - `actionable`: If the student used a helper variable, give feedback that the result can be returned directly.
    - `celebratory`: If the student used classes, celebrate but let them know it is not necessary throughout this exercise.
-   - `informative`: If the student did not use the short-hand notation but wrote `name: name` etc instead, let them know how to shorten that. The solution should be accepted nevertheless.
+   - `informative`: If the student did not use the short-hand notation but wrote `name: name` etc instead, let them know how to shorten that.
+     The solution should be accepted nevertheless.
 
 2. `revokeTicket`
 
@@ -44,7 +45,7 @@ The comment types mentioned below only serve as a proposal.
 
 3. `ticketStatus`
 
-   - `essential`: Using a type switch should be discuraged since it is confusing to read because of the `typeof null === 'object'` quirk.
+   - `essential`: Using a type switch should be discouraged since it is confusing to read because of the `typeof null === 'object'` quirk.
    - `informative`: If the student did not use early returns, maybe let them know about this alternative.
    - `celebratory`: Congratulate if the student used a template string for the "sold" case
    - `celebratory`: Congratulate if the student used a `value` helper variable.
@@ -61,7 +62,9 @@ The comment types mentioned below only serve as a proposal.
 ## Notes
 
 The exercise is inspired by the [Amusement Park Exercise in the Ruby track][ruby-amusement-park].
-The original exercise also included parts of what is covered in `classes` in the JavaScript track. So some tasks were removed. Instead a task to practice the difference between null and undefined and tasks for nullish coalescing and optional chaining were added.
+The original exercise also included parts of what is covered in `classes` in the JavaScript track.
+So some tasks were removed.
+Instead a task to practice the difference between null and undefined and tasks for nullish coalescing and optional chaining were added.
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
 [ruby-amusement-park]: https://github.com/exercism/ruby/blob/main/exercises/concept/amusement-park/.docs/instructions.md

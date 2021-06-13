@@ -11,7 +11,7 @@
  * @returns {number} visitor.age
  * @returns {string} visitor.ticketId
  */
- export function createVisitor(name, age, ticketId) {
+export function createVisitor(name, age, ticketId) {
   throw new Error('Please implement the createVisitor function.');
 }
 

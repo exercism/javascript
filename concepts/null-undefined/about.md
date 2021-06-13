@@ -56,8 +56,7 @@ console.log(obj.missingKey);
 function returnNothing() {
   return;
 }
-const result = returnNothing();
-console.log(result);
+console.log(returnNothing());
 // => undefined
 ```
 
@@ -130,7 +129,8 @@ amount = amount || 1;
 
 To address this, the [nullish coalescing operator][mdn-nullish-coalescing] `??` was introduced.
 Just like optional chaining, it was added to the language specification in 2020.
-The nullish coalescing operator `??` returns the right-hand side operand only when the left-hand side operand is `null` or `undefined`. Otherwise the left-hand side operand is returned.
+The nullish coalescing operator `??` returns the right-hand side operand only when the left-hand side operand is `null` or `undefined`.
+Otherwise the left-hand side operand is returned.
 With that, a default value can now be applied more specifically.
 
 ```javascript
@@ -142,6 +142,8 @@ amount = 0;
 amount = amount ?? 1;
 // => 0
 ```
+
+---
 
 [1] Undefined, MDN. (2021). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined (accessed June 4, 2021).
 

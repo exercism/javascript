@@ -88,6 +88,19 @@ describe('simpleTicketStatus', () => {
     expect(simpleTicketStatus(testTickets(), 'H31SAW5Q')).toBe('Lior MacNeil');
     expect(simpleTicketStatus(testTickets(), 'M9ZTXP89')).toBe('Kamani Ybarra');
   });
+
+  test('tickets with "strange" name values are valid nevertheless', () => {
+    const tickets = {
+      B7627X32: '',
+      XF1X6S2W: 0,
+      KJJIFFO0: false,
+    };
+
+    const unexpected = 'invalid ticket !!!';
+    expect(simpleTicketStatus(tickets, '7B627X32')).not.toEqual(unexpected);
+    expect(simpleTicketStatus(tickets, 'XF1X6S2W')).not.toEqual(unexpected);
+    expect(simpleTicketStatus(tickets, 'KJJIFFO0')).not.toEqual(unexpected);
+  });
 });
 
 describe('gtcVersion', () => {
@@ -114,31 +127,6 @@ describe('gtcVersion', () => {
 
     expect(gtcVersion(visitor1)).toBe('4.2');
     expect(gtcVersion(visitor2)).toBe('1.6');
-  });
-
-  test('does not modify the visitor object', () => {
-    const visitor = {
-      name: 'Zohar Pekkanen',
-      age: 28,
-      ticketId: '8DGM3163',
-      gtc: {
-        signed: true,
-        version: '4.2',
-      },
-    };
-
-    const expected = {
-      name: 'Zohar Pekkanen',
-      age: 28,
-      ticketId: '8DGM3163',
-      gtc: {
-        signed: true,
-        version: '4.2',
-      },
-    };
-
-    gtcVersion(visitor);
-    expect(visitor).toEqual(expected);
   });
 
   test('returns nothing if there is no gtc object', () => {
@@ -177,6 +165,23 @@ describe('gtcVersion', () => {
 
     expect(gtcVersion(visitor1)).toBeUndefined();
     expect(gtcVersion(visitor2)).toBeUndefined();
+  });
+
+  test('does not modify the visitor object', () => {
+    const visitor = {
+      name: 'Zohar Pekkanen',
+      age: 28,
+      ticketId: '8DGM3163',
+    };
+
+    const expected = {
+      name: 'Zohar Pekkanen',
+      age: 28,
+      ticketId: '8DGM3163',
+    };
+
+    gtcVersion(visitor);
+    expect(visitor).toEqual(expected);
   });
 });
 
