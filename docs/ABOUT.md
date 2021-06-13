@@ -48,7 +48,7 @@ default.
 [wiki-javascript-support]: https://en.wikipedia.org/wiki/Comparison_of_web_browsers#JavaScript_support
 [wiki-transpilation]: https://en.wikipedia.org/wiki/Source-to-source_compiler
 [web-ecma]: https://www.ecma-international.org/publications/standards/Standard.htm
-[web-ecma-2019]: (http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-overview)
+[web-ecma-2019]: http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-overview
 [web-nodejs]: https://nodejs.org/en/
 [web-deno]: https://deno.land/
 [web-electron]: https://electronjs.org/
