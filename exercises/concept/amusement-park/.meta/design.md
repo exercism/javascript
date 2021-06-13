@@ -2,89 +2,66 @@
 
 ## Learning objectives
 
-- What does a while loop do
-- What is the difference to do-while
-- Syntax `while(){}` and `do{} while()`
-- Break and continue
-- What is the switch statement
-- Syntax `switch(){}`
-- What is the `default` case for
-- What does `break` do
-- Why is break so important when using switch
+- What is `null`
+- What is `undefined`
+- When does `undefined` usually appear
+- What is the difference between the two
+- How to check for `null` or `undefined`
+- Optional chaining
+- Nullish Coalescing
 
 ## Out of Scope
 
-The following topics are out of scope because they are covered by another concept exercise.
-
-- For loops
-- Array loops (for...in, forEach, map)
+- Default parameters (will be covered in the `functions` concept)
+- Classes (will be covered in the `classes` concept)
+- "Empty slots" in arrays
 
 ## Concepts
 
 The Concepts this exercise unlocks are:
 
-- `while-loops`
-- `conditionals-switch`
+- `null-undefined`
 
 ## Prerequisites
 
-- `comparison` for writing the condition in the loop header
-- `conditionals` because they introduced the student to the concept of conditional execution
-- `arrays` because they are used to loop over them in the exercise
+- `objects` because they are needed throughout the exercise
 
 ## Analyzer
 
 This exercise could benefit from the following rules in the [analyzer][analyzer].
 The comment types mentioned below only serve as a proposal.
 
-1. `timeToMixJuice`
+1. `createVisitor`
 
-   - `essential`: Verify the student used a switch statement.
-     Would be nice if we could give different feedback depending on what the student used instead.
-     If it was if-else, comment that switch is better suited for so many different variants.
-     If an object was used, comment that this is nice but the goal is to practice switch.
-   - `essential`: Verify that there are 5 cases and a default case in the switch statement to make sure the student did not tailor their code for the test cases (e.g., used more cases instead of default).
-   - `actionable`: If the student used `break`, comment to use early `return`s instead to avoid assigning to a helper variable first and then returning that variable.
-   - `celebratory`: Comment something nice when a student used grouped case statements.
-     ```javascript
-     case 'Energizer':
-     case 'Green Garden':
-        return 1.5;
-     ```
+   - `actionable`: If the student used a helper variable, give feedback that the result can be returned directly.
+   - `celebratory`: If the student used classes, celebrate but let them know it is not necessary throughout this exercise.
+   - `informative`: If the student did not use the short-hand notation but wrote `name: name` etc instead, let them know how to shorten that. The solution should be accepted nevertheless.
 
-2. `limesToCut`
+2. `revokeTicket`
 
-   - A solution that uses `if (limes.length < 0) break;` instead of combining the conditions should be considered equally correct to the exemplar solution.
-     The version in the examplar file is shorter but the break version emphasizes that there is a special edge case.
-   - `essential`: Verify that `while` was used.
-   - `essential`: If a helper function was used for the switch statement, check that is was not exported.
-   - `actionable`: If the student wrote `if (limes.length < 0) return limesCut`, comment that the duplication of `return limesCut` can be avoided by using break there instead of return.
-   - `actionable`: Tell the student to use a helper function to wrap the switch statement for readability if he/she did not do that.
-   - `informative`: If the student used a counter to iterate over the array, show a comment about about `shift`.
-   - `informative`: Remind the student about `++` if it was not used to increment the lime counter.
-   - `informative`: Check whether a shorthand assignment `+=` was used to increase the loop counter.
-   - `informative`: If `default` was included in the switch statement, remind the student that it is optional and not needed in the scope of the task.
-   - `celebratory`: Make a positive remark if the student used a helper function to wrap the switch statement.
-   - `celebratory`: Celebrate if the student used `++` and `+=`.
+   - `essential`: Check the ticketId field is not deleted and re-added.
+   - `celebratory`: If they used a method on a visitor class, celebrate but let them know it is not necessary for this exercise.
 
-3. `remainingOrders`
+3. `ticketStatus`
 
-   - `essential`: Verify that do-while was used.
-     If while was used instead, say that do-while is a better fit because there is always at least one iteration (because `timeLeft` is always > 0) and the condition can best be checked after running the code.
-   - `essential`: Verify `timeToMixJuice` was reused instead of duplicating the code.
-   - Most of the points from task 2 also apply here.
-     Check what can be reused.
+   - `essential`: Using a type switch should be discuraged since it is confusing to read because of the `typeof null === 'object'` quirk.
+   - `informative`: If the student did not use early returns, maybe let them know about this alternative.
+   - `celebratory`: Congratulate if the student used a template string for the "sold" case
+   - `celebratory`: Congratulate if the student used a `value` helper variable.
+
+4. `simpleTicketStatus`
+
+   - `essential`: Check `??` was used and not an if-statement or something else.
+   - `actionable`: If the student used a helper variable, give feedback that the result can be returned directly.
+
+5. `gtcVersion`
+   - `essential`: Check only `.?` was used and not an if-statement or something else.
+   - `actionable`: If the student used a helper variable, give feedback that the result can be returned directly.
 
 ## Notes
 
-The exercise is inspired by the [Master Mixologist Exercise in the Swift track][swift-master-mixologist].
-The original exercise also included for loops which is covered by a different exercise in the JavaScript track.
-The tasks were adapted accordingly which also simplified them.
-The alcohol was replaced and the name was changed to match the new story.
-
-## Improvement
-
-The exercise would benefit from another task to practice `continue`.
+The exercise is inspired by the [Amusement Park Exercise in the Ruby track][ruby-amusement-park].
+The original exercise also included parts of what is covered in `classes` in the JavaScript track. So some tasks were removed. Instead a task to practice the difference between null and undefined and tasks for nullish coalescing and optional chaining were added.
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
-[swift-master-mixologist]: https://github.com/exercism/swift/blob/main/exercises/concept/master-mixologist/.docs/instructions.md
+[ruby-amusement-park]: https://github.com/exercism/ruby/blob/main/exercises/concept/amusement-park/.docs/instructions.md
