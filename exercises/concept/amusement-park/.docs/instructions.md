@@ -1,55 +1,75 @@
 # Instructions
 
-FIXME
+Working with an amusement park, your task is to provide parts of the program that manages visitors and tickets.
 
-Working with an amusement park, you've been handed a specification to design a system to administer attendance and rides. You've been tasked with modeling the Attendee (person visiting the park).
+First you will create a new visitor in the system, then you will provide a function for revoking a ticket.
+Lastly you will work on tracking the tickets to prevent forgery.
 
-## 1. Make new attendees
+## 1. Create a new visitor
 
-Implement the `Attendee#initialize` method of the `Attendee` class, it should take a height (in centimeters) and store it as an instance variable
+When a visitor comes to the amusement park for the first time, they need to register by entering their name and age in a terminal and agreeing to the terms and conditions.
+Of course they also need to buy a ticket.
+The ticket has an identifier like `H32AZ123`.
 
-```ruby
-Attendee.new(106)
-# => #<Attendee:0x000055c33e6c7e18 @height=106>
+Write a function `createVisitor` that accepts three arguments.
+
+- The name of the visitor.
+- The age of the visitor.
+- The ticket identifier of the ticket that the visitor bought.
+
+The function should combine this information into an object and return it. The keys in the object should be called `name`, `age` and `ticketId`.
+
+```javascript
+createVisitor('Verena Nardi', 45, 'H32AZ123');
+// => { name: 'Verena Nardi', age: 45, ticketId: 'H32AZ123' }
 ```
 
-## 2. How tall is the attendee
+## 2. Revoke the ticket
 
-Implement the `Attendee#height` getter of the `Attendee` class, it should return the instances height
+To save regular visitors some time, they only need to register once and the visitor information will be kept for subsequent visits.
+That is why when a visitor leaves the park, only their ticket should be revoked but the rest of the visitor object should stay the same.
 
-```ruby
-Attendee.new(106).height
-# => 106
+Implement the function `revokeTicket` that accepts a visitor object, sets the ticket identifier to `null` and returns the object afterwards.
+
+```javascript
+const visitor = {
+  name: 'Verena Nardi',
+  age: 45,
+  ticketId: 'H32AZ123',
+};
+
+revokeTicket(visitor);
+// => { name: 'Verena Nardi', age: 45, ticketId: null }
 ```
 
-## 3. What is the ride pass' id
+## 3. Determine the ticket status
 
-Not all attendees have bought a ride pass, but we need to know if they have a pass or not. Implement the `Attendee#pass_id` getter for the `Attendee` class, it should return the instance's pass_id or `nil` if the Attendee doesn't have one.
+To prevent forgery, the ticket identifiers are unique.
+Once a ticket was printed, the identifier is added as key in an object to track it in the system.
 
-```ruby
-Attendee.new(106).pass_id
-# => nil
-```
+Before the ticket is sold to a visitor, it has the value `null`.
+Once it was sold to a visitor, the visitor's name will be assigned as a value.
+When an employee has doubts about the validity of the ticket, they need to check the status of the ticket in the system.
 
-## 4. Allow people to buy a pass
+Implement a function `ticketStatus` that accepts the tracking object and a ticket identifier as arguments.
+It should return one of the following results.
 
-Implement `Attendee#issue_pass!` to mutate the state of the instance, and set the pass id instance varaiable to the argument. It should return the pass id.
+- `not sold` in case the ticket does not have a visitor assigned yet
+- `sold to ` followed by the name of the visitor if the ticket was sold
+- `unknown ticket id` if the identifier was not found in the tracking object
 
-```ruby
-attendee = Attendee.new(106)
-attendee.issue_pass!(42)
-attendee.pass_id
-# => 42
-```
+```javascript
+const tickets = {
+  '0H2AZ123': null,
+  '23LA9T41': 'Verena Nardi',
+};
 
-## 4. Revoke the pass
+ticketStatus('0H2AZ123');
+// => 'not sold'
 
-Some guests break the rules with unsafe behavior, so the park wants to be able to revoke passes. Implement `Attendee#revoke_pass` to mutate the state of the instance, and set the pass id to `nil`
+ticketStatus('23LA9T41');
+// => 'sold to Verena Nardi'
 
-```ruby
-attendee = Attendee.new(106)
-attendee.issue_pass!(42)
-attendee.revoke_pass!
-attendee.pass_id
-# => nil
+ticketStatus('RE90VAW7');
+// => 'unknown ticket id'
 ```
