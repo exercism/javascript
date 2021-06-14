@@ -76,7 +76,7 @@ It is not recommended to manually assign `undefined` to a variable, always use `
 
 As mentioned above, accessing a non-existent key in an object returns `undefined` in JavaScript.
 However if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`.
-Theoretically you would always need to check the parent key exists before you can try to retrieve the nested key.
+Theoretically, you would always need to check the parent key exists before you can try to retrieve the nested key.
 This was often done with expressions like `obj.key && obj.key.nestedKey`.
 Now imagine how this looks for deeply nested values.
 

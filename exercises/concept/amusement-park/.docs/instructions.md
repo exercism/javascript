@@ -2,9 +2,9 @@
 
 It is your job to provide and maintain parts of the IT system of an amusement park. In particular, you are responsible for the program that manages visitors and tickets.
 
-First you will create a new visitor in the system, then you will provide a function for revoking a ticket.
+First, you will create a new visitor in the system, then you will provide a function for revoking a ticket.
 In task 3 and 4 you will work on the ticket tracking system that helps to prevent forgery.
-Lastly you will help adapting the system to new legal requirements.
+Lastly, you will help adapting the system to new legal requirements.
 
 ## 1. Create a new visitor
 
@@ -28,7 +28,8 @@ createVisitor('Verena Nardi', 45, 'H32AZ123');
 
 ## 2. Revoke the ticket
 
-When people leave the amusement park, their ticket gets revoked. If they come back, they need to buy a new one.
+When people leave the amusement park, their ticket gets revoked.
+If they come back, they need to buy a new one.
 To save regular visitors some time, they only need to register once and the visitor information will be kept for subsequent visits.
 
 That means when a visitor leaves the park, only their ticket should be invalidated but the rest of the visitor object should stay the same.
