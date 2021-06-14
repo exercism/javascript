@@ -1,2 +1,4 @@
+/.github/labels.yml
+/.github/workflows/sync-labels.yml
 exercises/**/README.md
 !/README.md
