@@ -5,7 +5,7 @@
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
 In other languages they are referred to as maps or dictionaries and often times values need to have the same data type.
-In JavaScript only the type of the key is restricted, it has to be a string.
+In JavaScript, only the type of the key is restricted, it has to be a string.
 The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
 
@@ -240,7 +240,7 @@ Object.entries(obj);
 ## Truly Empty Object
 
 You might have noticed that an empty object in JavaScript is not completely empty.
-For example it contains the `hasOwnProperty` method and other methods like `toString`.
+For example, it contains the `hasOwnProperty` method and other methods like `toString`.
 Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
