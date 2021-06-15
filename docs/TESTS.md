@@ -43,9 +43,7 @@ Usually, tests on this track will load your implementation by importing it as a 
 You just need to export your implementation from the referenced file, `bob.js`:
 
 ```javascript
-export function hey(message) {
-
-}
+export function hey(message) {}
 ```
 
 You can find more information about modules in the [Babel documentation](https://babeljs.io/docs/learn-es2015/#modules).
