@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\sublist"
+    "directory": "exercises/practice/sublist"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

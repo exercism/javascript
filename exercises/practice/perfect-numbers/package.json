@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\perfect-numbers"
+    "directory": "exercises/practice/perfect-numbers"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

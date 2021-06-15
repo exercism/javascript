@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\change"
+    "directory": "exercises/practice/change"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
