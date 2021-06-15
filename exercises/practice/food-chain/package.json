@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\food-chain"
+    "directory": "exercises/practice/food-chain"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

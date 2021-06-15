@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept\\elyses-destructured-enchantments"
+    "directory": "exercises/concept/elyses-destructured-enchantments"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

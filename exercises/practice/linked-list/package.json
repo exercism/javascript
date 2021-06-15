@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\linked-list"
+    "directory": "exercises/practice/linked-list"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

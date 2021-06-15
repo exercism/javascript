@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\rectangles"
+    "directory": "exercises/practice/rectangles"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

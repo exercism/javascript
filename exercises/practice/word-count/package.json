@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\word-count"
+    "directory": "exercises/practice/word-count"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

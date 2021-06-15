@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\pythagorean-triplet"
+    "directory": "exercises/practice/pythagorean-triplet"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

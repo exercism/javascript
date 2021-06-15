@@ -231,7 +231,10 @@ export function mergePackageJsons(basePackageJson, packageJson, assignment) {
     mergedPackageJson.repository[key] = packageJson.repository[key];
   });
 
-  mergedPackageJson.repository.directory = `exercises/${assignment}`;
+  mergedPackageJson.repository.directory = `exercises/${assignment.replace(
+    '\\',
+    '/'
+  )}`;
 
   return mergedPackageJson;
 }

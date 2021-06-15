@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\variable-length-quantity"
+    "directory": "exercises/practice/variable-length-quantity"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept\\freelancer-rates"
+    "directory": "exercises/concept/freelancer-rates"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

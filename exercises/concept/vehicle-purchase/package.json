@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept\\vehicle-purchase"
+    "directory": "exercises/concept/vehicle-purchase"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

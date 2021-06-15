@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept\\errors"
+    "directory": "exercises/concept/errors"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

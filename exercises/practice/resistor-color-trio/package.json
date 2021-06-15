@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice\\resistor-color-trio"
+    "directory": "exercises/practice/resistor-color-trio"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
