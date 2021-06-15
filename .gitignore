@@ -1,3 +1,4 @@
 /node_modules
 /bin/configlet
+/pnpm-lock.yaml
 /yarn.lock
