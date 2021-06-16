@@ -1,0 +1,11 @@
+{
+  "blurb": "FIXME",
+  "authors": ["junedev"],
+  "contributors": [],
+  "files": {
+    "solution": ["lasagna-master.js"],
+    "test": ["lasagna-master.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["swift/lasagna-master"]
+}
