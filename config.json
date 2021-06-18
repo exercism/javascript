@@ -588,7 +588,7 @@
         "name": "Difference Of Squares",
         "uuid": "7dfa878c-83a6-48ef-9170-b6633d51d601",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "for-loops"],
         "difficulty": 3,
         "topics": ["algorithms", "loops", "integers", "math"]
       },
