@@ -606,7 +606,7 @@
         "name": "Complex Numbers",
         "uuid": "ea9a9a3e-ae6a-470d-8bb4-2afead507f24",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "numbers", "math"],
         "difficulty": 4,
         "topics": ["math"]
       },
@@ -624,7 +624,7 @@
         "name": "Prime Factors",
         "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["while-loops", "conditionals", "arrays"],
         "difficulty": 4,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
