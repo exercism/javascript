@@ -2,7 +2,7 @@
 
 ## 1. Create a new high score board
 
-- You create a new object with curly brackets.
+- Create a new object with curly brackets.
 - Write the key as a string so it can include spaces.
 - Separate key and value with a colon.
 

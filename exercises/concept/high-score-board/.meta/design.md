@@ -5,14 +5,14 @@
 - What are objects - for now describe them as maps/dictionaries that hold key-value pairs, more advanced things will be taught later
 - Objects are the core building blocks in JavaScript
 - How to create an object literal with `{}` (either empty or with some initial values)
-- What is allowed as keys
-- What is allowed as values (e.g., numbers, strings etc or other objects, arrays or even functions)
+- What keys are allowed
+- What values are allowed (e.g., numbers, strings etc or other objects, arrays or even functions)
 - How to add a key-value pair to an object, how to change the value of an existing key
 - How to retrieve the value (show `obj["key"]` and `obj.key` notation)
 - How to retrieve nested values
 - How to remove an entry
 - How to check a key exists in the object with `hasOwnProperty`
-- How to iterate through the keys with `for ... in`
+- How to iterate through the keys with `for...in`
 
 ## Out of Scope
 
@@ -52,7 +52,7 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 
 3. `removePlayer`
 
-   - `essential`: Make sure `delete` was used and not setting to undefined or null.
+   - `essential`: Make sure `delete` was used and not set to undefined or null.
    - `actionable`: If there is additional code to check whether the key is present before deleting it, give feedback that this is not necessary.
 
 4. `updateScore`

@@ -5,7 +5,7 @@
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
 In other languages they are referred to as maps or dictionaries and often times values need to have the same data type.
-In JavaScript, only the type of the key is restricted, it has to be a string.
+In JavaScript, only the type of the key is restricted: it has to be a string.
 The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
 
@@ -50,9 +50,9 @@ const obj = {
 };
 ```
 
-Often times you want to combine existing variables into an object.
+Often you will want to add existing variables when declaring an object.
 This would often lead to key-value pairs like `name: name`.
-JavaScript has a short-hand notation that allows to just write `name` instead.
+JavaScript has a short-hand notation that allows just writing `name` instead.
 There is also a short-hand notation for defining a function in an object.
 There you can omit the colon and the `function` keyword.
 
@@ -111,7 +111,7 @@ Using the dot notation as a short-hand has the same restriction as omitting the 
 It only works if the key follows the identifier naming rules.
 
 If you try to retrieve a key that does not exist in the object, JavaScript returns `undefined`.
-See the [Null and Undefined Concept][concept-null-undefined] for more details on this.
+See [Null and Undefined][concept-null-undefined] for more details on this.
 
 You can chain the keys if you want to retrieve a value from a nested object.
 
@@ -204,8 +204,8 @@ Nevertheless you should not rely on this because there are special cases where t
 Always write your code as if the order would be arbitrary.
 If you need a reliable order, use a [`Map`][jsinfo-map] or a nested [array][concept-arrays] instead of an object.
 
-The for-in loop has a pitfall in case the object has [inherited keys][concept-inheritance].
-Those will also be visited by the for-in loop.
+The `for…in` loop has a pitfall in case the object has [inherited keys][concept-inheritance].
+Those will also be visited by the `for…in` loop.
 You can avoid this by skipping over them like shown below.
 
 ```javascript
