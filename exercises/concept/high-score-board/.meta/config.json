@@ -1,5 +1,5 @@
 {
-  "blurb": "FIXME",
+  "blurb": "Practice JavaScript objects by tracking high scores of an arcade game.",
   "authors": ["junedev"],
   "contributors": [],
   "files": {
@@ -7,5 +7,5 @@
     "test": ["high-score-board.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["julia/high-score-board"]
+  "forked_from": ["elixir/high-score", "swift/high-score-board"]
 }

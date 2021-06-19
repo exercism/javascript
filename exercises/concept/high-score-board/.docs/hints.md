@@ -25,7 +25,7 @@
 
 ## 5. Apply Monday bonus points
 
-- Use a for-in loop to go through all keys in the object.
+- Use a `for...in` loop to go through all keys in the object.
 - For each key, set the new value like you did in task 4.
 
 ## 6. Normalize a high score

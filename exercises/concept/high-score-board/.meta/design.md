@@ -3,7 +3,6 @@
 ## Learning objectives
 
 - What are objects - for now describe them as maps/dictionaries that hold key-value pairs, more advanced things will be taught later
-- Objects are the core building blocks in JavaScript
 - How to create an object literal with `{}` (either empty or with some initial values)
 - What keys are allowed
 - What values are allowed (e.g., numbers, strings etc or other objects, arrays or even functions)
@@ -34,7 +33,7 @@ The Concepts this exercise unlocks are:
 
 ## Prerequisites
 
-- `for-loops` to better understand the for-in loop and because should already have covered some ground in the concept tree before starting with objects (e.g., arrays which are a prerequisite for `for-loops`)
+- `for-loops` to better understand the `for...in` loop and because should already have covered some ground in the concept tree before starting with objects (e.g., arrays which are a prerequisite for `for-loops`)
 
 ## Analyzer
 
@@ -48,7 +47,7 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 
 2. `addPlayer`
 
-   - ???
+   - `essential`: Check the assignment operator was used and no additional variables were declared.
 
 3. `removePlayer`
 
@@ -62,7 +61,7 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 
 5. `applyMondayBonus`
 
-   - `essential`: Check the student actually used for-in.
+   - `essential`: Check the student actually used `for...in`.
    - Same feedback as in `updateScore` applies.
    - Using `updateScore` in the solution should be treated as equally correct as the exemplar solution.
 
@@ -80,7 +79,7 @@ The last two tasks were added instead in this exercise.
 
 There are still a couple of things open that could be added to the about.md file.
 
-- Helper methods like `Object.assign` etc.
+- Helper methods like `Object.assign`, `Object.defineProperty`, `Object.getOwnPropertyNames` etc.
 - How to use an object as a map instead of a switch statement
 - Object vs. Map
 

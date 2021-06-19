@@ -4,14 +4,19 @@
 
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
-In other languages they are referred to as maps or dictionaries and often times values need to have the same data type.
+As such, they can be used as what is referred to as maps or dictionaries in other languages.
+
+In other languages, all values in a map often need to have the same data type.
 In JavaScript, only the type of the key is restricted: it has to be a string.
 The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
+This makes objects very versatile so that they are also key entities for [object-oriented programming][oop] (OOP) in JavaScript.
+
+In the following we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][concept-classes].
 
 ## Creating an Object
 
-You create an object (literal) with curly brackets.
+You create an object [literal][literal] with curly brackets.
 You can also directly include some entries (key-value pairs).
 For that, state the key first, followed by a colon and the value.
 
@@ -33,7 +38,7 @@ const obj = {
 };
 ```
 
-The trailing comma after the last entry is optional in JavaScript.
+The trailing comma after the last entry is optional in JavaScript. You can read about the advantages of using it [here][mdn-trailing-commas].
 
 You might wonder why the keys are not wrapped in quotation marks although they are supposed to be strings.
 This is a short-hand notation.
@@ -86,6 +91,8 @@ const key = 'greeting';
 const obj = {
   [key]: 'hello world',
 };
+console.log(obj);
+// => { greeting: 'hello world' }
 ```
 
 ## Retrieving a Value
@@ -127,6 +134,10 @@ obj.address.city;
 // => 'Batticaloa'
 
 obj['address']['city'];
+// => 'Batticaloa'
+
+// Notations can also be mixed.
+obj.address['city'];
 // => 'Batticaloa'
 ```
 
@@ -206,7 +217,7 @@ If you need a reliable order, use a [`Map`][jsinfo-map] or a nested [array][conc
 
 The `for…in` loop has a pitfall in case the object has [inherited keys][concept-inheritance].
 Those will also be visited by the `for…in` loop.
-You can avoid this by skipping over them like shown below.
+You usually want to avoid this so you need to skip over them like shown below.
 
 ```javascript
 for (let key in obj) {
@@ -243,6 +254,10 @@ You might have noticed that an empty object in JavaScript is not completely empt
 For example, it contains the `hasOwnProperty` method and other methods like `toString`.
 Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
+[oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+[concept-classes]: /tracks/javascript/concepts/classes
+[literal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals
+[mdn-trailing-commas]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
 [jsinfo-map]: https://javascript.info/map-set#map
 [concept-inheritance]: /tracks/javascript/concepts/inheritance

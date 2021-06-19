@@ -34,7 +34,7 @@ addPlayer({ 'Dave Thomas': 0 }, 'José Valim', 486373);
 
 ## 3. Remove players from a score board
 
-If a player did not visit the arcade hall for one year, they are removed from the high score board.
+If players violate the rules of the arcade hall, they are manually removed from the high score board.
 Define `removePlayer` which takes 2 parameters:
 
 - The first parameter is an existing score board object.

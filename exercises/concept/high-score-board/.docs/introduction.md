@@ -1,11 +1,20 @@
 # Introduction
 
+## Explanation
+
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
-In other languages they are referred to as maps or dictionaries and often times values need to have the same data type.
-In JavaScript, only the type of the key is restricted, it has to be a string.
+As such, they can be used as what is referred to as maps or dictionaries in other languages.
+
+In other languages, all values in a map often need to have the same data type.
+In JavaScript, only the type of the key is restricted: it has to be a string.
 The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
+This makes objects very versatile so that they are also key entities for [object-oriented programming][oop] (OOP) in JavaScript.
+
+In the following we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][concept-classes].
+
+## Creating an Object
 
 You create an object with curly brackets.
 You can also directly include some entries.
@@ -46,6 +55,8 @@ const obj = {
 };
 ```
 
+## Retrieving a Value
+
 There are two ways to retrieve the value for a given key, dot notation and bracket notation.
 
 ```javascript
@@ -66,6 +77,8 @@ obj[key];
 Using the dot notation as a short-hand has the same restriction as omitting the quotation marks.
 It only works if the key follows the identifier naming rules.
 
+## Adding or Changing a Value
+
 You can add or change a value using the assignment operator `=`.
 Again, there is dot and bracket notation available.
 
@@ -82,6 +95,8 @@ const key = 'new key 3';
 obj[key] = 'new value 3';
 ```
 
+## Deleting an Entry
+
 You can delete a key-value pair from an object using the `delete` keyword.
 
 ```javascript
@@ -94,6 +109,8 @@ delete obj.key1;
 delete obj['key2'];
 ```
 
+## Checking Whether a Key Exists
+
 You can check whether a certain key exists in an object with the `hasOwnProperty` method.
 
 ```javascript
@@ -105,6 +122,8 @@ obj.hasOwnProperty('greeting');
 obj.hasOwnProperty('age');
 // => false
 ```
+
+## Looping Through an Object
 
 There is a special `for...in` loop to iterate over all keys of an object.
 
@@ -121,9 +140,10 @@ for (let key in obj) {
 // age 65
 ```
 
-To avoid subtle errors you should always assume the for-in loop visits the keys in an arbitrary order.
+To avoid subtle errors you should always assume the `for...in` loop visits the keys in an arbitrary order.
 Also be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
 
+[oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+[concept-classes]: /tracks/javascript/concepts/classes
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
-[jsinfo-map]: https://javascript.info/map-set#map
 [concept-inheritance]: /tracks/javascript/concepts/inheritance
