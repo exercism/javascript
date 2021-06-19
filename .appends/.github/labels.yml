@@ -1,3 +1,8 @@
+# ----------------------------------------------------------------------------------------- #
+# These are the repository-specific labels that augment the Exercise-wide labels defined in #
+# https://github.com/exercism/org-wide-files/blob/main/global-files/.github/labels.yml.     #
+# ----------------------------------------------------------------------------------------- #
+
 - name: 'bug :bug:'
   description: "Something isn't working"
   color: 'b60205'
@@ -82,17 +87,9 @@
   description: ''
   color: '000000'
 
-- name: 'reputation/contributed_code/double_major'
-  description: ''
-  color: '947802'
-
 - name: 'reputation/contributed_code/major'
   description: ''
-  color: '921CBD'
-
-- name: 'reputation/contributed_code/minor'
-  description: ''
-  color: '4F1A93'
+  color: '947802'
 
 - name: 'security :rotating_light:'
   description: 'Security related issue or change'
@@ -105,10 +102,6 @@
 - name: 'upstream :arrow_up:'
   description: ''
   color: 'ffffff'
-
-- name: 'v3-migration 🤖'
-  description: 'Preparing for Exercism v3'
-  color: 'E99695'
 
 - name: 'wontfix :no_good_woman:'
   description: "This won't be applied, fixed, worked on, continued."

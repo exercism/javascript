@@ -596,7 +596,7 @@
         "name": "Difference Of Squares",
         "uuid": "7dfa878c-83a6-48ef-9170-b6633d51d601",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "for-loops"],
         "difficulty": 3,
         "topics": ["algorithms", "loops", "integers", "math"]
       },
@@ -614,7 +614,7 @@
         "name": "Complex Numbers",
         "uuid": "ea9a9a3e-ae6a-470d-8bb4-2afead507f24",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "numbers", "math"],
         "difficulty": 4,
         "topics": ["math"]
       },
@@ -632,7 +632,7 @@
         "name": "Prime Factors",
         "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["while-loops", "conditionals", "arrays"],
         "difficulty": 4,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
@@ -1330,7 +1330,7 @@
         "name": "Kindergarten Garden",
         "uuid": "13444eff-005a-405e-9737-7b64d99c1a61",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "strings", "spread-operator"],
         "difficulty": 7,
         "topics": [
           "arrays",

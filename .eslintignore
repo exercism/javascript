@@ -1,5 +1,16 @@
-
 !.meta
 
+# Protected or generated
+/.appends
+/.github
+/.vscode
+
+# Binaries
+/bin
+
+# Configuration
+/config
+
+# Typings
 /exercises/**/global.d.ts
 /exercises/**/env.d.ts
