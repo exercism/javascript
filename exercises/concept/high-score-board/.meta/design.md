@@ -82,6 +82,7 @@ There are still a couple of things open that could be added to the about.md file
 - Helper methods like `Object.assign`, `Object.defineProperty`, `Object.getOwnPropertyNames` etc.
 - How to use an object as a map instead of a switch statement
 - Object vs. Map
+- See https://github.com/exercism/javascript/pull/1160#discussion_r654696799
 
 Also the story in instructions.md could need some love, e.g.,
 
