@@ -6,18 +6,18 @@
 
 ## 2. Revoke the ticket
 
-- Use the assignment operator `=` to set the ticketId property of the visitor object to `null`.
+- Use the assignment operator `=` to set the `ticketId` property of the visitor object to `null`.
 - Return the visitor object afterwards.
 
 ## 3. Determine the ticket status
 
 - Revisit the [concept "Conditionals"][concept-conditionals] to find out how conditionally return different values from the function.
-- Use the bracket notation to access the value of the given ticketId in the object.
+- Use the bracket notation to access the value of the given `ticketId` in the object.
 - Use the strict equality operator `===` to check for `null` or `undefined`.
 
 ## 4. Improve the ticket status response
 
-- Retrieve the value for a given ticketId with bracket notation like in the previous task.
+- Retrieve the value for a given `ticketId` with bracket notation like in the previous task.
 - No if-statement is needed to solve this task.
 - Use the [nullish coalescing operator][mdn-nullish-coalescing] `??` instead.
 
