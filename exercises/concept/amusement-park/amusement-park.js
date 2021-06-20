@@ -1,3 +1,4 @@
+/// <reference path="./global.d.ts" />
 // @ts-check
 
 /**
@@ -6,10 +7,7 @@
  * @param {string} name
  * @param {number} age
  * @param {string} ticketId
- * @returns {Object} visitor
- * @returns {string} visitor.name
- * @returns {number} visitor.age
- * @returns {string} visitor.ticketId
+ * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
   throw new Error('Please implement the createVisitor function.');
@@ -18,14 +16,8 @@ export function createVisitor(name, age, ticketId) {
 /**
  * Revokes a ticket for a visitor.
  *
- * @param {Object} visitor
- * @param {string} visitor.name
- * @param {number} visitor.age
- * @param {string} visitor.ticketId
- * @returns {Object} visitor
- * @returns {string} visitor.name
- * @returns {number} visitor.age
- * @returns {string} visitor.ticketId
+ * @param {Visitor} visitor the visitor with an active ticket
+ * @returns {Visitor} the visitor without a ticket
  */
 export function revokeTicket(visitor) {
   throw new Error('Please implement the revokeTicket function.');
@@ -57,9 +49,7 @@ export function simpleTicketStatus(tickets, ticketId) {
 /**
  * Determines the version of the GTC that was signed by the visitor.
  *
- * @param {Object} visitor
- * @param {Object | undefined} visitor.gtc
- * @param {string} visitor.gtc.version
+ * @param {VisitorWithGtc} visitor
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
