@@ -5,12 +5,12 @@ There is `null` and `undefined`.
 
 ## Null
 
-The primitive value `null` is used as intentional "zero value" for variables of any type.
+The primitive value `null` is used as intentional "empty value" for variables of any type.
 
 ```javascript
 let name = null;
-// name is intentionally set to be "empty", e.g. because the value
-// will only be defined later in the program
+// name is intentionally set to "empty" because it is not
+// available
 ```
 
 You can check whether a variable is null by using the [strict equality operator][mdn-strict-equality] `===`.
@@ -30,9 +30,10 @@ That means while `null` represents an empty value (but still a value), `undefine
 
 `undefined` appears in different contexts.
 
-- If a variable is declared, it is `undefined` initially.
+- If a variable is declared without a value (initialization), it is `undefined`.
 - If you try to access a value for a non-existing key in an object, you get `undefined`.
 - If a function does not return a value, the result is `undefined`.
+- If an argument is not passed to a function, it is `undefined`, unless that argument has a default value.
 
 ```javascript
 let name;

@@ -90,8 +90,6 @@ This function only returns one of two different results.
 - the name of the visitor if the ticket was sold
 - `'invalid ticket !!!'` if the ticket was not sold yet or the identifier was not found in the tracking object
 
-Note that `invalid ticket !!!` should not be returned for any "strange" name values that might occur but really only in the two cases described above.
-
 ```javascript
 const tickets = {
   '0H2AZ123': null,

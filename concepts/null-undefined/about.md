@@ -5,19 +5,19 @@ There is `null` and `undefined`.
 
 ## Null
 
-The primitive value `null` is used as intentional "zero value" for a variable.
+The primitive value `null` is used as intentional "empty value" for a variable.
 In other languages a similar construct might be used only for (missing) objects or pointer types.
 In JavaScript `null` generally represents an empty value for any type.
 
 ```javascript
 let name = null;
-// name is intentionally set to "empty", e.g. because the value
-// will only be defined later in the program
+// name is intentionally set to "empty" because it is not
+// available
 ```
 
 You can check whether a variable is null by using the [strict equality operator][mdn-strict-equality] `===`.
-Although `null` is a primitive value, the [`typeof` operator][mdn-typeof] "wrongly" returns `object` for historic reasons.
-That means it cannot be used to check whether a variable is null.
+Although `null` is a primitive value, the [`typeof` operator][mdn-typeof] "wrongly" returns `object` for [historic reasons][mdn-typeof-null].
+That means it cannot be used by itself to check whether a variable is null.
 
 ```javascript
 let name = null;
@@ -38,9 +38,10 @@ That means while `null` represents an empty value (but still a value), `undefine
 
 `undefined` appears in different contexts.
 
-- If a variable is declared, it is `undefined` initially.
+- If a variable is declared without a value (initialization), it is `undefined`.
 - If you try to access a value for a non-existing key in an object, you get `undefined`.
 - If a function does not return a value, the result is `undefined`.
+- If an argument is not passed to a function, it is `undefined`, unless that argument has a default value.
 
 ```javascript
 let name;
@@ -77,8 +78,11 @@ It is not recommended to manually assign `undefined` to a variable, always use `
 As mentioned above, accessing a non-existent key in an object returns `undefined` in JavaScript.
 However if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`.
 Theoretically, you would always need to check the parent key exists before you can try to retrieve the nested key.
-This was often done with expressions like `obj.key && obj.key.nestedKey`.
-Now imagine how this looks for deeply nested values.
+This was often done with the AND operator `&&` but for deeply nested values this leads to very lengthy expressions.
+
+```javascript
+obj.level1 && obj.level1.level2 && obj.level1.level2.level3;
+```
 
 To solve this problem, [optional chaining][mdn-optional-chaining] was added to the language specification in 2020.
 With the optional chaining operator `?.` you can ensure that JavaScript only tries to access the nested key if the parent was not `null` or `undefined`.
@@ -111,7 +115,7 @@ obj.residence?.street?.number;
 ## Nullish Coalescing
 
 There are situations where you want to apply a default value in case a variable is null or undefined.
-In the past this was often times done utilizing lazy evaluation of the OR operator `||`.
+In the past this was often times done with a ternary operator `?` or by utilizing lazy evaluation of the OR operator `||`.
 This has the disadvantage that the default value is applied in all cases where the variable is [falsy][mdn-falsy] (e.g. `''` or `0`), not only when it is null or undefined.
 This can easily cause unexpected outcomes.
 
@@ -122,6 +126,10 @@ amount = amount || 1;
 
 amount = 0;
 amount = amount || 1;
+// => 1
+
+amount = 0;
+amount ? amount : 1;
 // => 1
 ```
 
@@ -147,6 +155,7 @@ amount = amount ?? 1;
 
 [mdn-strict-equality]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
 [mdn-typeof]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+[mdn-typeof-null]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null
 [mdn-optional-chaining]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [mdn-falsy]: https://developer.mozilla.org/en-US/docs/Glossary/Falsy
 [mdn-nullish-coalescing]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
