@@ -1,6 +1,6 @@
 # Instructions
 
-It is your job to provide and maintain parts of the IT system of an amusement park. 
+It is your job to provide and maintain parts of the IT system of an amusement park.
 In particular, you are responsible for the program that manages visitors and tickets.
 
 First, you will create a new visitor in the system, then you will provide a function for revoking a ticket.
