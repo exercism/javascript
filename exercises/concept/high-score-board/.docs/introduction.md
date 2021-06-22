@@ -16,7 +16,7 @@ In the following we will focus on objects as collections or maps. Other use case
 
 ## Creating an Object
 
-You create an object with curly brackets.
+You create an object using curly brackets.
 You can also directly include some entries.
 For that, state the key first, followed by a colon and the value.
 

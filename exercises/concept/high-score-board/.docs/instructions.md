@@ -41,7 +41,7 @@ Define `removePlayer` which takes 2 parameters:
 - The second parameter is the name of the player as a string.
 
 This function should remove the entry for the given player from the board and return the board afterwards.
-If the player was not on the board in the first place, the board nothing should happen to the board.
+If the player was not on the board in the first place, nothing should happen to the board.
 It should be returned as is.
 
 ```javascript
@@ -74,7 +74,7 @@ The arcade hall keeps a separate score board on Mondays.
 At the end of the day, each player on that board gets 100 additional points.
 
 Implement the function `applyMondayBonus` that accepts a score board.
-It adds the bonus points for each player that is listed on that board.
+The function adds the bonus points for each player that is listed on that board.
 Afterwards the board is returned.
 
 ```javascript
@@ -95,18 +95,18 @@ To celebrate the best arcade player in town, a player's score needs to be normal
 
 Write a function `normalizeScore`.
 To practice your object skills, instead of two parameters this function should accept one object as parameter.
-That object contains a key `score` and a player's score (a number) as a value.
+That object contains a key `score` with the value being a player's score (a number).
 There is also a second key `normalizeFn` that has a function as value.
 This function takes a score as argument and returns the corrected score.
 
 Your function `normalizeScore` should return the normalized score that you get after applying the the normalization function to the score that was passed in.
 
 ```javascript
-function fn(score) {
+function normalize(score) {
   return 2 * score + 10;
 }
 
-const params = { score: 400, normalizeFn: fn };
+const params = { score: 400, normalizeFunction: normalize };
 normalizeScore(params);
 // => 810
 ```

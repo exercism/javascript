@@ -2,14 +2,14 @@
 
 ## 1. Create a new high score board
 
-- Create a new object with curly brackets.
-- Write the key as a string so it can include spaces.
+- Create a new object using curly brackets.
+- Write the key as a string so the key can contain spaces.
 - Separate key and value with a colon.
 
 ## 2. Add players to a score board
 
-- Use bracket notation to add a key name that is stored in a variable (the argument).
-- Use the assignment operator `=` to set a value for the new key.
+- Use bracket notation to add a key with a name that is stored in a variable (the argument).
+- Use the assignment operator (`=`) to set a value for the new key.
 - Return the score board parameter after you added the player.
 
 ## 3. Remove players from a score board

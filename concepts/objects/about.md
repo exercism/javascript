@@ -38,7 +38,8 @@ const obj = {
 };
 ```
 
-The trailing comma after the last entry is optional in JavaScript. You can read about the advantages of using it [here][mdn-trailing-commas].
+The trailing comma after the last entry is optional in JavaScript.
+You can read about the advantages of using it [here][mdn-trailing-commas].
 
 You might wonder why the keys are not wrapped in quotation marks although they are supposed to be strings.
 This is a short-hand notation.

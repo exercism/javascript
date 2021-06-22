@@ -59,7 +59,7 @@ export function applyMondayBonus(scoreBoard) {
  *
  * @param {Object} params
  * @param {number} params.score
- * @param {function} params.normalizeFn
+ * @param {function} params.normalizeFunction
  * @returns {number} normalized score
  */
 export function normalizeScore(params) {
