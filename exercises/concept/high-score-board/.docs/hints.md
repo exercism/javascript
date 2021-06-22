@@ -4,7 +4,7 @@
 
 - Create a new object using curly brackets.
 - Write the key as a string so the key can contain spaces.
-- Separate key and value with a colon.
+- Separate key and value using a colon.
 
 ## 2. Add players to a score board
 

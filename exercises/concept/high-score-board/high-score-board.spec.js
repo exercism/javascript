@@ -123,7 +123,7 @@ describe('normalizeScore', () => {
   test('applies the normalization function', () => {
     const params = {
       score: 45,
-      normalizeFn: function (score) {
+      normalizeFunction: function (score) {
         return score * 3 - 10;
       },
     };
@@ -134,7 +134,7 @@ describe('normalizeScore', () => {
   test('works for different params', () => {
     const params = {
       score: 2100,
-      normalizeFn: function (score) {
+      normalizeFunction: function (score) {
         return score / 2 + 100;
       },
     };

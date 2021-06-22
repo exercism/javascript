@@ -16,7 +16,7 @@ In the following we will focus on objects as collections or maps. Other use case
 
 ## Creating an Object
 
-You create an object [literal][literal] with curly brackets.
+You create an object [literal][literal] using curly brackets.
 You can also directly include some entries (key-value pairs).
 For that, state the key first, followed by a colon and the value.
 

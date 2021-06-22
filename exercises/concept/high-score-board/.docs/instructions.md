@@ -8,8 +8,8 @@ You have 6 functions to implement, mostly related to manipulating an object that
 
 Create a function `createScoreBoard` that creates an object that serves as high score board.
 The keys of this object will be the names of the players, the values will be their scores.
-For testing purposes you want to directly include one initial entry in the object.
-There should player `The Best Ever` with a score of `1000000` already on the board.
+For testing purposes you want to directly include one entry in the object.
+This initial entry should consist of `The Best Ever` as player name and `1000000` as score.
 
 ```javascript
 createScoreBoard();
@@ -96,7 +96,7 @@ To celebrate the best arcade player in town, a player's score needs to be normal
 Write a function `normalizeScore`.
 To practice your object skills, instead of two parameters this function should accept one object as parameter.
 That object contains a key `score` with the value being a player's score (a number).
-There is also a second key `normalizeFn` that has a function as value.
+There is also a second key `normalizeFunction` that has a function as value.
 This function takes a score as argument and returns the corrected score.
 
 Your function `normalizeScore` should return the normalized score that you get after applying the the normalization function to the score that was passed in.

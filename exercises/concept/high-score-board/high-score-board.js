@@ -1,3 +1,4 @@
+/// <reference path="./global.d.ts" />
 // @ts-check
 
 /**
@@ -57,9 +58,7 @@ export function applyMondayBonus(scoreBoard) {
 /**
  * Normalizes a score with the provided normalization function.
  *
- * @param {Object} params
- * @param {number} params.score
- * @param {function} params.normalizeFunction
+ * @param {Params} params the parameters for performing the normalization
  * @returns {number} normalized score
  */
 export function normalizeScore(params) {
