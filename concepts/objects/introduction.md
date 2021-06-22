@@ -4,7 +4,7 @@
 
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
-As such, they can be used as what is referred to as maps or dictionaries in other languages.
+As such, they can be used as what is often referred to as maps or dictionaries in other languages.
 
 In other languages, all values in a map often need to have the same data type.
 In JavaScript, only the type of the key is restricted: it has to be a string.

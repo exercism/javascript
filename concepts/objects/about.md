@@ -4,7 +4,7 @@
 
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
-As such, they can be used as what is referred to as maps or dictionaries in other languages.
+As such, they can be used as what is often referred to as maps or dictionaries in other languages.
 
 In other languages, all values in a map often need to have the same data type.
 In JavaScript, only the type of the key is restricted: it has to be a string.
@@ -228,6 +228,9 @@ for (let key in obj) {
 }
 ```
 
+JavaScript also has a `for...of` loop, for example to iterate over arrays.
+It is important to note that `for...in` and `for...of` are not interchangeable, see [MDN documentation][mdn-for-in-for-of] for details on this.
+
 ## Keys, Values and Entries
 
 The built-in object `Object` provides helper methods to retrieve all the keys, values or entries of a given object as arrays.
@@ -263,4 +266,5 @@ Usually that does not cause any problems but if you ever need to create a truly 
 [concept-inheritance]: /tracks/javascript/concepts/inheritance
 [mdn-in-operator]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in
 [mdn-null-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#custom_and_null_objects
+[mdn-for-in-for-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of#difference_between_for...of_and_for...in
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
