@@ -119,9 +119,17 @@
         "slug": "nullability",
         "name": "Employee Badges",
         "uuid": "19962010-7b8c-4db1-bdae-ffc857b268e5",
-        "concepts": ["nullability"],
-        "prerequisites": ["conditionals", "strings"],
-        "status": "active"
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
+      },
+      {
+        "slug": "amusement-park",
+        "name": "Amusement Park",
+        "uuid": "2d40b46b-9e49-431c-913c-81d1f42f74df",
+        "concepts": ["null-undefined"],
+        "prerequisites": ["objects"],
+        "status": "beta"
       },
       {
         "slug": "recursion",
@@ -154,7 +162,7 @@
           "closures",
           "conditionals",
           "errors",
-          "nullability",
+          "null-undefined",
           "numbers",
           "objects"
         ],
@@ -1628,8 +1636,8 @@
     },
     {
       "uuid": "008f1c88-7c14-48b2-a88d-49ecb5e3b122",
-      "slug": "nullability",
-      "name": "Nullability"
+      "slug": "null-undefined",
+      "name": "Null and Undefined"
     },
     {
       "uuid": "8da586c3-9327-46e2-ad32-c8423061912d",
