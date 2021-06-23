@@ -177,6 +177,14 @@
         "status": "beta"
       },
       {
+        "slug": "high-score-board",
+        "name": "High Score Board",
+        "uuid": "431d1f13-d280-4808-bbc6-a72e628c15c2",
+        "concepts": ["objects"],
+        "prerequisites": ["for-loops"],
+        "status": "beta"
+      },
+      {
         "slug": "ozans-playlist",
         "name": "Ozan's Playlist",
         "uuid": "347692fb-7b0f-4ef0-9a02-2192b59bdf5d",
@@ -1685,6 +1693,11 @@
       "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
       "slug": "conditionals-switch",
       "name": "Switch Statement"
+    },
+    {
+      "uuid": "68dd89d3-13b8-49f5-b493-ccfdc82a073c",
+      "slug": "objects",
+      "name": "Objects"
     },
     {
       "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
