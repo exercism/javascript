@@ -1,0 +1,5 @@
+{
+  "blurb": "In JavaScript there are two different entities that represent the absence of a (meaningful) value: `null` and `undefined`.",
+  "authors": ["SleeplessByte", "Jlamon", "junedev"],
+  "contributors": []
+}

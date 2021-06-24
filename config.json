@@ -119,9 +119,17 @@
         "slug": "nullability",
         "name": "Employee Badges",
         "uuid": "19962010-7b8c-4db1-bdae-ffc857b268e5",
-        "concepts": ["nullability"],
-        "prerequisites": ["conditionals", "strings"],
-        "status": "active"
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
+      },
+      {
+        "slug": "amusement-park",
+        "name": "Amusement Park",
+        "uuid": "2d40b46b-9e49-431c-913c-81d1f42f74df",
+        "concepts": ["null-undefined"],
+        "prerequisites": ["objects"],
+        "status": "beta"
       },
       {
         "slug": "recursion",
@@ -154,7 +162,7 @@
           "closures",
           "conditionals",
           "errors",
-          "nullability",
+          "null-undefined",
           "numbers",
           "objects"
         ],
@@ -166,6 +174,14 @@
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
         "prerequisites": ["arrays", "callbacks", "errors", "recursion"],
+        "status": "beta"
+      },
+      {
+        "slug": "high-score-board",
+        "name": "High Score Board",
+        "uuid": "431d1f13-d280-4808-bbc6-a72e628c15c2",
+        "concepts": ["objects"],
+        "prerequisites": ["for-loops"],
         "status": "beta"
       },
       {
@@ -599,7 +615,7 @@
         "name": "Difference Of Squares",
         "uuid": "7dfa878c-83a6-48ef-9170-b6633d51d601",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "for-loops"],
         "difficulty": 3,
         "topics": ["algorithms", "loops", "integers", "math"]
       },
@@ -617,7 +633,7 @@
         "name": "Complex Numbers",
         "uuid": "ea9a9a3e-ae6a-470d-8bb4-2afead507f24",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "numbers", "math"],
         "difficulty": 4,
         "topics": ["math"]
       },
@@ -635,7 +651,7 @@
         "name": "Prime Factors",
         "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["while-loops", "conditionals", "arrays"],
         "difficulty": 4,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
@@ -1333,7 +1349,7 @@
         "name": "Kindergarten Garden",
         "uuid": "13444eff-005a-405e-9737-7b64d99c1a61",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "strings", "spread-operator"],
         "difficulty": 7,
         "topics": [
           "arrays",
@@ -1631,8 +1647,8 @@
     },
     {
       "uuid": "008f1c88-7c14-48b2-a88d-49ecb5e3b122",
-      "slug": "nullability",
-      "name": "Nullability"
+      "slug": "null-undefined",
+      "name": "Null and Undefined"
     },
     {
       "uuid": "8da586c3-9327-46e2-ad32-c8423061912d",
@@ -1688,6 +1704,11 @@
       "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
       "slug": "conditionals-switch",
       "name": "Switch Statement"
+    },
+    {
+      "uuid": "68dd89d3-13b8-49f5-b493-ccfdc82a073c",
+      "slug": "objects",
+      "name": "Objects"
     },
     {
       "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
