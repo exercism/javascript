@@ -63,7 +63,7 @@ jobs:
       - name: 'Format code'
         run: ./bin/format.sh
         env:
-          EXERCISM_PRETTIER_VERSION: '2.3.0'
+          EXERCISM_PRETTIER_VERSION: '2.3.2'
 
       - name: 'Commit formatted code'
         run: |
