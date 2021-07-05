@@ -7,5 +7,5 @@
     "test": ["enchantments.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["go/basic-slices"]
+  "forked_from": ["go/card-tricks"]
 }

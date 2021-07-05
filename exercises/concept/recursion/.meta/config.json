@@ -7,5 +7,5 @@
     "test": ["recursion.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["csharp/nullability"]
+  "forked_from": ["fsharp/pizza-pricing"]
 }
