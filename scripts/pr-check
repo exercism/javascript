@@ -9,7 +9,8 @@
  * 1. Find the exercises at all the paths provided
  * 2. Check stub existence for those exercises
  * 3. Check integrity of configuration for those exercises
- * 4. Run eslint for those exercises to check code-style
+ * 4. Check prettier package.json version and ENV matches
+ * 5. Run eslint for those exercises to check code-style
  */
 
 const {
@@ -136,6 +137,20 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
 
 // Cleanup tmp directory if any exists
 cleanUp();
+
+/**Check if prettier version of package.json is the same than ENV in workflow, 
+ * if not set ENV equal to package.json version
+*/
+const packageFile = shell.cat('package.json').toString();
+let package = JSON.parse(packageFile);
+const packageVersion = package['devDependencies']['prettier']
+
+if (shell.env['EXERCISM_PRETTIER_VERSION'] != packageVersion){
+  shell.echo('\n==========\nCheck prettier package.json and ENV variable match \n');
+  shell.env['EXERCISM_PRETTIER_VERSION'] = packageVersion;
+}
+
+
 
 /**
  * Moves all example and test files to single directory - tmp_exercises
