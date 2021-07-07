@@ -138,16 +138,15 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
 // Cleanup tmp directory if any exists
 cleanUp();
 
-/**Check if prettier version of package.json is the same than ENV in workflow, 
- * if not set ENV equal to package.json version
+/**
+ * Check if prettier version of package.json is the same than ENV in workflow
 */
 const packageFile = shell.cat('package.json').toString();
 let package = JSON.parse(packageFile);
-const packageVersion = package['devDependencies']['prettier']
+const packageVersion = package['devDependencies']['prettier'].replace(/[^0-9a-zA-Z.]/g, '')
 
-if (shell.env['EXERCISM_PRETTIER_VERSION'] != packageVersion){
-  shell.echo('\n==========\nCheck prettier package.json and ENV variable match \n');
-  shell.env['EXERCISM_PRETTIER_VERSION'] = packageVersion;
+if (shell.env['EXERCISM_PRETTIER_VERSION'] !== packageVersion){
+  shell.echo(`\n==========\nWorkflow EXERCISM_PRETTIER_VERSION does not match pacakge.json prettier version ${packageVersion}\n`);
 }
 
 
