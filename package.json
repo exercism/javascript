@@ -19,7 +19,7 @@
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.14.7",
     "@exercism/eslint-config-javascript": "^0.4.0",
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^26.0.24",
     "@types/node": "^16.0.2",
     "babel-jest": "^27.0.6",
     "chalk": "^4.1.1",
