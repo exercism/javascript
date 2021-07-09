@@ -146,7 +146,7 @@ let package = JSON.parse(packageFile);
 const packageVersion = package['devDependencies']['prettier'].replace(/[^0-9a-zA-Z.]/g, '')
 
 if (shell.env['EXERCISM_PRETTIER_VERSION'] !== packageVersion){
-  shell.echo(`\n==========\nWorkflow EXERCISM_PRETTIER_VERSION does not match pacakge.json prettier version ${packageVersion}\n`);
+    throw new Error(`Workflow EXERCISM_PRETTIER_VERSION does not match pacakge.json prettier version ${packageVersion}`)
 }
 
 
