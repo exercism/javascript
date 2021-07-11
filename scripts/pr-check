@@ -23,6 +23,7 @@ const {
   assignments,
 } = require('./helpers');
 
+const fn = require('fn');
 const shell = require('shelljs');
 const path = require('path');
 const files = process.argv.slice(2);
@@ -143,12 +144,36 @@ cleanUp();
 */
 const packageFile = shell.cat('package.json').toString();
 let package = JSON.parse(packageFile);
-const packageVersion = package['devDependencies']['prettier'].replace(/[^0-9a-zA-Z.]/g, '')
-
-if (shell.env['EXERCISM_PRETTIER_VERSION'] !== packageVersion){
-    throw new Error(`Workflow EXERCISM_PRETTIER_VERSION does not match pacakge.json prettier version ${packageVersion}`)
+const packageVersion = package['devDependencies']['prettier'].replace(/[^0-9a-zA-Z.]/g, '');
+let actionFormat = () => {
+  try {
+      return fs.readFileSync('./.github/workflows/action-format.yml', 'utf8');
+  } catch(err) {
+      return err;
+  }
+  
+}
+let verifyCodeFormatting = () => {
+  try {
+      return fs.readFileSync('./.github/workflows/verify-code-formatting.yml', 'utf8');
+  } catch(err) {
+      return err;
+  }
+  
 }
 
+let notMatchingFiles = [];
+
+if ( !actionFormat().includes(`EXERCISM_PRETTIER_VERSION: '${packageVersion}'`)){
+  notMatchingFiles.push('action-format.yml')
+}
+if ( !verifyCodeFormatting().includes(`EXERCISM_PRETTIER_VERSION: '${packageVersion}'`)){
+  notMatchingFiles.push('verify-code-formatting.yml')
+}
+
+if (notMatchingFiles.length > 0){
+  throw new Error(`Workflow EXERCISM_PRETTIER_VERSION in file(s): ${notMatchingFiles.join(', ')} does not match pacakge.json prettier version ${packageVersion}`)
+}
 
 
 /**
