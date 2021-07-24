@@ -96,6 +96,6 @@ backDoorResponse('Stands so high   ');
 Change the implementation of the `backDoorPassword` function so that it's polite:
 
 ```javascript
-backDoorPassword('esroh');
+backDoorPassword('horse');
 // => "Horse, please"
 ```
