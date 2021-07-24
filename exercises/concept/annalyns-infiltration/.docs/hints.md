@@ -5,7 +5,7 @@
 - The logical NOT operator (`!`) can be placed before an expression to negate its value.
 - Check out [this MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT_!) on Logical Operators
 
-## 2. Check if the 'Approach and Spy' action is possible
+## 2. Check if the 'Spy' action is possible
 
 - Logical expressions are evaluated from left to right and are tested for possible 'short-circuits'.
 - For a more complete understanding of the left-to-right mechanic, take a look at [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)!
