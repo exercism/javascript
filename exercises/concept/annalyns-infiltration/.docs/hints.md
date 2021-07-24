@@ -14,3 +14,7 @@
 
 - Logical operators in the order of their precedence (from highest to lowest): `!`, `&&`, `||`.
 - Check out [this MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Precedence_And_Associativity) on Operator Precedence
+
+## 4. Check if the 'Free Prisoner' action is possible
+
+- `()` is the operator with the highest precedence. Use it to group logical expressions.
