@@ -9,7 +9,8 @@ Other possibilities like [arrow functions][concept-arrow-functions] will be cove
 
 The standard way of defining a function in JavaScript is a function declaration, also called function definition or function statement.
 
-It consist of the `function` keyword, the name of the function and a comma-separated list of parameters in round brackets. This is followed by the function body (the code that should be executed) wrapped in curly brackets.
+It consist of the `function` keyword, the name of the function and a comma-separated list of parameters in round brackets.
+This is followed by the function body (the code that should be executed) wrapped in curly brackets.
 
 ```javascript
 function someName(param1, param2, param3) {
@@ -39,32 +40,78 @@ sayHello();
 // => 'Hello World!'
 ```
 
-## Parameters and Arguments
+## Parameters
 
-TODO Pass by value vs. pass by reference
-In JavaScript, all values of primitive type
+When working with parameters inside the function body, it is important to keep in mind what happens to the original value that was passed to the function.
+In JavaScript, that depends on the data type of the argument.
+
+- All values that have primitive data types ([full list here][mdn-primitives]) are immutable in JavaScript, so if used as arguments they are _passed by value_.
+  That means you are dealing with a copy of the original value in the function body and you can modify it without affecting the original value.
+- All other values (objects, arrays, functions) are _passed by reference_.
+  If you modify arguments of non-primitive types, you are changing the original value outside of the function because the argument represents a reference to the original value, not a copy of that value.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
 If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
+In many cases it makes sense to assign a more appropriate default value than `undefined`. This can by done by specifying default parameters directly in the function definition.
+
+```javascript
+function someName(param1 = defaultValue1, param2 = defaultValue2) {
+  // ...
+}
+```
+
 You can even call a function with more arguments than there were parameters in the definition.
-Then the excess arguments are accessible via the arguments array (see details below).
+Then the excess arguments are present in the [arguments "array"][mdn-arguments-object].
 
-It is also possible to define functions that accept an arbitrary number of arguments (variadic functions), see [Rest and Spread Operators][concept-rest-and-spread] for details about this.
-
-### Default Parameters
-
-TODO continue here
-
-### Arguments Array
+It is also possible to define functions that accept an arbitrary number of arguments (variadic functions), see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for details about this.
 
 ## Return
 
-TODO continue here
+Using the `return` statement, you can pass the result of a function to code that called it.
+There can be multiple `return` statements in a function.
+The execution of the function ends as soon as it hits one of those `return`s.
 
-- only return 1 value
-- many returns allowed
-- what if naked return or no return
-- how to return multiple things?
+```javascript
+function checkNumber(num) {
+  if (num === 0) {
+    return 'You passed 0, please provide another number.';
+  }
+
+  return 'Thanks for passing such a nice number.';
+}
+```
+
+If you use a naked return or no return at all, the result of the function is `undefined`.
+There are no implicit returns in JavaScript.
+
+```javascript
+function nakedReturn(a) {
+  a * 2;
+  return;
+}
+
+nakedReturn(1);
+// => undefined
+
+function noReturn(a) {
+  a * 2;
+}
+
+noReturn(1);
+// => undefined
+```
+
+In JavaScript, you can only return exactly one value.
+If you want to pass more information, you need to combine it into one entity first, usually into an [object][concept-objects].
+
+```javascript
+function divide(a, b) {
+  return {
+    quotient: Math.floor(a / b),
+    remainder: a % b,
+  };
+}
+```
 
 ## Function Expression
 
@@ -89,24 +136,18 @@ const obj = {
 };
 ```
 
-TODO "one-off"
-
 ## Scope
 
-- what is declared inside only visible inside
-- what is outside is also visible
-- inner takes precendence over the outer one but shadowing should be avoided
-
-hoisting
-IIFE
-Pitfall new line after return?
-Advice on naming?
-one function, one action?
-avoid massive functions
-very short function names like \_
+A function introduces a new execution context in JavaScript.
+Variables defined inside a function are not accessible outside of that function.
+But variables defined in the parent scope (the scope where the function was defined itself) are accessible inside the function.
+The [MDN documentation on scope][mdn-scope] shows examples of this behavior.
 
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [concept-rest-and-spread]: /tracks/javascript/concepts/rest-and-spread
 [concept-objects]: /tracks/javascript/concepts/objects
 [concept-callbacks]: /tracks/javascript/concepts/callbacks
+[mdn-arguments-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+[mdn-primitives]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
+[mdn-scope]: https://developer.mozilla.org/en-US/docs/Glossary/Scope
