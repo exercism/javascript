@@ -1,26 +1,20 @@
 // @ts-check
 
-FIXME
-
 /**
- * Determines how long it takes to prepare a certain juice.
+ * Determines whether the lasagna is done based on the
+ * remaining time on the timer.
  *
- * @param {string} name
- * @returns {number} time in minutes
+ * @param {number} time time left on the timer
+ * @returns {string} cooking status
  */
-export function timeToMixJuice(name) {
-  switch (name) {
-    case 'Pure Strawberry Joy':
-      return 0.5;
-    case 'Energizer':
-      return 1.5;
-    case 'Green Garden':
-      return 1.5;
-    case 'Tropical Island':
-      return 3;
-    case 'All or Nothing':
-      return 5;
-    default:
-      return 2.5;
+export function cookingStatus(time) {
+  if (time === undefined) {
+    return 'You forgot to set the timer.'
   }
+
+  if (time === 0) {
+    return 'Lasagna is done.'
+  }
+
+  return 'Not done, please wait.'
 }

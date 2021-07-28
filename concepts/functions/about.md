@@ -1,4 +1,4 @@
-# Introduction
+# About
 
 A function allows to group code into a reusable unit.
 There are multiple ways to define functions in JavaScript.

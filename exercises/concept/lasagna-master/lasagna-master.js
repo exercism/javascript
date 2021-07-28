@@ -1,13 +1,11 @@
 // @ts-check
 
-FIXME
-
 /**
- * Determines how long it takes to prepare a certain juice.
- *
- * @param {string} name
- * @returns {number} time in minutes
+ * Implement the functions needed to solve the exercise here.
+ * Do not forget to export them so they are available for the
+ * tests. Here an example of the syntax as reminder:
+ * 
+ * export function yourFunction(...) {
+ *   ...
+ * }
  */
-export function timeToMixJuice(name) {
-  throw new Error('Please implement the timeToMixJuice function');
-}
