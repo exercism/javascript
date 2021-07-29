@@ -58,32 +58,32 @@ export function quantities(layers) {
 /**
  * Adds the secret ingredient from the ingredient list that a
  * friend provided to your ingredient list.
- * 
- * @param {string[]} friendsList 
- * @param {string[]} myList 
+ *
+ * @param {string[]} friendsList
+ * @param {string[]} myList
  */
 export function addSecretIngredient(friendsList, myList) {
-  const lastIndex = friendsList.length -1
-  myList.push(friendsList[lastIndex])
+  const lastIndex = friendsList.length - 1;
+  myList.push(friendsList[lastIndex]);
 }
 
 /**
- * Calculates the amounts of ingredients needed for a certain 
+ * Calculates the amounts of ingredients needed for a certain
  * amount of portions.
  * Assumes the original amounts were meant for 2 portions.
  * Does not modify the original recipe.
- * 
- * @param {Entry<string, number>} recipe 
- * @param number targetPortions 
+ *
+ * @param {Entry<string, number>} recipe
+ * @param number targetPortions
  * @returns {Entry<string, number>} recipe with amounts for target portions
  */
 export function scaleRecipe(recipe, targetPortions) {
-  const factor = targetPortions / 2
-  const result = {}
+  const factor = targetPortions / 2;
+  const result = {};
 
-  for(const key in recipe) {
-    result[key] = recipe[key] * factor
+  for (const key in recipe) {
+    result[key] = recipe[key] * factor;
   }
 
-  return result
+  return result;
 }
