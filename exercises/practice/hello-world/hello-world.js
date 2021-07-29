@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const hello = () => {
-  throw new Error('Remove this statement and implement this function');
-};
+export function hello() {
+  return 'Goodbye, Mars!';
+}

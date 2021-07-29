@@ -18,7 +18,6 @@
   "test_runner": {
     "average_run_time": 5.0
   },
-  "test_pattern": ".*[.]spec[.]js$",
   "files": {
     "solution": ["%{kebab_slug}.js"],
     "test": ["%{kebab_slug}.spec.js"],
@@ -1407,7 +1406,7 @@
       },
       {
         "slug": "dnd-character",
-        "name": "Dnd Character",
+        "name": "D&D Character",
         "uuid": "b373e13c-f179-4b36-b6e8-2a0f41540344",
         "practices": [],
         "prerequisites": [],
@@ -1723,33 +1722,33 @@
   ],
   "key_features": [
     {
-      "icon": "features-cross-platform",
+      "icon": "cross-platform",
       "title": "Runs almost everywhere",
       "content": "Build web-pages, write backend, create database scripts, make mobile apps, design CLI-s, and more."
     },
     {
-      "icon": "features-multi-paradigm",
+      "icon": "multi-paradigm",
       "title": "Use any programming style",
       "content": "Use prototype-based, object-oriented, functional, or declarative programming styles, and more."
     },
     {
-      "icon": "features-weakly-typed",
+      "icon": "dynamically-typed",
       "title": "No types required",
       "content": "Dynamically and weakly typed by default, gain typed confidence using Flow, JSDoc, or TypeScript."
     },
     {
-      "icon": "features-concurrency",
+      "icon": "concurrency",
       "title": "Concurrency is safe",
       "content": "Async/await, dedicated workers, or state sync in shared workers. No deadlocks or race conditions."
     },
     {
-      "icon": "features-packages",
+      "icon": "tooling",
       "title": "Largest package registry",
       "content": "No need to reinvent the wheel. Build on top of > 1.3 million packages (April, 2020)."
     },
     {
-      "icon": "features-designed",
-      "title": "Designed by a comity",
+      "icon": "community",
+      "title": "Designed by a committee",
       "content": "Frequent updates, following ECMAScript, a general purpose, cross platform, vendor-neutral standard."
     }
   ],
