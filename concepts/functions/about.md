@@ -65,7 +65,7 @@ Then the excess arguments are present in the [arguments "array"][mdn-arguments-o
 
 It is also possible to define functions that accept an arbitrary number of arguments (variadic functions), see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for details about this.
 
-## Return
+## Return Statement
 
 Using the `return` statement, you can pass the result of a function to code that called it.
 There can be multiple `return` statements in a function.

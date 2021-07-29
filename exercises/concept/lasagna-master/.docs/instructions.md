@@ -1,8 +1,9 @@
 # Instructions
 
-In this exercise you are going to write some more code to help you cook your brilliant lasagna from your favorite cooking book.
+In this exercise you are going to write some more code related to preparing and cooking your brilliant lasagna from your favorite cookbook.
 
-You have FIXME tasks, all related to the time spent cooking the lasagna.
+You have five tasks.
+The first is related to the cooking itself, the other four are about the perfect preparation.
 
 ## 1. Determine whether the lasagna is done
 
@@ -46,7 +47,7 @@ preparationTime(layers);
 ## 3. Compute the amounts of noodles and sauce needed
 
 Besides reserving the time, you also want to make sure you have enough sauce and noodles to build the lasagna of your dreams.
-For each noodle layer in your lasagna, you will need 3 noodles.
+For each noodle layer in your lasagna, you will need 50 grams of noodles.
 For each sauce layer in your lasagna, you will need 0.2 liters of sauce.
 
 Define the function `quantities` that takes an array of layers as parameter.
@@ -55,7 +56,7 @@ The result should be returned as an object with keys `noodles` and `sauce`.
 
 ```javascript
 quantities(['sauce', 'noodles', 'sauce', 'meat', 'mozzarella', 'noodles']);
-// => { noodles: 6, sauce: 0.4 }
+// => { noodles: 100, sauce: 0.4 }
 ```
 
 ## 4. Add the secret ingredient
@@ -68,8 +69,8 @@ Now you want to add that secret ingredient to your recipe as well.
 Write a function `addSecretIngredient` that accepts two arrays of ingredients as parameters.
 The first parameter is the list your friend send you, the second is the ingredient list for your own recipe.
 The function should add the last item from your friends list to the end of your list.
-The array that represents your recipe should be modified directly.
-The function should not return anything.
+The array that represents your recipe should be modified directly and the function should not return anything.
+However, the first argument should not be modified.
 
 ```javascript
 const friendsList = ['noodles', 'sauce', 'mozzarella', 'kampot pepper'];
@@ -99,27 +100,27 @@ This means in this task the recipe argument should not be modified.
 
 ```javascript
 const recipe = {
-  noodlesInGrams: 200,
-  sauceInLiter: 0.5,
+  noodles: 200,
+  sauce: 0.5,
   mozzarella: 1,
-  meatInGrams: 100,
+  meat: 100,
 };
 
 scaleRecipe(recipe, 4);
 // =>
 // {
-//   noodlesInGrams: 400,
-//   sauceInLiter: 1,
+//   noodles: 400,
+//   sauce: 1,
 //   mozzarella: 2,
-//   meatInGrams: 200,
+//   meat: 200,
 // };
 
 console.log(recipe);
 // =>
 // {
-//   noodlesInGrams: 200,
-//   sauceInLiter: 0.5,
+//   noodles: 200,
+//   sauce: 0.5,
 //   mozzarella: 1,
-//   meatInGrams: 100,
+//   meat: 100,
 // };
 ```

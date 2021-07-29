@@ -44,7 +44,7 @@ function someName(param1 = defaultValue1, param2 = defaultValue2) {
 }
 ```
 
-## Return
+## Return Statement
 
 Using the `return` statement, you can pass the result of a function to code that called it.
 There can be multiple `return` statements in a function.
