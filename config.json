@@ -131,7 +131,7 @@
         "status": "beta"
       },
       {
-        "slug": "recursion",
+        "slug": "pizza-order",
         "name": "Pizza Order",
         "uuid": "e9a9fa73-4497-43d5-a4ff-4eb319c98233",
         "concepts": ["recursion"],
