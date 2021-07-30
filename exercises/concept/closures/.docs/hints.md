@@ -3,7 +3,6 @@
 ## General
 
 - For each task, each function should return a function closure, using the supplied arguments.
-- Read [Whatthefork.is: A Closure][what-the-fork-is-a-closure]
 - Read [Javascript.info: Variable Scope, Closures][javascript-info-scope-closure]
 - Read [MDN web docs: Closures][mdn-closures]
 
@@ -27,4 +26,3 @@
 
 [javascript-info-scope-closure]: https://javascript.info/closure
 [mdn-closures]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
-[what-the-fork-is-a-closure]: https://whatthefork.is/closure
