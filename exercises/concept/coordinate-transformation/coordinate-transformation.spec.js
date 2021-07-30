@@ -3,7 +3,7 @@ import {
   scale2d,
   composeTransform,
   memoizeTransform,
-} from './closures';
+} from './coordinate-transformation';
 
 const fakeTransform = () => {
   let first = true;

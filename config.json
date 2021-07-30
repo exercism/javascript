@@ -144,7 +144,7 @@
         "status": "beta"
       },
       {
-        "slug": "closures",
+        "slug": "coordinate-transformation",
         "name": "Coordinate Transformation",
         "uuid": "5aa39e89-c601-4a66-ab72-5d8512d69e02",
         "concepts": ["closures"],

@@ -3,8 +3,8 @@
   "authors": ["neenjaw"],
   "contributors": ["SleeplessByte"],
   "files": {
-    "solution": ["closures.js"],
-    "test": ["closures.spec.js"],
+    "solution": ["coordinate-transformation.js"],
+    "test": ["coordinate-transformation.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": []
