@@ -71,7 +71,7 @@ export class Change {
       });
     };
 
-    // is everthing searched?
+    // is everything searched?
     const isDone = () =>
       candidates.every(
         (candidate) => isNumber(candidate) || candidate.isSearched()
@@ -83,12 +83,12 @@ export class Change {
         (candidate) => !isNumber(candidate) && !candidate.isSearched()
       );
 
-    // for the candidate, generate another candate for each of the possible coins
+    // for the candidate, generate another candidate for each of the possible coins
     const branch = (current) => {
       coinArray.forEach((coin) => {
         // make a new Candidate for coin type
         const candidate = new Candidate();
-        // copy the curent coins into it and add the new coin type
+        // copy the current coins into it and add the new coin type
         current.getCoins().forEach((currentCoin) => {
           candidate.addCoin(currentCoin);
         });

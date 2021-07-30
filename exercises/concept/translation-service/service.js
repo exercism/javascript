@@ -65,10 +65,10 @@ export class TranslationService {
    * - Requests a translation if the translation is not available, then retries
    *
    * @param {string} text
-   * @param {number} miniumQuality
+   * @param {number} minimumQuality
    * @returns {Promise<string>}
    */
-  premium(text, miniumQuality) {
+  premium(text, minimumQuality) {
     throw new Error('Implement the premium function');
   }
 }

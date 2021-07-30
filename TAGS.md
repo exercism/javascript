@@ -6,8 +6,8 @@ This document aims to provide reasoning why `config.json` contains the `"tags"` 
 
 - [x] `paradigm/declarative`: mostly popularised by libraries and frameworks such as React, Vue, etc.
 - [x] `paradigm/functional`: there is a lot of support for functional programming, including various defactor libraries in the ecosystem providing functional programming patterns.
-- [x] `paradigm/imperative`: the majority of scripts written in JavaScript, but also a _lot_ of DOM based interacivity sprinkles are imperative.
-- [ ] `paradigm/logic`: whilst it is possible to write DSL or patterns that' allow for logic-based programming, JavaScript doesn't inheritly support it.
+- [x] `paradigm/imperative`: the majority of scripts written in JavaScript, but also a _lot_ of DOM based interactivity sprinkles are imperative.
+- [ ] `paradigm/logic`: whilst it is possible to write DSL or patterns that' allow for logic-based programming, JavaScript doesn't inherently support it.
 - [x] `paradigm/object_oriented`: has been around in JavaScript since prototypes were a thing (so since the beginning), and more popular with the ES6 classes.
 
 ## Typing
