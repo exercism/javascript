@@ -74,7 +74,7 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find configlet which aids generating this file _interactively_.
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug npx babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug npx babel-node scripts/lint`.
-1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
+1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexicographically.
 1. Format the files, using `scripts/format`: `npx babel-node scripts/format`.
 
 The final step is opening a Pull Request, with these items all checked off. Make sure the tests run and the linter is happy. It will run automatically on your PR.
@@ -127,7 +127,7 @@ There is quite a bit of student-facing documentation, which can be found in the 
 
 ## Tools
 
-You'll need LTS or higher NodeJS in order to contribute to the _code_ in this respository. Run `npm install` in the root in order to be able to run the scripts as listed below. We use the following dependencies:
+You'll need LTS or higher NodeJS in order to contribute to the _code_ in this repository. Run `npm install` in the root in order to be able to run the scripts as listed below. We use the following dependencies:
 
 - `shelljs` in order to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file

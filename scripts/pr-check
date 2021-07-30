@@ -7,7 +7,7 @@
  *
  * This will run following checks:
  * 1. Find the exercises at all the paths provided
- * 2. Check stub existance for those exercises
+ * 2. Check stub existence for those exercises
  * 3. Check integrity of configuration for those exercises
  * 4. Run eslint for those exercises to check code-style
  */

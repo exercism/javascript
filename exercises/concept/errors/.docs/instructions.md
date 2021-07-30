@@ -1,6 +1,6 @@
 # Instructions
 
-Elena is the new quality manager of a newspaper factory. As she has just arrived in the company, she has decided to review some of the processes in the factory to see what could be improved. She found out that technicians are doing a lot of quality checks by hand. She sees there is a good oportunity for automation and asks you, a freelance developer, to develop a piece of software to monitor some of the machines.
+Elena is the new quality manager of a newspaper factory. As she has just arrived in the company, she has decided to review some of the processes in the factory to see what could be improved. She found out that technicians are doing a lot of quality checks by hand. She sees there is a good opportunity for automation and asks you, a freelance developer, to develop a piece of software to monitor some of the machines.
 
 ## Check the humidity level of the production room
 
@@ -8,11 +8,11 @@ Your first mission is to write a piece of software to monitor the humidity level
 
 ## Detect overheating and broken sensors
 
-Elena is very pleased with your first assignement and ask you to deal with the monitoring of the machines' temperature.
+Elena is very pleased with your first assignment and ask you to deal with the monitoring of the machines' temperature.
 
 While chatting with a technician, Greg, you are told that if the temperature of a machine exceeds 500°C, the technicians start worrying about overheating.
 
-The machine is equiped with a sensor that measures its internal temperature. You should know that the sensor is very sensitive and often breaks. In this case the technicians will need to change it.
+The machine is equipped with a sensor that measures its internal temperature. You should know that the sensor is very sensitive and often breaks. In this case the technicians will need to change it.
 
 Your job is to implement a function that throws an error if the sensor is broken or if the machine starts overheating.
 
@@ -52,7 +52,7 @@ Implements a function `reportOverheating` that takes the temperature as a parame
 
 If the sensor is broken, the temperature will be null. In this case you should throw an `ArgumentError`.
 
-When everything works, if the temperature exceeds 500°C, you should throw a `OverheatingError`. This error class will be instanciated with a temperature argument. Make sure that the `OverheatingError` you throw has a temperature property attached to it.
+When everything works, if the temperature exceeds 500°C, you should throw a `OverheatingError`. This error class will be instantiated with a temperature argument. Make sure that the `OverheatingError` you throw has a temperature property attached to it.
 
 ```javascript
 reportOverheating(null);
