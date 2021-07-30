@@ -20,7 +20,7 @@
 ## 3. Compose transformation functions
 
 - The result of the first transformation is an array, but the transformation functions take two number arguments. You will have to get the values from the array.
-- Remember the order to perform the functions matter.
+- Remember that the order in which the functions are performed matters.
 
 ## 4. Save the results of functions
 
