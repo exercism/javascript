@@ -9,7 +9,7 @@ Other possibilities like [arrow functions][concept-arrow-functions] will be cove
 
 The standard way of defining a function in JavaScript is a function declaration, also called function definition or function statement.
 
-It consist of the `function` keyword, the name of the function and a comma-separated list of parameters in round brackets.
+It consists of the `function` keyword, the name of the function and a comma-separated list of parameters in round brackets.
 This is followed by the function body (the code that should be executed) wrapped in curly brackets.
 
 ```javascript
@@ -30,22 +30,22 @@ Just stating the function name does **not** call the function in JavaScript.
 
 ```javascript
 function sayHello() {
-  console.log('Hello World!');
+  console.log('Hello, World!');
 }
 
 sayHello;
 // => [Function: sayHello]
 
 sayHello();
-// => 'Hello World!'
+// => 'Hello, World!'
 ```
 
 ## Parameters
 
-When working with parameters inside the function body, it is important to keep in mind what happens to the original value that was passed to the function.
-In JavaScript, that depends on the data type of the argument.
+When working with parameters inside the function body, be aware of possible effects to the original value that was passed to the function.
+In JavaScript, the behavior depends on the data type of the argument.
 
-- All values that have primitive data types ([full list here][mdn-primitives]) are immutable in JavaScript, so if used as arguments they are _passed by value_.
+- All values that have primitive data types ([full list here][mdn-primitives]) are immutable in JavaScript, so if used as arguments, they are _passed by value_.
   That means you are dealing with a copy of the original value in the function body and you can modify it without affecting the original value.
 - All other values (objects, arrays, functions) are _passed by reference_.
   If you modify arguments of non-primitive types, you are changing the original value outside of the function because the argument represents a reference to the original value, not a copy of that value.

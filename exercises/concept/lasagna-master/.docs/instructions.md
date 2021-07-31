@@ -3,12 +3,13 @@
 In this exercise you are going to write some more code related to preparing and cooking your brilliant lasagna from your favorite cookbook.
 
 You have five tasks.
-The first is related to the cooking itself, the other four are about the perfect preparation.
+The first one is related to the cooking itself, the other four are about the perfect preparation.
 
 ## 1. Determine whether the lasagna is done
 
-To make sure you do not forget about your lasagna in the oven, you usually set a timer.
-Sometimes you forget about it though.
+When you have lasagna in the oven, you want to know whether you can already take it out or not.
+To make sure the lasagna does not burn in the oven, you usually set a timer.
+But sometimes you forget about that.
 
 Write a function `cookingStatus` with that accepts the remaining time on the timer in minutes as parameter.
 The function has three possible results.
@@ -28,7 +29,7 @@ cookingStatus();
 ## 2. Estimate the preparation time
 
 For the next lasagna that you will prepare, you want to make sure you have enough time reserved so you can enjoy the cooking.
-You already made a plan what layers you want to have in the lasagna.
+You already made a plan which layers your lasagna will have.
 Now you want to estimate how long the preparation will take based on that.
 
 Implement a function `preparationTime` that accepts an array of layers and the average preparation time per layer in minutes.
@@ -46,7 +47,7 @@ preparationTime(layers);
 
 ## 3. Compute the amounts of noodles and sauce needed
 
-Besides reserving the time, you also want to make sure you have enough sauce and noodles to build the lasagna of your dreams.
+Besides reserving the time, you also want to make sure you have enough sauce and noodles to cook the lasagna of your dreams.
 For each noodle layer in your lasagna, you will need 50 grams of noodles.
 For each sauce layer in your lasagna, you will need 0.2 liters of sauce.
 
@@ -63,11 +64,11 @@ quantities(['sauce', 'noodles', 'sauce', 'meat', 'mozzarella', 'noodles']);
 
 A while ago you visited a friend and ate lasagna there.
 It was amazing and had something special to it.
-The friend sent you the list of ingredients and told you the last item in the list is the "secret ingredient" that made the meal so special.
+The friend sent you the list of ingredients and told you the last item on the list is the "secret ingredient" that made the meal so special.
 Now you want to add that secret ingredient to your recipe as well.
 
 Write a function `addSecretIngredient` that accepts two arrays of ingredients as parameters.
-The first parameter is the list your friend send you, the second is the ingredient list for your own recipe.
+The first parameter is the list your friend sent you, the second is the ingredient list for your own recipe.
 The function should add the last item from your friends list to the end of your list.
 The array that represents your recipe should be modified directly and the function should not return anything.
 However, the first argument should not be modified.
@@ -85,8 +86,8 @@ console.log(myList);
 
 ## 5. Scale the recipe
 
-The amounts listed in your recipe only yield enough lasagna for two portions.
-Since you want to cook for more people next time, you want to know the correct amounts for more portions.
+The amounts listed in your cookbook only yield enough lasagna for two portions.
+Since you want to cook for more people next time, you want to calculate the amounts for different numbers of portions.
 
 Implement a function `scaleRecipe` that takes two parameters.
 
@@ -96,7 +97,7 @@ Implement a function `scaleRecipe` that takes two parameters.
 
 The function should return a recipe object with the amounts needed for the desired number of portions.
 You want to keep the original recipe though.
-This means in this task the recipe argument should not be modified.
+This means, in this task the recipe argument should not be modified.
 
 ```javascript
 const recipe = {
