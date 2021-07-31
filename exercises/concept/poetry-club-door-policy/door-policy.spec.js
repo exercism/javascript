@@ -105,6 +105,18 @@ Michael Lockwood
 `.trim()
 );
 
+const SHIRE_HORSE_WITH_SPACES = new Poem(
+  `
+Stands so high  
+Huge hooves too      
+Impatiently waits for 
+Reins and harness  
+Eager to leave
+
+Michael Lockwood
+`
+);
+
 const SUMMER = new Poem(`
 Sunshine warming my toes,
 Underwater fun with my friends.
@@ -161,7 +173,7 @@ describe('strings', () => {
     const FRONT_DOOR_CASES = {
       SUMMER,
       SOPHIA,
-      CODE: CODE_WORK,
+      CODE_WORK,
     };
 
     Object.keys(FRONT_DOOR_CASES).forEach((name) => {
@@ -192,7 +204,8 @@ describe('strings', () => {
     });
 
     const BACK_DOOR_CASES = {
-      WORK: CODE_WORK,
+      CODE_WORK,
+      SHIRE_HORSE_WITH_SPACES,
     };
 
     Object.keys(BACK_DOOR_CASES).forEach((name) => {
