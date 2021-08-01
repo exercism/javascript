@@ -103,9 +103,9 @@ describe("Annalyn's infiltration", () => {
 
   describe('can signal prisoner', () => {
     test(`when everyone is asleep`, () => {
-      const archerIsAwake=false
-      const prisonerIsAwake=false
-      const expected=false
+      const archerIsAwake = false
+      const prisonerIsAwake = false
+      const expected = false
 
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(
         expected
@@ -113,9 +113,9 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the prisoner is awake`, () => {
-      const archerIsAwake=false
-      const prisonerIsAwake=true
-      const expected=true
+      const archerIsAwake = false
+      const prisonerIsAwake = true
+      const expected = true
 
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(
         expected
@@ -123,9 +123,9 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the archer is awake`, () => {
-      const archerIsAwake=true
-      const prisonerIsAwake=false
-      const expected=false
+      const archerIsAwake = true
+      const prisonerIsAwake = false
+      const expected = false
 
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(
         expected
@@ -133,9 +133,9 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when everyone is awake`, () => {
-      const archerIsAwake=true
-      const prisonerIsAwake=true
-      const expected=false
+      const archerIsAwake = true
+      const prisonerIsAwake = true
+      const expected = false
 
       expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(
         expected
@@ -145,11 +145,11 @@ describe("Annalyn's infiltration", () => {
 
   describe('can free prisoner', () => {
     test(`when everyone is asleep and pet dog is not present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=false
-      const prisonerIsAwake=false
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = false
+      const archerIsAwake = false
+      const prisonerIsAwake = false
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -162,11 +162,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when everyone is asleep and pet dog is present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=false
-      const prisonerIsAwake=false
-      const petDogIsPresent=true
-      const expected=true
+      const knightIsAwake = false
+      const archerIsAwake = false
+      const prisonerIsAwake = false
+      const petDogIsPresent = true
+      const expected = true
 
       expect(
         canFreePrisoner(
@@ -179,11 +179,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the prisoner is awake and pet dog is not present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=false
-      const prisonerIsAwake=true
-      const petDogIsPresent=false
-      const expected=true
+      const knightIsAwake = false
+      const archerIsAwake = false
+      const prisonerIsAwake = true
+      const petDogIsPresent = false
+      const expected = true
 
       expect(
         canFreePrisoner(
@@ -196,11 +196,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the prisoner is awake and pet dog is present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=false
-      const prisonerIsAwake=true
-      const petDogIsPresent=true
-      const expected=true
+      const knightIsAwake = false
+      const archerIsAwake = false
+      const prisonerIsAwake = true
+      const petDogIsPresent = true
+      const expected = true
 
       expect(
         canFreePrisoner(
@@ -213,11 +213,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the archer is awake and pet dog is not present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=true
-      const prisonerIsAwake=false
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = false
+      const archerIsAwake = true
+      const prisonerIsAwake = false
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -230,11 +230,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the archer is awake and pet dog is present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=true
-      const prisonerIsAwake=false
-      const petDogIsPresent=true
-      const expected=false
+      const knightIsAwake = false
+      const archerIsAwake = true
+      const prisonerIsAwake = false
+      const petDogIsPresent = true
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -247,11 +247,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the knight is asleep and pet dog is not present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=true
-      const prisonerIsAwake=true
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = false
+      const archerIsAwake = true
+      const prisonerIsAwake = true
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -264,11 +264,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the knight is asleep and pet dog is present`, () => {
-      const knightIsAwake=false
-      const archerIsAwake=true
-      const prisonerIsAwake=true
-      const petDogIsPresent=true
-      const expected=false
+      const knightIsAwake = false
+      const archerIsAwake = true
+      const prisonerIsAwake = true
+      const petDogIsPresent = true
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -281,11 +281,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the knight is awake and pet dog is not present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=false
-      const prisonerIsAwake=false
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = true
+      const archerIsAwake = false
+      const prisonerIsAwake = false
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -298,11 +298,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the knight is awake and pet dog is present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=false
-      const prisonerIsAwake=false
-      const petDogIsPresent=true
-      const expected=true
+      const knightIsAwake = true
+      const archerIsAwake = false
+      const prisonerIsAwake = false
+      const petDogIsPresent = true
+      const expected = true
 
       expect(
         canFreePrisoner(
@@ -315,11 +315,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the archer is asleep and pet dog is not present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=false
-      const prisonerIsAwake=true
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = true
+      const archerIsAwake = false
+      const prisonerIsAwake = true
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -332,11 +332,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the archer is asleep and pet dog is present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=false
-      const prisonerIsAwake=true
-      const petDogIsPresent=true
-      const expected=true
+      const knightIsAwake = true
+      const archerIsAwake = false
+      const prisonerIsAwake = true
+      const petDogIsPresent = true
+      const expected = true
 
       expect(
         canFreePrisoner(
@@ -349,11 +349,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the prisoner is asleep and pet dog is not present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=true
-      const prisonerIsAwake=false
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = true
+      const archerIsAwake = true
+      const prisonerIsAwake = false
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -366,11 +366,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when only the prisoner is asleep and pet dog is present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=true
-      const prisonerIsAwake=false
-      const petDogIsPresent=true
-      const expected=false
+      const knightIsAwake = true
+      const archerIsAwake = true
+      const prisonerIsAwake = false
+      const petDogIsPresent = true
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -383,11 +383,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when everyone is awake and pet dog is not present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=true
-      const prisonerIsAwake=true
-      const petDogIsPresent=false
-      const expected=false
+      const knightIsAwake = true
+      const archerIsAwake = true
+      const prisonerIsAwake = true
+      const petDogIsPresent = false
+      const expected = false
 
       expect(
         canFreePrisoner(
@@ -400,11 +400,11 @@ describe("Annalyn's infiltration", () => {
     });
 
     test(`when everyone is awake and pet dog is present`, () => {
-      const knightIsAwake=true
-      const archerIsAwake=true
-      const prisonerIsAwake=true
-      const petDogIsPresent=true
-      const expected=false
+      const knightIsAwake = true
+      const archerIsAwake = true
+      const prisonerIsAwake = true
+      const petDogIsPresent = true
+      const expected = false
 
       expect(
         canFreePrisoner(
