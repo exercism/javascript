@@ -1,4 +1,4 @@
-// @ts-checkuui
+// @ts-check
 
 import {
   frontDoorResponse as frontDoorPatron,

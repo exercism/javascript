@@ -2,7 +2,7 @@
 
 ## 1. Calculate the day rate given an hourly rate
 
-- Use the [numeric operators][ref-numeric-operators] from Lucian's Lucious Lasagna.
+- Use the [numeric operators][ref-numeric-operators] from Lucian's Luscious Lasagna.
 
 [ref-numeric-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
 

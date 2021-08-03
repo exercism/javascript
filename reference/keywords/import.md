@@ -26,7 +26,7 @@ This was the primarily way of importing modules in Node.js, but current versions
 
 ## Where to use
 
-The `import` keyword, just like `export`, can only be used in a module, which means it has to be run in [Node.js][node-js], transpiled by [babel][babel] or therelike or be used in a [file included in the browser directly][es-modules-in-browser] using `<script type="module" src="…">`.
+The `import` keyword, just like `export`, can only be used in a module, which means it has to be run in [Node.js][node-js], transpiled by [babel][babel] or similar, or be used in a [file included in the browser directly][es-modules-in-browser] using `<script type="module" src="…">`.
 
 ## Further reading
 

@@ -13,7 +13,7 @@ The first is the `charAt()` method:
 ```
 
 The other way is to treat a `string` as a list of characters, where individual characters correspond to a numerical index (starts at zero).
-The indexer syntax (`[index]`) can then be used to acccess the character at a specific index:
+The indexer syntax (`[index]`) can then be used to access the character at a specific index:
 
 ```javascript
 'cat'[1];

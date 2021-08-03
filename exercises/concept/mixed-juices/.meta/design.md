@@ -55,7 +55,7 @@ The comment types mentioned below only serve as a proposal.
 2. `limesToCut`
 
    - A solution that uses `if (limes.length < 0) break;` instead of combining the conditions should be considered equally correct to the exemplar solution.
-     The version in the examplar file is shorter but the break version emphasizes that there is a special edge case.
+     The version in the exemplar file is shorter but the break version emphasizes that there is a special edge case.
    - `essential`: Verify that `while` was used.
    - `essential`: If a helper function was used for the switch statement, check that is was not exported.
    - `actionable`: If the student wrote `if (limes.length < 0) return limesCut`, comment that the duplication of `return limesCut` can be avoided by using break there instead of return.
