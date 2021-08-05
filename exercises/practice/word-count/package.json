@@ -10,7 +10,7 @@
     "directory": "exercises/practice/word-count"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.15.0",
