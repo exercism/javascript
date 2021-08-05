@@ -121,6 +121,17 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     );
     shell.exit(nameUniqResult);
   }
+
+  const directoryResult = shell.exec(
+    `npx babel-node ${path.join('scripts', 'directory-check')}`
+  ).code;
+
+  if (directoryResult !== 0) {
+    shell.echo(
+      `scripts/directory-check returned a non-zero exit code: ${directoryResult}`
+    );
+    shell.exit(directoryResult);
+  }
 }
 
 // Cleanup tmp directory if any exists

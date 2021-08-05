@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): npx babel-node scripts/directory-check
+ *
+ * This will run following checks:
+ *
+ * 1. Package has the correct directory based on the path to the exercise
+ *
+ * This script also allows fixing these names: npx babel-node scripts/name-check --fix
+ */
+
+const shell = require('shelljs');
+const path = require('path')
+
+let { assignments, registerExitHandler } = require('./helpers');
+
+registerExitHandler();
+
+// First 2 arguments are node and script name skip them
+// Check if rest has --fix
+const fix = process.argv.slice(2).includes('--fix');
+
+// Check if package repository directory in each exercises' package.json is of the format "exercises/<exercise-path>"
+
+assignments.forEach((assignment) => {
+  const filePath = path.join('exercises', assignment, 'package.json');
+  const file = JSON.parse(shell.cat(filePath).toString());
+  const givenRepositoryDirectory = file['repository']['directory'];
+  const expectedRepositoryDirectory = `exercises/${assignment}`;
+
+  if (givenRepositoryDirectory === expectedRepositoryDirectory) {
+    shell.echo(`[Success]: Package repository directory for ${assignment} is in correct format.`);
+    return;
+  }
+
+  if (fix) {
+    file['repository']['directory'] = expectedRepositoryDirectory;
+    const fileWithFixedRepositoryDirectory = new shell.ShellString(
+      JSON.stringify(file, undefined, 2) + '\n'
+    );
+    fileWithFixedRepositoryDirectory.to(filePath);
+    shell.echo(`[Success]: Fixed package repository directory in ${filePath}`);
+  } else {
+    shell.echo(
+      `[Failure]: Package repository directory in ${filePath} must be ${expectedRepositoryDirectory}"`
+    );
+    shell.exit(1);
+  }
+});
+
+shell.exit(0);
