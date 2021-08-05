@@ -5,9 +5,9 @@
  *
  * This will run following checks:
  *
- * 1. Package has the correct directory based on the path to the exercise
+ * 1. Package has the correct directory based on the path to the exercise.
  *
- * This script also allows fixing these names: npx babel-node scripts/name-check --fix
+ * This script also allows fixing these names: npx babel-node scripts/directory-check --fix
  */
 
 const shell = require('shelljs');

@@ -317,6 +317,27 @@ Run this script to check if package name in package.json of exercises is in expe
 
 Run this script to check if there is any duplicate package name.
 
+#### `directory-check`
+
+```js
+/**
+ * Run this script (from root directory): npx babel-node scripts/directory-check
+ *
+ * This will run following checks:
+ *
+ * 1. Package has the correct directory based on the path to the exercise.
+ *
+ * This script also allows fixing these directories: npx babel-node scripts/directory-check --fix
+ */
+```
+
+Run this script to check if package repository directory in package.json of exercises is in expected format or to fix it.
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to test the directory for `concept/closures`, you may, depending on your environment, use:
+
+```shell
+ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
+```
+
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
 [web-exercism]: https://exercism.io
