@@ -18,6 +18,8 @@ The function has three possible results.
 - If the timer shows any other number, the result should be `'Not done, please wait.'`.
 - If the function is called without a timer value, the result should be `'You forgot to set the timer.'`.
 
+The timer will never show a value below 0.
+
 ```javascript
 cookingStatus(12);
 // => 'Not done, please wait.'

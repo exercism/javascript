@@ -2,14 +2,14 @@
 
 A function allows to group code into a reusable unit.
 There are multiple ways to define functions in JavaScript.
-Here we will look at function declarations and function expressions.
+Here we will look at _function declarations_ and _function expressions_.
 Other possibilities like [arrow functions][concept-arrow-functions] will be covered in other concepts.
 
 ## Function Declaration
 
-The standard way of defining a function in JavaScript is a function declaration, also called function definition or function statement.
+The standard way of defining a function in JavaScript is a _function declaration_, also called _function definition_ or _function statement_.
 
-It consists of the `function` keyword, the name of the function and a comma-separated list of parameters in round brackets.
+It consists of the `function` keyword, the name of the function, and a comma-separated list of parameters in round brackets.
 This is followed by the function body (the code that should be executed) wrapped in curly brackets.
 
 ```javascript
@@ -52,7 +52,8 @@ In JavaScript, the behavior depends on the data type of the argument.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
 If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
-In many cases it makes sense to assign a more appropriate default value than `undefined`. This can by done by specifying default parameters directly in the function definition.
+In many cases it makes sense to assign a more appropriate default value than `undefined`.
+This can by done by specifying default parameters directly in the function definition.
 
 ```javascript
 function someName(param1 = defaultValue1, param2 = defaultValue2) {
@@ -61,13 +62,13 @@ function someName(param1 = defaultValue1, param2 = defaultValue2) {
 ```
 
 You can even call a function with more arguments than there were parameters in the definition.
-Then the excess arguments are present in the [arguments "array"][mdn-arguments-object].
+All arguments, including those excess arguments, can be found in the [arguments "array"][mdn-arguments-object].
 
 It is also possible to define functions that accept an arbitrary number of arguments (variadic functions), see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for details about this.
 
 ## Return Statement
 
-Using the `return` statement, you can pass the result of a function to code that called it.
+Using the `return` statement, you can pass the result of a function to the code that called it.
 There can be multiple `return` statements in a function.
 The execution of the function ends as soon as it hits one of those `return`s.
 
@@ -102,7 +103,7 @@ noReturn(1);
 ```
 
 In JavaScript, you can only return exactly one value.
-If you want to pass more information, you need to combine it into one entity first, usually into an [object][concept-objects].
+If you want to pass more information, you need to combine it into one entity first, usually into an [object][concept-objects], or an [array][concept-arrays]..
 
 ```javascript
 function divide(a, b) {

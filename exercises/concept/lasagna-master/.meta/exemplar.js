@@ -74,7 +74,7 @@ export function addSecretIngredient(friendsList, myList) {
  * Does not modify the original recipe.
  *
  * @param {Record<string, number>} recipe
- * @param number targetPortions
+ * @param {number} targetPortions
  * @returns {Record<string, number>} recipe with amounts for target portions
  */
 export function scaleRecipe(recipe, targetPortions) {
