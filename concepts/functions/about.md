@@ -43,12 +43,17 @@ sayHello();
 ## Parameters
 
 When working with parameters inside the function body, be aware of possible side effects to the original value that was passed to the function.
-In JavaScript, the behavior depends on the data type of the argument.
+In JavaScript, an argument is a copy of a reference to the original value.
+What this means in practice depends on the data type of the argument.
 
-- All values that have [primitive data types][mdn-primitives] are immutable in JavaScript, so if used as arguments, they are _passed by value_.
-  That means you are dealing with a copy of the original value in the function body and you can modify it without affecting the original value.
-- All other values (objects, arrays, functions) are _passed by reference_.
-  If you modify arguments of non-primitive types, you are changing the original value outside of the function because the argument represents a reference to the original value, not a copy of that value.
+- Values of [primitive data types][mdn-primitives] are _immutable_.
+  All "modifications" always create a new primitive value.
+  Because of that, the original value is never affected by what happens to the argument in the function body.
+  The fact that you are dealing with a copy of a reference has no special effect.
+
+- For all other values (objects, arrays, functions) it is a mixed bag.
+  Since the reference is copied, a reassignment will not affect the original value.
+  However, since you care dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
 If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
@@ -147,6 +152,7 @@ The [MDN documentation on scope][mdn-scope] shows examples of this behavior.
 Have a look at [closures][concept-closures] to learn more about variable scope in JavaScript.
 
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
+[wikipedia-shalllow-copy]: https://en.wikipedia.org/wiki/Object_copying#Shallow_copy
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [concept-rest-and-spread]: /tracks/javascript/concepts/rest-and-spread
 [concept-objects]: /tracks/javascript/concepts/objects
