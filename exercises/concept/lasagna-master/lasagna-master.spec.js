@@ -28,33 +28,44 @@ describe('cookingStatus', () => {
   });
 });
 
-const manyLayers = () => {
-  return [
-    'sauce',
-    'noodles',
-    'béchamel',
-    'meat',
-    'mozzarella',
-    'noodles',
-    'ricotta',
-    'eggplant',
-    'béchamel',
-    'noodles',
-    'sauce',
-    'mozzarella',
-  ];
-};
-
 describe('preparationTime', () => {
   test('applies the custom average time per layer', () => {
-    expect(preparationTime(manyLayers(), 1)).toBe(12);
+    const manyLayers = [
+      'sauce',
+      'noodles',
+      'béchamel',
+      'meat',
+      'mozzarella',
+      'noodles',
+      'ricotta',
+      'eggplant',
+      'béchamel',
+      'noodles',
+      'sauce',
+      'mozzarella',
+    ];
+    expect(preparationTime(manyLayers, 1)).toBe(12);
 
     const fewLayers = ['sauce', 'noodles'];
     expect(preparationTime(fewLayers, 3.5)).toBe(7);
   });
 
   test('uses the default if no customer time was passed', () => {
-    expect(preparationTime(manyLayers())).toBe(24);
+    const manyLayers = [
+      'sauce',
+      'noodles',
+      'béchamel',
+      'meat',
+      'mozzarella',
+      'noodles',
+      'ricotta',
+      'eggplant',
+      'béchamel',
+      'noodles',
+      'sauce',
+      'mozzarella',
+    ];
+    expect(preparationTime(manyLayers)).toBe(24);
 
     const fewLayers = ['sauce', 'noodles'];
     expect(preparationTime(fewLayers)).toBe(4);
@@ -70,7 +81,21 @@ describe('quantities', () => {
     const fewLayers = ['noodles', 'sauce', 'noodles'];
     expectObjectsToBeEqual(quantities(fewLayers), { noodles: 100, sauce: 0.2 });
 
-    expectObjectsToBeEqual(quantities(manyLayers()), {
+    const manyLayers = [
+      'sauce',
+      'noodles',
+      'béchamel',
+      'meat',
+      'mozzarella',
+      'noodles',
+      'ricotta',
+      'eggplant',
+      'béchamel',
+      'noodles',
+      'sauce',
+      'mozzarella',
+    ];
+    expectObjectsToBeEqual(quantities(manyLayers), {
       noodles: 150,
       sauce: 0.4,
     });
@@ -151,14 +176,15 @@ describe('scaleRecipe', () => {
 
     expectObjectsToBeEqual(scaleRecipe(recipe1, 6), expected1);
 
+    // prettier-ignore
     const recipe2 = {
-      sauce: 0.6,
-      noodles: 300,
-      carrots: 1,
-      mozzarella: 0.5,
-      ricotta: 50,
-      béchamel: 0.1,
-      tofu: 100,
+      'sauce': 0.6,
+      'noodles': 300,
+      'carrots': 1,
+      'mozzarella': 0.5,
+      'ricotta': 50,
+      'béchamel': 0.1,
+      'tofu': 100,
     };
 
     const expected2 = {

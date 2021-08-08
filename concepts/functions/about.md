@@ -42,10 +42,10 @@ sayHello();
 
 ## Parameters
 
-When working with parameters inside the function body, be aware of possible effects to the original value that was passed to the function.
+When working with parameters inside the function body, be aware of possible side effects to the original value that was passed to the function.
 In JavaScript, the behavior depends on the data type of the argument.
 
-- All values that have primitive data types ([full list here][mdn-primitives]) are immutable in JavaScript, so if used as arguments, they are _passed by value_.
+- All values that have [primitive data types][mdn-primitives] are immutable in JavaScript, so if used as arguments, they are _passed by value_.
   That means you are dealing with a copy of the original value in the function body and you can modify it without affecting the original value.
 - All other values (objects, arrays, functions) are _passed by reference_.
   If you modify arguments of non-primitive types, you are changing the original value outside of the function because the argument represents a reference to the original value, not a copy of that value.
@@ -143,6 +143,8 @@ Variables defined inside a function are not accessible outside of that function.
 But variables defined in the parent scope (the scope where the function was defined itself) are accessible inside the function.
 The [MDN documentation on scope][mdn-scope] shows examples of this behavior.
 
+Have a look at [closures][concept-closures] to learn more about variable scope in JavaScript.
+
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [concept-rest-and-spread]: /tracks/javascript/concepts/rest-and-spread
@@ -151,3 +153,4 @@ The [MDN documentation on scope][mdn-scope] shows examples of this behavior.
 [mdn-arguments-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 [mdn-primitives]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 [mdn-scope]: https://developer.mozilla.org/en-US/docs/Glossary/Scope
+[concept-closures]: /tracks/javascript/concepts/closures

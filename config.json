@@ -192,7 +192,7 @@
           "array-destructuring",
           "array-loops",
           "comparison",
-          "rest-and-spread-operators",
+          "rest-and-spread",
           "arrays"
         ],
         "status": "beta"
