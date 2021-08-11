@@ -187,14 +187,15 @@ describe('scaleRecipe', () => {
       'tofu': 100,
     };
 
+    // prettier-ignore
     const expected2 = {
-      sauce: 0.9,
-      noodles: 450,
-      carrots: 1.5,
-      mozzarella: 0.75,
-      ricotta: 75,
-      béchamel: 0.15,
-      tofu: 150,
+      'sauce': 0.9,
+      'noodles': 450,
+      'carrots': 1.5,
+      'mozzarella': 0.75,
+      'ricotta': 75,
+      'béchamel': 0.15,
+      'tofu': 150,
     };
 
     expectObjectsToBeEqual(scaleRecipe(recipe2, 3), expected2);

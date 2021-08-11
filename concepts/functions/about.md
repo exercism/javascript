@@ -49,7 +49,6 @@ What this means in practice depends on the data type of the argument.
 - Values of [primitive data types][mdn-primitives] are _immutable_.
   All "modifications" always create a new primitive value.
   Because of that, the original value is never affected by what happens to the argument in the function body.
-  The fact that you are dealing with a copy of a reference has no special effect.
 
 - For all other values (objects, arrays, functions) it is a mixed bag.
   Since the reference is copied, a reassignment will not affect the original value.
