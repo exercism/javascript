@@ -26,13 +26,12 @@ someName(arg1, arg2, arg3);
 
 ## Parameters
 
-When working with parameters inside the function body, be aware of possible side effects to the original value that was passed to the function.
-In JavaScript, the behavior depends on the data type of the argument.
+When working with parameters inside the function body, be aware of possible side effects.
 
-- All values that have [primitive data types][mdn-primitives] are immutable in JavaScript, so if used as arguments they are _passed by value_.
-  That means you are dealing with a copy of the original value in the function body and you can modify it without affecting the original value.
-- All other values (objects, arrays, functions) are _passed by reference_.
-  If you modify arguments of non-primitive types, you are changing the original value outside of the function because the argument represents a reference to the original value, not a copy of that value.
+- Values of [primitive data types][mdn-primitives] are _immutable_.
+  The original value is never affected by what happens to the argument in the function body.
+- For all other values (objects, arrays, functions), a reassignment will not affect the original value.
+  However, if you modify such an argument (e.g. add a key to an object), that also modifies the original value that was passed in.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
 If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].

@@ -52,7 +52,7 @@ What this means in practice depends on the data type of the argument.
 
 - For all other values (objects, arrays, functions) it is a mixed bag.
   Since the reference is copied, a reassignment will not affect the original value.
-  However, since you care dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
+  However, since you are dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
 If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
