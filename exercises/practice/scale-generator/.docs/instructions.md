@@ -21,15 +21,15 @@ The collection of notes in these scales is written with either sharps or
 flats, depending on the tonic. Here is a list of which are which:
 
 No Sharps or Flats:
-C major
+C major,
 a minor
 
 Use Sharps:
-G, D, A, E, B, F# major
+G, D, A, E, B, F# major,
 e, b, f#, c#, g#, d# minor
 
 Use Flats:
-F, Bb, Eb, Ab, Db, Gb major
+F, Bb, Eb, Ab, Db, Gb major,
 d, g, c, f, bb, eb minor
 
 The diatonic scales, and all other scales that derive from the
