@@ -89,7 +89,17 @@ Number(undefined);
 // => NaN
 ```
 
-- pitfall parseInt/parseFloat
+JavaScript also provides the functions `parseInt` and `parseFloat`.
+They apply laxer rules as to which strings can be converted to a number.
+Because of that, it is recommended to use `Number` instead to avoid unexpected outcomes.
+
+```javascript
+parseInt('123a45');
+// => 123
+
+Number('123a45');
+// => NaN
+```
 
 ### Converting to a String
 
@@ -126,70 +136,98 @@ String({ key: 'value' });
 // => '[object Object]'
 ```
 
-However, you can add functions to your object to customize the conversion behavior. The section "[Object to primitive conversion][custom-conversion]" on javascript.info explains how to do this.
+However, you can customize the conversion behavior, e.g. by providing a `toString` method.
+The section "[Object to primitive conversion][custom-conversion]" on javascript.info explains the details.
 
-Another common way to get a better string representation for objects and arrays is to use [JSON encoding][json].
+Another common way to achieve a better string representation for objects and arrays is to use [JSON encoding][json].
+
+```javascript
+const obj = {
+  name: 'Gilda Guerra',
+  address: {
+    city: 'Goiânia',
+  },
+};
+
+JSON.stringify(obj);
+// => '{"name":"Gilda Guerra","address":{"city":"Goiânia"}}'
+```
 
 ## Type Coercion
 
-- bool context (if), thruthy/ falsy
-- loose equality
+In certain contexts, JavaScript will automatically convert a value to another data type before it evaluates some statement.
+This implicit conversion is called _type coercion_.
 
-- math operators and others operators !, +/- (unary),
+Because the type coercion rules can introduce to unexpected behavior and are often difficult to reason about, it is best to avoid implicit conversion.
+Instead, use the explicit type conversion functions introduced above, as well as the strict equality operator `===` for comparison.
 
-// FIXME OLD TEXT BELOW
-JavaScript will implicitly coerce types transparently to a programmer, which may introduce unexpected behavior into code.
+### Boolean Context
 
-```javascript
-// Examples of implicit type coercion:
-true + false; // => 1
-12 == '12'; // => true
-'number' + 5; // => "number5"
-```
+When a value is used in a boolean context, JavaScript will apply the same rules as explained for the `Boolean` function to implicitly convert the value.
 
-How a type is coerced is often dependent on the order of the values and the operator causing the types to be coerced.
+- When the condition of an [if statement][concept-conditionals] is not a boolean, coercion is applied to determine whether the condition is fulfilled or not.
 
-<!-- prettier-ignore-start -->
-```javascript
-{} + '1' // => 1
-'1' + {} // "1[object Object]"
-```
-<!-- prettier-ignore-end -->
-
-Generally, it is best to _avoid_ _implicit type coercion_ and use explicit type conversion functions.
-
-```javascript
-const a = 46;
-String(a); // => "46"
-
-const b = '3.4';
-Number(b); //=> 3.4
-Boolean(b); // => true
-```
-
-Other functions also exist to convert a value from one type to another:
-
-- Array has an instance method `join` which will return the array as a string:
-
-<!-- prettier-ignore-start -->
   ```javascript
-  ['hello', 'world'].join('') // => 'hello world'
+  const name = 'Jin';
+  if (name) {
+    // this block is executed because 'Jin' is truthy
+  }
+
+  const num = 0;
+  if (num) {
+    // this block is NOT executed because 0 is falsy
+  }
   ```
-<!-- prettier-ignore-end -->
 
-- All values inherit a function which returns a string representation:
+- The operand of the logical NOT operator `!` is also coerced into boolean before the NOT operation is applied.
 
-<!-- prettier-ignore-start -->
   ```javascript
-  (42).toString() // => "42"
-  (false).toString() // "false"
-  ({}).toString() // => "[object Object]"
-  ([1, 2, 3]).toString() // => "1,2,3"
+  const name = '';
+  !name;
+  // => true
   ```
-<!-- prettier-ignore-end -->
+
+  A result of the described behavior is that `!!value` has the same effect as `Boolean(value)`.
+  Nevertheless you should use `Boolean` for readability.
+
+- JavaScript also applies coercion for the operands of the logical AND (`&&`) and OR (`||`) operators.
+  However, the result of the expression is **not** a boolean but one of the original operands (see [MDN on Logical Operators][mdn-logical-operators]).
+
+  ```javascript
+  null || 'hello';
+  // => 'hello'
+  ```
+
+### String Context
+
+If the addition operator `+` is used and one of the operands is a string, the other one will be coerced into a string as well (if necessary).
+The same conversion rules as for the `String` function apply.
+
+```javascript
+'hello' + 42;
+// => 'hello42'
+
+undefined + '°C';
+// => 'undefined°C'
+```
+
+### Numeric Context
+
+- math operators, +/- (unary)
+
+  - comparison operators (>, <, <=,>=)
+  - bitwise operators ( | & ^ ~)
+  - arithmetic operators (- + \* / % )
+  - unary + operator
+
+### (Loose) Equality Check
+
+...
 
 [mdn-falsy]: https://developer.mozilla.org/en-US/docs/Glossary/Falsy
 [mdn-nan]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 [mdn-join]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 [custom-conversion]: https://javascript.info/object-toprimitive
 [json]: https://javascript.info/json#json-stringify
+[concept-conditionals]: /tracks/javascript/concepts/conditionals
+[mdn-logical-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators
