@@ -91,7 +91,7 @@ Number(undefined);
 
 JavaScript also provides the functions `parseInt` and `parseFloat`.
 They apply laxer rules as to which strings can be converted to a number.
-Because of that, it is recommended to use `Number` instead to avoid unexpected outcomes.
+Because of that, `Number` should be preferred as conversion function to avoid unexpected outcomes.
 
 ```javascript
 parseInt('123a45');
@@ -158,25 +158,22 @@ JSON.stringify(obj);
 In certain contexts, JavaScript will automatically convert a value to another data type before it evaluates some statement.
 This implicit conversion is called _type coercion_.
 
-Because the type coercion rules can introduce to unexpected behavior and are often difficult to reason about, it is best to avoid implicit conversion.
-Instead, use the explicit type conversion functions introduced above, as well as the strict equality operator `===` for comparison.
-
 ### Boolean Context
 
-When a value is used in a boolean context, JavaScript will apply the same rules as explained for the `Boolean` function to implicitly convert the value.
+When a value is used in a boolean context, JavaScript will apply the same rules as the `Boolean` function to implicitly convert the value.
 
 - When the condition of an [if statement][concept-conditionals] is not a boolean, coercion is applied to determine whether the condition is fulfilled or not.
+  The same applies for the first operand of the [ternary operator][mdn-ternary] `?`.
 
   ```javascript
-  const name = 'Jin';
-  if (name) {
-    // this block is executed because 'Jin' is truthy
-  }
-
   const num = 0;
   if (num) {
-    // this block is NOT executed because 0 is falsy
+    // this block NOT is executed because 0 is falsy
   }
+
+  const name = 'Jin';
+  name ? 'name was provided' : 'no name provided';
+  // => 'name was provided'
   ```
 
 - The operand of the logical NOT operator `!` is also coerced into boolean before the NOT operation is applied.
@@ -200,29 +197,60 @@ When a value is used in a boolean context, JavaScript will apply the same rules 
 
 ### String Context
 
-If the addition operator `+` is used and one of the operands is a string, the other one will be coerced into a string as well (if necessary).
-The same conversion rules as for the `String` function apply.
+If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well (if necessary).
+The conversion logic is the same as when using the `String` function.
 
 ```javascript
-'hello' + 42;
-// => 'hello42'
+let name;
+'hello ' + name;
+// => 'hello undefined'
+```
 
-undefined + '°C';
-// => 'undefined°C'
+The same implicit conversion happens for non-string values that are embedded in [template strings][mdn-template-strings].
+
+```javascript
+const degrees = 23;
+`It is ${degrees} °C`;
+// => 'Is is 23 °C.';
 ```
 
 ### Numeric Context
 
-- math operators, +/- (unary)
+There are many operators that coerce the operands into numbers (if necessary) according to the logic of the `Number` function explained above.
 
-  - comparison operators (>, <, <=,>=)
-  - bitwise operators ( | & ^ ~)
-  - arithmetic operators (- + \* / % )
-  - unary + operator
+- Arithmetic operators: `+` (if no string is involved), `-`, `*`, `/`, `%`, `**`
+- Unary plus and unary negation operators: `+`, `-`
+- Relational operators (if not both operands are strings): `>`, `>=`, `<`, `<=`
+- Bitwise operators: `|`, `&`, `^`, `~`
 
-### (Loose) Equality Check
+Refer to the [MDN list of operators][mdn-operators] for more details about any of those operators.
 
-...
+When an operand could potentially be a string, it is best to always explicitly convert with the `Number` function to avoid mistakes.
+
+```javascript
+'1' + '2';
+// => '12'
+
+Number('1') + Number('2');
+// => 3
+```
+
+Sometimes you will see the unary plus operator being used to coerce a string into a number.
+This is not recommended because it is much harder to read then the explicit `Number` call.
+
+```javascript
+const value = '42';
++value;
+// => 42
+
+Number(value);
+// => 42
+```
+
+Using the loose equality and inequality operators `==`/`!=` also often involves an implicit conversion to a number.
+However, the exact logic of these operators is rather complicated (see [MDN on loose equality][mdn-loose-equality]).
+The results are hard to predict and sometimes not what you would expect.
+Use the strict equality/inequality operators `===`/`!==` instead to avoid these implicit conversions.
 
 [mdn-falsy]: https://developer.mozilla.org/en-US/docs/Glossary/Falsy
 [mdn-nan]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
@@ -231,3 +259,7 @@ undefined + '°C';
 [json]: https://javascript.info/json#json-stringify
 [concept-conditionals]: /tracks/javascript/concepts/conditionals
 [mdn-logical-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators
+[mdn-ternary]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+[mdn-template-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+[mdn-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
+[mdn-loose-equality]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using_
