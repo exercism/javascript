@@ -61,7 +61,7 @@ github/exercism
 
 The configuration files may be copied from another exercise. We aim to keep these in sync:
 
-> ⚠ Just like with _practice_ exericses, we will provide a script for you to run. This script needs to be updated from its v2 version, which has not yet been done.
+> ⚠ Just like with _practice_ exercises, we will provide a script for you to run. This script needs to be updated from its v2 version, which has not yet been done.
 
 - `.eslintrc`
 - `.gitignore`

@@ -192,9 +192,17 @@
           "array-destructuring",
           "array-loops",
           "comparison",
-          "rest-and-spread-operators",
+          "rest-and-spread",
           "arrays"
         ],
+        "status": "beta"
+      },
+      {
+        "slug": "lasagna-master",
+        "name": "Lasagna Master",
+        "uuid": "a7e323f1-84d8-43d5-8c26-cc119166b9fd",
+        "concepts": ["functions"],
+        "prerequisites": ["objects", "arrays", "null-undefined"],
         "status": "beta"
       }
     ],
@@ -1664,11 +1672,6 @@
       "name": "Strings"
     },
     {
-      "uuid": "a8cdc468-c950-43d7-a1b8-99a5e0de651a",
-      "slug": "variable-parameters",
-      "name": "Variable Parameters"
-    },
-    {
       "uuid": "ef1e44db-5fd0-4550-9135-7522303e7e42",
       "slug": "comparison",
       "name": "Comparison"
@@ -1702,6 +1705,11 @@
       "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
       "slug": "sets",
       "name": "Sets"
+    },
+    {
+      "uuid": "66264917-2d3e-42e9-806c-0fa740852f0f",
+      "slug": "functions",
+      "name": "Functions"
     }
   ],
   "key_features": [

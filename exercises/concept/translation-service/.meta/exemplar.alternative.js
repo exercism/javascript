@@ -30,14 +30,14 @@ export class TranslationService {
    * - Requests a translation if the translation is not available, then retries
    *
    * @param {string} text
-   * @param {number} miniumQuality
+   * @param {number} minimumQuality
    * @returns {Promise<string>}
    */
-  async premium(text, miniumQuality) {
+  async premium(text, minimumQuality) {
     try {
       const { translation, quality } = await this.api.fetch(text);
 
-      if (miniumQuality > quality) {
+      if (minimumQuality > quality) {
         throw new QualityThresholdNotMet(text);
       }
       return translation;
@@ -47,7 +47,7 @@ export class TranslationService {
       }
 
       await this.request(text);
-      return await this.premium(text, miniumQuality);
+      return await this.premium(text, minimumQuality);
     }
   }
 

@@ -21,7 +21,7 @@
 - **duck typing**: using duck typing whenever methods or properties of String or Array objects are called
 - **arithmetic operators**: using '-' operator for computing number of verses/bottles in different contexts.
   Using '--' operator inside the for statement
-- **comparision operators**: using '>' operator to test if the number of verses inside the array is larger than 0
+- **comparison operators**: using '>' operator to test if the number of verses inside the array is larger than 0
 
 ## Using a switch statement
 

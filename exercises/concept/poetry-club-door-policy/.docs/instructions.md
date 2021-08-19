@@ -6,7 +6,7 @@ Because there have been incidents in the past, the club has a very specific door
 There are two doors at the poetry club, both are guarded.
 In order to gain entry, you'll need to work out the password of that day:
 
-## Front door
+**Front door**
 
 1. The guard will recite a poem, one line at the time;
    - You will have to respond with the appropriate letter.
@@ -27,7 +27,7 @@ When the guard recites **Stands so high**, you'll respond **S**, when the guard 
 
 Finally the password you write down is `Shire`, and you'll get in.
 
-## Back door
+**Back door**
 
 In the back of the club you'll find the most renowned poets, which is like the VIP area.
 Because this is not for everyone, the back door process is a bit more convoluted.
@@ -96,6 +96,6 @@ backDoorResponse('Stands so high   ');
 Change the implementation of the `backDoorPassword` function so that it's polite:
 
 ```javascript
-backDoorPassword('esroh');
+backDoorPassword('horse');
 // => "Horse, please"
 ```
