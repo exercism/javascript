@@ -1,6 +1,7 @@
 # About
 
-In JavaScript, values may be of different types. Changing the type of a variable can be done explicit _type conversion_. Besides that, JavaScript also performs _type coercion_ (implicit type conversion) when the context requires it.
+In JavaScript, values may be of different types. Changing the type of a variable can be done explicit _type conversion_.
+Besides that, JavaScript also performs _type coercion_ (implicit type conversion) when the context requires it.
 
 ## Type Conversion
 
@@ -17,7 +18,7 @@ Most importantly `false`, `0`, emtpy string, `null`, `undefined` and `NaN` are f
 The [MDN article on "Falsy"][mdn-falsy] shows the complete list.
 
 For all other values, `Boolean` returns `true`.
-These values are called `truthy`.
+These values are called _truthy_.
 
 ```javascript
 Boolean(-1);
@@ -48,9 +49,8 @@ Boolean({});
 ### Converting to a Number
 
 `Number(value)` can be used to convert a value into a number.
-If you convert a string, whitespaces at the beginning and the end of the string are ignored.
-An empty string is converted to `0`.
-If you try to convert a string that does not represent number or non-primitive value, no error will be thrown.
+Whitespaces at the beginning and the end of a string are ignored and an empty string is converted to `0`.
+If you try to convert a non-primitive value or a string that does not represent a number, no error will be thrown.
 Instead, the result is `NaN` ([Not-A-Number][mdn-nan]).
 
 ```javascript
@@ -185,10 +185,10 @@ When a value is used in a boolean context, JavaScript will apply the same rules 
   ```
 
   A result of the described behavior is that `!!value` has the same effect as `Boolean(value)`.
-  Nevertheless you should use `Boolean` for readability.
+  Nevertheless, you should use `Boolean` for readability.
 
 - JavaScript also applies coercion for the operands of the logical AND (`&&`) and OR (`||`) operators.
-  However, the result of the expression is **not** a boolean but one of the original operands (see [MDN on Logical Operators][mdn-logical-operators]).
+  Keep in mind that the result of the expression is **not** a boolean but one of the original operands (see [MDN on Logical Operators][mdn-logical-operators]).
 
   ```javascript
   null || 'hello';
