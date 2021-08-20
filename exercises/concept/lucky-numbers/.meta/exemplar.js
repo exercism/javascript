@@ -1,10 +1,10 @@
 // @ts-check
 
 /**
- * Calculates the sum of the two input arrays.
+ * Calculates the sum of the numbers represented by the two input arrays.
  *
- * @param {string[]} array1
- * @param {string[]} array2
+ * @param {number[]} array1
+ * @param {number[]} array2
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
@@ -35,11 +35,11 @@ export function luckyNumber(value) {
  */
 export function errorMessage(input) {
   if (!input) {
-    return 'This field is required.';
+    return 'Required field';
   }
 
   if (!Number(input)) {
-    return 'Must be a number.'
+    return 'Must be a number besides 0'
   }
 
   return '';

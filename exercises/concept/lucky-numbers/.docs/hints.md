@@ -3,6 +3,7 @@
 ## 1. Calculate the sum for the numbers on the slot machine
 
 - You can use [join][mdn-join] to combine the digits.
+  It will implicitly convert the numbers to strings as well.
 - Revisit the introduction section to find out how to convert a string to a number.
 - Sum the numbers after they were converted
 

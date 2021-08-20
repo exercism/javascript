@@ -8,18 +8,19 @@ You will build two helper functions for new number games on Kojos' website and a
 
 ## 1. Calculate the sum for the numbers on the slot machine
 
-One of the games on Kojos website looks like a slot machine that shows three digits on the wheels to the left and another three digits to the right.
-For the game mechanics, Kojo needs to know the sum of the two numbers made up by those digits.
+One of the games on Kojos website looks like a slot machine that shows two groups of wheels with digits on them.
+Each group of digits represents a number.
+For the game mechanics, Kojo needs to know the sum of those two numbers.
 
 Write a function `twoSum` that accepts two arrays as parameters.
-Each array contains three digits represented as strings.
+Each array consists of one or more numbers between 0 and 9.
 The function should interpret each array as a number and return the sum of those two numbers.
 
 ```javascript
-twoSum(['1', '2', '3'], ['0', '0', '7']);
+twoSum([1, 2, 3], [0, 7]);
 //=> 130
 
-// ['1', '2', '3'] represents 123 and ['0', '0', '7'] represents 7.
+// [1, 2, 3] represents 123 and [0, 7] represents 7.
 // 123 + 7 = 130
 ```
 
@@ -57,8 +58,8 @@ Here is some more information on how the value of an input field is provided.
 - Before the user even started typing, the variable can be `undefined` or `null`.
 
 Write a function `errorMessage` that accepts the user input as parameter.
-If the user did not provide any input, `errorMessage` should return `'This field is required.'`.
-If the input does not represent a non-zero number (according to the JavaScript conversion rules), `'Must be a number.'` should be returned.
+If the user did not provide any input, `errorMessage` should return `'Required field'`.
+If the input does not represent a non-zero number (according to the JavaScript conversion rules), `'Must be a number besides 0'` should be returned.
 In all other cases you can assume the input is valid, the return value should be an empty string.
 
 ```javascript
@@ -66,8 +67,8 @@ errorMessage('123');
 // => ''
 
 errorMessage('');
-// => 'This field is required.'
+// => 'Required field'
 
 errorMessage('abc');
-// => 'Must be a number.'
+// => 'Must be a number besides 0'
 ```
