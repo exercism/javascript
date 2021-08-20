@@ -3,11 +3,9 @@
 ## General
 
 - For each task, each function should return a function closure, using the supplied arguments.
-
-- Resources:
-  - [Whatthefork.is: A Closure][what-the-fork-is-a-closure]
-  - [Javascript.info: Variable Scope, Closures][javascript-info-scope-closure]
-  - [MDN web docs: Closures][mdn-closures]
+- Read [Whatthefork.is: A Closure][what-the-fork-is-a-closure]
+- Read [Javascript.info: Variable Scope, Closures][javascript-info-scope-closure]
+- Read [MDN web docs: Closures][mdn-closures]
 
 ## 1. Translate the coordinates
 
@@ -20,7 +18,7 @@
 ## 3. Compose transformation functions
 
 - The result of the first transformation is an array, but the transformation functions take two number arguments. You will have to get the values from the array.
-- Remember the order to perform the functions matter.
+- Remember that the order in which the functions are performed matters.
 
 ## 4. Save the results of functions
 
@@ -29,4 +27,4 @@
 
 [javascript-info-scope-closure]: https://javascript.info/closure
 [mdn-closures]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
-[what-the-fork-is-a-closure]: https://whatthefork.is/closure
+[what-the-fork-is-a-closure]: https://web.archive.org/web/20210702195218if_/https://whatthefork.is/closure
