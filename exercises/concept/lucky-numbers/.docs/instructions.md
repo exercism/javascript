@@ -44,7 +44,7 @@ luckyNumber(123);
 //=> false
 ```
 
-## 3. Validate the user input
+## 3. Generate an error message for invalid user input
 
 In various places on the website, there are input fields where the users can enter numbers and click a button to trigger some action.
 Kojo wants to improve the user experience of his site.
