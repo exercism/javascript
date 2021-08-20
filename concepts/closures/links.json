@@ -12,6 +12,10 @@
     "description": "wiki-closure"
   },
   {
+    "url": "https://web.archive.org/web/20210702195218if_/https://whatthefork.is/closure",
+    "description": "what-the-fork-is-a-closure"
+  },
+  {
     "url": "https://javascript.info/closure",
     "description": "javascript-info-scope-closure"
   },
