@@ -46,24 +46,28 @@ luckyNumber(123);
 
 ## 3. Validate the user input
 
-In various places on the website, there are input fields where the users can enter some data and click a button to trigger some action.
+In various places on the website, there are input fields where the users can enter numbers and click a button to trigger some action.
 Kojo wants to improve the user experience of his site.
-He wants to show an error message in case the user clicks the button but the field is not filled in.
+He wants to show an error message in case the user clicks the button but the field contains an invalid input value.
 
-The variable that represents the user input can take on different values.
+Here is some more information on how the value of an input field is provided.
 
 - If the user types something into field, the variable is always a string even if the user only typed in numbers.
 - If the user types something but deletes it again, the variable will be an empty string.
 - Before the user even started typing, the variable can be `undefined` or `null`.
 
-Write a function `errorMessage` that accepts the value representing the user input as parameter.
+Write a function `errorMessage` that accepts the user input as parameter.
 If the user did not provide any input, `errorMessage` should return `'This field is required.'`.
-Otherwise it should return an empty string.
+If the input does not represent a non-zero number (according to the JavaScript conversion rules), `'Must be a number.'` should be returned.
+In all other cases you can assume the input is valid, the return value should be an empty string.
 
 ```javascript
-errorMessage('1441');
+errorMessage('123');
 // => ''
 
-errorMessage(null);
+errorMessage('');
 // => 'This field is required.'
+
+errorMessage('abc');
+// => 'Must be a number.'
 ```

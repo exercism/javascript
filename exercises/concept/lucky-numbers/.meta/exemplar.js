@@ -27,7 +27,8 @@ export function luckyNumber(value) {
 }
 
 /**
- * Returns an error message if the input does not contain any characters.
+ * Determines the error message that should be shown to the user
+ * for the given input value.
  * 
  * @param {string|null|undefined} input 
  * @returns {string} error message
@@ -35,6 +36,10 @@ export function luckyNumber(value) {
 export function errorMessage(input) {
   if (!input) {
     return 'This field is required.';
+  }
+
+  if (!Number(input)) {
+    return 'Must be a number.'
   }
 
   return '';
