@@ -95,7 +95,13 @@
         "name": "Lucky Numbers",
         "uuid": "78bbd7d2-b660-4791-a404-af5bfed31849",
         "concepts": ["type-conversion"],
-        "prerequisites": ["booleans", "strings", "numbers", "null-undefined", "arrays"],
+        "prerequisites": [
+          "booleans",
+          "strings",
+          "numbers",
+          "null-undefined",
+          "arrays"
+        ],
         "status": "beta"
       },
       {
