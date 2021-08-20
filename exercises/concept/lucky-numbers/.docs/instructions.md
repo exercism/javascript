@@ -11,15 +11,15 @@ You will build two helper functions for new number games on Kojos' website and a
 One of the games on Kojos website looks like a slot machine that shows three digits on the wheels to the left and another three digits to the right.
 For the game mechanics, Kojo needs to know the sum of the two numbers made up by those digits.
 
-Write a function `twoSum` that accepts two arrays as arguments.
-Each array contains three numbers between 0 and 9.
+Write a function `twoSum` that accepts two arrays as parameters.
+Each array contains three digits represented as strings.
 The function should interpret each array as a number and return the sum of those two numbers.
 
 ```javascript
-twoSum([1, 2, 3], [0, 0, 7]);
+twoSum(['1', '2', '3'], ['0', '0', '7']);
 //=> 130
 
-// [1, 2, 3] represents 123 and [0, 0, 7] represents 7.
+// ['1', '2', '3'] represents 123 and ['0', '0', '7'] represents 7.
 // 123 + 7 = 130
 ```
 
@@ -32,9 +32,9 @@ The sequence or pattern of the "lucky numbers" changes each month and each user 
 This months' lucky numbers should be numbers that are palindromes.
 Palindromic numbers remain the same when the digits are reversed.
 
-Implement the new `luckyNumber` function that accepts a number as argument.
+Implement the new `luckyNumber` function that accepts a number as parameter.
 The function should return `true` if the number is a palindrome and `false` otherwise.
-The input number will always a positive integer.
+The input number will always be a positive integer.
 
 ```javascript
 luckyNumber(1441);
@@ -44,4 +44,26 @@ luckyNumber(123);
 //=> false
 ```
 
-// TODO remove 3, add one for bool instead, "error message for input field"
+## 3. Validate the user input
+
+In various places on the website, there are input fields where the users can enter some data and click a button to trigger some action.
+Kojo wants to improve the user experience of his site.
+He wants to show an error message in case the user clicks the button but the field is not filled in.
+
+The variable that represents the user input can take on different values.
+
+- If the user types something into field, the variable is always a string even if the user only typed in numbers.
+- If the user types something but deletes it again, the variable will be an empty string.
+- Before the user even started typing, the variable can be `undefined` or `null`.
+
+Write a function `errorMessage` that accepts the value representing the user input as parameter.
+If the user did not provide any input, `errorMessage` should return `'This field is required.'`.
+Otherwise it should return an empty string.
+
+```javascript
+errorMessage('1441');
+// => ''
+
+errorMessage(null);
+// => 'This field is required.'
+```
