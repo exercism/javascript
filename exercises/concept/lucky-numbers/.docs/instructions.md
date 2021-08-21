@@ -4,11 +4,11 @@ Your friend Kojo is a big fan of numbers.
 He has a small website for playing around with numbers: www.fun-with-numbers.com.
 Kojo is not that good at programming so he asked you for help.
 
-You will build two helper functions for new number games on Kojos' website and a third one for validation of the user input.
+You will build two helper functions for new number games on Kojos' website and a third one to validate some input the user can enter.
 
 ## 1. Calculate the sum for the numbers on the slot machine
 
-One of the games on Kojos website looks like a slot machine that shows two groups of wheels with digits on them.
+One of the games on Kojos' website looks like a slot machine that shows two groups of wheels with digits on them.
 Each group of digits represents a number.
 For the game mechanics, Kojo needs to know the sum of those two numbers.
 
@@ -27,7 +27,7 @@ twoSum([1, 2, 3], [0, 7]);
 ## 2. Determine if a number is a palindrome
 
 Another game on the website is a little quiz called "Lucky Numbers".
-A user can enter a number and is shown whether the number belongs to some secret sequence or pattern.
+A user can enter a number and then sees whether the number belongs to some secret sequence or pattern.
 The sequence or pattern of the "lucky numbers" changes each month and each user only has a limited number of tries to guess it.
 
 This months' lucky numbers should be numbers that are palindromes.
@@ -53,7 +53,7 @@ He wants to show an error message in case the user clicks the button but the fie
 
 Here is some more information on how the value of an input field is provided.
 
-- If the user types something into field, the variable is always a string even if the user only typed in numbers.
+- If the user types something into a field, the associated value is always a string even if the user only typed in numbers.
 - If the user types something but deletes it again, the variable will be an empty string.
 - Before the user even started typing, the variable can be `undefined` or `null`.
 

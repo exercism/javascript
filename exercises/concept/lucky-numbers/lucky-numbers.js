@@ -3,8 +3,8 @@
 /**
  * Calculates the sum of the two input arrays.
  *
- * @param {string[]} array1
- * @param {string[]} array2
+ * @param {number[]} array1
+ * @param {number[]} array2
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {

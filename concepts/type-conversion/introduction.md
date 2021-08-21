@@ -1,18 +1,18 @@
 # Introduction
 
-In JavaScript, values may be of different types. Changing the type of a variable can be done explicit _type conversion_.
+In JavaScript, values may be of different types. Changing the type of a variable can be done by explicit _type conversion_.
 Besides that, JavaScript also performs _type coercion_ (implicit type conversion) when the context requires it.
 
 ## Type Conversion
 
 JavaScript does not have a construct to cast into a (different) type like many other languages but there are built-in helpers that can be used instead.
-For example, the global objects `Boolean`, `Number` and `String` can also be used as functions to convert values between those primitive types.
+Most notably, `Boolean`, `Number` and `String` can be used as functions to convert a value to the respective type.
 
 ### Converting to a Boolean (Truthy/Falsy Values)
 
-With `Boolean(value)`, you can convert a value to a boolean.
+With `Boolean(value)` you can convert any value to a boolean.
 There is a fixed set of values, so called _falsy_ values, that convert to `false`.
-Most importantly `false`, `0`, emtpy string, `null`, `undefined` and `NaN` are falsy.
+Most importantly, `false`, `0`, empty string, `null`, `undefined` and `NaN` are falsy.
 
 For all other values, `Boolean` returns `true`.
 These values are called _truthy_.
@@ -24,28 +24,18 @@ Boolean(-1);
 Boolean(0);
 // => false
 
-Boolean('0');
+Boolean(' ');
 // => true
 
 Boolean('');
 // => false
-
-Boolean(' ');
-// => true
-
-Boolean('false');
-// => true
-
-Boolean([]);
-// => true
-
-Boolean({});
-// => true
 ```
+
+Note that because of the described rules, `'0'`, `'false'`, `[]`, `{}` are thruthy in JavaScript.
 
 ### Converting to a Number
 
-`Number(value)` can be used to convert a value into a number.
+`Number(value)` can be used to convert a value to a number.
 Whitespaces at the beginning and the end of a string are ignored and an empty string is converted to `0`.
 If you try to convert a non-primitive value or a string that does not represent a number, the result is `NaN` ([Not-A-Number][mdn-nan]).
 
@@ -125,6 +115,7 @@ if (num) {
 
 If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well (if necessary).
 The conversion logic is the same as when using the `String` function.
+Afterwards, the two strings are concatenated.
 
 ```javascript
 let name;
@@ -138,10 +129,12 @@ There are many operators that coerce the operands into numbers (if necessary) ac
 
 - Arithmetic operators: `+` (if no string is involved), `-`, `*`, `/`, `%`, `**`
 - Unary plus and unary negation operators: `+`, `-`
-- Relational operators (if not both operands are strings): `>`, `>=`, `<`, `<=`
+- Relational operators (for non-string operands): `>`, `>=`, `<`, `<=`
 - Bitwise operators: `|`, `&`, `^`, `~`
 
 Refer to the [MDN list of operators][mdn-operators] for more details about any of those operators.
+
+To avoid mistakes, it is good practice to always call `Number` explicitly before applying those operators.
 
 [mdn-nan]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 [mdn-join]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join

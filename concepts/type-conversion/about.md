@@ -1,20 +1,20 @@
 # About
 
-In JavaScript, values may be of different types. Changing the type of a variable can be done explicit _type conversion_.
+In JavaScript, values may be of different types. Changing the type of a variable can be done by explicit _type conversion_.
 Besides that, JavaScript also performs _type coercion_ (implicit type conversion) when the context requires it.
 
 ## Type Conversion
 
 JavaScript does not have a construct to cast into a (different) type like many other languages but there are built-in helpers that can be used instead.
-For example, the global objects `Boolean`, `Number` and `String` can also be used as functions to convert values between those primitive types.
+Most notably, the global objects `Boolean`, `Number` and `String` can be used as functions to convert a value to the respective type.
 
 ### Converting to a Boolean (Truthy/Falsy Values)
 
-With `Boolean(value)` you can convert a value to a boolean.
+With `Boolean(value)` you can convert any value to a boolean.
 How does that work?
 
 There is a fixed set of values, so called _falsy_ values, that convert to `false`.
-Most importantly `false`, `0`, emtpy string, `null`, `undefined` and `NaN` are falsy.
+Most importantly, `false`, `0`, empty string, `null`, `undefined` and `NaN` are falsy.
 The [MDN article on "Falsy"][mdn-falsy] shows the complete list.
 
 For all other values, `Boolean` returns `true`.
@@ -27,13 +27,17 @@ Boolean(-1);
 Boolean(0);
 // => false
 
-Boolean('0');
+Boolean(' ');
 // => true
 
 Boolean('');
 // => false
+```
 
-Boolean(' ');
+Note that because of the described rules, the following values are truthy in JavaScript although they might count as falsy in other languages.
+
+```javascript
+Boolean('0');
 // => true
 
 Boolean('false');
@@ -48,9 +52,9 @@ Boolean({});
 
 ### Converting to a Number
 
-`Number(value)` can be used to convert a value into a number.
+`Number(value)` can be used to convert a value to a number.
 Whitespaces at the beginning and the end of a string are ignored and an empty string is converted to `0`.
-If you try to convert a non-primitive value or a string that does not represent a number, no error will be thrown.
+If you try to convert a non-primitive value or a string that does not represent a number, **no** error will be thrown.
 Instead, the result is `NaN` ([Not-A-Number][mdn-nan]).
 
 ```javascript
@@ -136,7 +140,7 @@ String({ key: 'value' });
 // => '[object Object]'
 ```
 
-However, you can customize the conversion behavior, e.g. by providing a `toString` method.
+You can customize the conversion behavior, e.g. by providing a `toString` method.
 The section "[Object to primitive conversion][custom-conversion]" on javascript.info explains the details.
 
 Another common way to achieve a better string representation for objects and arrays is to use [JSON encoding][json].
@@ -188,7 +192,8 @@ When a value is used in a boolean context, JavaScript will apply the same rules 
   Nevertheless, you should use `Boolean` for readability.
 
 - JavaScript also applies coercion for the operands of the logical AND (`&&`) and OR (`||`) operators.
-  Keep in mind that the result of the expression is **not** a boolean but one of the original operands (see [MDN on Logical Operators][mdn-logical-operators]).
+  But keep in mind that the result of the expression is **not** necessarily a boolean.
+  It returns one of the original operands (see [MDN on Logical Operators][mdn-logical-operators]).
 
   ```javascript
   null || 'hello';
@@ -199,6 +204,7 @@ When a value is used in a boolean context, JavaScript will apply the same rules 
 
 If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well (if necessary).
 The conversion logic is the same as when using the `String` function.
+Afterwards, the two strings are concatenated.
 
 ```javascript
 let name;
@@ -220,7 +226,7 @@ There are many operators that coerce the operands into numbers (if necessary) ac
 
 - Arithmetic operators: `+` (if no string is involved), `-`, `*`, `/`, `%`, `**`
 - Unary plus and unary negation operators: `+`, `-`
-- Relational operators (if not both operands are strings): `>`, `>=`, `<`, `<=`
+- Relational operators (for non-string operands): `>`, `>=`, `<`, `<=`
 - Bitwise operators: `|`, `&`, `^`, `~`
 
 Refer to the [MDN list of operators][mdn-operators] for more details about any of those operators.
@@ -230,6 +236,7 @@ When an operand could potentially be a string, it is best to always explicitly c
 ```javascript
 '1' + '2';
 // => '12'
+// addition operator in string context as explained above
 
 Number('1') + Number('2');
 // => 3

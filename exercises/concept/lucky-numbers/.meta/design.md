@@ -11,15 +11,15 @@
 
 ## Out of Scope
 
-The following topics should be covered in other concepts and are therefore not be part of this concept exercise.
+The following topics should be covered in other concepts and are therefore not part of this concept exercise.
 
+- Boxed vs. non-boxed primitives (could potentially become part of this concept in the future)
 - `Date` conversions
 - Details on JSON
 - `new Function`
-- Boxed vs. non-boxed primitives
 - Details on `parseInt` and `parseFloat`
 
-Details on the conversion logic for loose equality are also out of scope as they are not required knowledge to be fluent.
+Details on the conversion logic for loose equality are also out of scope as they are not required knowledge to write good code/ be fluent.
 
 ## Concepts
 
