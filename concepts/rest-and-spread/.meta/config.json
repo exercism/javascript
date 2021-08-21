@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for rest-and-spread concept",
+  "blurb": "Javascript has a built-in ... operator that makes it easier to work with indefinite numbers of elements.",
   "authors": ["kristinaborn"],
   "contributors": ["SleeplessByte", "angelikatyborska"]
 }
