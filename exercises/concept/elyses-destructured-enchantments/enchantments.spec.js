@@ -63,7 +63,14 @@ describe('array-destructuring', () => {
 
   describe('insertFaceCards', () => {
     test('into a deck with many cards', () => {
-      expect(insertFaceCards([3, 10, 7])).toStrictEqual([3, 'jack', 'queen', 'king', 10, 7]);
+      expect(insertFaceCards([3, 10, 7])).toStrictEqual([
+        3,
+        'jack',
+        'queen',
+        'king',
+        10,
+        7,
+      ]);
     });
 
     test('into a deck with one card', () => {
@@ -71,7 +78,12 @@ describe('array-destructuring', () => {
     });
 
     test('into a deck with no cards', () => {
-      expect(insertFaceCards([])).toStrictEqual([undefined, 'jack', 'queen', 'king']);
+      expect(insertFaceCards([])).toStrictEqual([
+        undefined,
+        'jack',
+        'queen',
+        'king',
+      ]);
     });
   });
 });

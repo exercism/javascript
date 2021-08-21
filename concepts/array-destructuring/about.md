@@ -44,26 +44,26 @@ The syntax allows skipping values when mapping, for example to ignore specific p
 In the example below, imagine we have a `getUserInfo` function that returns an array containing a user's first name, last name, and street address.
 
 ```javascript
-getUserInfo()
+getUserInfo();
 // => ["Valerie", "Noir", "Sunny Lane 523"]
 
-const [, , streetAddress] = getUserInfo()
+const [, , streetAddress] = getUserInfo();
 
-streetAddress
+streetAddress;
 // => "Sunny Lane 523"
 ```
 
 The assignment is also not required to use all the values.
 
 ```javascript
-const [firstName, lastName] = getUserInfo()
+const [firstName, lastName] = getUserInfo();
 
-firstName
+firstName;
 // => "Valerie"
 
-lastName
+lastName;
 // => "Noir"
-````
+```
 
 It's even possible to extract _more_ values than the array contains; the leftover variables will be assigned `undefined`. This may be useful when the amount of values isn't known ahead of time.
 
@@ -87,12 +87,12 @@ fourth;
 The array destructuring assignment can provide _default values_ in case there is none in the source array.
 
 ```javascript
-const [first, second, third="none selected", fourth] = pickAtLeastOne
+const [first, second, third = 'none selected', fourth] = pickAtLeastOne;
 
-third
+third;
 // => 'none selected'
 
-fourth
+fourth;
 // => undefined
 ```
 
