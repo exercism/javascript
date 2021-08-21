@@ -96,5 +96,4 @@ fourth;
 // => undefined
 ```
 
-See: `rest-elements`
-See: `spread-elements`
+See: `rest-and-spread`

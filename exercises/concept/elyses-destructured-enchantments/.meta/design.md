@@ -19,8 +19,7 @@
 ## Concepts
 
 - `array-destructuring`
-- `spread-operator`
-- `rest-elements`
+- `rest-and-spread`
 
 ## Prerequisites
 
