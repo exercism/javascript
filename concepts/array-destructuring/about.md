@@ -43,7 +43,7 @@ c;
 The syntax allows skipping values when mapping, for example to ignore specific positions in the array.
 In the example below, imagine we have a `getUserInfo` function that returns an array containing a user's first name, last name, and street address.
 
-````javascript
+```javascript
 getUserInfo()
 // => ["Valerie", "Noir", "Sunny Lane 523"]
 
@@ -51,6 +51,8 @@ const [, , streetAddress] = getUserInfo()
 
 streetAddress
 // => "Sunny Lane 523"
+```
+
 The assignment is also not required to use all the values.
 
 ```javascript
@@ -84,7 +86,7 @@ fourth;
 
 The array destructuring assignment can provide _default values_ in case there is none in the source array.
 
-```
+```javascript
 const [first, second, third="none selected", fourth] = pickAtLeastOne
 
 third
