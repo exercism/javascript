@@ -25,3 +25,5 @@
 ## Prerequisites
 
 - `arrays`
+- `functions`
+- `objects`

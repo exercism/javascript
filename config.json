@@ -111,7 +111,7 @@
         "name": "Elyses Destructured Enchantments",
         "uuid": "d9b5cd13-2f2b-4034-a571-e66c847ed6f8",
         "concepts": ["array-destructuring", "spread-operator", "rest-elements"],
-        "prerequisites": ["arrays"],
+        "prerequisites": ["arrays", "functions", "objects"],
         "status": "beta"
       },
       {
