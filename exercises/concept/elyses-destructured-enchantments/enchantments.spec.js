@@ -1,17 +1,5 @@
 // @ts-check
 
-/**
- * @template T
- * @template Expected
- * @typedef {[T, Expected]} TestCase
- */
-
-/**
- * @template T
- * @template Expected
- * @typedef {TestCase<T, Expected>[]} TestCases
- */
-
 import {
   discardTopCard,
   getFirstCard,
@@ -22,87 +10,68 @@ import {
 
 describe('array-destructuring', () => {
   describe('getFirstCard', () => {
-    /** @type {TestCases<Card[], Card>} */
-    const getFirstCardTestCases = [
-      [[3], 3],
-      [[8, 3, 9, 5], 8],
-    ];
+    test('from a deck with a single card', () => {
+      expect(getFirstCard([3])).toBe(3);
+    });
 
-    getFirstCardTestCases.forEach(([deck, expected]) => {
-      test(`getFirstCard([${deck}])`, () => {
-        expect(getFirstCard(deck)).toBe(expected);
-      });
+    test('from a deck with many cards', () => {
+      expect(getFirstCard([8, 3, 9, 5])).toBe(8);
+    });
+
+    test('from an empty deck', () => {
+      expect(getFirstCard([])).toBe(undefined);
     });
   });
 
-  describe.skip('getSecondCard', () => {
-    /** @type {TestCases<Card[], Card | undefined>} */
-    const getSecondCardTestCases = [
-      [[10, 4], 4],
-      [[2, 5, 1, 6], 5],
-      [[], undefined],
-      [[8], undefined],
-    ];
+  describe('getSecondCard', () => {
+    test('from a deck with two cards', () => {
+      expect(getSecondCard([10, 4])).toBe(4);
+    });
 
-    getSecondCardTestCases.forEach(([deck, expected]) => {
-      test(`getSecondCard([${deck}])`, () => {
-        expect(getSecondCard(deck)).toBe(expected);
-      });
+    test('from a deck with many cards', () => {
+      expect(getSecondCard([2, 5, 1, 6])).toBe(5);
+    });
+
+    test('from an empty deck', () => {
+      expect(getSecondCard([])).toBe(undefined);
+    });
+
+    test('from a deck with one card', () => {
+      expect(getSecondCard([8])).toBe(undefined);
     });
   });
 
-  describe.skip('swapTopTwoCards', () => {
-    /** @type {TestCases<Card[], Card[]>} */
-    const swapTopTwoCardsTestCases = [
-      [
-        [3, 6],
-        [6, 3],
-      ],
-      [
-        [10, 4, 3, 7, 8],
-        [4, 10, 3, 7, 8],
-      ],
-    ];
+  describe('swapTopTwoCards', () => {
+    test('in a deck with two cards', () => {
+      expect(swapTopTwoCards([3, 6])).toStrictEqual([6, 3]);
+    });
 
-    swapTopTwoCardsTestCases.forEach(([deck, expected]) => {
-      test(`swapTopTwoCards([${deck}])`, () => {
-        expect(swapTopTwoCards(deck)).toStrictEqual(expected);
-      });
+    test('in a deck with many cards', () => {
+      expect(swapTopTwoCards([10, 4, 3, 7, 8])).toStrictEqual([4, 10, 3, 7, 8]);
     });
   });
 
-  describe.skip('discardTopCard', () => {
-    /** @type {TestCases<number[], [number, number[]]>} */
-    const discardTopCardTestCases = [
-      [[7], [7, []]],
-      [
-        [9, 2, 10, 4],
-        [9, [2, 10, 4]],
-      ],
-    ];
+  describe('discardTopCard', () => {
+    test('from a deck with one card', () => {
+      expect(discardTopCard([7])).toStrictEqual([7, []]);
+    });
 
-    discardTopCardTestCases.forEach(([deck, expected]) => {
-      test(`discardTopCard([${deck}])`, () => {
-        expect(discardTopCard(deck)).toStrictEqual(expected);
-      });
+    test('from a deck with many cards', () => {
+      expect(discardTopCard([9, 2, 10, 4])).toStrictEqual([9, [2, 10, 4]]);
     });
   });
 
-  describe.skip('insertFaceCards', () => {
-    /** @type {TestCases<Card[], Card[]>} */
-    const insertFaceCardsTestCases = [
-      [
-        [3, 10, 7],
-        [3, 'jack', 'queen', 'king', 10, 7],
-      ],
-      [[9], [9, 'jack', 'queen', 'king']],
-      [[], [undefined, 'jack', 'queen', 'king']],
-    ];
+  describe('insertFaceCards', () => {
+    test('into a deck with many cards', () => {
+      expect(insertFaceCards([3, 10, 7])).toStrictEqual([3, 'jack', 'queen', 'king', 10, 7]);
+    });
 
-    insertFaceCardsTestCases.forEach(([deck, expected]) => {
-      test(`insertFaceCards([${deck}])`, () => {
-        expect(insertFaceCards(deck)).toStrictEqual(expected);
-      });
+    test('into a deck with one card', () => {
+      expect(insertFaceCards([9])).toStrictEqual([9, 'jack', 'queen', 'king']);
+    });
+
+    test('into a deck with no cards', () => {
+      expect(insertFaceCards([])).toStrictEqual([undefined, 'jack', 'queen', 'king']);
     });
   });
 });
