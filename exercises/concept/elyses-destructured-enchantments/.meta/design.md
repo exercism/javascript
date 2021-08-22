@@ -23,6 +23,6 @@
 
 ## Prerequisites
 
-- `arrays`
-- `functions`
-- `objects`
+- `arrays` are needed to understand array restructuring
+- `functions` are needed as basis for rest parameters
+- `objects` are needed for object spread etc. (will be added to the exercise/concept later)
