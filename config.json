@@ -95,8 +95,14 @@
         "name": "Lucky Numbers",
         "uuid": "78bbd7d2-b660-4791-a404-af5bfed31849",
         "concepts": ["type-conversion"],
-        "prerequisites": ["arrays", "strings", "numbers"],
-        "status": "wip"
+        "prerequisites": [
+          "booleans",
+          "strings",
+          "numbers",
+          "null-undefined",
+          "arrays"
+        ],
+        "status": "beta"
       },
       {
         "slug": "elyses-analytic-enchantments",
@@ -1715,6 +1721,11 @@
       "uuid": "66264917-2d3e-42e9-806c-0fa740852f0f",
       "slug": "functions",
       "name": "Functions"
+    },
+    {
+      "uuid": "cbad4d23-a9d8-4370-add2-f4416a4df027",
+      "slug": "type-conversion",
+      "name": "Type Conversion"
     }
   ],
   "key_features": [

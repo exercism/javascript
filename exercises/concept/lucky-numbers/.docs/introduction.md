@@ -1,53 +1,143 @@
 # Introduction
 
-In JavaScript, values may be of different types. To change them from one type to another, we may either _explicitly convert_ or _implicitly coerce_ from one type to another type.
+In JavaScript, values may be of different types. Changing the type of a variable can be done by explicit _type conversion_.
+Besides that, JavaScript also performs _type coercion_ (implicit type conversion) when the context requires it.
 
-JavaScript will implicitly coerce types transparently to a programmer, which may introduce unexpected behavior into code.
+## Type Conversion
 
-```javascript
-// Examples of implicit type coercion:
-true + false; // => 1
-12 == '12'; // => true
-'number' + 5; // => "number5"
-```
+JavaScript does not have a construct to cast into a (different) type like many other languages but there are built-in helpers that can be used instead.
+Most notably, `Boolean`, `Number` and `String` can be used as functions to convert a value to the respective type.
 
-How a type is coerced is often dependent on the order of the values and the operator causing the types to be coerced.
+### Converting to a Boolean (Truthy/Falsy Values)
 
-<!-- prettier-ignore-start -->
-```javascript
-{} + '1' // => 1
-'1' + {} // "1[object Object]"
-```
-<!-- prettier-ignore-end -->
+With `Boolean(value)` you can convert any value to a boolean.
+There is a fixed set of values, so called _falsy_ values, that convert to `false`.
+Most importantly, `false`, `0`, empty string, `null`, `undefined` and `NaN` are falsy.
 
-Generally, it is best to _avoid_ _implicit type coercion_ and use explicit type conversion functions.
+For all other values, `Boolean` returns `true`.
+These values are called _truthy_.
 
 ```javascript
-const a = 46;
-String(a); // => "46"
+Boolean(-1);
+// => true
 
-const b = '3.4';
-Number(b); //=> 3.4
-Boolean(b); // => true
+Boolean(0);
+// => false
+
+Boolean(' ');
+// => true
+
+Boolean('');
+// => false
 ```
 
-Other functions also exist to convert a value from one type to another:
+Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **thruthy** in JavaScript.
 
-- Array has an instance method `join` which will return the array as a string:
+### Converting to a Number
 
-<!-- prettier-ignore-start -->
-  ```javascript
-  ['hello', 'world'].join('') // => 'hello world'
-  ```
-<!-- prettier-ignore-end -->
+`Number(value)` can be used to convert a value to a number.
+Whitespaces at the beginning and the end of a string are ignored and an empty string is converted to `0`.
+If you try to convert a non-primitive value or a string that does not represent a number, the result is `NaN` ([Not-A-Number][mdn-nan]).
 
-- All values inherit a function which returns a string representation:
+```javascript
+Number('  -12.34  ');
+// => -12.34
 
-<!-- prettier-ignore-start -->
-  ```javascript
-  (42).toString() // => "42"
-  (false).toString() // "false"
-  ({}).toString() // => "[object Object]"
-  ([1, 2, 3]).toString() // => "1,2,3"
-  ```
-<!-- prettier-ignore-end -->
+Number('1,2');
+// => NaN
+
+Number('');
+// => 0
+
+Number({ num: 123 });
+// => NaN
+```
+
+### Converting to a String
+
+With `String(value)` you can convert a value to a string.
+The result is what you would expect it to be for primitive values.
+
+```javascript
+String(12.34);
+// => '12.34'
+
+String(false);
+// => 'false'
+
+String(null);
+// => 'null'
+
+String(undefined);
+// => 'undefined'
+```
+
+For arrays, the `String` function will apply the string conversion for each element and join the results with a comma.
+You can also apply the [`join` method][mdn-join] yourself, e.g. to customize the separator.
+Note that in these cases `null` and `undefined` will be converted to an empty string.
+
+```javascript
+String([42, null, true, 'abc']);
+// => '42,,true,abc'
+```
+
+For objects, by default `String` returns an unhelpful text.
+
+```javascript
+String({ key: 'value' });
+// => '[object Object]'
+```
+
+## Type Coercion
+
+In certain contexts, JavaScript will automatically convert a value to another data type before it evaluates some statement.
+This implicit conversion is called _type coercion_.
+
+### Boolean Context
+
+When a non-boolean value is used in a boolean context, JavaScript will apply the same rules as the `Boolean` function to implicitly convert the value.
+
+Coercion to boolean commonly occurs for
+
+- the condition of an [if statement][concept-conditionals]
+- the first operand of the [ternary operator][mdn-ternary] `?`
+- the operand of the logical NOT operator `!`
+- the operands of the logical AND `&&` and OR `||` operators (the result is of the expression is one of the operands, not necessarily a boolean)
+
+```javascript
+const num = 0;
+if (num) {
+  // this block NOT is executed because 0 is falsy
+}
+```
+
+### String Context
+
+If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well.
+The conversion logic is the same as when using the `String` function.
+Afterwards, the two strings are concatenated.
+
+```javascript
+let name;
+'hello ' + name;
+// => 'hello undefined'
+```
+
+### Numeric Context
+
+There are many operators that coerce the operands into numbers (if necessary) according to the logic of the `Number` function explained above.
+
+- Arithmetic operators: `+` (if no string is involved), `-`, `*`, `/`, `%`, `**`
+- Unary plus and unary negation operators: `+`, `-`
+- Relational operators (for non-string operands): `>`, `>=`, `<`, `<=`
+- Bitwise operators: `|`, `&`, `^`, `~`
+
+Refer to the [MDN list of operators][mdn-operators] for more details about any of those operators.
+
+To avoid mistakes, it is good practice to always call `Number` explicitly before applying those operators.
+
+[mdn-nan]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+[mdn-join]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+[concept-conditionals]: /tracks/javascript/concepts/conditionals
+[mdn-ternary]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+[mdn-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators

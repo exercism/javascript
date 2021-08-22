@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for spread-operator concept",
-  "authors": ["shubhsk88"],
+  "blurb": "Changing the type of a variable can be by done by explicit type conversion. Besides that, JavaScript also performs type coercion (implicit type conversion) in certain contexts.",
+  "authors": ["shubhsk88", "junedev"],
   "contributors": ["neenjaw", "SleeplessByte"]
 }
