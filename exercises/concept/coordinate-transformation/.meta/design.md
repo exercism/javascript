@@ -28,6 +28,5 @@ In other words: how _values_ can be _enclosed_ in a _function_. It touches onto 
 
 ## Prerequisites
 
-- `basics`
-- `booleans`
 - `arrays`
+- `functions`
