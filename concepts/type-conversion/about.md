@@ -34,21 +34,7 @@ Boolean('');
 // => false
 ```
 
-Note that because of the described rules, the following values are truthy in JavaScript although they might count as falsy in other languages.
-
-```javascript
-Boolean('0');
-// => true
-
-Boolean('false');
-// => true
-
-Boolean([]);
-// => true
-
-Boolean({});
-// => true
-```
+Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **thruthy** in JavaScript.
 
 ### Converting to a Number
 
@@ -92,6 +78,8 @@ Number(null);
 Number(undefined);
 // => NaN
 ```
+
+Note that in contrast to the last example, `Number()` called without any argument is defined to return `0`.
 
 JavaScript also provides the functions `parseInt` and `parseFloat`.
 They apply laxer rules as to which strings can be converted to a number.
@@ -144,6 +132,7 @@ You can customize the conversion behavior, e.g. by providing a `toString` method
 The section "[Object to primitive conversion][custom-conversion]" on javascript.info explains the details.
 
 Another common way to achieve a better string representation for objects and arrays is to use [JSON encoding][json].
+You can convert into a string with `JSON.stringify` and back into an object or array with `JSON.parse`.
 
 ```javascript
 const obj = {
@@ -202,7 +191,7 @@ When a value is used in a boolean context, JavaScript will apply the same rules 
 
 ### String Context
 
-If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well (if necessary).
+If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well.
 The conversion logic is the same as when using the `String` function.
 Afterwards, the two strings are concatenated.
 

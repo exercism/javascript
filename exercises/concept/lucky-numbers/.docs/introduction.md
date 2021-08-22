@@ -31,7 +31,7 @@ Boolean('');
 // => false
 ```
 
-Note that because of the described rules, `'0'`, `'false'`, `[]`, `{}` are thruthy in JavaScript.
+Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **thruthy** in JavaScript.
 
 ### Converting to a Number
 
@@ -113,7 +113,7 @@ if (num) {
 
 ### String Context
 
-If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well (if necessary).
+If the addition operator `+` is used for primitive values and one operand is a string, the other one will be coerced into a string as well.
 The conversion logic is the same as when using the `String` function.
 Afterwards, the two strings are concatenated.
 
