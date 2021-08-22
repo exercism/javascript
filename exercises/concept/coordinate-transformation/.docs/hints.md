@@ -3,9 +3,6 @@
 ## General
 
 - For each task, each function should return a function closure, using the supplied arguments.
-- Read [Whatthefork.is: A Closure][what-the-fork-is-a-closure]
-- Read [Javascript.info: Variable Scope, Closures][javascript-info-scope-closure]
-- Read [MDN web docs: Closures][mdn-closures]
 
 ## 1. Translate the coordinates
 
@@ -24,7 +21,3 @@
 
 - For this function, you only have to memoize the result of the last transformation.
 - In order to send back the result of the last transformation, you will have to check if the input arguments are the same.
-
-[javascript-info-scope-closure]: https://javascript.info/closure
-[mdn-closures]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
-[what-the-fork-is-a-closure]: https://web.archive.org/web/20210702195218if_/https://whatthefork.is/closure

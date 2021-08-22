@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for closures concept",
+  "blurb": "JavaScript transparently supports closures, that means variables from an outer scope can also be used inside of a nested block of code.",
   "authors": ["neenjaw"],
   "contributors": ["SleeplessByte"]
 }
