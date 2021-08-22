@@ -110,8 +110,8 @@
         "slug": "elyses-destructured-enchantments",
         "name": "Elyses Destructured Enchantments",
         "uuid": "d9b5cd13-2f2b-4034-a571-e66c847ed6f8",
-        "concepts": ["array-destructuring", "spread-operator", "rest-elements"],
-        "prerequisites": ["arrays"],
+        "concepts": ["array-destructuring", "rest-and-spread"],
+        "prerequisites": ["arrays", "functions", "objects"],
         "status": "beta"
       },
       {
@@ -1345,7 +1345,7 @@
         "name": "Kindergarten Garden",
         "uuid": "13444eff-005a-405e-9737-7b64d99c1a61",
         "practices": [],
-        "prerequisites": ["arrays", "classes", "strings", "spread-operator"],
+        "prerequisites": ["arrays", "classes", "strings", "rest-and-spread"],
         "difficulty": 7,
         "topics": [
           "arrays",
@@ -1660,6 +1660,11 @@
       "uuid": "cfbc96fa-717e-4f29-a91d-760ebea88822",
       "slug": "recursion",
       "name": "Recursion"
+    },
+    {
+      "uuid": "efc895b2-8420-44f1-a385-5c637286f797",
+      "slug": "rest-and-spread",
+      "name": "Rest and Spread"
     },
     {
       "uuid": "19085ad2-038a-4e08-ad34-47ff2a78fec6",

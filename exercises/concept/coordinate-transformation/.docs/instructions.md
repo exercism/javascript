@@ -16,7 +16,7 @@ const result = moveCoordinatesRight2Px(4, 8);
 
 ## 2. Scale the coordinates
 
-implement the `scale2d` function which returns a function making use of a closure to perform a repeatable 2d scale of a coordinate pair.
+Implement the `scale2d` function which returns a function making use of a closure to perform a repeatable 2d scale of a coordinate pair.
 
 > For the purposes of this exercise, assume only positive scaling values.
 
