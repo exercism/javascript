@@ -163,12 +163,7 @@
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
         "concepts": ["callbacks"],
         "prerequisites": [
-          "booleans",
-          "closures",
-          "conditionals",
-          "errors",
-          "null-undefined",
-          "numbers",
+          "functions",
           "objects"
         ],
         "status": "beta"
@@ -178,7 +173,7 @@
         "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
-        "prerequisites": ["arrays", "callbacks", "errors", "recursion"],
+        "prerequisites": ["array-transformations", "callbacks", "errors", "recursion"],
         "status": "beta"
       },
       {
