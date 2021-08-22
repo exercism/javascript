@@ -136,19 +136,19 @@
         "uuid": "e9a9fa73-4497-43d5-a4ff-4eb319c98233",
         "concepts": ["recursion"],
         "prerequisites": [
-          "arrays",
+          "functions",
+          "rest-and-spread",
           "array-destructuring",
-          "array-loops",
-          "numbers"
+          "array-transformation"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "coordinate-transformation",
         "name": "Coordinate Transformation",
         "uuid": "5aa39e89-c601-4a66-ab72-5d8512d69e02",
         "concepts": ["closures"],
-        "prerequisites": ["arrays", "booleans"],
+        "prerequisites": ["arrays", "functions"],
         "status": "beta"
       },
       {
