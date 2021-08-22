@@ -1,14 +1,14 @@
 [
   {
-    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_Conversion",
-    "description": "MDN Web Docs: Type Conversion"
+    "url": "https://javascript.info/type-conversions",
+    "description": "javascript.info: Type Conversions"
   },
   {
-    "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion",
-    "description": "MDN Web Docs: Type Coercion"
+    "url": "https://javascript.info/object-toprimitive",
+    "description": "javascript.info: Object to primitive conversion"
   },
   {
-    "url": "https://www.ecma-international.org/ecma-262/#sec-abstract-operations",
-    "description": "ECMA: Abstract Operations"
+    "url": "https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/",
+    "description": "freeCodeCamp: JavaScript type coercion explained"
   }
 ]

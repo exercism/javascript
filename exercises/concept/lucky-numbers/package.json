@@ -1,6 +1,6 @@
 {
   "name": "@exercism/javascript-lucky-numbers",
-  "description": "Exercism concept exercise on Type conversion",
+  "description": "Exercism concept exercise on type conversion",
   "author": "Shubham Singh <shubham88singh@gmail.com>",
   "private": true,
   "license": "MIT",

@@ -84,7 +84,7 @@ if (isPositive && isSmall) {
 
 In JavaScript the condition does not have to be of type boolean.
 If any other type than boolean is provided in a boolean context like the if-statement, JavaScript will implicitly convert the value to boolean.
-Refer to the [type coercion concept][concept-type-coercion] for details on which values are _truthy_ and _falsy_, respectively.
+Refer to the [type conversion concept][concept-type-conversion] for details on which values are _truthy_ and _falsy_, respectively.
 
 ```javascript
 const num = 4;
@@ -137,5 +137,5 @@ function checkNumber(num) {
 }
 ```
 
-[concept-type-coercion]: /tracks/javascript/concepts/type-coercion
+[concept-type-conversion]: /tracks/javascript/concepts/type-conversion
 [mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
