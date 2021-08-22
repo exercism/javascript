@@ -1,6 +1,19 @@
 # About
 
-The name **closure** is historically derived from [_λ-calculus_][wiki-lambda-calculus] and popularized by [_scheme_][wiki-scheme] ([source][wiki-closure]) to reference a function's open and closed variable bindings. There are various reasons to use **closures**, not limited to:
+_Closures_ are a programming pattern in JavaScript which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a nested block of code. JavaScript supports closures transparently, and they are often used without knowing what they are.
+
+```javascript
+// Top-level declarations are global-scope
+const dozen = 12;
+
+// Functions create a new function-scope and block-scope.
+// Referencing the outer variable here is a closure.
+function nDozen(n) {
+  return dozen * n;
+}
+```
+
+The name _closure_ is historically derived from [_λ-calculus_][wiki-lambda-calculus] and popularized by [_scheme_][wiki-scheme] ([source][wiki-closure]) to reference a function's open and closed variable bindings.
 
 ## Reasons to use closures in JavaScript
 
@@ -101,14 +114,7 @@ function areaOfCircle(radius) {
 }
 ```
 
-## References
-
-- [Whatthefork.is: A Closure][what-the-fork-is-a-closure]
-- [Javascript.info: Variable Scope, Closures][javascript-info-scope-closure]
-- [MDN web docs: Closures][mdn-closures]
-
-[javascript-info-scope-closure]: https://javascript.info/closure
-[mdn-closures]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+[wiki-lexical-scope]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping
 [what-the-fork-is-a-closure]: https://whatthefork.is/closure
 [wiki-lambda-calculus]: https://en.wikipedia.org/wiki/%CE%9B-calculus
 [wiki-scheme]: https://en.wikipedia.org/wiki/Scheme_(programming_language)

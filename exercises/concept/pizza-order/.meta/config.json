@@ -3,8 +3,8 @@
   "authors": ["SleeplessByte"],
   "contributors": [],
   "files": {
-    "solution": ["recursion.js"],
-    "test": ["recursion.spec.js"],
+    "solution": ["pizza-order.js"],
+    "test": ["pizza-order.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
   "forked_from": ["fsharp/pizza-pricing"]
