@@ -1682,14 +1682,14 @@
       "name": "Comparison"
     },
     {
+      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
+      "slug": "increment-decrement",
+      "name": "Increment/Decrement"
+    },
+    {
       "uuid": "be301f37-6cf4-4688-949e-75a8976a91e3",
       "slug": "for-loops",
       "name": "For Loops"
-    },
-    {
-      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
-      "slug": "increment-decrement",
-      "name": "Increment and Decrement Operators"
     },
     {
       "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
