@@ -96,4 +96,4 @@ fourth;
 // => undefined
 ```
 
-See: [concept:javascript/rest-and-spread]()
+[concept:javascript/rest-and-spread]()
