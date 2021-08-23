@@ -78,7 +78,7 @@
         "slug": "bird-watcher",
         "name": "Bird Watcher",
         "uuid": "3e648aa0-9ce7-4041-93d2-2b95f3832824",
-        "concepts": ["for-loops", "increment-decrement"],
+        "concepts": ["increment-decrement", "for-loops"],
         "prerequisites": ["arrays", "comparison", "conditionals"],
         "status": "beta"
       },
@@ -162,10 +162,7 @@
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
         "concepts": ["callbacks"],
-        "prerequisites": [
-          "functions",
-          "objects"
-        ],
+        "prerequisites": ["functions", "objects"],
         "status": "beta"
       },
       {
@@ -173,7 +170,12 @@
         "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
-        "prerequisites": ["array-transformations", "callbacks", "errors", "recursion"],
+        "prerequisites": [
+          "array-transformations",
+          "callbacks",
+          "errors",
+          "recursion"
+        ],
         "status": "beta"
       },
       {
