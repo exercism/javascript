@@ -229,10 +229,7 @@
         "name": "Two Fer",
         "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
         "practices": [],
-        "prerequisites": [
-          "strings",
-          "functions"
-        ],
+        "prerequisites": ["strings", "functions"],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"]
       },
@@ -433,7 +430,13 @@
         "name": "Wordy",
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
-        "prerequisites": ["strings", "objects", "arrow-functions", "regular-expressions", "errors"],
+        "prerequisites": [
+          "strings",
+          "objects",
+          "arrow-functions",
+          "regular-expressions",
+          "errors"
+        ],
         "difficulty": 7,
         "topics": [
           "conditionals",
