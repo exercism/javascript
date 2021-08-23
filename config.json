@@ -145,7 +145,7 @@
           "functions",
           "rest-and-spread",
           "array-destructuring",
-          "array-transformation"
+          "array-transformations"
         ],
         "status": "wip"
       },
@@ -231,9 +231,7 @@
         "practices": [],
         "prerequisites": [
           "strings",
-          "functions",
-          "default-value",
-          "optional-parameters"
+          "functions"
         ],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"]
@@ -252,7 +250,7 @@
         "name": "Resistor Color Duo",
         "uuid": "de800041-3dcc-41b9-b101-7314ff685c93",
         "practices": [],
-        "prerequisites": ["array-transformations"],
+        "prerequisites": ["array-analysis"],
         "difficulty": 2,
         "topics": ["strings", "arrays"]
       },
@@ -261,7 +259,7 @@
         "name": "Gigasecond",
         "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
         "practices": [],
-        "prerequisites": ["dates", "immutability", "type-conversion"],
+        "prerequisites": ["dates", "numbers", "arithmetic-operators"],
         "difficulty": 1,
         "topics": ["time"]
       },
@@ -279,7 +277,7 @@
         "name": "Space Age",
         "uuid": "d9d757ed-ebe6-4d4a-aa73-f6834221cd54",
         "practices": [],
-        "prerequisites": ["objects", "numbers"],
+        "prerequisites": ["objects", "numbers", "type-conversion"],
         "difficulty": 2,
         "topics": ["floating_point_numbers"]
       },
@@ -325,7 +323,7 @@
         "name": "Bob",
         "uuid": "a5bf36f0-5d3c-41d4-8d54-e37e484e59cd",
         "practices": [],
-        "prerequisites": ["strings", "booleans", "regular-expressions"],
+        "prerequisites": ["strings", "conditionals", "regular-expressions"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -355,7 +353,7 @@
         "name": "Linked List",
         "uuid": "ec60a578-8889-46a1-b7b8-306dbd8551d5",
         "practices": [],
-        "prerequisites": ["classes", "while-loops"],
+        "prerequisites": ["classes", "conditionals", "while-loops"],
         "difficulty": 5,
         "topics": [
           "algorithms",
@@ -372,7 +370,7 @@
         "name": "Grade School",
         "uuid": "64637322-33bc-401f-8cec-1f9810a41f75",
         "practices": [],
-        "prerequisites": ["classes", "objects", "arrays", "immutability"],
+        "prerequisites": ["classes", "objects", "array-transformations"],
         "difficulty": 5,
         "topics": ["arrays", "maps", "sorting"]
       },
@@ -381,7 +379,7 @@
         "name": "List Ops",
         "uuid": "7d9db056-5398-41b6-af3b-9707f5eb0dbc",
         "practices": [],
-        "prerequisites": ["classes", "arrays", "functions"],
+        "prerequisites": ["classes", "arrays", "functions", "recursion"],
         "difficulty": 6,
         "topics": ["data_structures", "loops", "lists", "recursion"]
       },
@@ -435,7 +433,7 @@
         "name": "Wordy",
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
-        "prerequisites": ["strings", "regular-expressions", "errors"],
+        "prerequisites": ["strings", "objects", "arrow-functions", "regular-expressions", "errors"],
         "difficulty": 7,
         "topics": [
           "conditionals",
@@ -452,7 +450,7 @@
         "name": "Secret Handshake",
         "uuid": "74bbc9e3-edc5-41e0-84d7-5b2d98dd8370",
         "practices": [],
-        "prerequisites": ["bit-manipulation", "array-analysis"],
+        "prerequisites": ["bit-manipulation", "array-analysis", "errors"],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -468,7 +466,7 @@
         "name": "Leap",
         "uuid": "193a0e19-462d-4d26-a117-124f07d5a3d7",
         "practices": [],
-        "prerequisites": ["numbers"],
+        "prerequisites": ["arithmetic-operators", "booleans"],
         "difficulty": 1,
         "topics": ["booleans", "integers", "logic"]
       },
@@ -477,7 +475,7 @@
         "name": "Reverse String",
         "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
         "practices": [],
-        "prerequisites": ["strings", "array-transformation"],
+        "prerequisites": ["strings", "array-transformations"],
         "difficulty": 2,
         "topics": ["loops", "strings"]
       },
