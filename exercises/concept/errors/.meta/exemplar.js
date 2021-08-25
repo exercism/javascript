@@ -35,7 +35,7 @@ export function reportOverheating(temperature) {
 
 /**
  *  Triggers the needed action depending on the result of the machine check.
- * 
+ *
  * @param {{
  * check: function,
  * alertDeadSensor: function,
