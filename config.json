@@ -207,6 +207,14 @@
         "concepts": ["functions"],
         "prerequisites": ["objects", "arrays", "null-undefined"],
         "status": "beta"
+      },
+      {
+        "slug": "factory-sensors",
+        "name": "Factory Sensors",
+        "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
+        "concepts": ["errors"],
+        "prerequisites": ["classes", "null-undefined", "conditionals"],
+        "status": "beta"
       }
     ],
     "practice": [
