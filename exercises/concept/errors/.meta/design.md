@@ -6,8 +6,8 @@ The goal of this exercise is to teach the student how to handle errors / excepti
 
 ## Learning objectives
 
-- try {} catch {}
 - throw Error
+- try {} catch {}
 - instanceOf SpecialError
 - Creating custom errors
   - Prefilling a message
@@ -21,9 +21,10 @@ The goal of this exercise is to teach the student how to handle errors / excepti
 
 ## Concepts
 
-- errors
+- `errors`
 
 ## Prerequisites
 
-- strings
-- classes-intro
+- `classes` to understand how to create errors
+- `conditionals` because they are needed for the exercise
+- `null-undefined` because they are needed for the exercise
