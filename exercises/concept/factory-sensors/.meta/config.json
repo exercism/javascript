@@ -3,8 +3,8 @@
   "authors": ["TomPradat"],
   "contributors": ["SleeplessByte", "junedev"],
   "files": {
-    "solution": ["errors.js"],
-    "test": ["errors.spec.js"],
+    "solution": ["factory-sensors.js"],
+    "test": ["factory-sensors.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   }
 }
