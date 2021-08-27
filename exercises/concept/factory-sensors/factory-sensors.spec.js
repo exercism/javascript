@@ -4,7 +4,7 @@ import {
   monitorTheMachine,
   ArgumentError,
   OverheatingError,
-} from './errors';
+} from './factory-sensors';
 
 describe('checkHumidityLevel', () => {
   test('should throw if the humidity percentage is 100', () => {
