@@ -1,12 +1,12 @@
 {
-  "name": "@exercism/javascript-errors",
+  "name": "@exercism/javascript-factory-sensors",
   "author": "Tom Pradat <tom.pradat@gmail.com>",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/errors"
+    "directory": "exercises/concept/factory-sensors"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
