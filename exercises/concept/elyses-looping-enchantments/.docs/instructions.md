@@ -5,7 +5,7 @@ To keep things a simple, she only uses cards with values 1-10.
 
 ## 1. Determine how many cards of a certain type are in the deck
 
-First, Elyse wants to know how many cards of a certain type she has in her deck.
+Elyse wants to know how many cards of a certain type she has in her deck.
 
 Write a function `cardTypeCheck` that takes two parameters: an array of cards (Elyse's deck), and the card type that should be counted.
 The function should use `forEach` and return the number of cards in the deck that are of a given type.
@@ -16,23 +16,14 @@ cardTypeCheck([1, 2, 3, 4], cardType);
 // => 1
 ```
 
-## 2. Determine if there are any unique cards
+## 2. Determine how many odd or even cards there are
 
-Write a function that takes in one parameter: an array of cards (Elyse's deck).
+For another trick, Elyse needs to know how many odd or even cards there are in her deck.
 
-This function should return an array of card types that only occur once in the entire deck (i.e. unique cards).
-
-```javascript
-determineUniqueCards([1, 2, 3, 1, 5, 6]);
-// => [2, 3, 5, 6]
-```
-
-## 3. Determine how many odd or even cards there are
-
-Write a function `determineOddEvenCards` that takes in two parameters: an array of cards (Elyse's deck), and a boolean (true is analogous to 'even', and false is analogous to 'odd').
+Implement a function `determineOddEvenCards` that takes in two parameters: an array of cards (Elyse's deck), and a boolean (true is analogous to 'even', and false is analogous to 'odd').
 
 This function should return a single number: the number of odd or even cards there are (depending on the value of the second argument) in the deck.
-To practice, use a `for...of` loop this time.
+To practice, use a `for...of` loop in the function implementation this time.
 
 ```javascript
 determineOddEvenCards([1, 2, 3, 1, 5, 6], true);

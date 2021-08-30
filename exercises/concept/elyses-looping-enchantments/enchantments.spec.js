@@ -33,24 +33,6 @@ describe('cardTypeCheck', () => {
   });
 });
 
-describe('determineUniqueCards', () => {
-  test('a single unique card', () => {
-    expect(determineUniqueCards([1])).toBe(1);
-  });
-
-  test('multiple unique cards', () => {
-    expect(determineUniqueCards([1, 2, 3])).toBe(3);
-  });
-
-  test('many duplicates', () => {
-    expect(determineUniqueCards([7, 7, 7, 7])).toBe(1);
-  });
-
-  test('a mix of unique and duplicated cards', () => {
-    expect(determineUniqueCards([1, 1, 2, 3])).toBe(3);
-  });
-});
-
 describe('determineOddEvenCards', () => {
   test('a single odd card', () => {
     expect(determineOddEvenCards([1], TYPE_IS_ODD)).toBe(1);
