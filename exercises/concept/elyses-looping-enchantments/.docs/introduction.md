@@ -1,83 +1,33 @@
 # Introduction
 
-In JavaScript, arrays are used to store multiple values in a single variable!
-These values can be of any type, and can even be of multiple types.
-Arrays are also given lots of built-in methods, some of which can be used to loop over the values, giving access to a single one on each iteration.
+When working with arrays, you sometimes want to execute code for each value in the array.
+This is called iterating or looping over the array.
 
-Each of these built-in methods have a different use case, and differing syntaxes to go along with them.
+Here we will look at the case where you do not want to modify the array in the process.
+For transforming arrays, see [Concept Array Transformations][concept-array-transformations] instead.
 
-Looping over an array using its prototype can be accomplished using `Array.prototype.forEach`.
-`forEach` takes in two parameters: a callback function and a lexical context.
-The callback is a function that is called every time the loop index is increased, and takes in three parameters: the current value, the current index, and the array as a whole.
-The second parameter to `forEach` is useful when using this method in another prototypal context (which is out of scope for this exercise).
+## The `for` Loop
 
-Note that because `forEach` doesn't directly expose the underlying `for` loops, the `break` statement cannot be used in the callback.
-
-## Basic example of `Array.prototype.forEach`:
+The most basic to iterate over an array is to use a `for` loop, see [Concept For Loops][concept-for-loops].
 
 ```javascript
-const numbers = [1, 2, 3, 4, 6, 7, 8, 9];
+const numbers = [6.0221515, 10, 23];
 
-// log the index of the value 7
-numbers.forEach((currentValue, currentIndex) => {
-  if (currentValue === 7) {
-    console.log(currentIndex)
-  }
-});
-
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+// => 6.0221515
+// => 10
+// => 23
 ```
 
-The `.forEach` method takes a callback:
+## The `for...of` Loop
+
+When you want to work with the value directly in each iteration and do not require the index at all, you can use a `for .. of` loop.
+
+`for...of` works like the basic `for` loop shown above, but instead of having to deal with the _index_ as variable in the loop, you are provided directly with the _value_.
+
 ```javascript
-
-function logLuckyIndex(value, index) {
-  if (value === 7) {
-    console.log(index)
-  }
-}
-
-numbers.forEach(logLuckyIndex)
-// Same result as the inline anonymous function
-
-```
-
-That callback receives (up to) three parameters:
-
-- the value of the current iteration
-- the index of the current iteration
-- the entire array (self)
-
----
-
-Sometimes, efficiency is more valuable than convenience (for instance, when you're a performance-critical algorithm).
-In this case, `break`ing out of the loop at a given point might be preferable.
-Although using `forEach` may not allow this, the conventional `for` loop does.
-
-
-## Using a `for` loop to iterate over an `Array`
-
-```js
-const answers = [42, 42, 42];
-
-for (let index = 0; index < answers.length; index++) {
-  const currentValue = answers[index];
-
-  // Recall that Arrays are 0-indexed. As such, get the current
-  // element using the index.
-  console.log(currentValue);
-}
-```
-
----
-
-However, when only the _value_ is required and not the _index_, using a `for .. of` loop may be more suited for the task.
-
-A `for .. of` loop is syntactical sugar that creates a regular `for` loop over an iterable objects.
-It functions in the same way that a `for` loop does, but without directly exposing the current iteration index.
-
-## Using a `for .. of` loop using `const`
-
-```js
 const numbers = [6.0221515, 10, 23];
 
 // Because re-assigning number inside the loop will be very
@@ -85,9 +35,34 @@ const numbers = [6.0221515, 10, 23];
 for (const number of numbers) {
   console.log(number);
 }
-
-// Output:
-// 6.0221515
-// 10
-// 23
+// => 6.0221515
+// => 10
+// => 23
 ```
+
+Just like in regular `for` loops, you can use `continue` stop the current iteration and `break` to stop the execution of the loop entirely.
+
+## The `forEach` Method
+
+Every array includes a `forEach` method that can also be used to loop over it.
+
+`forEach` accepts a [callback][concept-callbacks] as parameter.
+The callback function is called once for each element in the array.
+The current element, its index and the full array are provided to the callback as arguments.
+Often, only the first or the first two are used.
+
+```javascript
+const numbers = [6.0221515, 10, 23];
+
+numbers.forEach((number, index) => console.log(number, index));
+// => 6.0221515 0
+// => 10 1
+// => 23 2
+```
+
+There is no way to stop the iteration once the `forEach` loop was started.
+The statements `break` and `continue` do not exist it this context.
+
+[concept-array-transformations]: /tracks/javascript/concepts/array-transformations
+[concept-for-loops]: /tracks/javascript/concepts/for-loops
+[concept-callbacks]: /tracks/javascript/concepts/callbacks
