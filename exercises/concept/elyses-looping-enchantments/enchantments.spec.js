@@ -1,7 +1,4 @@
-import {
-  cardTypeCheck,
-  determineOddEvenCards,
-} from './enchantments';
+import { cardTypeCheck, determineOddEvenCards } from './enchantments';
 
 const TYPE_IS_ODD = false;
 const TYPE_IS_EVEN = true;
