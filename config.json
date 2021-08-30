@@ -128,13 +128,11 @@
         "prerequisites": [
           "arrays",
           "callbacks",
-          "for-loops",
-          "increment-decrement"
+          "arrow-functions",
+          "for-loops"
         ],
         "status": "beta"
       },
-        "prerequisites": ["arrays", "callbacks"],
-        "status": "beta"
       {
         "slug": "nullability",
         "name": "Employee Badges",
