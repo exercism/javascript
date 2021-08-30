@@ -1,7 +1,6 @@
 import {
-  determineUniqueCards,
-  determineOddEvenCards,
   cardTypeCheck,
+  determineOddEvenCards,
 } from './enchantments';
 
 const TYPE_IS_ODD = false;
