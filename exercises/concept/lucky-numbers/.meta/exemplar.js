@@ -1,13 +1,12 @@
 // @ts-check
 
 /**
- * Calculates the sum of the two input arrays
+ * Calculates the sum of the numbers represented by the two input arrays.
  *
  * @param {number[]} array1
  * @param {number[]} array2
  * @returns {number} sum of the two arrays
  */
-
 export function twoSum(array1, array2) {
   const firstNumber = array1.join('');
   const secondNumber = array2.join('');
@@ -16,10 +15,11 @@ export function twoSum(array1, array2) {
 }
 
 /**
- * @param {number} value The number to check if the number is lucky or not
- * @returns {boolean}  whether the number is lucky or not
+ * Checks whether a number is a palindrome.
+ *
+ * @param {number} value
+ * @returns {boolean}  whether the number is a palindrome or not
  */
-
 export function luckyNumber(value) {
   const strValue = String(value);
 
@@ -27,12 +27,20 @@ export function luckyNumber(value) {
 }
 
 /**
- * @param {number} value The number to add dashes
- * @returns {string} String after dashifying the number
+ * Determines the error message that should be shown to the user
+ * for the given input value.
+ *
+ * @param {string|null|undefined} input
+ * @returns {string} error message
  */
+export function errorMessage(input) {
+  if (!input) {
+    return 'Required field';
+  }
 
-export function dashify(value) {
-  const strValue = String(value);
+  if (!Number(input)) {
+    return 'Must be a number besides 0';
+  }
 
-  return strValue.split('').join('-');
+  return '';
 }

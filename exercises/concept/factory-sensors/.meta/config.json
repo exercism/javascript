@@ -1,0 +1,10 @@
+{
+  "blurb": "Learn how to handle errors by creating a piece of software for a newspaper factory.",
+  "authors": ["TomPradat"],
+  "contributors": ["SleeplessByte", "junedev"],
+  "files": {
+    "solution": ["factory-sensors.js"],
+    "test": ["factory-sensors.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  }
+}

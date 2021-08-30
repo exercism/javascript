@@ -1,4 +1,4 @@
-import { flatten } from './flatten-array.js';
+import { flatten } from './flatten-array';
 
 describe('FlattenArray', () => {
   xtest('empty', () => {
@@ -15,41 +15,19 @@ describe('FlattenArray', () => {
 
   xtest('flattens array with just integers present', () => {
     expect(flatten([1, [2, 3, 4, 5, 6, 7], 8])).toEqual([
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
+      1, 2, 3, 4, 5, 6, 7, 8,
     ]);
   });
 
   xtest('5 level nesting', () => {
     expect(flatten([0, 2, [[2, 3], 8, 100, 4, [[[50]]]], -2])).toEqual([
-      0,
-      2,
-      2,
-      3,
-      8,
-      100,
-      4,
-      50,
-      -2,
+      0, 2, 2, 3, 8, 100, 4, 50, -2,
     ]);
   });
 
   xtest('6 level nesting', () => {
     expect(flatten([1, [2, [[3]], [4, [[5]]], 6, 7], 8])).toEqual([
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
+      1, 2, 3, 4, 5, 6, 7, 8,
     ]);
   });
 
@@ -63,13 +41,7 @@ describe('FlattenArray', () => {
 
   xtest('6 level nest list with null values', () => {
     expect(flatten([0, 2, [[2, 3], 8, [[100]], null, [[null]]], -2])).toEqual([
-      0,
-      2,
-      2,
-      3,
-      8,
-      100,
-      -2,
+      0, 2, 2, 3, 8, 100, -2,
     ]);
   });
 

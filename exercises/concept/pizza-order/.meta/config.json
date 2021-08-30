@@ -1,0 +1,11 @@
+{
+  "blurb": "TODO: add blurb for recursion exercise",
+  "authors": ["SleeplessByte"],
+  "contributors": [],
+  "files": {
+    "solution": ["pizza-order.js"],
+    "test": ["pizza-order.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["fsharp/pizza-pricing"]
+}

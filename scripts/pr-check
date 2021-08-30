@@ -7,7 +7,7 @@
  *
  * This will run following checks:
  * 1. Find the exercises at all the paths provided
- * 2. Check stub existance for those exercises
+ * 2. Check stub existence for those exercises
  * 3. Check integrity of configuration for those exercises
  * 4. Run eslint for those exercises to check code-style
  */
@@ -93,6 +93,9 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     ).code;
 
     if (checkResult !== 0) {
+      shell.echo(
+        `scripts/checksum returned a non-zero exit code: ${checkResult}`
+      );
       shell.exit(checkResult);
     }
 
@@ -101,6 +104,9 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     ).code;
 
     if (nameCheckResult !== 0) {
+      shell.echo(
+        `scripts/name-check returned a non-zero exit code: ${nameCheckResult}`
+      );
       shell.exit(nameCheckResult);
     }
   });
@@ -110,7 +116,21 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   ).code;
 
   if (nameUniqResult !== 0) {
+    shell.echo(
+      `scripts/name-uniq returned a non-zero exit code: ${nameUniqResult}`
+    );
     shell.exit(nameUniqResult);
+  }
+
+  const directoryResult = shell.exec(
+    `npx babel-node ${path.join('scripts', 'directory-check')}`
+  ).code;
+
+  if (directoryResult !== 0) {
+    shell.echo(
+      `scripts/directory-check returned a non-zero exit code: ${directoryResult}`
+    );
+    shell.exit(directoryResult);
   }
 }
 
@@ -135,6 +155,7 @@ shell.env['CLEANUP'] = true;
 
 const checkResult = shell.exec(`npx babel-node ${path.join('scripts', 'lint')}`)
   .code;
-if (checkResult != 0) {
+if (checkResult !== 0) {
+  shell.echo(`scripts/lint returned a non-zero exit code: ${checkResult}`);
   shell.exit(checkResult);
 }

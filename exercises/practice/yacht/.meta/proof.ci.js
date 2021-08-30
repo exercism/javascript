@@ -53,7 +53,7 @@ const getScoreForTheBigStraightCategory = (dices) => {
 
 const arrayIsFilledWithValue = (array, startPos, endPos, value) => {
   for (let i = startPos; i < endPos; i++) {
-    if (array[i] != value) {
+    if (array[i] !== value) {
       return false;
     }
   }

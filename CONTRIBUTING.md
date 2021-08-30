@@ -22,7 +22,6 @@ We welcome contributions of all sorts and sizes, from reporting issues to submit
   - [Documentation](#documentation)
   - [Tools](#tools)
     - [Fetch configlet](#fetch-configlet)
-    - [Fetch canonical data syncer](#fetch-canonical-data-syncer)
     - [Scripts](#scripts)
       - [`format`](#format)
       - [`lint`](#lint)
@@ -72,10 +71,10 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Create a `<slug>.js` stub file.
 1. Create a `<slug>.spec.js` test file. Here add the tests, per canonical data if possible (more on canonical data below).
 1. Create a `example.js` file. Place a working implementation, assuming it's renamed to `<slug>.js`
-1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find the canonical data syncer which aids generating this file _interactively_.
+1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find configlet which aids generating this file _interactively_.
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug npx babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug npx babel-node scripts/lint`.
-1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
+1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexicographically.
 1. Format the files, using `scripts/format`: `npx babel-node scripts/format`.
 
 The final step is opening a Pull Request, with these items all checked off. Make sure the tests run and the linter is happy. It will run automatically on your PR.
@@ -110,7 +109,7 @@ There are always improvements possible on existing exercises.
 Syncing an exercise with _canonical data_: There is a [problem-specifications][problem-specifications] repository that holds test data in a standardised format. These tests are occasionally fixed, improved, added, removed or otherwise changed. Each change also changes the _version_ of that canonical data. Syncing an exercise consists of:
 
 - updating the `<slug>.spec.js` file;
-- updating the `.meta/tests.toml` file, if the exercise that is being updated has test data in the [problem specifications repository][problem-specifications]. The contents of this file can be updated using the canonical data syncer, interactively;
+- updating the `.meta/tests.toml` file, if the exercise that is being updated has test data in the [problem specifications repository][problem-specifications]. The contents of this file can be updated using configlet, interactively;
 - match the `example.js` file to still work with the new tests; and
 - [regenerate the `README.md`][doc-readme], should there be any changes.
 
@@ -128,7 +127,7 @@ There is quite a bit of student-facing documentation, which can be found in the 
 
 ## Tools
 
-You'll need LTS or higher NodeJS in order to contribute to the _code_ in this respository. Run `npm install` in the root in order to be able to run the scripts as listed below. We use the following dependencies:
+You'll need LTS or higher NodeJS in order to contribute to the _code_ in this repository. Run `npm install` in the root in order to be able to run the scripts as listed below. We use the following dependencies:
 
 - `shelljs` in order to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file
@@ -140,8 +139,6 @@ We also use `prettier` to format the files. **Prettier is _NOT_ installed when u
 ### Fetch configlet
 
 If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet] binary. It will run on Linux, Mac OSX and Windows, and download `configlet` to your local drive. Find more information about [configlet][configlet] [here][configlet].
-
-### Fetch canonical data syncer
 
 > If a track implements an exercise for which test data exists, the exercise _must_ contain a `.meta/tests.toml` file. The goal of the `tests.toml` file is to keep track of which tests are implemented by the exercise. Tests in this file are identified by their UUID and each test has a boolean value that indicates if it is implemented by that exercise.
 > A `tests.toml` file for a track's `two-fer` exercise looks like this:
@@ -156,13 +153,31 @@ If you'd like to download [configlet][configlet], you can use the [`fetch-config
 "653611c6-be9f-4935-ab42-978e25fe9a10" = false
 ```
 
-To make it easy to keep the tests.toml up to date, contributors can use the `canonical_data_syncer` application. This application is a small, standalone binary that will compare the tests specified in the tests.toml files against the tests that are defined in the exercise's canonical data. It then interactively gives the maintainer the option to include or exclude test cases that are currently missing, updating the tests.toml file accordingly.
-
-If you'd like to download [`canonical_data_syncer`][canonical-data-syncer], you can use the [`fetch-canonical_data_syncer`][bin-fetch-canonical-data-syncer] binary. It will run on Linux, Mac OSX and Windows, and download `canonical_data_syncer` to your local drive. Find more information about [`canonical_data_syncer`][canonical-data-syncer] [here][canonical-data-syncer].
+To make it easy to keep the `tests.toml` files up to date, contributors can use the `configlet` application's `sync` command. This command will compare the tests specified in the `tests.toml` files against the tests that are defined in the exercise's canonical data. It then interactively gives the maintainer the option to include or exclude test cases that are currently missing, updating the `tests.toml` file accordingly.
 
 ### Scripts
 
 We have various `scripts` for you in order to aid with maintaining and contributing to this repository.
+
+> ⚠ If you into into the following error:
+>
+> ```text
+> SyntaxError: Unexpected token 'export'
+> ```
+>
+> It's because your local node version does **not** support es6
+> `import` and `export` statements in regular `.js` files, or
+> files without extension. This is one of the reasons why these
+> scripts are meant to be ran through node:
+>
+> ```shell
+> npx babel-node scripts/the-script
+> ```
+>
+> Additionally, this ensures that the code written in the scripts
+> and their dependencies can be executed by your current node
+> version, which may be different than the maintainer or
+> contributor who contributed to the script.
 
 #### `format`
 
@@ -302,8 +317,28 @@ Run this script to check if package name in package.json of exercises is in expe
 
 Run this script to check if there is any duplicate package name.
 
+#### `directory-check`
+
+```js
+/**
+ * Run this script (from root directory): npx babel-node scripts/directory-check
+ *
+ * This will run following checks:
+ *
+ * 1. Package has the correct directory based on the path to the exercise.
+ *
+ * This script also allows fixing these directories: npx babel-node scripts/directory-check --fix
+ */
+```
+
+Run this script to check if package repository directory in package.json of exercises is in expected format or to fix it.
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to test the directory for `concept/closures`, you may, depending on your environment, use:
+
+```shell
+ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
+```
+
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
-[canonical-data-syncer]: https://github.com/exercism/canonical-data-syncer
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
 [web-exercism]: https://exercism.io
 [file-config]: https://github.com/exercism/javascript/blob/master/config.json

@@ -71,7 +71,7 @@ See [comparison][concept-comparison] for more information on comparisons in gene
 
 ## Pitfalls
 
-Becuase numbers in JavaScript are floating point numbers, all math using these values is floating point math.
+Because numbers in JavaScript are floating point numbers, all math using these values is floating point math.
 Therefore, in JavaScript:
 
 ```javascript

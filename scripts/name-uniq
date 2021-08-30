@@ -13,16 +13,19 @@ const { packageFiles, registerExitHandler } = require('./helpers');
 
 registerExitHandler();
 
-let exitCode = 0;
-const allNames = packageFiles.map(filePath => JSON.parse(shell.cat(filePath).toString())['name']);
+const allNames = packageFiles.map(
+  (filePath) => JSON.parse(shell.cat(filePath).toString())['name']
+);
 
 // Check if all exercises have unique package names
-const duplicates = allNames.filter((e, i) => allNames.indexOf(e) !== i)
-if(duplicates.length !== 0) {
-  exitCode = 1
-  shell.echo(`[Failure] Duplicate package names found: ${duplicates.join(', ')}`);
+const duplicates = allNames.filter((e, i) => allNames.indexOf(e) !== i);
+
+if (duplicates.length !== 0) {
+  shell.echo(
+    `[Failure] Duplicate package names found: ${duplicates.join(', ')}`
+  );
+  shell.exit(1);
 }
 
-if(exitCode == 0) {
-  shell.echo('[Success] All package names are unique.');
-}
+shell.echo('[Success] All package names are unique.');
+shell.exit(0);

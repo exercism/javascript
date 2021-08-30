@@ -1,7 +1,9 @@
 export class CustomSet {
   constructor(data = []) {
     this.data = {};
-    data.forEach((el) => this.add(el));
+    data.forEach((el) => {
+      this.add(el);
+    });
   }
 
   add(el) {

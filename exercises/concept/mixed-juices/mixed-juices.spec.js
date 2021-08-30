@@ -1,7 +1,7 @@
-import { timeToMixJuice, limesToCut, remainingOrders } from './mixed-juices.js';
+import { timeToMixJuice, limesToCut, remainingOrders } from './mixed-juices';
 
 describe('timeToMixJuice', () => {
-  test(`returns the correct time for 'Pure Strawberry Joy'`, () => {
+  test("returns the correct time for 'Pure Strawberry Joy'", () => {
     expect(timeToMixJuice('Pure Strawberry Joy')).toBe(0.5);
   });
 

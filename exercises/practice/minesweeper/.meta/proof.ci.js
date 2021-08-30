@@ -20,9 +20,9 @@ function adjacentSquareHasMine(board, x, y, d) {
 }
 
 function countAdjacentMines(board, x, y) {
-  return DELTAS.filter((d) =>
-    adjacentSquareIsOnBoard(board, x, d)
-  ).filter((d) => adjacentSquareHasMine(board, x, y, d)).length;
+  return DELTAS.filter((d) => adjacentSquareIsOnBoard(board, x, d)).filter(
+    (d) => adjacentSquareHasMine(board, x, y, d)
+  ).length;
 }
 
 function cellToMineOrCount(cell, inputBoard, x, y) {

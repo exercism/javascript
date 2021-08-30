@@ -23,11 +23,5 @@ In other words: how _function_ can be passed as an argument to another function,
 
 ## Prerequisites
 
-- closures
-- booleans
-- objects
-- numbers
-- basics
-- errors
-- nullability
-- conditionals
+- `functions` because they are the base for understanding arrow functions
+- `objects` because they are needed for the exercise

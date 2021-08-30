@@ -1,5 +1,6 @@
 const VOWEL_SOUND_REGEXP = /^([aeiou]|xr|yt)/;
-const CONSONANT_SOUND_REGEXP = /^([^aeiou]+(?=y)|[^aeiou]?qu|[^aeiou]+)([a-z]+)/;
+const CONSONANT_SOUND_REGEXP =
+  /^([^aeiou]+(?=y)|[^aeiou]?qu|[^aeiou]+)([a-z]+)/;
 
 function translateWord(word) {
   if (VOWEL_SOUND_REGEXP.test(word)) {

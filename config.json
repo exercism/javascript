@@ -12,9 +12,12 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "highlightjs_language": "javascript"
   },
-  "test_pattern": ".*[.]spec[.]js$",
+  "test_runner": {
+    "average_run_time": 5.0
+  },
   "files": {
     "solution": ["%{kebab_slug}.js"],
     "test": ["%{kebab_slug}.spec.js"],
@@ -75,7 +78,7 @@
         "slug": "bird-watcher",
         "name": "Bird Watcher",
         "uuid": "3e648aa0-9ce7-4041-93d2-2b95f3832824",
-        "concepts": ["for-loops", "increment-decrement"],
+        "concepts": ["increment-decrement", "for-loops"],
         "prerequisites": ["arrays", "comparison", "conditionals"],
         "status": "beta"
       },
@@ -92,8 +95,14 @@
         "name": "Lucky Numbers",
         "uuid": "78bbd7d2-b660-4791-a404-af5bfed31849",
         "concepts": ["type-conversion"],
-        "prerequisites": ["arrays", "strings", "numbers"],
-        "status": "wip"
+        "prerequisites": [
+          "booleans",
+          "strings",
+          "numbers",
+          "null-undefined",
+          "arrays"
+        ],
+        "status": "beta"
       },
       {
         "slug": "elyses-analytic-enchantments",
@@ -107,8 +116,8 @@
         "slug": "elyses-destructured-enchantments",
         "name": "Elyses Destructured Enchantments",
         "uuid": "d9b5cd13-2f2b-4034-a571-e66c847ed6f8",
-        "concepts": ["array-destructuring", "spread-operator", "rest-elements"],
-        "prerequisites": ["arrays"],
+        "concepts": ["array-destructuring", "rest-and-spread"],
+        "prerequisites": ["arrays", "functions", "objects"],
         "status": "beta"
       },
       {
@@ -130,29 +139,37 @@
         "slug": "nullability",
         "name": "Employee Badges",
         "uuid": "19962010-7b8c-4db1-bdae-ffc857b268e5",
-        "concepts": ["nullability"],
-        "prerequisites": ["conditionals", "strings"],
-        "status": "active"
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
-        "slug": "recursion",
+        "slug": "amusement-park",
+        "name": "Amusement Park",
+        "uuid": "2d40b46b-9e49-431c-913c-81d1f42f74df",
+        "concepts": ["null-undefined"],
+        "prerequisites": ["objects"],
+        "status": "beta"
+      },
+      {
+        "slug": "pizza-order",
         "name": "Pizza Order",
         "uuid": "e9a9fa73-4497-43d5-a4ff-4eb319c98233",
         "concepts": ["recursion"],
         "prerequisites": [
-          "arrays",
+          "functions",
+          "rest-and-spread",
           "array-destructuring",
-          "array-loops",
-          "numbers"
+          "array-transformations"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
-        "slug": "closures",
+        "slug": "coordinate-transformation",
         "name": "Coordinate Transformation",
         "uuid": "5aa39e89-c601-4a66-ab72-5d8512d69e02",
         "concepts": ["closures"],
-        "prerequisites": ["arrays", "booleans"],
+        "prerequisites": ["arrays", "functions"],
         "status": "beta"
       },
       {
@@ -160,23 +177,58 @@
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
         "concepts": ["callbacks"],
+        "prerequisites": ["functions", "objects"],
+        "status": "beta"
+      },
+      {
+        "slug": "translation-service",
+        "name": "Translation Service",
+        "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
+        "concepts": ["promises"],
         "prerequisites": [
-          "booleans",
-          "closures",
-          "conditionals",
+          "array-transformations",
+          "callbacks",
           "errors",
-          "nullability",
-          "numbers",
-          "objects"
+          "recursion"
         ],
         "status": "beta"
       },
       {
-        "slug": "promises",
-        "name": "Translation Service",
-        "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
-        "concepts": ["promises"],
-        "prerequisites": ["arrays", "callbacks", "errors", "recursion"],
+        "slug": "high-score-board",
+        "name": "High Score Board",
+        "uuid": "431d1f13-d280-4808-bbc6-a72e628c15c2",
+        "concepts": ["objects"],
+        "prerequisites": ["for-loops"],
+        "status": "beta"
+      },
+      {
+        "slug": "ozans-playlist",
+        "name": "Ozan's Playlist",
+        "uuid": "347692fb-7b0f-4ef0-9a02-2192b59bdf5d",
+        "concepts": ["sets"],
+        "prerequisites": [
+          "array-destructuring",
+          "array-loops",
+          "comparison",
+          "rest-and-spread",
+          "arrays"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "lasagna-master",
+        "name": "Lasagna Master",
+        "uuid": "a7e323f1-84d8-43d5-8c26-cc119166b9fd",
+        "concepts": ["functions"],
+        "prerequisites": ["objects", "arrays", "null-undefined"],
+        "status": "beta"
+      },
+      {
+        "slug": "factory-sensors",
+        "name": "Factory Sensors",
+        "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
+        "concepts": ["errors"],
+        "prerequisites": ["classes", "null-undefined", "conditionals"],
         "status": "beta"
       }
     ],
@@ -200,12 +252,7 @@
         "name": "Two Fer",
         "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
         "practices": [],
-        "prerequisites": [
-          "strings",
-          "functions",
-          "default-value",
-          "optional-parameters"
-        ],
+        "prerequisites": ["strings", "functions"],
         "difficulty": 1,
         "topics": ["optional_values", "strings", "text_formatting"]
       },
@@ -223,7 +270,7 @@
         "name": "Resistor Color Duo",
         "uuid": "de800041-3dcc-41b9-b101-7314ff685c93",
         "practices": [],
-        "prerequisites": ["array-transformations"],
+        "prerequisites": ["array-analysis"],
         "difficulty": 2,
         "topics": ["strings", "arrays"]
       },
@@ -232,7 +279,7 @@
         "name": "Gigasecond",
         "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
         "practices": [],
-        "prerequisites": ["dates", "immutability", "type-conversion"],
+        "prerequisites": ["dates", "numbers", "arithmetic-operators"],
         "difficulty": 1,
         "topics": ["time"]
       },
@@ -250,7 +297,7 @@
         "name": "Space Age",
         "uuid": "d9d757ed-ebe6-4d4a-aa73-f6834221cd54",
         "practices": [],
-        "prerequisites": ["objects", "numbers"],
+        "prerequisites": ["objects", "numbers", "type-conversion"],
         "difficulty": 2,
         "topics": ["floating_point_numbers"]
       },
@@ -296,7 +343,7 @@
         "name": "Bob",
         "uuid": "a5bf36f0-5d3c-41d4-8d54-e37e484e59cd",
         "practices": [],
-        "prerequisites": ["strings", "booleans", "regular-expressions"],
+        "prerequisites": ["strings", "conditionals", "regular-expressions"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -326,7 +373,7 @@
         "name": "Linked List",
         "uuid": "ec60a578-8889-46a1-b7b8-306dbd8551d5",
         "practices": [],
-        "prerequisites": ["classes", "while-loops"],
+        "prerequisites": ["classes", "conditionals", "while-loops"],
         "difficulty": 5,
         "topics": [
           "algorithms",
@@ -343,7 +390,7 @@
         "name": "Grade School",
         "uuid": "64637322-33bc-401f-8cec-1f9810a41f75",
         "practices": [],
-        "prerequisites": ["classes", "objects", "arrays", "immutability"],
+        "prerequisites": ["classes", "objects", "array-transformations"],
         "difficulty": 5,
         "topics": ["arrays", "maps", "sorting"]
       },
@@ -352,7 +399,7 @@
         "name": "List Ops",
         "uuid": "7d9db056-5398-41b6-af3b-9707f5eb0dbc",
         "practices": [],
-        "prerequisites": ["classes", "arrays", "functions"],
+        "prerequisites": ["classes", "arrays", "functions", "recursion"],
         "difficulty": 6,
         "topics": ["data_structures", "loops", "lists", "recursion"]
       },
@@ -406,7 +453,13 @@
         "name": "Wordy",
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
-        "prerequisites": ["strings", "regular-expressions", "errors"],
+        "prerequisites": [
+          "strings",
+          "objects",
+          "arrow-functions",
+          "regular-expressions",
+          "errors"
+        ],
         "difficulty": 7,
         "topics": [
           "conditionals",
@@ -423,7 +476,7 @@
         "name": "Secret Handshake",
         "uuid": "74bbc9e3-edc5-41e0-84d7-5b2d98dd8370",
         "practices": [],
-        "prerequisites": ["bit-manipulation", "array-analysis"],
+        "prerequisites": ["bit-manipulation", "array-analysis", "errors"],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -437,9 +490,9 @@
       {
         "slug": "leap",
         "name": "Leap",
-        "uuid": "7c8294ee-5924-4bf8-a72f-31d0e2d7d9a0",
+        "uuid": "193a0e19-462d-4d26-a117-124f07d5a3d7",
         "practices": [],
-        "prerequisites": ["numbers"],
+        "prerequisites": ["arithmetic-operators", "booleans"],
         "difficulty": 1,
         "topics": ["booleans", "integers", "logic"]
       },
@@ -448,7 +501,7 @@
         "name": "Reverse String",
         "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
         "practices": [],
-        "prerequisites": ["strings", "array-transformation"],
+        "prerequisites": ["strings", "array-transformations"],
         "difficulty": 2,
         "topics": ["loops", "strings"]
       },
@@ -585,7 +638,7 @@
         "name": "Difference Of Squares",
         "uuid": "7dfa878c-83a6-48ef-9170-b6633d51d601",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "for-loops"],
         "difficulty": 3,
         "topics": ["algorithms", "loops", "integers", "math"]
       },
@@ -603,7 +656,7 @@
         "name": "Complex Numbers",
         "uuid": "ea9a9a3e-ae6a-470d-8bb4-2afead507f24",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "numbers", "math"],
         "difficulty": 4,
         "topics": ["math"]
       },
@@ -621,7 +674,7 @@
         "name": "Prime Factors",
         "uuid": "f43cdddf-eea8-4c4a-8359-c69e20ff9661",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["while-loops", "conditionals", "arrays"],
         "difficulty": 4,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
@@ -680,7 +733,7 @@
       {
         "slug": "high-scores",
         "name": "High Scores",
-        "uuid": "19b41c4a-1466-5c19-b547-40284189fd18",
+        "uuid": "f5af74f7-259c-48e6-828c-bcd98717d8dd",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
@@ -1018,7 +1071,7 @@
       {
         "slug": "sublist",
         "name": "Sublist",
-        "uuid": "4be85b5e-6b13-11e7-907b-a6006ad3dba0",
+        "uuid": "bb00e97f-8dcf-40ba-b8c2-c3cb72bbaf97",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
@@ -1319,7 +1372,7 @@
         "name": "Kindergarten Garden",
         "uuid": "13444eff-005a-405e-9737-7b64d99c1a61",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "strings", "rest-and-spread"],
         "difficulty": 7,
         "topics": [
           "arrays",
@@ -1377,7 +1430,7 @@
       },
       {
         "slug": "dnd-character",
-        "name": "Dnd Character",
+        "name": "D&D Character",
         "uuid": "b373e13c-f179-4b36-b6e8-2a0f41540344",
         "practices": [],
         "prerequisites": [],
@@ -1617,8 +1670,8 @@
     },
     {
       "uuid": "008f1c88-7c14-48b2-a88d-49ecb5e3b122",
-      "slug": "nullability",
-      "name": "Nullability"
+      "slug": "null-undefined",
+      "name": "Null and Undefined"
     },
     {
       "uuid": "8da586c3-9327-46e2-ad32-c8423061912d",
@@ -1636,6 +1689,11 @@
       "name": "Recursion"
     },
     {
+      "uuid": "efc895b2-8420-44f1-a385-5c637286f797",
+      "slug": "rest-and-spread",
+      "name": "Rest and Spread"
+    },
+    {
       "uuid": "19085ad2-038a-4e08-ad34-47ff2a78fec6",
       "slug": "string-formatting",
       "name": "String Formatting"
@@ -1646,24 +1704,19 @@
       "name": "Strings"
     },
     {
-      "uuid": "a8cdc468-c950-43d7-a1b8-99a5e0de651a",
-      "slug": "variable-parameters",
-      "name": "Variable Parameters"
-    },
-    {
       "uuid": "ef1e44db-5fd0-4550-9135-7522303e7e42",
       "slug": "comparison",
       "name": "Comparison"
     },
     {
+      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
+      "slug": "increment-decrement",
+      "name": "Increment/Decrement"
+    },
+    {
       "uuid": "be301f37-6cf4-4688-949e-75a8976a91e3",
       "slug": "for-loops",
       "name": "For Loops"
-    },
-    {
-      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
-      "slug": "increment-decrement",
-      "name": "Increment and Decrement Operators"
     },
     {
       "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
@@ -1674,37 +1727,57 @@
       "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
       "slug": "conditionals-switch",
       "name": "Switch Statement"
+    },
+    {
+      "uuid": "68dd89d3-13b8-49f5-b493-ccfdc82a073c",
+      "slug": "objects",
+      "name": "Objects"
+    },
+    {
+      "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
+      "slug": "sets",
+      "name": "Sets"
+    },
+    {
+      "uuid": "66264917-2d3e-42e9-806c-0fa740852f0f",
+      "slug": "functions",
+      "name": "Functions"
+    },
+    {
+      "uuid": "cbad4d23-a9d8-4370-add2-f4416a4df027",
+      "slug": "type-conversion",
+      "name": "Type Conversion"
     }
   ],
   "key_features": [
     {
-      "icon": "features-cross-platform",
+      "icon": "cross-platform",
       "title": "Runs almost everywhere",
       "content": "Build web-pages, write backend, create database scripts, make mobile apps, design CLI-s, and more."
     },
     {
-      "icon": "features-multi-paradigm",
+      "icon": "multi-paradigm",
       "title": "Use any programming style",
       "content": "Use prototype-based, object-oriented, functional, or declarative programming styles, and more."
     },
     {
-      "icon": "features-weakly-typed",
+      "icon": "dynamically-typed",
       "title": "No types required",
       "content": "Dynamically and weakly typed by default, gain typed confidence using Flow, JSDoc, or TypeScript."
     },
     {
-      "icon": "features-concurrency",
+      "icon": "concurrency",
       "title": "Concurrency is safe",
       "content": "Async/await, dedicated workers, or state sync in shared workers. No deadlocks or race conditions."
     },
     {
-      "icon": "features-packages",
+      "icon": "tooling",
       "title": "Largest package registry",
       "content": "No need to reinvent the wheel. Build on top of > 1.3 million packages (April, 2020)."
     },
     {
-      "icon": "features-designed",
-      "title": "Designed by a comity",
+      "icon": "community",
+      "title": "Designed by a committee",
       "content": "Frequent updates, following ECMAScript, a general purpose, cross platform, vendor-neutral standard."
     }
   ],

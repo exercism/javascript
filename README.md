@@ -16,6 +16,29 @@ You can find this in the [`config.json`][file-config].
 See [CONTRIBUTING.md][file-contributing] for a list of requirements to contribute to this track.
 It also has a list of tools you can use, of which the `test` tool is one of them.
 
+## Running the code quality tooling (linter)
+
+This run `eslint` for all files that _require_ linting.
+
+```shell
+npx eslint exercises/**/*.spec.js exercises/**/.meta/*.js --fix
+```
+
+These are also the files that are linted using the lint script, mentioned in [CONTRIBUTING.md][file-contributing].
+The lint rules imposed on contributors and maintainers are stricter than those for the student.
+The idea is that we do **not** impose style rules on the students, but we guard for (potential) errors.
+
+Files with strict rules:
+
+- `<slug>.spec.js`
+- `.meta/proof.ci.js`
+- `.meta/exemplar.js`
+
+Files with loose rules:
+
+- `custom.spec.js`
+- `<slug>.js`
+
 ## Running the test suite
 
 This runs `jest` tests for all sample solutions.

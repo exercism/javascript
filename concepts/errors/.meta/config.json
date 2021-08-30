@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for errors concept",
-  "authors": [],
-  "contributors": []
+  "blurb": "Error handling in JavaScript is done via exceptions. Learn how to throw exceptions and then handle them using a try...catch statement.",
+  "authors": ["TomPradat"],
+  "contributors": ["SleeplessByte"]
 }

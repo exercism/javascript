@@ -79,7 +79,7 @@ removeItemAtBottom([8, 5, 9, 7, 1]);
 // => [5, 9, 7, 1]
 ```
 
-## 8. Check size of the stack
+## 8. Check the size of the stack
 
 Check whether the size of the stack is equal a given `stackSize` or not.
 

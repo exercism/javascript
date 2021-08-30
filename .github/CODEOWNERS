@@ -4,3 +4,8 @@ config/maintainers.json @exercism/maintainers-admin
 # Code owners
 .github/CODEOWNERS      @exercism/maintainers-admin
 .github/workflows       @exercism/javascript
+
+# Changes to `fetch-configlet` should be made in the `exercism/configlet` repo
+bin/fetch-configlet     @exercism/maintainers-admin
+bin/fetch-configlet.ps1 @exercism/maintainers-admin
+

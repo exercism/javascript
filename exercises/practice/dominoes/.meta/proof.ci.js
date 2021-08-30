@@ -50,7 +50,9 @@ const removeOneDomino = (domino, dominoes) => {
   return [...dominoes.slice(0, k), ...dominoes.slice(k + 1)];
 };
 const otherEnd = (x, [a, b]) => (a === x ? b : a);
-const matchDomino = ([a, b]) => ([c, d]) =>
-  (a === c && b === d) || (a === d && b === c);
+const matchDomino =
+  ([a, b]) =>
+  ([c, d]) =>
+    (a === c && b === d) || (a === d && b === c);
 const matchOneEnd = (x) => (d2) => d2.includes(x);
 const last = (xs) => xs[xs.length - 1];

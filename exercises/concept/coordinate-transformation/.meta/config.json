@@ -1,0 +1,11 @@
+{
+  "blurb": "Practice your knowledge of closures by implementing various coordinate transformations.",
+  "authors": ["neenjaw"],
+  "contributors": ["SleeplessByte"],
+  "files": {
+    "solution": ["coordinate-transformation.js"],
+    "test": ["coordinate-transformation.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
+}

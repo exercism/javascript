@@ -1,7 +1,9 @@
-export const promisify = (fn) => (...args) =>
-  new Promise((resolve, reject) =>
-    fn(...args, (err, result) => (err ? reject(err) : resolve(result)))
-  );
+export const promisify =
+  (fn) =>
+  (...args) =>
+    new Promise((resolve, reject) => {
+      fn(...args, (err, result) => (err ? reject(err) : resolve(result)));
+    });
 
 export const all = (promises) =>
   promises.reduce(
@@ -17,12 +19,16 @@ export const allSettled = (promises) =>
   );
 
 export const race = (promises) =>
-  new Promise((resolve, reject) =>
-    promises.forEach((promise) => promise.then(resolve, reject))
-  );
+  new Promise((resolve, reject) => {
+    promises.forEach((promise) => {
+      promise.then(resolve, reject);
+    });
+  });
 
 export const any = (promises) =>
   new Promise((resolve, reject) => {
-    promises.forEach((promise) => promise.then(resolve).catch(() => null));
+    promises.forEach((promise) => {
+      promise.then(resolve).catch(() => null);
+    });
     allSettled(promises).then(reject);
   });

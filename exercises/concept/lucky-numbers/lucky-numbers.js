@@ -1,30 +1,33 @@
 // @ts-check
 
 /**
- * Respond with the sum of the array of two number
+ * Calculates the sum of the two input arrays.
  *
  * @param {number[]} array1
  * @param {number[]} array2
- * @returns {number}
+ * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
   throw new Error('Implement the twoSum function');
 }
 
 /**
- * Respond with a boolean if the number is luck for him or not.
- * @param {number} sum
- * @returns {boolean}
+ * Checks whether a number is a palindrome.
+ *
+ * @param {number} value
+ * @returns {boolean}  whether the number is a palindrome or not
  */
-export function luckyNumber(sum) {
+export function luckyNumber(value) {
   throw new Error('Implement the luckyNumber function');
 }
 
 /**
- * Respond with a string after adding the dashes between the number
- * @param {number} blurb
- * @returns {string}
+ * Determines the error message that should be shown to the user
+ * for the given input value.
+ *
+ * @param {string|null|undefined} input
+ * @returns {string} error message
  */
-export function dashify(blurb) {
-  throw new Error('Implement the dashify function');
+export function errorMessage(input) {
+  throw new Error('Implement the errorMessage function');
 }

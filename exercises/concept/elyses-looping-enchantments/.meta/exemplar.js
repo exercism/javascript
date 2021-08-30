@@ -11,7 +11,9 @@
 export function cardTypeCheck(stack, card) {
   let count = 0;
 
-  stack.forEach((c) => c === card && count++);
+  stack.forEach((c) => {
+    c === card && count++;
+  });
 
   return count;
 }
