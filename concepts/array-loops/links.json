@@ -1,10 +1,10 @@
 [
-    {
-        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of",
-        "description": "MDN: for...of"
-      },
-      {
-        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#modifying_the_array_during_iteration",
-        "description": "MDN: forEach"
-      }
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of",
+    "description": "MDN: for...of"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#modifying_the_array_during_iteration",
+    "description": "MDN: forEach"
+  }
 ]
