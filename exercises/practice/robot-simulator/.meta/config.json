@@ -15,6 +15,5 @@
     "test": ["robot-simulator.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source": "Inspired by an interview question at a famous company.",
-  "source_url": ""
+  "source": "Inspired by an interview question at a famous company."
 }
