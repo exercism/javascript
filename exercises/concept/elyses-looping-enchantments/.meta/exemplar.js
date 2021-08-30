@@ -28,7 +28,7 @@ export function cardTypeCheck(stack, card) {
  * @returns {number} number of cards that are either odd or even (depending on `type`)
  */
 export function determineOddEvenCards(stack, type) {
-  const moduloResult = type ? 0 : 1
+  const moduloResult = type ? 0 : 1;
   let count = 0;
 
   for (const card of stack) {
