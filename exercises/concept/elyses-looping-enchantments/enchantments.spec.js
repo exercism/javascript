@@ -74,6 +74,6 @@ describe('determineOddEvenCards', () => {
 
   test('a mix of odd and even cards', () => {
     expect(determineOddEvenCards([1, 2, 1, 1, 2, 1, 9], TYPE_IS_ODD)).toBe(5);
-    expect(determineOddEvenCards([1, 2, 1, 1, 2, 1, 9], TYPE_IS_ODD)).toBe(2);
+    expect(determineOddEvenCards([1, 2, 1, 1, 2, 1, 9], TYPE_IS_EVEN)).toBe(2);
   });
 });
