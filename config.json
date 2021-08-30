@@ -129,7 +129,8 @@
           "arrays",
           "callbacks",
           "arrow-functions",
-          "for-loops"
+          "for-loops",
+          "conditionals"
         ],
         "status": "beta"
       },

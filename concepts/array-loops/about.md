@@ -42,6 +42,9 @@ for (const number of numbers) {
 
 Just like in regular `for` loops, you can use `continue` stop the current iteration and `break` to stop the execution of the loop entirely.
 
+JavaScript also has a `for...in` loop, for example to iterate over keys in an object.
+It is important to note that `for...of` and `for...in` are not interchangeable, see [MDN documentation][mdn-for-in-for-of] for details on this.
+
 ## The `forEach` Method
 
 Every array includes a `forEach` method that can also be used to loop over it.
