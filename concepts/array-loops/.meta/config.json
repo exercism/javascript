@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for array-loops concept",
-  "authors": ["rishiosaur"],
+  "blurb": "Learn about multiple ways to iterate over arrays in JavaScript.",
+  "authors": ["rishiosaur", "junedev"],
   "contributors": ["SleeplessByte"]
 }

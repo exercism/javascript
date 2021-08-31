@@ -1,13 +1,13 @@
 {
-  "name": "@exercism/javascript-array-loops",
-  "description": "Exercism concept exercise on array-loops",
+  "name": "@exercism/javascript-elyses-looping-enchantments",
+  "description": "Exercism concept exercise on array loops",
   "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/array-loops"
+    "directory": "exercises/concept/elyses-looping-enchantments"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
