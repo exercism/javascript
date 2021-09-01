@@ -85,7 +85,7 @@ See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief expl
 [built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 [comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 [lexical-grammar]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals
-[string-formatting]: /tracks/javascript/concepts/string-formating
+[string-formatting]: /tracks/javascript/concepts/string-formatting
 [concept-comparison]: /tracks/javascript/concepts/comparison
 [concept-type-checking]: /tracks/javascript/concepts/type-checking
 [concept-type-conversion]: /tracks/javascript/concepts/type-conversion
