@@ -1,5 +1,6 @@
 {
   "blurb": "Elyse's magic training continues, teaching you about array destructing and the rest/spread operator.",
+  "icon": "elyses-enchantments",
   "authors": ["kristinaborn"],
   "contributors": ["SleeplessByte", "angelikatyborska"],
   "files": {
