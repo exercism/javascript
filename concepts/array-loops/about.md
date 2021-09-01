@@ -99,3 +99,4 @@ There are a couple of things you should keep in mind when working with `forEach`
 [concept-for-loops]: /tracks/javascript/concepts/for-loops
 [concept-callbacks]: /tracks/javascript/concepts/callbacks
 [mdn-foreach-thisarg]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#using_thisarg
+[mdn-for-in-for-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of#difference_between_for...of_and_for...in
