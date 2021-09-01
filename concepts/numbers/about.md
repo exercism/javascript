@@ -81,20 +81,11 @@ Therefore, in JavaScript:
 
 See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in depth explanation.
 
-## Related concepts
-
-<!--
-These are widgets. See: https://github.com/exercism/docs/blob/main/anatomy/tracks/widgets.md
-Normally these would be put in a list, but it renders better when it's next to each other.
--->
-
-[concept:javascript/comparison](https://github.com/exercism/javascript/tree/main/concepts/comparison) [concept:javascript/type-checking](https://github.com/exercism/javascript/tree/main/concepts/type-checking) [concept:javascript/type-conversion](https://github.com/exercism/javascript/tree/main/concepts/type-conversion) [concept:javascript/string-formatting](https://github.com/exercism/javascript/tree/main/concepts/string-formatting)
-
 [built-in-number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 [comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 [lexical-grammar]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals
-[string-formatting]: https://exercism.lol/tracks/javascript/concepts/string-formating
-[concept-comparison]: https://exercism.lol/tracks/javascript/concepts/comparison
-[concept-type-checking]: https://exercism.lol/tracks/javascript/concepts/type-checking
-[concept-type-conversion]: https://exercism.lol/tracks/javascript/concepts/type-conversion
+[string-formatting]: /tracks/javascript/concepts/string-formating
+[concept-comparison]: /tracks/javascript/concepts/comparison
+[concept-type-checking]: /tracks/javascript/concepts/type-checking
+[concept-type-conversion]: /tracks/javascript/concepts/type-conversion
