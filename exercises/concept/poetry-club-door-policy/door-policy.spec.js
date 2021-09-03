@@ -161,12 +161,12 @@ describe('strings', () => {
       expect(key.length).toBe(SHIRE_HORSE.length);
     });
 
-    xtest('it outputs takes the first characters', () => {
+    test('it outputs takes the first characters', () => {
       const key = ShireGuard.recite();
       expect(key.toUpperCase()).toBe(SHIRE_HORSE.acrostic.toUpperCase());
     });
 
-    xtest('it generates the correct password', () => {
+    test('it generates the correct password', () => {
       ShireGuard.assert();
     });
 
@@ -180,7 +180,7 @@ describe('strings', () => {
       const poem = FRONT_DOOR_CASES[name];
       const guard = new FrontDoorGuard(poem);
 
-      xtest(`frontDoorPassword(${name})`, () => {
+      test(`frontDoorPassword(${name})`, () => {
         guard.assert();
       });
     });
@@ -189,17 +189,17 @@ describe('strings', () => {
   describe('back door', () => {
     const ShireGuard = new BackDoorGuard(SHIRE_HORSE);
 
-    xtest('it outputs a character per line', () => {
+    test('it outputs a character per line', () => {
       const key = ShireGuard.recite();
       expect(key.length).toBe(SHIRE_HORSE.length);
     });
 
-    xtest('it outputs takes the first characters', () => {
+    test('it outputs takes the first characters', () => {
       const key = ShireGuard.recite();
       expect(key.toUpperCase()).toBe(SHIRE_HORSE.telestich.toUpperCase());
     });
 
-    xtest('it generates the correct password', () => {
+    test('it generates the correct password', () => {
       ShireGuard.assert();
     });
 
@@ -212,7 +212,7 @@ describe('strings', () => {
       const poem = BACK_DOOR_CASES[name];
       const guard = new BackDoorGuard(poem);
 
-      xtest(`backDoorGuard(${name})`, () => {
+      test(`backDoorGuard(${name})`, () => {
         guard.assert();
       });
     });

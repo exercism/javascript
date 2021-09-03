@@ -6,23 +6,23 @@ import {
 
 describe('vehicle purchase', () => {
   describe('needsLicense', () => {
-    xtest('requires a license for a car', () => {
+    test('requires a license for a car', () => {
       expect(needsLicense('car')).toBe(true);
     });
 
-    xtest('requires a license for a truck', () => {
+    test('requires a license for a truck', () => {
       expect(needsLicense('truck')).toBe(true);
     });
 
-    xtest('does not require a license for a bike', () => {
+    test('does not require a license for a bike', () => {
       expect(needsLicense('bike')).toBe(false);
     });
 
-    xtest('does not require a license for a stroller', () => {
+    test('does not require a license for a stroller', () => {
       expect(needsLicense('stroller')).toBe(false);
     });
 
-    xtest('does not require a license for an e-scooter', () => {
+    test('does not require a license for an e-scooter', () => {
       expect(needsLicense('e-scooter')).toBe(false);
     });
   });
@@ -30,7 +30,7 @@ describe('vehicle purchase', () => {
   describe('chooseVehicle', () => {
     const rest = ' is clearly the better choice.';
 
-    xtest('correctly recommends the first option', () => {
+    test('correctly recommends the first option', () => {
       expect(chooseVehicle('Bugatti Veyron', 'Ford Pinto')).toBe(
         'Bugatti Veyron' + rest
       );
@@ -39,7 +39,7 @@ describe('vehicle purchase', () => {
       );
     });
 
-    xtest('correctly recommends the second option', () => {
+    test('correctly recommends the second option', () => {
       expect(chooseVehicle('Ford Pinto', 'Bugatti Veyron')).toBe(
         'Bugatti Veyron' + rest
       );
@@ -50,24 +50,24 @@ describe('vehicle purchase', () => {
   });
 
   describe('calculateResellPrice', () => {
-    xtest('price is reduced to 80% for age below 3', () => {
+    test('price is reduced to 80% for age below 3', () => {
       expect(calculateResellPrice(40000, 2)).toBe(32000);
       expect(calculateResellPrice(40000, 2.5)).toBe(32000);
     });
 
-    xtest('price is reduced to 50% for age above 10', () => {
+    test('price is reduced to 50% for age above 10', () => {
       expect(calculateResellPrice(40000, 2)).toBe(32000);
     });
 
-    xtest('price is reduced to 70% for between 3 and 10', () => {
+    test('price is reduced to 70% for between 3 and 10', () => {
       expect(calculateResellPrice(25000, 7)).toBe(17500);
     });
 
-    xtest('works correctly for threshold age 3', () => {
+    test('works correctly for threshold age 3', () => {
       expect(calculateResellPrice(40000, 3)).toBe(28000);
     });
 
-    xtest('works correctly for threshold age 10', () => {
+    test('works correctly for threshold age 10', () => {
       expect(calculateResellPrice(25000, 10)).toBe(17500);
     });
   });
