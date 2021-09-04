@@ -11,7 +11,7 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  throw new Error('Please implement the needsLicense method');
+  throw new Error('Please implement the needsLicense function');
 }
 
 /**
@@ -23,7 +23,7 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  throw new Error('Please implement the chooseVehicle method');
+  throw new Error('Please implement the chooseVehicle function');
 }
 
 /**
@@ -35,5 +35,5 @@ export function chooseVehicle(option1, option2) {
  * @returns expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
-  throw new Error('Please implement the calculateResellPrice method');
+  throw new Error('Please implement the calculateResellPrice function');
 }
