@@ -1,0 +1,26 @@
+# This workflow item makes sure that there are no lock files in the exercises
+
+name: lockfile detection
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        filename:
+        - yarn.lock
+        - package-lock.json
+
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
+
+      - name: 'verify there are no files'
+        run: if (( $(find exercises -name ${{ matrix.filename }} | wc -l) > 0)); then exit 1; fi
