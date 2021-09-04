@@ -338,7 +338,7 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
 ```
 
-[configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
+[configlet]: https://exercism.org/docs/building/configlet
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
 [web-exercism]: https://exercism.io
 [file-config]: https://github.com/exercism/javascript/blob/master/config.json
@@ -347,14 +347,14 @@ ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
 [issue-discussion]: https://github.com/exercism/javascript/labels/discussion%20%3Aspeech_balloon%3A
 [issue-new-exercise]: https://github.com/exercism/javascript/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Asparkles%3A+new+exercise%22
 [list-of-exercises]: https://tracks.exercism.io/javascript/master/unimplemented
-[contributing-generic]: https://github.com/exercism/docs/tree/master/contributing-to-language-tracks
+[contributing-generic]: https://exercism.org/docs/building
 [contributing-javascript]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
 [contributing-javascript-analyzer]: https://github.com/exercism/javascript-analyzer/blob/master/CONTRIBUTING.md
 [contributing-javascript-test-runner]: https://github.com/exercism/javascript-test-runner
 [contributing-typescript]: https://github.com/exercism/typescript/
 [contributing-typescript-analyzer]: https://github.com/exercism/typescript-analyzer/blob/master/CONTRIBUTING.md
 [contributing-website-copy]: https://github.com/exercism/website-copy#contributing
-[doc-readme]: https://github.com/exercism/docs/blob/master/language-tracks/exercises/anatomy/readmes.md
+[doc-readme]: https://exercism.org/docs/building/tracks
 [problem-specifications]: https://github.com/exercism/problem-specifications
 [coc]: https://exercism.io/code-of-conduct
 [mentor-notes]: https://github.com/exercism/website-copy/tree/master/tracks/javascript/exercises

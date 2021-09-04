@@ -121,9 +121,9 @@ If you have any questions regarding implementing the exercise, please post them 
 [analyzer]: https://github.com/exercism/javascript-analyzer
 [representer]: https://github.com/exercism/javascript-representer
 [concept-exercises]: https://github.com/exercism/v3/blob/main/languages/javascript/exercises/concept/README.md
-[how-to-implement-a-concept-exercise]: https://github.com/exercism/v3/blob/main/docs/maintainers/generic-how-to-implement-a-concept-exercise.md
-[docs-concepts]: https://github.com/exercism/docs/blob/main/anatomy/tracks/concepts.md
-[docs-concept-exercises]: https://github.com/exercism/docs/blob/main/anatomy/tracks/concept-exercises.md
+[how-to-implement-a-concept-exercise]: https://exercism.org/docs/building/tracks/concept-exercises
+[docs-concepts]: https://exercism.org/docs/building/tracks/concepts
+[docs-concept-exercises]: https://exercism.org/docs/building/product/concept-exercises
 [docs-rationale-for-v3]: https://github.com/exercism/v3/blob/main/docs/rationale-for-v3.md
 [docs-features-of-v3]: https://github.com/exercism/v3/blob/main/docs/features-of-v3.md
 [anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA

@@ -80,7 +80,7 @@ A lot of the improvements made to this track and tooling, is also made to the Ty
 - [The TypeScript Test Runner][git-typescript-test-runner]
 
 [web-exercism]: https://exercism.io
-[git-configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
+[git-configlet]: https://exercism.org/docs/building/configlet
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
 [file-config]: https://github.com/exercism/javascript/blob/master/config.json
 [file-contributing]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
