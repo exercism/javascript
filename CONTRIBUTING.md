@@ -1,6 +1,6 @@
 # Contributing
 
-This is the JavaScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **core** exercises, the ones a student _must_ complete, and each **core** exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config]. It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
+This is the JavaScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete.The track consists of various **concept** exercises which teach the [JavaScript syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned. You can find this in the [`config.json`][file-config]. It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
@@ -340,7 +340,8 @@ ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
 
 [configlet]: https://exercism.org/docs/building/configlet
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/main/bin/fetch-configlet
-[web-exercism]: https://exercism.io
+[web-exercism]: https://exercism.org
+[web-syllabus]: https://exercism.org/tracks/javascript/concepts
 [file-config]: https://github.com/exercism/javascript/blob/main/config.json
 [file-docs]: https://github.com/exercism/javascript/tree/main/docs
 [issue-open]: https://github.com/exercism/javascript/issues
@@ -356,5 +357,5 @@ ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
 [contributing-website-copy]: https://github.com/exercism/website-copy#contributing
 [doc-readme]: https://exercism.org/docs/building/tracks
 [problem-specifications]: https://github.com/exercism/problem-specifications
-[coc]: https://exercism.io/code-of-conduct
+[coc]: https://exercism.org/code-of-conduct
 [mentor-notes]: https://github.com/exercism/website-copy/tree/main/tracks/javascript/exercises
