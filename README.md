@@ -1,15 +1,15 @@
 # JavaScript
 
-[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / master](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
+[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
+
+[web-syllabus]: https://exercism.org/tracks/javascript/concepts
 
 **Exercism exercises in JavaScript**
 
 This is the JavaScript track, one of the many tracks on [Exercism][web-exercism].
 It holds all the _exercises_ that are currently implemented and available for students to complete.
-The track consists of various **core** exercises - the ones a student _must_ complete - and each **core** exercise may unlock various _side_ exercises.
+The track consists of various **concept** exercises which teach the [JavaScript syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
 You can find this in the [`config.json`][file-config].
-
-> In version 3 of Exercism, the above no longer holds. See the [`exercism/v3`][git-v3] repository for more information.
 
 ## Tools
 
@@ -80,10 +80,10 @@ A lot of the improvements made to this track and tooling, is also made to the Ty
 - [The TypeScript Test Runner][git-typescript-test-runner]
 
 [web-exercism]: https://exercism.io
-[git-configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
-[bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
-[file-config]: https://github.com/exercism/javascript/blob/master/config.json
-[file-contributing]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
+[git-configlet]: https://exercism.org/docs/building/configlet
+[bin-fetch-configlet]: https://github.com/exercism/javascript/blob/main/bin/fetch-configlet
+[file-config]: https://github.com/exercism/javascript/blob/main/config.json
+[file-contributing]: https://github.com/exercism/javascript/blob/main/CONTRIBUTING.md
 [git-javascript]: https://github.com/exercism/javascript
 [git-javascript-analyzer]: https://github.com/exercism/javascript-analyzer
 [git-javascript-representer]: https://github.com/exercism/javascript-representer
@@ -93,5 +93,4 @@ A lot of the improvements made to this track and tooling, is also made to the Ty
 [git-typescript-analyzer]: https://github.com/exercism/typescript-analyzer
 [git-typescript-representer]: https://github.com/exercism/typescript-representer
 [git-typescript-test-runner]: https://github.com/exercism/typescript-test-runner
-[git-v3]: https://github.com/exercism/v3
 [git-website-copy]: https://github.com/exercism/website-copy
