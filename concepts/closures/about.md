@@ -57,7 +57,7 @@ The name _closure_ is historically derived from [_λ-calculus_][wiki-lambda-calc
 
    // Or apply a few to create a flexible system of functions for reuse.
    function buildHttpsExercismUri(path) {
-     return partialBuildUri('https')('exercism.io');
+     return partialBuildUri('https')('exercism.org');
    }
    ```
 
