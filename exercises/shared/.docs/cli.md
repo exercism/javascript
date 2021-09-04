@@ -12,4 +12,4 @@ It is possible to submit an incomplete solution so you can see how others have c
 
 - [exercism CLI documentation][docs-exercism-cli]
 
-[docs-exercism-cli]: https://exercism.io/cli
+[docs-exercism-cli]: https://exercism.org/docs/using/solving-exercises/working-locally
