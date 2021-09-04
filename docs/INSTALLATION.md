@@ -102,4 +102,4 @@ In this case, run `pnpm install` instead of `npm install`, and everything should
 [web-nodejs]: https://nodejs.org/
 [web-nodejs-download]: https://nodejs.org/en/download/
 [web-nodejs-package]: https://nodejs.org/en/download/package-manager/
-[cli-walkthrough]: https://exercism.io/cli-walkthrough
+[cli-walkthrough]: https://exercism.org/cli-walkthrough
