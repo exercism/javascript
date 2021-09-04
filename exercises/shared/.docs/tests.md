@@ -41,4 +41,4 @@ If you wish to write additional, custom, tests, create a new file `custom.spec.j
 exercism submit numbers.js custom.spec.js
 ```
 
-[docs-exercism-javascript]: https://exercism.io/tracks/javascript/installation
+[docs-exercism-javascript]: https://exercism.org/docs/tracks/javascript/installation
