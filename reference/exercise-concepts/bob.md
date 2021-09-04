@@ -1,6 +1,6 @@
 # Concepts of bob
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/bob/solutions/cadb9ae2421342efa83f9d512bf9d6a1)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/bob/solutions/cadb9ae2421342efa83f9d512bf9d6a1)
 
 ## General
 
@@ -20,12 +20,12 @@
 
 ## Using a switch
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/bob/solutions/375313effb6346879203533e78484002)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/bob/solutions/375313effb6346879203533e78484002)
 
 - **switch statement**: used as an alternative to if-else statements for identifying the type of message
 
 ## Using anonymous functions
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/bob/solutions/66b08d3495679799d872caf8)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/bob/solutions/66b08d3495679799d872caf8)
 
 - **anonymous functions**: used for defining methods on exported object
