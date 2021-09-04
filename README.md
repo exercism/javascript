@@ -77,7 +77,7 @@ A lot of the improvements made to this track and tooling, is also made to the Ty
 - [The TypeScript Representer][git-typescript-representer]
 - [The TypeScript Test Runner][git-typescript-test-runner]
 
-[web-exercism]: https://exercism.io
+[web-exercism]: https://exercism.org
 [web-syllabus]: https://exercism.org/tracks/javascript/concepts
 [git-configlet]: https://exercism.org/docs/building/configlet
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/main/bin/fetch-configlet
