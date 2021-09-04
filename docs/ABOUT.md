@@ -1,11 +1,12 @@
 # About
 
-ECMAScript is the [standard][web-ecma] that defines JavaScript, a programming language that allows web pages to be dynamic.
-It is an interpreted language, which means that it doesn't need to be compiled: instead the interpreter (such as a web browser) will parse the code and turn it into code that their machine can run - suitable for creating dynamic websites that can run on any browser\* on any computer\*!
+JavaScript is a programming language that allows web pages to be dynamic. It is an interpreted language, which means that it doesn't need to be compiled: instead the interpreter (such as a web browser) will parse the code and turn it into code that their machine can run - suitable for creating dynamic websites that can run on any browser\* on any computer\*!
 
 JavaScript is not only for use in the browser. JavaScript runtimes, such as [NodeJS][web-nodejs] and [deno][web-deno] allow you to write, launch and serve requests on webservers.
 Other frameworks, such as [Electron][web-electron] use JavaScript to write _cross platform applications_ for Windows, Linux and Mac OS.
 Mobile app development is also a possibility, utilising [react-native][web-react-native], [ionic][web-ionic] and various others, with [expo][web-expo] now allowing to target Android, iOS and the web, all at once.
+
+ECMAScript is the [standard][web-ecma] that defines Javascript.
 
 > "ECMAScript has grown to be one of the world’s most widely used general purpose programming languages.
 > It is best known as the language embedded in web browsers but has also been widely adopted for server and embedded applications."

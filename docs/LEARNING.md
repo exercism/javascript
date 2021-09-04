@@ -1,7 +1,8 @@
 # Learning
 
-If you want to learn JavaScript, check out the following resources.
+Exercism itself has a nice [learning path for Javascript](https://exercism.org/tracks/javascript/concepts).
+But in case you need more, here are some resources:
 
-- [Exploring ES6](https://leanpub.com/exploring-es6) book, by Axel Rauschmayer
-- [ES6 Katas](http://es6katas.org) website
-- [Babel compiler](https://github.com/babel/babel)
+- [Learn Javascript on MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+- [ES6 Katas](http://es6katas.org)
+- [Babel docs](https://babeljs.io/docs/en/learn/)
