@@ -2,8 +2,6 @@
 
 [![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
 
-[web-syllabus]: https://exercism.org/tracks/javascript/concepts
-
 **Exercism exercises in JavaScript**
 
 This is the JavaScript track, one of the many tracks on [Exercism][web-exercism].
@@ -80,6 +78,7 @@ A lot of the improvements made to this track and tooling, is also made to the Ty
 - [The TypeScript Test Runner][git-typescript-test-runner]
 
 [web-exercism]: https://exercism.io
+[web-syllabus]: https://exercism.org/tracks/javascript/concepts
 [git-configlet]: https://exercism.org/docs/building/configlet
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/main/bin/fetch-configlet
 [file-config]: https://github.com/exercism/javascript/blob/main/config.json
