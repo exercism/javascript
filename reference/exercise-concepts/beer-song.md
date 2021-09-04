@@ -1,6 +1,6 @@
 # Concepts of beer-song
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/beer-song/solutions/cadb9ae2421342efa83f9d512bf9d6a1)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/beer-song/solutions/cadb9ae2421342efa83f9d512bf9d6a1)
 
 ## General
 
@@ -25,18 +25,18 @@
 
 ## Using a switch statement
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/beer-song/solutions/0312dfd0df224103af59e74c77491ee9)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/beer-song/solutions/0312dfd0df224103af59e74c77491ee9)
 
 - **switch statement**: used as an alternative to the _if-else_ statement (for returning a certain part of a verse based on the current verse number or based on the number of bottles left)
 
 ## Using a while statement
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/beer-song/solutions/2d6047008b934a10b1855304264fca88)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/beer-song/solutions/2d6047008b934a10b1855304264fca88)
 
 - **while statement**: used as an alternative to an _indexed for_ looping statement (for building the required array of verses)
 
 ## Using anonymous functions
 
-[Example of implementation](https://exercism.io/tracks/javascript/exercises/beer-song/solutions/29cd3f49aaee446791275d13430f5725)
+[Example of implementation](https://exercism.org/tracks/javascript/exercises/beer-song/solutions/29cd3f49aaee446791275d13430f5725)
 
 - **anonymous functions**: used for defining methods on exported object
