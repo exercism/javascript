@@ -1,7 +1,6 @@
-
 # About
 
-JavaScript is a programming language that allows web pages to be dynamic. It is an interpreted language, which means that it doesn't need to be compiled: instead the interpreter (such as a web browser) will parse the code and turn it into code that their machine can run - suitable for creating dynamic websites that can run on any browser *on any computer*!
+JavaScript is a programming language that allows web pages to be dynamic. It is an interpreted language, which means that it doesn't need to be compiled: instead the interpreter (such as a web browser) will parse the code and turn it into code that their machine can run - suitable for creating dynamic websites that can run on any browser _on any computer_!
 
 JavaScript is not only for use in the browser. JavaScript runtimes, such as [NodeJS][web-nodejs] and [deno][web-deno] allow you to write, launch and serve requests on webservers.
 Other frameworks, such as [Electron][web-electron] use JavaScript to write _cross platform applications_ for Windows, Linux and Mac OS.
@@ -26,7 +25,7 @@ This means you don't need to worry about what is and isn't supported.
 
 ---
 
-*There is a [small number of browsers][wiki-javascript-support] that doesn't ship with a JavaScript runtime, or that has disabled JavaScript execution by default.*
+_There is a [small number of browsers][wiki-javascript-support] that doesn't ship with a JavaScript runtime, or that has disabled JavaScript execution by default._
 
 [wiki-javascript-support]: https://en.wikipedia.org/wiki/Comparison_of_web_browsers#JavaScript_support
 [wiki-transpilation]: https://en.wikipedia.org/wiki/Source-to-source_compiler
