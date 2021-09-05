@@ -125,13 +125,7 @@
         "name": "Elyses Looping Enchantments",
         "uuid": "e06f8f70-019f-4cec-924b-3971414e15d9",
         "concepts": ["array-loops"],
-        "prerequisites": [
-          "arrays",
-          "callbacks",
-          "arrow-functions",
-          "for-loops",
-          "conditionals"
-        ],
+        "prerequisites": ["arrays", "callbacks", "for-loops", "conditionals"],
         "status": "beta"
       },
       {
@@ -184,12 +178,7 @@
         "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
-        "prerequisites": [
-          "array-transformations",
-          "callbacks",
-          "errors",
-          "recursion"
-        ],
+        "prerequisites": ["callbacks", "errors"],
         "status": "beta"
       },
       {
@@ -227,7 +216,7 @@
         "name": "Factory Sensors",
         "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
         "concepts": ["errors"],
-        "prerequisites": ["classes", "null-undefined", "conditionals"],
+        "prerequisites": ["null-undefined", "conditionals"],
         "status": "beta"
       }
     ],
