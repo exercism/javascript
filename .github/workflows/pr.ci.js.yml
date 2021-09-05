@@ -27,6 +27,7 @@ jobs:
           curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
             xargs -r npx babel-node scripts/pr-check
+          bin/check_corejs_version.sh
 
   ci:
     runs-on: ubuntu-latest
