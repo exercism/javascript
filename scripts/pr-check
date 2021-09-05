@@ -9,8 +9,7 @@
  * 1. Find the exercises at all the paths provided
  * 2. Check stub existence for those exercises
  * 3. Check integrity of configuration for those exercises
- * 4. Check prettier package.json version and ENV matches
- * 5. Run eslint for those exercises to check code-style
+ * 4. Run eslint for those exercises to check code-style
  */
 
 const {
@@ -23,7 +22,6 @@ const {
   assignments,
 } = require('./helpers');
 
-const fn = require('fn');
 const shell = require('shelljs');
 const path = require('path');
 const files = process.argv.slice(2);
@@ -140,43 +138,6 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
 cleanUp();
 
 /**
- * Check if prettier version of package.json is the same than ENV in workflow
-*/
-const packageFile = shell.cat('package.json').toString();
-let package = JSON.parse(packageFile);
-const packageVersion = package['devDependencies']['prettier'].replace(/[^0-9a-zA-Z.]/g, '');
-let actionFormat = () => {
-  try {
-      return fs.readFileSync('./.github/workflows/action-format.yml', 'utf8');
-  } catch(err) {
-      return err;
-  }
-  
-}
-let verifyCodeFormatting = () => {
-  try {
-      return fs.readFileSync('./.github/workflows/verify-code-formatting.yml', 'utf8');
-  } catch(err) {
-      return err;
-  }
-  
-}
-
-let notMatchingFiles = [];
-
-if ( !actionFormat().includes(`EXERCISM_PRETTIER_VERSION: '${packageVersion}'`)){
-  notMatchingFiles.push('action-format.yml')
-}
-if ( !verifyCodeFormatting().includes(`EXERCISM_PRETTIER_VERSION: '${packageVersion}'`)){
-  notMatchingFiles.push('verify-code-formatting.yml')
-}
-
-if (notMatchingFiles.length > 0){
-  throw new Error(`Workflow EXERCISM_PRETTIER_VERSION in file(s): ${notMatchingFiles.join(', ')} does not match pacakge.json prettier version ${packageVersion}`)
-}
-
-
-/**
  * Moves all example and test files to single directory - tmp_exercises
  * This allows running the test command together for all files
  * which is way faster than running once for each exercise
@@ -192,8 +153,9 @@ exercises.forEach(prepare);
 
 shell.env['CLEANUP'] = true;
 
-const checkResult = shell.exec(`npx babel-node ${path.join('scripts', 'lint')}`)
-  .code;
+const checkResult = shell.exec(
+  `npx babel-node ${path.join('scripts', 'lint')}`
+).code;
 if (checkResult !== 0) {
   shell.echo(`scripts/lint returned a non-zero exit code: ${checkResult}`);
   shell.exit(checkResult);
