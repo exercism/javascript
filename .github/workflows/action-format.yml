@@ -64,6 +64,8 @@ jobs:
         uses: actions/setup-node@25316bbc1f10ac9d8798711f44914b1cf3c4e954
         with:
           node-version: 14.x
+      - name: Install project development dependencies
+        run: npm i
       - name: 'Format code'
         run: ./bin/format.sh
 
