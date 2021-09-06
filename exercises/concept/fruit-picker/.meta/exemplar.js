@@ -1,3 +1,4 @@
+/// <reference path="../global.d.ts" />
 // @ts-check
 
 import { checkStatus, checkInventory } from '../grocer';

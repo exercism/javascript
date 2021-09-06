@@ -1,3 +1,5 @@
+// @ts-check
+
 export class ArgumentError extends Error {}
 
 export class OverheatingError extends Error {

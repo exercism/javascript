@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Create a function which returns a function making use of a closure to
  * perform a repeatable 2d translation of a coordinate pair.

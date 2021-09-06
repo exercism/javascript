@@ -31,7 +31,7 @@ export function timeToMixJuice(name) {
  * Calculates the number of limes that need to be cut
  * to reach a certain supply.
  *
- * @param {number} maxWedges
+ * @param {number} wedgesNeeded
  * @param {string[]} limes
  * @returns {number} number of limes cut
  */

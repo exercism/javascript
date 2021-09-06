@@ -24,7 +24,7 @@ import {
 
 describe('array', () => {
   describe('seeingDouble', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const seeingDoubleTestCases = [
       [[], []],
       [[3], [6]],
@@ -46,7 +46,7 @@ describe('array', () => {
   });
 
   describe('threeOfEachThree', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const threeOfEachThreeTestCases = [
       [[], []],
       [[3], [3, 3, 3]],
@@ -65,7 +65,7 @@ describe('array', () => {
   });
 
   describe('middleTwo', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const middleTwoTestCases = [
       [
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -85,7 +85,7 @@ describe('array', () => {
   });
 
   describe('sandwichTrick', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const sandwichTrickTestCases = [
       [
         [1, 2, 3, 5, 6, 10],
@@ -105,7 +105,7 @@ describe('array', () => {
   });
 
   describe('twoIsSpecial', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const twoIsSpecialTestCases = [
       [[], []],
       [[1, 9, 1], []],
@@ -124,7 +124,7 @@ describe('array', () => {
   });
 
   describe('perfectlyOrdered', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const perfectlyOrderedTestCases = [
       [[], []],
       [
@@ -149,7 +149,7 @@ describe('array', () => {
   });
 
   describe('countingCards', () => {
-    /** @type {TestCases<Card[], Card[]>} */
+    /** @type {TestCases<number[], number[]>} */
     const countingCardsTestCases = [
       [[], []],
       [
