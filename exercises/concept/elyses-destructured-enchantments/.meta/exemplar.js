@@ -5,7 +5,7 @@
  * Get the first card in the given deck
  *
  * @param {Card[]} deck
- * 
+ *
  * @returns {Card} the first card in the deck
  */
 export function getFirstCard(deck) {
@@ -18,7 +18,7 @@ export function getFirstCard(deck) {
  * Get the second card in the given deck
  *
  * @param {Card[]} deck
- * 
+ *
  * @returns {Card} the second card in the deck
  */
 export function getSecondCard(deck) {
