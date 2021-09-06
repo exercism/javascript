@@ -1,5 +1,4 @@
 /// <reference path="./global.d.ts" />
-//
 // @ts-check
 //
 // The lines above enable type checking for this file. Various IDEs interpret

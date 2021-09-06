@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Double every card in the deck
  *
@@ -72,7 +74,7 @@ export function twoIsSpecial(deck) {
 /**
  * Returns a perfectly order deck from lowest to highest
  *
- * @param {number[]} shuffled deck
+ * @param {number[]} deck shuffled deck
  *
  * @returns {number[]} ordered deck
  */

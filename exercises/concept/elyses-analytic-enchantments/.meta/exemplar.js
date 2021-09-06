@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Get the position (index) of the card in the given stack
  *

@@ -1,5 +1,4 @@
 /// <reference path="../global.d.ts" />
-
 // @ts-check
 
 /**

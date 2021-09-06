@@ -1,4 +1,4 @@
-/// <reference path="./global.d.ts" />
+/// <reference path="../global.d.ts" />
 // @ts-check
 
 /**
@@ -75,7 +75,7 @@ export function addSecretIngredient(friendsList, myList) {
  *
  * @param {Record<string, number>} recipe
  * @param {number} targetPortions
- * @returns {Record<string, number>} recipe with amounts for target portions
+ * @returns {Record<string, number>|{}} recipe with amounts for target portions
  */
 export function scaleRecipe(recipe, targetPortions) {
   const factor = targetPortions / 2;
