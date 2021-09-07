@@ -1,9 +1,10 @@
 {
-  "blurb": "TODO: add blurb for fruit-picker exercise",
+  "blurb": "Learn about callbacks picking fruit from the grocer",
   "authors": ["neenjaw"],
   "contributors": ["SleeplessByte"],
   "files": {
-    "solution": ["fruit-picker.js", "grocer.js"],
+    "solution": ["fruit-picker.js"],
+    "editor": ["grocer.js"],
     "test": ["fruit-picker.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   }
