@@ -58,7 +58,7 @@ describe('Triplet', () => {
     ]);
   });
 
-  test.skip('triplets for large number', () => {
+  xtest('triplets for large number', () => {
     expect(tripletsWithSum(30000)).toEqual([
       [1200, 14375, 14425],
       [1875, 14000, 14125],
