@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for callbacks concept",
+  "blurb": "A callback is a functions passed as an argument to another function which invokes at the end of its execution",
   "authors": ["neenjaw"],
   "contributors": ["SleeplessByte"]
 }

@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for array-analysis concept",
+  "blurb": "Javascript provides a number of useful array methods for traversal, analysis and mutation.",
   "authors": ["peterchu999", "SleeplessByte"],
   "contributors": []
 }
