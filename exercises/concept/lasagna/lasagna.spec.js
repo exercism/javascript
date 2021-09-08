@@ -4,7 +4,7 @@ import {
   remainingMinutesInOven,
   preparationTimeInMinutes,
   totalTimeInMinutes,
-} from './.meta/exemplar';
+} from './lasagna';
 
 describe('EXPECTED_MINUTES_IN_OVEN', () => {
   test('constant is defined correctly', () => {
