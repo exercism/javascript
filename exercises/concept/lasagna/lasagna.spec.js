@@ -34,9 +34,9 @@ describe('preparationTimeInMinutes', () => {
 });
 
 describe('totalTimeInMinutes', () => {
-  test("calculates the total cooking time", () => {
+  test('calculates the total cooking time', () => {
     expect(totalTimeInMinutes(1, 5)).toBe(7);
     expect(totalTimeInMinutes(4, 15)).toBe(23);
     expect(totalTimeInMinutes(1, 35)).toBe(37);
-  })
+  });
 });
