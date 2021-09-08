@@ -19,6 +19,8 @@ const workflow = path.join(
   'verify-code-formatting.yml'
 );
 
+let EXERCISM_PRETTIER_VERSION;
+
 const versionLine = shell
   .cat(workflow)
   .stdout.split('\n')
@@ -26,15 +28,14 @@ const versionLine = shell
   .find((line) => line.startsWith('EXERCISM_PRETTIER_VERSION:'));
 
 if (!versionLine) {
-  shell.echo('[format] Expected workflow to contain EXERCISM_PRETTIER_VERSION');
-  shell.echo(`[format] Path: ${workflow}`);
-  shell.exit(-1);
+  const { stdout: versionFromPackage } = shell.exec("npm list prettier | sed -n -e 's/^.*prettier@//p'");
+  EXERCISM_PRETTIER_VERSION = versionFromPackage.trim();
+} else {
+  EXERCISM_PRETTIER_VERSION = versionLine
+    .split(':')[1]
+    .trim()
+    .replace(/'/g, '');
 }
-
-const EXERCISM_PRETTIER_VERSION = versionLine
-  .split(':')[1]
-  .trim()
-  .replace(/'/g, '');
 
 const command = `npx "prettier@${EXERCISM_PRETTIER_VERSION}" --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"`;
 shell.echo(`[format] ${command}`);
