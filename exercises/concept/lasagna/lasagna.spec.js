@@ -4,51 +4,39 @@ import {
   remainingMinutesInOven,
   preparationTimeInMinutes,
   totalTimeInMinutes,
-} from './lasagna';
+} from './.meta/exemplar';
 
-describe('lasagna', () => {
-  it('EXPECTED_MINUTES_IN_OVEN', () => {
+describe('EXPECTED_MINUTES_IN_OVEN', () => {
+  test('constant is defined correctly', () => {
     expect(EXPECTED_MINUTES_IN_OVEN).toBe(40);
   });
+});
 
-  describe('remainingMinutesInOven', () => {
-    [
-      [25, 15],
-      [20, 20],
-      [39, 1],
-      [5, 35],
-    ].forEach(([actualMinutesInOven, expected]) => {
-      it(`remainingMinutesInOven(${actualMinutesInOven})`, () => {
-        expect(remainingMinutesInOven(actualMinutesInOven)).toBe(expected);
-      });
-    });
+describe('remainingMinutesInOven', () => {
+  test('calculates the remaining time', () => {
+    expect(remainingMinutesInOven(25)).toBe(15);
+    expect(remainingMinutesInOven(5)).toBe(35);
+    expect(remainingMinutesInOven(39)).toBe(1);
   });
 
-  describe('preparationTimeInMinutes', () => {
-    [
-      [1, 2],
-      [2, 4],
-      [4, 8],
-      [8, 16],
-    ].forEach(([numberOfLayers, expected]) => {
-      it(`preparationTimeInMinutes(${numberOfLayers})`, () => {
-        expect(preparationTimeInMinutes(numberOfLayers)).toBe(expected);
-      });
-    });
+  test('works correctly for the edge cases', () => {
+    expect(remainingMinutesInOven(40)).toBe(0);
+    expect(remainingMinutesInOven(0)).toBe(40);
   });
+});
 
-  describe('totalTimeInMinutes', () => {
-    [
-      [1, 5, 7],
-      [2, 10, 14],
-      [4, 15, 23],
-      [1, 35, 37],
-    ].forEach(([numberOfLayers, actualMinutesInOven, expected]) => {
-      it(`totalTimeInMinutes(${numberOfLayers}, ${actualMinutesInOven})`, () => {
-        expect(totalTimeInMinutes(numberOfLayers, actualMinutesInOven)).toBe(
-          expected
-        );
-      });
-    });
+describe('preparationTimeInMinutes', () => {
+  test('calculates the preparation time', () => {
+    expect(preparationTimeInMinutes(1)).toBe(2);
+    expect(preparationTimeInMinutes(2)).toBe(4);
+    expect(preparationTimeInMinutes(8)).toBe(16);
   });
+});
+
+describe('totalTimeInMinutes', () => {
+  test("calculates the total cooking time", () => {
+    expect(totalTimeInMinutes(1, 5)).toBe(7);
+    expect(totalTimeInMinutes(4, 15)).toBe(23);
+    expect(totalTimeInMinutes(1, 35)).toBe(37);
+  })
 });
