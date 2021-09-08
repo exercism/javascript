@@ -27,12 +27,17 @@ export function triplets({ minFactor, maxFactor, sum }) {
   };
 
   const result = [];
+  const squared_map = {};
+
+  for (let a = min; a < max; a += 1) {
+    squared_map[a * a] = a;
+  }
 
   for (let a = min; a < max - 1; a += 1) {
     for (let b = a + 1; b < max; b += 1) {
-      for (let c = b + 1; c <= max; c += 1) {
-        const triplet = new Triplet(a, b, c);
-
+      const c = a * a + b * b;
+      if (squared_map[c]) {
+        const triplet = new Triplet(a, b, squared_map[c]);
         if (isDesired(triplet)) {
           result.push(triplet);
         }
