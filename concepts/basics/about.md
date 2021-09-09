@@ -4,9 +4,13 @@ JavaScript is a dynamic, prototype based language. It has a few [primitives][mdn
 
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js. The language is actively being developed; and because of it's multi-paradigm property, allows for many styles of programming. JavaScript is a dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
-## (Re-)assignment
+## (Re-)Assignment
 
-Variables in JavaScript can be defined using the [`const`][mdn-const], [`let`][mdn-let] or [`var`][mdn-var] keyword. A variable can reference different objects over its lifetime when using `let` or `var`, but can not be reassigned when using `const`. For example, `myFirstVariable` can be defined and redefined many times using the `=` operator:
+There are a few primary ways to assign values to names in JavaScript - using variables or constants. On Exercism, variables are always written in [camelCase][wiki-camel-case]; constants are written in [SCREAMING_SNAKE_CASE][wiki-snake-case]. There is no official guide to follow, and various companies and organizations have various style guides. _Feel free to write variables any way you like_. The upside from writing them the way the exercises are prepared is that they'll be highlighted differently in the web interface and most IDEs.
+
+Variables in JavaScript can be defined using the [`const`][mdn-const], [`let`][mdn-let] or [`var`][mdn-var] keyword.
+
+A variable can reference different values over its lifetime when using `let` or `var`. For example, `myFirstVariable` can be defined and redefined many times using the assignment operator `=`:
 
 ```javascript
 let myFirstVariable = 1;
@@ -14,9 +18,19 @@ myFirstVariable = 'Some string';
 myFirstVariable = new SomeComplexClass();
 ```
 
-## Constant assignment
+In contrast to `let` and `var`, variables that are defined with `const` can only be assigned once. This is used to define constants in JavaScript.
 
-The `const` keyword is mentioned _both_ for variables and constants. Another concept often mentioned around constants is [(im)-mutability][wiki-mutability]. Constants in JavaScript can only be defined using `const`. These are meant to be assigned only once.
+```javascript
+const MY_FIRST_CONSTANT = 10;
+
+// Can not be re-assigned.
+MY_FIRST_CONSTANT = 20;
+// => TypeError: Assignment to constant variable.
+```
+
+### Constant Assignment
+
+The `const` keyword is mentioned _both_ for variables and constants. Another concept often mentioned around constants is [(im)-mutability][wiki-mutability].
 
 The `const` keyword only makes the _binding_ immutable, that is, you can only assign a value to a `const` variable once. In JavaScript, only [primitive][mdn-primitive] values are immutable. However, [non primitive][mdn-primitive] values can still be mutated.
 
@@ -30,9 +44,9 @@ MY_MUTABLE_VALUE_CONSTANT;
 // => { food: "pear" }
 ```
 
-## Constant value (immutability)
+### Constant Value (Immutability)
 
-As a rule, on Exercism, and many other organisations and project style guides, don't mutate values that look like `const SCREAMING_SNAKE_CASE`. Technically the values _can_ be changed, but for clarity and expectation management on Exercism this is discouraged. When this _must_ be enforced, use [`Object.freeze(value)`][mdn-object-freeze].
+As a rule, on Exercism, and many other organizations and project style guides, don't mutate values that look like `const SCREAMING_SNAKE_CASE`. Technically the values _can_ be changed, but for clarity and expectation management on Exercism this is discouraged. When this _must_ be enforced, use [`Object.freeze(value)`][mdn-object-freeze].
 
 ```javascript
 const MY_VALUE_CONSTANT = Object.freeze({ food: 'apple' });
@@ -46,7 +60,7 @@ MY_MUTABLE_VALUE_CONSTANT;
 
 In the wild, it's unlikely to see `Object.freeze` all over a code base, but the rule to not mutate a `SCREAMING_SNAKE_CASE` value ever, is a good rule; often enforced using automated analysis such as a linter.
 
-## Function declarations
+## Function Declarations
 
 In JavaScript, units of functionality are encapsulated in _functions_, usually grouping functions together in the same file if they belong together. These functions can take parameters (arguments), and can _return_ a value using the `return` keyword. Functions are invoked using `()` syntax.
 
@@ -59,9 +73,9 @@ add(1, 3);
 // => 4
 ```
 
-> 💡 In JavaScript there are _many_ different ways to declare a function. These other ways look different than using the `function` keyword. The track tries to gradually introduce them, but if you already know about them, feel free to use any of them. In most cases, using one of the other isn't better or worse.
+> 💡 In JavaScript there are _many_ different ways to declare a function. These other ways look different than using the `function` keyword. The track tries to gradually introduce them, but if you already know about them, feel free to use any of them. In most cases, using one or the other isn't better or worse.
 
-## Export and import
+## Export and Import
 
 The `export` and `import` keywords are powerful tools that turn a regular JavaScript file into a [JavaScript module][mdn-module]. Apart from allowing code to selectively expose components, such as functions, classes, variables and constants, it also enables a whole range of other features, such as:
 
