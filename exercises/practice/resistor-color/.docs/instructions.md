@@ -31,6 +31,6 @@ The goal of this exercise is to create a way:
 - to look up the numerical value associated with a particular color band
 - to list the different band colors
 
-Mnemonics map the colors to the numbers, that, when stored as an array, happen to map to their index in the array: Better Be Right Or Your Great Big Values Go Wrong.
+Store the colors is an array, such that their index maps to the numerical value they are associated with: Better Be Right Or Your Great Big Values Go Wrong. Then create a function that outputs the corresponding value as you put in a color.
 
 More information on the color encoding of resistors can be found in the [Electronic color code Wikipedia article](https://en.wikipedia.org/wiki/Electronic_color_code)
