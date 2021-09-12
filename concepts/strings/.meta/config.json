@@ -1,5 +1,5 @@
 {
-  "blurb": "Strings are useful for holding data that can be represented in text form.",
+  "blurb": "A \"string\" is the JavaScript data type to store text data. Learn about creating strings and useful methods to modify them.",
   "authors": ["SleeplessByte"],
   "contributors": ["hayashi-ay"]
 }
