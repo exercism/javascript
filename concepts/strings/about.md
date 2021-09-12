@@ -5,7 +5,8 @@ There is no separate data type for an individual character.
 
 ## Creating a String
 
-You create a string [literal][literal] by wrapping the text in single quotes or double quotes. On Exercism, single quotes are used.
+You create a string [literal][literal] by wrapping the text in single quotes or double quotes.
+On Exercism, single quotes are used.
 
 <!-- prettier-ignore-start -->
 ```javascript
@@ -25,7 +26,9 @@ console.log(text);
 ```
 <!-- prettier-ignore-end -->
 
-Besides single and double quotes, you can also create a string by wrapping the text in backticks. This syntax allows to include quotes and even new lines without the need to escape them. It also allows to embed expressions, see [Template Strings][mdn-template-strings] for more details.
+Besides single and double quotes, you can also create a string by wrapping the text in backticks.
+This syntax allows to include single or double quotes and even new lines without the need to escape them.
+It also allows to embed expressions, see [Template Strings][mdn-template-strings] for more details.
 
 ```javascript
 `A multi-line string
@@ -36,7 +39,8 @@ and "double quotes"`;
 ## Strings as Lists of Characters
 
 A string can be treated as a list of characters where the first character has index `0`.
-You can access an individual character of the string using square brackets and the index of the letter you want to retrieve. Alternatively, there is also the `charAt` method.
+You can access an individual character of the string using square brackets and the index of the letter you want to retrieve.
+Alternatively, there is also the `charAt` method.
 
 ```javascript
 'cat'[1];
@@ -46,7 +50,12 @@ You can access an individual character of the string using square brackets and t
 // => 't'
 ```
 
-You can determine the number of characters in a string `a` with `a.length`.
+You can determine the number of characters in a string by accessing the `length` property.
+
+```javascript
+'cat'.length;
+// => 3
+```
 
 ## Concatenation and Methods
 
@@ -57,7 +66,8 @@ The simplest way to concatenate strings is to use the addition operator `+`.
 // => "I like cats."
 ```
 
-Strings provide a lot of helper methods, see [MDN Docs on String Methods][mdn-string-methods] for a full list. The following list shows some commonly used helpers.
+Strings provide a lot of helper methods, see [MDN Docs on String Methods][mdn-string-methods] for a full list.
+The following list shows some commonly used helpers.
 
 - [`toUpperCase`][mdn-to-upper-case] and [`toLowerCase`][mdn-to-lower-case] - change the case of all characters
 - [`trim`][mdn-trim] - remove whitespace at the beginning and end
@@ -66,7 +76,9 @@ Strings provide a lot of helper methods, see [MDN Docs on String Methods][mdn-st
 
 ## Strings are Immutable
 
-Applying the methods above will never change the original string. Instead a new string will be created and returned. Strings (and other primitive data types) are immutable in JavaScript. That also means you cannot assign a different character at some index using the bracket syntax shown above (like you would in arrays).
+Applying the methods above will never change the original string. Instead a new string will be created and returned.
+Strings (and other primitive data types) are immutable in JavaScript.
+That also means you cannot assign a different character at some index using the bracket syntax shown above (like you would in arrays).
 
 ```javascript
 const str = 'cat';
