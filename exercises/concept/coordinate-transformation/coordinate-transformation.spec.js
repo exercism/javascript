@@ -108,7 +108,7 @@ describe('memoizeTransform', () => {
     expect(memoizedTranslate(2, 2)).toEqual([4, 4]);
   });
 
-  test('should return different results for different input', () => {
+  test('should return different results for different inputs', () => {
     const memoizedTranslate = memoizeTransform(translate2d(1, 2));
     expect(memoizedTranslate(2, 2)).toEqual([3, 4]);
     expect(memoizedTranslate(6, 6)).toEqual([7, 8]);
