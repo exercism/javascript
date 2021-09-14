@@ -13,8 +13,9 @@ Having found the kidnappers, Annalyn considers which of the following actions sh
 - _Fast attack_: a fast attack can be made if the **knight** is **_sleeping_**, as it takes time for him to get his armor on, so he will be vulnerable.
 - _Spy_: the group can be spied upon if **at least one** of them is **_awake_**. Otherwise, spying is a waste of time.
 - _Signal prisoner_: the prisoner can be signalled using bird sounds if the **prisoner** is **_awake_** and the **archer** is **_sleeping_**, as archers are trained in bird signaling so they could intercept the message.
-- _Free prisoner_: Annalyn can try sneaking into the camp to free the prisoner, but this tactic will only work if the **prisoner** is **_awake_** and the **other two characters** are **_sleeping_**.
+- _Free prisoner_: Annalyn can try sneaking into the camp to free the prisoner, if the **prisoner** is **_awake_** and the **other two characters** are **_sleeping_**. 
   If the **prisoner** is **_sleeping_**, they'll be startled by Annalyn's sudden appearance and will awaken the other two characters.
+  If Annalyn has her **pet dog** **_with her_**, she can use her dog to **_wake up_** the **prisoner** as the prisoner loves dogs and won't be startled by them.
   The prisoner can also be freed if the **archer** is **_sleeping_** and Annalyn has her **pet dog** **_with her_**, as the knight will be scared by the dog and will withdraw, and the archer can't equip his bow fast enough to prevent the prisoner from being freed.
 
 You have four tasks: to implement the logic for determining if the above actions are available based on the state of the three characters found in the forest and whether Annalyn's pet dog is present or not.
