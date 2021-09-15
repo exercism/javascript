@@ -56,7 +56,7 @@ describe('vehicle purchase', () => {
     });
 
     test('price is reduced to 50% for age above 10', () => {
-      expect(calculateResellPrice(40000, 2)).toBe(32000);
+      expect(calculateResellPrice(40000, 12)).toBe(20000);
     });
 
     test('price is reduced to 70% for between 3 and 10', () => {
