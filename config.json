@@ -976,7 +976,8 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": ["promises", "error_handling", "higher_order_functions"]
+        "topics": ["promises", "error_handling", "higher_order_functions"],
+        "status": "wip"
       },
       {
         "slug": "yacht",

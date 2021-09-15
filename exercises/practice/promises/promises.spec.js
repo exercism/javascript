@@ -26,12 +26,12 @@ describe('promises', () => {
     xtest("promisified function resolves to a callback's success value", () => {
       const SUCCESS = 'success';
       const fastPromise = promisify(fastCallbackFn);
-      expect(fastPromise(SUCCESS)).resolves.toEqual(SUCCESS);
+      return expect(fastPromise(SUCCESS)).resolves.toEqual(SUCCESS);
     });
 
     xtest("promisified function rejects a callback's error", () => {
       const failedPromise = promisify(failedCallbackFn);
-      expect(failedPromise(null)).rejects.toEqual(failedCallback);
+      return expect(failedPromise(null)).rejects.toEqual(failedCallback);
     });
   });
 
@@ -56,12 +56,12 @@ describe('promises', () => {
         slowerPromise(SECOND),
         fastPromise(THIRD),
       ]);
-      expect(result).resolves.toEqual([FIRST, SECOND, THIRD]);
+      return expect(result).resolves.toEqual([FIRST, SECOND, THIRD]);
     });
 
     xtest('rejects if any promises fail', () => {
       const result = all([fastPromise('fast'), failedPromise(null)]);
-      expect(result).rejects.toEqual(failedCallback);
+      return expect(result).rejects.toEqual(failedCallback);
     });
   });
 
@@ -86,13 +86,13 @@ describe('promises', () => {
         slowerPromise(SECOND),
         fastPromise(THIRD),
       ]);
-      expect(result).resolves.toEqual([FIRST, SECOND, THIRD]);
+      return expect(result).resolves.toEqual([FIRST, SECOND, THIRD]);
     });
 
     xtest('resolves even if some promises fail', () => {
       const FIRST = 'FIRST';
-      const result = all([fastPromise(FIRST), failedPromise(null)]);
-      expect(result).resolves.toEqual([FIRST, failedCallback]);
+      const result = allSettled([fastPromise(FIRST), failedPromise(null)]);
+      return expect(result).resolves.toEqual([FIRST, failedCallback]);
     });
   });
 
@@ -110,7 +110,7 @@ describe('promises', () => {
 
     xtest('resolves with value of the fastest successful promise', () => {
       const FAST = 'FAST';
-      expect(
+      return expect(
         race([
           slowestPromise('SLOWEST'),
           slowerPromise('SLOWER'),
@@ -121,13 +121,13 @@ describe('promises', () => {
 
     xtest('resolves with value of the fastest promise even if other slower promises fail', () => {
       const FAST = 'FAST';
-      expect(race([failedPromise(null), fastPromise(FAST)])).resolves.toEqual(
-        FAST
-      );
+      return expect(
+        race([failedPromise(null), fastPromise(FAST)])
+      ).resolves.toEqual(FAST);
     });
 
     xtest('rejects if the fastest promise fails even if other slower promises succeed', () => {
-      expect(
+      return expect(
         race([slowestPromise('SLOWEST'), failedPromise(null)])
       ).rejects.toEqual(failedCallback);
     });
@@ -147,8 +147,8 @@ describe('promises', () => {
 
     xtest('resolves with value of fastest successful promise', () => {
       const FAST = 'FAST';
-      expect(
-        race([
+      return expect(
+        any([
           slowestPromise('SLOWEST'),
           slowerPromise('SLOWER'),
           fastPromise(FAST),
@@ -158,23 +158,22 @@ describe('promises', () => {
 
     xtest('resolves with value of the fastest successful promise even if slower promises fail', () => {
       const FAST = 'FAST';
-      expect(race([failedPromise(null), fastPromise(FAST)])).resolves.toEqual(
-        FAST
-      );
+      return expect(
+        any([failedPromise(null), fastPromise(FAST)])
+      ).resolves.toEqual(FAST);
     });
 
     xtest('resolves with value of fastest successful promise even if faster promises fail', () => {
       const SLOWEST = 'SLOWEST';
-      expect(
-        race([failedPromise(null), slowestPromise(SLOWEST)])
+      return expect(
+        any([failedPromise(null), slowestPromise(SLOWEST)])
       ).resolves.toEqual(SLOWEST);
     });
 
     xtest('rejects with array of errors if all promises fail', () => {
-      expect(race([failedPromise(null), failedPromise(null)])).rejects.toEqual([
-        failedCallback,
-        failedCallback,
-      ]);
+      return expect(
+        any([failedPromise(null), failedPromise(null)])
+      ).rejects.toEqual([failedCallback, failedCallback]);
     });
   });
 });
