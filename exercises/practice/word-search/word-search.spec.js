@@ -179,6 +179,69 @@ describe('multi line grids', () => {
 
     expect(wordSearch.find(['scree'])).toEqual(expectedResults);
   });
+  xtest('should fail to locate a word that is not in the puzzle', () => {
+    const grid = [
+      'jefblpepre',
+      'camdcimgtc',
+      'oivokprjsm',
+      'pbwasqroua',
+      'rixilelhrs',
+      'wolcqlirpc',
+      'screeaumgr',
+      'alxhpburyi',
+      'jalaycalmp',
+      'clojurermt',
+    ];
+    const wordsToSearchFor = [
+      'clojure',
+      'elixir',
+      'ecmascript',
+      'rust',
+      'java',
+      'lua',
+      'lisp',
+      'ruby',
+      'haskell',
+    ];
+    const expectedResults = {
+      clojure: {
+        start: [10, 1],
+        end: [10, 7],
+      },
+      elixir: {
+        start: [5, 6],
+        end: [5, 1],
+      },
+      ecmascript: {
+        end: [10, 10],
+        start: [1, 10],
+      },
+      rust: {
+        start: [5, 9],
+        end: [2, 9],
+      },
+      java: {
+        start: [1, 1],
+        end: [4, 4],
+      },
+      lua: {
+        start: [9, 8],
+        end: [7, 6],
+      },
+      lisp: {
+        start: [6, 3],
+        end: [3, 6],
+      },
+      ruby: {
+        start: [6, 8],
+        end: [9, 5],
+      },
+      haskell: undefined,
+    };
+    const wordSearch = new WordSearch(grid);
+
+    expect(wordSearch.find(wordsToSearchFor)).toEqual(expectedResults);
+  });
 });
 
 describe('can find multiple words', () => {
