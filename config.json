@@ -983,7 +983,7 @@
         "core": false,
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4,
+        "difficulty": 6,
         "topics": ["promises", "error_handling", "higher_order_functions"],
         "status": "wip"
       },
