@@ -541,7 +541,7 @@ describe('vertical directions', () => {
     ).toEqual(expectedResults);
   });
 
-  describe('word doesn\'t exist', () => {
+  describe("word doesn't exist", () => {
     xtest('should fail to locate a word that is not in the puzzle', () => {
       const grid = [
         'jefblpepre',
@@ -555,17 +555,13 @@ describe('vertical directions', () => {
         'jalaycalmp',
         'clojurermt',
       ];
-  
+
       const expectedResults = {
-        fail: undefined
+        fail: undefined,
       };
       const wordSearch = new WordSearch(grid);
-  
-      expect(
-        wordSearch.find([
-          'fail',
-        ])
-      ).toEqual(expectedResults);
-    });    
+
+      expect(wordSearch.find(['fail'])).toEqual(expectedResults);
+    });
   });
 });
