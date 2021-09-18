@@ -29,7 +29,7 @@ export function doesStackIncludeCard(stack, card) {
  *
  * @param {number[]} stack
  *
- * @returns {boolean} position of the first card that is even
+ * @returns {boolean} true if all cards are even, false otherwise
  */
 export function isEachCardEven(stack) {
   return stack.every((card) => card % 2 === 0);
@@ -40,7 +40,7 @@ export function isEachCardEven(stack) {
  *
  * @param {number[]} stack
  *
- * @returns {boolean} Whether array contains odd card
+ * @returns {boolean} true if the array contains odd card, false otherwise
  */
 export function doesStackIncludeOddCard(stack) {
   return stack.some((card) => card % 2 !== 0);
