@@ -84,7 +84,7 @@ service.batch([]);
 // => Promise<...> rejects BatchIsEmpty()
 ```
 
-## 3. Request a translation, retrying at most 2 times
+## 3. Request a translation, retrying at most 3 times
 
 Implement a function `request(text)` that _requests_ a translation, with automatic retries, up to a total of **3 calls** for the same request.
 
