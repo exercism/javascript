@@ -22,25 +22,25 @@ describe('Free service', () => {
     service = new TranslationService(api);
   });
 
-  test('it can translate a known word group', () => {
+  test('it can translate a known word group', async () => {
     const actual = service.free('jIyaj');
     const expected = 'I understand';
 
-    expect(actual).resolves.toBe(expected);
+    await expect(actual).resolves.toBe(expected);
   });
 
-  test('it forwards NotAvailable errors from the API, unaltered', () => {
+  test('it forwards NotAvailable errors from the API, unaltered', async () => {
     const actual = service.free('jIyajbe’');
     const expected = NotAvailable;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 
-  test('it forwards Untranslatable errors from the API, unaltered', () => {
+  test('it forwards Untranslatable errors from the API, unaltered', async () => {
     const actual = service.free('majQa’');
     const expected = Untranslatable;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 });
 
@@ -57,39 +57,39 @@ describe('Batch service', () => {
     service = new TranslationService(api);
   });
 
-  test('it can translate a batch', () => {
+  test('it can translate a batch', async () => {
     const actual = service.batch(['jIyaj', 'majQa’']);
     const expected = ['I understand', 'Well done!'];
 
-    expect(actual).resolves.toStrictEqual(expected);
+    await expect(actual).resolves.toStrictEqual(expected);
   });
 
-  test('it maintains the order of batch input', () => {
+  test('it maintains the order of batch input', async () => {
     const actual = service.batch(['majQa’', 'jIyaj']);
     const expected = ['Well done!', 'I understand'];
 
-    expect(actual).resolves.toStrictEqual(expected);
+    await expect(actual).resolves.toStrictEqual(expected);
   });
 
-  test('it works with just one item to translate', () => {
+  test('it works with just one item to translate', async () => {
     const actual = service.batch(['jIyaj']);
     const expected = ['I understand'];
 
-    expect(actual).resolves.toStrictEqual(expected);
+    await expect(actual).resolves.toStrictEqual(expected);
   });
 
-  test('it throws if one or more translations fail', () => {
+  test('it throws if one or more translations fail', async () => {
     const actual = service.batch(['jIyaj', 'jIyajbe’', 'majQa’']);
     const expected = NotAvailable;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 
-  test('it throws on an empty input', () => {
+  test('it throws on an empty input', async () => {
     const actual = service.batch([]);
     const expected = BatchIsEmpty;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 });
 
@@ -114,27 +114,27 @@ describe('Request service', () => {
     service = new TranslationService(api);
   });
 
-  test('it can request something that is not available, but eventually is', () => {
+  test('it can request something that is not available, but eventually is', async () => {
     const actual = service.request('majQa’');
-    expect(actual).resolves.toBeUndefined();
+    await expect(actual).resolves.toBeUndefined();
   });
 
-  test('it eventually rejects when something is not translatable', () => {
+  test('it eventually rejects when something is not translatable', async () => {
     const actual = service.request('foo');
     const expected = Untranslatable;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 
-  test('it requests up to three times (retries once or twice)', () => {
+  test('it requests up to three times (retries once or twice)', async () => {
     const actual = service.request('jIyajbe’');
-    expect(actual).resolves.toBeUndefined();
+    await expect(actual).resolves.toBeUndefined();
   });
 
-  test('it requests at most three times (does not retry thrice or more)', () => {
+  test('it requests at most three times (does not retry thrice or more)', async () => {
     const actual = service.request('ghobe’');
 
-    expect(actual).rejects.toThrow(Error);
+    await expect(actual).rejects.toThrow(Error);
   });
 });
 
@@ -158,48 +158,48 @@ describe('Premium service', () => {
     service = new TranslationService(api);
   });
 
-  test('it can resolve a translation', () => {
+  test('it can resolve a translation', async () => {
     const actual = service.premium('majQa’', 0);
     const expected = 'Well done';
 
-    expect(actual).resolves.toBe(expected);
+    await expect(actual).resolves.toBe(expected);
   });
 
-  test('it requests unavailable translations and then resolves', () => {
+  test('it requests unavailable translations and then resolves', async () => {
     const actual = service.premium('jIyajbe’', 0);
     const expected = "I don't understand";
 
-    expect(actual).resolves.toBe(expected);
+    await expect(actual).resolves.toBe(expected);
   });
 
-  test('it rejects with Untranslatable if the premium service fails to translate', () => {
+  test('it rejects with Untranslatable if the premium service fails to translate', async () => {
     const actual = service.premium('foo', 0);
     const expected = Untranslatable;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 
-  test('it requests at most three times (does not retry thrice or more)', () => {
+  test('it requests at most three times (does not retry thrice or more)', async () => {
     const actual = service.premium('ghobe’', 0);
 
-    expect(actual).rejects.toThrow(Error);
+    await expect(actual).rejects.toThrow(Error);
   });
 
-  test('it ensures the quality of the translation', () => {
+  test('it ensures the quality of the translation', async () => {
     const actual = service.premium('majQa’', 100);
     const expected = QualityThresholdNotMet;
 
-    expect(actual).rejects.toThrow(expected);
+    await expect(actual).rejects.toThrow(expected);
   });
 
-  test('it ensures the quality even after a request', () => {
+  test('it ensures the quality even after a request', async () => {
     const actual = service.premium('‘arlogh Qoylu’pu’?', 40);
     const expected = 'What time is it?';
 
-    expect(actual).resolves.toBe(expected);
+    await expect(actual).resolves.toBe(expected);
 
     const actualQuality = service.premium('‘arlogh Qoylu’pu’?', 100);
     const expectedQuality = QualityThresholdNotMet;
-    expect(actualQuality).rejects.toThrow(expectedQuality);
+    await expect(actualQuality).rejects.toThrow(expectedQuality);
   });
 });
