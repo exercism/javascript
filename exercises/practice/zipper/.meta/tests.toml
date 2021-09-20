@@ -1,6 +1,13 @@
-# This is an auto-generated file. Regular comments will be removed when this
-# file is regenerated. Regenerating will not touch any manually added keys,
-# so comments can be added in a "comment" key.
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
 
 [771c652e-0754-4ef0-945c-0675d12ef1f5]
 description = "data is retained"
@@ -37,3 +44,6 @@ description = "set_right with subtree"
 
 [c246be85-6648-4e9c-866f-b08cd495149a]
 description = "set_value on deep focus"
+
+[47aa85a0-5240-48a4-9f42-e2ac636710ea]
+description = "different paths to same zipper"
