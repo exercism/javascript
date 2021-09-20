@@ -112,3 +112,5 @@ add(MY_VALUE, 5);
 [mdn-renaming-modules]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports
 [mdn-var]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
 [wiki-mutability]: https://en.wikipedia.org/wiki/Immutable_object
+[wiki-camel-case]: https://en.wikipedia.org/wiki/Camel_case
+[wiki-snake-case]: https://en.wikipedia.org/wiki/Snake_case
