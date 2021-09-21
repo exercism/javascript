@@ -51,9 +51,9 @@ export class TranslationService {
    */
   request(text) {
     const api = this.api;
-    function requestAsPromise(text) {
+    function requestAsPromise(txt) {
       return new Promise((resolve, reject) => {
-        api.request(text, (err) => (err ? reject(err) : resolve()));
+        api.request(txt, (err) => (err ? reject(err) : resolve()));
       });
     }
 
