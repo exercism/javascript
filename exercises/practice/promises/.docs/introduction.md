@@ -2,7 +2,7 @@
 
 Before the `Promise` class was introduced, there was only one way to deal with asynchronous code : the _callback pattern_.
 
-A callback is a function that accept an "error" as first parameter (see example below)
+A callback is a function that is passed as an argument to another function and will be called once some action in that other function has finished. A common pattern for those callback functions is that they accept an "error" as first parameter (see example below).
 
 ```javascript
 function callback(error, arg2, arg3) {}
