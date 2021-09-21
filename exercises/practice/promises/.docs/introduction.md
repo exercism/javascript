@@ -8,13 +8,13 @@ A callback is a function that is passed as an argument to another function and w
 function callback(error, arg2, arg3) {}
 ```
 
-Now is it related to asynchronous code ?
+How is it related to asynchronous code ?
 
-Historically, callbacks have been used in order to allow people to do some work after an asynchronous task was done and without blocking the whole program.
+Historically, callbacks have been used in order to allow us to do some work after an asynchronous task was done and without blocking the whole program.
 
 ```javascript
 fetchProduct(productId, function (error, data) {
-  if (error !== null) {
+  if (error) {
     // Handle the error
   } else {
     // Do some work
