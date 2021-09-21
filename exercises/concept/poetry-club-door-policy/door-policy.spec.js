@@ -1,3 +1,5 @@
+/** @format */
+
 // @ts-check
 
 import {
@@ -5,241 +7,119 @@ import {
   backDoorResponse as backDoorPatron,
   frontDoorPassword,
   backDoorPassword,
-} from './door-policy';
+} from "./door-policy";
 
-class Poem {
-  constructor(poem) {
-    const [lines, author] = poem.split('\n\n');
-    this.lines = lines.split('\n');
-    this.author = author;
-  }
+const recite = (poem, patron) => {
+  return poem.map((line) => patron(line));
+};
 
-  get length() {
-    return this.lines.length;
-  }
-
-  // purposefully using array methods as to not give away string solution
-  get acrostic() {
-    return this.lines.map((line) => [...line].shift()).join('');
-  }
-
-  get telestich() {
-    return this.lines.map((line) => [...line.trim()].pop()).join('');
-  }
-
-  *[Symbol.iterator]() {
-    yield* this.lines[Symbol.iterator]();
-  }
-}
-
-class FrontDoorGuard {
-  /**
-   * @param {Poem} poem
-   */
-  constructor(poem) {
-    this.poem = poem;
-  }
-
-  /**
-   * Recites a poem at the door, asking the patron for a response
-   *
-   * @returns {string} key
-   */
-  recite() {
-    const patron = frontDoorPatron;
-    const key = [];
-
-    for (const line of this.poem) {
-      key.push(patron(line));
-    }
-
-    return key.join('');
-  }
-
-  assert() {
-    const password = frontDoorPassword(this.recite());
-
-    expect(password).toBe(stringify(generateCapitalized(this.poem.acrostic)));
-  }
-}
-
-class BackDoorGuard {
-  constructor(poem) {
-    this.poem = poem;
-  }
-
-  /**
-   * Recites a poem at the door, asking the patron for a response
-   *
-   * @returns {string} key
-   */
-  recite() {
-    const patron = backDoorPatron;
-    const key = [];
-
-    for (const line of this.poem) {
-      key.push(patron(line));
-    }
-
-    return key.join('');
-  }
-
-  assert() {
-    const password = backDoorPassword(this.recite());
-
-    expect(password).toBe(
-      stringify(generateCapitalized(this.poem.telestich)).concat(', please')
-    );
-  }
-}
-
-const SHIRE_HORSE = new Poem(
-  `
+//Shire Horse, by Michael Lockwood
+const SHIRE_HORSE = `
 Stands so high
 Huge hooves too
 Impatiently waits for
 Reins and harness
 Eager to leave
-
-Michael Lockwood
-`.trim()
-);
-
-const SHIRE_HORSE_WITH_SPACES = new Poem(
-  `
-Stands so high  
-Huge hooves too      
-Impatiently waits for 
-Reins and harness  
-Eager to leave
-
-Michael Lockwood
 `
-);
+  .trim()
+  .split("\n");
 
-const SUMMER = new Poem(`
+//Shire Horse, by Michael Lockwood
+const SHIRE_HORSE_WITH_SPACES = `
+Stands so high
+Huge hooves too
+Impatiently waits for
+Reins and harness
+Eager to leave
+`.split("\n");
+
+//Summer, by John Albert Caballero
+const SUMMER = `
 Sunshine warming my toes,
 Underwater fun with my friends.
 Making homemade ice cream on the porch,
 Many long nights catching fireflies.
 Early morning walks to the creek,
 Reveling in the freedom of lazy days.
+`.split("\n");
 
-John Albert Caballero
-`);
-
-const SOPHIA = new Poem(
-  `
+//Sophia, by John Albert Caballero
+const SOPHIA = `
 Serene, calming quality
 Organized, you always have it together
 Picturesque, strikingly beautiful
 Honest, so genuine
 Imaginative, a creative mind
 Alluring, so attractive
+`
+  .trim()
+  .split("\n");
 
-John Albert Caballero
-`.trim()
-);
-
-const CODE_WORK = new Poem(
-  `
+//Code Work, by Derk-Jan Karrenbeld
+const CODE_WORK = `
 Compilers intensily bestow
 On commencing without ego
 Different processes ajar
 Exit with zero quick
+`
+  .trim()
+  .split("\n");
 
-Derk-Jan Karrenbeld
-`.trim()
-);
-
-describe('strings', () => {
-  describe('front door', () => {
-    const ShireGuard = new FrontDoorGuard(SHIRE_HORSE);
-
-    test('it outputs a character per line', () => {
-      const key = ShireGuard.recite();
+describe("strings", () => {
+  describe("front door response", () => {
+    test("should output a character per line", () => {
+      const key = recite(SHIRE_HORSE, frontDoorPatron);
       expect(key.length).toBe(SHIRE_HORSE.length);
     });
 
-    test('it outputs takes the first characters', () => {
-      const key = ShireGuard.recite();
-      expect(key.toUpperCase()).toBe(SHIRE_HORSE.acrostic.toUpperCase());
+    test("should take the first character of each line", () => {
+      const key = recite(SHIRE_HORSE, frontDoorPatron);
+      const expectedFirstLetters = ["S", "H", "I", "R", "E"];
+      expect(key).toEqual(expectedFirstLetters);
     });
 
-    test('it generates the correct password', () => {
-      ShireGuard.assert();
+    test("should generate the correct password", () => {
+      expect(frontDoorPassword("SHIRE")).toBe("Shire");
     });
 
-    const FRONT_DOOR_CASES = {
-      SUMMER,
-      SOPHIA,
-      CODE_WORK,
-    };
-
-    Object.keys(FRONT_DOOR_CASES).forEach((name) => {
-      const poem = FRONT_DOOR_CASES[name];
-      const guard = new FrontDoorGuard(poem);
-
-      test(`frontDoorPassword(${name})`, () => {
-        guard.assert();
-      });
-    });
+    test.each([
+      { poem: SUMMER, firstLetters: "SUMMER", password: "Summer" },
+      { poem: SOPHIA, firstLetters: "SOPHIA", password: "Sophia" },
+      { poem: CODE_WORK, firstLetters: "CODE", password: "Code" },
+    ])(
+      "should be correct for $password",
+      ({ poem, firstLetters, password }) => {
+        expect(recite(poem, frontDoorPatron).join("")).toBe(firstLetters);
+        expect(frontDoorPassword(firstLetters)).toBe(password);
+      }
+    );
   });
 
-  describe('back door', () => {
-    const ShireGuard = new BackDoorGuard(SHIRE_HORSE);
-
-    test('it outputs a character per line', () => {
-      const key = ShireGuard.recite();
+  describe("back door response", () => {
+    test("should output a character per line", () => {
+      const key = recite(SHIRE_HORSE, backDoorPatron);
       expect(key.length).toBe(SHIRE_HORSE.length);
     });
 
-    test('it outputs takes the first characters', () => {
-      const key = ShireGuard.recite();
-      expect(key.toUpperCase()).toBe(SHIRE_HORSE.telestich.toUpperCase());
+    test("should take the last letter character of each line", () => {
+      const key = recite(SHIRE_HORSE, backDoorPatron);
+      expect(key).toEqual(["h", "o", "r", "s", "e"]);
     });
 
-    test('it generates the correct password', () => {
-      ShireGuard.assert();
+    test("should generate the correct password", () => {
+      expect(backDoorPassword("horse")).toBe("Horse, please");
     });
 
-    const BACK_DOOR_CASES = {
-      CODE_WORK,
-      SHIRE_HORSE_WITH_SPACES,
-    };
-
-    Object.keys(BACK_DOOR_CASES).forEach((name) => {
-      const poem = BACK_DOOR_CASES[name];
-      const guard = new BackDoorGuard(poem);
-
-      test(`backDoorGuard(${name})`, () => {
-        guard.assert();
-      });
+    test.each([
+      { poem: CODE_WORK, lastLetters: "work", password: "Work, please" },
+      {
+        poem: SHIRE_HORSE_WITH_SPACES,
+        lastLetters: "horse",
+        password: "Horse, please",
+      },
+    ])("should be correct for $password", ({ poem, lastLetters, password }) => {
+      expect(recite(poem, backDoorPatron).join("")).toBe(lastLetters);
+      expect(backDoorPassword(lastLetters)).toBe(password);
     });
   });
 });
-
-/**
- * @param {string} input
- */
-function* generateCapitalized(input) {
-  const stream = [...input.toLowerCase()];
-  yield String.fromCharCode(stream.shift().charCodeAt(0) - 32);
-  yield* stream;
-}
-
-/**
- * @param {Generator<string, void, string>} generator
- */
-function stringify(generator) {
-  const result = [];
-  let done = false;
-
-  while (!done) {
-    const { value, done: thisDone } = generator.next();
-    done = thisDone;
-    result.push(value);
-  }
-
-  return result.join('');
-}
