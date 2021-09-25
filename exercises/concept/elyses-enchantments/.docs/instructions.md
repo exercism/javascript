@@ -2,11 +2,11 @@
 
 As a magician-to-be, Elyse needs to practice some basics. She has a stack of cards that she wants to manipulate.
 
-To make things a bit easier she only uses the cards 1 to 10.
+To make things a bit easier she only uses the cards 1 to 10. Remember that array indices start at 0.
 
 ## 1. Retrieve a card from a stack
 
-In order to pick a card, return the card at position `position` from the given stack.
+In order to pick a card, return the card at index `position` from the given stack.
 
 ```javascript
 const position = 2;
@@ -16,7 +16,7 @@ getItem([1, 2, 4, 1], position);
 
 ## 2. Exchange a card in the stack
 
-Perform some sleight of hand and exchange the card at position `position` with the new card provided.
+Perform some sleight of hand and exchange the card at index `position` with the new card provided.
 Return the adjusted stack.
 
 ```javascript
@@ -50,7 +50,7 @@ insertItemAtBottom([5, 9, 7, 1], newCard);
 
 ## 5. Remove a card from the stack
 
-Make a card disappear by removing the card the given `position` from the stack.
+Make a card disappear by removing the card at the given `position` from the stack.
 Return the adjusted stack.
 
 ```javascript
@@ -81,7 +81,7 @@ removeItemAtBottom([8, 5, 9, 7, 1]);
 
 ## 8. Check the size of the stack
 
-Check whether the size of the stack is equal a given `stackSize` or not.
+Check whether the size of the stack is equal to `stackSize` or not.
 
 ```javascript
 const stackSize = 4;
