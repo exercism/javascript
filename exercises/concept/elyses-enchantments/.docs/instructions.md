@@ -56,7 +56,7 @@ Return the adjusted stack.
 ```javascript
 const position = 2;
 removeItem([3, 2, 6, 4, 8], position);
-// => [3, 2, 4, 8]
+// => [3, 2, 6, 8]
 ```
 
 ## 6. Remove the top card from the stack
