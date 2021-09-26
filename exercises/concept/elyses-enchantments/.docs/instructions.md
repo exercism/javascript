@@ -1,12 +1,18 @@
 # Instructions
 
-As a magician-to-be, Elyse needs to practice some basics. She has a stack of cards that she wants to manipulate.
+As a magician-to-be, Elyse needs to practice some basics. She has
+a stack of cards that she wants to manipulate.
 
-To make things a bit easier she only uses the cards 1 to 10. Remember that array indices start at 0.
+To make things a bit easier she only uses the cards 1 to 10 so her
+stack of cards can be represented by an array of numbers. The position
+of a certain card corresponds to the index in the array. That means
+position 0 refers to the first card, position 1 to the second card
+etc.
 
 ## 1. Retrieve a card from a stack
 
-In order to pick a card, return the card at index `position` from the given stack.
+In order to pick a card, return the card at index `position` from
+the given stack.
 
 ```javascript
 const position = 2;
@@ -16,7 +22,8 @@ getItem([1, 2, 4, 1], position);
 
 ## 2. Exchange a card in the stack
 
-Perform some sleight of hand and exchange the card at index `position` with the new card provided.
+Perform some sleight of hand and exchange the card at index `position`
+with the new card provided.
 Return the adjusted stack.
 
 ```javascript
