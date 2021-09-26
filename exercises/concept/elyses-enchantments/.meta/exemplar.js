@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * Retrieve card from cards array at the 0-based position
+ * Retrieve card from cards array where position represents the index starting at 0
  *
  * @param {number[]} cards
  * @param {number} position
@@ -13,7 +13,7 @@ export function getItem(cards, position) {
 }
 
 /**
- * Exchange card with replacementCard at the 0-based position
+ * Exchange card with replacementCard where position represents the index starting at 0
  *
  * @param {number[]} cards
  * @param {number} position
@@ -40,7 +40,7 @@ export function insertItemAtTop(cards, newCard) {
 }
 
 /**
- * Remove the card at the 0-based position
+ * Remove the card at position, where position represents the index starting at 0
  *
  * @param {number[]} cards
  * @param {number} position
