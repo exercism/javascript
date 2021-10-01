@@ -37,6 +37,7 @@ Some of the [methods][array_methods] that are available on `Array.prototype` can
 > The `push()` method adds one or more elements to the end of an array and returns the new length of the array.<sup>1</sup>
 
 ```javascript
+const numbers = [1, 'two', 3, 'four'];
 numbers.push(5); // => 5
 numbers;
 // => [1, 'two', 3, 'four', 5]
@@ -47,9 +48,10 @@ numbers;
 > The `pop()` method removes the last element from an array and returns that element. This method changes the length of the array.<sup>2</sup>
 
 ```javascript
-numbers.pop(); // => 5
+const numbers = [1, 'two', 3, 'four'];
+numbers.pop(); // => four
 numbers;
-// => [1, 'two', 3, 'four]
+// => [1, 'two', 3]
 ```
 
 ### shift
@@ -57,6 +59,7 @@ numbers;
 > The `shift()` method removes the first element from an array and returns that removed element. This method changes the length of the array.<sup>3</sup>
 
 ```javascript
+const numbers = [1, 'two', 3, 'four'];
 numbers.shift(); // => 1
 numbers;
 // => ['two', 3, 'four']
@@ -67,9 +70,10 @@ numbers;
 > The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.<sup>4</sup>
 
 ```javascript
-numbers.unshift('nine', 10); // => 5
+const numbers = [1, 'two', 3, 'four'];
+numbers.unshift('one'); // => 5
 numbers;
-// => ['nine', 10, 'two', 3, 'four']
+// => ['one', 1, 'two', 3, 'four']
 ```
 
 ### splice
@@ -77,9 +81,10 @@ numbers;
 > The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.<sup>5</sup>
 
 ```javascript
+const numbers = [1, 'two', 3, 'four'];
 numbers.splice(2, 1, 'one');
 numbers;
-// => ['nine', 10, 'one', 3, 'four']
+// => [1, 'two', 'one', 'four']
 ```
 
 ---
