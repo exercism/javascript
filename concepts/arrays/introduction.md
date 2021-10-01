@@ -1,9 +1,10 @@
 # Introduction
 
 In Javascript, an array is a list-like structure with no fixed length which can hold any type of primitives or objects, even mixed types.
-The array elements can be accessed by their index.
 
-Example of an array declaration and accessing an element by index:
+To create an array, add elements between square brackets `[]`. To read from the array, put the index in square brackets `[]` after the identifier. The indices of an array start at zero.
+
+For example:
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];

@@ -15,11 +15,22 @@ numbers[2];
 To retrieve the number of elements that are in an array, use the `length` property:
 
 ```javascript
+const numbers = [1, 'two', 3, 'four'];
 numbers.length;
 // => 4
 ```
 
+To change an element in the array, you assign a value at the index:
+
+```javascript
+const numbers = [1, 'two', 3, 'four'];
+numbers[0] = 'one';
+// => ['one', 'two', 3, 'four']
+```
+
 ## Methods
+
+Some of the [methods][array_methods] that are available on `Array.prototype` can be used to add or remove from the array. Here are a few to consider when working on this exercise:
 
 ### push
 
@@ -82,3 +93,5 @@ numbers;
 [4] unshift, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift (referenced September 29, 2021)
 
 [5] splice, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice (referenced September 29, 2021)
+
+[array_methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
