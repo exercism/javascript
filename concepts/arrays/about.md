@@ -1,9 +1,12 @@
 # About
 
-In Javascript, an array is actually a regular `object` where the elements are properties of that object.
+In Javascript, an array is a list-like structure with no fixed length which can hold any type of primitives or objects, even mixed types.
 It includes the `length` property and also lots of [useful methods][array-docs] for traversing and mutating the array.
 
-Declaring an array and accessing an element:
+To create an array, add elements between square brackets `[]`.
+To read from the array, put the index in square brackets `[]` after the identifier. The indices of an array start at zero.
+
+For example:
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
@@ -68,7 +71,7 @@ const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 delete names[1];
 
 names;
-// =>  ["Jack", empty, "Paul", "Megan"]
+// =>  ["Jack", empty, "Paul", "Megan"]
 
 names.length;
 // => 4
@@ -79,14 +82,18 @@ names.forEach((name) => console.log(name));
 // => Megan
 ```
 
-If there should be no holes, and if the `length` should reflect the amount of items that will be traversed or mutated, use `splice` instead:
+If there should be no holes, and if the `length` should reflect the amount of items that will be traversed or mutated, use `splice` instead.
+
+> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.[^5]
+
+For example:
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 names.splice(1, 1);
 
 names;
-// =>  ["Jack", "Paul", "Megan"]
+// =>  ["Jack", "Paul", "Megan"]
 
 names.length;
 // => 3
@@ -112,7 +119,7 @@ names;
 // => ["Jack", "Laura", "Paul", "Megan", empty × 2]
 
 names.length = 2;
-// =>  ["Jack", "Laura"]
+// =>  ["Jack", "Laura"]
 ```
 
 ## Checking if something is an Array
@@ -137,6 +144,77 @@ Array.isArray(object);
 You might be tempted to use `names instanceof Array`, and that can work, but not under all circumstances.
 Read [this article][instanceof-vs-array-is-array] for more information.
 
+## Array Methods
+
+Some of the [methods][array_methods] that are available on `Array.prototype` can be used to add or remove from the array.
+Here are a few of them:
+
+### push
+
+> The `push()` method adds one or more elements to the end of an array and returns the new length of the array.[^1]
+
+```javascript
+const names = ['Jack', 'Laura', 'Paul', 'Megan'];
+names.push('Jill'); // => 5
+names;
+// => ['Jack', 'Laura', 'Paul', 'Megan', 'Jill']
+```
+
+### pop
+
+> The `pop()` method removes the last element from an array and returns that element.
+> This method changes the length of the array.[^2]
+
+```javascript
+const names = ['Jack', 'Laura', 'Paul', 'Megan'];
+names.pop(); // => 'Megan'
+names;
+// => ['Jack', 'Laura', 'Paul']
+```
+
+### shift
+
+> The `shift()` method removes the first element from an array and returns that removed element.
+> This method changes the length of the array.[^3]
+
+```javascript
+const names = ['Jack', 'Laura', 'Paul', 'Megan'];
+names.shift(); // => 'Jack'
+names;
+// => ['two', 3, 'four']
+```
+
+### unshift
+
+> The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.[^4]
+
+```javascript
+const names = ['Jack', 'Laura', 'Paul', 'Megan'];
+names.unshift('Jill'); // => 5
+names;
+// => ['Jill', 'Jack', 'Laura', 'Paul', 'Megan']
+```
+
+### splice
+
+> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.[^5]
+
+```javascript
+const names = ['Jack', 'Laura', 'Paul', 'Megan'];
+names.splice(2, 1, 'Jill');
+names;
+// => ['Jack', 'Laura', 'Jill', 'Megan']
+```
+
+---
+
+[^1]: `push`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push (referenced September 29, 2021)
+[^2]: `pop`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop (referenced September 29, 2021)
+[^3]: `shift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift (referenced September 29, 2021)
+[^4]: `unshift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift (referenced September 29, 2021)
+[^5]: `splice`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice (referenced September 29, 2021)
+
 [array-docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods
 [concept-numbers]: /tracks/javascript/concepts/numbers
 [instanceof-vs-array-is-array]: https://web.mit.edu/jwalden/www/isArray.html
+[array_methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
