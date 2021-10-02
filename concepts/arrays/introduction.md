@@ -27,6 +27,7 @@ To change an element in the array, you assign a value at the index:
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
 numbers[0] = 'one';
+numbers;
 // => ['one', 'two', 3, 'four']
 ```
 

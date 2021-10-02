@@ -27,12 +27,12 @@ To change an element in the array, you assign a value at the index:
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
 numbers[0] = 'one';
+numbers;
 // => ['one', 'two', 3, 'four']
 ```
 
 ## Methods
 
-Arrays in JavaScript come with a lot of helpful methods attached to them. Here we will focus on basic methods to manipulate the array. Other exercises will teach you about other types of array methods.
 
 Some of the [methods][array_methods] that are available on `Array.prototype` can be used to add or remove from the array.
 Here are a few to consider when working on this exercise:
