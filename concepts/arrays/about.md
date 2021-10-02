@@ -218,4 +218,3 @@ names;
 [concept-numbers]: /tracks/javascript/concepts/numbers
 [instanceof-vs-array-is-array]: https://web.mit.edu/jwalden/www/isArray.html
 [array_methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-
