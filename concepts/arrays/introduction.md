@@ -33,7 +33,6 @@ numbers[0] = 'one';
 ## Methods
 
 Some of the [methods][array_methods] that are available on `Array.prototype` can be used to add or remove from the array.
-Here are a few to consider when working on this exercise:
 
 ### push
 
