@@ -11,10 +11,10 @@ For example:
 const myPromise = new Promise(function (resolve, reject) {
   let sampleData = [2, 4, 6, 8];
   let randomNumber = Math.ceil(Math.random() * 5);
-  if (sampleData(randomNumber)) {
-    resolve(sampleData(randomNumber));
+  if (sampleData[randomNumber]) {
+    resolve(sampleData[randomNumber]);
   } else {
-    reject("An error occured!");
+    reject('An error occured!');
   }
 });
 
@@ -26,7 +26,7 @@ myPromise
     throw new Error(error);
   })
   .finally(function () {
-    console.log("Promise completed");
+    console.log('Promise completed');
   });
 ```
 
@@ -40,7 +40,7 @@ These methods are available on `Promise.prototype`
 
 ```javascript
 const promise1 = new Promise(function (resolve, reject) {
-  resolve("Success!");
+  resolve('Success!');
 });
 
 promise1.then(function (value) {
@@ -55,7 +55,7 @@ promise1.then(function (value) {
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
-  throw "An error occured";
+  throw 'An error occured';
 });
 
 promise1.catch(function (error) {
@@ -75,7 +75,7 @@ function findDataById(id) {
     if (sampleData[id]) {
       resolve(sampleData[id]);
     } else {
-      reject(new Error("Invalid id"));
+      reject(new Error('Invalid id'));
     }
   });
 }
@@ -88,7 +88,7 @@ findDataById(4)
     console.error(err);
   })
   .finally(function () {
-    console.log("Promise completed");
+    console.log('Promise completed');
   });
 ```
 
