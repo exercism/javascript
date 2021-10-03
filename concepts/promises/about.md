@@ -1,5 +1,3 @@
-# About
-
 The [Promise][promise-docs] object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason.
 
 A Promise is in one of these states:
@@ -20,7 +18,6 @@ const myPromise = new Promise(function (resolve, reject) {
     resolve("Jack");
   }, 300);
 });
-
 myPromise.then(function (e) {
   console.log(e); // expected output 'Jack'
 });
@@ -40,7 +37,6 @@ var p3 = new Promise(function(resolve, reject) {
     resolve("Jill");
   }, 300);
 });
-
 Promise.all([p1, p2, p3]).then(functin (values) {
   console.log(values); // => [10, 45, "Jill"]
 });
@@ -86,7 +82,6 @@ Promise.resolve("resolved!").then(
 const promise1 = new Promise(function (resolve, reject) {
   resolve("Success!");
 });
-
 promise1.then(function (value) {
   console.log(value);
   // expected output: "Success!"
@@ -101,7 +96,6 @@ promise1.then(function (value) {
 const promise1 = new Promise((resolve, reject) => {
   throw "An error occured";
 });
-
 promise1.catch(function (error) {
   console.error(error);
 });
@@ -123,7 +117,6 @@ function findDataById(id) {
     }
   });
 }
-
 findDataById(4)
   .then(function (response) {
     console.log(response);
