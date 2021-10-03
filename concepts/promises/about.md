@@ -34,6 +34,60 @@ myPromise.then(function (e) {
 ```javascript
 var p1 = Promise.resolve(10);
 var p2 = 45;
+var p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Jill");
+  }, 100);
+});
+
+Promise.all([p1, p2, p3]).then((values) => {
+  console.log(values); // [10, 45, "Jill"]
+});
+```
+
+## Methods
+
+**all**
+
+> The `Promise.all()` method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and will reject with this first rejection message / error.[^1]
+
+```javascript
+var p1 = Promise.resolve(10);
+var p2 = 45;
+var p3 = new Promise(function(resolve, reject) {
+  setTimeout(function() {
+    resolve("Jill");
+  }, 300);
+});
+Promise.all([p1, p2, p3]).then(functin (values) {
+  console.log(values); // => [10, 45, "Jill"]
+});
+```
+
+**reject**
+
+> The `Promise.reject()` method returns a Promise object that is rejected with a given reason.[^2]
+
+```javascript
+Promise.reject(new Error("failed :(")).then(
+  function () {
+    // not called
+  },
+  function (error) {
+    console.error(error); // error in the console
+  }
+);
+```
+
+## Methods
+
+**all**
+
+> The `Promise.all()` method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and will reject with this first rejection message / error.[^1]
+
+```javascript
+var p1 = Promise.resolve(10);
+var p2 = 45;
 var p3 = new Promise(function(resolve, reject) {
   setTimeout(function() {
     resolve("Jill");
