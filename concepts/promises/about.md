@@ -1,3 +1,5 @@
+# About
+
 The [Promise][promise-docs] object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason.
 
 A Promise is in one of these states:
