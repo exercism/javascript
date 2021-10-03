@@ -1,37 +1,104 @@
 # Introduction
 
-The [`Promise` object][mdn-promise] represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+The [`Promise`][promise-docs] object represents the eventual completion (or failure) of an
+asynchronous operation, and its resulting value.
 
-> Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+The methods [`promise.then()`][promise-then], [`promise.catch()`][promise-catch], and [`promise.finally()`][promise-finally] are used to associate further action with a promise that becomes settled.
 
-A `Promise` has three states:
+For example:
 
-1. unresolved
-2. resolved
-3. rejected
+```javascript
+const myPromise = new Promise(function (resolve, reject) {
+  let sampleData = [2, 4, 6, 8];
+  let randomNumber = Math.ceil(Math.random() * 5);
+  if (sampleData[randomNumber]) {
+    resolve(sampleData[randomNumber]);
+  } else {
+    reject('An error occured!');
+  }
+});
 
-When a `Promise` is _settled_, it means that it has either _resolved_ or _rejected_.
+myPromise
+  .then(function (e) {
+    console.log(e);
+  })
+  .catch(function (error) {
+    throw new Error(error);
+  })
+  .finally(function () {
+    console.log('Promise completed');
+  });
+```
 
-## Guarantees
+## Methods
 
-Unlike old-fashioned _passed-in_ callbacks, a promise comes with some guarantees, including, but not limited to:
+These methods are available on `Promise.prototype`
 
-- A `Promise` can only change its state _once_, which means that a resolved promise can never become rejected.
-- Callbacks added with [`.then`][mdn-promise-then] are called even if the promise has already settled.
-- Multiple callback may be added using [`.then`][mdn-promise-then], and those callbacks will be invoked in the order as they were inserted.
+**then**
 
-## Chaining
+> The `.then()` method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining.[^1]
 
-> TODO: `.then`, `.catch`
+```javascript
+const promise1 = new Promise(function (resolve, reject) {
+  resolve('Success!');
+});
 
-## Constructing
+promise1.then(function (value) {
+  console.log(value);
+  // expected output: "Success!"
+});
+```
 
-> TODO: `Promise.resolve` `Promise.reject` `new Promise(resolve, reject)`
+**catch**
 
-## More about promises
+> A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is resolved. It is used to handle rejected promises.[^2]
 
-See [this guide][mdn-guide-promise] for more about using promises.
+```javascript
+const promise1 = new Promise((resolve, reject) => {
+  throw 'An error occured';
+});
 
-[mdn-promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[mdn-promise-then]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
-[mdn-guide-promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+promise1.catch(function (error) {
+  console.error(error);
+});
+// expected output: An error occured
+```
+
+**finally**
+
+> When the promise is settled, i.e either fulfilled or rejected, the specified callback function is executed. This provides a way for code to be run whether the promise was fulfilled successfully or rejected once the Promise has been dealt with.[^3]
+
+```javascript
+function findDataById(id) {
+  return new Promise(function (resolve, reject) {
+    let sampleData = [1, 2, 3, 4, 5];
+    if (sampleData[id]) {
+      resolve(sampleData[id]);
+    } else {
+      reject(new Error('Invalid id'));
+    }
+  });
+}
+
+findDataById(4)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (err) {
+    console.error(err);
+  })
+  .finally(function () {
+    console.log('Promise completed');
+  });
+```
+
+---
+
+[^1]: `then`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+[^2]: `catch`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
+[^3]: `finally`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally
+
+[promise-docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[promise-catch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
+[promise-then]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+[promise-finally]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally
