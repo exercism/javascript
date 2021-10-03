@@ -2,5 +2,9 @@
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
     "description": "MDN: Using promises"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "description": "MDN: Introduction to Promises"
   }
 ]
