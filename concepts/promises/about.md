@@ -17,7 +17,7 @@ Example:
 ```javascript
 const myPromise = new Promise(function (resolve, reject) {
   setTimeout(function (resolve, reject) {
-    resolve("Jack");
+    resolve('Jack');
   }, 300);
 });
 myPromise.then(function (e) {
@@ -49,7 +49,7 @@ Promise.all([p1, p2, p3]).then(functin (values) {
 > The `Promise.reject()` method returns a Promise object that is rejected with a given reason.[^2]
 
 ```javascript
-Promise.reject(new Error("failed")).then(
+Promise.reject(new Error('failed')).then(
   function () {
     // not called
   },
@@ -64,7 +64,7 @@ Promise.reject(new Error("failed")).then(
 > The `Promise.resolve()` method returns a Promise object that is resolved with a given value. If the value is a promise, that promise is returned; if the value is a thenable (i.e. has a "then" method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value.[^3]
 
 ```javascript
-Promise.resolve("resolved!").then(
+Promise.resolve('resolved!').then(
   function (value) {
     console.log(value); // "resolved!"
   },
@@ -82,7 +82,7 @@ Promise.resolve("resolved!").then(
 
 ```javascript
 const promise1 = new Promise(function (resolve, reject) {
-  resolve("Success!");
+  resolve('Success!');
 });
 promise1.then(function (value) {
   console.log(value);
@@ -96,7 +96,7 @@ promise1.then(function (value) {
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
-  throw "An error occured";
+  throw 'An error occured';
 });
 promise1.catch(function (error) {
   console.error(error);
@@ -115,7 +115,7 @@ function findDataById(id) {
     if (sampleData[id]) {
       resolve(sampleData[id]);
     } else {
-      reject(new Error("Invalid id"));
+      reject(new Error('Invalid id'));
     }
   });
 }
@@ -127,7 +127,7 @@ findDataById(4)
     console.error(err);
   })
   .finally(function () {
-    console.log("Promise completed");
+    console.log('Promise completed');
   });
 ```
 
