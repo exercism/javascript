@@ -10,8 +10,6 @@ A Promise is in one of these states:
 
 When either of these options happens, the associated handlers queued up by a promise's `then` method is called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
-The methods [`promise.then()`][promise-then], [`promise.catch()`][promise-catch], and [`promise.finally()`][promise-finally] are used to associate further action with a promise that becomes settled.
-
 Example:
 
 ```javascript
