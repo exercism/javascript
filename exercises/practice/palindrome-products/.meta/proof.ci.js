@@ -33,23 +33,39 @@ export class Palindromes {
   }
 
   get largest() {
-    let best = new Palindrome(this.minFactor, this.minFactor);
-    for (let m = this.maxFactor; m >= this.minFactor; m -= 1) {
-      let p = null;
-      for (let n = m; n >= this.minFactor && (!p || !p.valid()); n -= 1) {
-        p = new Palindrome(m, n);
-        if (p.valid()) {
-          if (best.value < p.value) {
-            best = p;
-          } else if (best.value === p.value) {
-            best = p.merge(best);
-          }
+    let left = this.maxFactor,
+      right = this.maxFactor,
+      best = new Palindrome(this.minFactor, this.minFactor);
+
+    while (right >= this.minFactor) {
+      let p = new Palindrome(left, right);
+
+      if (best.value && p.value < best.value) {
+        right--;
+        left = right;
+        continue;
+      }
+
+      if (p.valid()) {
+        if (best.value < p.value) {
+          best = p;
+        } else if (best.value === p.value) {
+          best = p.merge(best);
         }
       }
+
+      if (left - 1 < this.minFactor) {
+        right--;
+        left = right;
+      } else {
+        left--;
+      }
     }
+
     if (best.valid()) {
       return best;
     }
+
     return { value: null, factors: [] };
   }
 
