@@ -1617,7 +1617,8 @@
      {
       "uuid": "", // ask uuid in issues 
       "slug": "arithmetic-operators",
-      "name": "Arithmetic Operators"
+      "name": "Arithmetic Operators",
+      "status: "wip"
     },
     {
       "uuid": "e1b15569-387c-4833-8c3b-9a94e0ee1583",
