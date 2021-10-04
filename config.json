@@ -46,7 +46,7 @@
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "uuid": "0aff2fa7-55ea-47e9-af4a-78927d916baf",
-        "concepts": ["numbers"],
+        "concepts": ["numbers", "arithmetic-operators"],
         "prerequisites": ["basics"],
         "status": "beta"
       },
@@ -1614,6 +1614,11 @@
     ]
   },
   "concepts": [
+     {
+      "uuid": "", // ask uuid in issues 
+      "slug": "arithmetic-operators",
+      "name": "Arithmetic Operators"
+    },
     {
       "uuid": "e1b15569-387c-4833-8c3b-9a94e0ee1583",
       "slug": "array-analysis",
