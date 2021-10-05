@@ -47,6 +47,14 @@ describe('promises', () => {
       expect(all([])).toBeInstanceOf(Promise);
     });
 
+    xtest('resolves when given no promises', () => {
+      return expect(all([])).resolves.toEqual([]);
+    });
+
+    xtest('resolves when given no arguments', () => {
+      return expect(all()).resolves.toBeUndefined();
+    });
+
     xtest('resolved values appear in the order they are passed in', () => {
       const FIRST = 'FIRST';
       const SECOND = 'SECOND';
@@ -75,6 +83,14 @@ describe('promises', () => {
 
     xtest('returns a Promise', () => {
       expect(allSettled([])).toBeInstanceOf(Promise);
+    });
+
+    xtest('resolves when given no promises', () => {
+      return expect(allSettled([])).resolves.toEqual([]);
+    });
+
+    xtest('resolves when given no arguments', () => {
+      return expect(allSettled()).resolves.toBeUndefined();
     });
 
     xtest('resolved values appear in the order they are passed in', () => {
@@ -106,6 +122,14 @@ describe('promises', () => {
 
     xtest('returns a Promise', () => {
       expect(race([])).toBeInstanceOf(Promise);
+    });
+
+    xtest('resolves when given no promises', () => {
+      return expect(race([])).resolves.toEqual([]);
+    });
+
+    xtest('resolves when given no arguments', () => {
+      return expect(race()).resolves.toBeUndefined();
     });
 
     xtest('resolves with value of the fastest successful promise', () => {
@@ -143,6 +167,14 @@ describe('promises', () => {
 
     xtest('returns a Promise', () => {
       expect(any([]).catch(() => null)).toBeInstanceOf(Promise);
+    });
+
+    xtest('resolves when given no promises', () => {
+      return expect(race([])).resolves.toEqual([]);
+    });
+
+    xtest('resolves when given no arguments', () => {
+      return expect(race()).resolves.toBeUndefined();
     });
 
     xtest('resolves with value of fastest successful promise', () => {
