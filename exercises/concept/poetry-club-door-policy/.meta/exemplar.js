@@ -27,7 +27,7 @@
  * @returns {string}
  */
 export function frontDoorResponse(blurb) {
-  return blurb.trim()[0];
+  return blurb[0];
 }
 
 /**
