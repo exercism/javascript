@@ -68,22 +68,14 @@ export class Palindromes {
   }
 
   get smallest() {
-    let left = this.minFactor,
-      right = this.minFactor;
-
-    while (left <= this.maxFactor) {
-      const p = new Palindrome(left, right);
-      if (p.valid()) {
-        return p;
-      }
-      if (right >= this.maxFactor) {
-        left++;
-        right = left;
-      } else {
-        right++;
+    for (let m = this.minFactor; m <= this.maxFactor; m += 1) {
+      for (let n = m; n <= this.maxFactor; n += 1) {
+        const p = new Palindrome(m, n);
+        if (p.valid()) {
+          return p;
+        }
       }
     }
-
     return { value: null, factors: [] };
   }
 

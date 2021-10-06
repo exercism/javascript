@@ -79,7 +79,7 @@ describe('Palindromes', () => {
     expect(sortFactors(smallest.factors)).toEqual(expected.factors);
   });
 
-  xtest('largest palindrome from four digit factors', () => {
+  test.skip('largest palindrome from four digit factors', () => {
     const palindromes = Palindromes.generate({
       maxFactor: 9999,
       minFactor: 1000,
