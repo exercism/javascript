@@ -1,7 +1,7 @@
 {
   "blurb": "Connect to the Klingon Translation Service and learn about promises.",
   "authors": ["SleeplessByte"],
-  "contributors": [],
+  "contributors": ["AndrewLawendy"],
   "files": {
     "solution": ["service.js"],
     "test": ["service.spec.js"],

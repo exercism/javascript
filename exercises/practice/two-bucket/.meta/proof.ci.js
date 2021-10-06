@@ -95,10 +95,28 @@ export class TwoBucket {
     return mvCount;
   }
 
+  gcd(a, b) {
+    // greatest common divisor
+    if (!b) {
+      return a;
+    }
+    return this.gcd(b, a % b);
+  }
+
   moves() {
-    let j = 0;
     // j will be running val of bucket one, k = running val of bucket two
+    let j = 0;
     let k = 0;
+
+    // if the goal is not a multiple of the gcd of bucket one and bucket two,
+    // or the goal is bigger than both buckets,
+    // the solution will be impossible.
+    if (
+      this.z % this.gcd(this.x, this.y) !== 0 ||
+      (this.z > this.x && this.z > this.y)
+    ) {
+      throw new Error('Cannot reach the goal.');
+    }
 
     if (this.starter === 'one') {
       j = this.x;

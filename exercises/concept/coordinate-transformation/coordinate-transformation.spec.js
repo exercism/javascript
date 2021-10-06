@@ -108,9 +108,24 @@ describe('memoizeTransform', () => {
     expect(memoizedTranslate(2, 2)).toEqual([4, 4]);
   });
 
+  test('should return different results for different inputs', () => {
+    const memoizedTranslate = memoizeTransform(translate2d(1, 2));
+    expect(memoizedTranslate(2, 2)).toEqual([3, 4]);
+    expect(memoizedTranslate(6, 6)).toEqual([7, 8]);
+  });
+
   test('should not call the memoized function if the input is the same', () => {
     const memoizedTransform = memoizeTransform(fakeTransform());
     expect(memoizedTransform(5, 5)).toEqual([1, 1]);
     expect(memoizedTransform(5, 5)).toEqual([1, 1]);
+  });
+
+  test('should only remember the last result', () => {
+    const mockFunction = jest.fn((x, y) => [x * 2, y * 2]);
+    const memoizedTransform = memoizeTransform(mockFunction);
+    expect(memoizedTransform(1, 1)).toEqual([2, 2]);
+    expect(memoizedTransform(2, 2)).toEqual([4, 4]);
+    expect(memoizedTransform(1, 1)).toEqual([2, 2]);
+    expect(mockFunction).toBeCalledTimes(3);
   });
 });

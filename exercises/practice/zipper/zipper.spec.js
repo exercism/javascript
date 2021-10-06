@@ -102,4 +102,10 @@ describe('Zipper', () => {
     const up = zipper.right().up();
     expect(zipper).not.toBe(up);
   });
+
+  xtest('should return same zipper from different paths', () => {
+    const z1 = zipper.left().up().right();
+    const z2 = zipper.right();
+    expect(z1).toEqual(z2);
+  });
 });

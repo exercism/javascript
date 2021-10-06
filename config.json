@@ -218,6 +218,14 @@
         "concepts": ["errors"],
         "prerequisites": ["null-undefined", "conditionals"],
         "status": "beta"
+      },
+      {
+        "slug": "elyses-transformative-enchantments",
+        "name": "Elyses Transformative Enchantments",
+        "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
+        "concepts": ["array-transformations"],
+        "prerequisites": ["arrays", "callbacks"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -975,7 +983,7 @@
         "core": false,
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4,
+        "difficulty": 6,
         "topics": ["promises", "error_handling", "higher_order_functions"]
       },
       {
