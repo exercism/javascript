@@ -208,11 +208,11 @@ names;
 
 ---
 
-[^1]: `push`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push (referenced September 29, 2021)
-[^2]: `pop`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop (referenced September 29, 2021)
-[^3]: `shift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift (referenced September 29, 2021)
-[^4]: `unshift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift (referenced September 29, 2021)
-[^5]: `splice`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice (referenced September 29, 2021)
+[^1]: `push`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push> (referenced September 29, 2021)
+[^2]: `pop`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop> (referenced September 29, 2021)
+[^3]: `shift`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift> (referenced September 29, 2021)
+[^4]: `unshift`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift> (referenced September 29, 2021)
+[^5]: `splice`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice> (referenced September 29, 2021)
 
 [array-docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods
 [concept-numbers]: /tracks/javascript/concepts/numbers
