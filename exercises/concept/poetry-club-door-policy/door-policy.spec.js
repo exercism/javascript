@@ -117,7 +117,7 @@ describe('back door response', () => {
     expect(actualLetters).toStrictEqual(expectedLetters);
   });
 
-  test('should igniore whitespace when taking the last letter character of each line of SHIRE_HORSE_WITH_SPACES', () => {
+  test('should ignore whitespace when taking the last letter character of each line of SHIRE_HORSE_WITH_SPACES', () => {
     const actualLetters = recite(SHIRE_HORSE_WITH_SPACES, backDoorResponse);
     const expectedLetters = ['h', 'o', 'r', 's', 'e'];
     expect(actualLetters).toStrictEqual(expectedLetters);
