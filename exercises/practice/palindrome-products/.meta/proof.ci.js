@@ -3,12 +3,11 @@ const reverseString = (str) => str.split('').reverse().join('');
 class Palindrome {
   constructor(factor1, factor2) {
     this.value = factor1 * factor2;
-    this.factors = [[factor1, factor2].sort()];
+    this.factors = [[factor1, factor2]];
   }
 
   withFactors(factors) {
-    this.factors.push(factors.sort());
-    this.factors = this.factors.sort();
+    this.factors.push(factors);
     return this;
   }
 
@@ -21,7 +20,6 @@ class Palindrome {
     other.factors.forEach((f) => {
       this.factors.push(f);
     });
-    this.factors = this.factors.sort();
     return this;
   }
 }
@@ -54,7 +52,7 @@ export class Palindromes {
         }
       }
 
-      if (left - 1 < this.minFactor) {
+      if (left <= this.minFactor) {
         right--;
         left = right;
       } else {
@@ -70,14 +68,22 @@ export class Palindromes {
   }
 
   get smallest() {
-    for (let m = this.minFactor; m <= this.maxFactor; m += 1) {
-      for (let n = this.minFactor; n <= this.maxFactor; n += 1) {
-        const p = new Palindrome(m, n);
-        if (p.valid()) {
-          return p;
-        }
+    let left = this.minFactor,
+        right = this.minFactor;
+
+    while(left <= this.maxFactor) {
+      const p = new Palindrome(left, right);
+      if (p.valid()) {
+        return p;
+      }
+      if(right >= this.maxFactor) {
+        left++;
+        right = left;
+      }else {
+        right++;
       }
     }
+
     return { value: null, factors: [] };
   }
 
