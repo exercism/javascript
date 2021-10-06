@@ -1,4 +1,4 @@
-# About
+# Introduction
 
 A _string_ is the JavaScript data type to store text data.
 
