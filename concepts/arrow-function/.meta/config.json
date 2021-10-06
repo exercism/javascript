@@ -1,0 +1,5 @@
+{
+  "blurb": "A callback is a function passed as an argument to another function which can invoke it at some point during its execution",
+  "authors": ["pertrai1"],
+  "contributors": ["pertrai1"]
+}

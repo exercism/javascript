@@ -19,6 +19,7 @@ In other words: how _function_ can be passed as an argument to another function,
 
 ## Concepts
 
+- `arrow functions`
 - `callbacks`
 
 ## Prerequisites

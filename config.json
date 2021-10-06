@@ -169,7 +169,7 @@
         "slug": "fruit-picker",
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
-        "concepts": ["callbacks"],
+        "concepts": ["callbacks", "arrow-function"],
         "prerequisites": ["functions", "objects"],
         "status": "beta"
       },
