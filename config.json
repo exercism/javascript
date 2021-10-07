@@ -1635,6 +1635,11 @@
       "name": "Arrays"
     },
     {
+      "uuid": "e7eea65d-5a13-44ee-aae6-113cfb234457",
+      "slug": "arrow-functions",
+      "name": "Arrow Functions"
+    },
+    {
       "uuid": "611d6b3d-1241-4432-90f6-8fcffb36917c",
       "slug": "basics",
       "name": "Basics"
