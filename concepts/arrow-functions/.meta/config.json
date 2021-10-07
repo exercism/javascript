@@ -1,5 +1,5 @@
 {
-  "blurb": "A callback is a function passed as an argument to another function which can invoke it at some point during its execution",
+  "blurb": "An arrow function is a less verbose usage of function syntax.",
   "authors": ["pertrai1"],
   "contributors": ["pertrai1"]
 }
