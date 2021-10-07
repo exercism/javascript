@@ -14,8 +14,8 @@ function addUpTwoNumbers(num1, num2) {
   return num1 + num2;
 }
 
+// function keyword removed and => added
 const addUpTwoNumbers = (num1, num2) => {
-  // function keyword removed and => added
   return num1 + num2;
 };
 ```
@@ -40,18 +40,8 @@ const addUpTwoNumbers = function (num1, num2) {
 const addUpTwoNumbers = (num1, num2) => num1 + num2; // braces - {} - and return removed
 ```
 
-If there are multiple statements in the body of the function, the braces
-would be used along with the `return` keyword:
-
-```javascript
-const addUpTwoNumbers = (num1, num2) => {
-  const extraStatement = 3;
-  return num1 + num2 + 3;
-};
-```
-
-When returning only an object from an arrow function, the syntax can
-be reduced like so:
+Another example is when returning only an object from an arrow
+function, the syntax can be reduced like so:
 
 ```javascript
 // explicit return of object
