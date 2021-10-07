@@ -13,9 +13,12 @@ Having found the kidnappers, Annalyn considers which of the following actions sh
 - _Fast attack_: a fast attack can be made if the **knight** is **_sleeping_**, as it takes time for him to get his armor on, so he will be vulnerable.
 - _Spy_: the group can be spied upon if **at least one** of them is **_awake_**. Otherwise, spying is a waste of time.
 - _Signal prisoner_: the prisoner can be signalled using bird sounds if the **prisoner** is **_awake_** and the **archer** is **_sleeping_**, as archers are trained in bird signaling so they could intercept the message.
-- _Free prisoner_: Annalyn can try sneaking into the camp to free the prisoner, but this tactic will only work if the **prisoner** is **_awake_** and the **other two characters** are **_sleeping_**.
-  If the **prisoner** is **_sleeping_**, they'll be startled by Annalyn's sudden appearance and will awaken the other two characters.
-  The prisoner can also be freed if the **archer** is **_sleeping_** and Annalyn has her **pet dog** **_with her_**, as the knight will be scared by the dog and will withdraw, and the archer can't equip his bow fast enough to prevent the prisoner from being freed.
+- _Free prisoner_: Annalyn can try sneaking into the camp to free the prisoner.
+  This is a risky thing to do and can only succeed in one of two ways:
+  - If Annalyn has her pet dog with her she can rescue the prisoner if the **archer** is **_asleep_**.
+    The knight is scared of the dog and the archer will not have time to get ready before Annalyn and the prisoner can escape.
+  - If Annalyn does not have her dog then she and the prisoner must be very sneaky!
+    Annalyn can free the prisoner if the **prisoner** is **_awake_** and the **knight** and **archer** are both **_sleeping_**, but if the **prisoner** is **_sleeping_** they can't be rescued: the prisoner would be startled by Annalyn's sudden appearance and wake up the knight and archer.
 
 You have four tasks: to implement the logic for determining if the above actions are available based on the state of the three characters found in the forest and whether Annalyn's pet dog is present or not.
 
