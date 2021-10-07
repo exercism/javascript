@@ -93,7 +93,7 @@ describe('back door response', () => {
       'Huge hooves too\t',
       'Impatiently waits for \t \t',
       'Reins and harness    ',
-      'Eager to leave   ',
+      'Eager to leave\n\n',
     ];
 
     const actualLetters = recite(SHIRE_HORSE_WITH_SPACES, backDoorResponse);
