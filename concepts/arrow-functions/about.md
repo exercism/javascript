@@ -1,6 +1,9 @@
 # About
 
-An arrow function is a less verbose usage of function syntax.
+Besides function declarations and function expressions, JavaScript
+also has another very concise syntax for defining a function. These
+functions are called _arrow functions_.
+
 There are differences in the way that an arrow function works, such
 as _this_ binding, and that will be covered in other concepts. This
 introduction will focus on the syntax used for an arrow function.
@@ -68,7 +71,7 @@ const addUpTwoNumbers = (num1, num2) => num1 + num2;
 ```
 <!-- prettier-ignore-end -->
 
-Other concepts that are taught such as [Rest][concept-rest] and
+Other concepts that are taught such as [Rest Parameters][concept-rest] and
 [Destructuring][concept-destructure] can be used with an arrow function.
 
 [concept-rest]: /tracks/javascript/concepts/rest-and-spread
