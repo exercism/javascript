@@ -71,9 +71,7 @@ describe('inventory result callback', () => {
   });
 
   test('returns "PURCHASE" when inventory is available', () => {
-    expect(purchaseInventoryIfAvailable(null, { quantityAvailable: 4 })).toBe(
-      'PURCHASE'
-    );
+    expect(purchaseInventoryIfAvailable(null, true)).toBe('PURCHASE');
   });
 
   test('returns "NOOP" when inventory is unavailable', () => {
