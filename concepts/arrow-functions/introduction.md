@@ -1,16 +1,13 @@
 # Introduction
 
-Besides function declarations and function expressions, JavaScript
-also has another very concise syntax for defining a function. These
-functions are called _arrow functions_.
+Besides function declarations and function expressions, JavaScript also has another very concise syntax for defining a function.
+These functions are called _arrow functions_.
 
-There are differences in the way that an arrow function works, such
-as _this_ binding, and that will be covered in other concepts. This
-introduction will focus on the syntax used for an arrow function.
+There are differences in the way that an arrow function works, such as _this_ binding, and that will be covered in other concepts.
+This introduction will focus on the syntax used for an arrow function.
 
-Here is a comparison between a function declaration and an arrow
-function. As we continue down, we will continue to compare differences
-for reference.
+Here is a comparison between a function declaration and an arrow function.
+As we continue down, we will continue to compare differences for reference.
 
 ```javascript
 function addUpTwoNumbers(num1, num2) {
@@ -29,9 +26,8 @@ Above, you will see that the arrow function syntax:
 2. has declared the identifier `addUpTwoNumbers` as a `const`
 3. adds a fat arrow `=>`
 
-Notice that there is only one statement that is in the body of the
-function. When there is only one statement that is returned in the
-body, the `{}` and the `return` keyword can be omitted, like so:
+Notice that there is only one statement that is in the body of the function.
+When there is only one statement that is returned in the body, the `{}` and the `return` keyword can be omitted, like so:
 
 ```javascript
 // function expression
@@ -43,8 +39,7 @@ const addUpTwoNumbers = function (num1, num2) {
 const addUpTwoNumbers = (num1, num2) => num1 + num2; // braces - {} - and return removed
 ```
 
-Another example is when returning only an object from an arrow
-function, the syntax can be reduced like so:
+Another example is when returning only an object from an arrow function, the syntax can be reduced like so:
 
 ```javascript
 // explicit return of object

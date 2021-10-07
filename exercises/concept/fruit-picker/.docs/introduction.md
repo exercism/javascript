@@ -1,14 +1,11 @@
 # Introduction
 
-Besides function declarations and function expressions, JavaScript
-also has another very concise syntax for defining a function. These
-functions are called _arrow functions_.
+Besides function declarations and function expressions, JavaScript also has another very concise syntax for defining a function.
+These functions are called _arrow functions_.
 
 Callbacks are functions which are passed as arguments to another function.
-This is often done to control the order of execution in an asynchronous
-context. Writing a callback function is no different from writing
-a function, but the callback function's arguments must match the
-signature required by the calling function.
+This is often done to control the order of execution in an asynchronous context.
+Writing a callback function is no different from writing a function, but the callback function's arguments must match the signature required by the calling function.
 
 <!-- prettier-ignore-start -->
 ```javascript
