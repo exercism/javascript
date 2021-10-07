@@ -12,36 +12,6 @@ const recite = (poem, responseFn) => {
 };
 
 describe('front door response', () => {
-  test('should output a character per line', () => {
-    // Shire Horse, by Michael Lockwood
-    const SHIRE_HORSE = [
-      'Stands so high',
-      'Huge hooves too',
-      'Impatiently waits for',
-      'Reins and harness',
-      'Eager to leave',
-    ];
-
-    const expectedLetters = recite(SHIRE_HORSE, frontDoorResponse);
-    expect(expectedLetters.length).toBe(SHIRE_HORSE.length);
-  });
-
-  test('should take the first character of each line', () => {
-    // Shire Horse, by Michael Lockwood
-    const SHIRE_HORSE = [
-      'Stands so high',
-      'Huge hooves too',
-      'Impatiently waits for',
-      'Reins and harness',
-      'Eager to leave',
-    ];
-
-    const expectedLetters = ['S', 'H', 'I', 'R', 'E'];
-    expect(recite(SHIRE_HORSE, frontDoorResponse)).toStrictEqual(
-      expectedLetters
-    );
-  });
-
   test('should take the first characters from SUMMER', () => {
     // Summer, by John Albert Caballero
     const SUMMER = [
@@ -87,54 +57,35 @@ describe('front door response', () => {
 });
 
 describe('front door password', () => {
-  test('should title case SHIRE', () => {
-    expect(frontDoorPassword('SHIRE')).toBe('Shire');
-  });
-
-  test('should title case SUMMER', () => {
+  test('should capitalize SUMMER', () => {
     expect(frontDoorPassword('SUMMER')).toBe('Summer');
   });
 
-  test('should title case SOPHIA', () => {
+  test('should capitalize SOPHIA', () => {
     expect(frontDoorPassword('SOPHIA')).toBe('Sophia');
   });
 
-  test('should title case CODE', () => {
+  test('should capitalize CODE', () => {
     expect(frontDoorPassword('CODE')).toBe('Code');
   });
 });
 
 describe('back door response', () => {
-  test('should output a character per line', () => {
-    // Shire Horse, by Michael Lockwood
-    const SHIRE_HORSE = [
-      'Stands so high',
-      'Huge hooves too',
-      'Impatiently waits for',
-      'Reins and harness',
-      'Eager to leave',
+  test('should take the last letter character of each line of CODE_WORK', () => {
+    // Code Work, by Derk-Jan Karrenbeld
+    const CODE_WORK = [
+      'Compilers intensily bestow',
+      'On commencing without ego',
+      'Different processes ajar',
+      'Exit with zero quick',
     ];
 
-    const actualLetters = recite(SHIRE_HORSE, backDoorResponse);
-    expect(actualLetters.length).toBe(SHIRE_HORSE.length);
-  });
-
-  test('should take the last letter character of each line of SHIRE_HORSE', () => {
-    // Shire Horse, by Michael Lockwood
-    const SHIRE_HORSE = [
-      'Stands so high',
-      'Huge hooves too',
-      'Impatiently waits for',
-      'Reins and harness',
-      'Eager to leave',
-    ];
-
-    const actualLetters = recite(SHIRE_HORSE, backDoorResponse);
-    const expectedLetters = ['h', 'o', 'r', 's', 'e'];
+    const actualLetters = recite(CODE_WORK, backDoorResponse);
+    const expectedLetters = ['w', 'o', 'r', 'k'];
     expect(actualLetters).toStrictEqual(expectedLetters);
   });
 
-  test('should igniore whitespace when taking the last letter character of each line of SHIRE_HORSE_WITH_SPACES', () => {
+  test('should ignore whitespace when taking the last letter character of each line of SHIRE_HORSE_WITH_SPACES', () => {
     // Shire Horse, by Michael Lockwood
     // with trailing whitespace
     const SHIRE_HORSE_WITH_SPACES = [
@@ -149,28 +100,14 @@ describe('back door response', () => {
     const expectedLetters = ['h', 'o', 'r', 's', 'e'];
     expect(actualLetters).toStrictEqual(expectedLetters);
   });
-
-  test('should take the last letter character of each line of CODE_WORK', () => {
-    // Code Work, by Derk-Jan Karrenbeld
-    const CODE_WORK = [
-      'Compilers intensily bestow',
-      'On commencing without ego',
-      'Different processes ajar',
-      'Exit with zero quick',
-    ];
-
-    const actualLetters = recite(CODE_WORK, backDoorResponse);
-    const expectedLetters = ['w', 'o', 'r', 'k'];
-    expect(actualLetters).toStrictEqual(expectedLetters);
-  });
 });
 
 describe('back door password', () => {
-  test("should generate the correct pass phrase from 'horse'", () => {
-    expect(backDoorPassword('horse')).toBe('Horse, please');
-  });
-
   test("should generate the correct pass phrase from 'work'", () => {
     expect(backDoorPassword('work')).toBe('Work, please');
+  });
+
+  test("should generate the correct pass phrase from 'horse'", () => {
+    expect(backDoorPassword('horse')).toBe('Horse, please');
   });
 });
