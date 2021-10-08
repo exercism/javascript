@@ -36,7 +36,7 @@ Javascript uses 6 different kinds of operators to perform arithmetic operation o
   4 ** 1/2; // => 2
   ```
   
- Moreover, numbers storead as variables can also be used for all arithmetic operations.
+ Moreover, numbers stored as variables can also be used for all arithmetic operations.
  ```javascript
  let p = 4;
  let q = 2;
@@ -45,7 +45,7 @@ Javascript uses 6 different kinds of operators to perform arithmetic operation o
  let pow_ab = p ** q; // => 16
  ```
 
-## Using Additon Operator with Strings
+## Using Addition Operator with Strings
 The `+` operator can also be used to concatenate strings
 ```javascript
  let a = 'Ex';
@@ -57,4 +57,4 @@ The `+` operator can also be used to concatenate strings
  ```
 
 ## Order of Operations 
-## Shorthand Assignment Opertors 
+## Shorthand Assignment Operators 
