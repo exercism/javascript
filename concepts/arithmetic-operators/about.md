@@ -6,7 +6,7 @@ Javascript uses 6 different kinds of operators to perform arithmetic operation o
   2.5 + 3.9; // => 6.5
   ```
 
-- `-`: The subtraction operator is used to find the differece between two numbers 
+- `-`: The subtraction operator is used to find the difference between two numbers 
   ```javascipt
   19 - 2; // => 17
   7.4 - 1.2; // => 1.5
@@ -66,3 +66,14 @@ let result = 3 ** 3 + 9 * 4/(3-1)
 // => 45
 ```
 ## Shorthand Assignment Operators 
+Shorthand assignment operators are shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable. Consider two variable `x` & `y`(`y` can aso be replaced by any number)
+- `x += y`: Same as `x = x + y`.
+- `x -= y`: Same as `x = x - y`.
+- `x *= y`: Same as `x = x * y`.
+- `x /= y`: Same as `x = x / y`.
+- `x %= y`: Same as `x = x % y`.
+- `x **= y`: Same as `x = x ** y`.
+- `x++`: Same as `x += 1` or `x = x + 1`
+- `x--`: Same as `x -= 1` or `x -= x + 1`
+```javascript```
+
