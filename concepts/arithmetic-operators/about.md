@@ -57,4 +57,12 @@ The `+` operator can also be used to concatenate strings
  ```
 
 ## Order of Operations 
+When using multiple operators in a line, javascript follows an order of precendence as shown in [this table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table). To simplify it to our context, javascript uses the PEDMAS(Parentheses, Expoents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes. 
+```javascript
+let result = 3 ** 3 + 9 * 4/(3-1)
+// => 3 ** 3 + 9 * 4/2
+// => 27 + 9 * 4/2
+// => 27 + 18
+// => 45
+```
 ## Shorthand Assignment Operators 
