@@ -59,7 +59,7 @@ The use of parenthesis around parameters depends on the number of parameters:
 <!-- prettier-ignore-start -->
 ```javascript
 // one parameter does not need parenthesis
-const addUpTwoNumbers = num1 => num1;
+const square = num => num * num;
 
 // two or more parameters need to be wrapped in parenthesis
 const addUpTwoNumbers = (num1, num2) => num1 + num2;
