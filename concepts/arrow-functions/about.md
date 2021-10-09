@@ -3,11 +3,10 @@
 Besides function declarations and function expressions, JavaScript also has another very concise syntax for defining a function.
 These functions are called _arrow functions_.
 
-There are differences in the way that an arrow function works, such as _this_ binding, and that will be covered in other concepts.
-This introduction will focus on the syntax used for an arrow function.
+In this concept will focus on the syntax used to write an arrow function.
+There are differences in the way that an arrow function works, such as _this_ binding, that will be covered in other concepts.
 
 Here is a comparison between a function declaration and an arrow function.
-As we continue down, we will continue to compare differences for reference.
 
 ```javascript
 function addUpTwoNumbers(num1, num2) {
@@ -26,35 +25,31 @@ Above, you will see that the arrow function syntax:
 2. has declared the identifier `addUpTwoNumbers` as a `const`
 3. adds a fat arrow `=>`
 
-Notice that there is only one statement that is in the body of the function.
-When there is only one statement that is returned in the body, the `{}` and the `return` keyword can be omitted, like so:
+If the function body contains only a return statement, like in the example above, the `{}` and the `return` keyword can be omitted.
 
+<!-- prettier-ignore-start -->
 ```javascript
-// function expression
-const addUpTwoNumbers = function (num1, num2) {
-  return num1 + num2;
-};
+const addUpTwoNumbers = (num1, num2) => { return num1 + num2 };
 
-// arrow function
-const addUpTwoNumbers = (num1, num2) => num1 + num2; // braces - {} - and return removed
+// can be shortened to
+const addUpTwoNumbers = (num1, num2) => num1 + num2;
+// braces {} and return removed
 ```
+<!-- prettier-ignore-end -->
 
-Another example is when returning only an object from an arrow function, the syntax can be reduced like so:
+In the special case of only returning an object from an arrow function, parenthesis are needed around the object to be able to omit the return statement.
 
 ```javascript
 // explicit return of object
 const addUpTwoNumbers = (num1, num2) => {
-  return {
-    num1,
-    num2,
-  };
+  return { num1, num2 };
 };
 
 // implicit return of object
 const addUpTwoNumbers = (num1, num2) => ({ num1, num2 });
 ```
 
-The use of parenthesis around parameters depends on the number of parameters:
+The use of parenthesis around parameters depends on the number of parameters.
 
 <!-- prettier-ignore-start -->
 ```javascript
@@ -66,8 +61,7 @@ const addUpTwoNumbers = (num1, num2) => num1 + num2;
 ```
 <!-- prettier-ignore-end -->
 
-Other concepts that are taught such as [Rest Parameters][concept-rest] and
-[Destructuring][concept-destructure] can be used with an arrow function.
+Other concepts such as [Rest Parameters][concept-rest] and [Destructuring][concept-destructure] can also be used with an arrow function.
 
 [concept-rest]: /tracks/javascript/concepts/rest-and-spread
 [concept-destructure]: /tracks/javascript/concepts/array-destructuring
