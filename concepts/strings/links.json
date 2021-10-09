@@ -1,7 +1,11 @@
 [
   {
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods",
-    "description": "MDN: Strings"
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "description": "MDN: String"
+  },
+  {
+    "url": "https://javascript.info/string",
+    "description": "javascript.info: Strings"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
