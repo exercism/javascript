@@ -3,7 +3,7 @@
 Besides function declarations and function expressions, JavaScript also has another very concise syntax for defining a function.
 These functions are called _arrow functions_.
 
-In this concept will focus on the syntax used to write an arrow function.
+In this concept we will focus on the syntax used to write an arrow function.
 There are differences in the way that an arrow function works, such as _this_ binding, that will be covered in other concepts.
 
 Here is a comparison between a function declaration and an arrow function.
