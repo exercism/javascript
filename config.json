@@ -109,7 +109,13 @@
         "name": "Elyses Analytic Enchantments",
         "uuid": "45d956db-d4ef-4468-b1d3-47021f172c15",
         "concepts": ["array-analysis"],
-        "prerequisites": ["arrays", "booleans", "callbacks", "numbers"],
+        "prerequisites": [
+          "arrays",
+          "booleans",
+          "callbacks",
+          "arrow-functions",
+          "numbers"
+        ],
         "status": "beta"
       },
       {
@@ -125,7 +131,13 @@
         "name": "Elyses Looping Enchantments",
         "uuid": "e06f8f70-019f-4cec-924b-3971414e15d9",
         "concepts": ["array-loops"],
-        "prerequisites": ["arrays", "callbacks", "for-loops", "conditionals"],
+        "prerequisites": [
+          "arrays",
+          "callbacks",
+          "arrow-functions",
+          "for-loops",
+          "conditionals"
+        ],
         "status": "beta"
       },
       {
@@ -169,7 +181,7 @@
         "slug": "fruit-picker",
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
-        "concepts": ["callbacks"],
+        "concepts": ["callbacks", "arrow-functions"],
         "prerequisites": ["functions", "objects"],
         "status": "beta"
       },
@@ -178,7 +190,7 @@
         "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
-        "prerequisites": ["callbacks", "errors"],
+        "prerequisites": ["callbacks", "arrow-functions", "errors"],
         "status": "beta"
       },
       {
@@ -224,7 +236,7 @@
         "name": "Elyses Transformative Enchantments",
         "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
         "concepts": ["array-transformations"],
-        "prerequisites": ["arrays", "callbacks"],
+        "prerequisites": ["arrays", "callbacks", "arrow-functions"],
         "status": "wip"
       }
     ],
@@ -1633,6 +1645,11 @@
       "uuid": "c7c56d2a-636f-4976-9e08-931258a47923",
       "slug": "arrays",
       "name": "Arrays"
+    },
+    {
+      "uuid": "e7eea65d-5a13-44ee-aae6-113cfb234457",
+      "slug": "arrow-functions",
+      "name": "Arrow Functions"
     },
     {
       "uuid": "611d6b3d-1241-4432-90f6-8fcffb36917c",
