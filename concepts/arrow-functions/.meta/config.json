@@ -1,5 +1,5 @@
 {
-  "blurb": "An arrow function is a less verbose usage of function syntax.",
+  "blurb": "Besides function declarations and function expressions, JavaScript also has another very concise syntax for defining a function. These functions are called arrow functions.",
   "authors": ["pertrai1"],
-  "contributors": ["pertrai1"]
+  "contributors": []
 }
