@@ -30,14 +30,12 @@ describe('service status', () => {
 });
 
 describe('inventory service', () => {
-  let callback = () => 'PURCHASE' || 'NOOP';
-
   beforeEach(() => {
     resetQuery();
   });
 
   test('uses the query format', () => {
-    pickFruit('strawberry', 5, callback);
+    pickFruit('strawberry', 5, () => 'PURCHASE');
     expect(getLastQuery()).toEqual({
       variety: 'strawberry',
       quantity: 5,
@@ -45,7 +43,7 @@ describe('inventory service', () => {
   });
 
   test('takes parameters for the query', () => {
-    pickFruit('blueberry', 20, callback);
+    pickFruit('blueberry', 20, () => 'PURCHASE');
     expect(getLastQuery()).toEqual({
       variety: 'blueberry',
       quantity: 20,
@@ -53,12 +51,10 @@ describe('inventory service', () => {
   });
 
   test('returns synchronously', () => {
-    setResponse(true);
     expect(pickFruit('melon', 1, () => 'PURCHASE')).toBe('PURCHASE');
   });
 
   test('returns the inventory status', () => {
-    setResponse(null, false);
     expect(pickFruit('melon', 1, () => 'NOOP')).toBe('NOOP');
   });
 });
@@ -66,7 +62,7 @@ describe('inventory service', () => {
 describe('inventory result callback', () => {
   test('throws error if receives inventory error', () => {
     expect(() => {
-      purchaseInventoryIfAvailable('inventory error', false);
+      purchaseInventoryIfAvailable('inventory error', undefined);
     }).toThrow();
   });
 
@@ -114,7 +110,7 @@ describe('putting it together', () => {
   });
 
   test('returns "PURCHASE" if quantity available', () => {
-    setResponse(null, { quantityAvailable: 23 });
+    setResponse(null, true);
     expect(pickAndPurchaseFruit('oranges', 22)).toBe('PURCHASE');
   });
 });
