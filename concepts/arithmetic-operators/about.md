@@ -1,5 +1,5 @@
 # About 
-Javascript uses 6 different kinds of operators to perform arithmetic operation on numbers.
+Javascript uses 6 different kinds of operators to perform arithmetic operations on numbers.
 - `+`: The addition operator is used to find sum of numbers. 
   ```javascript
   1 + 2; // => 3
@@ -57,7 +57,7 @@ The `+` operator can also be used to concatenate strings
  ```
 
 ## Order of Operations 
-When using multiple operators in a line, javascript follows an order of precendence as shown in [this table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table). To simplify it to our context, javascript uses the PEDMAS(Parentheses, Expoents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes. 
+When using multiple operators in a line, javascript follows an order of precendence as shown in [this table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table). To simplify it to our context, javascript uses the PEDMAS(Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes. 
 ```javascript
 let result = 3 ** 3 + 9 * 4/(3-1)
 // => 3 ** 3 + 9 * 4/2
@@ -66,7 +66,7 @@ let result = 3 ** 3 + 9 * 4/(3-1)
 // => 45
 ```
 ## Shorthand Assignment Operators 
-Shorthand assignment operators are shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable. Consider two variable `x` & `y`(`y` can aso be replaced by any number)
+Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable. Consider two variable `x` & `y`(`y` can aso be replaced by any number)
 - `x += y`: Same as `x = x + y`.
 - `x -= y`: Same as `x = x - y`.
 - `x *= y`: Same as `x = x * y`.
