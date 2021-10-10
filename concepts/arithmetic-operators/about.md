@@ -66,12 +66,9 @@ Shorthand assignment operators are a shorter way of writing code conducting arit
 - `x /= y`: Same as `x = x / y`.
 - `x %= y`: Same as `x = x % y`.
 - `x **= y`: Same as `x = x ** y`.
-- `x++`: Same as `x += 1` or `x = x + 1`
-- `x--`: Same as `x -= 1` or `x -= x + 1`
 
 ```javascript
 let x = 5;
-x += 25; //=>x = 30
-x %= 3; //=> x = 2
-x--; //=> x = 4
+x += 25; //=> 30
+x %= 3; //=> 2
 ```
