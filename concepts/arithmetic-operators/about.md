@@ -46,7 +46,8 @@ Javascript uses 6 different kinds of operators to perform arithmetic operations 
 
 ## Order of Operations
 
-When using multiple operators in a line, javascript follows an order of precendence as shown in [this table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table). To simplify it to our context, javascript uses the PEDMAS(Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
+When using multiple operators in a line, javascript follows an order of precendence as shown in [this table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
+To simplify it to our context, javascript uses the PEDMAS(Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
 
 ```javascript
 let result = 3 ** 3 + 9 * 4/(3-1)
@@ -58,7 +59,9 @@ let result = 3 ** 3 + 9 * 4/(3-1)
 
 ## Shorthand Assignment Operators
 
-Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable. Consider two variable `x` & `y`(`y` can aso be replaced by any number). Then, `x += y`is same as `x = x + y`. The 5 other operations can also be conducted in a similar style.
+Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable.
+Consider two variable `x` & `y`(`y` can aso be replaced by any number).
+Then, `x += y`is same as `x = x + y`. The 5 other operations can also be conducted in a similar style.
 
 ```javascript
 let x = 5;
