@@ -1,11 +1,11 @@
 [
   {
-    "url": "https://www.w3schools.com/js/js_arithmetic.asp",
-    "description": "W3schools: Arithmetic Operators"
+    "url": "https://javascript.info/operators#maths",
+    "description": "JAVASCRIPT.INFO: Arithmetic Operators"
   },
   {
-    "url": "https://www.w3schools.com/js/js_assignment.asp",
-    "description": "W3schools: Assignment Operators"
+    "url": "https://javascript.info/operators#modify-in-place",
+    "description": "JAVASCRIPT.INFO: Shorthand Assignment Operators"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence",
