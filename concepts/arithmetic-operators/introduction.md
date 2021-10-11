@@ -4,7 +4,7 @@ Javascript uses 6 different kinds of operators to perform arithmetic operations 
 
 - `+`: The addition operator is used to find sum of numbers.
 - `-`: The subtraction operator is used to find the difference between two numbers
-- `*`: The multiplication operator is used to find the product of two numbers two numbers
+- `*`: The multiplication operator is used to find the product of two numbers.
 - `/`: The division operator is used to divide two numbers.
 
 ```javascript
