@@ -62,6 +62,7 @@ Shorthand assignment operators are a shorter way of writing code conducting arit
 
 ```javascript
 let x = 5;
-x += 25; //=> 30
-x %= 3; //=> 2
+x += 25; // x is now 30
+let y = 31
+y %= 3 // y is now 1
 ```
