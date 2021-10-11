@@ -58,14 +58,7 @@ let result = 3 ** 3 + 9 * 4/(3-1)
 
 ## Shorthand Assignment Operators
 
-Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable. Consider two variable `x` & `y`(`y` can aso be replaced by any number)
-
-- `x += y`: Same as `x = x + y`.
-- `x -= y`: Same as `x = x - y`.
-- `x *= y`: Same as `x = x * y`.
-- `x /= y`: Same as `x = x / y`.
-- `x %= y`: Same as `x = x % y`.
-- `x **= y`: Same as `x = x ** y`.
+Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable. Consider two variable `x` & `y`(`y` can aso be replaced by any number). Then, `x += y`is same as `x = x + y`. The 5 other operations can also be conducted in a similar style.
 
 ```javascript
 let x = 5;

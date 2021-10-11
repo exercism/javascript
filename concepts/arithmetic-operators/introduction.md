@@ -3,32 +3,14 @@
 Javascript uses 6 different kinds of operators to perform arithmetic operations on numbers.
 
 - `+`: The addition operator is used to find sum of numbers.
-
-  ```javascript
-  1 + 2; // => 3
-  2.5 + 3.9; // => 6.5
-  ```
-
 - `-`: The subtraction operator is used to find the difference between two numbers
-
-  ```javascript
-  19 - 2; // => 17
-  7.4 - 1.2; // => 1.5
-  ```
-
 - `*`: The multiplication operator is used to find the product of two numbers two numbers
-
-  ```javascript
-  7 * 5; // => 35
-  9.2 * 6.3; // => 57.959999999999994
-  ```
-
 - `/`: The division operator is used to divide two numbers.
 
-  ```javascipt
-  8 / 2; // => 4
-  25 / 3; // => 8.333333333333334
-  ```
+```javascript
+2 - 1.5 //=>0.5
+19 / 2 //=>9.5
+```
 
 - `%`: The remainder operator is used to find the remainder of a division performed.
 
@@ -36,7 +18,7 @@ Javascript uses 6 different kinds of operators to perform arithmetic operations 
   40 % 4; // => 0
   11 % 4; // => 3
   ```
-
+  
 - `**`: The exponentiation operator is used to raise a number to a power.
 
   ```javascript
