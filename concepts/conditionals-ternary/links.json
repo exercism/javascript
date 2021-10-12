@@ -1,6 +1,10 @@
 [
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods",
-    "description": "MDN: Arrays"
+    "description": "MDN: Conditional (ternary) operator"
+  },
+  {
+    "url": "https://javascript.info/ifelse",
+    "description": "javascript.info: Conditional branching"
   }
 ]
