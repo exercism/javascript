@@ -17,4 +17,23 @@ All types of expressions can be used with template strings.
 let track = 'JavaScript';
 
 `This track on exercism.io is ${track.toUpperCase()}`;
+// => This track on exercism.io is JAVASCRIPT
+```
+
+With the substitution capabilities that are available, you can also introduce logic into the process to determine what the output string should be. One way to handle the logic could be using the [ternary operator][ternary-operator]. This gives the same conditional `if/else if/else` functionality in a slightly different format.
+
+```javascript
+const year = 2000;
+
+year > 2000 ? true : false;
+// => true
+```
+
+To implement logic into template string syntax:
+
+```javascript
+const grade = 95;
+
+`You have ${grade > 90 ? 'passed' : 'failed'} the exam.`;
+// => You have padded the exam.
 ```
