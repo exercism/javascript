@@ -10,19 +10,19 @@ export class OverheatingError extends Error {
 }
 
 /**
- * Check if the humidity level is not too high.
+ * Check if the humidity level is too high.
  *
  * @param {number} humidityPercentage
  * @throws {Error}
  */
 export function checkHumidityLevel(humidityPercentage) {
   if (humidityPercentage > 70) {
-    throw new Error('Humidity level is too low');
+    throw new Error('Humidity level is too high');
   }
 }
 
 /**
- * Check if the temperature is not too high.
+ * Check if the temperature is too high.
  *
  * @param {number|null} temperature
  * @throws {ArgumentError|OverheatingError}
