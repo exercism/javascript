@@ -54,13 +54,15 @@ Javascript provides 6 different operators to perform basic arithmetic operations
 When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
 To simplify it to our context, JavaScript uses the PEDMAS (Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
 
+<!-- prettier-ignore-start -->
 ```javascript
-const result = 3 ** 3 + (9 * 4) / (3 - 1);
+const result = 3 ** 3 + 9 * 4 / (3 - 1);
 // => 3 ** 3 + 9 * 4/2
 // => 27 + 9 * 4/2
 // => 27 + 18
 // => 45
 ```
+<!-- prettier-ignore-end -->
 
 ## Shorthand Assignment Operators
 
