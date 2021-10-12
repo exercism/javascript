@@ -1,5 +1,5 @@
 {
   "authors": ["JaPatGitHub"],
   "contributors": [],
-  "blurb": "Javascript uses 6 different kinds of operators to perform arithmetic operations on numbers."
+  "blurb": "Javascript has 6 different operators to perform basic arithmetic operations on numbers. Additionally there is a matching shorthand assignment operator for each of those."
 }

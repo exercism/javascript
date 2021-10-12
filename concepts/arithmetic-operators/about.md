@@ -1,6 +1,8 @@
 # About
 
-Javascript uses 6 different kinds of operators to perform arithmetic operations on numbers.
+## Arithmetic Operators
+
+Javascript provides 6 different operators to perform basic arithmetic operations on numbers.
 
 - `+`: The addition operator is used to find sum of numbers.
 
@@ -24,6 +26,7 @@ Javascript uses 6 different kinds of operators to perform arithmetic operations 
   ```
 
 - `/`: The division operator is used to divide two numbers.
+  Since JavaScript numbers are always floating point numbers, there is no integer division.
 
   ```javascript
   8 / 2; // => 4
@@ -35,22 +38,24 @@ Javascript uses 6 different kinds of operators to perform arithmetic operations 
   ```javascript
   40 % 4; // => 0
   11 % 4; // => 3
+  -11 % 4; // => -3
   ```
 
 - `**`: The exponentiation operator is used to raise a number to a power.
+  It is the equivalent of using [`Math.pow()`][mdn-math-pow]
 
   ```javascript
   4 ** 3; // => 62
-  4 ** 1/2; // => 2
+  4 ** 1 / 2; // => 2
   ```
 
 ## Order of Operations
 
-When using multiple operators in a line, javascript follows an order of precendence as shown in [this table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
-To simplify it to our context, javascript uses the PEDMAS(Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
+When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
+To simplify it to our context, JavaScript uses the PEDMAS (Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
 
 ```javascript
-let result = 3 ** 3 + 9 * 4/(3-1)
+const result = 3 ** 3 + (9 * 4) / (3 - 1);
 // => 3 ** 3 + 9 * 4/2
 // => 27 + 9 * 4/2
 // => 27 + 18
@@ -60,12 +65,18 @@ let result = 3 ** 3 + 9 * 4/(3-1)
 ## Shorthand Assignment Operators
 
 Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable.
-Consider two variable `x` & `y`(`y` can aso be replaced by any number).
-Then, `x += y`is same as `x = x + y`. The 5 other operations can also be conducted in a similar style.
+For example, consider two variables `x` and `y`.
+Then, `x += y` is same as `x = x + y`.
+Often, this is used with a number instead of a variable `y`.
+The 5 other operations can also be conducted in a similar style.
 
 ```javascript
 let x = 5;
 x += 25; // x is now 30
-let y = 31
-y %= 3 // y is now 1
+
+let y = 31;
+y %= 3; // y is now 1
 ```
+
+[mdn-math-pow]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
+[mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
