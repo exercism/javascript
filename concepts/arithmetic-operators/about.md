@@ -1,46 +1,55 @@
-# Introduction
-
-## Numbers
-
-Many programming languages have specific numeric types to represent different types of numbers, but JavaScript only has two:
-
-- `number`: a numeric data type in the double-precision 64-bit floating point format (IEEE 754).
-  Examples are `-6`, `-2.4`, `0`, `0.1`, `1`, `3.14`, `16.984025`, `25`, `976`, `1024.0` and `500000`.
-- `bigint`: a numeric data type that can represent _integers_ in the arbitrary precision format.
-  Examples are `-12n`, `0n`, `4n`, and `9007199254740991n`.
-
-If you require arbitrary precision or work with extremely large numbers, use the `bigint` type.
-Otherwise, the `number` type is likely the better option.
+# About
 
 ## Arithmetic Operators
 
 Javascript provides 6 different operators to perform basic arithmetic operations on numbers.
 
 - `+`: The addition operator is used to find sum of numbers.
-- `-`: The subtraction operator is used to find the difference between two numbers
-- `*`: The multiplication operator is used to find the product of two numbers.
-- `/`: The division operator is used to divide two numbers.
 
-```javascript
-2 - 1.5; //=> 0.5
-19 / 2; //=> 9.5
-```
+  ```javascript
+  1 + 2; // => 3
+  2.5 + 3.9; // => 6.5
+  ```
+
+- `-`: The subtraction operator is used to find the difference between two numbers
+
+  ```javascript
+  19 - 2; // => 17
+  7.4 - 1.2; // => 1.5
+  ```
+
+- `*`: The multiplication operator is used to find the product of two numbers two numbers
+
+  ```javascript
+  7 * 5; // => 35
+  9.2 * 6.3; // => 57.959999999999994
+  ```
+
+- `/`: The division operator is used to divide two numbers.
+  Since JavaScript numbers are always floating point numbers, there is no integer division.
+
+  ```javascript
+  8 / 2; // => 4
+  25 / 3; // => 8.333333333333334
+  ```
 
 - `%`: The remainder operator is used to find the remainder of a division performed.
 
   ```javascript
   40 % 4; // => 0
+  11 % 4; // => 3
   -11 % 4; // => -3
   ```
 
 - `**`: The exponentiation operator is used to raise a number to a power.
+  It is the equivalent of using [`Math.pow()`][mdn-math-pow]
 
   ```javascript
   4 ** 3; // => 62
   4 ** 1 / 2; // => 2
   ```
 
-### Order of Operations
+## Order of Operations
 
 When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
 To simplify it to our context, JavaScript uses the PEDMAS (Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
@@ -55,7 +64,7 @@ const result = 3 ** 3 + 9 * 4 / (3 - 1);
 ```
 <!-- prettier-ignore-end -->
 
-### Shorthand Assignment Operators
+## Shorthand Assignment Operators
 
 Shorthand assignment operators are a shorter way of writing code conducting arithmetic operations on a variable, and assigning the new value to the same variable.
 For example, consider two variables `x` and `y`.
@@ -71,4 +80,5 @@ let y = 31;
 y %= 3; // y is now 1
 ```
 
+[mdn-math-pow]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
 [mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
