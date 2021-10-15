@@ -1,6 +1,6 @@
 # Introduction
 
-The `null` value in Javascript represents the intentional absence of an object value. It is one of Javascript's primitive types.
+The `null` value in JavaScript represents the intentional absence of an object value. It is one of JavaScript's primitive types.
 
 ```javascript
 // I do not have an apple.
