@@ -20,54 +20,45 @@
 // Good luck with that door policy!
 
 /**
- * Respond with the correct character, given the blurb, if this were said at
- * the front door.
+ * Respond with the correct character, given the line of the
+ * poem, if this were said at the front door.
  *
- * @param {string} blurb
+ * @param {string} line
  * @returns {string}
  */
-export function frontDoorResponse(blurb) {
+export function frontDoorResponse(line) {
   throw new Error('Implement the frontDoorResponse function');
 }
 
 /**
- * Respond with the correct character, given the blurb, if this were said at
- * the back door.
+ * Format the password for the front-door, given the response
+ * letters.
  *
- * @param {string} blurb
+ * @param {string} word the letters you responded with before
+ * @returns {string} the front door password
+ */
+export function frontDoorPassword(word) {
+  throw new Error('Implement the frontDoorPassword function');
+}
+
+/**
+ * Respond with the correct character, given the line of the
+ * poem, if this were said at the back door.
+ *
+ * @param {string} line
  * @returns {string}
  */
-export function backDoorResponse(blurb) {
+export function backDoorResponse(line) {
   throw new Error('Implement the backDoorResponse function');
 }
 
 /**
- * Capitalizes a word, meaning only the first character is a capital, and the
- * remaining letters are lower case.
+ * Format the password for the back door, given the response
+ * letters.
  *
- * @param {string} word
- * @returns {string}
+ * @param {string} word the letters you responded with before
+ * @returns {string} the back door password
  */
-function capitalize(word) {
-  throw new Error('Implement the capitalize function');
-}
-
-/**
- * Give the password for the front-door, given the responses.
- *
- * @param {string} responses the responses
- * @returns {string} the password
- */
-export function frontDoorPassword(responses) {
-  return capitalize(responses);
-}
-
-/**
- * Give the password for the back-door, given the responses.
- *
- * @param {string} responses the responses
- * @returns {string} the password
- */
-export function backDoorPassword(responses) {
-  return capitalize(responses);
+export function backDoorPassword(word) {
+  throw new Error('Implement the backDoorPassword function');
 }

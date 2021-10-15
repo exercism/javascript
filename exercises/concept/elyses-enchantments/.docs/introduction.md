@@ -84,7 +84,8 @@ numbers;
 
 ### splice
 
-> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.[^5]
+> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+> This method returns an array containing the deleted elements.[^5]
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
