@@ -35,7 +35,7 @@ export function backDoorResponse(line) {
 }
 
 /**
- * Format the password for the front-door, given the response
+ * Format the password for the back door, given the response
  * letters.
  *
  * @param {string} word the letters you responded with before
