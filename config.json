@@ -1809,6 +1809,11 @@
       "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
       "slug": "inheritance",
       "name": "Inheritance"
+    },
+    {
+      "uuid": "e0ff7a2b-d6f7-4513-9589-3e6854e14415",
+      "slug": "classes",
+      "name": "Classes"
     }
   ],
   "key_features": [
