@@ -32,7 +32,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "test": "jest --no-cache ./*",
+    "test": "jest",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint ."
   }
