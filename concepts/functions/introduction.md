@@ -119,4 +119,5 @@ const obj = {
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [concept-objects]: /tracks/javascript/concepts/objects
 [concept-callbacks]: /tracks/javascript/concepts/callbacks
+[concept-arrays]: /tracks/javascript/concepts/arrays
 [mdn-primitives]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
