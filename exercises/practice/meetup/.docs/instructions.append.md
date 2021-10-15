@@ -1,6 +1,6 @@
 # Instructions append
 
-In Javascript, the Date object month's index ranges from 0 to 11.
+In JavaScript, the Date object month's index ranges from 0 to 11.
 
 ```javascript
 const date = new Date('2020-06-13');
