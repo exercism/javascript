@@ -1,8 +1,8 @@
 # About
 
 Inheritance is a concept that comes from [object oriented programming][object-oriented]. It is a way to create 
-parent-child relationships between classes where the child class (sometimes called a _subclass_) has access to the 
-behavior and data defined by the parent class (sometimes called a _superclass_).
+parent-child relationships between classes where the child class (sometimes referred to as a _subclass_) has access to 
+the behavior and data defined by the parent class (sometimes referred to as a _superclass_).
 
 ```javascript
 class Pet {
@@ -22,10 +22,24 @@ dog.introduce();
 // => 'This is my pet, Otis.'
 ```
 
-The `extends` keyword is used by the child class to establish a relationship with the parent. In the example above
-the `Dog` class extends `Pet` giving objects created by `Dog` access to the `introduce` method defined by `Pet`.
+The `extends` keyword is used by the child class to establish a relationship with the parent through the
+[prototype chain][prototype-chain]. Objects created with `new Dog()` will have in their prototype chain the
+`Pet.prototype` providing access to the `introduce` method.
 
-If no constructor function is defined by the child class then the parent constructor function is used.
+```javascript
+let dog = new Dog('Otis');
+
+Dog.prototype.isPrototypeOf(dog);           // => true
+Pet.prototype.isPrototypeOf(dog);           // => true
+Pet.prototype.isPrototypeOf(Dog.prototype); // => true
+
+Pet.prototype.hasOwnProperty('introduce');  // => true
+Dog.prototype.hasOwnProperty('introduce');  // => false
+dog.hasOwnProperty('introduce');            // => false
+```
+
+## Constructors
+If no constructor function is defined by the child class, the parent constructor function is used.
 
 ```javascript
 class Dog extends Pet {}
@@ -34,9 +48,9 @@ class Dog extends Pet {}
 let dog = new Dog('Otis');
 ```
 
-If the child class defines a constructor function of its own, the parent constructor must be called as well. To invoke 
-the parent constructor, the keyword `super` is used. `super` is a reference to the parent constructor and therefore 
-requires the same function arguments.
+If the child class defines a constructor function of its own, the parent constructor must be called too. To invoke 
+the parent constructor, the keyword `super` is used. `super` is a reference to the parent constructor and requires the 
+same function arguments.
 
 ```javascript
 class Pet {
@@ -72,6 +86,7 @@ let dog = new Dog('Otis', 'Pug');
 
 ```
 
+## Defining Methods on the Child Class
 A child class can have behavior of its own in addition to the behavior derived from the parent class. This is one of the 
 key reasons for using inheritance &mdash; having a parent class with common behavior accessible to two or more child 
 classes while each child class defines specialized behavior unique to its role in the application.
@@ -95,8 +110,9 @@ dog.describe();
 // => 'Otis is a Pug.'
 ```
 
-A child class can also override the behavior of a function defined by the parent and replace or extend the parent 
-function with behavior defined by the child class.
+## Overriding Methods Inherited From the Parent Class
+A child class can also override the behavior of a method defined by the parent and replace or extend the parent 
+method with behavior defined by the child class.
 
 ```javascript
 class Cat extends Pet {
@@ -133,9 +149,8 @@ dog.introduce();
 // => Otis is a Pug.
 ```
 
-The class `Cat` overrides the `introduce` function from the `Pet` class by replacing it with a function of its own. By
-contrast the `Dog` class still calls the `introduce` function defined by the `Pet` class before extending its 
-functionality. To call the `introduce` method as defined by the `Pet` class from within the `
-introduce` function on the `Dog` class, the keyword `super` is used again as a way to reference the parent.
+To call the `introduce` method defined by the `Pet` class from within the `introduce` method on the `Dog` class, 
+the keyword `super` is used to reference the methods on the parent class.
 
 [object-oriented]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+[prototype-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain

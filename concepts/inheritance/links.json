@@ -4,6 +4,10 @@
     "description": "MDN: Inheritance"
   },
   {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain",
+    "description": "MDN: Inheritance and the Prototype Chain"
+  },
+  {
     "url": "https://javascript.info/class-inheritance",
     "description": "javascript.info: Class Inheritance"
   }
