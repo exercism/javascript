@@ -227,7 +227,7 @@
         "slug": "factory-sensors",
         "name": "Factory Sensors",
         "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
-        "concepts": ["errors"],
+        "concepts": ["errors", "inheritance"],
         "prerequisites": ["null-undefined", "conditionals"],
         "status": "beta"
       },
