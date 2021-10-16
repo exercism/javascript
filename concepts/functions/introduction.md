@@ -81,7 +81,7 @@ noReturn(1);
 ```
 
 In JavaScript, you can only return exactly one value.
-If you want to pass more information, you need to combine it into one entity first, usually into an [object][concept-objects], or an [array][concept-arrays]..
+If you want to pass more information, you need to combine it into one entity first, usually into an [object][concept-objects], or an [array][concept-arrays].
 
 ```javascript
 function divide(a, b) {
@@ -119,4 +119,5 @@ const obj = {
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
 [concept-objects]: /tracks/javascript/concepts/objects
 [concept-callbacks]: /tracks/javascript/concepts/callbacks
+[concept-arrays]: /tracks/javascript/concepts/arrays
 [mdn-primitives]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
