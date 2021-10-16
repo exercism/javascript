@@ -27,10 +27,10 @@ comment:
           Please check whether the changes you made to one of these also need to be applied to the others.
     - id: exemplar-or-stub-changes
       files:
-        - 'exercises/concept/*/*.js'
         - 'exercises/concept/*/.meta/*.js'
-        all:
-          - '!exercises/concept/*/*.spec.js'
+        - any:
+            - 'exercises/concept/*/*.js'
+            - '!exercises/concept/*/*.spec.js'
       body: |
         - 🎟️ If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (`<exercise>.js`), make sure the change is applied to both files.
     - id: problem-spec-related
