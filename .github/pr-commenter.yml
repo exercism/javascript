@@ -9,20 +9,20 @@ comment:
     It would be great if you can make sure your PR covers those points.
     This will save your reviewer some time and your change can be merged quicker.
   snippets:
-      - id: note-for-contributors
-        files:
-          - '*'
-          - '**/*'
-        body: |
-          - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
-          - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo.
-            E.g. if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
+    - id: note-for-contributors
+      files:
+        - '*'
+        - '**/*'
+      body: |
+        - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
+        - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo.
+          E.g. if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
     - id: concept-changes
       files:
-        - any: 
-          - 'exercises/concept/*/.docs/introduction.md'
-          - 'concepts/*/introduction.md'
-          - 'concepts/*/about.md'
+        - any:
+            - 'exercises/concept/*/.docs/introduction.md'
+            - 'concepts/*/introduction.md'
+            - 'concepts/*/about.md'
       body: |
         - 📜 The following files usually contain very similar content.
           - `concepts/<concept>/about.md`
@@ -32,17 +32,17 @@ comment:
     - id: exemplar-or-stub-changes
       files:
         - any:
-          - 'exercises/concept/*/*.js'
-          - 'exercises/concept/*/.meta/*.js'
+            - 'exercises/concept/*/*.js'
+            - 'exercises/concept/*/.meta/*.js'
           all:
-          - '!exercises/concept/*/*.spec.js'
+            - '!exercises/concept/*/*.spec.js'
       body: |
         - 🎟️ If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (`<exercise>.js`), make sure the change is applied to both files.
     - id: problem-spec-related
       files:
         - any:
-          - 'exercises/practice/*/*.spec.js'
-          - 'exercises/practice/*/.docs/instructions.js'
+            - 'exercises/practice/*/*.spec.js'
+            - 'exercises/practice/*/.docs/instructions.js'
       body: |
         - ⬆️ The instructions and test cases for many practice exercises originate in the Exercism-wide [problem-specifications repo](https://github.com/exercism/problem-specifications). If the exercise you changed is listed there in the [exercise folder](https://github.com/exercism/problem-specifications/tree/main/exercises), note the following.
           - Improvements to the `introduction.md` file should be made in the problem-spec repo so that all tracks can benefit.
