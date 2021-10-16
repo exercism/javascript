@@ -41,6 +41,6 @@ graduationFor('Hannah', year: 2022)
 Implement the function `costOf(sign, currency)` which takes a string that holds the contents of the sign and a string that represents the currency and returns a phrase that includes the cost to create the sign, formatted with a fixed point notation set to 2 points, followed by the currency string.
 
 ```javascript
-costOf('Congratulations Rob Class of 2021', 2021);
-// => "Your sign cost 90.00 dollars
+costOf('Congratulations Rob Class of 2021', 'dollars');
+// => "Your sign cost 90.00 dollars"
 ```
