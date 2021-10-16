@@ -10,7 +10,7 @@ const num2 = 2;
 // => Adding 1 and 2 gives 3
 ```
 
-In the example above, backticks - ````- are used to represent a template string. The`${...}` is the placeholder that is used for substitution.
+In the example above, backticks - (<code>``</code>)- are used to represent a template string. The`${...}` is the placeholder that is used for substitution.
 All types of expressions can be used with template strings.
 
 ```javascript
