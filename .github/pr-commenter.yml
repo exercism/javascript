@@ -10,13 +10,13 @@ comment:
     This will save your reviewer some time and your change can be merged quicker.
   snippets:
       - id: note-for-contributors
-      files:
-        - '*'
-        - '**/*'
-      body: |
-        - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
-        - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo.
-          E.g. if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
+        files:
+          - '*'
+          - '**/*'
+        body: |
+          - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
+          - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo.
+            E.g. if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
     - id: concept-changes
       files:
         - any: 
