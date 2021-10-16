@@ -14,7 +14,7 @@ Otherwise, the `number` type is likely the better option.
 
 ## Arithmetic Operators
 
-Javascript provides 6 different operators to perform basic arithmetic operations on numbers.
+JavaScript provides 6 different operators to perform basic arithmetic operations on numbers.
 
 - `+`: The addition operator is used to find sum of numbers.
 - `-`: The subtraction operator is used to find the difference between two numbers
@@ -43,7 +43,7 @@ Javascript provides 6 different operators to perform basic arithmetic operations
 ### Order of Operations
 
 When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
-To simplify it to our context, JavaScript uses the PEDMAS (Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've leant in elementary math classes.
+To simplify it to our context, JavaScript uses the PEDMAS (Parentheses, Exponents, Division/Multiplication, Addition/Subtraction) rule we've learnt in elementary math classes.
 
 <!-- prettier-ignore-start -->
 ```javascript

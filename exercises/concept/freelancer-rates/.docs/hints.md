@@ -2,9 +2,7 @@
 
 ## 1. Calculate the day rate given an hourly rate
 
-- Use the [numeric operators][ref-numeric-operators] from Lucian's Luscious Lasagna.
-
-[ref-numeric-operators]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
+- Use the arithmetic operators as mentioned in the introduction of this exercise.
 
 ## 2. Calculate the month rate, given an hourly rate and a discount
 
@@ -15,4 +13,4 @@
 
 ## 3. Calculate the number of workdays given a budget, rate and discount
 
-- First determine the dayRate, given the discount, then calculate the number of days, and finally round that number down.
+- First determine the day rate, given the discount, then calculate the number of days, and finally round that number down.
