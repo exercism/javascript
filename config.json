@@ -245,7 +245,7 @@
         "uuid": "02a9c753-614f-4814-a7a8-43c1971d2eb7",
         "concepts": ["conditionals-ternary", "template-strings"],
         "prerequisites": ["strings", "conditionals", "type-conversion"],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
