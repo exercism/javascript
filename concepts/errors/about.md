@@ -30,7 +30,7 @@ try {
 }
 ```
 
-As any object in Javascript the Error can be "extended" to create Custom errors. You can use the `instanceof` syntax to check if the error caught is an instance of a particular object.
+As any object in JavaScript the Error can be "extended" to create Custom errors. You can use the `instanceof` syntax to check if the error caught is an instance of a particular object.
 
 ```javascript
 class CustomError extends Error {}
@@ -58,11 +58,11 @@ class MyCustomError extends Error {}
 
 ## Throwing non errors
 
-While the syntax `throw` is usually used to throw an Error object, Javascript is flexible and will let you throw a `string`, a `null` or any primitive type.
+While the syntax `throw` is usually used to throw an Error object, JavaScript is flexible and will let you throw a `string`, a `null` or any primitive type.
 
 ## Error stacktraces
 
-While this is not standard in Javascript, most of the Javascript environments implement a [`stack`][error-stack] property on the Error objects, allowing you to get the stack trace of the error that was thrown.
+While this is not standard in JavaScript, most of the JavaScript environments implement a [`stack`][error-stack] property on the Error objects, allowing you to get the stack trace of the error that was thrown.
 
 [error-types]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types
 [custom-error-type]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#custom_error_types
