@@ -19,12 +19,8 @@
 
 ## 5. Compute the cost of a sign
 
-- A string instance has a property - [`length`][mdn-string-length] - that will get the length of the string.
+A string instance has a property - [`length`][mdn-string-length] - that will get the length of the string.
 
 [mdn-const]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 [mdn-template-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
-[]: https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID292
-[string-equality]: https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID299
-[string-count-docs]: https://developer.apple.com/documentation/swift/string/3003522-count
-[string-docs]: https://developer.apple.com/documentation/swift/string
+[mdn-string-length]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
