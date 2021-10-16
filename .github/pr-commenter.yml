@@ -24,6 +24,7 @@ comment:
           - `concepts/<concept>/about.md`
           - `concepts/<concept>/introduction.md`
           - `exercises/concept/<exercise>/.docs/introduction.md`
+
           Please check whether the changes you made to one of these also need to be applied to the others.
     - id: exemplar-or-stub-changes
       files:
@@ -50,5 +51,7 @@ comment:
       body: |
         ### Dear Reviewer/Maintainer
         - 📏 Make sure you set the appropriate **`x:size` label** for the PR. (This also works after merging, in case you forgot about it.)
+
         - 🔎 **Don't be too nit-picky.** If the PR is a clear improvement compared to the status quo, it should be approved as clear signal this is good to be merged even if the minor comments you might have are not addressed by the contributor. Further improvement ideas can be captured in issues (if important enough) and implemented via additional PRs.
+        
         - 🤔 After reviewing the diff in the "Files changed" section, take a moment to think about whether there are **changes missing** from the diff. Does something need to be adjusted in other places so the code or content stays consistent?
