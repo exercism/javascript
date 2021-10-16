@@ -15,12 +15,16 @@
 
 ## 4. Build a graduation sign
 
-- [String interpolation][string-interpolation] is performed by placing the expression whose value you want to place in the string inside a set of parentheses which are preceded by a backslash character.
+- [template strings][mdn-template-strings] allow strings to span onto multiple lines.
 
 ## 5. Compute the cost of a sign
 
-A string instance has a property - [`length`][mdn-string-length] - that will get the length of the string.
+- Figure out the [`length`][mdn-string-length] of the characters that can be _parsed_ and return a _floating point_ number.
+- Once you have the [floating point][mdn-parse-float] number, you will need to set it to only show the first two numbers using [fixed-point][mdn-to-fixed] notation.
 
 [mdn-const]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 [mdn-template-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 [mdn-string-length]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
+[mdn-parse-float]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
+[mdn-to-fixed]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+[mdn-ternary-operator]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
