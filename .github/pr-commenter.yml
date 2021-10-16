@@ -4,20 +4,50 @@ comment:
     dot: true
   header: |
     ### Dear {{ prAuthor }}
-    To save your reviewer some time, please make sure your PR includes the following things in case they apply.
+    Thank you for contributing to the JavaScript track on Exercism! 💙  
+    You will see some automated feedback below.
+    It would be great if you can make sure your PR covers those points.
+    This will save your reviewer some time and your change can be merged quicker.
   snippets:
-    - id: concept-changes
+      - id: note-for-contributors
       files:
         - '*'
         - '**/*'
       body: |
-        - FIXME
+        - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
+        - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo.
+          E.g. if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
+    - id: concept-changes
+      files:
+        - any: 
+          - 'exercises/concept/*/.docs/introduction.md'
+          - 'concepts/*/introduction.md'
+          - 'concepts/*/about.md'
+      body: |
+        - The following files usually contain very similar content.
+          - `concepts/<concept>/about.md`
+          - `concepts/<concept>/introduction.md`
+          - `exercises/concept/<exercise>/.docs/introduction.md`
+          Please check whether the changes you made to one of these also need to be applied to the others.
+    - id: exemplar-or-stub-changes
+      files:
+        - any:
+          - 'exercises/concept/*/*.js'
+          - 'exercises/concept/*/.meta/*.js'
+          all:
+          - '!exercises/concept/*/*.spec.js'
+      body: |
+        - If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (<exercise>.js), make sure the change is applied to both files.
     - id: note-for-maintainers
       files:
         - '*'
         - '**/*'
       body: |
         ### Dear Reviewer/Maintainer
-        - 📏 Make sure you set the appropriate **`x:size` label** for the PR. (This also works after merging, in case you forgot about it.)
-        - 🔎 **Don't be too nit-picky.** If the PR is a clear improvement compared to the status quo, it should be approved as clear signal this is good to be merged even if the minor comments you might have are not addressed by the contributor. Further improvement ideas can be captured in issues (if important enough) and implemented via additional PRs.
-        - 🤔 After reviewing the diff in the "Files changed" section, take a moment to think about whether there are **changes missing** from the diff. Does something need to be adjusted in other places so the code or content stays consistent?
+        - 📏 Make sure you set the appropriate **`x:size` label** for the PR.
+          (This also works after merging, in case you forgot about it.)
+        - 🔎 **Don't be too nit-picky.**
+          If the PR is a clear improvement compared to the status quo, it should be approved as clear signal this is good to be merged even if the minor comments you might have are not addressed by the contributor.
+          Further improvement ideas can be captured in issues (if important enough) and implemented via additional PRs.
+        - 🤔 After reviewing the diff in the "Files changed" section, take a moment to think about whether there are **changes missing** from the diff.
+          Does something need to be adjusted in other places so the code or content stays consistent?
