@@ -24,7 +24,7 @@ comment:
           - 'concepts/*/introduction.md'
           - 'concepts/*/about.md'
       body: |
-        - The following files usually contain very similar content.
+        - 📜 The following files usually contain very similar content.
           - `concepts/<concept>/about.md`
           - `concepts/<concept>/introduction.md`
           - `exercises/concept/<exercise>/.docs/introduction.md`
@@ -37,7 +37,18 @@ comment:
           all:
           - '!exercises/concept/*/*.spec.js'
       body: |
-        - If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (<exercise>.js), make sure the change is applied to both files.
+        - 🎟️ If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (`<exercise>.js`), make sure the change is applied to both files.
+    - id: problem-spec-related
+      files:
+        - any:
+          - 'exercises/practice/*/*.spec.js'
+          - 'exercises/practice/*/.docs/instructions.js'
+      body: |
+        - ⬆️ The instructions and test cases for many practice exercises originate in the Exercism-wide [problem-specifications repo](https://github.com/exercism/problem-specifications). If the exercise you changed is listed there in the [exercise folder](https://github.com/exercism/problem-specifications/tree/main/exercises), note the following.
+          - Improvements to the `introduction.md` file should be made in the problem-spec repo so that all tracks can benefit.
+            You can open a PR there instead.
+          - If you want to add some language specific information, use the `instructions.append.md` file (see [Practice Exercise Docs](https://exercism.org/docs/building/tracks/practice-exercises)).
+          - Test cases selected in the `.meta/tests.toml` file need to be implemented in the `<exercise>.spec.js` file according to the specification in [`canonical-data.json`](https://github.com/exercism/problem-specifications#test-data-canonical-datajson).
     - id: note-for-maintainers
       files:
         - '*'
