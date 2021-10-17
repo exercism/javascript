@@ -41,7 +41,7 @@ comment:
             - 'exercises/concept/*/*.js'
             - '!exercises/concept/*/*.spec.js'
       body: |
-        - 🎟️ If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (`<exercise>.js`), make sure the change is applied to both files.
+        - 🧦 If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (`<exercise>.js`), make sure the change is applied to both files.
 
     - id: problem-spec-related
       files:
@@ -49,7 +49,7 @@ comment:
         - 'exercises/practice/*/.docs/instructions.md'
       body: |
         - ⬆️ The instructions and test cases for many practice exercises originate in the Exercism-wide [problem-specifications repo](https://github.com/exercism/problem-specifications). If the exercise you changed is listed there in the [exercise folder](https://github.com/exercism/problem-specifications/tree/main/exercises), note the following.
-          - Improvements to the `introduction.md` file should be made in the problem-spec repo so that all tracks can benefit.
+          - Improvements to the `instructions.md` file should be made in the problem-spec repo so that all tracks can benefit.
             You can open a PR there instead.
           - If you want to add some language specific information, use the `instructions.append.md` file (see [Practice Exercise Docs](https://exercism.org/docs/building/tracks/practice-exercises)).
           - Test cases selected in the `.meta/tests.toml` file need to be implemented in the `<exercise>.spec.js` file according to the specification in [`canonical-data.json`](https://github.com/exercism/problem-specifications#test-data-canonical-datajson).
@@ -62,6 +62,6 @@ comment:
         ### Dear Reviewer/Maintainer
         - 📏 Make sure you set the appropriate **`x:size` label** for the PR. (This also works after merging, in case you forgot about it.)
 
-        - 🔎 **Don't be too nit-picky.** If the PR is a clear improvement compared to the status quo, it should be approved as clear signal this is good to be merged even if the minor comments you might have are not addressed by the contributor. Further improvement ideas can be captured in issues (if important enough) and implemented via additional PRs.
+        - 🔍 **Don't be too nit-picky.** If the PR is a clear improvement compared to the status quo, it should be approved as clear signal this is good to be merged even if the minor comments you might have are not addressed by the contributor. Further improvement ideas can be captured in issues (if important enough) and implemented via additional PRs.
 
         - 🤔 After reviewing the diff in the "Files changed" section, take a moment to think about whether there are **changes missing** from the diff. Does something need to be adjusted in other places so the code or content stays consistent?
