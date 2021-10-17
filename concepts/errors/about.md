@@ -30,8 +30,9 @@ try {
 }
 ```
 
-As with any class in JavaScript, `Error` can be inherited from as well to create Custom errors. The `instanceof` syntax will
-check if the error caught is an instance of a particular subclass of `Error`.
+As with any class in JavaScript, `Error` can be inherited from as well to create Custom errors.
+
+The `instanceof` syntax will check if the error caught is an instance of a particular subclass of `Error`.
 
 ```javascript
 class CustomError extends Error {}
