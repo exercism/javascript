@@ -33,7 +33,7 @@ comment:
             - 'exercises/concept/*/*.js'
             - '!exercises/concept/*/*.spec.js'
       body: |
-        - 🧦 If you changed the function signature or the JSDoc comment in the exemplar file or the sub file (`<exercise>.js`), make sure the change is applied to both files.
+        - 🧦 If you changed the function signature or the JSDoc comment in the exemplar file (`.meta/exemplar.js`) or the sub file (`<exercise>.js`), make sure the change is applied to both files.
 
     - id: problem-spec-related
       files:
