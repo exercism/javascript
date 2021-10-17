@@ -19,7 +19,7 @@ Using the `throw` syntax, you can throw an Error.
 throw new Error('Oops');
 ```
 
-When an Error is thrown, the current execution is stopped and resume in the first catch block of the call stack.
+When an Error is thrown, the current execution is stopped and resumes in the first catch block of the call stack.
 
 ```javascript
 try {
@@ -30,7 +30,7 @@ try {
 }
 ```
 
-As any object in JavaScript the Error can be "extended" to create Custom errors. You can use the `instanceof` syntax to check if the error caught is an instance of a particular object.
+As with any class in JavaScript, `Error` can be "extended" to create Custom errors. You can use the `instanceof` syntax to check if the error caught is an instance of a particular object.
 
 ```javascript
 class CustomError extends Error {}
