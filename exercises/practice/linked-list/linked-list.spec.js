@@ -192,4 +192,18 @@ describe('LinkedList', () => {
     expect(list.pop()).toBe(9);
     expect(list.pop()).toBe(73);
   });
+
+  test('unshift removes element from the end of the list', () => {
+    const list = new LinkedList();
+    list.unshift(23);
+    list.unshift(5);
+    expect(list.pop()).toBe(23);
+    expect(list.pop()).toBe(5);
+  });
+
+  test('pop gets last element from the list when unshift is used to add element to list', () => {
+    const list = new LinkedList();
+    list.unshift(7);
+    expect(list.pop()).toBe(7);
+  });
 });

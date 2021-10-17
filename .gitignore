@@ -2,3 +2,9 @@
 /bin/configlet
 /pnpm-lock.yaml
 /yarn.lock
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/ProjectSettings.json
+/.vs/GitHub/v16/TestStore/0/testlog.manifest
+/.vs/GitHub/v16/TestStore/0/000.testlog
+/.vs/GitHub/v16/.suo
