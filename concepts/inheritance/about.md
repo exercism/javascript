@@ -29,16 +29,17 @@ Objects created by the child's constructor will have the parent class's prototyp
 ```javascript
 let dog = new Dog('Otis');
 
-Dog.prototype.isPrototypeOf(dog);           // => true
-Pet.prototype.isPrototypeOf(dog);           // => true
+Dog.prototype.isPrototypeOf(dog); // => true
+Pet.prototype.isPrototypeOf(dog); // => true
 Pet.prototype.isPrototypeOf(Dog.prototype); // => true
 
-Pet.prototype.hasOwnProperty('introduce');  // => true
-Dog.prototype.hasOwnProperty('introduce');  // => false
-dog.hasOwnProperty('introduce');            // => false
+Pet.prototype.hasOwnProperty('introduce'); // => true
+Dog.prototype.hasOwnProperty('introduce'); // => false
+dog.hasOwnProperty('introduce'); // => false
 ```
 
 ## Constructors
+
 If no constructor function is defined by the child class, the parent constructor function is used.
 
 However, if the child class defines a constructor function of its own, the parent constructor must be explicitly called.
@@ -53,10 +54,10 @@ class Pet {
 }
 
 class Dog extends Pet {
-    constructor(name, breed) {
-        super(name);
-        this.breed = breed;
-    }
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
 }
 
 let dog = new Dog('Otis', 'Pug');
@@ -66,33 +67,33 @@ Because the parent constructor is responsible for initializing a new object and 
 
 ```javascript
 class Dog extends Pet {
-    constructor(name, breed) {
-      // using 'this' before calling the parent constructor with 'super'
-      this.breed = breed;
-      super(name);
-    }
+  constructor(name, breed) {
+    // using 'this' before calling the parent constructor with 'super'
+    this.breed = breed;
+    super(name);
+  }
 }
 
 let dog = new Dog('Otis', 'Pug');
 // => ReferenceError: Must call super constructor in derived class before accessing 'this'...
-
 ```
 
 ## Defining Methods on the Child Class
-A child class may define behavior of its own in addition to the behavior inherited from the parent. 
+
+A child class may define behavior of its own in addition to the behavior inherited from the parent.
 
 This is one of the key reasons for using inheritance; to have specialized child classes with their own unique data and methods that are related through shared methods and data supplied by the parent class.
 
 ```javascript
 class Dog extends Pet {
-    constructor(name, breed) {
-        super(name);
-        this.breed = breed;
-    }
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
 
-    describe() {
-        console.log(`${this.name} is a ${this.breed}.`);
-    }
+  describe() {
+    console.log(`${this.name} is a ${this.breed}.`);
+  }
 }
 
 let dog = new Dog('Otis', 'Pug');
@@ -103,6 +104,7 @@ dog.describe();
 ```
 
 ## Overriding Methods Inherited From the Parent Class
+
 A child class can also override the behavior of a method defined by the parent and replace or extend it with behavior defined by the child class.
 
 ```javascript
@@ -114,23 +116,23 @@ class Cat extends Pet {
 }
 
 class Dog extends Pet {
-    constructor(name, breed) {
-        super(name);
-        this.breed = breed;
-    }
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
 
-    describe() {
-        console.log(`${this.name} is a ${this.breed}.`);
-    }
-    
-    // extending parent class behavior
-    introduce() {
-        super.introduce();
-        this.describe();
-    }
+  describe() {
+    console.log(`${this.name} is a ${this.breed}.`);
+  }
+
+  // extending parent class behavior
+  introduce() {
+    super.introduce();
+    this.describe();
+  }
 }
 
-let cat = new Cat('Milo')
+let cat = new Cat('Milo');
 cat.introduce();
 // => 'This is my cat, Milo.'
 

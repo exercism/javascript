@@ -1,6 +1,7 @@
 # Introduction
 
 ## Errors
+
 Errors are useful to report when something is wrong or unexpected in a program or a piece of code.
 
 They are javascript objects.
@@ -32,6 +33,7 @@ try {
 ```
 
 ## Inheritance
+
 Inheritance is a way to create parent-child relationships between classes.
 
 The child class (sometimes referred to as a _subclass_) has access to the behavior and data defined by the parent class (sometimes referred to as a _superclass_).
@@ -61,13 +63,13 @@ Objects created by the child's constructor will have the parent class's prototyp
 ```javascript
 let dog = new Dog('Otis');
 
-Dog.prototype.isPrototypeOf(dog);           // => true
-Pet.prototype.isPrototypeOf(dog);           // => true
+Dog.prototype.isPrototypeOf(dog); // => true
+Pet.prototype.isPrototypeOf(dog); // => true
 Pet.prototype.isPrototypeOf(Dog.prototype); // => true
 
-Pet.prototype.hasOwnProperty('introduce');  // => true
-Dog.prototype.hasOwnProperty('introduce');  // => false
-dog.hasOwnProperty('introduce');            // => false
+Pet.prototype.hasOwnProperty('introduce'); // => true
+Dog.prototype.hasOwnProperty('introduce'); // => false
+dog.hasOwnProperty('introduce'); // => false
 ```
 
 As with any class in JavaScript, subclasses can inherit from `Error` to create Custom errors by using the `extends` keyword.

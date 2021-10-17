@@ -29,13 +29,13 @@ Objects created by the child's constructor will have the parent class's prototyp
 ```javascript
 let dog = new Dog('Otis');
 
-Dog.prototype.isPrototypeOf(dog);           // => true
-Pet.prototype.isPrototypeOf(dog);           // => true
+Dog.prototype.isPrototypeOf(dog); // => true
+Pet.prototype.isPrototypeOf(dog); // => true
 Pet.prototype.isPrototypeOf(Dog.prototype); // => true
 
-Pet.prototype.hasOwnProperty('introduce');  // => true
-Dog.prototype.hasOwnProperty('introduce');  // => false
-dog.hasOwnProperty('introduce');            // => false
+Pet.prototype.hasOwnProperty('introduce'); // => true
+Dog.prototype.hasOwnProperty('introduce'); // => false
+dog.hasOwnProperty('introduce'); // => false
 ```
 
 [prototype-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
