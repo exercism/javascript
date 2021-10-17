@@ -21,9 +21,9 @@ dog.introduce();
 // => This is my pet, Otis.
 ```
 
-The `extends` keyword in the `Dog` class declaration establishes a relationship with the parent class `Pet` through the
-[prototype chain][prototype-chain]. Objects created with `new Dog('name')` will have `Pet.prototype` in their prototype
-chain, providing access to the `introduce` method.
+The `extends` keyword in the child class declaration establishes a relationship with the parent class through the
+[prototype chain][prototype-chain]. Objects created by the child's constructor will have the parent class's prototype in
+their prototype chain, providing access to any methods or data defined by the parent.
 
 ```javascript
 let dog = new Dog('Otis');
