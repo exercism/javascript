@@ -30,7 +30,7 @@ try {
 }
 ```
 
-As with any class in JavaScript, subclasses can inherit from `Error` to create Custom errors.
+As with any class in JavaScript, subclasses can inherit from `Error` to create Custom errors by using the `extends` keyword.
 
 The `instanceof` syntax will check if the error caught is an instance of a particular subclass of `Error`.
 
