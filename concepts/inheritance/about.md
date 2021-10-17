@@ -1,8 +1,7 @@
 # About
 
-Inheritance is a concept that comes from [object oriented programming][object-oriented]. It is a way to create 
-parent-child relationships between classes where the child class (sometimes referred to as a _subclass_) has access to 
-the behavior and data defined by the parent class (sometimes referred to as a _superclass_).
+Inheritance is a way to create parent-child relationships between classes. The child class (sometimes referred to as a
+_subclass_) has access to the behavior and data defined by the parent class (sometimes referred to as a _superclass_).
 
 ```javascript
 class Pet {
@@ -19,12 +18,12 @@ class Dog extends Pet {}
 
 let dog = new Dog('Otis');
 dog.introduce();
-// => 'This is my pet, Otis.'
+// => This is my pet, Otis.
 ```
 
-The `extends` keyword is used by the child class to establish a relationship with the parent through the
-[prototype chain][prototype-chain]. Objects created with `new Dog()` will have in their prototype chain the
-`Pet.prototype` providing access to the `introduce` method.
+The `extends` keyword in the `Dog` class declaration establishes a relationship with the parent class `Pet` through the
+[prototype chain][prototype-chain]. Objects created with `new Dog('name')` will have `Pet.prototype` in their prototype
+chain, providing access to the `introduce` method.
 
 ```javascript
 let dog = new Dog('Otis');
@@ -41,16 +40,8 @@ dog.hasOwnProperty('introduce');            // => false
 ## Constructors
 If no constructor function is defined by the child class, the parent constructor function is used.
 
-```javascript
-class Dog extends Pet {}
-
-// 'new Dog()' invokes the constructor function defined by Pet
-let dog = new Dog('Otis');
-```
-
-If the child class defines a constructor function of its own, the parent constructor must be called too. To invoke 
-the parent constructor, the keyword `super` is used. `super` is a reference to the parent constructor and requires the 
-same function arguments.
+However, if the child class defines a constructor function of its own, the parent constructor must be explicitly called. 
+To invoke the parent constructor from within the child constructor's scope, the keyword `super` is used.
 
 ```javascript
 class Pet {
@@ -70,7 +61,7 @@ let dog = new Dog('Otis', 'Pug');
 ```
 
 Because the parent constructor is responsible for initializing a new object and assigning it to `this`, it must be 
-called before the keyword `this` can be used by the child constructor.
+called before `this` is used by the child constructor.
 
 ```javascript
 class Dog extends Pet {
@@ -87,9 +78,9 @@ let dog = new Dog('Otis', 'Pug');
 ```
 
 ## Defining Methods on the Child Class
-A child class can have behavior of its own in addition to the behavior derived from the parent class. This is one of the 
-key reasons for using inheritance &mdash; having a parent class with common behavior accessible to two or more child 
-classes while each child class defines specialized behavior unique to its role in the application.
+A child class may define behavior of its own in addition to the behavior inherited from the parent. This is one of 
+the key reasons for using inheritance; to have specialized child classes with methods and data unique to each one that 
+are nevertheless related through shared methods and data supplied by the parent class.
 
 ```javascript
 class Dog extends Pet {
@@ -149,8 +140,7 @@ dog.introduce();
 // => Otis is a Pug.
 ```
 
-To call the `introduce` method defined by the `Pet` class from within the `introduce` method on the `Dog` class, 
-the keyword `super` is used to reference the methods on the parent class.
+To call a method defined on the parent class from the body of a method with the same name on the child class, the 
+keyword `super` must be used to reference the parent.
 
-[object-oriented]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
 [prototype-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
