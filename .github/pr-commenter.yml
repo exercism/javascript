@@ -13,14 +13,6 @@ comment:
     <sub>Automated comment created by [PR Commenter](https://github.com/exercism/pr-commenter-action) 🤖.</sub>
 
   snippets:
-    - id: note-for-contributors
-      files:
-        - '*'
-        - '**/*'
-      body: |
-        - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
-        - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo. For example, if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
-
     - id: concept-changes
       files:
         - 'exercises/concept/*/.docs/introduction.md'
@@ -48,11 +40,20 @@ comment:
         - 'exercises/practice/*/*.spec.js'
         - 'exercises/practice/*/.docs/instructions.md'
       body: |
-        - ⬆️ The instructions and test cases for many practice exercises originate in the Exercism-wide [problem-specifications repo](https://github.com/exercism/problem-specifications). If the exercise you changed is listed there in the [exercise folder](https://github.com/exercism/problem-specifications/tree/main/exercises), note the following.
+        - ⬆️ The instructions and test cases for many practice exercises originate in the Exercism-wide [problem-specifications repo](https://github.com/exercism/problem-specifications). If the exercise you changed is listed there in the [exercises folder](https://github.com/exercism/problem-specifications/tree/main/exercises), please consider the following.
           - Improvements to the `instructions.md` file should be made in the problem-spec repo so that all tracks can benefit.
             You can open a PR there instead.
           - If you want to add some language specific information, use the `instructions.append.md` file (see [Practice Exercise Docs](https://exercism.org/docs/building/tracks/practice-exercises)).
           - Test cases selected in the `.meta/tests.toml` file need to be implemented in the `<exercise>.spec.js` file according to the specification in [`canonical-data.json`](https://github.com/exercism/problem-specifications#test-data-canonical-datajson).
+
+    - id: note-for-contributors
+      files:
+        - '*'
+        - '**/*'
+      body: |
+        - ✍️ If your PR is not related to an existing issue (and is not self-explaining like a typo fix), please make sure the description explains why the change you made is necessary.
+
+        - 🔤 If your PR fixes an easy to identify typo, if would be great if you could check for that typo in the whole repo. For example, if you found `Unicdoe`, use "replace all" in your editor (or command line magic) to fix it consistently.
 
     - id: note-for-maintainers
       files:
