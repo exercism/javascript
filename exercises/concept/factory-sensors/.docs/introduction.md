@@ -35,7 +35,6 @@ try {
 ## Inheritance
 
 Inheritance is a way to create parent-child relationships between classes.
-
 The child class (sometimes referred to as a _subclass_) has access to the behavior and data defined by the parent class (sometimes referred to as a _superclass_).
 
 ```javascript
