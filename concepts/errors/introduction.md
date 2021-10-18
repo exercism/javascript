@@ -19,7 +19,7 @@ Using the `throw` syntax, you can throw an Error.
 throw new Error('Oops');
 ```
 
-When an Error is thrown, the current execution is stopped and resumes in the first catch block of the call stack.
+When an `Error` is thrown, the current execution is stopped and resumes in the first catch block of the call stack.
 
 ```javascript
 try {
