@@ -26,7 +26,7 @@ The `extends` keyword in the child class declaration establishes a relationship 
 Objects created by the child's constructor will have the parent class's prototype in their prototype chain, providing access to any methods or data defined by the parent.
 
 ```javascript
-let dog = new Dog('Otis');
+const dog = new Dog('Otis');
 
 Dog.prototype.isPrototypeOf(dog); // => true
 Pet.prototype.isPrototypeOf(dog); // => true
@@ -57,7 +57,7 @@ class Dog extends Pet {
   }
 }
 
-let dog = new Dog('Otis', 'Pug');
+const dog = new Dog('Otis', 'Pug');
 ```
 
 Because the parent constructor is responsible for initializing a new object and assigning it to `this`, it must be called before `this` is used by the child constructor.
@@ -71,7 +71,7 @@ class Dog extends Pet {
   }
 }
 
-let dog = new Dog('Otis', 'Pug');
+const dog = new Dog('Otis', 'Pug');
 // => ReferenceError: Must call super constructor in derived class before accessing 'this'...
 ```
 
@@ -93,7 +93,7 @@ class Dog extends Pet {
   }
 }
 
-let dog = new Dog('Otis', 'Pug');
+const dog = new Dog('Otis', 'Pug');
 dog.introduce();
 dog.describe();
 // => 'This is my pet, Otis.'
@@ -129,11 +129,11 @@ class Dog extends Pet {
   }
 }
 
-let cat = new Cat('Milo');
+const cat = new Cat('Milo');
 cat.introduce();
 // => 'This is my cat, Milo.'
 
-let dog = new Dog('Otis', 'Pug');
+const dog = new Dog('Otis', 'Pug');
 dog.introduce();
 // => This is my pet, Otis.
 // => Otis is a Pug.
