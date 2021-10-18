@@ -22,6 +22,7 @@ The goal of this exercise is to teach the student how to handle errors / excepti
 ## Concepts
 
 - `errors`
+- `inheritance`
 
 ## Prerequisites
 

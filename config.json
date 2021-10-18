@@ -227,7 +227,7 @@
         "slug": "factory-sensors",
         "name": "Factory Sensors",
         "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
-        "concepts": ["errors"],
+        "concepts": ["errors", "inheritance"],
         "prerequisites": ["null-undefined", "conditionals"],
         "status": "beta"
       },
@@ -1778,6 +1778,11 @@
       "uuid": "168cb8e8-c4f9-4e10-9d79-bffc77b86bbf",
       "slug": "conditionals-ternary",
       "name": "Conditionals Ternary"
+    },
+    {
+      "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
+      "slug": "inheritance",
+      "name": "Inheritance"
     }
   ],
   "key_features": [
