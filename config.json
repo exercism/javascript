@@ -227,7 +227,7 @@
         "slug": "factory-sensors",
         "name": "Factory Sensors",
         "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
-        "concepts": ["errors"],
+        "concepts": ["errors", "inheritance"],
         "prerequisites": ["null-undefined", "conditionals"],
         "status": "beta"
       },
@@ -1765,6 +1765,11 @@
       "uuid": "cbad4d23-a9d8-4370-add2-f4416a4df027",
       "slug": "type-conversion",
       "name": "Type Conversion"
+    },
+    {
+      "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
+      "slug": "inheritance",
+      "name": "Inheritance"
     }
   ],
   "key_features": [
