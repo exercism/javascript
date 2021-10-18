@@ -16,7 +16,7 @@ class Pet {
 
 class Dog extends Pet {}
 
-let dog = new Dog('Otis');
+const dog = new Dog('Otis');
 dog.introduce();
 // => This is my pet, Otis.
 ```
