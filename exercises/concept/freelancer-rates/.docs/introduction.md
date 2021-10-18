@@ -12,6 +12,10 @@ Many programming languages have specific numeric types to represent different ty
 If you require arbitrary precision or work with extremely large numbers, use the `bigint` type.
 Otherwise, the `number` type is likely the better option.
 
+### Built-in Objects
+
+[`Math`][built-in-math]: is a built-in object that's useful when dealing with numbers. It contains properties and methods for mathematical constants and functions, does **not** work with `BigInt`.
+
 ## Arithmetic Operators
 
 JavaScript provides 6 different operators to perform basic arithmetic operations on numbers.
@@ -71,4 +75,5 @@ let y = 31;
 y %= 3; // y is now 1
 ```
 
+[built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 [mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
