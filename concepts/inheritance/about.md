@@ -41,9 +41,7 @@ dog.hasOwnProperty('introduce'); // => false
 ## Constructors
 
 If no constructor function is defined by the child class, the parent constructor function is used.
-
 However, if the child class defines a constructor function of its own, the parent constructor must be explicitly called.
-
 To invoke the parent constructor from within the child constructor's scope, the keyword `super` is used.
 
 ```javascript
