@@ -29,7 +29,7 @@ describe('revokeTicket', () => {
   test('returns the same object that was passed in', () => {
     const visitor = { name: 'Anatoli Traverse', age: 34, ticketId: 'AA5AA01D' };
 
-    // this follows the suggestion from the Jest docs to avoid a confusing test report
+    // This checks that the same object that was passed in is returned.
     // https://jestjs.io/docs/expect#tobevalue
     expect(Object.is(revokeTicket(visitor), visitor)).toBe(true);
   });
@@ -39,6 +39,7 @@ describe('revokeTicket', () => {
     const actual = revokeTicket(visitor);
 
     expect(actual).toEqual(visitor);
+    // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, visitor)).toBe(true);
   });
 });
