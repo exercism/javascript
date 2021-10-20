@@ -1,46 +1,37 @@
 //@ts-check
 
 import {
-  ANNIVERSARY,
-  BIRTHDAY,
-  EXCLAMATION,
   buildSign,
+  buildBirthdaySign,
   graduationFor,
   costOf,
 } from './custom-signs';
 
-describe('BIRTHDAY', () => {
-  test('constant is defined correctly', () => {
-    expect(BIRTHDAY).toBe('Birthday');
-  });
-});
-
-describe('VALENTINE', () => {
-  test('constant is defined correctly', () => {
-    expect(ANNIVERSARY).toBe('Anniversary');
-  });
-});
-
-describe('EXCLAMATION', () => {
-  test('constant is defined correctly', () => {
-    expect(EXCLAMATION).toBe('!');
-  });
-});
-
 describe('buildSign', () => {
-  test('built for a birthday', () => {
-    expect(buildSign(BIRTHDAY, 'Rob')).toBe('Happy Birthday Rob!');
+  test('occasion is Birthday', () => {
+    expect(buildSign('Birthday', 'Rob')).toBe('Happy Birthday Rob!');
   });
+});
 
-  test("built for Valentine's", () => {
-    expect(buildSign(ANNIVERSARY, 'Rob')).toBe('Happy Anniversary Rob!');
+describe('buildBirthdaySign', () => {
+  test('age is less than 50', () => {
+    expect(buildBirthdaySign(49)).toBe(
+      'Happy Birthday! What a young fellow you are.'
+    );
+  });
+  test('age is 50 or older', () => {
+    expect(buildBirthdaySign(51)).toBe(
+      'Happy Birthday! What a old fellow you are.'
+    );
   });
 });
 
 describe('graduationFor', () => {
   const expected = `Congratulations Rob
   Class of 2021`;
-  expect(graduationFor('Rob', 2021)).toBe(expected);
+  test('year of graduation is 2021', () => {
+    expect(graduationFor('Rob', 2021)).toBe(expected);
+  });
 });
 
 describe('costOf', () => {

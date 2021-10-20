@@ -1,13 +1,13 @@
 // @ts-check
 
-export const BIRTHDAY = 'Birthday';
-export const ANNIVERSARY = 'Anniversary';
-export const EXCLAMATION = '!';
-
 export function buildSign(occasion, name) {
-  return `Happy ${
-    occasion === BIRTHDAY ? BIRTHDAY : ANNIVERSARY
-  } ${name}${EXCLAMATION}`;
+  return `Happy ${occasion} ${name}!`;
+}
+
+export function buildBirthdaySign(age) {
+  return `Happy Birthday! What a ${
+    age >= 50 ? 'old' : 'young'
+  } fellow you are.`;
 }
 
 export function graduationFor(name, year) {

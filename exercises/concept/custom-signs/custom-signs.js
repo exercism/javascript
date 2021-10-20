@@ -4,14 +4,8 @@
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
 
-export const BIRTHDAY = '';
-export const ANNIVERSARY = '';
-export const EXCLAMATION = '';
-
 /**
- * Build a string that is condition based on the occasion being either
- * a birthday or valentine followed by the name parameter and exclamation
- * defined above.
+ * Build a string that includes both of the parameters.
  *
  * @param {string} occasion
  * @param {string} name
@@ -21,6 +15,18 @@ export const EXCLAMATION = '';
 
 export function buildSign(occasion, name) {
   throw new Error('Implement the buildSign function');
+}
+
+/**
+ * Build a string that conditionally formats the return string.
+ *
+ * @param {number} age
+ *
+ * @returns {string} template string based on age
+ */
+
+export function buildBirthdaySign(age) {
+  throw new Error('Implement the buildBirthdaySign function');
 }
 
 /**

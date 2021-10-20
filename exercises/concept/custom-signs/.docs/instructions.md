@@ -2,32 +2,28 @@
 
 In this exercise you'll be writing code to help a sign company create custom messages for their signs.
 
-## 1. Create a set of useful strings
+## 1. Build an occasion sign
 
-Define the following constant strings which will be used to create signs:
-
-- `BIRTHDAY`: This holds the string "Birthday"
-- `ANNIVERSARY`: This holds the string "Anniversary"
-
-## 2. Create a set of useful characters
-
-Define the following constant characters which will be used to create signs:
-
-- `EXCLAMATION`: This holds the value "!"
-
-## 3. Combine phrases to build up messages
-
-Implement the function `buildSign(occasion, name)`. This function takes one of the two strings you defined in the first task as the `occasion` parameter and a string holding someone's name as the `name` parameter and uses a combination of template string and the ternary operator, as well as the characters defined in task #2 to build up a phrase for a sign.
+Implement the function `buildSign(occasion, name)` that accepts a string as the `occasion` parameter and a string holding someone's name as the `name` parameter. The two parameters will be embedded into a template string to output the message on the sign.
 
 ```javascript
-buildSign(BIRTHDAY, 'Rob');
+buildSign('Birthday', 'Rob');
 // => "Happy Birthday Rob!"
 
-buildSign(ANNIVERSARY, 'Jen');
+buildSign('Anniversary', 'Jen');
 // => "Happy Anniversary Jen!"
 ```
 
-## 4. Build a graduation sign
+## 2. Build a birthday sign
+
+Implement the function `buildBirthdaySign(age)` that accepts an age and based on the age will determine part of the message on the sign. If the age is 50 or older, the sign will include the word _old_, otherwise the sign will include the word _young_.
+
+```javascript
+buildBirthdaySign(45);
+// => "Happy Birthday! What a young fellow you are."
+```
+
+## 3. Build a graduation sign
 
 Implement the function `graduationFor(name, year)` which takes a name as a string parameter and a year as a number parameter and uses string interpolation to create a phrase for a sign that uses a newline to separate the two lines of the message.
 

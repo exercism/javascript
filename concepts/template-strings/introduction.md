@@ -14,6 +14,8 @@ const num2 = 2;
 ```
 
 In the example above, backticks - (<code>\`\`</code>) - are used to represent a template string. The`${...}` is the placeholder that is used for substitution.
+Any non-string types are _implicitly_ converted to strings.
+This topic is covered in the [type conversion][type-conversion-concept] concept.
 All types of expressions can be used with template strings.
 
 ```javascript
@@ -41,3 +43,4 @@ const grade = 95;
 ```
 
 [string-reference]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+[type-conversion-concept]: /tracks/javascript/concepts/type-conversion

@@ -1,7 +1,7 @@
 {
   "blurb": "Learn about characters by helping a sign company create custom messages for their signs.",
   "authors": ["pertrai1"],
-  "contributors": ["pertrai1"],
+  "contributors": [],
   "files": {
     "solution": ["custom-signs.js"],
     "test": ["custom-signs.spec.js"],
