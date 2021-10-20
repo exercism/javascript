@@ -32,7 +32,7 @@ buildSign(ANNIVERSARY, 'Jen');
 Implement the function `graduationFor(name, year)` which takes a name as a string parameter and a year as a number parameter and uses string interpolation to create a phrase for a sign that uses a newline to separate the two lines of the message.
 
 ```javascript
-graduationFor('Hannah', year: 2022)
+graduationFor('Hannah', 2022);
 // => "Congratulations Hannah!\nClass of 2022"
 ```
 
@@ -42,5 +42,5 @@ Implement the function `costOf(sign, currency)` which takes a string that holds 
 
 ```javascript
 costOf('Congratulations Rob Class of 2021', 'dollars');
-// => "Your sign cost 90.00 dollars"
+// => "Your sign costs 90.00 dollars."
 ```

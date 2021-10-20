@@ -1,5 +1,5 @@
 {
-  "blurb": "Template strings provide additional features when working with strings",
+  "blurb": "You can create template strings in JavaScript by wrapping text in backticks. They not only allow the text to include new lines and other special characters, you can also embed variables and other expressions.",
   "authors": ["pertrai1"],
-  "contributors": ["pertrai1"]
+  "contributors": []
 }

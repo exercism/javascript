@@ -1,15 +1,17 @@
 # About
 
-The [conditional ternary operator][conditional-ternary-operator] is for working with conditions based on the condition being truthy or falsy.
-The operator can be used in place of `if/else if/else`.
+The conditional ternary operator is used to write a condensed expression that returns one of two alternate values based on some condition.
+It is often referred to as the "ternary operator".
+The name stems from the fact that the operator has three operands: `predicate ? consequent-expression : alternative-expression`
+It can be used as a replacement for short if-else statements.
+
+Similar to `if` statements, JavaScript will perform implicit type conversion to evaluate the condition.
+If the condition is truthy, the operand on the left-hand side of the colon will be returned.
+Otherwise the result of the ternary expression is the operand on the right-hand side of the colon.
 
 ```javascript
-const year = 2000;
+const year = 2020;
 
-year > 2000 ? true : false;
-// => true
+year > 2000 ? 'in the past years' : 'a long time ago';
+// => 'in the past years'
 ```
-
-There are 3 parts that make up the operator: `predicate ? consequent-expression : alternative-expression`
-
-[conditional-ternary-operator]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
