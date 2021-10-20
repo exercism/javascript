@@ -6,7 +6,7 @@ In this exercise you'll be writing code to help a sign company create custom mes
 
 Define the following constant strings which will be used to create signs:
 
-- `BIRTHDAY`: This holds the value "Birthday"
+- `BIRTHDAY`: This holds the string "Birthday"
 - `ANNIVERSARY`: This holds the string "Anniversary"
 
 ## 2. Create a set of useful characters

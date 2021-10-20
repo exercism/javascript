@@ -6,12 +6,12 @@
 
 ## 2. Create a set of useful characters
 
-- same as #1
+- [const][mdn-const] are blocked scoped that have a value that can't be changed through reassignment.
 
 ## 3. Combine phrases to build up messages
 
-- [template strings][mdn-template-strings] - Template literals - allow for substitution of strings and embedded expressions
-- [ternary operator][mdn-ternary-operator] is a short-hand way of operating on conditions, similar to `if/elseif/else`. It can be easier to use in template strings because it is condensed.
+- [template strings][mdn-template-strings] (Template literals) allow for substitution of strings and embedded expressions
+- [ternary operator][mdn-ternary-operator] is a short-hand way of operating on conditions, similar to `if/else`. It can be easier to use in template strings because it is condensed.
 
 ## 4. Build a graduation sign
 

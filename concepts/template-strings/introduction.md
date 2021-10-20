@@ -1,7 +1,9 @@
 # Introduction
 
-you can create template strings in javascript by wrapping text in backticks.
-they not only allow the text to include new lines and other special characters, you can also embed variables and other expressions.
+In JavaScript, _template strings_ provide helpful string interpolation, extending the functionality of the build in [`String`][string-reference] global object.
+
+You can create template strings in javascript by wrapping text in backticks.
+They not only allow the text to include new lines and other special characters, you can also embed variables and other expressions.
 
 ```javascript
 const num1 = 1;
@@ -11,7 +13,7 @@ const num2 = 2;
 // => Adding 1 and 2 gives 3.
 ```
 
-In the example above, backticks - (<code>``</code>)- are used to represent a template string. The`${...}` is the placeholder that is used for substitution.
+In the example above, backticks - (<code>\`\`</code>) - are used to represent a template string. The`${...}` is the placeholder that is used for substitution.
 All types of expressions can be used with template strings.
 
 ```javascript
@@ -37,3 +39,5 @@ const grade = 95;
 `You have ${grade > 90 ? 'passed' : 'failed'} the exam.`;
 // => You have passed the exam.
 ```
+
+[string-reference]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
