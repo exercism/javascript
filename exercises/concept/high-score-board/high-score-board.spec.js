@@ -34,7 +34,8 @@ describe('addPlayer', () => {
   test('returns the existing score board', () => {
     const scoreBoard = {};
     const actual = addPlayer(scoreBoard, 'Jesse Johnson', 1337);
-    // This follows the suggestion from the Jest docs to avoid a confusing test report
+
+    // This checks that the same object that was passed in is returned.
     // https://jestjs.io/docs/expect#tobevalue
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
@@ -55,6 +56,8 @@ describe('removePlayer', () => {
 
     const actual = removePlayer(scoreBoard, 'Jesse Johnson');
     expect(actual).toEqual(expected);
+
+    // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 
@@ -67,6 +70,8 @@ describe('removePlayer', () => {
 
     const actual = removePlayer(scoreBoard, 'Bruno Santangelo');
     expect(actual).toEqual(scoreBoard);
+
+    // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 });
@@ -88,6 +93,8 @@ describe('updateScore', () => {
     updateScore(scoreBoard, 'Min-seo Shin', 1999);
     const actual = updateScore(scoreBoard, 'Jesse Johnson', 1337);
     expect(actual).toEqual(expected);
+
+    // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 });
@@ -108,6 +115,8 @@ describe('applyMondayBonus', () => {
 
     const actual = applyMondayBonus(scoreBoard);
     expect(actual).toEqual(expected);
+
+    // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 
@@ -115,6 +124,8 @@ describe('applyMondayBonus', () => {
     const scoreBoard = {};
     const actual = applyMondayBonus(scoreBoard);
     expect(actual).toEqual({});
+
+    // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 });
