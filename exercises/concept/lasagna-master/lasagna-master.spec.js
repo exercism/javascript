@@ -50,7 +50,7 @@ describe('preparationTime', () => {
     expect(preparationTime(fewLayers, 3.5)).toBe(7);
   });
 
-  test('uses the default if no customer time was passed', () => {
+  test('uses the default if no preparation time per layer was passed', () => {
     const manyLayers = [
       'sauce',
       'noodles',
