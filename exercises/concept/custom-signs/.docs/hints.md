@@ -1,14 +1,10 @@
 # Hints
 
-## 1. Create a set of useful strings
+## 1. Build an occasion sign
 
-- [const][mdn-const] are blocked scoped that have a value that can't be changed through reassignment.
+- [template strings][mdn-template-strings] (Template literals) allow for substitution of one or more strings and embedded expressions
 
-## 2. Create a set of useful characters
-
-- [const][mdn-const] are blocked scoped that have a value that can't be changed through reassignment.
-
-## 3. Combine phrases to build up messages
+## 2. Build a birthday sign
 
 - [template strings][mdn-template-strings] (Template literals) allow for substitution of strings and embedded expressions
 - [ternary operator][mdn-ternary-operator] is a short-hand way of operating on conditions, similar to `if/else`. It can be easier to use in template strings because it is condensed.
