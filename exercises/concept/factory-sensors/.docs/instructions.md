@@ -23,7 +23,7 @@ checkHumidityLevel(100);
 
 ## 2. Detect overheating
 
-Elena is very pleased with your first assignment and ask you to deal with the monitoring of the machines' temperature.
+Elena is very pleased with your first assignment and asks you to deal with the monitoring of the machines' temperature.
 While chatting with a technician, Greg, you are told that if the temperature of a machine exceeds 500°C, the technicians start worrying about overheating.
 
 The machine is equipped with a sensor that measures its internal temperature.
