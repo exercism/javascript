@@ -9,7 +9,10 @@ import {
 
 describe('buildSign', () => {
   test('occasion is Birthday', () => {
-    expect(buildSign('Birthday', 'Rob')).toBe('Happy Birthday Rob!');
+    expect(buildSign('Birthday', 'Jack')).toBe('Happy Birthday Jack!');
+  });
+  test('occasion is Anniversary', () => {
+    expect(buildSign('Anniversary', 'Jill')).toBe('Happy Anniversary Jill!');
   });
 });
 

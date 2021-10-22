@@ -5,7 +5,7 @@
 // implementing this exercise.
 
 /**
- * Build a string that includes both of the parameters.
+ * Build a sign that includes both of the parameters.
  *
  * @param {string} occasion
  * @param {string} name
@@ -18,7 +18,7 @@ export function buildSign(occasion, name) {
 }
 
 /**
- * Build a string that conditionally formats the return string.
+ * Build a birthday sign that conditionally formats the return string.
  *
  * @param {number} age
  *
@@ -30,7 +30,7 @@ export function buildBirthdaySign(age) {
 }
 
 /**
- * Build a string formatted on multiple lines.
+ * Build a graduation sign that includes multiple lines.
  *
  * @param {string} name
  * @param {number} year
@@ -49,7 +49,7 @@ export function graduationFor(name, year) {
  * @param {string} sign
  * @param {string} currency
  *
- * @returns {number} cost to create the sign
+ * @returns {string} cost to create the sign
  */
 
 export function costOf(sign, currency) {

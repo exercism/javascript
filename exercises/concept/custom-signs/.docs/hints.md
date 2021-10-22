@@ -15,12 +15,11 @@
 
 ## 5. Compute the cost of a sign
 
-- Figure out the [`length`][mdn-string-length] of the characters that can be _parsed_ and return a _floating point_ number.
-- Once you have the [floating point][mdn-parse-float] number, you will need to set it to only show the first two numbers using [fixed-point][mdn-to-fixed] notation.
+- Figure out the [`length`][mdn-string-length] of the characters.
+- Only show the first two decimal numbers using [fixed-point][mdn-to-fixed] notation.
 
 [mdn-const]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 [mdn-template-strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 [mdn-string-length]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
-[mdn-parse-float]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 [mdn-to-fixed]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 [mdn-ternary-operator]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator

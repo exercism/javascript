@@ -16,6 +16,5 @@ export function graduationFor(name, year) {
 }
 
 export function costOf(sign, currency = 'dollars') {
-  const convertedSign = Number.parseFloat(sign.length);
-  return `Your sign cost ${(convertedSign * 2 + 20).toFixed(2)} ${currency}`;
+  return `Your sign cost ${(sign.length * 2 + 20).toFixed(2)} ${currency}`;
 }
