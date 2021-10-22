@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://javascript.info/operators#maths",
+    "description": "javascript.info: Arithmetic Operators"
+  },
+  {
+    "url": "https://javascript.info/operators#modify-in-place",
+    "description": "javascript.info: Shorthand Assignment Operators"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence",
+    "description": "MDN: Operator Precedence"
+  }
+]

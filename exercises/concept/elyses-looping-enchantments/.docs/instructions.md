@@ -1,7 +1,7 @@
 # Instructions
 
 As a budding magician, Elyse needs to be able to analyze her deck in lots of different ways.
-To keep things a simple, she only uses cards with values 1-10.
+To keep things simple, she only uses cards with values 1-10.
 
 ## 1. Determine how many cards of a certain type are in the deck
 

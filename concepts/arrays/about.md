@@ -1,6 +1,6 @@
 # About
 
-In Javascript, an array is a list-like structure with no fixed length which can hold any type of primitives or objects, even mixed types.
+In JavaScript, an array is a list-like structure with no fixed length which can hold any type of primitives or objects, even mixed types.
 It includes the `length` property and also lots of [useful methods][array-docs] for traversing and mutating the array.
 
 To create an array, add elements between square brackets `[]`.
@@ -197,7 +197,8 @@ names;
 
 ### splice
 
-> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.[^5]
+> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+> This method returns an array containing the deleted elements.[^5]
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];

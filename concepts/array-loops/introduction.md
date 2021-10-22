@@ -8,7 +8,7 @@ For transforming arrays, see [Concept Array Transformations][concept-array-trans
 
 ## The `for` Loop
 
-The most basic to iterate over an array is to use a `for` loop, see [Concept For Loops][concept-for-loops].
+The most basic way to iterate over an array is to use a `for` loop, see [Concept For Loops][concept-for-loops].
 
 ```javascript
 const numbers = [6.0221515, 10, 23];
@@ -25,7 +25,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 When you want to work with the value directly in each iteration and do not require the index at all, you can use a `for .. of` loop.
 
-`for...of` works like the basic `for` loop shown above, but instead of having to deal with the _index_ as variable in the loop, you are provided directly with the _value_.
+`for...of` works like the basic `for` loop shown above, but instead of having to deal with the _index_ as a variable in the loop, you are provided with the _value_ directly.
 
 ```javascript
 const numbers = [6.0221515, 10, 23];
@@ -44,12 +44,12 @@ Just like in regular `for` loops, you can use `continue` stop the current iterat
 
 ## The `forEach` Method
 
-Every array includes a `forEach` method that can also be used to loop over it.
+Every array includes a `forEach` method that can be used to loop over the elements in the aray.
 
-`forEach` accepts a [callback][concept-callbacks] as parameter.
+`forEach` accepts a [callback][concept-callbacks] as a parameter.
 The callback function is called once for each element in the array.
 The current element, its index and the full array are provided to the callback as arguments.
-Often, only the first or the first two are used.
+Often, only the current element or the index are used.
 
 ```javascript
 const numbers = [6.0221515, 10, 23];
@@ -61,7 +61,7 @@ numbers.forEach((number, index) => console.log(number, index));
 ```
 
 There is no way to stop the iteration once the `forEach` loop was started.
-The statements `break` and `continue` do not exist it this context.
+The statements `break` and `continue` do not exist in this context.
 
 [concept-array-transformations]: /tracks/javascript/concepts/array-transformations
 [concept-for-loops]: /tracks/javascript/concepts/for-loops

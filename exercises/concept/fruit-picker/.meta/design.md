@@ -11,6 +11,7 @@ In other words: how _function_ can be passed as an argument to another function,
 - Function that can pass along a callback function as an argument
 - How to write a function that can be used as a callback
 - How to compose functions with callbacks
+- Functions using arrow functions
 
 ## Out of scope
 
@@ -19,6 +20,7 @@ In other words: how _function_ can be passed as an argument to another function,
 
 ## Concepts
 
+- `arrow-functions`
 - `callbacks`
 
 ## Prerequisites
