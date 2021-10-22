@@ -354,9 +354,15 @@
         "name": "Book Store",
         "uuid": "519e55eb-436b-437d-b9d1-b4b3c939f60d",
         "practices": [],
-        "prerequisites": [],
-        "difficulty": 8,
-        "topics": ["algorithms", "floating_point_numbers", "integers", "lists"]
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "array-transformations",
+          "functions"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "conditionals", "loops", "lists", "sorting"]
       },
       {
         "slug": "pascals-triangle",
