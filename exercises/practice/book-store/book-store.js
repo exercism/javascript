@@ -3,4 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-const cost = (books) => {};
+export const cost = (books) => {
+  throw new Error('Remove this statement and implement this function');
+};

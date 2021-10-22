@@ -1,4 +1,4 @@
-# Instructions
+# Description
 
 To try and encourage more sales of different books from a popular 5 book
 series, a bookshop has decided to offer discounts on multiple book purchases.
@@ -43,15 +43,15 @@ This would give a total of:
 
 Resulting in:
 
-- 5 x (8 - 2.00) == 5 x 6.00 == $30.00
-- +3 x (8 - 0.80) == 3 x 7.20 == $21.60
+- 5 _ (8 - 2.00) == 5 _ 6.00 == $30.00
+- +3 _ (8 - 0.80) == 3 _ 7.20 == $21.60
 
 For a total of $51.60
 
 However, a different way to group these 8 books is:
 
-- 1 group of 4 books --> 20% discount  (1st,2nd,3rd,4th)
-- +1 group of 4 books --> 20% discount  (1st,2nd,3rd,5th)
+- 1 group of 4 books --> 20% discount (1st,2nd,3rd,4th)
+- +1 group of 4 books --> 20% discount (1st,2nd,3rd,5th)
 
 This would give a total of:
 
@@ -60,8 +60,8 @@ This would give a total of:
 
 Resulting in:
 
-- 4 x (8 - 1.60) == 4 x 6.40 == $25.60
-- +4 x (8 - 1.60) == 4 x 6.40 == $25.60
+- 4 _ (8 - 1.60) == 4 _ 6.40 == $25.60
+- +4 _ (8 - 1.60) == 4 _ 6.40 == $25.60
 
 For a total of $51.20
 
