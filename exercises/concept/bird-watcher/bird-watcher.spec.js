@@ -56,7 +56,7 @@ describe('bird watcher', () => {
     test('does not create a new array', () => {
       const birdsPerDay = [2, 0, 1, 4, 1, 3, 0];
 
-      // this follows the suggestion from the Jest docs to avoid a confusing test report
+      // This checks that the same object that was passed in is returned.
       // https://jestjs.io/docs/expect#tobevalue
       expect(Object.is(fixBirdCountLog(birdsPerDay), birdsPerDay)).toBe(true);
     });
