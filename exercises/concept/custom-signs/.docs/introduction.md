@@ -35,10 +35,12 @@ lines`;
 ```
 
 With the substitution capabilities that are available, you can also introduce logic into the process to determine what the output string should be.
-One way to handle the logic could be using the [ternary operator][ternary-operator].
-This gives the same conditional `if/else` functionality in a slightly different format.
 
-To implement logic into template string syntax:
+An example for this is embedding a [ternary operator][ternary-operator].
+This operator is a short form for writing an `if/else` statement.
+The syntax is `condition ? consequent-expression : alternative-expression`.
+If the condition is truthy, the operand on the left-hand side of the colon will be returned.
+Otherwise the result of the ternary expression is the operand on the right-hand side of the colon.
 
 ```javascript
 const grade = 95;

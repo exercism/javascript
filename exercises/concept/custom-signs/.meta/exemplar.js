@@ -5,9 +5,8 @@ export function buildSign(occasion, name) {
 }
 
 export function buildBirthdaySign(age) {
-  return `Happy Birthday! What a ${
-    age >= 50 ? 'old' : 'young'
-  } fellow you are.`;
+  // prettier-ignore
+  return `Happy Birthday! What a ${age >= 50 ? 'old' : 'young'} fellow you are.`;
 }
 
 export function graduationFor(name, year) {

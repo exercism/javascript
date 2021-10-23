@@ -9,9 +9,6 @@ Implement the function `buildSign(occasion, name)` that accepts a string as the 
 ```javascript
 buildSign('Birthday', 'Rob');
 // => "Happy Birthday Rob!"
-
-buildSign('Anniversary', 'Jen');
-// => "Happy Anniversary Jen!"
 ```
 
 ## 2. Build a birthday sign
@@ -35,10 +32,10 @@ graduationFor('Hannah', 2022);
 ## 5. Compute the cost of a sign
 
 Implement the function `costOf(sign, currency)` which takes a string that holds the contents of the sign and a string that represents the currency.
-The cost is calculated based on each letter in the sign costing two dollars with an additional 20 dollars for the sign created.
-The phrase returned includes the cost to create the sign, formatted with a fixed point notation set to 2 points, followed by the currency string.
+The sign has a base price of 20 in the given currency. Additionally each letter costs 2. (Whitespaces are included in the calculation.)
+The phrase returned includes the cost to create the sign, written with two digits after the decimal point, followed by the currency string.
 
 ```javascript
-costOf('Congratulations Rob Class of 2021', 'dollars');
-// => "Your sign costs 90.00 dollars."
+costOf('Happy Birthday Rob!', 'dollars');
+// => "Your sign costs 58.00 dollars."
 ```
