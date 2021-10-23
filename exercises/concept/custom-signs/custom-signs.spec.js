@@ -38,15 +38,13 @@ describe('buildBirthdaySign', () => {
 });
 
 describe('graduationFor', () => {
-  const expected = `Congratulations Rob
-  Class of 2021`;
   test('Robs graduation, 2021', () => {
+    const expected = 'Congratulations Rob\nClass of 2021';
     expect(graduationFor('Rob', 2021)).toBe(expected);
   });
 
   test('Jills graduation, 1999', () => {
-    const expected = `Congratulations Jill
-    Class of 1999`;
+    const expected = 'Congratulations Jill\nClass of 1999';
     expect(graduationFor('Jill', 1999)).toBe(expected);
   });
 });
@@ -54,19 +52,19 @@ describe('graduationFor', () => {
 describe('costOf', () => {
   test('sign is total of characters followed by the currency', () => {
     const sign = 'Happy Birthday!';
-    const expected = 'Your sign cost 50.00 dollars';
+    const expected = 'Your sign costs 50.00 dollars.';
     expect(costOf(sign, 'dollars')).toBe(expected);
   });
 
   test('includes line breaks in the calculation', () => {
     const sign = 'Congratulations Rob\nClass of 2021';
-    const expected = 'Your sign cost 86.00 dollars';
+    const expected = 'Your sign costs 86.00 dollars.';
     expect(costOf(sign, 'dollars')).toBe(expected);
   });
 
   test('handles different currency arguments', () => {
     const sign = 'Happy Easter, little sister!';
-    const expected = 'Your sign cost 76.00 euros.';
+    const expected = 'Your sign costs 76.00 euros.';
     expect(costOf(sign, 'euros')).toBe(expected);
   });
 });

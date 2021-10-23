@@ -11,9 +11,9 @@ export function buildBirthdaySign(age) {
 
 export function graduationFor(name, year) {
   return `Congratulations ${name}
-  Class of ${year}`;
+Class of ${year}`;
 }
 
 export function costOf(sign, currency = 'dollars') {
-  return `Your sign cost ${(sign.length * 2 + 20).toFixed(2)} ${currency}`;
+  return `Your sign costs ${(sign.length * 2 + 20).toFixed(2)} ${currency}.`;
 }
