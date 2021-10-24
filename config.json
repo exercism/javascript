@@ -526,7 +526,7 @@
         "name": "Collatz Conjecture",
         "uuid": "b8dacb3a-51d0-4da7-a6d2-aa29867e2b8c",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["while-loops", "conditionals", "errors"],
         "difficulty": 3,
         "topics": [
           "conditionals",
