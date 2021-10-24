@@ -551,7 +551,12 @@
         "name": "Clock",
         "uuid": "4e0e2c30-be33-49b6-b196-213888a93a0c",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "numbers",
+          "classes",
+          "strings"
+        ],
         "difficulty": 5,
         "topics": ["dates", "globalization", "time"]
       },
