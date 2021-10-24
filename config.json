@@ -238,6 +238,14 @@
         "concepts": ["array-transformations"],
         "prerequisites": ["arrays", "callbacks", "arrow-functions"],
         "status": "wip"
+      },
+      {
+        "slug": "custom-signs",
+        "name": "Custom Signs",
+        "uuid": "02a9c753-614f-4814-a7a8-43c1971d2eb7",
+        "concepts": ["conditionals-ternary", "template-strings"],
+        "prerequisites": ["strings", "conditionals", "type-conversion"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1728,8 +1736,8 @@
     },
     {
       "uuid": "19085ad2-038a-4e08-ad34-47ff2a78fec6",
-      "slug": "string-formatting",
-      "name": "String Formatting"
+      "slug": "template-strings",
+      "name": "Template Strings"
     },
     {
       "uuid": "7d5c1533-c7cf-418e-b0f2-080da1e5bdc5",
@@ -1780,6 +1788,11 @@
       "uuid": "cbad4d23-a9d8-4370-add2-f4416a4df027",
       "slug": "type-conversion",
       "name": "Type Conversion"
+    },
+    {
+      "uuid": "168cb8e8-c4f9-4e10-9d79-bffc77b86bbf",
+      "slug": "conditionals-ternary",
+      "name": "Ternary Operator"
     },
     {
       "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
