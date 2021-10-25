@@ -542,7 +542,7 @@
         "name": "Triangle",
         "uuid": "ed3ca73a-a0f0-46b8-8013-8b6d20758c8f",
         "practices": [],
-        "prerequisites": ["numbers", "arithmetic-operators", "classes"],
+        "prerequisites": ["numbers", "booleans", "comparison", "classes"],
         "difficulty": 3,
         "topics": ["conditionals", "loops", "exception_handling", "integers"]
       },
