@@ -526,7 +526,13 @@
         "name": "Collatz Conjecture",
         "uuid": "b8dacb3a-51d0-4da7-a6d2-aa29867e2b8c",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "comparison",
+          "while-loops",
+          "conditionals",
+          "errors"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -542,7 +548,7 @@
         "name": "Triangle",
         "uuid": "ed3ca73a-a0f0-46b8-8013-8b6d20758c8f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers", "booleans", "comparison", "classes"],
         "difficulty": 3,
         "topics": ["conditionals", "loops", "exception_handling", "integers"]
       },
@@ -551,7 +557,12 @@
         "name": "Clock",
         "uuid": "4e0e2c30-be33-49b6-b196-213888a93a0c",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "numbers",
+          "classes",
+          "strings"
+        ],
         "difficulty": 5,
         "topics": ["dates", "globalization", "time"]
       },
@@ -576,7 +587,7 @@
         "name": "Etl",
         "uuid": "db16804b-0f63-445d-8beb-99e0f7218d66",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["objects", "array-loops", "arrays", "strings"],
         "difficulty": 2,
         "topics": ["loops", "integers", "maps", "transforming"]
       },
