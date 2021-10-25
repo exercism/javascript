@@ -581,7 +581,7 @@
         "name": "Etl",
         "uuid": "db16804b-0f63-445d-8beb-99e0f7218d66",
         "practices": [],
-        "prerequisites": ["objects", "for-loops", "arrays", "strings"],
+        "prerequisites": ["objects", "array-loops", "arrays", "strings"],
         "difficulty": 2,
         "topics": ["loops", "integers", "maps", "transforming"]
       },
