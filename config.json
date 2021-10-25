@@ -370,6 +370,21 @@
         ]
       },
       {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "519e55eb-436b-437d-b9d1-b4b3c939f60d",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "array-transformations",
+          "functions"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "conditionals", "loops", "lists", "sorting"]
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascals Triangle",
         "uuid": "99493160-4673-402f-acda-62db5378148d",
