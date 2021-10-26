@@ -611,7 +611,7 @@
         "name": "Hamming",
         "uuid": "d773c4ef-c09e-40e4-a7fe-01456cb4a12a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["comparison", "errors", "for-loops"],
         "difficulty": 2,
         "topics": ["conditionals", "loops", "equality", "strings"]
       },
