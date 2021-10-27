@@ -33,13 +33,13 @@ describe('Hamming', () => {
     );
   });
 
-  xtest('disallow left empty strand', () => {
+  xtest('disallow empty first strand', () => {
     expect(() => compute('', 'G')).toThrow(
       new Error('strands must be of equal length')
     );
   });
 
-  xtest('disallow right empty strand', () => {
+  xtest('disallow empty second strand', () => {
     expect(() => compute('G', '')).toThrow(
       new Error('strands must be of equal length')
     );
