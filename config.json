@@ -629,7 +629,13 @@
         "name": "Nucleotide Count",
         "uuid": "be6f3ab3-1593-4c2d-8a35-5f39c1d5c91f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "array-transformation",
+          "objects",
+          "strings",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
