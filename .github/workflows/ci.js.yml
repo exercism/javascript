@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97
-      - name: Use Node.js LTS (14.x)
+      - name: Use Node.js LTS (16.x)
         uses: actions/setup-node@270253e841af726300e85d718a5f606959b2903c
         with:
-          node-version: 14.x
+          node-version: '16'
 
       - name: Install project dependencies
         run: npm ci
@@ -29,7 +29,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: ['16', '17']
 
     steps:
       - uses: actions/checkout@1e204e9a9253d643386038d443f96446fa156a97
