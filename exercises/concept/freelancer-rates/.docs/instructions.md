@@ -37,7 +37,7 @@ _Every month has 22 billable days._
 Help him estimate his cost for such projects, given a day rate, the number of days the project spans, and a monthly discount rate.
 
 ```javascript
-//TODO: ADD A EXAMPLE
+//TODO: ADD EXAMPLE
 ```
 
 The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be rounded up to the nearest whole number.
