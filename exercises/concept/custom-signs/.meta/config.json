@@ -1,0 +1,11 @@
+{
+  "blurb": "Learn about template strings and the ternary operator ...",
+  "authors": ["pertrai1"],
+  "contributors": [],
+  "files": {
+    "solution": ["custom-signs.js"],
+    "test": ["custom-signs.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["swift/custom-signs"]
+}
