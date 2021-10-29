@@ -23,8 +23,8 @@ Given the fixed budget and the freelancer's hourly rate, help him calculate the 
 
 ```javascript
 CHANGE THIS EXAMPLE>>>>
-daysInBudget(20000, 89, 0.2002);    
-// => 35
+daysInBudget(20000, 89);    
+// => 28
 ```
 
 The result _must_ be rounded down to the nearest whole number.
@@ -37,8 +37,7 @@ _Every month has 22 billable days._
 Help him estimate his cost for such projects, given a day rate, the number of days the project spans, and a monthly discount rate.
 
 ```javascript
-rateWithDiscount(89, 0.42); CHANGE THIS EXAMPLE>>>>
-// => 9086
+//TODO: ADD A EXAMPLE
 ```
 
 The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be rounded up to the nearest whole number.
