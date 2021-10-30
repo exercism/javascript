@@ -141,9 +141,9 @@ for (let key in obj) {
 ```
 
 To avoid subtle errors you should always assume the `for...in` loop visits the keys in an arbitrary order.
-Also be aware that `for...in` includes [inherited keys][mdn-inheritance] in its iteration.
+Also be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
 
 [oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
 [concept-classes]: /tracks/javascript/concepts/classes
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
-[mdn-inheritance]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
+[concept-inheritance]: /tracks/javascript/concepts/inheritance
