@@ -10,5 +10,8 @@
       "excludedFiles": ["custom.spec.js"],
       "extends": "@exercism/eslint-config-javascript/maintainers"
     }
-  ]
+  ],
+  "rules": {
+    "ignoreRestSiblings": true
+  }
 }
