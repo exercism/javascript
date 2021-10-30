@@ -34,7 +34,7 @@ Boolean('');
 // => false
 ```
 
-Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **thruthy** in JavaScript.
+Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **truthy** in JavaScript.
 
 ### Converting to a Number
 
