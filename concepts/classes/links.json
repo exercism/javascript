@@ -2,5 +2,21 @@
   {
     "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes",
     "description": "..."
+  },
+  {
+    "url": "https://javascript.info/constructor-new",
+    "description": "..."
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes",
+    "description": "..."
+  },
+  {
+    "url": "https://javascript.info/object-methods",
+    "description": "..."
+  },
+  {
+    "url": "https://javascript.info/function-prototype",
+    "description": "..."
   }
 ]
