@@ -6,6 +6,10 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
+    labels:
+      - 'dependencies :arrow_up_small:'
+      - 'github_actions'
+      - 'x:size/small'
 
   # Enable version updates for npm
   - package-ecosystem: 'npm'
@@ -14,3 +18,7 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: 'daily'
+    labels:
+      - 'dependencies :arrow_up_small:'
+      - 'javascript'
+      - 'x:size/small'
