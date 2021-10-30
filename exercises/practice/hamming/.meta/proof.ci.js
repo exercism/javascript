@@ -1,8 +1,5 @@
 export const compute = (strand1, strand2) => {
-  const len1 = strand1.length;
-  const len2 = strand2.length;
-
-  if (len1 !== len2) {
+  if (strand1.length !== strand2.length) {
     throw new Error('strands must be of equal length');
   }
 
