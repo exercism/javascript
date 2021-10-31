@@ -18,17 +18,17 @@ export const parse = (markdown) => {
     markdown = markdown.replace('_ ', '</em> ');
   }
 
-  if (markdown.startsWith('__')) {
+  if (markdown.match(/__\w/g)) {
     markdown = markdown.replace('__', '<strong>');
   }
-  if (markdown.endsWith('__')) {
+  if (markdown.match(/\w__/g)) {
     markdown = markdown.replace('__', '</strong>');
   }
 
-  if (markdown.startsWith('_')) {
+  if (markdown.match(/_\w/g)) {
     markdown = markdown.replace('_', '<em>');
   }
-  if (markdown.endsWith('_')) {
+  if (markdown.match(/\w_/g)) {
     markdown = markdown.replace('_', '</em>');
   }
 
@@ -37,8 +37,12 @@ export const parse = (markdown) => {
     if (markdown.match(/\n\*/gm)) {
       markdown = markdown.replace('\n* ', '</h1><ul><li>');
       markdown = markdown.replaceAll('\n* ', '</li><li>');
-      markdown = markdown.replace('\n', '</li></ul><p>');
-      markdown = markdown + '</p>';
+      if (markdown.match('\n')) {
+        markdown = markdown.replace('\n', '</li></ul><p>');
+        markdown = markdown + '</p>';
+      } else {
+        markdown = markdown + '</li></ul>';
+      }
     } else {
       markdown = markdown + '</h1>';
     }
