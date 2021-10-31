@@ -1,0 +1,10 @@
+{
+  "blurb": "Refactor a Markdown parser.",
+  "authors": ["kmelow"],
+  "contributors": [],
+  "files": {
+    "solution": ["markdown.js"],
+    "test": ["markdown.spec.js"],
+    "example": [".meta/proof.ci.js"]
+  }
+}
