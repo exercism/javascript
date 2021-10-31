@@ -31,12 +31,12 @@
 // Good luck preparing some lasagna!
 
 /**
- * The amount of minutes it takes to prepare a single layer.
+ * The number of minutes it takes to prepare a single layer.
  */
 const PREPARATION_MINUTES_PER_LAYER = 2;
 
 /**
- * Determines the amount of minutes the lasagna still needs to remain in the
+ * Determines the number of minutes the lasagna still needs to remain in the
  * oven to be properly prepared.
  *
  * @param {number} actualMinutesInOven
