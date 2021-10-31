@@ -370,6 +370,20 @@
         ]
       },
       {
+        "slug": "markdown",
+        "name": "Markdown",
+        "uuid": "3994ee58-0d75-4c46-afe1-666466470255",
+        "practices": ["regular-expressions", "functions"],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "conditionals",
+          "pattern_recognition",
+          "regular_expressions",
+          "strings"
+        ]
+      },
+      {
         "slug": "book-store",
         "name": "Book Store",
         "uuid": "519e55eb-436b-437d-b9d1-b4b3c939f60d",
