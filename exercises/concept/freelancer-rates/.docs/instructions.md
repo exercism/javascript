@@ -1,6 +1,6 @@
 # Instructions
 
-In this exercise you will be writing code to help a freelancer communicate with his clients by providing a few utility functions to quickly calculate his hiring costs for projects.
+In this exercise you will be writing code to help a freelancer communicate with his clients about the prices of certain projects. You will write a few utility functions to quickly calculate the costs for the clients.
 
 ## 1. Calculate the day rate given an hourly rate
 
@@ -16,7 +16,7 @@ dayRate(89);
 
 The day rate does not need to be rounded or changed to a "fixed" precision.
 
-## 2. Calculate the number of workdays given a fixed budget and hourly rate
+## 2. Calculate the number of workdays given a fixed budget
 
 Another day, a project manager offers the freelancer to work on a project with a fixed budget.
 Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days the project would take to complete
@@ -27,7 +27,7 @@ daysInBudget(20000, 89);
 // => 28
 ```
 
-The result _must_ be rounded down to the nearest whole number.
+The result must be **rounded down** to the nearest whole number.
 
 ## 3. Calculate the discounted rate, given a day rate, the number of workdays, and a monthly discount rate
 
