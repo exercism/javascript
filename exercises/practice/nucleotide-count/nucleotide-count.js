@@ -4,5 +4,5 @@
 //
 
 export function countNucleotides(strand) {
-  // ...
+  throw new Error('Remove this statement and implement this function');
 }
