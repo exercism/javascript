@@ -8,7 +8,7 @@ To understand what that means and how JavaScript actually works, we will go back
 
 ## Prototype Syntax
 
-In OOP, you want to create objects from "templates" so that they include certain data and functionality. The data (keys in the object) are called _properties_ in the OOP context, the functionality (functions included in the object) are called _methods_.
+In OOP, you want to create objects from "templates" so that they include certain data and functionality. The data (keys in the object) are called _fields_ in the OOP context, the functionality (functions in the object) are called _methods_.
 
 ### Constructor Function
 
@@ -23,33 +23,73 @@ const myCar = new Car();
 const yourCar = new Car();
 ```
 
-### Instance Properties
+It is important to note that in JavaScript, the instances and the constructor function keep a relationship to each other even after the instances were created.
+Every object instance includes a hidden, internal object referred to as `[[prototype]]` in the language specification. It holds a reference to the value of the `prototype` key of the constructor function. Yes, you read that correctly, a JavaScript function can have key/value pairs because it is also an object behind the scenes. Nowadays `[[prototype]]` can be accessed via the key `__proto__` in many environments. It is important to not confuse the prototype of an instance (`[[prototype]]`/`__proto__`) with the `prototype` property of the constructor function.
 
-Often, you want all the derived objects to include some properties and pass some initial values when the object is constructed. This is facilitated via the `this` keyword. Inside the constructor function, `this` references the new object that will be created via `new` and it is automatically returned from the function.
+### Instance Fields
 
-That means we can add properties to the new instance by adding them to `this` in the constructor function.
+Often, you want all the derived objects to include some fields and pass some initial values when the object is constructed. This is facilitated via the `this` keyword. Inside the constructor function, `this` references the new object that will be created via `new` and it is automatically returned from the function.
+
+That means we can add fields to the new instance by adding them to `this` in the constructor function.
 
 ```javascript
 function Car(color, weight) {
   this.color = color;
   this.weight = weight;
-  this.canDrive = true;
-  // implicit "return this" happens here
+  this.engineRunning = false;
 }
 
 const myCar = new Car('red', '2mt');
 myCar.color;
 // => 'red'
-myCar.canDrive;
-// => true
+myCar.engineRunning;
+// => false
+```
+
+The syntax above the usual way of adding fields. In theory, instance fields that do not depend on the parameters of the constructor can also be added via the `prototype` entry of the constructor function.
+
+```javascript
+function Car(color, weight) {
+  this.color = color;
+  this.weight = weight;
+}
+
+Car.prototype.engineRunning = false;
+
+const myCar = new Car('red', '2mt');
+myCar.engineRunning;
+// => false
 ```
 
 ### Instance Methods
 
+Just like the fields above, methods can also be added either in the constructor function by adding them to `this` or via the prototype. To keep the code readable, a common convention is to add all fields in the constructor function and all methods via the prototype.
+
+When defining the methods, you can access the fields of the object via `this`.
+
+```javascript
+function Car() {
+  this.engineRunning = false;
+}
+
+Car.prototype.startEngine = function () {
+  this.engineRunning = true;
+};
+
+Car.prototype.addGas = function (litre) {
+  // ...
+};
+
+const myCar = new Car();
+myCar.startEngine();
+myCar.engineRunning;
+// => true
+```
+
+### The Prototype Chain and Dynamic Methods
+
 TODO continue here
 
-- can be added via this or via prototype
-- instance holds reference to prototype
 - prototype can change dynamically
 
 ## Class Syntax
@@ -59,6 +99,6 @@ TODO continue here
 
 Other
 
-- class properties/methods
+- class fields/methods
 
 [wiki-oop]: https://en.wikipedia.org/wiki/Object-oriented_programming
