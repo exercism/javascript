@@ -1,7 +1,7 @@
 const count = (str, nuc) =>
   [...str].filter((nucleotide) => nucleotide === nuc).length;
 
-export function nucleotideCounts(strand) {
+export function countNucleotides(strand) {
   if (strand.replace(/A|C|G|T/g, '').length) {
     throw new Error('Invalid nucleotide in strand');
   }

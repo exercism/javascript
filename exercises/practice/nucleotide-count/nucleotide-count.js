@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export function nucleotideCounts(strand) {
+export function countNucleotides(strand) {
   // ...
 }
