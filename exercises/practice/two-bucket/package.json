@@ -10,7 +10,7 @@
     "directory": "exercises/practice/two-bucket"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.15.8",
