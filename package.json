@@ -17,7 +17,7 @@
     "@babel/core": "^7.16.0",
     "@babel/node": "^7.16.0",
     "@babel/plugin-syntax-bigint": "^7.8.3",
-    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-env": "^7.16.0",
     "@exercism/eslint-config-javascript": "^0.5.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.11.6",
