@@ -5,7 +5,7 @@ In this exercise you will be writing code to help a freelancer communicate with 
 ## 1. Calculate the day rate given an hourly rate
 
 A client contacts the freelancer to enquire about his rates.
-The freelancer explains that he _works 8 hours a day._
+The freelancer explains that he **_works 8 hours a day._**
 However, the freelancer knows only his hourly rates for the project.
 Help him estimate a day rate given an hourly rate.
 
@@ -22,22 +22,21 @@ Another day, a project manager offers the freelancer to work on a project with a
 Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days the project would take to complete
 
 ```javascript
-CHANGE THIS EXAMPLE>>>>
 daysInBudget(20000, 89);    
 // => 28
 ```
 
-The result must be **rounded down** to the nearest whole number.
+The result _must_ be **rounded down** to the nearest whole number.
 
-## 3. Calculate the discounted rate, given a day rate, the number of workdays, and a monthly discount rate
+## 3. Calculate the discounted rate for large projects
 
-Many a time, the freelancer's clients hire him for projects spanning over months.
+Often, the freelancer's clients hire him for projects spanning over months.
 In these cases, the freelancer decides to offer a discount for every full month, and the remaining days are billed at day rate.
-_Every month has 22 billable days._
+**_Every month has 22 billable days._**
 Help him estimate his cost for such projects, given a day rate, the number of days the project spans, and a monthly discount rate.
 
 ```javascript
 //TODO: ADD EXAMPLE
 ```
 
-The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be rounded up to the nearest whole number.
+The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be **rounded up** to the nearest whole number.
