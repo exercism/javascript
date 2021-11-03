@@ -25,7 +25,7 @@ numbers.indexOf('two');
 // => 1
 ```
 
-Some other helpful built-in methods that are available on the `Array.prototype` include:
+Some other helpful built-in methods that are available on the `Array.prototype`:
 
 ## `includes`
 
