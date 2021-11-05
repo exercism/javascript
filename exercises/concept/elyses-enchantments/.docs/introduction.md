@@ -33,7 +33,7 @@ numbers;
 
 ## Methods
 
-Some of the [methods][array_methods] that are available on every Array[^0] object can be used to add or remove from the array.
+Some of the [methods][array_methods] that are available on every Array object can be used to add or remove from the array.
 Here are a few to consider when working on this exercise:
 
 ### push
@@ -96,7 +96,6 @@ numbers;
 
 ---
 
-[^0]: `Array`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array> (referenced November 5, 2021)
 [^1]: `push`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push (referenced September 29, 2021)
 [^2]: `pop`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop (referenced September 29, 2021)
 [^3]: `shift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift (referenced September 29, 2021)
