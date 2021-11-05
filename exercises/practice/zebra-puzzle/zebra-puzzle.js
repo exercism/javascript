@@ -6,6 +6,6 @@
 export function zebraPuzzle() {
   return {
     waterDriker: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese',
-    zebraOwner: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese'
-  }
+    zebraOwner: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese',
+  };
 }
