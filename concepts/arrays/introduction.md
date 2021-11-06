@@ -33,7 +33,7 @@ numbers;
 
 ## Methods
 
-Some of the [methods][array_methods] that are available on `Array.prototype` can be used to add or remove from the array.
+Some of the [methods][array_methods] that are available on every Array object can be used to add or remove from the array.
 
 ### push
 
