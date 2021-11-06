@@ -12,7 +12,7 @@ The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
 This makes objects very versatile so that they are also key entities for [object-oriented programming][oop] (OOP) in JavaScript.
 
-In the following we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][concept-classes].
+In the following we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][classes].
 
 ## Creating an Object
 
@@ -259,7 +259,7 @@ For example, it contains the `hasOwnProperty` method and other methods like `toS
 Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
 [oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
-[concept-classes]: /tracks/javascript/concepts/classes
+[classes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 [literal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals
 [mdn-trailing-commas]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier

@@ -60,10 +60,10 @@ jobs:
           git clone $HEAD_REPO .
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
-      - name: Use Node.js LTS (14.x)
+      - name: Use Node.js LTS (16.x)
         uses: actions/setup-node@270253e841af726300e85d718a5f606959b2903c
         with:
-          node-version: 14.x
+          node-version: '16'
       - name: Install project development dependencies
         run: npm i
       - name: 'Format code'
