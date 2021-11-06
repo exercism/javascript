@@ -4,8 +4,5 @@
 //
 
 export function zebraPuzzle() {
-  return {
-    waterDriker: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese',
-    zebraOwner: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese',
-  };
+  throw new Error('Remove this statement and implement this function');
 }
