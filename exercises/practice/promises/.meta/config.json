@@ -1,5 +1,5 @@
 {
-  "blurb": "Compute the prime factors of a given natural number.",
+  "blurb": "Learn about promises by implementing some common promise functions.",
   "authors": ["slaymance"],
   "contributors": ["SleeplessByte", "TomPradat"],
   "files": {
