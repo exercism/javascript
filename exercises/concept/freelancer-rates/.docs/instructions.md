@@ -37,6 +37,8 @@ Help him estimate his cost for such projects, given an hourly rate, the number o
 
 ```javascript
 //TODO: ADD EXAMPLE
+discountedRate(89, 230, 0.42); 
+// => 97972
 ```
 
 The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be **rounded up** to the nearest whole number.
