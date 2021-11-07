@@ -620,7 +620,7 @@
         "name": "Raindrops",
         "uuid": "f77ac2d1-cf3a-497d-bf04-b484a5a9cb37",
         "practices": [],
-        "prerequisites": ["objects", "array-transformations", "strings"],
+        "prerequisites": ["arithmetic-operators", "strings", "conditionals"],
         "difficulty": 2,
         "topics": ["conditionals", "integers", "strings", "transforming"]
       },
