@@ -586,7 +586,7 @@
         "name": "Meetup",
         "uuid": "98617798-b49d-4d43-9f65-7131ee73d626",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["dates", "array-analysis", "conditionals-switch"],
         "difficulty": 7,
         "topics": [
           "conditionals",
