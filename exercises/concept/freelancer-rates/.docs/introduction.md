@@ -71,4 +71,17 @@ let y = 31;
 y %= 3; // y is now 1
 ```
 
+## Rounding up/down
+
+In this exercise, you will be required to round decimal numbers up or down to the nearest whole number.
+
+There is a built-in global object called [`Math`][ref-math-object] with functions to, for example, round-down (`floor`) or round-up (`ceil`).
+
+```javascript
+const roundDown = Math.floor(234.34) // => 234
+const roundUp = Math.ceil(234.34) // => 235
+```
+
 [mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
+
+[ref-math-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
