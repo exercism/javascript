@@ -48,7 +48,7 @@ export function dayRate(ratePerHour) {
  * @param {number} discount: for example 20% written as 0.2
  * @returns {number} the rounded up discounted rate
  */
-export function discountedRate(ratePerHour, numDays, discount) {
-  throw new Error('Implement the discountedRate function');
+export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
+  throw new Error('Implement the priceWithMonthlyDiscount function');
 }
 
