@@ -223,6 +223,21 @@ describe('scaleRecipe', () => {
   test('works for an empty recipe', () => {
     expect(scaleRecipe({})).toEqual({});
   });
+
+  test('does not modify the original recipe', () => {
+    const recipe = {
+      sauce: 1,
+      noodles: 250,
+      meat: 150,
+      tomatoes: 3,
+      onion: 2,
+    };
+
+    const copy = { ...recipe };
+
+    scaleRecipe(recipe, 4);
+    expect(recipe).toEqual(copy);
+  });
 });
 
 /**
