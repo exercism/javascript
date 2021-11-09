@@ -30,7 +30,7 @@ The result _must_ be **rounded down** to the nearest whole number.
 
 ## 3. Calculate the discounted rate for large projects
 
-Often, the freelancer's clients hire him for projects spanning over months.
+Often, the freelancer's clients hire him for projects spanning over multiple months.
 In these cases, the freelancer decides to offer a discount for every full month, and the remaining days are billed at day rate.
 **_Every month has 22 billable days._**
 Help him estimate his cost for such projects, given an hourly rate, the number of days the project spans, and a monthly discount rate.
