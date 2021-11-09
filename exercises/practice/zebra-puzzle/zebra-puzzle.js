@@ -3,6 +3,18 @@
 // convenience to get you started writing code faster.
 //
 
-export function zebraPuzzle() {
-  throw new Error('Remove this statement and implement this function');
+export class ZebraPuzzle {
+  constructor() {
+    throw new Error('Remove this statement and implement this function');
+  }
+
+  waterDrinker() {
+    throw new Error('Remove this statement and implement this function');
+  }
+
+  zebraOwner() {
+    throw new Error('Remove this statement and implement this function');
+  }
 }
+
+module.exports = ZebraPuzzle;
