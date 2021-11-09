@@ -36,7 +36,7 @@ export function dayRate(ratePerHour) {
  * @param {number} ratePerHour: the rate per hour
  * @returns {number} the number of days
  */
- export function daysInBudget(budget, ratePerHour) {
+export function daysInBudget(budget, ratePerHour) {
   throw new Error('Implement the daysInBudget function');
 }
 
@@ -51,4 +51,3 @@ export function dayRate(ratePerHour) {
 export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
   throw new Error('Implement the priceWithMonthlyDiscount function');
 }
-
