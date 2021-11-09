@@ -22,7 +22,7 @@ Another day, a project manager offers the freelancer to work on a project with a
 Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days the project would take to complete
 
 ```javascript
-daysInBudget(20000, 89);    
+daysInBudget(20000, 89);
 // => 28
 ```
 
@@ -37,7 +37,7 @@ Help him estimate his cost for such projects, given an hourly rate, the number o
 
 ```javascript
 //TODO: ADD EXAMPLE
-discountedRate(89, 230, 0.42); 
+discountedRate(89, 230, 0.42);
 // => 97972
 ```
 

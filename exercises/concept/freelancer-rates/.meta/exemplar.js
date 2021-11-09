@@ -28,7 +28,7 @@
 export function dayRate(ratePerHour) {
   return ratePerHour * 8;
 }
- 
+
 /**
  * Calculates the number of days in a budget, rounded down
  *
@@ -36,26 +36,25 @@ export function dayRate(ratePerHour) {
  * @param {number} ratePerHour the rate per hour
  * @returns {number} the number of days
  */
- export function daysInBudget(budget, ratePerHour) {
-   return Math.floor(budget / dayRate(ratePerHour));
+export function daysInBudget(budget, ratePerHour) {
+  return Math.floor(budget / dayRate(ratePerHour));
 }
 
 /**
  * Calculates the discounted rate for large projects, rounded up
  *
-* @param {number} ratePerHour
+ * @param {number} ratePerHour
  * @param {number} numDays: number of days the project spans
  * @param {number} discount: for example 20% written as 0.2
- * @returns {number} the discounted rate, rounded up 
+ * @returns {number} the discounted rate, rounded up
  */
 export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
   const numMonths = Math.floor(numDays / 22);
   const rateMonthsNoDiscount = numMonths * 22 * dayRate(ratePerHour);
   const rateMonthsWithDiscount = (1 - discount) * rateMonthsNoDiscount;
-  
+
   const numExtraDays = numDays % 22;
   const rateDays = numExtraDays * dayRate(ratePerHour);
 
-  return Math.ceil(rateMonthsWithDiscount + rateDays);  
+  return Math.ceil(rateMonthsWithDiscount + rateDays);
 }
-
