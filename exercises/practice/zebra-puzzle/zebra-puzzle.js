@@ -3,9 +3,18 @@
 // convenience to get you started writing code faster.
 //
 
-export function zebraPuzzle() {
-  return {
-    waterDriker: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese',
-    zebraOwner: 'Englishman | Spaniard | Ukrainian | Norwegian | Japanese',
-  };
+export class ZebraPuzzle {
+  constructor() {
+    throw new Error('Remove this statement and implement this function');
+  }
+
+  waterDrinker() {
+    throw new Error('Remove this statement and implement this function');
+  }
+
+  zebraOwner() {
+    throw new Error('Remove this statement and implement this function');
+  }
 }
+
+module.exports = ZebraPuzzle;

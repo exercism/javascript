@@ -1,10 +1,12 @@
-import { zebraPuzzle } from './zebra-puzzle';
+import { ZebraPuzzle } from './zebra-puzzle';
 
 describe('Zebra puzzle', () => {
-  test('Solve the puzzle', () => {
-    expect(zebraPuzzle()).toEqual({
-      waterDriker: 'Norwegian',
-      zebraOwner: 'Japanese',
-    });
+  test('should solve the water driker', () => {
+    const puzzle = new ZebraPuzzle();
+    expect(puzzle.waterDrinker()).toEqual('Norwegian');
+  });
+  test('should solve the zebra owner', () => {
+    const puzzle = new ZebraPuzzle();
+    expect(puzzle.zebraOwner()).toEqual('Japanese');
   });
 });
