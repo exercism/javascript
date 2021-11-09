@@ -6,6 +6,7 @@
 - Know their underlying type (double precision).
 - Know their basic limitations (not all numbers can be represented, e.g. `0.1 + 0.2`).
 - Know how to truncate floating point numbers to a certain decimal place (`Math.ceil`, `Math.floor`, `Math.round`)
+- Know how to use arithmetic operators (`+`, `-`, `*`, `/`, `%`, `**`)
 
 ## Out of scope
 
@@ -15,6 +16,7 @@
 ## Concepts
 
 - `numbers`
+- `arithmetic-operators`
 
 ## Prerequisites
 
