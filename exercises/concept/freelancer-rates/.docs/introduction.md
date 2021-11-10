@@ -14,9 +14,7 @@ Otherwise, the `number` type is likely the better option.
 
 ### Rounding
 
-In this exercise, you will be required to round decimal numbers up or down to the nearest whole number.
-
-There is a built-in global object called [`Math`][ref-math-object-rounding] with functions to, for example, round-down (`floor`) or round-up (`ceil`).
+There is a built-in global object called [`Math`][ref-math-object-rounding] with functions to, for example, round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whole numbers.
 
 ```javascript
 const roundDown = Math.floor(234.34); // => 234
