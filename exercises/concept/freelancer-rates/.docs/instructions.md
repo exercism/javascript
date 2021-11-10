@@ -19,7 +19,7 @@ The day rate does not need to be rounded or changed to a "fixed" precision.
 ## 2. Calculate the number of workdays given a fixed budget
 
 Another day, a project manager offers the freelancer to work on a project with a fixed budget.
-Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days the project would take to complete
+Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days he would work until the budget is exhausted.
 
 ```javascript
 daysInBudget(20000, 89);
