@@ -36,8 +36,7 @@ In these cases, the freelancer decides to offer a discount for every full month,
 Help him estimate his cost for such projects, given an hourly rate, the number of days the project spans, and a monthly discount rate.
 
 ```javascript
-//TODO: ADD EXAMPLE
-discountedRate(89, 230, 0.42);
+priceWithMonthlyDiscount(89, 230, 0.42);
 // => 97972
 ```
 
