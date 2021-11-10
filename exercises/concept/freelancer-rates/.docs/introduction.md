@@ -14,11 +14,11 @@ Otherwise, the `number` type is likely the better option.
 
 ### Rounding
 
-There is a built-in global object called [`Math`][ref-math-object-rounding] with functions to, for example, round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whole numbers.
+There is a built-in global object called `Math` that provides various [rounding functions][ref-math-object-rounding]. For example, you can round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whole numbers.
 
 ```javascript
-const roundDown = Math.floor(234.34); // => 234
-const roundUp = Math.ceil(234.34); // => 235
+Math.floor(234.34); // => 234
+Math.ceil(234.34); // => 235
 ```
 
 ## Arithmetic Operators

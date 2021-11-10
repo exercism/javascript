@@ -28,6 +28,14 @@ There are two built-in objects that are useful when dealing with numbers:
 - [`Number`][built-in-number]: static properties for common / useful values, static methods for [type-checking][concept-type-checking] and [type-conversion][concept-type-conversion], instance methods for [type-conversion][concept-type-conversion] and [formatting numbers as strings][string-formatting].
 - [`Math`][built-in-math]: properties and methods for mathematical constants and functions, does **not** work with `BigInt`.
 
+`Math` also includes methods for rounding numbers.
+You can read more about the available rounding options in this [javascript.info article on rounding][ref-math-object-rounding].
+
+```javascript
+Math.floor(234.34); // => 234
+Math.ceil(234.34); // => 235
+```
+
 The `Number` built-in global `object` is _also_ a global `function` that can be used to convert _almost anything_ number-like to a `number`.
 It is less forgiving than _parsing_ a `string` to a `number`.
 
@@ -47,15 +55,6 @@ There are three types of maximum (and minimum / maximum negative) values for num
 
 Because of how numbers in JavaScript are implemented, **not** every number between `Number.MIN_VALUE` and `Number.MAX_VALUE` can be represented.
 However, _every_ number between `Number.MIN_SAFE_INTEGER - 1` and `Number.MAX_SAFE_INTEGER + 1` **can** be represented.
-
-## Rounding
-
-The [`Math`][ref-math-object-rounding] includes fuctions to round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whone number.
-
-```javascript
-Math.floor(234.34); // => 234
-Math.ceil(234.34); // => 235
-```
 
 ## Comparison
 
