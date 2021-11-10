@@ -19,7 +19,7 @@ The day rate does not need to be rounded or changed to a "fixed" precision.
 ## 2. Calculate the number of workdays given a fixed budget
 
 Another day, a project manager offers the freelancer to work on a project with a fixed budget.
-Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days the project would take to complete
+Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days he would work until the budget is exhausted.
 
 ```javascript
 daysInBudget(20000, 89);
@@ -30,7 +30,7 @@ The result _must_ be **rounded down** to the nearest whole number.
 
 ## 3. Calculate the discounted rate for large projects
 
-Often, the freelancer's clients hire him for projects spanning over months.
+Often, the freelancer's clients hire him for projects spanning over multiple months.
 In these cases, the freelancer decides to offer a discount for every full month, and the remaining days are billed at day rate.
 **_Every month has 22 billable days._**
 Help him estimate his cost for such projects, given an hourly rate, the number of days the project spans, and a monthly discount rate.
