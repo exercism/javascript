@@ -1,7 +1,7 @@
 {
   "blurb": "Learn about numbers whilst helping a freelancer communicate with a project manager about day- and month rates.",
   "authors": ["SleeplessByte", "JaPatGitHub"],
-  "contributors": [],
+  "contributors": ["junedev"],
   "files": {
     "solution": ["freelancer-rates.js"],
     "test": ["freelancer-rates.spec.js"],
