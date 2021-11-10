@@ -20,13 +20,12 @@ The day rate does not need to be rounded or changed to a "fixed" precision.
 
 Another day, a project manager offers the freelancer to work on a project with a fixed budget.
 Given the fixed budget and the freelancer's hourly rate, help him calculate the number of days he would work until the budget is exhausted.
+The result _must_ be **rounded down** to the nearest whole number.
 
 ```javascript
 daysInBudget(20000, 89);
 // => 28
 ```
-
-The result _must_ be **rounded down** to the nearest whole number.
 
 ## 3. Calculate the discounted rate for large projects
 
@@ -34,10 +33,10 @@ Often, the freelancer's clients hire him for projects spanning over multiple mon
 In these cases, the freelancer decides to offer a discount for every full month, and the remaining days are billed at day rate.
 **_Every month has 22 billable days._**
 Help him estimate his cost for such projects, given an hourly rate, the number of days the project spans, and a monthly discount rate.
+The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be **rounded up** to the nearest whole number.
+
 
 ```javascript
 priceWithMonthlyDiscount(89, 230, 0.42);
 // => 97972
 ```
-
-The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be **rounded up** to the nearest whole number.
