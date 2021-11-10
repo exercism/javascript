@@ -9,3 +9,14 @@ Many programming languages have specific numeric types to represent different ty
 
 If you require arbitrary precision or work with extremely large numbers, use the `bigint` type.
 Otherwise, the `number` type is likely the better option.
+
+## Rounding
+
+There is a built-in global object called [`Math`][ref-math-object-rounding] with functions to, for example, round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whone number.
+
+```javascript
+Math.floor(234.34); // => 234
+Math.ceil(234.34); // => 235
+```
+
+[ref-math-object-rounding]: https://javascript.info/number#rounding

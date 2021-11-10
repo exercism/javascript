@@ -47,6 +47,15 @@ There are three types of maximum (and minimum / maximum negative) values for num
 
 Because of how numbers in JavaScript are implemented, **not** every number between `Number.MIN_VALUE` and `Number.MAX_VALUE` can be represented.
 However, _every_ number between `Number.MIN_SAFE_INTEGER - 1` and `Number.MAX_SAFE_INTEGER + 1` **can** be represented.
+## Rounding
+
+The [`Math`][ref-math-object-rounding] includes fuctions to round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whone number.
+
+```javascript
+Math.floor(234.34); // => 234
+Math.ceil(234.34); // => 235
+```
+
 
 ## Comparison
 
@@ -86,6 +95,7 @@ See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief expl
 [comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 [lexical-grammar]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals
 [string-formatting]: /tracks/javascript/concepts/string-formatting
+[ref-math-object-rounding]: https://javascript.info/number#rounding
 [concept-comparison]: /tracks/javascript/concepts/comparison
 [concept-type-checking]: /tracks/javascript/concepts/type-checking
 [concept-type-conversion]: /tracks/javascript/concepts/type-conversion
