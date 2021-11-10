@@ -35,7 +35,6 @@ In these cases, the freelancer decides to offer a discount for every full month,
 Help him estimate his cost for such projects, given an hourly rate, the number of days the project spans, and a monthly discount rate.
 The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be **rounded up** to the nearest whole number.
 
-
 ```javascript
 priceWithMonthlyDiscount(89, 230, 0.42);
 // => 97972
