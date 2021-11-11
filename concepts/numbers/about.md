@@ -28,6 +28,14 @@ There are two built-in objects that are useful when dealing with numbers:
 - [`Number`][built-in-number]: static properties for common / useful values, static methods for [type-checking][concept-type-checking] and [type-conversion][concept-type-conversion], instance methods for [type-conversion][concept-type-conversion] and [formatting numbers as strings][string-formatting].
 - [`Math`][built-in-math]: properties and methods for mathematical constants and functions, does **not** work with `BigInt`.
 
+`Math` also includes methods for rounding numbers.
+You can read more about the available rounding options in this [javascript.info article on rounding][ref-math-object-rounding].
+
+```javascript
+Math.floor(234.34); // => 234
+Math.ceil(234.34); // => 235
+```
+
 The `Number` built-in global `object` is _also_ a global `function` that can be used to convert _almost anything_ number-like to a `number`.
 It is less forgiving than _parsing_ a `string` to a `number`.
 
@@ -86,6 +94,7 @@ See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief expl
 [comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 [lexical-grammar]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals
 [string-formatting]: /tracks/javascript/concepts/string-formatting
+[ref-math-object-rounding]: https://javascript.info/number#rounding
 [concept-comparison]: /tracks/javascript/concepts/comparison
 [concept-type-checking]: /tracks/javascript/concepts/type-checking
 [concept-type-conversion]: /tracks/javascript/concepts/type-conversion
