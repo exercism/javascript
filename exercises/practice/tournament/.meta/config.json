@@ -1,0 +1,10 @@
+{
+  "blurb": "Tally the results of a small football competition.",
+  "authors": ["lpizzinidev"],
+  "contributors": [],
+  "files": {
+    "solution": ["tournament.js"],
+    "test": ["tournament.spec.js"],
+    "example": [".meta/proof.ci.js"]
+  }
+}

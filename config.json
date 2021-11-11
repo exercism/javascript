@@ -1665,6 +1665,15 @@
         "prerequisites": ["basics", "arrays", "classes", "for-loops", "maps"],
         "difficulty": 7,
         "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "e5e5363d-4e9a-478f-8b18-e578f3721ac5",
+        "practices": [],
+        "prerequisites": ["basics", "arrays", "classes", "for-loops", "maps"],
+        "difficulty": 3,
+        "topics": ["parsing", "strings"]
       }
     ]
   },
