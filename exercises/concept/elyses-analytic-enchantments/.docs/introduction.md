@@ -1,7 +1,8 @@
 # Introduction
 
 [Arrays][arrays-concept] have built-in [methods][mdn-array-methods] to analyse the contents of the array.
-Many of the built-in functions that analyse the contents of an array, take a function that returns true or false as an argument. Such a function is called [`predicate`][predicate_in_programming].
+These methods take a function that returns true or false as an argument.
+Such a function is called [`predicate`][predicate_in_programming].
 
 The built-in methods are meant to be used _instead of a `for` loop_ or the built-in `forEach` method:
 

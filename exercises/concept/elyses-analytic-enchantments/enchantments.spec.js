@@ -13,6 +13,9 @@ describe('getCardPosition', () => {
   test('when it is the first card', () => {
     expect(getCardPosition([1, 2, 3], 1)).toBe(0);
   });
+  test('when the card is not found', () => {
+    expect(getCardPosition([1, 2, 3], 4)).toBe(-1);
+  });
 });
 
 describe('doesStackIncludeCard', () => {
@@ -54,5 +57,8 @@ describe('getFirstOddCard', () => {
 describe('getFirstEvenCardPosition', () => {
   test('should return position of first even card', () => {
     expect(getFirstEvenCardPosition([2, 4, 1, 3])).toBe(0);
+  });
+  test('should return -1 when the card is not found', () => {
+    expect(getFirstEvenCardPosition([1, 3, 5])).toBe(-1);
   });
 });
