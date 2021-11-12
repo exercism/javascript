@@ -24,7 +24,7 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
 - `**`: The exponentiation operator is used to raise a number to a power.
 
   ```javascript
-  4 ** 3; // => 62
+  4 ** 3; // => 64
   4 ** 1 / 2; // => 2
   ```
 

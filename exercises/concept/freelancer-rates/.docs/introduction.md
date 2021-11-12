@@ -12,6 +12,15 @@ Many programming languages have specific numeric types to represent different ty
 If you require arbitrary precision or work with extremely large numbers, use the `bigint` type.
 Otherwise, the `number` type is likely the better option.
 
+### Rounding
+
+There is a built-in global object called `Math` that provides various [rounding functions][ref-math-object-rounding]. For example, you can round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whole numbers.
+
+```javascript
+Math.floor(234.34); // => 234
+Math.ceil(234.34); // => 235
+```
+
 ## Arithmetic Operators
 
 JavaScript provides 6 different operators to perform basic arithmetic operations on numbers.
@@ -36,7 +45,7 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
 - `**`: The exponentiation operator is used to raise a number to a power.
 
   ```javascript
-  4 ** 3; // => 62
+  4 ** 3; // => 64
   4 ** 1 / 2; // => 2
   ```
 
@@ -72,3 +81,4 @@ y %= 3; // y is now 1
 ```
 
 [mdn-operator-precedence]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
+[ref-math-object-rounding]: https://javascript.info/number#rounding
