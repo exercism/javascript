@@ -1,7 +1,7 @@
 # Introduction
 
-[Arrays][arrays-concept] have built-in [methods][mdn-array-methods] to analyse the contents of the array.
-These methods take a function that returns true or false as an argument.
+[Arrays][arrays-concept] have built-in methods to analyse the contents of the array.
+Most of these methods take a function that returns true or false as an argument.
 Such a function is called [`predicate`][predicate_in_programming].
 
 The built-in methods are meant to be used _instead of a `for` loop_ or the built-in `forEach` method:
@@ -26,7 +26,7 @@ numbers.indexOf('two');
 // => 1
 ```
 
-Some other helpful built-in [methods][mdn-array-methods] that are available are shown below.
+Some other helpful built-in methods that are available to analyze an array are shown below. See [MDN][mdn-array-methods] for a full list of array methods.
 
 ## `includes`
 
