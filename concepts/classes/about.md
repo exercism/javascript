@@ -4,15 +4,17 @@ JavaScript includes the capabilities for object-oriented programming ([OOP][wiki
 
 JavaScript on the other hand did not have classes at all before they were added to the language specification in 2015. And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
-To understand what that means and how JavaScript actually works, we will go back to the time without classes.
+To understand what that means and how JavaScript actually works, we will go back to the time when there were no classes.
 
 ## Prototype Syntax
 
-In OOP, you want to create objects from "templates" so that they include certain data and functionality. The data (keys in the object) are called _fields_ in the OOP context, the functionality (functions in the object) are called _methods_.
+In OOP, you want to create objects from "templates" (_classes_) so that they include certain data and functionality. The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
+
+Note that in JavaScript, a "method" is not a special entity, it is a key in an object that has a function as a value.
 
 ### Constructor Function
 
-In JavaScript, the template is facilitated by a regular function. Used in this context, it is called a _constructor function_ and the function name should start with a capital letter. Instances (objects) are derived from the template using the `new` keyword when invoking the constructor function.
+In JavaScript, the template (class) is facilitated by a regular function. Used in this context, it is called a _constructor function_ and the convention is that the function name should start with a capital letter. Instances (objects) are derived from the template using the `new` keyword when invoking the constructor function.
 
 ```javascript
 function Car() {
@@ -24,7 +26,9 @@ const yourCar = new Car();
 ```
 
 It is important to note that in JavaScript, the instances and the constructor function keep a relationship to each other even after the instances were created.
-Every object instance includes a hidden, internal object referred to as `[[prototype]]` in the language specification. It holds a reference to the value of the `prototype` key of the constructor function. Yes, you read that correctly, a JavaScript function can have key/value pairs because it is also an object behind the scenes. Nowadays `[[prototype]]` can be accessed via the key `__proto__` in many environments. It is important to not confuse the prototype of an instance (`[[prototype]]`/`__proto__`) with the `prototype` property of the constructor function.
+Every instance object includes a hidden, internal property referred to as `[[prototype]]` in the language specification. It holds a reference to the value of the `prototype` key of the constructor function. Yes, you read that correctly, a JavaScript function can have key/value pairs because it is also an object behind the scenes.
+
+Since 2015, `[[prototype]]` can be accessed via `Object.getPrototypeOf()`. Before that, it was accessible via the key `__proto__` in many environments. It is important to not confuse the prototype of an object (`[[prototype]]`) with the `prototype` property of the constructor function.
 
 ### Instance Fields
 
@@ -74,15 +78,26 @@ myCar.engineRunning;
 
 ### The Prototype Chain
 
-`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console) we would not find a property `startEngine` with a function as value directly inside the `myCar` object. So how does the code above even work?
+`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console) we would not find a property `startEngine` with a function as value directly inside the `myCar` object. So how does the code above even work then?
 
-The secret ingredient here is called the _prototype chain_.
+The secret here is called the _prototype chain_. When you try to access any property (field or method) of an object, JavaScript first checks whether the respective key can be found directly in the object itself. If not, it continues looking for the key in the object referenced by the `[[prototype]]` property of the original object. As mentioned before, in our example `[[prototype]]` points to the `prototype` property of the constructor function. That is where JavaScript would find the `startEngine` definition because we added it there.
 
-own property first
+The chain does not end there. The `[[prototype]]` property of `Car.prototype` (`myCar.[[prototype]].[[prototype]]`) references `Object.prototype` (the `prototype` property of the `Object` constructor function). It contains general methods for all JavaScript objects, e.g. `toString()`. In conclusion, you can call `myCar.toString()` and that will work because JavaScript searches for that method throughout the whole prototype chain. You can find a detailed example in the [MDN article "Inheritance and the prototype chain"][mdn-prototype-chain-example]
+
+Note that the prototype chain is only travelled when retrieving a value. Setting or deleting a property of an instance object only targets that instance.
+
+Besides this type of _inheritance_ along the prototype chain, JavaScript also supports inheritance between classes. This is covered in the [Concept Inheritance][concept-inheritance].
+
+### Dynamic Methods
+
+We learned that every instance keeps a reference to the `prototype` property of the constructor function. That means if you add an entry to that `prototype` object, that new entry (e.g. a new method) is immediately available to all instances.
 
 TODO continue here
 
-- prototype can change dynamically
+- Do not monkey patch
+- Only polyfill
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#summary_of_methods_for_extending_the_prototype_chain
 
 ## Class Syntax
 
@@ -94,3 +109,5 @@ Other
 - class fields/methods
 
 [wiki-oop]: https://en.wikipedia.org/wiki/Object-oriented_programming
+[mdn-prototype-chain-example]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#inheritance_with_the_prototype_chain
+[concept-inheritance]: /tracks/javascript/concepts/inheritance

@@ -1,22 +1,18 @@
 [
   {
     "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes",
-    "description": "..."
+    "description": "MDN: Object prototypes"
   },
   {
-    "url": "https://javascript.info/constructor-new",
-    "description": "..."
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain",
+    "description": "MDN: Inheritance and the prototype chain"
   },
   {
     "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes",
-    "description": "..."
+    "description": "MDN: ECMAScript 2015 Classes"
   },
   {
-    "url": "https://javascript.info/object-methods",
-    "description": "..."
-  },
-  {
-    "url": "https://javascript.info/function-prototype",
-    "description": "..."
+    "url": "https://javascript.info/prototypes",
+    "description": "javascript.info: Prototypes, inheritance"
   }
 ]
