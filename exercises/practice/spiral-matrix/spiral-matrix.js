@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const spiralMatrix = (num) => {
+export const spiralMatrix = () => {
   throw new Error('Remove this statement and implement this function');
 };
