@@ -28,7 +28,8 @@ Every object instance includes a hidden, internal object referred to as `[[proto
 
 ### Instance Fields
 
-Often, you want all the derived objects to include some fields and pass some initial values when the object is constructed. This is facilitated via the `this` keyword. Inside the constructor function, `this` references the new object that will be created via `new` and it is automatically returned from the function.
+Often, you want all the derived objects to include some fields and pass some initial values when the object is constructed. This is facilitated via the `this` keyword. Inside the constructor function, `this` represents the new object that will be created via `new`.
+`this` is automatically returned from the constructor function when it is called with `new`.
 
 That means we can add fields to the new instance by adding them to `this` in the constructor function.
 
@@ -46,30 +47,15 @@ myCar.engineRunning;
 // => false
 ```
 
-The syntax above the usual way of adding fields. In theory, instance fields that do not depend on the parameters of the constructor can also be added via the `prototype` entry of the constructor function.
-
-```javascript
-function Car(color, weight) {
-  this.color = color;
-  this.weight = weight;
-}
-
-Car.prototype.engineRunning = false;
-
-const myCar = new Car('red', '2mt');
-myCar.engineRunning;
-// => false
-```
-
 ### Instance Methods
 
-Just like the fields above, methods can also be added either in the constructor function by adding them to `this` or via the prototype. To keep the code readable, a common convention is to add all fields in the constructor function and all methods via the prototype.
-
-When defining the methods, you can access the fields of the object via `this`.
+Methods are added via the `prototype` property of the constructor function.
+When defining the methods, you can access the fields of the instance via `this`.
 
 ```javascript
 function Car() {
   this.engineRunning = false;
+  // ...
 }
 
 Car.prototype.startEngine = function () {
@@ -86,7 +72,13 @@ myCar.engineRunning;
 // => true
 ```
 
-### The Prototype Chain and Dynamic Methods
+### The Prototype Chain
+
+`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console) we would not find a property `startEngine` with a function as value directly inside the `myCar` object. So how does the code above even work?
+
+The secret ingredient here is called the _prototype chain_.
+
+own property first
 
 TODO continue here
 
