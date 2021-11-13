@@ -1656,6 +1656,15 @@
         "prerequisites": [],
         "difficulty": 8,
         "topics": ["recursion", "searching", "trees"]
+      },
+      {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "3a34cb49-546f-4aae-b49e-7d5b25db7ebb",
+        "practices": [],
+        "prerequisites": ["arrays", "classes", "for-loops", "maps"],
+        "difficulty": 7,
+        "topics": ["algorithms", "logic"]
       }
     ]
   },
