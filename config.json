@@ -1289,7 +1289,8 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": ["algorithms", "callbacks", "loops", "lists"]
+        "topics": ["algorithms", "callbacks", "loops", "lists"],
+        "status": "deprecated"
       },
       {
         "slug": "flatten-array",
