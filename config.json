@@ -1677,7 +1677,7 @@
         "name": "Tournament",
         "uuid": "e5e5363d-4e9a-478f-8b18-e578f3721ac5",
         "practices": [],
-        "prerequisites": ["basics", "arrays", "classes", "for-loops", "maps"],
+        "prerequisites": ["arrays", "strings", "for-loops", "objects"],
         "difficulty": 3,
         "topics": ["parsing", "strings"]
       }
