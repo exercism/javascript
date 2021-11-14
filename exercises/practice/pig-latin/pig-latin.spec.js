@@ -97,9 +97,7 @@ describe('Pig Latin', () => {
 
   describe('phrases are translated', () => {
     xtest('a whole phrase', () => {
-      expect(translate('quick fast run')).toEqual(
-        'ickquay astfay unray'
-      );
+      expect(translate('quick fast run')).toEqual('ickquay astfay unray');
     });
   });
 });
