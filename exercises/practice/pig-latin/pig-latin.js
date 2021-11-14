@@ -3,8 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-export class translator {
-  static translate() {
-    throw new Error('Remove this statement and implement this function');
-  }
-}
+export const translate = () => {
+  throw new Error('Remove this statement and implement this function');
+};
+
