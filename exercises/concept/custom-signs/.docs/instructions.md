@@ -29,7 +29,7 @@ graduationFor('Hannah', 2022);
 // => "Congratulations Hannah!\nClass of 2022"
 ```
 
-## 5. Compute the cost of a sign
+## 4. Compute the cost of a sign
 
 Implement the function `costOf(sign, currency)` which takes a string that holds the contents of the sign and a string that represents the currency.
 The sign has a base price of 20 in the given currency. Additionally each letter costs 2. (Whitespaces are included in the calculation.)
