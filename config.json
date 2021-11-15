@@ -586,7 +586,7 @@
         "name": "Meetup",
         "uuid": "98617798-b49d-4d43-9f65-7131ee73d626",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["dates", "array-analysis", "conditionals-switch"],
         "difficulty": 7,
         "topics": [
           "conditionals",
@@ -611,7 +611,7 @@
         "name": "Hamming",
         "uuid": "d773c4ef-c09e-40e4-a7fe-01456cb4a12a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["comparison", "errors", "for-loops"],
         "difficulty": 2,
         "topics": ["conditionals", "loops", "equality", "strings"]
       },
@@ -620,7 +620,7 @@
         "name": "Raindrops",
         "uuid": "f77ac2d1-cf3a-497d-bf04-b484a5a9cb37",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arithmetic-operators", "strings", "conditionals"],
         "difficulty": 2,
         "topics": ["conditionals", "integers", "strings", "transforming"]
       },
@@ -629,7 +629,12 @@
         "name": "Nucleotide Count",
         "uuid": "be6f3ab3-1593-4c2d-8a35-5f39c1d5c91f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "objects",
+          "template-strings",
+          "array-loops",
+          "errors"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
