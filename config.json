@@ -1682,13 +1682,13 @@
         "topics": ["parsing", "strings"]
       },
       {
-        "slug": "rail-fence-cipher",
-        "name": "Rail Fence Cipher",
-        "uuid": "5f0352e5-0988-434a-82c7-f6810d41d63a",
+        "slug": "rest-api",
+        "name": "Rest API",
+        "uuid": "75b4816d-a5d7-4840-92d6-7249c9e8beeb",
         "practices": [],
-        "prerequisites": ["arrays", "strings", "for-loops", "conditionals"],
-        "difficulty": 3,
-        "topics": ["parsing", "strings", "iteration"]
+        "prerequisites": ["arrays", "classes", "for-loops", "maps"],
+        "difficulty": 6,
+        "topics": ["algorithms", "logic"]
       }
     ]
   },
