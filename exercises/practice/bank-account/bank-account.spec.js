@@ -117,7 +117,8 @@ describe('Bank Account', () => {
   test('changing balance directly throws error', () => {
     const account = new BankAccount();
     account.open();
-    expect(() => {account.balance = 100}).toThrow(Error);
+    expect(() => {
+      account.balance = 100;
+    }).toThrow(Error);
   });
-
 });
