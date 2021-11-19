@@ -55,6 +55,73 @@ There are three types of maximum (and minimum / maximum negative) values for num
 
 Because of how numbers in JavaScript are implemented, **not** every number between `Number.MIN_VALUE` and `Number.MAX_VALUE` can be represented.
 However, _every_ number between `Number.MIN_SAFE_INTEGER - 1` and `Number.MAX_SAFE_INTEGER + 1` **can** be represented.
+## Infinity - Positive and Negative 
+
+The default value of [infinity][infinity] is greater than any other number, by default it's set to `Number.POSITIVE_INFINITY`.
+Here you can see how `Infinity` can be used : 
+```javascript
+console.log(Infinity          ); /* Infinity */
+console.log(Infinity + 1      ); /* Infinity */
+console.log(Math.pow(10, 1000)); /* Infinity */
+console.log(Math.log(0)       ); /* -Infinity */
+console.log(1 / Infinity      ); /* 0 */
+console.log(1 / 0             ); /* Infinity */
+```
+Beware that [positive-infinity][positive-infinity] behaves differently than the mathematical infinity. So you may encounter some unexpected behaviors like this:
+- `POSITIVE_INFINITY`, divided by either `NEGATIVE_INFINITY` or `POSITIVE_INFINITY`, is `NaN`.
+- `POSITIVE_INFINITY`, divided by any negative value except `NEGATIVE_INFINITY`, is `NEGATIVE_INFINITY`.
+- Zero multiplied by `POSITIVE_INFINITY` is `NaN`.
+
+[negative-infinity][negative-infinity] is the same as `POSITIVE_INFINITY` but with a negative sign :
+- `NEGATIVE_INFINITY`, divided by either `NEGATIVE_INFINITY` or `POSITIVE_INFINITY`, is `NaN`.
+- `NEGATIVE_INFINITY`, divided by any negative value except `NEGATIVE_INFINITY`, is `POSITIVE_INFINITY`.
+- Any positive value, including `POSITIVE_INFINITY`, multiplied by `NEGATIVE_INFINITY` is `NEGATIVE_INFINITY`.
+
+
+## NaN or Not-a-Number
+
+The [NaN][NaN] is a variable in global scope. There are five different types of operations returning `NaN`:
+
+-  Number cannot be parsed (e.g. parseInt("blabla") or Number(undefined))
+-  Math operation where the result is not a real number (e.g. Math.sqrt(-1))
+-  Operand of an argument is NaN (e.g. 7 ** NaN)
+-  Indeterminate form (e.g. 0 * Infinity, or undefined + undefined)
+-  Any operation that involves a string and is not an addition operation (e.g. "foo" / 3)
+
+## Exponentiation 
+
+You can put your [exponentiation][exponentiation] by using `**`.
+Here are some examples of exponentiation:
+```javascript
+2 ** 3   // 8
+3 ** 2   // 9
+3 ** 2.5 // 15.588457268119896
+10 ** -1 // 0.1
+NaN ** 2 // NaN
+```
+The exponentiation operator is right-associative: `a ** b ** c` is equal to `a ** (b ** c)`.
+Beware that JavaScript is different than most languages with exponentiation, it is impossible to write an ambiguous exponentiation expression. That is, you cannot put a unary operator `(+/-/~/!/delete/void/typeof)` immediately before the base number, doing so will cause a `SyntaxError`.
+In other words this : `-2 ** 2` will cause an error, but this is correct `-(2**2)`.
+Also do not use `^` like in every other language, as it is reserved for `bitwise logical XOR operator`!
+
+## Underscore in numbers
+
+An [underscore][underscore] can be used in numbers to help readability. However you can place underscores only between digits, you cannot place underscores in the following places:
+- At the beginning or end of a number
+- Adjacent to a decimal point in a floating point literal
+- Prior to an F or L suffix 
+- In positions where a string of digits is expected
+
+Here are some examples on what you can and can not do :
+```javascript
+int x4 = 5_______2;        // OK (decimal literal)
+int x2 = 5_2;              // OK (decimal literal)
+float pi1 = 3_.1415F;      // Invalid; cannot put underscores adjacent to a decimal point
+int x11 = 052_;            // Invalid; cannot put underscores at the end of a number
+int x5 = 0_x52;            // Invalid; cannot put underscores in the 0x radix prefix
+int x6 = 0x_52;            // Invalid; cannot put underscores at the beginning of a number
+long socialSecurityNumber1 = 999_99_9999_L;         // Invalid; cannot put underscores prior to an L suffix
+```
 
 ## Comparison
 
@@ -88,7 +155,12 @@ Therefore, in JavaScript:
 ```
 
 See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in depth explanation.
-
+[underscore]: https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html
+[exponentiation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation
+[infinity]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
+[negative-infinity]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
+[positive-infinity]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
+[NaN]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 [built-in-number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 [comparison]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
