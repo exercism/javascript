@@ -6,7 +6,7 @@ so you decide to use a function closure to create reusable transformation for `{
 
 ## 1. Translate the coordinates
 
-Implement the `translate2d` function which returns a function making use of a closure to perform a repeatable 2d translation of a coordinate pair.
+Implement the `translate2d` function that returns a function making use of a closure to perform a repeatable 2d translation of a coordinate pair.
 
 ```javascript
 const moveCoordinatesRight2Px = translate2d(2, 0);
@@ -16,7 +16,7 @@ const result = moveCoordinatesRight2Px(4, 8);
 
 ## 2. Scale the coordinates
 
-Implement the `scale2d` function which returns a function making use of a closure to perform a repeatable 2d scale of a coordinate pair.
+Implement the `scale2d` function that returns a function making use of a closure to perform a repeatable 2d scale of a coordinate pair.
 
 > For the purposes of this exercise, assume only positive scaling values.
 
