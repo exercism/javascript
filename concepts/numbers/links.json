@@ -14,5 +14,28 @@
   {
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness",
     "description": "MDN: Equality comparisons and sameness"
+  },
+  {
+    "url": "https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html",
+    "description": "Oracle: Underscore"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation",
+    "description": "MDN: Exponentiation"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "description": "MDN: Infinity"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY",
+    "description": "MDN: Positive infinity"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY",
+    "description": "MDN: Negative infinity"
+  },{
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "description": "MDN: Not-A-Number (Built-in object"
   }
 ]
