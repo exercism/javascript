@@ -57,7 +57,7 @@ Because of how numbers in JavaScript are implemented, **not** every number betwe
 However, _every_ number between `Number.MIN_SAFE_INTEGER - 1` and `Number.MAX_SAFE_INTEGER + 1` **can** be represented.
 ## Infinity - Positive and Negative 
 
-The default value of [infinity][infinity] is greater than any other number, by default it's set to `Number.POSITIVE_INFINITY`.
+The default value of [`infinity`][infinity] is greater than any other number, by default it's set to `Number.POSITIVE_INFINITY`.
 Here you can see how `Infinity` can be used : 
 ```javascript
 console.log(Infinity          ); /* Infinity */
@@ -67,12 +67,12 @@ console.log(Math.log(0)       ); /* -Infinity */
 console.log(1 / Infinity      ); /* 0 */
 console.log(1 / 0             ); /* Infinity */
 ```
-Beware that [positive-infinity][positive-infinity] behaves differently than the mathematical infinity. So you may encounter some unexpected behaviors like this:
+Beware that [`positive-infinity`][positive-infinity] behaves differently than the mathematical infinity. So you may encounter some unexpected behaviors like this:
 - `POSITIVE_INFINITY`, divided by either `NEGATIVE_INFINITY` or `POSITIVE_INFINITY`, is `NaN`.
 - `POSITIVE_INFINITY`, divided by any negative value except `NEGATIVE_INFINITY`, is `NEGATIVE_INFINITY`.
 - Zero multiplied by `POSITIVE_INFINITY` is `NaN`.
 
-[negative-infinity][negative-infinity] is the same as `POSITIVE_INFINITY` but with a negative sign :
+[`negative-infinity`][negative-infinity] is the same as `POSITIVE_INFINITY` but with a negative sign :
 - `NEGATIVE_INFINITY`, divided by either `NEGATIVE_INFINITY` or `POSITIVE_INFINITY`, is `NaN`.
 - `NEGATIVE_INFINITY`, divided by any negative value except `NEGATIVE_INFINITY`, is `POSITIVE_INFINITY`.
 - Any positive value, including `POSITIVE_INFINITY`, multiplied by `NEGATIVE_INFINITY` is `NEGATIVE_INFINITY`.
@@ -80,7 +80,7 @@ Beware that [positive-infinity][positive-infinity] behaves differently than the 
 
 ## NaN or Not-a-Number
 
-The [NaN][NaN] is a variable in global scope. There are five different types of operations returning `NaN`:
+The [`NaN`][NaN] is a variable in global scope. There are five different types of operations returning `NaN`:
 
 -  Number cannot be parsed (e.g. parseInt("blabla") or Number(undefined))
 -  Math operation where the result is not a real number (e.g. Math.sqrt(-1))
@@ -90,7 +90,7 @@ The [NaN][NaN] is a variable in global scope. There are five different types of 
 
 ## Exponentiation 
 
-You can put your [exponentiation][exponentiation] by using `**`.
+You can put your [`exponentiation`][exponentiation] by using `**`.
 Here are some examples of exponentiation:
 ```javascript
 2 ** 3   // 8
@@ -106,7 +106,7 @@ Also do not use `^` like in every other language, as it is reserved for `bitwise
 
 ## Underscore in numbers
 
-An [underscore][underscore] can be used in numbers to help readability. However you can place underscores only between digits, you cannot place underscores in the following places:
+An [`underscore`][underscore] can be used in numbers to help readability. However you can place underscores only between digits, you cannot place underscores in the following places:
 - At the beginning or end of a number
 - Adjacent to a decimal point in a floating point literal
 - Prior to an F or L suffix 
