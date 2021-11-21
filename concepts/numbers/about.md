@@ -106,21 +106,23 @@ Also do not use `^` like in every other language, as it is reserved for `bitwise
 
 ## Underscore in numbers
 
-An [`underscore`][underscore] can be used in numbers to help readability. However you can place underscores only between digits, you cannot place underscores in the following places:
-- At the beginning or end of a number
-- Adjacent to a decimal point in a floating point literal
-- Prior to an F or L suffix 
-- In positions where a string of digits is expected
+An [`underscore`][underscore] can be used in numbers to help readability. However you can place underscores only between digits, you cannot place underscores at the beginning or end of a number:
 
-Here are some examples on what you can and can not do :
 ```javascript
-int x4 = 5_______2;        // OK (decimal literal)
-int x2 = 5_2;              // OK (decimal literal)
-float pi1 = 3_.1415F;      // Invalid; cannot put underscores adjacent to a decimal point
-int x11 = 052_;            // Invalid; cannot put underscores at the end of a number
-int x5 = 0_x52;            // Invalid; cannot put underscores in the 0x radix prefix
-int x6 = 0x_52;            // Invalid; cannot put underscores at the beginning of a number
-long socialSecurityNumber1 = 999_99_9999_L;         // Invalid; cannot put underscores prior to an L suffix
+let amount = 120_201_123.05; // 120,201,123.05
+let expense = 123_4500; // 123.45
+let fee = 12345_00; // 12,345
+// BigInt
+const max = 9_223_372_036_854_775_807n;
+
+// binary
+let nibbles = 0b1011_0101_0101;
+
+// octal
+let val = 0o1234_5670;
+
+// hex
+let message = 0xD0_E0_F0;
 ```
 
 ## Comparison
@@ -155,7 +157,7 @@ Therefore, in JavaScript:
 ```
 
 See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in depth explanation.
-[underscore]: https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html
+[underscore]: https://www.javascripttutorial.net/es-next/javascript-numeric-separator/
 [exponentiation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation
 [infinity]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 [negative-infinity]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
