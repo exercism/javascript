@@ -8,11 +8,11 @@
     "description": "MDN: Inheritance and the prototype chain"
   },
   {
-    "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes",
-    "description": "MDN: ECMAScript 2015 Classes"
-  },
-  {
     "url": "https://javascript.info/prototypes",
     "description": "javascript.info: Prototypes, inheritance"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+    "description": "MDN: Classes"
   }
 ]

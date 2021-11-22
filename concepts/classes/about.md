@@ -84,30 +84,127 @@ The secret here is called the _prototype chain_. When you try to access any prop
 
 The chain does not end there. The `[[prototype]]` property of `Car.prototype` (`myCar.[[prototype]].[[prototype]]`) references `Object.prototype` (the `prototype` property of the `Object` constructor function). It contains general methods for all JavaScript objects, e.g. `toString()`. In conclusion, you can call `myCar.toString()` and that will work because JavaScript searches for that method throughout the whole prototype chain. You can find a detailed example in the [MDN article "Inheritance and the prototype chain"][mdn-prototype-chain-example]
 
-Note that the prototype chain is only travelled when retrieving a value. Setting or deleting a property of an instance object only targets that instance.
-
-Besides this type of _inheritance_ along the prototype chain, JavaScript also supports inheritance between classes. This is covered in the [Concept Inheritance][concept-inheritance].
+Note that the prototype chain is only travelled when retrieving a value. Setting or deleting a property of an instance object only targets that specific instance.
 
 ### Dynamic Methods
 
-We learned that every instance keeps a reference to the `prototype` property of the constructor function. That means if you add an entry to that `prototype` object, that new entry (e.g. a new method) is immediately available to all instances.
+We learned that every instance keeps a reference to the `prototype` property of the constructor function. That means if you add an entry to that `prototype` object, that new entry (e.g. a new method) is immediately available to all instances created from that constructor function.
 
-TODO continue here
+```javascript
+function Car() {
+  this.engineRunning = false;
+}
 
-- Do not monkey patch
-- Only polyfill
+const myCar = new Car();
+// Calling myCar.startEngine() here would result in "TypeError:
+// myCar.startEngine is not a function".
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#summary_of_methods_for_extending_the_prototype_chain
+Car.prototype.startEngine = function () {
+  this.engineRunning = true;
+};
+
+myCar.startEngine();
+// This works, even though myCar was created before the method
+// was added.
+```
+
+In theory, dynamic methods can be used to extend the functionality of built-in objects like `Object` or `Array` by modifying their prototype. This is called _monkey patching_. Because this change affects the whole application, it should be avoided to prevent unintended side effects. The only reasonable use case is to provide a [polyfill][wiki-polyfill] for a missing method in older environments.
 
 ## Class Syntax
 
-- same as above in new syntax
-- public/private
+Nowadays JavaScript supports defining classes with a `class` keyword. This was added to the language specification in 2015. On the one hand, this provides syntactic sugar that makes classes easier to read/write. The new syntax is more similar to how classes are written in languages like C++ or Java. Developers switching over from those languages have an easier time to adapt. On the other hand, the class syntax paved the way for new language features that are not available in the prototype syntax.
 
-Other
+### Class Declarations
 
-- class fields/methods
+With the new syntax, classes are defined with the `class` keyword followed by the name of the class and the class body in curly brackets. The body contains the definition of the constructor function (a special method with the name `constructor`). This function works just like the constructor function in the prototype syntax. The class body also contains all method definitions.
+
+```javascript
+class Car {
+  constructor(color, weight) {
+    this.color = color;
+    this.weight = weight;
+    this.engineRunning = false;
+  }
+
+  startEngine() {
+    this.engineRunning = true;
+  }
+
+  addGas(litre) {
+    // ...
+  }
+}
+
+const myCar = new Car();
+myCar.startEngine();
+myCar.engineRunning;
+// => true
+```
+
+Similar to function declarations and function expressions, JavaScript also supports [class expressions][mdn-class-expression] in addition to the _class declaration_ shown above.
+
+Keep in mind that behind the scenes, JavaScript is still a prototype-based language. All the mechanisms we learned about in the "Prototype syntax" section above still apply.
+
+### Private Fields, Getters and Setters
+
+By default, all instance fields are public in JavaScript. They can be directly accessed and assigned to.
+
+Adding actual private fields to the language specification is work in progress, see the [proposal document][proposal-private-fields] for details.
+
+In the meantime, you can make use of the established convention that fields and methods that start with an underscore are considered private. Those properties should never be accessed directly from outside the class.
+
+Private fields are often accompanied by [getters][mdn-get] and [setters][mdn-set]. With the keywords `get` and `set` you can define functions that are executed when a property is accessed or assigned to.
+
+```javascript
+class Car {
+  constructor() {
+    this._milage = 0;
+  }
+
+  get milage() {
+    return this._milage;
+  }
+
+  set milage(value) {
+    throw new Error(`Milage cannot be manipulated, ${value} is ignored.`);
+    // Just an example, usually you would not provide a setter in this case.
+  }
+}
+
+const myCar = new Car();
+myCar.milage;
+// => 0
+myCar.milage = 100;
+// => Error: Milage cannot be manipulated, 100 is ignored.
+```
+
+### Class Fields/Methods
+
+In OOP, you sometimes want to provide utility fields or methods that do not depend on the specific instance. Instead, they are defined for the class itself. This can be achieved with the `static` keyword.
+
+```javascript
+class Car {
+  static type = 'vehicle';
+
+  static isType(targetType) {
+    return targetType === 'vehicle';
+  }
+}
+
+Car.isType('road sign');
+// => false
+```
+
+### Class-Based Inheritance
+
+Besides the type of [inheritance][wiki-inheritance] along the prototype chain we saw earlier, you can also represent inheritance between classes in JavaScript. This is covered in the [Concept Inheritance][concept-inheritance].
 
 [wiki-oop]: https://en.wikipedia.org/wiki/Object-oriented_programming
 [mdn-prototype-chain-example]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#inheritance_with_the_prototype_chain
 [concept-inheritance]: /tracks/javascript/concepts/inheritance
+[mdn-class-expression]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Class_expressions
+[wiki-inheritance]: https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)
+[proposal-private-fields]: https://github.com/tc39/proposal-private-methods#private-methods-and-fields
+[mdn-get]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+[mdn-set]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+[wiki-polyfill]: https://en.wikipedia.org/wiki/Polyfill_(programming)
