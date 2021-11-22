@@ -85,8 +85,8 @@ describe('freelancer rates', () => {
       });
 
       test('for 155 days with 25.47% discount', () => {
-        const actual = priceWithMonthlyDiscount(29.654321, 155, 0.3547);
-        const expected = 23813;
+        const actual = priceWithMonthlyDiscount(29.654321, 155, 0.2547);
+        const expected = 27467;
         expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
       });
     });
