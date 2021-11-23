@@ -32,7 +32,7 @@ describe('Rest API', () => {
           },
         ],
       });
-      expect(restAPI.get('/users', { users: ['Bob'] })).toEqual({
+      expect(restAPI.get('/users?users=Bob')).toEqual({
         users: [
           {
             name: 'Bob',

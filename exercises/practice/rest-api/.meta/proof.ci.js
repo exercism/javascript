@@ -3,18 +3,28 @@ export class RestAPI {
     this.database = database;
   }
 
-  get(url, payload = undefined) {
-    switch (url) {
-      case '/users':
-        if (payload === undefined) {
+  get(url) {
+    const [path, params] = url.split('?');
+    switch (path) {
+      case '/users': {
+        if (params === undefined || params === '') {
           return { users: this.database.users };
         }
 
-        return {
-          users: this.database.users.filter((user) =>
-            payload.users.includes(user.name)
-          ),
-        };
+        const parameterList = params.split('&');
+        for (const pam of parameterList) {
+          const [pName, pData] = pam.split('=');
+          if (pName === 'users') {
+            return {
+              users: this.database.users.filter((user) =>
+                pData.includes(user.name)
+              ),
+            };
+          }
+        }
+
+        return { users: this.database.users };
+      }
       default:
         break;
     }
@@ -82,7 +92,7 @@ export class RestAPI {
           }
         }
 
-        return this.get('/users', { users: [lender, borrower] });
+        return this.get(`/users?users=${lender},${borrower}`);
       }
       default:
         break;
