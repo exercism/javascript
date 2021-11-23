@@ -1,0 +1,12 @@
+{
+  "blurb": "Implement encoding and decoding for the rail fence cipher.",
+  "authors": ["lpizzinidev"],
+  "contributors": [],
+  "files": {
+    "solution": ["rail-fence-cipher.js"],
+    "test": ["rail-fence-cipher.spec.js"],
+    "example": [".meta/proof.ci.js"]
+  },
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Transposition_cipher#Rail_Fence_cipher"
+}
