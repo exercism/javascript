@@ -1,6 +1,6 @@
 # Introduction
 
-A function allows to group code into a reusable unit.
+A function allows for grouping of code into a reusable unit.
 There are multiple ways to define functions in JavaScript.
 Here we will look at _function declarations_ and _function expressions_..
 Other possibilities like [arrow functions][concept-arrow-functions] will be covered in other concepts.
@@ -95,7 +95,7 @@ function divide(a, b) {
 ## Function Expression
 
 A function declaration is a standalone statement.
-But sometimes it is helpful to define a function as part of another expression, e.g., in an assignment, as a function parameter ([callback][concept-callbacks]) or as value in an [object][concept-objects].
+But sometimes it is helpful to define a function as part of another expression, e.g. in an assignment, as a function parameter ([callback][concept-callbacks]) or as value in an [object][concept-objects].
 This can be done with a function expression.
 It has the same syntax as a function declaration, only that the function name can be omitted to create an _anonymous function_.
 
