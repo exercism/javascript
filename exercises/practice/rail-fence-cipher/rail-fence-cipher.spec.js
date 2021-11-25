@@ -14,7 +14,7 @@ describe('Rail Fence Cipher', () => {
       const fence = encode('EXERCISES', 4);
       expect(fence).toEqual('ESXIEECSR');
     });
-  })
+  });
   describe('decode', () => {
     test('decode with three rails', () => {
       const fence = decode('TEITELHDVLSNHDTISEIIEA', 3);
@@ -25,8 +25,13 @@ describe('Rail Fence Cipher', () => {
       expect(fence).toEqual('EXERCISMISAWESOME');
     });
     test('decode with six rails', () => {
-      const fence = decode('133714114238148966225439541018335470986172518171757571896261', 6);
-      expect(fence).toEqual('ESXIE112358132134558914423337761098715972584418167651094617711286ECSR');
+      const fence = decode(
+        '133714114238148966225439541018335470986172518171757571896261',
+        6
+      );
+      expect(fence).toEqual(
+        '112358132134558914423337761098715972584418167651094617711286'
+      );
     });
-  })
+  });
 });
