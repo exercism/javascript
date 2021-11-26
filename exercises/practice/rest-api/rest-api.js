@@ -8,11 +8,11 @@ export class RestAPI {
     throw new Error('Remove this statement and implement this function');
   }
 
-  get() {
+  get(url) {
     throw new Error('Remove this statement and implement this function');
   }
 
-  post() {
+  post(url, payload) {
     throw new Error('Remove this statement and implement this function');
   }
 }
