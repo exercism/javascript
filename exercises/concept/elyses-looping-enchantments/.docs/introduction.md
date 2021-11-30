@@ -40,11 +40,11 @@ for (const number of numbers) {
 // => 23
 ```
 
-Just like in regular `for` loops, you can use `continue` stop the current iteration and `break` to stop the execution of the loop entirely.
+Just like in regular `for` loops, you can use `continue` to stop the current iteration and `break` to stop the execution of the loop entirely.
 
 ## The `forEach` Method
 
-Every array includes a `forEach` method that can be used to loop over the elements in the aray.
+Every array includes a `forEach` method that can be used to loop over the elements in the array.
 
 `forEach` accepts a [callback][concept-callbacks] as a parameter.
 The callback function is called once for each element in the array.
