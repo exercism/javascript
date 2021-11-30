@@ -25,13 +25,12 @@ describe('Rail Fence Cipher', () => {
       expect(fence).toEqual('EXERCISMISAWESOME');
     });
     test('decode with six rails', () => {
-      const fence = decode(
-        '133714114238148966225439541018335470986172518171757571896261',
-        6
-      );
-      expect(fence).toEqual(
-        '112358132134558914423337761098715972584418167651094617711286'
-      );
+      const encodedString =
+        '133714114238148966225439541018335470986172518171757571896261';
+      const fence = decode(encodedString, 6);
+      const expectedString =
+        '112358132134558914423337761098715972584418167651094617711286';
+      expect(fence).toEqual(expectedString);
     });
   });
 });
