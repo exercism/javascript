@@ -9,7 +9,10 @@ describe('Rest API', () => {
     test('add user', () => {
       const restAPI = new RestAPI({ users: [] });
       expect(restAPI.post('/add', { user: 'Adam' })).toEqual({
-        name: 'Adam', owes: {}, owed_by: {}, balance: 0,
+        name: 'Adam',
+        owes: {},
+        owed_by: {},
+        balance: 0,
       });
     });
     test('get single user', () => {
@@ -63,7 +66,7 @@ describe('Rest API', () => {
       const payload = { lender: 'Bob', borrower: 'Adam', amount: 3 };
       const expectedUsers = [
         { name: 'Adam', owes: { Bob: 3 }, owed_by: {}, balance: -3 },
-        { name: 'Bob', owes: { Chuck: 3 }, owed_by: { Adam: 3 }, balance: 0, },
+        { name: 'Bob', owes: { Chuck: 3 }, owed_by: { Adam: 3 }, balance: 0 },
       ];
       expect(restAPI.post('/iou', payload)).toEqual({ users: expectedUsers });
     });
