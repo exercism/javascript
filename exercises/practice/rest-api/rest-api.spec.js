@@ -6,6 +6,7 @@ describe('Rest API', () => {
       const restAPI = new RestAPI({ users: [] });
       expect(restAPI.get('/users')).toEqual({ users: [] });
     });
+
     test('add user', () => {
       const restAPI = new RestAPI({ users: [] });
       expect(restAPI.post('/add', { user: 'Adam' })).toEqual({
@@ -15,6 +16,7 @@ describe('Rest API', () => {
         balance: 0,
       });
     });
+
     test('get single user', () => {
       const seedUsers = [
         { name: 'Adam', owes: {}, owed_by: {}, balance: 0 },
@@ -42,6 +44,7 @@ describe('Rest API', () => {
       ];
       expect(restAPI.post('/iou', payload)).toEqual({ users: expectedUsers });
     });
+
     test('borrower has negative balance', () => {
       const seedUsers = [
         { name: 'Adam', owes: {}, owed_by: {}, balance: 0 },
@@ -56,6 +59,7 @@ describe('Rest API', () => {
       ];
       expect(restAPI.post('/iou', payload)).toEqual({ users: expectedUsers });
     });
+
     test('lender has negative balance', () => {
       const seedUsers = [
         { name: 'Adam', owes: {}, owed_by: {}, balance: 0 },
@@ -70,6 +74,7 @@ describe('Rest API', () => {
       ];
       expect(restAPI.post('/iou', payload)).toEqual({ users: expectedUsers });
     });
+
     test('lender owes borrower', () => {
       const seedUsers = [
         { name: 'Adam', owes: { Bob: 3 }, owed_by: {}, balance: -3 },
@@ -83,6 +88,7 @@ describe('Rest API', () => {
       ];
       expect(restAPI.post('/iou', payload)).toEqual({ users: expectedUsers });
     });
+
     test('lender owes borrower less than new loan', () => {
       const seedUsers = [
         { name: 'Adam', owes: { Bob: 3 }, owed_by: {}, balance: -3 },
@@ -96,6 +102,7 @@ describe('Rest API', () => {
       ];
       expect(restAPI.post('/iou', payload)).toEqual({ users: expectedUsers });
     });
+
     test('lender owes borrower same as new loan', () => {
       const seedUsers = [
         { name: 'Adam', owes: { Bob: 3 }, owed_by: {}, balance: -3 },
