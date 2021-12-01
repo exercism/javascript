@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout code'
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
       - name: Use Node.js LTS (16.x)
-        uses: actions/setup-node@270253e841af726300e85d718a5f606959b2903c
+        uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458
         with:
           node-version: '16'
       - name: Install project development dependencies
