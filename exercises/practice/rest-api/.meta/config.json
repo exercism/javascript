@@ -1,0 +1,10 @@
+{
+  "blurb": "Implement a RESTful API for tracking IOUs.",
+  "authors": ["lpizzinidev"],
+  "contributors": [],
+  "files": {
+    "solution": ["rest-api.js"],
+    "test": ["rest-api.spec.js"],
+    "example": [".meta/proof.ci.js"]
+  }
+}

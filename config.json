@@ -1689,6 +1689,15 @@
         "prerequisites": ["arrays", "strings", "for-loops", "conditionals"],
         "difficulty": 3,
         "topics": ["parsing", "strings", "iteration"]
+      },
+      {
+        "slug": "rest-api",
+        "name": "Rest API",
+        "uuid": "75b4816d-a5d7-4840-92d6-7249c9e8beeb",
+        "practices": [],
+        "prerequisites": ["arrays", "classes", "array-loops", "objects"],
+        "difficulty": 6,
+        "topics": ["algorithms", "logic"]
       }
     ]
   },
