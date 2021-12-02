@@ -4,11 +4,11 @@ In this exercise you'll be providing a `TranslationService` where paid members h
 
 You have found an out-of-space translation API that is able to fulfill any translation _request_ in a reasonable amount of time, and you want to capitalize on this.
 
-## The API interface
+**The API interface**
 
 The API has a very minimal interface:
 
-### Fetching a translation
+**Fetching a translation**
 
 `api.fetch(text)` fetches the translation of `text`, returning two values:
 
@@ -23,7 +23,7 @@ api.fetch('jIyaj');
 // => Promise({ resolved: 'I understand' })
 ```
 
-### Requesting a translation
+**Requesting a translation**
 
 Some translations are known in the future.
 The API knows about these.
@@ -39,7 +39,7 @@ api.request('majQa’');
 // => Promise({ resolved: undefined })
 ```
 
-### ⚠ Warning! ⚠
+**⚠ Warning! ⚠**
 
 ```exercism/caution
 The API works its magic by teleporting in the various translators when a `request` comes in.
@@ -117,7 +117,7 @@ service.premium("'arlogh Qoylu'pu'?", 40);
 // => Promise<...> resolves "What time is it?"
 ```
 
-## N.B.
+**N.B.**
 
 ```exercism/note
 The correct translation of `'arlogh Qoylu'pu'?` is **How many times has it been heard?**.
