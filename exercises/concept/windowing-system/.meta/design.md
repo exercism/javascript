@@ -2,12 +2,12 @@
 
 ## Learning objectives
 
-- Simple intro to OOP (e.g. "building objects that encapsulate values, called instance properties, and functions that work on these values, these functions are called methods") and why it is useful (structure code, re-use etc.)
+- Reference to OOP
 - Javascript is a "prototype-based language", what does that mean?
-- How to a constructor function to create a "template object" with properties and methods using prototype syntax
+- How to use a constructor function to create a "template object" with fields and methods using prototype syntax
 - What does `this` mean/do
-- What is an instance and how to create one with `new`
-- How to write the same code as above with class syntax (explain what that means)
+- How to create a new instance with `new`
+- How to do the same as above with class syntax
 
 ## Out of Scope
 
@@ -24,13 +24,14 @@ The Concept this exercise unlocks is:
 
 ## Prerequisites
 
-- `functions` as they are the basis for classes
+- `functions` as they are the basis for classes and default parameters are needed in the exercise
 - `objects` as they are the basis for instances
 
 ## Notes
 
-The exercise is ported from [Windowing System Exercise in the Swift track][swift-windowing-system]. Some tasks where omitted to shorten the exercise.
-FIXME review
+The exercise is ported from [Windowing System Exercise in the Swift track][swift-windowing-system].
+Task 6 was ommited because it did not add much additional value in the JavaScript version.
+Task 7 was modified a bit so it is easier to test.
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
 [swift-windowing-system]: https://github.com/exercism/swift/blob/main/exercises/concept/windowing-system/.docs/instructions.md
