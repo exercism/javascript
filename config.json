@@ -586,7 +586,7 @@
         "name": "Meetup",
         "uuid": "98617798-b49d-4d43-9f65-7131ee73d626",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["dates", "array-analysis", "conditionals-switch"],
         "difficulty": 7,
         "topics": [
           "conditionals",
@@ -611,7 +611,7 @@
         "name": "Hamming",
         "uuid": "d773c4ef-c09e-40e4-a7fe-01456cb4a12a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["comparison", "errors", "for-loops"],
         "difficulty": 2,
         "topics": ["conditionals", "loops", "equality", "strings"]
       },
@@ -620,7 +620,7 @@
         "name": "Raindrops",
         "uuid": "f77ac2d1-cf3a-497d-bf04-b484a5a9cb37",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arithmetic-operators", "strings", "conditionals"],
         "difficulty": 2,
         "topics": ["conditionals", "integers", "strings", "transforming"]
       },
@@ -629,7 +629,12 @@
         "name": "Nucleotide Count",
         "uuid": "be6f3ab3-1593-4c2d-8a35-5f39c1d5c91f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "objects",
+          "template-strings",
+          "array-loops",
+          "errors"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
@@ -1289,7 +1294,8 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": ["algorithms", "callbacks", "loops", "lists"]
+        "topics": ["algorithms", "callbacks", "loops", "lists"],
+        "status": "deprecated"
       },
       {
         "slug": "flatten-array",
@@ -1656,6 +1662,42 @@
         "prerequisites": [],
         "difficulty": 8,
         "topics": ["recursion", "searching", "trees"]
+      },
+      {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "3a34cb49-546f-4aae-b49e-7d5b25db7ebb",
+        "practices": [],
+        "prerequisites": ["arrays", "classes", "for-loops", "maps"],
+        "difficulty": 7,
+        "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "e5e5363d-4e9a-478f-8b18-e578f3721ac5",
+        "practices": [],
+        "prerequisites": ["arrays", "strings", "for-loops", "objects"],
+        "difficulty": 3,
+        "topics": ["parsing", "strings"]
+      },
+      {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "5f0352e5-0988-434a-82c7-f6810d41d63a",
+        "practices": [],
+        "prerequisites": ["arrays", "strings", "for-loops", "conditionals"],
+        "difficulty": 3,
+        "topics": ["parsing", "strings", "iteration"]
+      },
+      {
+        "slug": "rest-api",
+        "name": "Rest API",
+        "uuid": "75b4816d-a5d7-4840-92d6-7249c9e8beeb",
+        "practices": [],
+        "prerequisites": ["arrays", "classes", "array-loops", "objects"],
+        "difficulty": 6,
+        "topics": ["algorithms", "logic"]
       }
     ]
   },

@@ -146,7 +146,7 @@ Read [this article][instanceof-vs-array-is-array] for more information.
 
 ## Array Methods
 
-Some of the [methods][array_methods] that are available on `Array.prototype` can be used to add or remove from the array.
+Some of the [methods][array_methods] that are available on every Array object can be used to add or remove from the array.
 Here are a few of them:
 
 ### push

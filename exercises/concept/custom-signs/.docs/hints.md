@@ -9,11 +9,11 @@
 - [template strings][mdn-template-strings] (Template literals) allow for substitution of strings and embedded expressions
 - [ternary operator][mdn-ternary-operator] is a short-hand way of operating on conditions, similar to `if/else`. It can be easier to use in template strings because it is condensed.
 
-## 4. Build a graduation sign
+## 3. Build a graduation sign
 
 - [template strings][mdn-template-strings] allow strings to span onto multiple lines.
 
-## 5. Compute the cost of a sign
+## 4. Compute the cost of a sign
 
 - Figure out the [`length`][mdn-string-length] of the characters.
 - Only show the first two decimal numbers using [fixed-point][mdn-to-fixed] notation.

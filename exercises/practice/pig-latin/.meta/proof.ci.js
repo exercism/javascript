@@ -11,8 +11,6 @@ function translateWord(word) {
   return `${newWord}ay`;
 }
 
-export const translator = {
-  translate(english) {
-    return english.split(' ').map(translateWord).join(' ');
-  },
+export const translate = (english) => {
+  return english.split(' ').map(translateWord).join(' ');
 };
