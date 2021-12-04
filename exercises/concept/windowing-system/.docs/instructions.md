@@ -1,8 +1,8 @@
 # Instructions
 
-FIXME
-
-In this exercise, you will be simulating a windowing based computer system. You will create some windows that can be moved and resized and display their contents. The following image is representative of the values you will be working with below.
+In this exercise, you will be simulating a windowing based computer system.
+You will create some windows that can be moved and resized.
+The following image is representative of the values you will be working with below.
 
 ```
                   <--------------------- screenSize.width --------------------->
@@ -26,60 +26,136 @@ screenSize.height ║                 |      │                      │       
        v          ╚════════════════════════════════════════════════════════════╝
 ```
 
-## 1. Define a Size struct
+📣 To practice your wide range of JavaScript skills, **try to solve task 1 and 2 with prototype syntax and the remaining tasks with class syntax**.
 
-Define a struct named `Size` with two `Int` properties, `width` and `height` that store the window's current width and height, respectively. The initial width and height should be 80 and 60, respectively. Include a method `resize(newWidth:newHeight:)` that takes new width and height parameters and changes the properties to reflect the new size.
+## 1. Define Size for storing the windows dimensions
 
-```swift
-let size1080x764 = Size(width: 1080, height: 764)
-// => Size
-var size1200x800 = size1080x764
-// => Size
-size1200x800.resize(newWidth: 1200, newHeight: 800)
-size1200x800.height
-// => 800
+Define a class (constructor function) named `Size`.
+It should have two fields `width` and `height` that store the window's current dimensions.
+The constructor function should accept initial values for these fields.
+The width is provided as the first parameter, the height as the second one.
+The default width and height should be `80` and `60`, respectively.
+
+Additionally, define a method `resize(newWidth, newHeight)` that takes a new width and height as parameters and changes the fields to reflect the new size.
+
+```javascript
+const size = new Size(1080, 764);
+size.width;
+// => 1080
+size.height;
+// => 764
+
+size.resize(1920, 1080);
+size.width;
+// => 1920
+size.height;
+// => 1080
 ```
 
-## 2. Define a Position struct
+## 2. Define Position to store a window position
 
-Define a struct named `Position` with two `Int` properties, `x` and `y` that store the current horizontal and vertical position, respectively, of the window's upper left corner. The initial values of x and y should each be 0. The position (0, 0) is the upper left corner of the screen with `x` values getting larger as you move right and `y` values getting larger as you move down.
+Define a class (constructor function) named `Position` with two fields, `x` and `y` that store the current horizontal and vertical position, respectively, of the window's upper left corner.
+The constructor function should accept initial values for these fields.
+The value for `x` is provided as the first parameter, the value for `y` as the second one.
+The default value should be `0` for both fields.
 
-Include a method `moveTo(newX:newY:)` that takes new x and y parameters and changes the properties to reflect the new position.
+The position (0, 0) is the upper left corner of the screen with `x` values getting larger as you move right and `y` values getting larger as you move down.
 
-```swift
-var point = Position(x: 10, y: 20)
-// => Position
-point.moveTo(newX: 100, newY: -100)
-point.y
-// => -100
+Also define a method `moveTo(newX, newY)` that takes new x and y parameters and changes the properties to reflect the new position.
+
+```javascript
+const point = new Position();
+point.x;
+// => 0
+point.y;
+// => 0
+
+point.moveTo(100, 200);
+point.x;
+// => 100
+point.y;
+// => 200
 ```
 
 ## 3. Define a Window class
 
-Define a window class with the following properties:
+Define a `Window` class with the following fields:
 
-- `title` : `String`, Initial value is "New Window"
-- `screenSize` : `Size`, constant value with `width` = 800 and `height` = 600
-- `size` : `Size`, initial value is the default value of the `Size` struct
-- `position` : `Position`, initial value is the default value of the `Position` struct
-- `contents` : `String?`, initial value is `nil`
+- `screenSize`: holds a fixed value of type `Size` with `width` 800 and `height` 600
+- `size` : holds a value of type `Size`, the initial value is the default value of the `Size` instance
+- `position` : holds a value of type `Position`, the initial value is the default value of the `Position` instance
 
-## 4. Add a method to resize windows
+The constructor should have no parameters.
 
-- `resize(to:)` : `(Size) -> ()` - This method takes a `Size` struct as input and attempts to resize the window to the specified size. However, the new size cannot exceed certain bounds. - The minimum allowed height or width is 1. Requested heights or widths less than 1 will be clipped to 1. - The maximum height and width depends on the current position of the window, the edges of the window cannot move past the edges of the screen. Values larger than these bounds will be clipped to the largest size they can take. E.g. if the window's position is at `x` = 400, `y` = 300 and a resize to `height` = 400, `width` = 300 is requested, then the window would be resized to `height` = 300, `width` = 300 as the screen is not large enough in the `y` direction to fully accommodate the request.
+```javascript
+const window = new Window();
+window.screenSize.width;
+// => 800
 
-## 5. Add a method to move windows
+// Similar for the other fields.
+```
 
-- `move(to:)` : `(Position) -> ()` - This is similar to `resize(to:)`, however, this method adjusts the _position_ of the window to the requested value, rather than the size. As with `resize` the new position cannot exceed certain limits. - The smallest position is 0 for both `x` and `y`. - The maximum position in either direction depends on the current size of the window; the edges cannot move past the edges of the screen. Values larger than these bounds will be clipped to the largest size they can take. E.g. if the window's size is at `x` = 250, `y` = 100 and a move to `x` = 600, `y` = 200 is requested, then the window would be moved to `x` = 550, `y` = 200 as the screen is not large enough in the `x` direction to fully accommodate the request.
+## 4. Add a method to resize the window
 
-## 6. Add methods to update the window text and display window information
+The `Window` class should include a method `resize`.
+It should accept a parameter of type `Size` as input and attempts to resize the window to the specified size.
 
-- `update(title:)` : `(String) -> ()` - This method sets the `title` property to the value of the string that was passed in.
-- `update(text:)` : `(String?) -> ()` - This method sets the `contents` property to the value of the optional string that was passed in.
-- `display()` : `() -> String` - This method returns a string describing the current state of the window. For example, if the window has the `title` "My First Window" with position: x = 10, y = 100; size: width = 200, height = 150; and contents: "I 😍 my window", it should return the string: `"My First Window\nPosition: (10, 100), Size: (200 x 150)\nI 😍 my window\n"` - If `contents` is nil, the last line should read "[This window intentionally left blank]"
+However, the new size cannot exceed certain bounds.
 
-## 7. Create a new Window
+- The minimum allowed height or width is 1.
+  Requested heights or widths less than 1 will be clipped to 1.
+- The maximum height and width depends on the current position of the window, the edges of the window cannot move past the edges of the screen.
+  Values larger than these bounds will be clipped to the largest size they can take.
+  E.g. if the window's position is at `x` = 400, `y` = 300 and a resize to `height` = 400, `width` = 300 is requested, then the window would be resized to `height` = 300, `width` = 300 as the screen is not large enough in the `y` direction to fully accommodate the request.
 
-Create an instances of the Window class and modify it via their methods as follows:
+```javascript
+const window = new Window();
 
-- The window should be given the title "Main Window", with a width of 400, a height of 300 and positioned at x = 100, y = 100. Its contents should be "This is the main window". Assign this instance to the name `mainWindow`.
+const newSize = new Size(600, 400);
+window.resize(newSize);
+window.size.width;
+// => 600
+window.size.height;
+// => 400
+```
+
+## 5. Add a method to move the window
+
+Besides the resize functionality, the `Window` class should also include a method `move`.
+It should accept a parameter of type `Position` as input.
+The `move` method is similar to `resize` however, this method adjusts the _position_ of the window to the requested value, rather than the size.
+
+As with `resize` the new position cannot exceed certain limits.
+
+- The smallest position is 0 for both `x` and `y`.
+- The maximum position in either direction depends on the current size of the window.
+  The edges cannot move past the edges of the screen.
+  Values larger than these bounds will be clipped to the largest size they can take.
+  E.g. if the window's size is at `x` = 250, `y` = 100 and a move to `x` = 600, `y` = 200 is requested, then the window would be moved to `x` = 550, `y` = 200 as the screen is not large enough in the `x` direction to fully accommodate the request.
+
+```javascript
+const window = new Window();
+
+const newPosition = new Position(50, 100);
+window.move(newPosition);
+window.position.x;
+// => 50
+window.position.y;
+// => 100
+```
+
+## 6. Change a window
+
+Implement an `changeWindow` method that accepts a `Window` instance as input and changes the window to the specified size and position.
+The function should return the `Window` instance that was passed in after the changes where applied.
+
+The window should get a width of 400, a height of 300 and and be positioned at x = 100, y = 100.
+
+```javascript
+const window = new Window();
+changeWindow(window);
+window.size.width;
+// => 400
+
+// Similar for the other fields.
+```
