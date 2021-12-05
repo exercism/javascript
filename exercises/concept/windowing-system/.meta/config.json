@@ -7,5 +7,5 @@
     "test": ["windowing-system.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["swift/windowing-system"] 
+  "forked_from": ["swift/windowing-system"]
 }

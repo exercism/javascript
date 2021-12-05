@@ -15,6 +15,7 @@ The following topics will be introduced later and should therefore not be part o
 
 - `this` in non-class contexts
 - inheritance between classes (`extends`, `super`)
+- `instanceof` (introduced in the inheritance concept)
 
 ## Concepts
 
@@ -26,6 +27,12 @@ The Concept this exercise unlocks is:
 
 - `functions` as they are the basis for classes and default parameters are needed in the exercise
 - `objects` as they are the basis for instances
+
+## Analyzer
+
+This exercise could benefit from the following rules in the [analyzer][analyzer].
+
+- Check that task 1 and 2 was solved with prototype syntax and the rest with class syntax.
 
 ## Notes
 
