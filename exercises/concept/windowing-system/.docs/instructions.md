@@ -85,7 +85,7 @@ Define a `ProgramWindow` class with the following fields:
 - `size` : holds a value of type `Size`, the initial value is the default value of the `Size` instance
 - `position` : holds a value of type `Position`, the initial value is the default value of the `Position` instance
 
-The constructor should have no parameters.
+When the window is opened (created), it always has the default size and position in the beginning.
 
 ```javascript
 const programWindow = new ProgramWindow();

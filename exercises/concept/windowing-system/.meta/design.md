@@ -33,11 +33,12 @@ The Concept this exercise unlocks is:
 This exercise could benefit from the following rules in the [analyzer][analyzer].
 
 - Check that task 1 and 2 was solved with prototype syntax and the rest with class syntax.
+- In task 4 and 5, check that the methods of the size and position objects were used instead of manipulating the values directly, e.g. via `this.position.x = ...`.
 
 ## Notes
 
 The exercise is ported from [Windowing System Exercise in the Swift track][swift-windowing-system].
-Task 6 was ommited because it did not add much additional value in the JavaScript version.
+Task 6 was omitted because it did not add much additional value in the JavaScript version.
 Task 7 was modified a bit so it is easier to test.
 
 [analyzer]: https://github.com/exercism/javascript-analyzer
