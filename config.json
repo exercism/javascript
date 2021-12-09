@@ -764,7 +764,13 @@
         "name": "Anagram",
         "uuid": "309fa4f1-e03a-4ab2-b371-cdf742501cf7",
         "practices": [],
-        "prerequisites": ["strings", "arrays", "for-loops", "conditionals", "comparison"],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "comparison"
+        ],
         "difficulty": 1,
         "topics": ["filtering", "strings"]
       },
