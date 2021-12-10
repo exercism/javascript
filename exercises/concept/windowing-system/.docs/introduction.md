@@ -1,3 +1,3 @@
 # Introduction
 
-FIXME
+FIXME Fill in once about.md was reviewed

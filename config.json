@@ -211,7 +211,8 @@
           "array-loops",
           "comparison",
           "rest-and-spread",
-          "arrays"
+          "arrays",
+          "classes"
         ],
         "status": "beta"
       },
@@ -228,7 +229,7 @@
         "name": "Factory Sensors",
         "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
         "concepts": ["errors", "inheritance"],
-        "prerequisites": ["null-undefined", "conditionals"],
+        "prerequisites": ["classes", "null-undefined", "conditionals"],
         "status": "beta"
       },
       {
@@ -245,6 +246,14 @@
         "uuid": "02a9c753-614f-4814-a7a8-43c1971d2eb7",
         "concepts": ["conditionals-ternary", "template-strings"],
         "prerequisites": ["strings", "conditionals", "type-conversion"],
+        "status": "beta"
+      },
+      {
+        "slug": "windowing-system",
+        "name": "Windowing System",
+        "uuid": "d697850e-fd43-408c-a958-835aa8a510f7",
+        "concepts": ["classes"],
+        "prerequisites": ["objects", "functions", "ternary-operator"],
         "status": "beta"
       }
     ],
