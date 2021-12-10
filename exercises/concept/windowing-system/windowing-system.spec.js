@@ -1,4 +1,9 @@
-import { Size, Position, ProgramWindow, changeWindow } from './.meta/exemplar';
+import {
+  Size,
+  Position,
+  ProgramWindow,
+  changeWindow,
+} from './windowing-system';
 
 describe('Size', () => {
   test('allows to create a new instance', () => {
