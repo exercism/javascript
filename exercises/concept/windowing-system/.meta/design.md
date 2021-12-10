@@ -27,7 +27,7 @@ The Concept this exercise unlocks is:
 
 - `functions` as they are the basis for classes and default parameters are needed in the exercise
 - `objects` as they are the basis for instances
-- `ternary-operator` because it is helpful in the exercise
+- `conditionals-ternary` because it is helpful in the exercise
 
 ## Analyzer
 

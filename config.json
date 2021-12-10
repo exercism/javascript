@@ -253,7 +253,7 @@
         "name": "Windowing System",
         "uuid": "d697850e-fd43-408c-a958-835aa8a510f7",
         "concepts": ["classes"],
-        "prerequisites": ["objects", "functions", "ternary-operator"],
+        "prerequisites": ["objects", "functions", "conditionals-ternary"],
         "status": "beta"
       }
     ],
