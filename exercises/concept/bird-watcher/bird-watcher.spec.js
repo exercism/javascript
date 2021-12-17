@@ -53,14 +53,6 @@ describe('bird watcher', () => {
       expect(fixBirdCountLog(birdsPerDay)).toEqual(expected);
     });
 
-    test('does not create a new array', () => {
-      const birdsPerDay = [2, 0, 1, 4, 1, 3, 0];
-
-      // This checks that the same object that was passed in is returned.
-      // https://jestjs.io/docs/expect#tobevalue
-      expect(Object.is(fixBirdCountLog(birdsPerDay), birdsPerDay)).toBe(true);
-    });
-
     test('works for a short bird count list', () => {
       expect(fixBirdCountLog([4, 2])).toEqual([5, 2]);
     });
