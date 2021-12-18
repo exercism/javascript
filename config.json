@@ -1713,11 +1713,12 @@
         "prerequisites": [
           "arrays",
           "classes",
-          "array-loops",
+          "for-loops",
           "objects",
-          "conditionals"
+          "conditionals",
+          "conditionals-switch"
         ],
-        "difficulty": 4,
+        "difficulty": 5,
         "topics": ["algorithms", "logic"]
       }
     ]
