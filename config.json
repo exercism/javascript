@@ -1704,6 +1704,22 @@
         "prerequisites": ["arrays", "classes", "array-loops", "objects"],
         "difficulty": 6,
         "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "go-counting",
+        "name": "Go Counting",
+        "uuid": "177fc434-027d-48a4-8525-fa3d1d15607e",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "for-loops",
+          "objects",
+          "conditionals",
+          "conditionals-switch"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "logic"]
       }
     ]
   },
