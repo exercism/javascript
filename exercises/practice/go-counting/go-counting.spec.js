@@ -1,7 +1,7 @@
 import { GoCounting } from './go-counting';
 
 describe('Go Counting', () => {
-  describe('getTerrytory', () => {
+  describe('getTerritory', () => {
     test('Black corner territory on 5x5 board', () => {
       const board = ['  B  ', ' B B ', 'B W B', ' W W ', '  W  '];
       const goCounting = new GoCounting(board);
