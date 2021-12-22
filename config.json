@@ -826,7 +826,7 @@
           "arrays",
           "comparison",
           "conditionals",
-          "regular_expressions"
+          "regular-expressions"
         ],
         "difficulty": 3,
         "topics": ["parsing", "transforming"]
