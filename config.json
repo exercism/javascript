@@ -821,7 +821,13 @@
         "name": "Phone Number",
         "uuid": "82775adb-eabe-4d44-91f5-4080b8834a4a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "comparison",
+          "conditionals",
+          "regular_expressions"
+        ],
         "difficulty": 3,
         "topics": ["parsing", "transforming"]
       },
