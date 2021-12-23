@@ -788,7 +788,7 @@
         "name": "High Scores",
         "uuid": "f5af74f7-259c-48e6-828c-bcd98717d8dd",
         "practices": [],
-        "prerequisites": ["arrays", "array", "rest-and-spread", "classes"],
+        "prerequisites": ["arrays", "array-transformations", "rest-and-spread", "classes"],
         "difficulty": 2,
         "topics": ["arrays"]
       },
