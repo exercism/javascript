@@ -823,7 +823,6 @@
         "practices": [],
         "prerequisites": [
           "strings",
-          "arrays",
           "comparison",
           "conditionals",
           "regular-expressions"
