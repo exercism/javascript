@@ -764,7 +764,13 @@
         "name": "Anagram",
         "uuid": "309fa4f1-e03a-4ab2-b371-cdf742501cf7",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "comparison"
+        ],
         "difficulty": 1,
         "topics": ["filtering", "strings"]
       },
@@ -782,7 +788,12 @@
         "name": "High Scores",
         "uuid": "f5af74f7-259c-48e6-828c-bcd98717d8dd",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "rest-and-spread",
+          "classes"
+        ],
         "difficulty": 2,
         "topics": ["arrays"]
       },
@@ -815,7 +826,12 @@
         "name": "Phone Number",
         "uuid": "82775adb-eabe-4d44-91f5-4080b8834a4a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "comparison",
+          "conditionals",
+          "regular-expressions"
+        ],
         "difficulty": 3,
         "topics": ["parsing", "transforming"]
       },
@@ -1697,6 +1713,22 @@
         "practices": [],
         "prerequisites": ["arrays", "classes", "array-loops", "objects"],
         "difficulty": 6,
+        "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "go-counting",
+        "name": "Go Counting",
+        "uuid": "177fc434-027d-48a4-8525-fa3d1d15607e",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "for-loops",
+          "objects",
+          "conditionals",
+          "conditionals-switch"
+        ],
+        "difficulty": 5,
         "topics": ["algorithms", "logic"]
       }
     ]

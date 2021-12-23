@@ -47,16 +47,16 @@ This document provides an overview of the main topics that contributors and main
 - `recursion`
 - `closures`
 - `sets`
+- `randomness`
+- `regular-expressions`
+- `dates`
+- `async-await`
+- `type-checking`
 
 ### Potential Future Concepts
 
-- `type-checking`
-- `maps` (should be added to the Sets exercise, WeakSet/WeakMap could be in about as first iteration)
-- `dates`
-- `async-await`
+- `maps` (could be added to the Sets exercise, WeakSet/WeakMap could be in about as first iteration)
 - `JSON`
-- `randomness`
-- `regular-expressions`
 - `math`
 - getters/setters, flags, descriptors
 - `proxy`
