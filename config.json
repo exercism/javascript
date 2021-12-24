@@ -779,7 +779,11 @@
         "name": "Acronym",
         "uuid": "440d78d1-9dea-466f-9bd4-935eed067409",
         "practices": [],
-        "prerequisites": ["strings", "arrays"],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "array-transformations"
+        ],
         "difficulty": 2,
         "topics": ["loops", "regular_expressions", "strings", "transforming"]
       },
