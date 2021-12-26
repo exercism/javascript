@@ -56,7 +56,7 @@ const square = num => num * num;
 ```
 <!-- prettier-ignore-end -->
 
-Arrow functions are often uses to define short callback functions directly in the function call.
+Arrow functions are often used to define short callback functions directly in the function call.
 
 <!-- prettier-ignore-start -->
 ```javascript
