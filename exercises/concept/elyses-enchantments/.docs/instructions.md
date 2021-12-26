@@ -44,18 +44,7 @@ insertItemAtTop([5, 9, 7, 1], newCard);
 // => [5, 9, 7, 1, 8]
 ```
 
-## 4. Insert a card at the bottom of the stack
-
-Make a card appear, by inserting a new card at the bottom of the stack.
-Return the adjusted stack.
-
-```javascript
-const newCard = 8;
-insertItemAtBottom([5, 9, 7, 1], newCard);
-// => [8, 5, 9, 7, 1]
-```
-
-## 5. Remove a card from the stack
+## 4. Remove a card from the stack
 
 Make a card disappear by removing the card at the given `position` from the stack.
 Return the adjusted stack.
@@ -66,7 +55,7 @@ removeItem([3, 2, 6, 4, 8], position);
 // => [3, 2, 4, 8]
 ```
 
-## 6. Remove the top card from the stack
+## 5. Remove the top card from the stack
 
 Make a card disappear by removing the card at the top of the stack.
 Return the adjusted stack.
@@ -74,6 +63,17 @@ Return the adjusted stack.
 ```javascript
 removeItemFromTop([3, 2, 6, 4, 8]);
 // => [3, 2, 6, 4]
+```
+
+## 6. Insert a card at the bottom of the stack
+
+Make a card appear, by inserting a new card at the bottom of the stack.
+Return the adjusted stack.
+
+```javascript
+const newCard = 8;
+insertItemAtBottom([5, 9, 7, 1], newCard);
+// => [8, 5, 9, 7, 1]
 ```
 
 ## 7. Remove a card from the bottom of the stack
