@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods",
+        "description": "MDN: Array Methods"
+      },
+      {
+        "url": "https://javascript.info/array-methods#transform-an-array",
+        "description": "javascript.info: Transform an array"
+      }
+]

@@ -1,5 +1,5 @@
 {
+  "blurb": "JavaScript has a lot of useful built-in methods to transform arrays.",
   "authors": ["TomPradat"],
-  "contributors": [],
-  "blurb": "JavaScript has a lot of useful built-in methods to transform arrays"
+  "contributors": ["junedev"]
 }
