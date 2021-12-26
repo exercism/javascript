@@ -14,17 +14,17 @@
 
 - There is a [built-in][push_method_docs] method to add a new value to the end of the array.
 
-## 4. Insert a card at the bottom of the stack
-
-- There is a [built-in][unshift_method_docs] method to add a new value to the beginning of the array.
-
-## 5. Remove a card from the stack
+## 4. Remove a card from the stack
 
 - There is a [built-in][splice_method_docs] method that, among other use cases, can be used to remove elements starting at a certain position.
 
-## 6. Remove the top card from the stack
+## 5. Remove the top card from the stack
 
 - There is a [built-in][pop_method_docs] method to remove the last element from the array.
+
+## 6. Insert a card at the bottom of the stack
+
+- There is a [built-in][unshift_method_docs] method to add a new value to the beginning of the array.
 
 ## 7. Remove a card from the bottom of the stack
 
