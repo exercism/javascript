@@ -806,7 +806,7 @@
         "name": "Isogram",
         "uuid": "3df577af-2854-40ee-b211-9b608dbbad58",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "arrays", "regular-expressions"],
         "difficulty": 2,
         "topics": ["filtering", "strings"]
       },
