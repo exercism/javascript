@@ -808,7 +808,7 @@
         "practices": [],
         "prerequisites": ["strings", "arrays", "regular-expressions"],
         "difficulty": 2,
-        "topics": ["filtering", "strings", "regular-expressions"]
+        "topics": ["filtering", "strings"]
       },
       {
         "slug": "matching-brackets",
