@@ -779,7 +779,11 @@
         "name": "Acronym",
         "uuid": "440d78d1-9dea-466f-9bd4-935eed067409",
         "practices": [],
-        "prerequisites": ["strings", "arrays"],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "array-transformations"
+        ],
         "difficulty": 2,
         "topics": ["loops", "regular_expressions", "strings", "transforming"]
       },
@@ -1727,6 +1731,21 @@
           "objects",
           "conditionals",
           "conditionals-switch"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "4b3bc6f9-ebb0-49f5-a472-a00f0a94c36a",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "objects",
+          "math",
+          "conditionals"
         ],
         "difficulty": 5,
         "topics": ["algorithms", "logic"]
