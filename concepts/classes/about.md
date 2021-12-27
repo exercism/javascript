@@ -4,7 +4,7 @@ JavaScript includes the capabilities for object-oriented programming ([OOP][wiki
 In OOP, you want to create objects (_instances_) from "templates" (_classes_) so that they include certain data and functionality.
 The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
 
-JavaScript did not have classes at all before they were added to the language specification in 2015, but allowed for object-oriented programming using prototype-based inheritance. 
+JavaScript did not have classes at all before they were added to the language specification in 2015, but allowed for object-oriented programming using prototype-based inheritance.
 And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
 To understand what it means to be a prototype-based language and how JavaScript actually works, we will go back to the time when there were no classes.
@@ -35,6 +35,13 @@ Since 2015, `[[prototype]]` can be accessed via `Object.getPrototypeOf()`.
 Before that, it was accessible via the key `__proto__` in many environments.
 
 Do not confuse the prototype of an object (`[[prototype]]`) with the `prototype` property of the constructor function.
+
+To summarize:
+
+- Constructors in JavaScript are regular functions.
+- Constructing a new instance creates an object with a relation to its constructor called its _prototype_.
+- Functions are objects (callable objects) and therefore they can have properties.
+- The constructor's (function) `prototype` property will become the instance's _prototype_.
 
 ### Instance Fields
 
@@ -98,16 +105,32 @@ If not, it continues to look for the key in the object referenced by the `[[prot
 As mentioned before, in our example `[[prototype]]` points to the `prototype` property of the constructor function.
 That is where JavaScript would find the `startEngine` function because we added it there.
 
+```javascript
+function Car() {
+  // ...
+}
+
+Car.prototype.startEngine = function () {
+  // ...
+};
+```
+
 And the chain does not end there.
 The `[[prototype]]` property of `Car.prototype` (`myCar.[[prototype]].[[prototype]]`) references `Object.prototype` (the `prototype` property of the `Object` constructor function).
 It contains general methods that are available for all JavaScript objects, e.g. `toString()`.
+The `[[prototype]]` of `Object` is usually `null` so the prototype chain ends there.
 In conclusion, you can call `myCar.toString()` and that method will exist because JavaScript searches for that method throughout the whole prototype chain.
 You can find a detailed example in the [MDN article "Inheritance and the prototype chain"][mdn-prototype-chain-example].
 
+```exercism/caution
 Note that the prototype chain is only travelled when retrieving a value.
-Setting or deleting a property of an instance object only targets that specific instance.
+Setting a property directly or deleting a property of an instance object only targets that specific instance.
+This might not be what you would expect when you are used to a language with class-based inheritance.
+```
 
-### Dynamic Methods
+### Dynamic Methods (Adding Methods to All Existing Instances)
+
+JavaScript allows you to add methods to all existing instances even after they were created.
 
 We learned that every instance keeps a reference to the `prototype` property of the constructor function.
 That means if you add an entry to that `prototype` object, that new entry (e.g. a new method) is immediately available to all instances created from that constructor function.
