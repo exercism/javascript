@@ -36,12 +36,14 @@ Before that, it was accessible via the key `__proto__` in many environments.
 
 Do not confuse the prototype of an object (`[[prototype]]`) with the `prototype` property of the constructor function.
 
+```exercism/note
 To summarize:
 
 - Constructors in JavaScript are regular functions.
 - Constructing a new instance creates an object with a relation to its constructor called its _prototype_.
 - Functions are objects (callable objects) and therefore they can have properties.
 - The constructor's (function) `prototype` property will become the instance's _prototype_.
+```
 
 ### Instance Fields
 
