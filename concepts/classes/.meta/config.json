@@ -1,5 +1,5 @@
 {
-  "blurb": "JavaScript includes the capabilities for object-oriented programming. While it nowadays has a \"class\" keyword, it is still a prototype-based language.",
+  "blurb": "JavaScript allows for object-oriented programming. Despite it having a \"class\" keyword, it is still a prototype-based language.",
   "authors": ["junedev"],
   "contributors": []
 }

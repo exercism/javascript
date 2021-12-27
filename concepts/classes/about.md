@@ -4,10 +4,10 @@ JavaScript includes the capabilities for object-oriented programming ([OOP][wiki
 In OOP, you want to create objects (_instances_) from "templates" (_classes_) so that they include certain data and functionality.
 The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
 
-JavaScript did not have classes at all before they were added to the language specification in 2015.
+JavaScript did not have classes at all before they were added to the language specification in 2015, but allowed for object-oriented programming using prototype-based inheritance. 
 And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
-To understand what that means and how JavaScript actually works, we will go back to the time when there were no classes.
+To understand what it means to be a prototype-based language and how JavaScript actually works, we will go back to the time when there were no classes.
 
 ## Prototype Syntax
 
@@ -38,8 +38,8 @@ Do not confuse the prototype of an object (`[[prototype]]`) with the `prototype`
 
 ### Instance Fields
 
-Often, you want all the derived objects to include some fields and pass some initial values for those when the object is constructed.
-This is facilitated via the [`this` keyword][mdn-this].
+Often, you want all the derived objects (instances) to include some fields and pass some initial values for those when the object is constructed.
+This can be facilitated via the [`this` keyword][mdn-this].
 Inside the constructor function, `this` represents the new object that will be created via `new`.
 `this` is automatically returned from the constructor function when it is called with `new`.
 
@@ -89,7 +89,7 @@ myCar.engineRunning;
 
 ### The Prototype Chain
 
-`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console) we would not find a property `startEngine` with a function as value directly inside the `myCar` object.
+`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console), we would not find a property `startEngine` with a function as value directly inside the `myCar` object.
 So how does the code above even work then?
 
 The secret here is called the _prototype chain_.
