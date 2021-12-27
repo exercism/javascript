@@ -27,6 +27,13 @@
       "path": "docs/RESOURCES.md",
       "title": "Useful JavaScript resources",
       "blurb": "A collection of useful resources to help you master JavaScript"
+    },
+    {
+      "uuid": "eef6eca6-6ee8-4ab5-a97a-3e8eb7785c7e",
+      "slug": "roadmap",
+      "path": "docs/ROADMAP.md",
+      "title": "Roadmap & Concept List",
+      "blurb": "Priorities for future development of the JavaScript track"
     }
   ]
 }

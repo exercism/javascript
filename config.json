@@ -788,7 +788,11 @@
         "name": "Acronym",
         "uuid": "440d78d1-9dea-466f-9bd4-935eed067409",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "array-transformations"
+        ],
         "difficulty": 2,
         "topics": ["loops", "regular_expressions", "strings", "transforming"]
       },
@@ -797,7 +801,12 @@
         "name": "High Scores",
         "uuid": "f5af74f7-259c-48e6-828c-bcd98717d8dd",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "rest-and-spread",
+          "classes"
+        ],
         "difficulty": 2,
         "topics": ["arrays"]
       },
@@ -806,7 +815,7 @@
         "name": "Isogram",
         "uuid": "3df577af-2854-40ee-b211-9b608dbbad58",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "arrays", "regular-expressions"],
         "difficulty": 2,
         "topics": ["filtering", "strings"]
       },
@@ -830,7 +839,12 @@
         "name": "Phone Number",
         "uuid": "82775adb-eabe-4d44-91f5-4080b8834a4a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "comparison",
+          "conditionals",
+          "regular-expressions"
+        ],
         "difficulty": 3,
         "topics": ["parsing", "transforming"]
       },
@@ -1713,6 +1727,37 @@
         "prerequisites": ["arrays", "classes", "array-loops", "objects"],
         "difficulty": 6,
         "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "go-counting",
+        "name": "Go Counting",
+        "uuid": "177fc434-027d-48a4-8525-fa3d1d15607e",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "for-loops",
+          "objects",
+          "conditionals",
+          "conditionals-switch"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "4b3bc6f9-ebb0-49f5-a472-a00f0a94c36a",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "objects",
+          "math",
+          "conditionals"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "logic"]
       }
     ]
   },
@@ -1731,6 +1776,11 @@
       "uuid": "9f8f96bb-db13-485a-bfe4-6ae3fe2fbf46",
       "slug": "array-destructuring",
       "name": "Array Destructuring"
+    },
+    {
+      "uuid": "ee604998-ef59-4b9d-a288-355ba60587bc",
+      "slug": "array-transformations",
+      "name": "Array Transformations"
     },
     {
       "uuid": "5b0ab681-f44f-4910-b2cf-0b1fcd19ba55",
