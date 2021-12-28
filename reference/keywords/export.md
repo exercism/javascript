@@ -1,6 +1,6 @@
 # `export`
 
-The `export` keyword is used to define which elements in the current file will be importable into other files using the [`import`][keyword-import] keyword.
+The `export` keyword specifies which elements in the current file will be importable into other files using the [`import`][keyword-import] keyword.
 
 There are two types of exports, the `default` export and named exports.
 
@@ -24,7 +24,7 @@ export { foo, bar }; // this exports a list of multiple features
 
 ## Export-from-syntax / Re-exporting modules
 
-There is also a syntax that allows for `import`ing modules and directly `export`ing all or parts of it:
+There is also a syntax that allows for `import`ing modules and directly `export`ing all or parts of them:
 
 ```js
 export * from 'other_module'; // exports all features of `other_module`
@@ -36,17 +36,17 @@ One caveat about re-exporting is that `default` exports are ignored by this synt
 
 ## Transpilation
 
-To make `export`s work, we use transpilers like [babel][babel] or [tsc][tsc] that take those modules and convert them into own file (or even multiple). Babel also has the benefit of another form of `export`s, the so-called `synthetic default export`:
+To make `export`s work, we use transpilers like [babel][babel] or [tsc][tsc] that take those modules and convert them into a dedicated file (or multiple). Babel also has the benefit of another form of `export`s, the so-called `synthetic default export`:
 
 ```js
 exports = class XYZ {};
 ```
 
-Which will be translated the first mentioned example (`export deafult class XYZ{}`).
+Which will be translated like the first mentioned example (`export default class XYZ{}`).
 
 ## ECMAScript 6 modules vs CommonJS modules
 
-There are different kind of [modules][concept-module] that have different ways how to export things. The examples above are all [ECMAScript 6 modules][es6-modules] and are mostly available through preprocessors like [babel][babel]. In [Node.js][node-js] environments however [CommonJS modules][cjs-modules] are used. They usually take the following form (note that there is no `default` export):
+There are different kinds of [modules][concept-module], each with a different way to export. The examples above are all [ECMAScript 6 modules][es6-modules] and are mostly available through preprocessors like [babel][babel]. In [Node.js][node-js] environments however [CommonJS modules][cjs-modules] are used. They usually take the following form (note that there is no `default` export):
 
 ```js
 var foo = 42;

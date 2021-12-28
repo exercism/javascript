@@ -67,7 +67,7 @@ This document provides an overview of the main topics that contributors and main
 - this and scope (incl. call/bind)
 - iterators and "enumerators"
 - generators/yield
-- asnyc generators and iterators
+- async generators and iterators
 - bit wise operators
 - modules, imports, exports, dynamic imports
 - duck-typing
@@ -75,7 +75,7 @@ This document provides an overview of the main topics that contributors and main
 - `bigint`
 - `symbol`
 - JSDoc comments
-- asychronicity, event loop
+- asynchronicity, event loop
 - setTimeout/setInterval
 - events
 - "everything is an object" sometimes (relation of functions, arrays and primitives to objects, e.g. boxed types)

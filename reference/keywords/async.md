@@ -1,6 +1,6 @@
 # `async`
 
-Marks a [function][concept-functions] to be asynchronous function; an asynchronous function is a function which operates asynchronously via the [event loop][concept-event-loop], using an implicit [`Promise`][global-objects-promise] to return its result.
+Marks a [function][concept-functions] to be an asynchronous function; an asynchronous function is a function that operates asynchronously via the [event loop][concept-event-loop], using an implicit [`Promise`][global-objects-promise] to return its result.
 
 See [concurrency][concept-concurrency].
 
