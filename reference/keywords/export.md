@@ -36,7 +36,7 @@ One caveat about re-exporting is that `default` exports are ignored by this synt
 
 ## Transpilation
 
-To make `export`s work, we use transpilers like [babel][babel] or [tsc][tsc] that take those modules and convert them into a dedicated file (or multiple). Babel also has the benefit of another form of `export`s, the so-called `synthetic default export`:
+To make `export`s work, we use transpilers like [Babel][babel] or the [TypeScript compiler (tsc)][tsc] that take those modules and convert them into a dedicated file (or multiple). Babel also has the benefit of another form of `export`s, the so-called `synthetic default export`:
 
 ```js
 exports = class XYZ {};
@@ -46,7 +46,7 @@ Which will be translated like the first mentioned example (`export default class
 
 ## ECMAScript 6 modules vs CommonJS modules
 
-There are different kinds of [modules][concept-module], each with a different way to export. The examples above are all [ECMAScript 6 modules][es6-modules] and are mostly available through preprocessors like [babel][babel]. In [Node.js][node-js] environments however [CommonJS modules][cjs-modules] are used. They usually take the following form (note that there is no `default` export):
+There are different kinds of [modules][concept-module], each with a different way to export. The examples above are all [ECMAScript 6 modules][es6-modules] and are mostly available through preprocessors like [Babel][babel]. In [Node.js][node-js] environments however [CommonJS modules][cjs-modules] are used. They usually take the following form (note that there is no `default` export):
 
 ```js
 var foo = 42;
@@ -61,7 +61,7 @@ module.exports = {
 
 ## Where to use
 
-The `export` keyword, just like `import`, can only be used in a module, which means it has to be run in [Node.js][node-js], transpiled by [babel][babel] or similar, or be used in a [file included in the browser directly][es-modules-in-browser] using `<script type="module" src="…">`.
+The `export` keyword, just like `import`, can only be used in a module, which means it has to be run in [Node.js][node-js], transpiled by [Babel][babel] or similar, or be used in a [file included in the browser directly][es-modules-in-browser] using `<script type="module" src="…">`.
 
 ## Further reading
 

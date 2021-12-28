@@ -166,14 +166,14 @@ You may improve these files by making the required changes and opening a new Pul
 
 ## Tools
 
-You'll need LTS or higher NodeJS in order to contribute to the _code_ in this repository.
+You'll need LTS or higher Node.js in order to contribute to the _code_ in this repository.
 Run `npm install` in the root in order to be able to run the scripts as listed below.
 We use the following dependencies:
 
 - `shelljs` in order to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file
 - `jest` to run all the test files on all example implementations
-- `babel` to transpile everything so it works _regardless of your version of NodeJS_.
+- `babel` to transpile everything so it works _regardless of your version of Node.js_.
 
 We also use `prettier` to format the files.
 **Prettier is installed when using `npm install`**.
@@ -183,7 +183,7 @@ If you want to auto-format using your editor, install via `npm install` and it w
 ### Fetch configlet
 
 If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet] binary.
-It will run on Linux, Mac OSX and Windows, and download `configlet` to your local drive.
+It will run on Linux, macOS and Windows, and download `configlet` to your local drive.
 Find more information about [configlet][configlet] [here][configlet].
 
 > If a track implements an exercise for which test data exists, the exercise _must_ contain a `.meta/tests.toml` file.
@@ -215,17 +215,17 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 > SyntaxError: Unexpected token 'export'
 > ```
 >
-> It's because your local node version does **not** support es6
+> It's because your local Node.js version does **not** support es6
 > `import` and `export` statements in regular `.js` files, or
 > files without extension. This is one of the reasons why these
-> scripts are meant to be ran through node:
+> scripts are meant to be ran through Node.js:
 >
 > ```shell
 > npx babel-node scripts/the-script
 > ```
 >
 > Additionally, this ensures that the code written in the scripts
-> and their dependencies can be executed by your current node
+> and their dependencies can be executed by your current Node.js
 > version, which may be different than the maintainer or
 > contributor who contributed to the script.
 

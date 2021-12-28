@@ -2,7 +2,7 @@
 
 ## Setup
 
-Go through the setup instructions for Javascript to install the necessary
+Go through the setup instructions for JavaScript to install the necessary
 dependencies:
 
 [https://exercism.org/docs/tracks/javascript/installation](https://exercism.org/docs/tracks/javascript/installation)
