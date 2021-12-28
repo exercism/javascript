@@ -236,7 +236,13 @@
         "name": "Elyses Transformative Enchantments",
         "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
         "concepts": ["array-transformations"],
-        "prerequisites": ["numbers", "arrays", "conditionals", "callbacks", "arrow-functions"],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "conditionals",
+          "callbacks",
+          "arrow-functions"
+        ],
         "status": "beta"
       },
       {
