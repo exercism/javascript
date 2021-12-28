@@ -5,9 +5,9 @@ These methods make it much easier to convert one array into another than it othe
 
 Some methods are [_pure_][pure-function-definition], meaning that they no not modify the original array.
 They return a new one instead.
-Other methods however manipulate the array they are called on and not **not** return the modified array.
+Other methods however manipulate the array they are called on and do **not** return the modified array.
 
-Here is a presentation of some of the most commonly used methods.
+Some of the most commonly used methods to transform arrays are presented below.
 A full list of available methods can be found in the [MDN documentation][array-methods].
 
 ### map (pure)
@@ -116,7 +116,7 @@ arr.splice(2, 0, '3');
 console.log(arr);
 // => ['1', '2', '3', '5', '6']
 
-// Remove 2 elements, starting at index 3 an insert 2 elements
+// Remove 2 elements, starting at index 3 and insert 2 elements
 const removed = arr.splice(3, 2, '4', '5');
 console.log(removed);
 // => ['5', '6']
