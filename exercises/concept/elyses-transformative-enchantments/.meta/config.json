@@ -1,7 +1,7 @@
 {
-  "blurb": "TODO: add blurb for elyses-transformative-enchantments exercise",
+  "blurb": "Elyse has grown her magical powers and attempts some really cool tricks now while you learn about transforming arrays.",
   "authors": ["yyyc514"],
-  "contributors": ["SleeplessByte"],
+  "contributors": ["SleeplessByte", "junedev"],
   "files": {
     "solution": ["enchantments.js"],
     "test": ["enchantments.spec.js"],

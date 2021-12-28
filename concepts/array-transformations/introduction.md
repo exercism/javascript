@@ -5,9 +5,9 @@ These methods make it much easier to convert one array into another than it othe
 
 Some methods are [_pure_][pure-function-definition], meaning that they no not modify the original array.
 They return a new one instead.
-Other methods however manipulate the array they are called on and not **not** return the modified array.
+Other methods however manipulate the array they are called on and do **not** return the modified array.
 
-Here is a presentation of some of the most commonly used methods.
+Some of the most commonly used methods to transform arrays are presented below.
 A full list of available methods can be found in the [MDN documentation][array-methods].
 
 ### map (pure)
@@ -100,6 +100,7 @@ arr.slice(-2); // [3, 4]
 ### splice
 
 Removes or replaces and/or adds new elements of an array.
+
 It takes the following parameters:
 
 - the index of the element where to start modifying the array
@@ -116,7 +117,7 @@ arr.splice(2, 0, '3');
 console.log(arr);
 // => ['1', '2', '3', '5', '6']
 
-// Remove 2 elements, starting at index 3 an insert 2 elements
+// Remove 2 elements, starting at index 3 and insert 2 elements
 const removed = arr.splice(3, 2, '4', '5');
 console.log(removed);
 // => ['5', '6']
@@ -129,6 +130,40 @@ console.log(arr);
 // => ['1', '3', '4', '5']
 ```
 
+### sort
+
+By default, `sort` sorts the elements of an array by first converting them to strings and then applying string comparison (see [Concept Comparison][concept-comparison]).
+The sorting happens _in-place_ which means the original array is modified.
+`sort` also returns that modified array which is convenient if you want to chain other methods to it.
+
+```javascript
+const arr = ['c', 'a', 'z', 'b'];
+const result = arr.sort();
+console.log(result);
+// => ['a', 'b', 'c', 'z']
+console.log(arr);
+// => ['a', 'b', 'c', 'z']
+```
+
+To customize the sorting behavior, you can pass a comparison function as an argument.
+The comparison function itself is called with two arguments which are two elements of the array.
+It then needs to return the following:
+
+- a negative number if the first argument should be sorted before the second
+- a positive number if the first argument should be sorted after the second
+- `0` if the order of the elements should stay the same
+
+For example, to sort numbers the following comparison function can be used.
+
+```javascript
+const arr = [3, 1, 2, 10];
+arr.sort((a, b) => a - b);
+// => [1, 2, 3, 10]
+// "a - b" is negative when b is greater than a, positive when
+// a is greater than b and 0 when they are equal.
+```
+
 [pure-function-definition]: https://en.wikipedia.org/wiki/Pure_function
 [array-methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
+[concept-comparison]: /tracks/javascript/concepts/comparison
