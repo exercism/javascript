@@ -4,7 +4,7 @@ JavaScript has a built in object: `Date`, which stores date and time, and provid
 
 ## Creation
 
-A Date object can be created without arguments to obtain the current date and time:
+A `Date` object in an instance of the `Date` class. It can be created without passing any arguments to the constructor function. This results in a `Date` object that represents the current date and time:
 
 ```javascript
 let now = new Date();
@@ -39,7 +39,9 @@ Early Unix engineers picked that date arbitrarily because they needed to set a u
 
 ### Timestamp string
 
-A string value representing a date is used, specified in a format recognized by `Date.parse()` method, about which you will learn soon in this article.
+You can pass a string value representing a date to the `Date` constructor.
+The string needs to follow a format that is recognized by the `Date.parse()` method.
+You will learn more about this below.
 
 ### Date object
 
