@@ -12,7 +12,7 @@ import { myExport as expert } from 'module-name'; // Only imports the myExport b
 import { default as namedDefault, myExport } from 'module-name'; // Imports the default export as namedDefault, and myExport
 ```
 
-Typically, the `module-name` can be either a [NPM][npm]-installed package – which reside in the `node_modules/` directory – or a relative link, such as `./myFile.js`. But there are also JavaScript interpreter out there, where those `modules` can even be URLs, like in [deno][deno].
+Typically, the module name can be either a [NPM][npm]-installed package – which reside in the `node_modules/` directory – or a relative link, such as `./myFile.js`. There are also JavaScript interpreters where modules can be URLs, like in [deno][deno].
 
 ## ECMAScript 6 modules vs CommonJS modules
 
@@ -22,7 +22,7 @@ Mentioned above are all import statements valid in [ECMAScript][ecma-script]. Be
 const allExports = require('module-name'); // Loads all exports for access via `allExports.namedExport`
 ```
 
-This was the primarily way of importing modules in Node.js, but current versions also understand the newer ECMAScript version as described above. Read more on modules on the [module page][concept-module].
+This was the primary way of importing modules in Node.js, but current versions also understand the newer ECMAScript version as described above. Read more on modules on the [module page][concept-module].
 
 ## Where to use
 
