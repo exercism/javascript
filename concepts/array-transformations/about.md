@@ -129,6 +129,76 @@ console.log(arr);
 // => ['1', '3', '4', '5']
 ```
 
+### sort
+
+By default, `sort` sorts the elements of an array by first converting them to strings and then applying string comparison (see [Concept Comparison][concept-comparison]).
+The sorting happens _in-place_ which means the original array is modified.
+`sort` also returns that modified array which is convenient if you want to chain other methods to it.
+
+```javascript
+const arr = ['c', 'a', 'z', 'b'];
+const result = arr.sort();
+console.log(result);
+// => ['a', 'b', 'c', 'z']
+console.log(arr);
+// => ['a', 'b', 'c', 'z']
+```
+
+````exercism/caution
+This default behavior leads to wrong results when you try to sort numbers.
+
+```javascript
+const arr = [3, 1, 2, 10];
+arr.sort();
+// => [1, 10, 2, 3]
+// Because the string '10' comes before '2' in dictionary order.
+```
+````
+
+To customize the sorting behavior, you can pass a comparison function as an argument.
+The comparison function itself is called with two arguments which are two elements of the array.
+It then needs to return the following:
+
+- a negative number if the first argument should be sorted before the second
+- a positive number if the first argument should be sorted after the second
+- `0` if the order of the elements should stay the same
+
+With that, the issue of sorting numbers can be fixed by passing the correct comparison function.
+
+```javascript
+const arr = [3, 1, 2, 10];
+arr.sort((a, b) => a - b);
+// => [1, 2, 3, 10]
+// "a - b" is negative when b is greater than a, positive when
+// a is greater than b and 0 when they are equal.
+```
+
+Here an example how to use a custom comparison function can be used to sort an array of objects.
+
+```javascript
+const arr = [
+  { name: 'Lydia', age: 7 },
+  { name: 'Anne', age: 34 },
+  { name: 'Holger', age: 59 },
+];
+
+arr.sort((item1, item2) => {
+  if (item1.name < item2.name) {
+    return -1;
+  }
+  if (item1.name > item2.name) {
+    return 1;
+  }
+  return 0;
+});
+// => [ { name: 'Anne', age: 34 }, { name: 'Holger', age: 59 },
+// { name: 'Lydia', age: 7 } ]
+```
+
+Since 2019, the language specification states that the sorting has to be [_stable_][stable-sort] but there are no guarantees regarding the performance (time and space complexity).
+
 [pure-function-definition]: https://en.wikipedia.org/wiki/Pure_function
 [array-methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
+[concept-comparison]: /tracks/javascript/concepts/comparison
+[stable-sort]: https://en.wikipedia.org/wiki/Sorting_algorithm#Stability

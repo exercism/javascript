@@ -100,6 +100,7 @@ arr.slice(-2); // [3, 4]
 ### splice
 
 Removes or replaces and/or adds new elements of an array.
+
 It takes the following parameters:
 
 - the index of the element where to start modifying the array
@@ -129,6 +130,40 @@ console.log(arr);
 // => ['1', '3', '4', '5']
 ```
 
+### sort
+
+By default, `sort` sorts the elements of an array by first converting them to strings and then applying string comparison (see [Concept Comparison][concept-comparison]).
+The sorting happens _in-place_ which means the original array is modified.
+`sort` also returns that modified array which is convenient if you want to chain other methods to it.
+
+```javascript
+const arr = ['c', 'a', 'z', 'b'];
+const result = arr.sort();
+console.log(result);
+// => ['a', 'b', 'c', 'z']
+console.log(arr);
+// => ['a', 'b', 'c', 'z']
+```
+
+To customize the sorting behavior, you can pass a comparison function as an argument.
+The comparison function itself is called with two arguments which are two elements of the array.
+It then needs to return the following:
+
+- a negative number if the first argument should be sorted before the second
+- a positive number if the first argument should be sorted after the second
+- `0` if the order of the elements should stay the same
+
+For example, to sort numbers the following comparison function can be used.
+
+```javascript
+const arr = [3, 1, 2, 10];
+arr.sort((a, b) => a - b);
+// => [1, 2, 3, 10]
+// "a - b" is negative when b is greater than a, positive when
+// a is greater than b and 0 when they are equal.
+```
+
 [pure-function-definition]: https://en.wikipedia.org/wiki/Pure_function
 [array-methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
+[concept-comparison]: /tracks/javascript/concepts/comparison

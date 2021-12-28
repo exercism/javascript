@@ -37,6 +37,8 @@ middleTwo(deck);
 
 Elyse wants to move the top and bottom cards of the deck into the middle, in reverse order.
 
+You can assume that the deck has an even number of cards.
+
 ```javascript
 const deck = [1, 2, 3, 5, 6, 10];
 sandwichTrick(deck);
@@ -63,13 +65,13 @@ perfectlyOrdered(deck);
 // => [1, 2, 3, 5, 7, 8, 10]
 ```
 
-## 7. Change every card to the total number of cards
+## 7. Reorder the deck
 
-Elyse will transform the whole deck into only cards that match the deck size.
-Hand her 7 random cards and you'll get back 7 sevens.
+Elyse wants to change the order of the cards in the deck.
+After the trick, the card that is currently at the top should end up at the bottom of the deck. The second card should end up second last etc.
 
 ```javascript
-const deck = [10, 1, 5, 3, 2, 8, 7]; // 7 cards
-countingCards(deck);
-// => [7, 7, 7, 7, 7, 7, 7]
+const deck = [10, 1, 5, 3, 2];
+reorder(deck);
+// => [2, 3, 5, 1, 10]
 ```
