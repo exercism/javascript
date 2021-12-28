@@ -1,0 +1,11 @@
+{
+  "blurb": "Learn about prototypes and classes by developing a windowing system.",
+  "authors": ["junedev"],
+  "contributors": [],
+  "files": {
+    "solution": ["windowing-system.js"],
+    "test": ["windowing-system.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": ["swift/windowing-system"]
+}
