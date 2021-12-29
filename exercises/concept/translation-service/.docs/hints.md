@@ -10,8 +10,8 @@
 
 ## 2. Fetch a batch of translations, all-or-nothing
 
-- In order to return a promise with an error, create a `Promise` that is `rejected` from the start.
-- There is a helper method on `Promise` which waits for an array of promises to resolve, before it resolves itself.
+- To return a promise with an error, create a `Promise` that is `rejected` from the start.
+- There is a helper method on `Promise` that waits for an array of promises to resolve before it resolves itself.
 
 ## 3. Request a translation, retrying at most 2 times
 

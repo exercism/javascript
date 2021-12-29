@@ -1,6 +1,6 @@
 # About
 
-_Closures_ are a programming pattern in JavaScript which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a nested block of code. JavaScript supports closures transparently, and they are often used without knowing what they are.
+_Closures_ are a programming pattern in JavaScript that allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a nested block of code. JavaScript supports closures transparently, and they are often used without knowing what they are.
 
 ```javascript
 // Top-level declarations are global-scope
@@ -69,7 +69,7 @@ In any programming language, **Closures** are closely related to variable scope.
 1. **Function-scope**: These are variables declared within a function using the `var` keyword.
 1. **Block-scope**: These are variables declared within a block (`{...}`) using the `let` and `const` keywords.
 
-In practice, a closure often occurs when a function (or block) uses a variable from an outer scope. In JavaScript this is supported transparently, so closures are often used without specific reference.
+In practice, a closure often occurs when a function (or block) uses a variable from an outer scope. In JavaScript, this is supported transparently, so closures are often used without specific reference.
 
 ### Function-scope
 
@@ -86,7 +86,7 @@ var tenTimes = five * 10;
 
 ### Block-scope
 
-The `let` and `const` keywords define a **block-scoped** variables. `let` defines a mutable variable, whose value may be set multiple times and may be defined but not initialized. `const` defines a variable which must be initialized when it is defined, and its value then may not change. If the `const` variable is set to a primitive value, it may not be mutated. If the `const` variable is set to a reference value, like an _array_ or _object_, the reference may not change but the array's contents may be mutated.
+The `let` and `const` keywords define a **block-scoped** variables. `let` defines a mutable variable, whose value maybe set multiple times and may be defined but not initialized. `const` defines a variable which must be initialized when it is defined, and its value then may not change. If the `const` variable is set to a primitive value, it may not be mutated. If the `const` variable is set to a reference value, like an _array_ or _object_, the reference may not change but the array's contents may be mutated.
 
 Consider this block:
 
@@ -99,7 +99,7 @@ const two = 2;
   const oneLess = two - 1;
 }
 
-// This throws an error, because oneLess is not defined outside of the previous inner lexical scope
+// This throws an error because oneLess is not defined outside of the previous inner lexical scope
 console.log(oneLess);
 ```
 

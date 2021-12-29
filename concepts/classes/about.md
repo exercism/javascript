@@ -4,7 +4,7 @@ JavaScript includes the capabilities for object-oriented programming ([OOP][wiki
 In OOP, you want to create objects (_instances_) from "templates" (_classes_) so that they include certain data and functionality.
 The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
 
-JavaScript did not have classes at all before they were added to the language specification in 2015, but allowed for object-oriented programming using prototype-based inheritance.
+JavaScript did not have classes at all before they were added to the language specification in 2015 but allowed for object-oriented programming using prototype-based inheritance.
 And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
 To understand what it means to be a prototype-based language and how JavaScript actually works, we will go back to the time when there were no classes.
@@ -98,7 +98,7 @@ myCar.engineRunning;
 
 ### The Prototype Chain
 
-`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console), we would not find a property `startEngine` with a function as value directly inside the `myCar` object.
+`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console), we would not find a property `startEngine` with a function as a value directly inside the `myCar` object.
 So how does the code above even work then?
 
 The secret here is called the _prototype chain_.
@@ -166,7 +166,7 @@ Nowadays, JavaScript supports defining classes with a `class` keyword.
 This was added to the language specification in 2015.
 On the one hand, this provides syntactic sugar that makes classes easier to read and write.
 The new syntax is more similar to how classes are written in languages like C++ or Java.
-Developers switching over from those languages have an easier time to adapt.
+Developers switching over from those languages have an easier time adapting.
 On the other hand, class syntax paves the way for new language features that are not available in the prototype syntax.
 
 ### Class Declarations
@@ -210,7 +210,7 @@ All the mechanisms we learned about in the "Prototype Syntax" section above stil
 By default, all instance fields are public in JavaScript.
 They can be directly accessed and assigned to.
 
-Adding actual private fields to the language specification is work in progress, see the [proposal document][proposal-private-fields] for details.
+Adding actual private fields to the language specification is a work in progress, see the [proposal document][proposal-private-fields] for details.
 
 In the meantime, you can make use of the established convention that fields and methods that start with an underscore should be treated as private.
 They should never be accessed directly from outside the class.

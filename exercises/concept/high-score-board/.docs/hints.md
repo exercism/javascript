@@ -26,12 +26,12 @@
 ## 5. Apply Monday bonus points
 
 - Use a `for...in` loop to go through all keys in the object.
-- For each key, set the new value like you did in task 4.
+- For each key, set the new value as you did in task 4.
 
 ## 6. Normalize a high score
 
 - You can access the normalization function like you would access any other key in the object.
-- Then you can call that function using round brackets and pass in the score as argument.
+- Then, you can call that function using round brackets and pass in the score as an argument.
 
 [mdn-delete]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete
 [mdn-shorthand-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment

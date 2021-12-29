@@ -25,7 +25,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 When you want to work with the value directly in each iteration and do not require the index at all, you can use a `for .. of` loop.
 
-`for...of` works like the basic `for` loop shown above, but instead of having to deal with the _index_ as variable in the loop, you are provided with the _value_ directly.
+`for...of` works like the basic `for` loop shown above, but instead of having to deal with the _index_ as a variable in the loop, you are provided with the _value_ directly.
 
 ```javascript
 const numbers = [6.0221515, 10, 23];
@@ -87,7 +87,7 @@ You can see an example in the ["Using thisArg" section on MDN][mdn-foreach-thisa
 There are a couple of things you should keep in mind when working with `forEach`.
 
 - There is no way to stop the iteration once the `forEach` loop has started.
-  The statements `break` and `continue` do not exist it this context.
+  The statements `break` and `continue` do not exist in this context.
 - `forEach` behaves weirdly if you modify the array after starting the loop.
   Elements you add to the end will be ignored, removing elements can lead to others being skipped, etc.
   To avoid these kinds of issues, never modify the underlying array in the callback.

@@ -1,8 +1,8 @@
 # About
 
-JavaScript is a dynamic, prototype based language. It has a few [primitives][mdn-primitive], and everything else is considered an object.
+JavaScript is a dynamic, prototype-based language. It has a few [primitives][mdn-primitive], and everything else is considered an object.
 
-While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js. The language is actively being developed; and because of it's multi-paradigm property, allows for many styles of programming. JavaScript is a dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js. The language is actively being developed; and because of its multi-paradigm property, allows for many styles of programming. JavaScript is a dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 ## (Re-)Assignment
 
@@ -32,7 +32,7 @@ MY_FIRST_CONSTANT = 20;
 
 The `const` keyword is mentioned _both_ for variables and constants. Another concept often mentioned around constants is [(im)-mutability][wiki-mutability].
 
-The `const` keyword only makes the _binding_ immutable, that is, you can only assign a value to a `const` variable once. In JavaScript, only [primitive][mdn-primitive] values are immutable. However, [non primitive][mdn-primitive] values can still be mutated.
+The `const` keyword only makes the _binding_ immutable, that is, you can only assign a value to a `const` variable once. In JavaScript, only [primitive][mdn-primitive] values are immutable. However, [non-primitive][mdn-primitive] values can still be mutated.
 
 ```javascript
 const MY_MUTABLE_VALUE_CONSTANT = { food: 'apple' };

@@ -34,7 +34,7 @@ while (i < 100) {
     continue;
   }
 
-  // The code here will only executed when i was not divisible
+  // The code here will only be executed when i was not divisible
   // by 3 in the check above.
 }
 ```

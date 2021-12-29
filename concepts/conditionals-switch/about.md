@@ -37,9 +37,9 @@ You can find an example of this in the [MDN documentation][mdn-group-cases].
 
 ## Scope
 
-By default the variables in the different `case` statements share the same scope.
+By default, the variables in the different `case` statements share the same scope.
 This can lead to unexpected behavior.
-For example due to copying and pasting a case, you could end up with a `let message` declaration in two cases which results in an error, see [MDN documentation][mdn-switch-scope].
+For example, due to copying and pasting a case, you could end up with a `let message` declaration in two cases which results in an error, see [MDN documentation][mdn-switch-scope].
 To avoid problems due to the shared scope, you can create a separate scope for each case statement by adding code blocks with curly brackets for each case.
 
 ```javascript
@@ -61,7 +61,7 @@ switch (x) {
 ## Using Expressions
 
 Instead of a variable `x`, you can also use an expression.
-That expression is evaluated once at the beginning of the switch statement and the result compared against the cases.
+That expression is evaluated once at the beginning of the switch statement and the result is compared against the cases.
 A common use of this is a "type switch" that executes different code depending on the type of a variable.
 
 <!-- prettier-ignore-start -->

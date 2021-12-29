@@ -1,8 +1,8 @@
 # About
 
-[_Callbacks_ describe the pattern][wiki-callbacks] where a function receives a function as an argument to invoke when it arrives at a condition. The condition may be that its own work is done, or that an event has occurred, or that some predicate passes. It can be synchronous; it can be asynchronous.
+[_Callbacks_ describe the pattern][wiki-callbacks] where a function receives a function as an argument to invoke when it arrives at a condition. The condition may be that its work is done, or that an event has occurred, or that some predicate passes. It can be synchronous; it can be asynchronous.
 
-This is a useful pattern in JavaScript because it is designed as a single-threaded runtime where only one function call can be executed at a time. During execution, the runtime cannot respond to other events or continue execution until the function has returned. You might have noticed this on website when they seem to "freeze" or become unresponsive.
+This is a useful pattern in JavaScript because it is designed as a single-threaded runtime where only one function call can be executed at a time. During execution, the runtime cannot respond to other events or continue execution until the function has returned. You might have noticed this on websites when they seem to "freeze" or become unresponsive.
 
 But many API calls (often I/O functions, timers, and event listeners) use an asynchronous mechanism to place the [current function call][mdn-concurrency-stack] on the side until the work is complete. Upon completion, a callback function is placed on the [message queue][mdn-concurrency-queue] so that when the runtime is in between function calls, the messages are then processed by invoking the callback function.
 
@@ -82,7 +82,7 @@ function callback(error, returnedData) {
     return
   }
 
-  // No error occurred, continue on with the returned data.
+  // No error occurred, continue with the returned data.
 }
 
 operation(1, 2, callback)

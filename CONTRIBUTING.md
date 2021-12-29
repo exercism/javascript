@@ -1,8 +1,8 @@
 # Contributing
 
-This is the JavaScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete.The track consists of various **concept** exercises which teach the [JavaScript syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
+This is the JavaScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **concept** exercises which teach the [JavaScript syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
 You can find this in the [`config.json`][file-config].
-It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
+It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track-specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
@@ -37,7 +37,7 @@ We welcome contributions of all sorts and sizes, from reporting issues to submit
 
 ---
 
-This guide covers several common scenarios pertaining to **improving the JavaScript track**.
+This guide covers several common scenarios on **improving the JavaScript track**.
 There are several other guides about contributing to other parts of the Exercism ecosystem, that are similar to this repository.
 
 - [Generic information about track-contributing][contributing-generic]
@@ -79,14 +79,14 @@ The baseline of work is as follows:
    You can use `scripts/sync` to do this: `ASSIGNMENT=slug npx babel-node scripts/sync`.
 1. Create a `<slug>.js` stub file.
 1. Create a `<slug>.spec.js` test file. Here add the tests, per canonical data if possible (more on canonical data below).
-1. Create a `example.js` file. Place a working implementation, assuming it's renamed to `<slug>.js`
+1. Create an `example.js` file. Place a working implementation, assuming it's renamed to `<slug>.js`
 1. Create `.meta/tests.toml`.
    If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented.
-   Scroll down to [tools](#tools) to find configlet which aids generating this file _interactively_.
+   Scroll down to [tools](#tools) to find configlet which aids in generating this file _interactively_.
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug npx babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug npx babel-node scripts/lint`.
 1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane.
-   Currently the file is ordered first on concept exercise, then on "original core", finally everything else, on difficulty low to high, and ultimately lexicographically.
+   Currently, the file is ordered first on concept exercise, then on "original core", finally everything else, on difficulty low to high, and ultimately lexicographically.
 1. Format the files, using `scripts/format`: `npx babel-node scripts/format`.
 
 The final step is opening a Pull Request, with these items all checked off.
@@ -118,11 +118,11 @@ For _practice_ exercises, `README.md` is generated from a canonical source.
 `README.md`: the description that shows up on the student's exercise page, when they are ready to start.
 It's also downloaded as part of the exercise's data. The `README.md`, together with the `<slug>.spec.js` file form the contract for the implementation of the exercise.
 No test should _force_ a specific implementation, no `README.md` explanation should _give away_ a certain implementation.
-The `README.md` files are [generated][doc-readme], which is explains [here][doc-readme].
+The `README.md` files are [generated][doc-readme], which is explained [here][doc-readme].
 
-- This file may need to be _regenerated_ in order to sync with the latest canonical data.
+- This file may need to be _regenerated_ to sync with the latest canonical data.
 - You may contribute track specific `hints.md`, as listed in that [document][doc-readme]
-- You may improve the track specific `exercise-readme-insert.md`, and regenerate all the READMEs.
+- You may improve the track-specific `exercise-readme-insert.md`, and regenerate all the READMEs.
 
 For _concept_ exercises, `README.md` is generated from the various docs inside the exercise `.docs` directory.
 
@@ -149,7 +149,7 @@ Syncing an exercise consists of:
 
 #### Improving or adding mentor notes
 
-[Mentor notes][mentor-notes] are the notes that are given to the mentors to guide them with mentoring.
+[Mentor notes][mentor-notes] are the notes given to the mentors to guide them with mentoring.
 These notes _do not live in this repository_, but instead in the `website-copy` repository.
 Find their [contributing guidelines][contributing-website-copy] [here][contributing-website-copy].
 
@@ -166,11 +166,11 @@ You may improve these files by making the required changes and opening a new Pul
 
 ## Tools
 
-You'll need LTS or higher Node.js in order to contribute to the _code_ in this repository.
-Run `npm install` in the root in order to be able to run the scripts as listed below.
+You'll need LTS or higher Node.js to contribute to the _code_ in this repository.
+Run `npm install` in the root to be able to run the scripts as listed below.
 We use the following dependencies:
 
-- `shelljs` in order to provide shell interface to scripts
+- `shelljs` to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file
 - `jest` to run all the test files on all example implementations
 - `babel` to transpile everything so it works _regardless of your version of Node.js_.
@@ -207,9 +207,9 @@ It then interactively gives the maintainer the option to include or exclude test
 
 ### Scripts
 
-We have various `scripts` for you in order to aid with maintaining and contributing to this repository.
+We have various `scripts` to aid with maintaining and contributing to this repository.
 
-> ⚠ If you into into the following error:
+> ⚠ If you encounter the following error:
 >
 > ```text
 > SyntaxError: Unexpected token 'export'
@@ -218,7 +218,7 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 > It's because your local Node.js version does **not** support es6
 > `import` and `export` statements in regular `.js` files, or
 > files without extension. This is one of the reasons why these
-> scripts are meant to be ran through Node.js:
+> scripts are meant to be run through Node.js:
 >
 > ```shell
 > npx babel-node scripts/the-script
@@ -226,8 +226,8 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 >
 > Additionally, this ensures that the code written in the scripts
 > and their dependencies can be executed by your current Node.js
-> version, which may be different than the maintainer or
-> contributor who contributed to the script.
+> version, which may be different from the version used by the
+> maintainer or contributor who contributed to the script.
 
 #### `format`
 
@@ -305,9 +305,9 @@ ASSIGNMENT=two-fer npx babel-node scripts/sync
  * Run this script (from root directory): npx babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
- * But the catch is there are some dependencies used for build but not served to end users
- * We skip those dependencies while performing checksum.
- * See `SKIP_PACKAGES_FOR_CHECKSUM` in helpers.js for list of skipped packages.
+ * But the catch is there are some dependencies that are only used at build-time and not served to end-users
+ * We skip those dependencies while performing the checksum.
+ * See `SKIP_PACKAGES_FOR_CHECKSUM` in helpers.js for a list of skipped packages.
  */
 ```
 
@@ -317,7 +317,7 @@ ASSIGNMENT=two-fer npx babel-node scripts/sync
 /**
  * Run this script (from root directory): npx babel-node scripts/ci-check
  *
- * This will run following checks:
+ * This will run the following checks:
  *
  * 1. Check config in all exercises matches
  * 2. Checks stubs exist
@@ -333,7 +333,7 @@ Run this script to check stubs, configuration integrity and lint the code.
 /**
  * Run this script (from root directory): npx babel-node scripts/ci
  *
- * This will run following checks:
+ * This will run the following checks:
  *
  * 1. Find the exercises
  * 2. Run tests against sample solutions
@@ -348,7 +348,7 @@ Run this script to test all exercises.
 /**
  * Run this script (from root directory): npx babel-node scripts/name-check
  *
- * This will run following checks:
+ * This will run the following checks:
  *
  * 1. Package name is of the format "@exercism/javascript-<exercise>"
  *
@@ -356,7 +356,7 @@ Run this script to test all exercises.
  */
 ```
 
-Run this script to check if package name in package.json of exercises is in expected format or to fix it.
+Run this script to check if the package name in package.json of exercises is in the expected format or to fix it.
 
 #### `name-uniq`
 
@@ -364,7 +364,7 @@ Run this script to check if package name in package.json of exercises is in expe
 /**
  * Run this script (from root directory): npx babel-node scripts/name-uniq
  *
- * This will run following checks:
+ * This will run the following checks:
  *
  * 1. All exercises have unique package names in their package.json files.
  */
@@ -378,15 +378,15 @@ Run this script to check if there is any duplicate package name.
 /**
  * Run this script (from root directory): npx babel-node scripts/directory-check
  *
- * This will run following checks:
+ * This will run the following checks:
  *
- * 1. Package has the correct directory based on the path to the exercise.
+ * 1. The package has the correct directory based on the path to the exercise.
  *
  * This script also allows fixing these directories: npx babel-node scripts/directory-check --fix
  */
 ```
 
-Run this script to check if package repository directory in package.json of exercises is in expected format or to fix it.
+Run this script to check if the package repository directory in package.json of the exercises is in expected format or to fix it.
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the directory for `concept/closures`, you may, depending on your environment, use:
 

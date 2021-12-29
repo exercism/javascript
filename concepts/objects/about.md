@@ -12,7 +12,7 @@ The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
 This makes objects very versatile so that they are also key entities for [object-oriented programming][oop] (OOP) in JavaScript.
 
-In the following we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][classes].
+In the following, we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][classes].
 
 ## Creating an Object
 
@@ -115,7 +115,7 @@ obj[key];
 // => hello world
 ```
 
-Using the dot notation as a short-hand has the same restriction as omitting the quotation marks.
+Using the dot notation as a shorthand has the same restriction as omitting the quotation marks.
 It only works if the key follows the identifier naming rules.
 
 If you try to retrieve a key that does not exist in the object, JavaScript returns `undefined`.
@@ -145,7 +145,7 @@ obj.address['city'];
 ## Adding or Changing a Value
 
 You can add or change a value using the assignment operator `=`.
-Again, there is dot and bracket notation available.
+Again, there are dot and bracket notations available.
 
 ```javascript
 const obj = { greeting: 'hello world' };
@@ -192,7 +192,7 @@ obj.hasOwnProperty('age');
 ```
 
 `hasOwnProperty` returns `false` for [inherited keys][concept-inheritance]. This is usually the desired behavior.
-If you want include inherited keys in the existence check you can use the [`in` operator][mdn-in-operator] instead.
+If you want to include inherited keys in the existence check you can use the [`in` operator][mdn-in-operator] instead.
 
 ## Looping Through an Object
 
@@ -212,7 +212,7 @@ for (let key in obj) {
 ```
 
 It might seem like `for...in` always visits the keys in the order in which they appear or were added to the object (insertion order).
-Nevertheless you should not rely on this because there are special cases where the order will differ from the insertion order.
+Nevertheless, you should not rely on this because there are special cases where the order will differ from the insertion order.
 Always write your code as if the order would be arbitrary.
 If you need a reliable order, use a [`Map`][jsinfo-map] or a nested [array][concept-arrays] instead of an object.
 
@@ -256,7 +256,7 @@ Object.entries(obj);
 
 You might have noticed that an empty object in JavaScript is not completely empty.
 For example, it contains the `hasOwnProperty` method and other methods like `toString`.
-Usually that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
+Usually, that does not cause any problems but if you ever need to create a truly empty object use a [null object][mdn-null-object] that can be created via `Object.create(null)`.
 
 [oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
 [classes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes

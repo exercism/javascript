@@ -11,7 +11,7 @@ etc.
 
 ## 1. Retrieve a card from a stack
 
-In order to pick a card, return the card at index `position` from
+To pick a card, return the card at index `position` from
 the given stack.
 
 ```javascript
@@ -35,7 +35,7 @@ setItem([1, 2, 4, 1], position, newCard);
 
 ## 3. Insert a card at the top of the stack
 
-Make a card appear, by inserting a new card at the top of the stack.
+Make a card appear by inserting a new card at the top of the stack.
 Return the adjusted stack.
 
 ```javascript
@@ -67,7 +67,7 @@ removeItemFromTop([3, 2, 6, 4, 8]);
 
 ## 6. Insert a card at the bottom of the stack
 
-Make a card appear, by inserting a new card at the bottom of the stack.
+Make a card appear by inserting a new card at the bottom of the stack.
 Return the adjusted stack.
 
 ```javascript

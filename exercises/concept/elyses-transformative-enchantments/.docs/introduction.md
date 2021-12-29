@@ -3,7 +3,7 @@
 In JavaScript, the `Array` class has many powerful built-in methods for transforming arrays.
 These methods make it much easier to convert one array into another than it otherwise would be using a simple for loop or more direct manipulation.
 
-Some methods are [_pure_][pure-function-definition], meaning that they no not modify the original array.
+Some methods are [_pure_][pure-function-definition], meaning that they do not modify the original array.
 They return a new one instead.
 Other methods however manipulate the array they are called on and do **not** return the modified array.
 
@@ -81,11 +81,11 @@ This method modifies the array it is called on.
 
 ### slice (pure)
 
-Given a start and an end indexes, creates a sub-array from the array passed as parameter.
+Given a start and an end index, creates a sub-array from the array passed as a parameter.
 
 The element at the end index will not be included.
-Also all parameters are optional.
-The start index defaults to `0`, the end index defaults to the length of the array.
+Also, all parameters are optional:
+the start index defaults to `0`, and the end index defaults to the array length.
 
 ```javascript
 const arr = [1, 2, 3, 4];
@@ -153,7 +153,7 @@ It then needs to return the following:
 - a positive number if the first argument should be sorted after the second
 - `0` if the order of the elements should stay the same
 
-Here an example how to use a custom comparison function can be used to sort an array of objects.
+Here is an example of how to use a custom comparison function can be used to sort an array of objects.
 
 ```javascript
 const arr = [

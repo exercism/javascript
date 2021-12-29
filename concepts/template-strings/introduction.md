@@ -1,10 +1,10 @@
 # Introduction
 
 In JavaScript, _template strings_ allows for embedding expressions in strings, also referred to as string interpolation.
-This functionality extends the functionality of the built in [`String`][string-reference] global object.
+This functionality extends the functionality of the built-in [`String`][string-reference] global object.
 
 You can create template strings in JavaScript by wrapping text in backticks.
-They not only allow the text to include new lines and other special characters, you can also embed variables and other expressions.
+They not only allow the text to include new lines and other special characters, but you can also embed variables and other expressions.
 
 ```javascript
 const num1 = 1;
@@ -29,12 +29,12 @@ const track = 'JavaScript';
 When you are needing to have strings formatted on multiple lines:
 
 ```javascript
-`This is example of using template
+`This is an example of using template
 strings to accomplish multiple
 lines`;
 ```
 
-With the substitution capabilities that are available, you can also introduce logic into the process to determine what the output string should be.
+With the available substitution capabilities, you can also introduce logic into the process to determine what the output string should be.
 One way to handle the logic could be using the [ternary operator][ternary-operator].
 This gives the same conditional `if/else` functionality in a slightly different format.
 
