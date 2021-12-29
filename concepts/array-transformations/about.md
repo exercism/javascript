@@ -90,7 +90,7 @@ The start index defaults to `0`, the end index defaults to the length of the arr
 ```javascript
 const arr = [1, 2, 3, 4];
 
-arr.slice(1, 2); // [1]
+arr.slice(1, 2); // [2]
 arr.slice(1); // [2, 3, 4]
 // You can also use negative numbers, that represent the indexes
 // starting from the end of the array
