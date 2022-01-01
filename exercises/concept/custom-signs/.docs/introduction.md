@@ -34,7 +34,7 @@ strings to accomplish multiple
 lines`;
 ```
 
-With these substitution capabilities, you can also introduce logic into the process to determine what the output string should be.
+With the available substitution capabilities, you can also introduce logic into the process to determine what the output string should be.
 
 An example of this is embedding a [ternary operator][ternary-operator].
 This operator is a short form for writing an `if/else` statement.
