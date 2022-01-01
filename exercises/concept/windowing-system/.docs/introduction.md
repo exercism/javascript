@@ -2,12 +2,12 @@
 
 JavaScript includes the capabilities for object-oriented programming ([OOP][wiki-oop]).
 In OOP, you want to create objects (_instances_) from "templates" (_classes_) so that they include certain data and functionality.
-The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
+The data properties are called _fields_ in the OOP context, function properties are called _methods_.
 
-JavaScript did not have classes at all before they were added to the language specification in 2015, but allowed for object-oriented programming using prototype-based inheritance.
+JavaScript did not have classes at all before they were added to the language specification in 2015 but allowed for object-oriented programming using prototype-based inheritance.
 And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
-To understand what it means to be a prototype-based language and how JavaScript actually works, we will go back to the time when there were no classes.
+To understand what it means to be a prototype-based language and how JavaScript works, we will go back to the time when there were no classes.
 
 ## Prototype Syntax
 
@@ -93,7 +93,7 @@ myCar.engineRunning;
 
 ### The Prototype Chain
 
-`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console), we would not find a property `startEngine` with a function as value directly inside the `myCar` object.
+`myCar` in the example above is a regular JavaScript object and if we would inspect it (e.g. in the browser console), we would not find a property `startEngine` with a function as a value directly inside the `myCar` object.
 So how does the code above even work then?
 
 The secret here is called the _prototype chain_.
@@ -129,7 +129,7 @@ Nowadays, JavaScript supports defining classes with a `class` keyword.
 This was added to the language specification in 2015.
 On the one hand, this provides syntactic sugar that makes classes easier to read and write.
 The new syntax is more similar to how classes are written in languages like C++ or Java.
-Developers switching over from those languages have an easier time to adapt.
+Developers switching over from those languages have an easier time adapting.
 On the other hand, class syntax paves the way for new language features that are not available in the prototype syntax.
 
 ### Class Declarations

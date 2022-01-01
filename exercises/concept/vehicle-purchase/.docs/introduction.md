@@ -2,7 +2,7 @@
 
 ## Comparison
 
-In JavaScript numbers can be compared using the following relational and equality operators.
+In JavaScript, numbers can be compared using the following relational and equality operators.
 
 | Comparison             | Operator  |
 | ---------------------- | --------- |
@@ -13,7 +13,7 @@ In JavaScript numbers can be compared using the following relational and equalit
 | (Strict) Equals        | `a === b` |
 | Not (strict) equals    | `a !== b` |
 
-The result of the comparison is always a boolean value, so either `true` or `false`.
+The comparison result is always a boolean value: `true` or `false`.
 
 ```javascript
 1 < 3;
@@ -28,8 +28,8 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 // the exact same value.
 ```
 
-In JavaScript the comparison operators above can also be used to compare strings.
-In that case a dictionary (lexicographical) order is applied.
+In JavaScript, the comparison operators above can also be used to compare strings.
+In that case, a dictionary (lexicographical) order is applied.
 You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript
@@ -65,7 +65,7 @@ if (condition) {
 }
 ```
 
-To nest another condition into the `else` statement you can use `else if`.
+To nest another condition into the `else` statement, you can use `else if`.
 
 ```javascript
 if (condition1) {

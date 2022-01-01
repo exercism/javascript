@@ -4,7 +4,7 @@ In JavaScript, instances of an [`Array`][arrays-concept] are regular objects, de
 It includes the `length` property, as well as methods for traversing, analyzing and mutating the array.
 The array's elements are indexed properties of that array.
 Instead of manually iterating over those indexed properties, use array analysis.
-Many of the built-in functions that analyse the contents of an array, take a function that returns true or false as an argument. Such a function is called [`predicate`][predicate_in_programming]
+Many of the built-in functions that analyze the contents of an array take a function that returns true or false as an argument. Such a function is called a [`predicate`][predicate_in_programming]
 
 In general, using the abstractions/built-in methods is more idiomatic, readable and maintainable than using a `for` or `.forEach` equivalent.
 

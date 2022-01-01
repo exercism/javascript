@@ -20,7 +20,7 @@ function someName(param1, param2, param3) {
 
 ## Using a Function
 
-In JavaScript a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
+In JavaScript, a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
 
 ```javascript
 someName(arg1, arg2, arg3);
@@ -55,9 +55,9 @@ What this means in practice depends on the data type of the argument.
   However, since you are dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
-If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
-In many cases it makes sense to assign a more appropriate default value than `undefined`.
-This can by done by specifying default parameters directly in the function definition.
+If you provide fewer arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
+In many cases, it makes sense to assign a more appropriate default value than `undefined`.
+This can be done by specifying default parameters directly in the function definition.
 
 ```javascript
 function someName(param1 = defaultValue1, param2 = defaultValue2) {

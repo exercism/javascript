@@ -5,7 +5,7 @@ Besides that, JavaScript also performs _type coercion_ (implicit type conversion
 
 ## Type Conversion
 
-JavaScript does not have a construct to cast into a (different) type like many other languages but there are built-in helpers that can be used instead.
+JavaScript does not have a construct to cast into a (different) type like many other languages but some built-in helpers can be used instead.
 Most notably, the global objects `Boolean`, `Number` and `String` can be used as functions to convert a value to the respective type.
 
 ### Converting to a Boolean (Truthy/Falsy Values)
@@ -83,7 +83,7 @@ Note that in contrast to the last example, `Number()` called without any argumen
 
 JavaScript also provides the functions `parseInt` and `parseFloat`.
 They apply laxer rules as to which strings can be converted to a number.
-Because of that, `Number` should be preferred as conversion function to avoid unexpected outcomes.
+Because of that, `Number` should be preferred as the conversion function to avoid unexpected outcomes.
 
 ```javascript
 parseInt('123a45');
@@ -211,7 +211,7 @@ const degrees = 23;
 
 ### Numeric Context
 
-There are many operators that coerce the operands into numbers (if necessary) according to the logic of the `Number` function explained above.
+Many operators coerce the operands into numbers (if necessary) according to the logic of the `Number` function explained above.
 
 - Arithmetic operators: `+` (if no string is involved), `-`, `*`, `/`, `%`, `**`
 - Unary plus and unary negation operators: `+`, `-`
@@ -232,7 +232,7 @@ Number('1') + Number('2');
 ```
 
 Sometimes you will see the unary plus operator being used to coerce a string into a number.
-This is not recommended because it is much harder to read then the explicit `Number` call.
+This is not recommended because it is much harder to read than the explicit `Number` call.
 
 ```javascript
 const value = '42';

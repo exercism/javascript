@@ -2,7 +2,7 @@
 
 A function allows to group code into a reusable unit.
 There are multiple ways to define functions in JavaScript.
-Here we will look at _function declarations_ and _function expressions_..
+Here we will look at _function declarations_ and _function expressions_.
 Other possibilities like [arrow functions][concept-arrow-functions] will be covered in other concepts.
 
 ## Function Declaration
@@ -18,7 +18,7 @@ function someName(param1, param2, param3) {
 }
 ```
 
-In JavaScript a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
+In JavaScript, a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
 
 ```javascript
 someName(arg1, arg2, arg3);
@@ -34,9 +34,9 @@ When working with parameters inside the function body, be aware of possible side
   However, if you modify such an argument (e.g. add a key to an object), that also modifies the original value that was passed in.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
-If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
-In many cases it makes sense to assign a more appropriate default value than `undefined`.
-This can by done by specifying default parameters directly in the function definition.
+If you provide fewer arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
+In many cases, it makes sense to assign a more appropriate default value than `undefined`.
+This can be done by specifying default parameters directly in the function definition.
 
 ```javascript
 function someName(param1 = defaultValue1, param2 = defaultValue2) {

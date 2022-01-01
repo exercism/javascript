@@ -5,7 +5,7 @@ There is `null` and `undefined`.
 
 ## Null
 
-The primitive value `null` is used as intentional "empty value" for variables of any type.
+The primitive value `null` is used as an intentional "empty value" for variables of any type.
 
 ```javascript
 let name = null;
@@ -80,7 +80,7 @@ obj.residence?.street;
 There are situations where you want to apply a default value in case a variable is null or undefined (but only then).
 To address this, the nullish coalescing operator `??` was introduced in 2020.
 It returns the right-hand side operand only when the left-hand side operand is `null` or `undefined`.
-Otherwise the left-hand side operand is returned.
+Otherwise, the left-hand side operand is returned.
 
 ```javascript
 let amount = null;

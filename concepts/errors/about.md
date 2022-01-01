@@ -19,7 +19,7 @@ Using the `throw` syntax, you can throw an Error.
 throw new Error('Oops');
 ```
 
-When an Error is thrown, the current execution is stopped and resumes in the first catch block of the call stack.
+When an error is thrown, the current execution is stopped and resumes in the first catch block of the call stack.
 
 ```javascript
 try {
@@ -57,7 +57,7 @@ You can also define your own [Custom error Type][custom-error-type] by creating 
 class MyCustomError extends Error {}
 ```
 
-## Throwing non errors
+## Throwing non-errors
 
 While the syntax `throw` is usually used to throw an Error object, JavaScript is flexible and will let you throw a `string`, a `null` or any primitive type.
 

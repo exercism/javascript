@@ -2,9 +2,9 @@
 
 There are two different kinds of numbers in JavaScript - numbers and "bigints"
 
-Numbers are the most used, and represent numeric data type in the double-precision 64-bit floating point format.
+Numbers are the most used, and represent numeric data type in the double-precision 64-bit floating-point format.
 
-- `number`: a numeric data type in the double-precision 64-bit floating point format (IEEE 754).
+- `number`: a numeric data type in the double-precision 64-bit floating-point format (IEEE 754).
   Examples are `-6`, `-2.4`, `0`, `0.1`, `1`, `3.14`, `16.984025`, `25`, `976`, `1024.0` and `500000`.
 - `bigint`: a numeric data type that can represent _integers_ in the arbitrary precision format.
   Examples are `-12n`, `0n`, `4n`, and `9007199254740991n`.
@@ -19,7 +19,7 @@ There is no separate integer type in common everyday use.
 The `bigint` type is not designed to replace the `number` type for everyday uses.
 `42` is still a `Number`, not a `BigInt`.
 
-Number may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric lexical grammar [here][lexical-grammar].
+Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric lexical grammar [here][lexical-grammar].
 
 ## Built-in Object
 
@@ -79,7 +79,7 @@ See [comparison][concept-comparison] for more information on comparisons in gene
 
 ## Pitfalls
 
-Because numbers in JavaScript are floating point numbers, all math using these values is floating point math.
+Because numbers in JavaScript are floating-point numbers, all math using these values is floating-point math.
 Therefore, in JavaScript:
 
 ```javascript
@@ -87,7 +87,7 @@ Therefore, in JavaScript:
 // => false
 ```
 
-See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in depth explanation.
+See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in-depth explanation.
 
 [built-in-number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math

@@ -1,10 +1,10 @@
 # Instructions
 
-Lucian's girlfriend is on her way home and he hasn't cooked their anniversary dinner!
+Lucian's girlfriend is on her way home, and he hasn't cooked their anniversary dinner!
 
-In this exercise, you're going to write some code to help Lucian cook an exquisite lasagna from his favorite cook book.
+In this exercise, you're going to write some code to help Lucian cook an exquisite lasagna from his favorite cookbook.
 
-You have four tasks, all related to the time spent cooking the lasagna.
+You have four tasks related to the time spent cooking the lasagna.
 
 ## 1. Define the expected oven time in minutes
 

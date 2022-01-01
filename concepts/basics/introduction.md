@@ -26,7 +26,7 @@ MY_FIRST_CONSTANT = 20;
 // => TypeError: Assignment to constant variable.
 ```
 
-> 💡 In a later Concept Exercise the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
+> 💡 In a later Learning Exercise, the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
 
 ## Function Declarations
 
@@ -45,7 +45,7 @@ add(1, 3);
 
 ## Exposing to Other Files
 
-To make a `function`, a constant, or a variable available in _other files_, they need to be [exported][mdn-export] using the `export` keyword. Another file may then [import][mdn-import] these using the `import` keyword. This is also known as the module system. A great example is how all the tests work. Each exercise has at least one file, for example `lasagna.js`, which contains the _implementation_. Additionally there is at least one other file, for example `lasagna.spec.js`, that contains the _tests_. This file _imports_ the public (i.e. exported) entities in order to test the implementation:
+To make a `function`, a constant, or a variable available in _other files_, they need to be [exported][mdn-export] using the `export` keyword. Another file may then [import][mdn-import] these using the `import` keyword. This is also known as the module system. A great example is how all the tests work. Each exercise has at least one file, for example `lasagna.js`, which contains the _implementation_. Additionally, there is at least one other file, for example `lasagna.spec.js`, that contains the _tests_. This file _imports_ the public (i.e. exported) entities to test the implementation:
 
 ```javascript
 // file.js

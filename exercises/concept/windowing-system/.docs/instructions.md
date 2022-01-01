@@ -26,9 +26,9 @@ screenSize.height ║                 |      │                      │       
        v          ╚════════════════════════════════════════════════════════════╝
 ```
 
-📣 To practice your wide range of JavaScript skills, **try to solve task 1 and 2 with prototype syntax and the remaining tasks with class syntax**.
+📣 To practice your wide range of JavaScript skills, **try to solve tasks 1 and 2 with prototype syntax and the remaining tasks with class syntax**.
 
-## 1. Define Size for storing the windows dimensions
+## 1. Define Size for storing the dimensions of the window
 
 Define a class (constructor function) named `Size`.
 It should have two fields `width` and `height` that store the window's current dimensions.
@@ -106,7 +106,7 @@ However, the new size cannot exceed certain bounds.
 
 - The minimum allowed height or width is 1.
   Requested heights or widths less than 1 will be clipped to 1.
-- The maximum height and width depends on the current position of the window, the edges of the window cannot move past the edges of the screen.
+- The maximum height and width depend on the current position of the window, the edges of the window cannot move past the edges of the screen.
   Values larger than these bounds will be clipped to the largest size they can take.
   E.g. if the window's position is at `x` = 400, `y` = 300 and a resize to `height` = 400, `width` = 300 is requested, then the window would be resized to `height` = 300, `width` = 300 as the screen is not large enough in the `y` direction to fully accommodate the request.
 
@@ -148,10 +148,10 @@ programWindow.position.y;
 
 ## 6. Change a program window
 
-Implement an `changeWindow` method that accepts a `ProgramWindow` instance as input and changes the window to the specified size and position.
-The function should return the `ProgramWindow` instance that was passed in after the changes where applied.
+Implement a `changeWindow` method that accepts a `ProgramWindow` instance as input and changes the window to the specified size and position.
+The function should return the `ProgramWindow` instance that was passed in after the changes were applied.
 
-The window should get a width of 400, a height of 300 and and be positioned at x = 100, y = 150.
+The window should get a width of 400, a height of 300 and be positioned at x = 100, y = 150.
 
 ```javascript
 const programWindow = new ProgramWindow();

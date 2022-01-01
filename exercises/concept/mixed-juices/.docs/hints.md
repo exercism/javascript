@@ -12,7 +12,7 @@
 - Use a [while loop][mdn-while] to cut one lime after the other.
 - Revisit the [arrays concept][concept-arrays] to find a way to remove the limes from the list in the correct order.
 - Set up a [switch statement][mdn-switch] to get the number of wedges for a certain size of a lime.
-- You need to keep track of two things, how many limes where already cut and how many wedges are still missing.
+- You need to keep track of two things, how many limes were already cut and how many wedges are still missing.
 - You can combine two conditions for the loop using [logical operators][concept-booleans].
 
 ## 3. Finish up the shift

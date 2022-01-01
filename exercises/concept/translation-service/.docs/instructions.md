@@ -1,8 +1,8 @@
 # Instructions
 
-In this exercise you'll be providing a `TranslationService` where paid members have some quality assurance.
+In this exercise, you'll be providing a `TranslationService` where paid members have some quality assurance.
 
-You have found an out-of-space translation API that is able to fulfill any translation _request_ in a reasonable amount of time, and you want to capitalize on this.
+You have found an out-of-space translation API that can fulfill any translation _request_ in a reasonable amount of time, and you want to capitalize on this.
 
 **The API interface**
 
@@ -44,9 +44,9 @@ api.request('majQa’');
 ```exercism/caution
 The API works its magic by teleporting in the various translators when a `request` comes in.
 This is a very costly action, so it shouldn't be called when a translation *is* available.
-Unfortunately not everyone reads the manual, so there is a system in place to kick-out bad actors.
+Unfortunately, not everyone reads the manual, so there is a system in place to kick-out bad actors.
 
-If a `api.request` is called for `text` is available, the API throws an `AbusiveClientError` for this call, **and every call after that**.
+If an `api.request` is called for `text` is available, the API throws an `AbusiveClientError` for this call, **and every call after that**.
 Ensure that you *never* request a translation if something has already been translated.
 ```
 
@@ -54,7 +54,7 @@ Ensure that you *never* request a translation if something has already been tran
 
 Implement a function `free(text)` to fetch a translation, ignoring the quality, and forwarding any errors thrown by the API:
 
-- Returns the translation if it can be retrieved, regardless its quality
+- Returns the translation if it can be retrieved, regardless of its quality
 - Forwards any error from the translation API
 
 ```javascript

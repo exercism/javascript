@@ -40,7 +40,7 @@ for (const number of numbers) {
 // => 23
 ```
 
-Just like in regular `for` loops, you can use `continue` stop the current iteration and `break` to stop the execution of the loop entirely.
+Just like in regular `for` loops, you can use `continue` to stop the current iteration and `break` to stop the execution of the loop entirely.
 
 ## The `forEach` Method
 

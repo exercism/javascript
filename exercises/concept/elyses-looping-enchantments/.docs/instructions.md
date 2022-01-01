@@ -1,14 +1,14 @@
 # Instructions
 
-As a budding magician, Elyse needs to be able to analyze her deck in lots of different ways.
+As a budding magician, Elyse needs to analyze her deck in lots of different ways.
 To keep things simple, she only uses cards with values 1-10.
 
 ## 1. Determine how many cards of a certain type are in the deck
 
-Elyse wants to know how many cards of a certain type she has in her deck.
+Elyse wants to know how many cards of a particular type she has in her deck.
 
-Write a function `cardTypeCheck` that takes two parameters: an array of cards (Elyse's deck), and the card type that should be counted.
-The function should use `forEach` and return the number of cards in the deck that are of a given type.
+Write a function `cardTypeCheck` that takes two parameters: an array of cards (Elyse's deck) and the type of card to count.
+The function should use `forEach` and return the number of cards in the deck of the specified type.
 
 ```javascript
 const cardType = 3;

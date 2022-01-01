@@ -5,8 +5,8 @@ There is `null` and `undefined`.
 
 ## Null
 
-The primitive value `null` is used as intentional "empty value" for a variable.
-In other languages a similar construct might be used only for (missing) objects or pointer types.
+The primitive value `null` is used as an intentional "empty value" for a variable.
+In other languages, a similar construct might be used only for (missing) objects or pointer types.
 In JavaScript `null` generally represents an empty value for any type.
 
 ```javascript
@@ -76,7 +76,7 @@ It is not recommended to manually assign `undefined` to a variable, always use `
 ## Optional Chaining
 
 As mentioned above, accessing a non-existent key in an object returns `undefined` in JavaScript.
-However if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`.
+However, if you try to retrieve a nested value and the parent key does not exist, the evaluation of the nested key is performed on `undefined` and leads to `TypeError: Cannot read property ... of undefined`.
 Theoretically, you would always need to check the parent key exists before you can try to retrieve the nested key.
 This was often done with the AND operator `&&` but for deeply nested values this leads to very lengthy expressions.
 
@@ -115,7 +115,7 @@ obj.residence?.street?.number;
 ## Nullish Coalescing
 
 There are situations where you want to apply a default value in case a variable is null or undefined.
-In the past this was often times done with a ternary operator `?` or by utilizing lazy evaluation of the OR operator `||`.
+In the past this was often done with a ternary operator `?` or by utilizing lazy evaluation of the OR operator `||`.
 This has the disadvantage that the default value is applied in all cases where the variable is [falsy][mdn-falsy] (e.g. `''` or `0`), not only when it is null or undefined.
 This can easily cause unexpected outcomes.
 
@@ -136,7 +136,7 @@ amount ? amount : 1;
 To address this, the [nullish coalescing operator][mdn-nullish-coalescing] `??` was introduced.
 Just like optional chaining, it was added to the language specification in 2020.
 The nullish coalescing operator `??` returns the right-hand side operand only when the left-hand side operand is `null` or `undefined`.
-Otherwise the left-hand side operand is returned.
+Otherwise, the left-hand side operand is returned.
 With that, a default value can now be applied more specifically.
 
 ```javascript

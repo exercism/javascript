@@ -4,10 +4,10 @@
 
 - Revisit the [Objects Concept][concept-objects] if needed to fresh up on the basics.
 
-## 1. Define Size for storing the windows dimensions
+## 1. Define Size for storing the dimensions of the window
 
 - Remember to use [prototype syntax][mdn-prototype] for this task.
-- Start by defining a function with name `Size` and make sure to [export][mdn-export] it.
+- Start by defining a function with the name `Size` and make sure to [export][mdn-export] it.
 - The arguments passed to the constructor function need to be added to the `this` object.
 - Default values can be applied by making use of [default parameters][mdn-default-params].
 - You can add a method via the `prototype` property of the constructor function.
@@ -15,7 +15,7 @@
 ## 2. Define Position to store a window position
 
 - Remember to use [prototype syntax][mdn-prototype] for this task.
-- Start by defining a function with name `Position` and make sure to [export][mdn-export] it.
+- Start by defining a function with the name `Position` and make sure to [export][mdn-export] it.
 - The arguments passed to the constructor function need to be added to the `this` object.
 - Default values can be applied by making use of [default parameters][mdn-default-params].
 - You can add a method via the `prototype` property of the constructor function.
@@ -42,7 +42,8 @@
 - Remember to use [class syntax][mdn-class] for this task.
   That means you add the method definition directly in the class body.
 - To find the correct values for the moving, first think about the desired `x` position you want to reach, taking the lower bound (`0`) into account.
-- Then calculate the maximum `x` value that is allowed considering the screen size and current width of the window.
+- Then, calculate the maximum allowed `x` value.
+  Consider the screen size and the current width of the window.
 - With those two values, you can then decide what to apply and use an analogous logic for the height.
 - Make use of the `move` method of the `Position` object to apply the change.
 
@@ -50,8 +51,8 @@
 
 - First, define a `changeWindow` function and make sure to [export][mdn-export] it.
 - Create an instance of the `Size` class using the `new` keyword and provide the desired dimensions as arguments. (Similar for the needed position object.)
-- Use the methods defined in task 4 and 5. For example, you call a method `a` of an object `obj` with `obj.a()`.
-- Make sure to return the `Window` instance that you got as input.
+- Use the methods defined in tasks 4 and 5. For example, you call a method `a` of an object `obj` with `obj.a()`.
+- Make sure to return the `Window` instance received as input.
 
 [concept-objects]: /tracks/javascript/concepts/objects
 [mdn-export]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
