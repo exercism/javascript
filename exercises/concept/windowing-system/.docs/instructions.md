@@ -61,7 +61,7 @@ The default value should be `0` for both fields.
 
 The position (0, 0) is the upper left corner of the screen with `x` values getting larger as you move right and `y` values getting larger as you move down.
 
-Also define a method `moveTo(newX, newY)` that takes new x and y parameters and changes the properties to reflect the new position.
+Also define a method `move(newX, newY)` that takes new x and y parameters and changes the properties to reflect the new position.
 
 ```javascript
 const point = new Position();
@@ -70,7 +70,7 @@ point.x;
 point.y;
 // => 0
 
-point.moveTo(100, 200);
+point.move(100, 200);
 point.x;
 // => 100
 point.y;
