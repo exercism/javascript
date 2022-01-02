@@ -54,16 +54,16 @@ arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 arr.reduce(
   (accumulator, currentValue) => {
     if (currentValue % 2 === 0) {
-      accumulator.odd.push(currentValue);
-    } else {
       accumulator.even.push(currentValue);
+    } else {
+      accumulator.odd.push(currentValue);
     }
 
     return accumulator;
   },
-  { odd: [], even: [] }
+  { even: [], odd: [] }
 );
-// => { odd: [2, 4], even: [1, 3] }
+// => { even: [2, 4], odd: [1, 3] }
 ```
 
 ### reverse
