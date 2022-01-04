@@ -65,7 +65,7 @@ jobs:
         with:
           node-version: '16'
       - name: Install project development dependencies
-        run: npm i
+        run: npm install --no-save
       - name: 'Format code'
         run: ./bin/format.sh
 
