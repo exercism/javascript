@@ -1764,6 +1764,15 @@
         ],
         "difficulty": 5,
         "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "bfc08dea-2a6b-4696-be20-9b55e282388d",
+        "practices": [],
+        "prerequisites": ["arrays", "sets", "objects", "conditionals"],
+        "difficulty": 6,
+        "topics": ["algorithms", "trees", "recursion"]
       }
     ]
   },
