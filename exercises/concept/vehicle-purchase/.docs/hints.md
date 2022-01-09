@@ -12,7 +12,7 @@
 - Then set the value of a helper variable depending on the outcome of that comparison with the help of an [if-else statement][mdn-if-statement].
 - Finally, construct the recommendation sentence. For that, you can use the [addition operator][mdn-addition] to concatenate the two strings.
 
-## 3. Calculate an estimation for the price of a used vehicle
+## 3. Calculate an estimation for the price of an used vehicle
 
 - Start with determining the percentage based on the age of the vehicle. Save it in a helper variable. Use an [if-else if-else statement][mdn-if-statement] as mentioned in the instructions.
 - In the two if conditions, use [relational operators][mdn-relational-operators] to compare the car's age to the threshold values.

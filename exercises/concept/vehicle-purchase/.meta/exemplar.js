@@ -34,7 +34,7 @@ export function chooseVehicle(option1, option2) {
 }
 
 /**
- * Calculates an estimate for the price of a used vehicle in the dealership
+ * Calculates an estimate for the price of an used vehicle in the dealership
  * based on the original price and the age of the vehicle.
  *
  * @param {number} originalPrice

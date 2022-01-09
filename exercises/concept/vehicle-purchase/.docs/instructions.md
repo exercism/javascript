@@ -2,7 +2,7 @@
 
 In this exercise, you will write some code to help you prepare to buy a vehicle.
 
-You have three tasks, one to determine if you will need to get a licence, one to help you choose between two vehicles and one to estimate the acceptable price for a used vehicle.
+You have three tasks, one to determine if you will need to get a licence, one to help you choose between two vehicles and one to estimate the acceptable price for an used vehicle.
 
 ## 1. Determine if you will need a drivers licence
 
@@ -33,10 +33,10 @@ chooseVehicle('Volkswagen Beetle', 'Volkswagen Golf');
 // =>  'Volkswagen Beetle is clearly the better choice.'
 ```
 
-## 3. Calculate an estimation for the price of a used vehicle
+## 3. Calculate an estimation for the price of an used vehicle
 
 Now that you made your decision you want to make sure you get a fair price at the dealership.
-Since you are interested in buying a used vehicle, the price depends on how old the vehicle is.
+Since you are interested in buying an used vehicle, the price depends on how old the vehicle is.
 For a rough estimate, assume if the vehicle is less than 3 years old, it costs 80% of the original price it had when it was brand new.
 If it is more than 10 years old, it costs 50%.
 If the vehicle is at least 3 years old but not older than 10 years, it costs 70% of the original price.
