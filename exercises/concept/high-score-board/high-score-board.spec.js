@@ -5,6 +5,7 @@ import {
   updateScore,
   applyMondayBonus,
   normalizeScore,
+  hasPlayer,
 } from './high-score-board';
 
 describe('createScoreBoard', () => {
@@ -153,3 +154,23 @@ describe('normalizeScore', () => {
     expect(normalizeScore(params)).toEqual(1150);
   });
 });
+
+describe("hasPlayer", () => {
+  test("confirms player is in scoreboard", () => {
+    const scoreBoard = {
+      'Amil Pastorius': 99373,
+      'Min-seo Shin': 0,
+    };
+
+    expect(hasPlayer(scoreBoard, "Amil Pastorius")).toEqual(true);
+  });
+
+  test("confirms player is not in scoreboard", () => {
+    const scoreBoard = {
+      'Amil Pastorius': 99373,
+      'Min-seo Shin': 0,
+    };
+
+    expect(hasPlayer(scoreBoard, "John Cena")).toEqual(false);
+  });
+}); 

@@ -110,3 +110,20 @@ const params = { score: 400, normalizeFunction: normalize };
 normalizeScore(params);
 // => 810
 ```
+
+## 7. Confirm player is on score board
+
+Players want to know if they are on the score board.
+
+Write a function `hasPlayer`.
+The function takes a scoreboard, and a name of a player. It should return a boolean indicating if that player is on the score board.
+
+```javascript
+const scoreBoard = {
+  'Amil Pastorius': 99373,
+  'Min-seo Shin': 0,
+};
+
+hasPlayer(scoreBoard, "Min-seo Shin");
+// => true
+```

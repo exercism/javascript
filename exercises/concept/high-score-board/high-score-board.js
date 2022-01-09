@@ -64,3 +64,14 @@ export function applyMondayBonus(scoreBoard) {
 export function normalizeScore(params) {
   throw new Error('Please implement the normalizeScore function');
 }
+
+/**
+ * Confirms player is in the scoreboard.
+ *
+ * @param {Record<string, number>} scoreBoard parameters for performing the confirmation
+ * @param {string} player player name to check 
+ * @returns {boolean} 
+ */
+export function hasPlayer(scoreBoard, player) {
+  throw new Error('Please implement the hasPlayer function');
+}
