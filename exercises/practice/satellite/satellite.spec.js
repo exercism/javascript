@@ -6,7 +6,7 @@ describe('Satellite', () => {
   });
 
   test('Tree with one item', () => {
-    const expected = { v: 'a', l: {}, r: {} };
+    const expected = { value: 'a', left: {}, right: {} };
     expect(treeFromTraversals(['a'], ['a'])).toEqual(expected);
   });
 
@@ -14,9 +14,13 @@ describe('Satellite', () => {
     const preorder = ['a', 'i', 'x', 'f', 'r'];
     const inorder = ['i', 'a', 'f', 'x', 'r'];
     const expected = {
-      v: 'a',
-      l: { v: 'i', l: {}, r: {} },
-      r: { v: 'x', l: { v: 'f', l: {}, r: {} }, r: { v: 'r', l: {}, r: {} } },
+      value: 'a',
+      left: { value: 'i', left: {}, right: {} },
+      right: {
+        value: 'x',
+        left: { value: 'f', left: {}, right: {} },
+        right: { value: 'r', left: {}, right: {} }
+      },
     };
     expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
   });
@@ -24,21 +28,24 @@ describe('Satellite', () => {
   test('Reject traversals of different length', () => {
     const preorder = ['a', 'b'];
     const inorder = ['b', 'a', 'r'];
-    const expected = { error: 'traversals must have the same length' };
-    expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
+    expect(() => {
+      treeFromTraversals(preorder, inorder);
+    }).toThrowError('traversals must have the same length');
   });
 
   test('Reject inconsistent traversals of same length', () => {
     const preorder = ['x', 'y', 'z'];
     const inorder = ['a', 'b', 'c'];
-    const expected = { error: 'traversals must have the same elements' };
-    expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
+    expect(() => {
+      treeFromTraversals(preorder, inorder);
+    }).toThrowError('traversals must have the same elements');
   });
 
   test('Reject traversals with repeated items', () => {
     const preorder = ['a', 'b', 'a'];
     const inorder = ['b', 'a', 'a'];
-    const expected = { error: 'traversals must contain unique items' };
-    expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
+    expect(() => {
+      treeFromTraversals(preorder, inorder);
+    }).toThrowError('traversals must contain unique items');
   });
 });

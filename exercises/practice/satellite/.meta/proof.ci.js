@@ -1,15 +1,15 @@
 export const treeFromTraversals = (preorder, inorder) => {
   if (preorder.length !== inorder.length) {
-    return { error: 'traversals must have the same length' };
+    throw new Error('traversals must have the same length');
   }
   if (
     new Set(preorder).size !== preorder.length ||
     new Set(inorder).size !== inorder.length
   ) {
-    return { error: 'traversals must contain unique items' };
+    throw new Error('traversals must contain unique items');
   }
   if ([...preorder].sort().join(',') !== [...inorder].sort().join(',')) {
-    return { error: 'traversals must have the same elements' };
+    throw new Error('traversals must have the same elements');
   }
   if (preorder.length === 0) {
     return {};
@@ -25,8 +25,8 @@ export const treeFromTraversals = (preorder, inorder) => {
   const rightPreorder = preorder.filter((node) => rightInorder.includes(node));
 
   return {
-    v: head,
-    l: treeFromTraversals(leftPreorder, leftInorder),
-    r: treeFromTraversals(rightPreorder, rightInorder),
+    value: head,
+    left: treeFromTraversals(leftPreorder, leftInorder),
+    right: treeFromTraversals(rightPreorder, rightInorder),
   };
 };
