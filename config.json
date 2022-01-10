@@ -1770,7 +1770,13 @@
         "name": "Satellite",
         "uuid": "bfc08dea-2a6b-4696-be20-9b55e282388d",
         "practices": [],
-        "prerequisites": ["arrays", "array-transformations", "objects", "conditionals", "recursion"],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "objects",
+          "conditionals",
+          "recursion"
+        ],
         "difficulty": 6,
         "topics": []
       }

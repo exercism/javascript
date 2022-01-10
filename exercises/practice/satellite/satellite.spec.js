@@ -19,7 +19,7 @@ describe('Satellite', () => {
       right: {
         value: 'x',
         left: { value: 'f', left: {}, right: {} },
-        right: { value: 'r', left: {}, right: {} }
+        right: { value: 'r', left: {}, right: {} },
       },
     };
     expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
