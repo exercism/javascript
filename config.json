@@ -1082,7 +1082,7 @@
         "name": "Yacht",
         "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "array-analysis", "array-transformations"],
         "difficulty": 4,
         "topics": ["arrays", "conditionals", "filtering", "games"]
       },
