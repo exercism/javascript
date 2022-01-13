@@ -1091,7 +1091,12 @@
         "name": "Beer Song",
         "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "recursion",
+          "template-strings",
+          "while-loops"
+        ],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "strings"]
       },
