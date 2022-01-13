@@ -1056,7 +1056,7 @@
         "name": "Twelve Days",
         "uuid": "64de1776-d5c6-43fe-9abf-7e3aa08ae342",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["conditionals", "for-loops", "strings"],
         "difficulty": 4,
         "topics": [
           "conditionals",
