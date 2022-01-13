@@ -30,7 +30,7 @@ describe('Satellite', () => {
     const inorder = ['b', 'a', 'r'];
     expect(() => {
       treeFromTraversals(preorder, inorder);
-    }).toThrowError('traversals must have the same length');
+    }).toThrow(new Error('traversals must have the same length'));
   });
 
   test('Reject inconsistent traversals of same length', () => {
@@ -38,7 +38,7 @@ describe('Satellite', () => {
     const inorder = ['a', 'b', 'c'];
     expect(() => {
       treeFromTraversals(preorder, inorder);
-    }).toThrowError('traversals must have the same elements');
+    }).toThrow(new Error('traversals must have the same elements'));
   });
 
   test('Reject traversals with repeated items', () => {
@@ -46,6 +46,6 @@ describe('Satellite', () => {
     const inorder = ['b', 'a', 'a'];
     expect(() => {
       treeFromTraversals(preorder, inorder);
-    }).toThrowError('traversals must contain unique items');
+    }).toThrow(new Error('traversals must contain unique items'));
   });
 });
