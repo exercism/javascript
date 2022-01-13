@@ -1035,7 +1035,12 @@
         "name": "Proverb",
         "uuid": "5626f5b6-207b-458b-92b6-eff2cadb240a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
