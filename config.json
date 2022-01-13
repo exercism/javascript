@@ -1056,7 +1056,13 @@
         "name": "Twelve Days",
         "uuid": "64de1776-d5c6-43fe-9abf-7e3aa08ae342",
         "practices": [],
-        "prerequisites": ["conditionals", "for-loops", "strings"],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "conditionals",
+          "for-loops",
+          "strings"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1082,7 +1088,12 @@
         "name": "Yacht",
         "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
         "practices": [],
-        "prerequisites": ["arrays", "array-analysis", "array-transformations"],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "for-loops"
+        ],
         "difficulty": 4,
         "topics": ["arrays", "conditionals", "filtering", "games"]
       },
@@ -1093,6 +1104,7 @@
         "practices": [],
         "prerequisites": [
           "arrays",
+          "conditionals",
           "recursion",
           "template-strings",
           "while-loops"
@@ -1109,6 +1121,7 @@
           "array-analysis",
           "classes",
           "errors",
+          "math",
           "template-strings"
         ],
         "difficulty": 5,
