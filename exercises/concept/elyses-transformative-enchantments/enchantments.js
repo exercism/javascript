@@ -37,7 +37,7 @@ export function middleTwo(deck) {
 /**
  * Moves the outside two cards to the middle.
  *
- * @param {number[]} deck with 10 cards
+ * @param {number[]} deck with even number of cards
  *
  * @returns {number[]} transformed deck
  */
