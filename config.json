@@ -1142,7 +1142,14 @@
         "name": "Say",
         "uuid": "12989bb3-c593-4f68-bea4-e2c5b76bc3c0",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "conditionals",
+          "errors",
+          "exception_handling",
+          "loops",
+          "numbers",
+          "strings"
+        ],
         "difficulty": 6,
         "topics": [
           "conditionals",
