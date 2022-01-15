@@ -1127,7 +1127,13 @@
         "name": "Dominoes",
         "uuid": "3d155146-f3a9-43c6-a662-2a0679949a12",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "conditionals",
+          "for-loops",
+          "rest-and-spread",
+          "while-loops"
+        ],
         "difficulty": 6,
         "topics": ["graph_theory"]
       },
