@@ -1195,7 +1195,7 @@
         "name": "Sublist",
         "uuid": "bb00e97f-8dcf-40ba-b8c2-c3cb72bbaf97",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["array-analysis", "comparison"],
         "difficulty": 4,
         "topics": ["arrays", "lists"]
       },
