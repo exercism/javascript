@@ -1145,7 +1145,6 @@
         "prerequisites": [
           "conditionals",
           "errors",
-          "exception_handling",
           "loops",
           "numbers",
           "strings"
