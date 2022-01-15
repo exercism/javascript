@@ -1039,6 +1039,7 @@
           "arrays",
           "for-loops",
           "conditionals",
+          "rest-and-spread",
           "template-strings"
         ],
         "difficulty": 4,
@@ -1056,13 +1057,7 @@
         "name": "Twelve Days",
         "uuid": "64de1776-d5c6-43fe-9abf-7e3aa08ae342",
         "practices": [],
-        "prerequisites": [
-          "arrays",
-          "array-transformations",
-          "conditionals",
-          "for-loops",
-          "strings"
-        ],
+        "prerequisites": ["arrays", "conditionals", "for-loops", "strings"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1092,7 +1087,8 @@
           "arrays",
           "array-analysis",
           "array-transformations",
-          "for-loops"
+          "objects",
+          "sets"
         ],
         "difficulty": 4,
         "topics": ["arrays", "conditionals", "filtering", "games"]
@@ -1105,9 +1101,8 @@
         "prerequisites": [
           "arrays",
           "conditionals",
-          "recursion",
-          "template-strings",
-          "while-loops"
+          "for-loops",
+          "template-strings"
         ],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "strings"]
@@ -1118,10 +1113,10 @@
         "uuid": "7170d6a3-a32f-44d7-b82e-524485c58aaf",
         "practices": [],
         "prerequisites": [
+          "arithmetic-operators",
           "array-analysis",
           "classes",
           "errors",
-          "math",
           "template-strings"
         ],
         "difficulty": 5,
