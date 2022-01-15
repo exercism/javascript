@@ -1186,7 +1186,7 @@
         "name": "Rational Numbers",
         "uuid": "d8da6cdd-3804-40b0-9821-0dd5765876ff",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers", "rest-and-spread"],
         "difficulty": 5,
         "topics": ["algorithms", "floating_point_numbers", "math"]
       },
