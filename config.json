@@ -1035,7 +1035,13 @@
         "name": "Proverb",
         "uuid": "5626f5b6-207b-458b-92b6-eff2cadb240a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "rest-and-spread",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
@@ -1051,7 +1057,7 @@
         "name": "Twelve Days",
         "uuid": "64de1776-d5c6-43fe-9abf-7e3aa08ae342",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "conditionals", "for-loops", "strings"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1077,7 +1083,13 @@
         "name": "Yacht",
         "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "objects",
+          "sets"
+        ],
         "difficulty": 4,
         "topics": ["arrays", "conditionals", "filtering", "games"]
       },
@@ -1086,7 +1098,12 @@
         "name": "Beer Song",
         "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "conditionals",
+          "for-loops",
+          "template-strings"
+        ],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "strings"]
       },
@@ -1095,7 +1112,13 @@
         "name": "Resistor Color Trio",
         "uuid": "7170d6a3-a32f-44d7-b82e-524485c58aaf",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "array-analysis",
+          "classes",
+          "errors",
+          "template-strings"
+        ],
         "difficulty": 5,
         "topics": ["conditionals", "loops"]
       },
