@@ -1165,7 +1165,11 @@
         "name": "Diamond",
         "uuid": "6a1eee0e-f8d4-446d-9c52-f31c3700af1b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "array-transformations",
+          "arrow-functions",
+          "strings"
+        ],
         "difficulty": 5,
         "topics": [
           "arrays",
