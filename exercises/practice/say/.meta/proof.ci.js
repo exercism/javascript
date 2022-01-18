@@ -52,19 +52,17 @@ export const say = (n) => {
       }
     }
     return res;
-  }
+  };
 
   const twoDigit = (num) => {
     return num < 20 ? smallNumbers[num] : sayDecade(num);
-  }
+  };
 
   const threeDigit = (num) => {
     return num < 100
-        ? twoDigit(num)
-        : `${smallNumbers[Math.floor(num / 100)]} hundred ${twoDigit(
-            num % 100
-        )}`;
-  }
+      ? twoDigit(num)
+      : `${smallNumbers[Math.floor(num / 100)]} hundred ${twoDigit(num % 100)}`;
+  };
 
   const sayDecade = (num) => {
     for (let decade = 90; decade >= 20; decade -= 10) {
@@ -73,7 +71,7 @@ export const say = (n) => {
       }
     }
     return '';
-  }
+  };
 
   if (n >= 0 && n < 1000000000000) {
     result = bigPart(number);
