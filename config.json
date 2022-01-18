@@ -1280,7 +1280,13 @@
         "name": "Simple Linked List",
         "uuid": "a1591026-2f02-45f9-b189-24b2359eb43f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "conditionals",
+          "increment-decrement",
+          "while-loops"
+        ],
         "difficulty": 8,
         "topics": ["arrays", "data_structures", "lists"]
       },
