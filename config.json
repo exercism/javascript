@@ -1127,7 +1127,14 @@
         "name": "Dominoes",
         "uuid": "3d155146-f3a9-43c6-a662-2a0679949a12",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "recursion",
+          "rest-and-spread",
+          "while-loops"
+        ],
         "difficulty": 6,
         "topics": ["graph_theory"]
       },
@@ -1136,7 +1143,16 @@
         "name": "Say",
         "uuid": "12989bb3-c593-4f68-bea4-e2c5b76bc3c0",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "comparison",
+          "conditionals",
+          "errors",
+          "for-loops",
+          "math",
+          "numbers",
+          "strings"
+        ],
         "difficulty": 6,
         "topics": [
           "conditionals",
@@ -1152,7 +1168,7 @@
         "name": "Diamond",
         "uuid": "6a1eee0e-f8d4-446d-9c52-f31c3700af1b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops", "strings"],
         "difficulty": 5,
         "topics": [
           "arrays",
@@ -1169,7 +1185,14 @@
         "name": "Rational Numbers",
         "uuid": "d8da6cdd-3804-40b0-9821-0dd5765876ff",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "classes",
+          "errors",
+          "math",
+          "numbers",
+          "while-loops"
+        ],
         "difficulty": 5,
         "topics": ["algorithms", "floating_point_numbers", "math"]
       },
@@ -1178,7 +1201,12 @@
         "name": "Sublist",
         "uuid": "bb00e97f-8dcf-40ba-b8c2-c3cb72bbaf97",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "comparison",
+          "conditionals"
+        ],
         "difficulty": 4,
         "topics": ["arrays", "lists"]
       },
