@@ -261,6 +261,14 @@
         "concepts": ["classes"],
         "prerequisites": ["objects", "functions", "conditionals-ternary"],
         "status": "beta"
+      },
+      {
+        "slug": "captains-log",
+        "name": "Captain's Log",
+        "uuid": "need-to-generate",
+        "concepts": ["randomness"],
+        "prerequisites": ["numbers"],
+        "status": "wip"
       }
     ],
     "practice": [

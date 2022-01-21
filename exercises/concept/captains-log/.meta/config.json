@@ -1,0 +1,11 @@
+{
+  "blurb": "Practice randomness with -----",
+  "authors": ["atj-craig"],
+  "contributors": [],
+  "files": {
+    "solution": ["captains-log.js"],
+    "test": ["captains-log.spec.js"],
+    "exemplar": [".meta/exemplar.js"]
+  },
+  "forked_from": []
+}

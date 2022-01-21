@@ -1,0 +1,42 @@
+To-do:
+    /javascript
+        /concepts
+            /randomness
+                /.meta
+                    config.json
+                        - mostly done
+                about.md
+                    - not started
+                introduction.md
+                    - started but wondering about the balance between showing students what they need VS getting them to learn in the exercise
+                links.json
+                    - not started
+        /exercises
+            /concept
+                /captains-log
+                    /.docs
+                        hints.md
+                            - not done
+                        instructions.md
+                            - copied from other exercise
+                        introduction.md
+                            - not done
+                    /.meta
+                        config.json
+                            - semi-done
+                        design.md
+                            - not done
+                        exemplar.js
+                            - done
+                    captains-log.js
+                        - mostly done
+                    captains-log.spec.js
+                        - mostly done
+                        - note: Testing for randomness proved a bit tricky. I went for a simple solution that runs the functions multiple times and tests to see that the results are random by seeing if different outputs would be made. It's not perfect. I had to adjust the number of times the tests are run, otherwise there can be false positive / false negative results. The current settings should be working, but please do test this a few times to verify it.
+                    LICENSE
+                        - standard
+                    package.json
+                        - mostly done
+        config.json
+            - generate UUID
+            - see if additional prereq's are needed
