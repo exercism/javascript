@@ -42,11 +42,6 @@ describe('Book Store', () => {
       expect(cost(basket)).toEqual(5120);
     });
 
-    xtest('two groups of four is cheaper than groups of five and three', () => {
-      const basket = [1, 1, 2, 3, 4, 4, 5, 5];
-      expect(cost(basket)).toEqual(5120);
-    });
-
     xtest('group of four plus group of two is cheaper than two groups of three', () => {
       const basket = [1, 1, 2, 2, 3, 4];
       expect(cost(basket)).toEqual(4080);
