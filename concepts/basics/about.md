@@ -52,9 +52,9 @@ As a rule, on Exercism, and many other organizations and project style guides, d
 const MY_VALUE_CONSTANT = Object.freeze({ food: 'apple' });
 
 // This silently fails
-MY_MUTABLE_VALUE_CONSTANT.food = 'pear';
+MY_VALUE_CONSTANT.food = 'pear';
 
-MY_MUTABLE_VALUE_CONSTANT;
+MY_VALUE_CONSTANT;
 // => { food: "apple" }
 ```
 
