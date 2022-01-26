@@ -1849,6 +1849,22 @@
         ],
         "difficulty": 6,
         "topics": []
+      },
+      {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "e855d32e-9d5d-4342-a3e9-e70cf2329499",
+        "practices": [],
+        "prerequisites": [
+          "loops",
+          "arrays",
+          "array-transformations",
+          "objects",
+          "conditionals",
+          "strings"
+        ],
+        "difficulty": 4,
+        "topics": []
       }
     ]
   },
