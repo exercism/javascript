@@ -15,7 +15,7 @@ describe('ScaleGenerator', () => {
         'G#',
         'A',
         'A#',
-        'B',
+        'B'
       ];
       expect(new Scale('C').chromatic()).toEqual(expected);
     });
@@ -33,7 +33,7 @@ describe('ScaleGenerator', () => {
         'Db',
         'D',
         'Eb',
-        'E',
+        'E'
       ];
       expect(new Scale('F').chromatic()).toEqual(expected);
     });
