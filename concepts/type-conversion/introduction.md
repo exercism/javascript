@@ -102,7 +102,7 @@ Coercion to boolean commonly occurs for
 - the condition of an [if statement][concept-conditionals]
 - the first operand of the [ternary operator][mdn-ternary] `?`
 - the operand of the logical NOT operator `!`
-- the operands of the logical AND `&&` and OR `||` operators (the result is of the expression is one of the operands, not necessarily a boolean)
+- the operands of the logical AND `&&` and OR `||` operators (the result of the expression is one of the operands, not necessarily a boolean)
 
 ```javascript
 const num = 0;
