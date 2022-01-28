@@ -1248,7 +1248,14 @@
         "name": "Binary Search",
         "uuid": "7c569e5d-bb00-44b8-8adc-34253790c19b",
         "practices": [],
-        "prerequisites": ["arrays", "comparison", "conditionals", "errors", "math", "while-loops"],
+        "prerequisites": [
+          "arrays",
+          "comparison",
+          "conditionals",
+          "errors",
+          "math",
+          "while-loops"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
       },
@@ -1279,12 +1286,7 @@
         "name": "Simple Linked List",
         "uuid": "a1591026-2f02-45f9-b189-24b2359eb43f",
         "practices": [],
-        "prerequisites": [
-          "arrays",
-          "classes",
-          "conditionals",
-          "for-loops"
-        ],
+        "prerequisites": ["arrays", "classes", "conditionals", "for-loops"],
         "difficulty": 8,
         "topics": ["arrays", "data_structures", "lists"]
       },
