@@ -1248,17 +1248,9 @@
         "name": "Binary Search",
         "uuid": "7c569e5d-bb00-44b8-8adc-34253790c19b",
         "practices": [],
-        "prerequisites": ["arrays", "conditionals", "math", "while-loops"],
+        "prerequisites": ["arrays", "comparison", "conditionals", "errors", "math", "while-loops"],
         "difficulty": 7,
-        "topics": [
-          "algorithms",
-          "arrays",
-          "comparison",
-          "conditionals",
-          "errors",
-          "loops",
-          "recursion"
-        ]
+        "topics": ["algorithms", "arrays", "comparison", "conditionals", "errors", "loops", "recursion"]
       },
       {
         "slug": "circular-buffer",
