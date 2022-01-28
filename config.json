@@ -1229,8 +1229,7 @@
           "array-analysis",
           "array-transformations",
           "classes",
-          "conditionals",
-          "recursion"
+          "conditionals"
         ],
         "difficulty": 6,
         "topics": [
@@ -1251,7 +1250,15 @@
         "practices": [],
         "prerequisites": ["arrays", "conditionals", "math", "while-loops"],
         "difficulty": 7,
-        "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
+        "topics": [
+          "algorithms",
+          "arrays",
+          "comparison",
+          "conditionals",
+          "errors",
+          "loops",
+          "recursion"
+        ]
       },
       {
         "slug": "circular-buffer",
@@ -1284,7 +1291,7 @@
           "arrays",
           "classes",
           "conditionals",
-          "increment-decrement",
+          "for-loops",
           "while-loops"
         ],
         "difficulty": 8,
