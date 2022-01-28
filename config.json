@@ -1283,8 +1283,7 @@
           "arrays",
           "classes",
           "conditionals",
-          "for-loops",
-          "while-loops"
+          "for-loops"
         ],
         "difficulty": 8,
         "topics": ["arrays", "data_structures", "lists"]
