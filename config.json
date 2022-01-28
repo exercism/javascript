@@ -1250,7 +1250,7 @@
         "practices": [],
         "prerequisites": ["arrays", "comparison", "conditionals", "errors", "math", "while-loops"],
         "difficulty": 7,
-        "topics": ["algorithms", "arrays", "comparison", "conditionals", "errors", "loops", "recursion"]
+        "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
       },
       {
         "slug": "circular-buffer",
