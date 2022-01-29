@@ -99,7 +99,7 @@ service.request("jIyajbe'");
 
 ## 4. Fetch a translation, inspect the quality, or request it
 
-Implement the function `premium(text, quality)` for premium users, which fetches a translation, request it if it's not available, and only returns it if it meets a certain threshold.
+Implement the function `premium(text, quality)` for premium users, which fetches a translation, requests it if it's not available, and only returns it if it meets a certain threshold.
 
 - If `api.fetch` resolves, check the quality before resolving
 - If `api.fetch` rejects with `NotAvailable`, _request_ the translation instead
