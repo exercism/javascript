@@ -10,8 +10,12 @@ export class TwoBucket {
     this.validate();
   }
 
-  get first()  { return this.buckets[0]; }
-  get second() { return this.buckets[1]; }
+  get first() {
+    return this.buckets[0];
+  }
+  get second() {
+    return this.buckets[1];
+  }
 
   validate() {
     if (this.goal > Math.max(this.first.size, this.second.size)) {
@@ -19,7 +23,9 @@ export class TwoBucket {
     }
 
     if (this.goal % gcd(this.first.size, this.second.size) !== 0) {
-      throw new Error('Goal must be a multiple of the GCD of the sizes of the two buckets.');
+      throw new Error(
+        'Goal must be a multiple of the GCD of the sizes of the two buckets.'
+      );
     }
   }
 
@@ -43,27 +49,25 @@ export class TwoBucket {
     while (true) {
       if (this.first.amount === this.goal) {
         return {
-          moves: moves, 
-          goalBucket: this.first.name, 
-          otherBucket: this.second.amount
+          moves: moves,
+          goalBucket: this.first.name,
+          otherBucket: this.second.amount,
         };
       }
 
       if (this.second.amount === this.goal) {
         return {
-          moves: moves, 
-          goalBucket: this.second.name, 
-          otherBucket: this.first.amount
+          moves: moves,
+          goalBucket: this.second.name,
+          otherBucket: this.first.amount,
         };
       }
 
       if (this.first.isEmpty) {
         this.first.fill();
-      }
-      else if (this.second.isFull) {
+      } else if (this.second.isFull) {
         this.second.empty();
-      }
-      else {
+      } else {
         this.first.pourInto(this.second);
       }
 
@@ -80,18 +84,28 @@ class Bucket {
   }
 
   // accessors
-  get available() { return this.size - this.amount; }
-  get isFull()    { return this.amount === this.size; }
-  get isEmpty()   { return this.amount === 0; }
+  get available() {
+    return this.size - this.amount;
+  }
+  get isFull() {
+    return this.amount === this.size;
+  }
+  get isEmpty() {
+    return this.amount === 0;
+  }
 
-  fill()  { this.amount = this.size; }
-  empty() { this.amount = 0; }
+  fill() {
+    this.amount = this.size;
+  }
+  empty() {
+    this.amount = 0;
+  }
 
   pourInto(other) {
     const quantity = Math.min(this.amount, other.available);
-    this.amount  -= quantity;
+    this.amount -= quantity;
     other.amount += quantity;
   }
 }
 
-const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
