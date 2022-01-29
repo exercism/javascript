@@ -10,20 +10,22 @@ describe('TwoBucket', () => {
       // indicates which bucket to fill first
       const starterBuck = 'one';
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
+      const result = twoBucket.moves();
       // includes the first fill
-      expect(twoBucket.moves()).toEqual(4);
+      expect(result.moves).toEqual(4);
       // which bucket should end up with the desired # of liters
-      expect(twoBucket.goalBucket).toEqual('one');
+      expect(result.goalBucket).toEqual('one');
       // leftover value in the "other" bucket once the goal has been reached
-      expect(twoBucket.otherBucket).toEqual(5);
+      expect(result.otherBucket).toEqual(5);
     });
 
     xtest('start with bucket two', () => {
       const starterBuck = 'two';
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toEqual(8);
-      expect(twoBucket.goalBucket).toEqual('two');
-      expect(twoBucket.otherBucket).toEqual(3);
+      const result = twoBucket.moves();
+      expect(result.moves).toEqual(8);
+      expect(result.goalBucket).toEqual('two');
+      expect(result.otherBucket).toEqual(3);
     });
   });
 
@@ -35,35 +37,39 @@ describe('TwoBucket', () => {
     xtest('start with bucket one', () => {
       const starterBuck = 'one';
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toEqual(14);
-      expect(twoBucket.goalBucket).toEqual('one');
-      expect(twoBucket.otherBucket).toEqual(11);
+      const result = twoBucket.moves();
+      expect(result.moves).toEqual(14);
+      expect(result.goalBucket).toEqual('one');
+      expect(result.otherBucket).toEqual(11);
     });
 
     xtest('start with bucket two', () => {
       const starterBuck = 'two';
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toEqual(18);
-      expect(twoBucket.goalBucket).toEqual('two');
-      expect(twoBucket.otherBucket).toEqual(7);
+      const result = twoBucket.moves();
+      expect(result.moves).toEqual(18);
+      expect(result.goalBucket).toEqual('two');
+      expect(result.otherBucket).toEqual(7);
     });
   });
 
   describe('Measure one step using bucket one of size 1 and bucket two of size 3', () => {
     xtest('start with bucket two', () => {
       const twoBucket = new TwoBucket(1, 3, 3, 'two');
-      expect(twoBucket.moves()).toEqual(1);
-      expect(twoBucket.goalBucket).toEqual('two');
-      expect(twoBucket.otherBucket).toEqual(0);
+      const result = twoBucket.moves();
+      expect(result.moves).toEqual(1);
+      expect(result.goalBucket).toEqual('two');
+      expect(result.otherBucket).toEqual(0);
     });
   });
 
   describe('Measure using bucket one of size 2 and bucket two of size 3', () => {
     xtest('start with bucket one and end with bucket two', () => {
       const twoBucket = new TwoBucket(2, 3, 3, 'one');
-      expect(twoBucket.moves()).toEqual(4);
-      expect(twoBucket.goalBucket).toEqual('two');
-      expect(twoBucket.otherBucket).toEqual(1);
+      const result = twoBucket.moves();
+      expect(result.moves).toEqual(2);
+      expect(result.goalBucket).toEqual('two');
+      expect(result.otherBucket).toEqual(2);
     });
   });
 
@@ -72,33 +78,27 @@ describe('TwoBucket', () => {
     const buckTwo = 15;
 
     xtest('Not possible to reach the goal, start with bucket one', () => {
-      const starterBuck = 'one';
-      const goal = 5;
-      const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(() => twoBucket.moves()).toThrow();
+      expect(() => new TwoBucket(buckOne, buckTwo, 5, 'one')).toThrow();
     });
 
     xtest('Not possible to reach the goal, start with bucket two', () => {
-      const starterBuck = 'two';
-      const goal = 5;
-      const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(() => twoBucket.moves()).toThrow();
+      expect(() => new TwoBucket(buckOne, buckTwo, 5, 'two')).toThrow();
     });
 
     xtest('With the same buckets but a different goal, then it is possible', () => {
       const starterBuck = 'one';
       const goal = 9;
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      expect(twoBucket.moves()).toEqual(10);
-      expect(twoBucket.goalBucket).toEqual('two');
-      expect(twoBucket.otherBucket).toEqual(0);
+      const result = twoBucket.moves();
+      expect(result.moves).toEqual(10);
+      expect(result.goalBucket).toEqual('two');
+      expect(result.otherBucket).toEqual(0);
     });
   });
 
   describe('Goal larger than both buckets', () => {
     xtest('Is impossible', () => {
-      const twoBucket = new TwoBucket(5, 7, 8, 'one');
-      expect(() => twoBucket.moves()).toThrow();
+      expect(() => new TwoBucket(5, 7, 8, 'one')).toThrow();
     });
   });
 });
