@@ -1215,7 +1215,7 @@
         "name": "Binary Search Tree",
         "uuid": "6c4b4e25-c115-4789-9058-d28ab6ca0d26",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "conditionals", "recursion"],
         "difficulty": 6,
         "topics": ["algorithms", "conditionals", "loops", "recursion"]
       },
@@ -1224,7 +1224,13 @@
         "name": "Custom Set",
         "uuid": "75199d72-4cac-49ce-bffb-23fb659c57ae",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "classes",
+          "conditionals"
+        ],
         "difficulty": 6,
         "topics": [
           "arrays",
@@ -1242,7 +1248,14 @@
         "name": "Binary Search",
         "uuid": "7c569e5d-bb00-44b8-8adc-34253790c19b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "comparison",
+          "conditionals",
+          "errors",
+          "math",
+          "while-loops"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
       },
@@ -1251,7 +1264,13 @@
         "name": "Circular Buffer",
         "uuid": "bf0b1f95-3425-4345-8a12-3a80d49b49c9",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "comparison",
+          "conditionals",
+          "errors"
+        ],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -1267,7 +1286,7 @@
         "name": "Simple Linked List",
         "uuid": "a1591026-2f02-45f9-b189-24b2359eb43f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "conditionals", "for-loops"],
         "difficulty": 8,
         "topics": ["arrays", "data_structures", "lists"]
       },
