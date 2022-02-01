@@ -29,7 +29,7 @@ export class TwoBucket {
     }
   }
 
-  moves() {
+  solve() {
     this.first.empty();
     this.second.empty();
     let moves = 0;

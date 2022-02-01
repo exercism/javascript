@@ -8,7 +8,7 @@ export class TwoBucket {
     throw new Error('Remove this statement and implement this function');
   }
 
-  moves() {
+  solve() {
     throw new Error('Remove this statement and implement this function');
   }
 }

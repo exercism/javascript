@@ -2,7 +2,7 @@
 
 ## Output format
 
-The `moves()` method is expected to return an object with these properties:
+The `solve()` method is expected to return an object with these properties:
 
 - `moves` - the number of bucket actions required to reach the goal
   (includes filling the start bucket),
