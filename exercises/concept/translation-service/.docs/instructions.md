@@ -102,8 +102,7 @@ service.request("jIyajbe'");
 Implement the function `premium(text, quality)` for premium users, which fetches a translation, requests it if it's not available, and only returns it if it meets a certain threshold.
 
 - If `api.fetch` resolves, check the quality before resolving
-- If `api.fetch` rejects with `NotAvailable`, _request_ the translation instead
-- If `api.fetch` rejects with `Untranslatable`, forward the error
+- If `api.fetch` rejects, _request_ the translation instead
 - If _requesting_ rejects, forward the error
 
 ```javascript
