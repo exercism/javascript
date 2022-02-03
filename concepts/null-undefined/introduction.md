@@ -24,7 +24,7 @@ name === null;
 
 ## Undefined
 
-> A variable that has not been assigned a value is of type `undefined`.<sup>1</sup>
+> A variable that has not been assigned a value is of type `undefined`.[^1]
 
 That means while `null` represents an empty value (but still a value), `undefined` represents the total absence of a value. 🤯
 
@@ -94,6 +94,6 @@ amount = amount ?? 1;
 
 ---
 
-[1] Undefined, MDN. (2021). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined (accessed June 4, 2021).
+[^1]: Undefined, MDN. (2021). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined (accessed June 4, 2021).
 
 [mdn-strict-equality]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
