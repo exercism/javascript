@@ -8,7 +8,7 @@ describe('Anagram', () => {
   });
 
   xtest('detects two anagrams', () => {
-    expect(findAnagrams('solemn', ['lemons', 'cherry', 'melons')).toEqual([
+    expect(findAnagrams('solemn', ['lemons', 'cherry', 'melons'])).toEqual([
       'lemons',
       'melons',
     ]);
