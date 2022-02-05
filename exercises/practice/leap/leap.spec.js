@@ -1,15 +1,15 @@
 import { isLeap } from './leap';
 
 describe('A leap year', () => {
-  test('year not divisible by 4 in common year', () => {
+  test('year not divisible by 4 is common year', () => {
     expect(isLeap(2015)).toBe(false);
   });
 
-  xtest('year divisible by 2, not divisible by 4 in common year', () => {
+  xtest('year divisible by 2, not divisible by 4 is common year', () => {
     expect(isLeap(1970)).toBe(false);
   });
 
-  xtest('year divisible by 4, not divisible by 100 in leap year', () => {
+  xtest('year divisible by 4, not divisible by 100 is leap year', () => {
     expect(isLeap(1996)).toBe(true);
   });
 
@@ -17,7 +17,7 @@ describe('A leap year', () => {
     expect(isLeap(1960)).toBe(true);
   });
 
-  xtest('year divisible by 100, not divisible by 400 in common year', () => {
+  xtest('year divisible by 100, not divisible by 400 is common year', () => {
     expect(isLeap(2100)).toBe(false);
   });
 
@@ -25,7 +25,7 @@ describe('A leap year', () => {
     expect(isLeap(1900)).toBe(false);
   });
 
-  xtest('year divisible by 400 in leap year', () => {
+  xtest('year divisible by 400 is leap year', () => {
     expect(isLeap(2000)).toBe(true);
   });
 
@@ -33,7 +33,7 @@ describe('A leap year', () => {
     expect(isLeap(2400)).toBe(true);
   });
 
-  xtest('year divisible by 200, not divisible by 400 in common year', () => {
+  xtest('year divisible by 200, not divisible by 400 is common year', () => {
     expect(isLeap(1800)).toBe(false);
   });
 });
