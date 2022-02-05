@@ -10,7 +10,7 @@ For example:
 ```javascript
 const myPromise = new Promise(function (resolve, reject) {
   let sampleData = [2, 4, 6, 8];
-  let randomNumber = Math.ceil(Math.random() * 5);
+  let randomNumber = Math.floor(Math.random() * (sampleData.length + 1));
   if (sampleData[randomNumber]) {
     resolve(sampleData[randomNumber]);
   } else {
