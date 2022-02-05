@@ -9,7 +9,7 @@ const squareLength = 5;
 
 // Caller function takes a callback function
 function applyToSquare(callback) {
-  callback(squareLength);
+  return callback(squareLength);
 }
 
 // Callback must expect the possible argument from the calling function
