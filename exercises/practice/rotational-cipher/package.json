@@ -10,16 +10,16 @@
     "directory": "exercises/practice/rotational-cipher"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
+    "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.0",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.16.11",
-    "@exercism/eslint-config-javascript": "^0.5.0",
+    "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.11.22",
-    "babel-jest": "^27.4.6",
+    "babel-jest": "^27.5.0",
     "core-js": "^3.21.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.8.0",
     "jest": "^26.6.3"
   },
   "dependencies": {},
