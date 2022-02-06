@@ -97,15 +97,22 @@ describe('Robot', () => {
   });
 
   // This test is optional.
-  xtest('all the names can be generated', () => {
-    const usedNames = new Set();
-    usedNames.add(robot.name);
+  //
+  // This test doesn't run on our online test runner because it will time-out
+  // with most implementations. It's up to you to test your solution locally.
+  test.skip(
+    'all the names can be generated',
+    () => {
+      const usedNames = new Set();
+      usedNames.add(robot.name);
 
-    for (let i = 0; i < TOTAL_NUMBER_OF_NAMES - 1; i += 1) {
-      const newRobot = new Robot();
-      usedNames.add(newRobot.name);
-    }
+      for (let i = 0; i < TOTAL_NUMBER_OF_NAMES - 1; i += 1) {
+        const newRobot = new Robot();
+        usedNames.add(newRobot.name);
+      }
 
-    expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
-  });
+      expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
+    },
+    8 * 1000
+  );
 });

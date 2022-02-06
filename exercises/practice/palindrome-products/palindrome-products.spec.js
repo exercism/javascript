@@ -79,17 +79,23 @@ describe('Palindromes', () => {
     expect(sortFactors(smallest.factors)).toEqual(expected.factors);
   });
 
-  test.skip('largest palindrome from four digit factors', () => {
-    const palindromes = Palindromes.generate({
-      maxFactor: 9999,
-      minFactor: 1000,
-    });
-    const largest = palindromes.largest;
-    const expected = { value: 99000099, factors: [[9901, 9999]] };
+  // This test doesn't run on our online test runner because it will time-out
+  // with most implementations. It's up to you to test your solution locally.
+  test.skip(
+    'largest palindrome from four digit factors',
+    () => {
+      const palindromes = Palindromes.generate({
+        maxFactor: 9999,
+        minFactor: 1000,
+      });
+      const largest = palindromes.largest;
+      const expected = { value: 99000099, factors: [[9901, 9999]] };
 
-    expect(largest.value).toEqual(expected.value);
-    expect(sortFactors(largest.factors)).toEqual(expected.factors);
-  });
+      expect(largest.value).toEqual(expected.value);
+      expect(sortFactors(largest.factors)).toEqual(expected.factors);
+    },
+    20 * 1000
+  );
 
   xtest('empty result for smallest if no palindrome in range', () => {
     const palindromes = Palindromes.generate({
