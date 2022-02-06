@@ -6,35 +6,35 @@ describe('Atbash Cipher', () => {
       expect(encode('yes')).toEqual('bvh');
     });
 
-    xtest('encode no', () => {
+    test('encode no', () => {
       expect(encode('no')).toEqual('ml');
     });
 
-    xtest('encode OMG', () => {
+    test('encode OMG', () => {
       expect(encode('OMG')).toEqual('lnt');
     });
 
-    xtest('encode spaces', () => {
+    test('encode spaces', () => {
       expect(encode('O M G')).toEqual('lnt');
     });
 
-    xtest('encode mindblowingly', () => {
+    test('encode mindblowingly', () => {
       expect(encode('mindblowingly')).toEqual('nrmwy oldrm tob');
     });
 
-    xtest('encode numbers', () => {
+    test('encode numbers', () => {
       const messageToEncode = 'Testing,1 2 3, testing.';
       const expected = 'gvhgr mt123 gvhgr mt';
       expect(encode(messageToEncode)).toEqual(expected);
     });
 
-    xtest('encode deep thought', () => {
+    test('encode deep thought', () => {
       const messageToEncode = 'Truth is fiction.';
       const expected = 'gifgs rhurx grlm';
       expect(encode(messageToEncode)).toEqual(expected);
     });
 
-    xtest('encode all the letters', () => {
+    test('encode all the letters', () => {
       const messageToEncode = 'The quick brown fox jumps over the lazy dog.';
       const expected = 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt';
       expect(encode(messageToEncode)).toEqual(expected);
@@ -42,31 +42,31 @@ describe('Atbash Cipher', () => {
   });
 
   describe('decode', () => {
-    xtest('decode exercism', () => {
+    test('decode exercism', () => {
       expect(decode('vcvix rhn')).toEqual('exercism');
     });
 
-    xtest('decode a sentence', () => {
+    test('decode a sentence', () => {
       const messageToDecode = 'zmlyh gzxov rhlug vmzhg vkkrm thglm v';
       const expected = 'anobstacleisoftenasteppingstone';
       expect(decode(messageToDecode)).toEqual(expected);
     });
 
-    xtest('decode numbers', () => {
+    test('decode numbers', () => {
       expect(decode('gvhgr mt123 gvhgr mt')).toEqual('testing123testing');
     });
 
-    xtest('decode all the letters', () => {
+    test('decode all the letters', () => {
       const messageToDecode = 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt';
       const expected = 'thequickbrownfoxjumpsoverthelazydog';
       expect(decode(messageToDecode)).toEqual(expected);
     });
 
-    xtest('decode with too many spaces', () => {
+    test('decode with too many spaces', () => {
       expect(decode('vc vix    r hn')).toEqual('exercism');
     });
 
-    xtest('decode with no spaces', () => {
+    test('decode with no spaces', () => {
       const messageToDecode = 'zmlyhgzxovrhlugvmzhgvkkrmthglmv';
       const expected = 'anobstacleisoftenasteppingstone';
       expect(decode(messageToDecode)).toEqual(expected);
