@@ -7,5 +7,11 @@
     "test": ["enchantments.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["go/card-tricks"]
+  "forked_from": ["go/card-tricks"],
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

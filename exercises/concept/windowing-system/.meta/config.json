@@ -1,11 +1,17 @@
 {
   "blurb": "Learn about prototypes and classes by developing a windowing system.",
   "authors": ["junedev"],
-  "contributors": [],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["windowing-system.js"],
     "test": ["windowing-system.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["swift/windowing-system"]
+  "forked_from": ["swift/windowing-system"],
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }
