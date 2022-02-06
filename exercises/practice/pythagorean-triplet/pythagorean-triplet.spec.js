@@ -58,13 +58,19 @@ describe('Triplet', () => {
     ]);
   });
 
-  test.skip('triplets for large number', () => {
-    expect(tripletsWithSum(30000)).toEqual([
-      [1200, 14375, 14425],
-      [1875, 14000, 14125],
-      [5000, 12000, 13000],
-      [6000, 11250, 12750],
-      [7500, 10000, 12500],
-    ]);
-  });
+  // This test doesn't run on our online test runner because it will time-out
+  // with most implementations. It's up to you to test your solution locally.
+  test.skip(
+    'triplets for large number',
+    () => {
+      expect(tripletsWithSum(30000)).toEqual([
+        [1200, 14375, 14425],
+        [1875, 14000, 14125],
+        [5000, 12000, 13000],
+        [6000, 11250, 12750],
+        [7500, 10000, 12500],
+      ]);
+    },
+    20 * 1000
+  );
 });

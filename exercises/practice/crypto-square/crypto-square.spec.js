@@ -31,12 +31,18 @@ describe('Crypto', () => {
     expect(crypto.ciphertext).toEqual('clu hlt io ');
   });
 
-  test.skip('54 character plaintext results in 7 chunks, the last two with trailing spaces', () => {
-    const crypto = new Crypto(
-      'If man was meant to stay on the ground, god would have given us roots.'
-    );
-    expect(crypto.ciphertext).toEqual(
-      'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '
-    );
-  });
+  // This test doesn't run on our online test runner because it will time-out
+  // with most implementations. It's up to you to test your solution locally.
+  test.skip(
+    '54 character plaintext results in 7 chunks, the last two with trailing spaces',
+    () => {
+      const crypto = new Crypto(
+        'If man was meant to stay on the ground, god would have given us roots.'
+      );
+      expect(crypto.ciphertext).toEqual(
+        'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '
+      );
+    },
+    20 * 1000
+  );
 });
