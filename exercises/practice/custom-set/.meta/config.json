@@ -1,6 +1,7 @@
 {
-  "blurb": "Create a custom set type.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "apapirovski",
@@ -11,10 +12,17 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["custom-set.js"],
-    "test": ["custom-set.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "custom-set.js"
+    ],
+    "test": [
+      "custom-set.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Create a custom set type.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

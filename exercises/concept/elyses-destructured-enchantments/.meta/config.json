@@ -1,14 +1,24 @@
 {
-  "blurb": "Elyse's magic training continues, teaching you about array destructing and the rest/spread operator.",
-  "icon": "elyses-enchantments",
-  "authors": ["kristinaborn"],
-  "contributors": ["SleeplessByte", "angelikatyborska"],
+  "authors": [
+    "kristinaborn"
+  ],
+  "contributors": [
+    "SleeplessByte",
+    "angelikatyborska"
+  ],
   "files": {
-    "solution": ["enchantments.js"],
-    "test": ["enchantments.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "enchantments.js"
+    ],
+    "test": [
+      "enchantments.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": [],
+  "icon": "elyses-enchantments",
+  "blurb": "Elyse's magic training continues, teaching you about array destructing and the rest/spread operator.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": true,

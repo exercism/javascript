@@ -1,12 +1,24 @@
 {
-  "blurb": "Implement rational numbers.",
-  "authors": ["matthewmorgan"],
-  "contributors": ["ankorGH", "SleeplessByte", "tejasbubane"],
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "ankorGH",
+    "SleeplessByte",
+    "tejasbubane"
+  ],
   "files": {
-    "solution": ["rational-numbers.js"],
-    "test": ["rational-numbers.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "rational-numbers.js"
+    ],
+    "test": [
+      "rational-numbers.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement rational numbers.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Rational_number",
   "custom": {

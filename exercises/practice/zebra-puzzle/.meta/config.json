@@ -1,12 +1,19 @@
 {
-  "blurb": "Solve the zebra puzzle.",
-  "authors": ["lpizzinidev"],
-  "contributors": [],
+  "authors": [
+    "lpizzinidev"
+  ],
   "files": {
-    "solution": ["zebra-puzzle.js"],
-    "test": ["zebra-puzzle.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "zebra-puzzle.js"
+    ],
+    "test": [
+      "zebra-puzzle.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Solve the zebra puzzle.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Zebra_Puzzle",
   "custom": {

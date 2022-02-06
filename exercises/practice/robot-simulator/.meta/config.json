@@ -1,6 +1,7 @@
 {
-  "blurb": "Write a robot simulator.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "ankorGH",
     "jscheffner",
@@ -11,10 +12,17 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["robot-simulator.js"],
-    "test": ["robot-simulator.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "robot-simulator.js"
+    ],
+    "test": [
+      "robot-simulator.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Write a robot simulator.",
   "source": "Inspired by an interview question at a famous company.",
   "custom": {
     "version.tests.compatibility": "jest-27",

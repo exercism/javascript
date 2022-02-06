@@ -1,6 +1,7 @@
 {
-  "blurb": "Implement basic list operations",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "archanid",
@@ -12,10 +13,17 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["list-ops.js"],
-    "test": ["list-ops.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "list-ops.js"
+    ],
+    "test": [
+      "list-ops.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement basic list operations",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

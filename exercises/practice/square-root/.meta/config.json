@@ -1,12 +1,23 @@
 {
-  "blurb": "Given a natural radicand, return its square root.",
-  "authors": ["evelynstender"],
-  "contributors": ["SleeplessByte", "zimmah"],
+  "authors": [
+    "evelynstender"
+  ],
+  "contributors": [
+    "SleeplessByte",
+    "zimmah"
+  ],
   "files": {
-    "solution": ["square-root.js"],
-    "test": ["square-root.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "square-root.js"
+    ],
+    "test": [
+      "square-root.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Given a natural radicand, return its square root.",
   "source": "wolf99",
   "source_url": "https://github.com/exercism/problem-specifications/pull/1582",
   "custom": {

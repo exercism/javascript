@@ -1,13 +1,19 @@
 {
-  "blurb": "Rebuild binary trees from pre-order and in-order traversals.",
-  "authors": ["lpizzinidev"],
-  "contributors": [],
+  "authors": [
+    "lpizzinidev"
+  ],
   "files": {
-    "solution": ["satellite.js"],
-    "test": ["satellite.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "satellite.js"
+    ],
+    "test": [
+      "satellite.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
-  "title": "Satellite",
+  "blurb": "Rebuild binary trees from pre-order and in-order traversals.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

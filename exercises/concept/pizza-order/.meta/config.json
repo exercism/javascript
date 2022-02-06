@@ -1,13 +1,22 @@
 {
-  "blurb": "TODO: add blurb for recursion exercise",
-  "authors": ["SleeplessByte"],
-  "contributors": [],
+  "authors": [
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["pizza-order.js"],
-    "test": ["pizza-order.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "pizza-order.js"
+    ],
+    "test": [
+      "pizza-order.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["fsharp/pizza-pricing"],
+  "forked_from": [
+    "fsharp/pizza-pricing"
+  ],
+  "blurb": "TODO: add blurb for recursion exercise",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

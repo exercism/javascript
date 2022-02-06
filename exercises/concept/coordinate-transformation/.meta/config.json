@@ -1,13 +1,22 @@
 {
-  "blurb": "Practice your knowledge of closures by implementing various coordinate transformations.",
-  "authors": ["neenjaw"],
-  "contributors": ["SleeplessByte"],
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["coordinate-transformation.js"],
-    "test": ["coordinate-transformation.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "coordinate-transformation.js"
+    ],
+    "test": [
+      "coordinate-transformation.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": [],
+  "blurb": "Practice your knowledge of closures by implementing various coordinate transformations.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": true,

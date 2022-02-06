@@ -1,6 +1,7 @@
 {
-  "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "brendanmckeown",
     "matthewmorgan",
@@ -10,10 +11,17 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["kindergarten-garden.js"],
-    "test": ["kindergarten-garden.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "kindergarten-garden.js"
+    ],
+    "test": [
+      "kindergarten-garden.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
   "source": "Random musings during airplane trip.",
   "source_url": "http://jumpstartlab.com",
   "custom": {

@@ -1,12 +1,24 @@
 {
-  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
-  "authors": ["laurmurclar"],
-  "contributors": ["mluisamc", "serixscorpio", "SleeplessByte"],
+  "authors": [
+    "laurmurclar"
+  ],
+  "contributors": [
+    "mluisamc",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["two-fer.js"],
-    "test": ["two-fer.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "two-fer.js"
+    ],
+    "test": [
+      "two-fer.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
   "source_url": "https://github.com/exercism/problem-specifications/issues/757",
   "custom": {
     "version.tests.compatibility": "jest-27",
