@@ -7,5 +7,11 @@
     "test": ["bird-watcher.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["csharp/bird-watcher"]
+  "forked_from": ["csharp/bird-watcher"],
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

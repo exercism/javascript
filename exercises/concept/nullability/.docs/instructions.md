@@ -4,7 +4,7 @@ While working for a factory, a need arises to create the printed message on empl
 
 A badge requires the `id` of the employee, the `name` of the employee, as well as the department in which they are working.
 
-## 1. Create the badge text.
+## 1. Create the badge text
 
 Implement a function named `printBadge` that returns the text to print on the badge.
 

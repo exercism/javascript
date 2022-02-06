@@ -7,5 +7,11 @@
     "editor": ["grocer.js"],
     "test": ["fruit-picker.spec.js"],
     "exemplar": [".meta/exemplar.js"]
+  },
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }

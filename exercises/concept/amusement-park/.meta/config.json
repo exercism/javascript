@@ -7,5 +7,11 @@
     "test": ["amusement-park.spec.js"],
     "exemplar": [".meta/exemplar.js"]
   },
-  "forked_from": ["ruby/amusement-park"]
+  "forked_from": ["ruby/amusement-park"],
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }
