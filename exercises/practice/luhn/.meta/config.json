@@ -17,5 +17,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "The Luhn Algorithm on Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"
+  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

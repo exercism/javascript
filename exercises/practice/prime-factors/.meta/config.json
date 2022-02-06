@@ -14,5 +14,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
-  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"
+  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

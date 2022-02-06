@@ -8,5 +8,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Simon Shine, Erik Schierboom",
-  "source_url": "https://github.com/exercism/problem-specifications/issues/616#issuecomment-437358945"
+  "source_url": "https://github.com/exercism/problem-specifications/issues/616#issuecomment-437358945",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

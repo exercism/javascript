@@ -8,5 +8,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "The Calculating DNA Nucleotides_problem at Rosalind",
-  "source_url": "http://rosalind.info/problems/dna/"
+  "source_url": "http://rosalind.info/problems/dna/",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

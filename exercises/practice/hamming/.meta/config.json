@@ -18,5 +18,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "The Calculating Point Mutations problem at Rosalind",
-  "source_url": "http://rosalind.info/problems/hamm/"
+  "source_url": "http://rosalind.info/problems/hamm/",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

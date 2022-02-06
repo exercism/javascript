@@ -8,5 +8,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "James Kilfiger, using wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
+  "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

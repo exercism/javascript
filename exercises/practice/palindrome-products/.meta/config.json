@@ -21,5 +21,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Problem 4 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=4"
+  "source_url": "http://projecteuler.net/problem=4",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": true
+  }
 }

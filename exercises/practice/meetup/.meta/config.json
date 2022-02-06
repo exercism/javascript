@@ -15,5 +15,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month",
-  "source_url": "https://twitter.com/copiousfreetime"
+  "source_url": "https://twitter.com/copiousfreetime",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

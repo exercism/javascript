@@ -19,5 +19,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",
-  "source_url": "http://www.javaranch.com/leap.jsp"
+  "source_url": "http://www.javaranch.com/leap.jsp",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

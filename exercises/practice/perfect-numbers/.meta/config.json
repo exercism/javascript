@@ -15,5 +15,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",
-  "source_url": "http://shop.oreilly.com/product/0636920029687.do"
+  "source_url": "http://shop.oreilly.com/product/0636920029687.do",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

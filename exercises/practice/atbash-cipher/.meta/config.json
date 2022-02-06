@@ -16,5 +16,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Atbash"
+  "source_url": "http://en.wikipedia.org/wiki/Atbash",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

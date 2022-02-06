@@ -17,5 +17,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly"
+  "source_url": "http://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

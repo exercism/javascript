@@ -18,5 +18,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
-  "source_url": "http://pine.fm/LearnToProgram/?Chapter=09"
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=09",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

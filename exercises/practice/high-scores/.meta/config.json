@@ -13,5 +13,11 @@
     "test": ["high-scores.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source": "Tribute to the eighties' arcade game Frogger"
+  "source": "Tribute to the eighties' arcade game Frogger",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -8,5 +8,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "The Bowling Game Kata at but UncleBob",
-  "source_url": "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata"
+  "source_url": "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

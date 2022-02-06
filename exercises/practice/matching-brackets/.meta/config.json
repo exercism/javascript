@@ -15,5 +15,11 @@
     "test": ["matching-brackets.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source": "Ginna Baker"
+  "source": "Ginna Baker",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

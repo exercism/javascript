@@ -14,5 +14,11 @@
     "solution": ["custom-set.js"],
     "test": ["custom-set.spec.js"],
     "example": [".meta/proof.ci.js"]
+  },
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }

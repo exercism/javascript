@@ -21,5 +21,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial.",
-  "source_url": "http://pine.fm/LearnToProgram/?Chapter=01"
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=01",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

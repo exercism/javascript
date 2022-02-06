@@ -15,5 +15,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"
+  "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

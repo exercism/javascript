@@ -15,5 +15,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Conversation with James Edward Gray II",
-  "source_url": "https://twitter.com/jeg2"
+  "source_url": "https://twitter.com/jeg2",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

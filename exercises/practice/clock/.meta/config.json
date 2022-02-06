@@ -17,5 +17,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Pairing session with Erin Drummond",
-  "source_url": "https://twitter.com/ebdrummond"
+  "source_url": "https://twitter.com/ebdrummond",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

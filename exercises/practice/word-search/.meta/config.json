@@ -12,5 +12,11 @@
     "solution": ["word-search.js"],
     "test": ["word-search.spec.js"],
     "example": [".meta/proof.ci.js"]
+  },
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }

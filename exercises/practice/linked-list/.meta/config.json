@@ -18,5 +18,11 @@
     "test": ["linked-list.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source": "Classic computer science topic"
+  "source": "Classic computer science topic",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

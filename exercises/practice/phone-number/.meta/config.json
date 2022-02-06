@@ -19,5 +19,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Event Manager by JumpstartLab",
-  "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"
+  "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

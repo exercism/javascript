@@ -7,5 +7,11 @@
     "test": ["two-fer.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source_url": "https://github.com/exercism/problem-specifications/issues/757"
+  "source_url": "https://github.com/exercism/problem-specifications/issues/757",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }
