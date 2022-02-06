@@ -1295,7 +1295,13 @@
         "name": "Word Search",
         "uuid": "0125f5a7-8883-4553-a6c1-45f19544af5e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-loops",
+          "array-transformations",
+          "classes",
+          "conditionals"
+        ],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -1312,7 +1318,12 @@
         "name": "Variable Length Quantity",
         "uuid": "6be39d1f-f68d-4a52-bd72-85a38ffd509e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "array-transformations",
+          "arrow-functions",
+          "functions",
+          "rest-and-spread"
+        ],
         "difficulty": 5,
         "topics": ["bitwise_operations", "transforming"]
       },
@@ -1321,7 +1332,12 @@
         "name": "Two Bucket",
         "uuid": "0bc6b478-40a8-47ab-889b-c403b922f7e5",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "array-analysis",
+          "classes",
+          "conditionals",
+          "functions"
+        ],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -1338,7 +1354,13 @@
         "name": "Alphametics",
         "uuid": "a602bd33-69fc-4b67-a3d3-95198853095e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "array-analysis",
+          "array-transformations",
+          "conditionals",
+          "for-loops",
+          "functions"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "games"]
       },
@@ -1347,7 +1369,12 @@
         "name": "Connect",
         "uuid": "2fa2c262-77ae-409b-bfd8-1d643faae772",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "array-analysis",
+          "array-transformations",
+          "functions",
+          "for-loops"
+        ],
         "difficulty": 7,
         "topics": [
           "arrays",
