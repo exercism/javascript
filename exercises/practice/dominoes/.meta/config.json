@@ -1,12 +1,22 @@
 {
-  "blurb": "Make a chain of dominoes.",
-  "authors": ["chauchakching"],
-  "contributors": ["SleeplessByte"],
+  "authors": [
+    "chauchakching"
+  ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["dominoes.js"],
-    "test": ["dominoes.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "dominoes.js"
+    ],
+    "test": [
+      "dominoes.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Make a chain of dominoes.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

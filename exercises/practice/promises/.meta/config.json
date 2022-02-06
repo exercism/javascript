@@ -1,12 +1,23 @@
 {
-  "blurb": "Practice promises by implementing some common promise functions.",
-  "authors": ["slaymance"],
-  "contributors": ["SleeplessByte", "TomPradat"],
+  "authors": [
+    "slaymance"
+  ],
+  "contributors": [
+    "SleeplessByte",
+    "TomPradat"
+  ],
   "files": {
-    "solution": ["promises.js"],
-    "test": ["promises.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "promises.js"
+    ],
+    "test": [
+      "promises.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Practice promises by implementing some common promise functions.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

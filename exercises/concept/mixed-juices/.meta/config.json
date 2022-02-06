@@ -1,13 +1,22 @@
 {
-  "blurb": "Help your friend Li Mei run her juice bar with your knowledge of while loops and switch statements.",
-  "authors": ["junedev"],
-  "contributors": [],
+  "authors": [
+    "junedev"
+  ],
   "files": {
-    "solution": ["mixed-juices.js"],
-    "test": ["mixed-juices.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "mixed-juices.js"
+    ],
+    "test": [
+      "mixed-juices.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["swift/master-mixologist"],
+  "forked_from": [
+    "swift/master-mixologist"
+  ],
+  "blurb": "Help your friend Li Mei run her juice bar with your knowledge of while loops and switch statements.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": true,

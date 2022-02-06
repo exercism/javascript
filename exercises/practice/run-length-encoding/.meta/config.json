@@ -1,12 +1,24 @@
 {
-  "blurb": "Implement run-length encoding and decoding.",
-  "authors": ["skabbass1"],
-  "contributors": ["ankorGH", "serixscorpio", "SleeplessByte"],
+  "authors": [
+    "skabbass1"
+  ],
+  "contributors": [
+    "ankorGH",
+    "serixscorpio",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["run-length-encoding.js"],
-    "test": ["run-length-encoding.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "run-length-encoding.js"
+    ],
+    "test": [
+      "run-length-encoding.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement run-length encoding and decoding.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding",
   "custom": {

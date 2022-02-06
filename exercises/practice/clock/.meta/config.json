@@ -1,6 +1,7 @@
 {
-  "blurb": "Implement a clock that handles times without dates.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "ovidiu141",
@@ -12,10 +13,17 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["clock.js"],
-    "test": ["clock.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "clock.js"
+    ],
+    "test": [
+      "clock.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement a clock that handles times without dates.",
   "source": "Pairing session with Erin Drummond",
   "source_url": "https://twitter.com/ebdrummond",
   "custom": {

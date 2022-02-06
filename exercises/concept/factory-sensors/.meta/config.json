@@ -1,12 +1,23 @@
 {
-  "blurb": "Learn how to handle errors by creating a piece of software for a newspaper factory.",
-  "authors": ["TomPradat"],
-  "contributors": ["SleeplessByte", "junedev"],
+  "authors": [
+    "TomPradat"
+  ],
+  "contributors": [
+    "SleeplessByte",
+    "junedev"
+  ],
   "files": {
-    "solution": ["factory-sensors.js"],
-    "test": ["factory-sensors.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "factory-sensors.js"
+    ],
+    "test": [
+      "factory-sensors.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
+  "blurb": "Learn how to handle errors by creating a piece of software for a newspaper factory.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": true,

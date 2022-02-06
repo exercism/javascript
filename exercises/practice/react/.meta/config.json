@@ -1,6 +1,7 @@
 {
-  "blurb": "Implement a basic reactive system.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "Boto1",
     "joshgoebel",
@@ -9,10 +10,17 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["react.js"],
-    "test": ["react.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "react.js"
+    ],
+    "test": [
+      "react.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement a basic reactive system.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

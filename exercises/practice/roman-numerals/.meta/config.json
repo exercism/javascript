@@ -1,6 +1,7 @@
 {
-  "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "ankorGH",
     "cmccandless",
@@ -10,10 +11,17 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["roman-numerals.js"],
-    "test": ["roman-numerals.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "roman-numerals.js"
+    ],
+    "test": [
+      "roman-numerals.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
   "source": "The Roman Numeral Kata",
   "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals",
   "custom": {

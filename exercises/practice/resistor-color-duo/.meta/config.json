@@ -1,12 +1,24 @@
 {
-  "blurb": "Convert color codes, as used on resistors, to a numeric value.",
-  "authors": ["tejasbubane"],
-  "contributors": ["ankorGH", "clockelliptic", "SleeplessByte"],
+  "authors": [
+    "tejasbubane"
+  ],
+  "contributors": [
+    "ankorGH",
+    "clockelliptic",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["resistor-color-duo.js"],
-    "test": ["resistor-color-duo.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "resistor-color-duo.js"
+    ],
+    "test": [
+      "resistor-color-duo.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Convert color codes, as used on resistors, to a numeric value.",
   "source": "Maud de Vries, Erik Schierboom",
   "source_url": "https://github.com/exercism/problem-specifications/issues/1464",
   "custom": {

@@ -1,13 +1,23 @@
 {
-  "blurb": "Elyse's magic training continues, teaching you about useful built-in methods to analyse arrays.",
-  "authors": ["peterchu999", "SleeplessByte"],
-  "contributors": ["pertrai1"],
+  "authors": [
+    "peterchu999",
+    "SleeplessByte"
+  ],
+  "contributors": [
+    "pertrai1"
+  ],
   "files": {
-    "solution": ["enchantments.js"],
-    "test": ["enchantments.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "enchantments.js"
+    ],
+    "test": [
+      "enchantments.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": [],
+  "blurb": "Elyse's magic training continues, teaching you about useful built-in methods to analyse arrays.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": true,

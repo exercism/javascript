@@ -1,6 +1,7 @@
 {
-  "blurb": "Add the numbers to a minesweeper board",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "brendanmckeown",
     "cr0t",
@@ -10,10 +11,17 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["minesweeper.js"],
-    "test": ["minesweeper.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "minesweeper.js"
+    ],
+    "test": [
+      "minesweeper.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Add the numbers to a minesweeper board",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,
