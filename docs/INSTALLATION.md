@@ -3,7 +3,7 @@
 This track relies on [Node.js][web-nodejs] throughout to provide a runtime for JavaScript.
 This means that we assume all execution of JavaScript on your computer will happen using [Node.js][web-nodejs].
 
-# Track Requirements
+## Track Requirements
 
 Many machines come pre-installed with [Node.js][web-nodejs] or might have been installed previously, or as a dependency.
 So before we do anything, we should check if it's already installed:
@@ -39,7 +39,7 @@ Both options support Windows, macOS, and Linux. If you don't know what to do, us
 - We recommend using the **LTS** version. This is also indicated as _recommended_ on the [Node.js][web-nodejs] website "for most users".
 - Follow the instructions on the webpage and/or during the installer and install [Node.js][web-nodejs].
 
-### Testing the installation
+## Testing the installation
 
 After the installer is done, or the package manager has completed, or the binary has been copied and the instructions have been followed, it's good to test if everything is alright.
 
@@ -58,8 +58,8 @@ This means that the open terminals don't know that a new program was installed.
 >
 > On macOS and Linux you may accomplish this by adding the following to either `~/.bash_profile` or `~/.zshrc`:
 >
-> ```bash
-> $ export PATH=/usr/local/share/npm/bin:$PATH
+> ```shell
+> export PATH=/usr/local/share/npm/bin:$PATH
 > ```
 >
 > On Windows open the start menu and search for "environment variables".
@@ -69,22 +69,27 @@ This means that the open terminals don't know that a new program was installed.
 >
 > Close any open terminals and open a new one.
 
-### Assignment Requirements
+## Assignment Requirements
 
 Please follow [these instructions][cli-walkthrough] to download the Exercism CLI for your OS.
 
 Once the CLI is set up and configured, download the first exercise - `hello-world`:
 
-```bash
-$ exercism download --exercise=hello-world --track=javascript
+```shell
+exercism download --exercise=hello-world --track=javascript
 ```
 
 Each assignment then needs some tools to run the tests.
 They can be installed running this command within each assignment directory:
 
-```bash
-$ npm install
+```shell
+npm install
 ```
+
+> _**Help**_: `'<package>' is missing / cannot be found`
+>
+> If you see this after _upgrading_ your exercise, welcome to npm 7.
+> Delete `node_modules` and `package-lock.json` and re-run the command to resolve this.
 
 If you're concerned about disk space and are okay installing another tool, take a look at [pnpm](https://pnpm.io/), which ensure only one copy of each package-version is ever installed on disk.
 In this case, run `pnpm install` instead of `npm install`, and everything should work as expected.

@@ -2,21 +2,21 @@
 
 Execute the tests with:
 
-```bash
-$ npm run test
+```shell
+npm run test
 ```
 
 Be sure your code follows best practices and coding styles, as other users do, with ESLint, a tool to perform static analysis on your code.
 Sometimes, tools like this save you some time detecting typos or silly mistakes in your JavaScript code:
 
-```bash
-$ npm run lint
+```shell
+npm run lint
 ```
 
 You can also run Jest in "watch" mode, which will re-run your tests automatically when you save changes to the code or test module:
 
-```bash
-$ npm run watch
+```shell
+npm run watch
 ```
 
 ## Understanding Skip Tests
