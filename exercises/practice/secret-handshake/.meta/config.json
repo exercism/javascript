@@ -16,5 +16,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Bert, in Mary Poppins",
-  "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047"
+  "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

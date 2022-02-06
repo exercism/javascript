@@ -13,5 +13,11 @@
     "test": ["darts.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source": "Inspired by an exercise created by a professor Della Paolera in Argentina"
+  "source": "Inspired by an exercise created by a professor Della Paolera in Argentina",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -18,5 +18,11 @@
     "test": ["word-count.spec.js"],
     "example": [".meta/proof.ci.js"]
   },
-  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
+  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

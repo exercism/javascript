@@ -16,5 +16,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",
-  "source_url": "http://www.javaranch.com/say.jsp"
+  "source_url": "http://www.javaranch.com/say.jsp",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

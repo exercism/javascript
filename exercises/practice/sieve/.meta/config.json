@@ -16,5 +16,11 @@
     "example": [".meta/proof.ci.js"]
   },
   "source": "Sieve of Eratosthenes at Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"
+  "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": true,
+    "flag.tests.includes-optional": false
+  }
 }
