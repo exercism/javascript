@@ -1,50 +1,51 @@
 # Instructions
 
-## Introduction
-
-<aside>
 You have been hired as a Regular Expression Specialist in a company that is developing a Chatbot. 
-<br /><br />
+
 It is in a very basic phase of development, hence your mission is to use Regular Expressions to improve the chatbot's ability to understand and generate natural language.
 
-</aside>
 
-## Chatbot Command
+## 1. Check Valid Command
 
 Apart from being smart, the Chatbot is also a loyal assistant.
 
-To ask something to the chatbot, the user must say the word “**Chatbot**” in the first position of the command. The software is still able to detect if it is being written in UPPERCASE or lowercase.
+To ask something to the chatbot, the user must say the word “**Chatbot**” in the first position of the command. 
 
-Implement a function **isValidCommand()** that helps the Chatbot recognize when the user is giving a command.
+It doesn't matter if the keyword is in UPPERCASE or lowercase. The important aspect here is the position of the word.
 
-```jsx
-isValidCommand("Chatbot, play a song from the 80's."; // True
-isValidCommand("Hey Chatbot, where is the closest pharmacy?";  // False
-isValidCommand("CHATBOT, do you have a solution for this challenge?"; // True
+Implement the function ``isValidCommand()`` that helps the Chatbot recognize when the user is giving a command.
+
+```javascript
+isValidCommand("Chatbot, play a song from the 80's."; 
+// => True
+isValidCommand("Hey Chatbot, where is the closest pharmacy?";  
+// => False
+isValidCommand("CHATBOT, do you have a solution for this challenge?"; 
+// => True
 ```
 
-## Remove emojis from answers 
+## 2. Remove encrypted emojis
 
 The Chatbot has a difficult time understanding how humans use emojis to express their emotions. 
 
-When the chatbot receives the message, each emoji is parsed as “*emoji*” followed by its *id* number.
+When the chatbot receives user messages, each emoji is represented as “*emoji*” followed by its *id* number.
 
-Implement the **removeEmoji**() method to take a string and remove all the emoji’s encryption throughout the message. 
+Implement the ``removeEmoji()`` method to take a string and remove all the emoji’s encryption throughout the message. 
 
-Lines not containing **emoji’s** text should be returned unmodified.
+Lines not containing emoji’s text should be returned unmodified.
 
-Just remove the **emoji** string. Do not attempt to adjust the whitespace.
+Just remove the emoji string. Do not attempt to adjust the whitespace.
 
-For this particular challenge, use only the **newRexEp** constructor for storing the regular expression.
+For this particular challenge, use only the ``newRexEp`` constructor for storing the regular expression.
 
-```jsx
+```javascript
 removeEmoji("I love playing videogames emoji3465 it's one of my hobbies");
 // => "I love playing videogames  it's one of my hobbies"
 ```
 
-## Check Valid Phone Number
+## 3. Check Valid Phone Number
 
-For letting getting the chatbot features on a mobile app, the user is expected to write a phone number during the conversation.
+Considering the download of chatbot features on a mobile app, the user is expected to write a phone number during the conversation.
 
 The problem is that the chatbot can only read and validate a number with a specific format. 
 
@@ -52,39 +53,43 @@ If the number is valid (matches the character sequence specified by the **regula
 
 The expected format is: (+##) ###-###-###
 
-```jsx
-isValidNumber("(+34) 659-771-594") // "Thanks! You can download me now on your Phone."
-isValidNumber("659-771-594") // "Oops, it seems like I can't reach out to 659-771-594" 
+```javascript
+isValidNumber("(+34) 659-771-594") 
+// => "Thanks! You can download me now on your Phone."
+isValidNumber("659-771-594") 
+// => "Oops, it seems like I can't reach out to 659-771-594" 
 ```
 
-## Go To URL  (Capturing Groups)
+## 4. Get website link 
 
 The Chatbot is a really curious software. Even though he can search on the internet about a particular topic, he likes to ask users about cool websites or URL’s to go find relevant information. 
 
 Example of Conversation: 
 
 - **Chatbot**: Hey username, I would like to learn how to code in JavaScript, do you know any cool website where I could learn?
-- **User**: I learned a lot from **[e](http://website.com)xercism.com**
+- **User**: I learned a lot from [exercism.com](http://website.com)
 
-Implement the function **getURL()** which is able to return an array with just the link of each website.
+Implement the function ``getURL()`` which is able to return an array with just the link of each website.
 
-```jsx
+```javascript
 
-console.log(getURL( "I learned a lot from exercism.com")); // ["exercism.com"]
+getURL( "I learned a lot from exercism.com"); 
+// => ["exercism.com"];
 ```
 
-## 🤞 Nice to meet you
+## 5. Greet the user
 
 For storing data from all the persons who have had a conversation with, the chatbot is able to get the Full Name from the user’s profile in this style: **“smith, john”**.
 
 In this way, we want our chatbot to be really polite and make a good impression. 
 
-Write the function **NiceToMeetYou()** that takes a string with the full name of the user, and returns the string **“Nice to meet you, John Smith”**
+Write the function ``NiceToMeetYou()`` that takes a string with the full name of the user, and returns the string **“Nice to meet you, John Smith”**
 
 For learning purposes, implement the function using a **replacement method** from Regular Expressions. 
 
-```jsx
+```javascript
 let str = "smith, john";
 
-NiceToMeetYou(str); // "Nice to meet you John Smith"
+NiceToMeetYou(str); 
+// => "Nice to meet you John Smith"
 ```
