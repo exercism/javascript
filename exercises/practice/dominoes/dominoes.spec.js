@@ -23,11 +23,11 @@ function runTestsExpectingChain(dominoes) {
     expect(result).not.toBe(null);
   });
 
-  it('The number of dominoes in the output equals the number of dominoes in the input.', () => {
+  xit('The number of dominoes in the output equals the number of dominoes in the input.', () => {
     expect(result).toHaveLength(dominoes.length);
   });
 
-  it('For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.', () => {
+  xit('For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.', () => {
     expect(
       result
         .map((v, i) => {
@@ -39,14 +39,14 @@ function runTestsExpectingChain(dominoes) {
   });
 
   if (dominoes.length > 0) {
-    it('For the dominoes on the ends (a, b) ... (c, d): a is equal to d.', () => {
+    xit('For the dominoes on the ends (a, b) ... (c, d): a is equal to d.', () => {
       expect(result[0][0] === result[result.length - 1][1]).toBe(true);
     });
   }
 
   // 4. Every domino appears in the output an equal number of times as the number of times it appears in the input.
   // (in other words, the dominoes in the output are the same dominoes as the ones in the input)
-  it('Should have the same dominoes', () => {
+  xit('Should have the same dominoes', () => {
     const sortDomino = (domino) => [...domino].sort();
     expect([...dominoes].map(sortDomino).sort()).toEqual(
       [...result].map(sortDomino).sort()
