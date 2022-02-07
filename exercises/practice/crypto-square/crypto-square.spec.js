@@ -6,17 +6,17 @@ describe('Crypto', () => {
     expect(crypto.ciphertext).toEqual('');
   });
 
-  test('Lowercase', () => {
+  xtest('Lowercase', () => {
     const crypto = new Crypto('A');
     expect(crypto.ciphertext).toEqual('a');
   });
 
-  test('Remove spaces', () => {
+  xtest('Remove spaces', () => {
     const crypto = new Crypto('  b ');
     expect(crypto.ciphertext).toEqual('b');
   });
 
-  test('Remove punctuation', () => {
+  xtest('Remove punctuation', () => {
     const crypto = new Crypto('@1,%!');
     expect(crypto.ciphertext).toEqual('1');
   });
