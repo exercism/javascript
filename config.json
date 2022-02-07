@@ -1858,12 +1858,13 @@
         "prerequisites": [
           "loops",
           "arrays",
+          "array-loops",
           "array-transformations",
           "objects",
           "conditionals",
           "strings"
         ],
-        "difficulty": 4,
+        "difficulty": 7,
         "topics": []
       }
     ]
