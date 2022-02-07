@@ -1856,7 +1856,7 @@
         "uuid": "e855d32e-9d5d-4342-a3e9-e70cf2329499",
         "practices": [],
         "prerequisites": [
-          "loops",
+          "array-loops",
           "arrays",
           "array-loops",
           "array-transformations",
