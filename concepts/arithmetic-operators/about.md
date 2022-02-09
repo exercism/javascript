@@ -55,6 +55,8 @@ JavaScript has several special number values:
 - Two error values, `NaN` and `Infinity`.
 - Two values for zero, `+0` and `-0`.
 
+### NaN
+
 The error value `NaN`(aka "Not a Number"), is produced when:
 
 - A number could not be parsed:
@@ -74,6 +76,18 @@ The error value `NaN`(aka "Not a Number"), is produced when:
 
   ```javascript
   NaN + 69; // => NaN
+  ```
+ 
+ 
+`NaN` is the only value that is not equal to itself:
+- ```javascript
+  NaN === NaN; // => false
+  ```
+
+If you want to check whether a value is `NaN`, you have to use the global function `isNaN()`:
+- ```javascript
+  isNaN(NaN); // => true
+  isNaN(123); // => false
   ```
  
 
