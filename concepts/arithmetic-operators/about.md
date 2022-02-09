@@ -111,6 +111,34 @@ isNaN(123); // => false
 The signed zero allows you to record “from which direction” you approached zero; that is, what sign the number had before it was considered zero.
 It is best practise to pretend there's only one zero.
 
+## Notations
+
+There are two types of notations:
+- Exponential notation(E-notation)
+- Underscore notation
+
+### Exponential notation
+The E-notation indicates a number that should be multiplied by 10 raised to a given power.
+The format of E-notation is to have a number, followed by `e` or `E`, than by the power of 10 to multiply by.
+```javascript
+num = 3.125e7; // Equals to 31250000
+
+// The notation essentially says, "Take 3.125 and multiply it by 10^7.
+```
+E-notation can also be used to represent very small numbers:
+```javascript
+num = 325987e-6; // Equals to 0. 325987
+
+// The notation essentially says, "Take 325987 and multiply it by 10^-6.
+```
+
+### Underscore notation
+The underscore notaion is used to make lage numbers easier to read to the user. (The compiler will ignore the underscores)
+```javascript
+let num = 1_000_000; // You can read this as 1,000,000
+
+console.log(num) // => 1000000
+```
 ## Order of Operations
 
 When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
