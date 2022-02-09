@@ -49,6 +49,35 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
   4 ** 1 / 2; // => 2
   ```
 
+## Special Numbers Values
+
+JavaScript has several special number values:
+- Two error values, `NaN` and `Infinity`.
+- Two values for zero, `+0` and `-0`.
+
+The error value `NaN`(aka "Not a Number"), is produced when:
+
+- A number could not be parsed:
+  
+  ```javascript
+  Number("123"); // => 123
+  Number("Hello, World!"); // => NaN
+  ```
+
+- An operation failed:
+
+  ```javascript
+  Math.sqrt(-64); // => NaN
+  ```
+
+- One of the operands is NaN:
+
+  ```javascript
+  NaN + 69; // => NaN
+  ```
+ 
+
+
 ## Order of Operations
 
 When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
