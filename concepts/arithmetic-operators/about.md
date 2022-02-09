@@ -60,35 +60,51 @@ JavaScript has several special number values:
 The error value `NaN`(aka "Not a Number"), is produced when:
 
 - A number could not be parsed:
-  
   ```javascript
   Number("123"); // => 123
   Number("Hello, World!"); // => NaN
   ```
-
 - An operation failed:
-
   ```javascript
   Math.sqrt(-64); // => NaN
   ```
-
 - One of the operands is NaN:
-
   ```javascript
   NaN + 69; // => NaN
   ```
  
- 
 `NaN` is the only value that is not equal to itself:
-- ```javascript
-  NaN === NaN; // => false
-  ```
+```javascript
+ NaN === NaN; // => false
+```
 
 If you want to check whether a value is `NaN`, you have to use the global function `isNaN()`:
-- ```javascript
-  isNaN(NaN); // => true
-  isNaN(123); // => false
+```javascript
+isNaN(NaN); // => true
+isNaN(123); // => false
+```
+
+### Infinity
+`Infinity` is an error value indicating one of two problems: 
+- A number can’t be represented because its magnitude is too large.
+  ```javascript
+  Math.pow(2, 1024); // => Infinity
   ```
+- A division by zero has happened.
+  ```javascript
+  6 / 0; // => Infinity
+  -6 / 0; // => -Infinity
+  ```
+  
+ `Infinity` is larger than any other number (except NaN). 
+ Similarly, `-Infinity` is smaller than any other number (except NaN)
+ 
+ Additionally, the global function `sFinite()`allows you to check whether a value is an actual number (neither infinite nor NaN):
+ ```javascript
+ isFinite(80085); // => true
+ isFinite(Infinity); // => false
+ isFinite(NaN); // => false
+ ```
  
 
 
