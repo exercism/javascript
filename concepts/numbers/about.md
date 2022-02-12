@@ -19,6 +19,12 @@ There is no separate integer type in common everyday use.
 The `bigint` type is not designed to replace the `number` type for everyday uses.
 `42` is still a `Number`, not a `BigInt`.
 
+## Special Notations
+
+There are two types of notations:
+- Exponential notation(E-notation)
+- Underscore notation
+
 ### Exponential notation
 The E-notation indicates a number that should be multiplied by 10 raised to a given power.
 The format of E-notation is to have a number, followed by `e` or `E`, than by the power of 10 to multiply by.
