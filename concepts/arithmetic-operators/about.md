@@ -48,7 +48,6 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
   4 ** 3; // => 64
   4 ** 1 / 2; // => 2
   ```
-  
 ## Order of Operations
 
 When using multiple operators in a line, JavaScript follows an order of precedence as shown in [this precedence table][mdn-operator-precedence].
