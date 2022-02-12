@@ -17,11 +17,11 @@ export function getItem(cards, position) {
  *
  * @param {number[]} cards
  * @param {number} position
- * @param {number} replacementCard
+ * @param {number} newCard
  *
  * @returns {number[]} the cards with the change applied
  */
-export function setItem(cards, position, replacementCard) {
+export function setItem(cards, position, newCard) {
   throw new Error('Implement the setItem function');
 }
 
