@@ -28,7 +28,7 @@ Return the adjusted stack.
 
 ```javascript
 const position = 2;
-const newCard = 6;
+const replacementCard = 6;
 setItem([1, 2, 4, 1], position, replacementCard);
 // => [1, 2, 6, 1]
 ```
