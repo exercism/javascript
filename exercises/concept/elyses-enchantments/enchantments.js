@@ -13,7 +13,7 @@ export function getItem(cards, position) {
 }
 
 /**
- * Exchange card with replacement card at the 0-based position
+ * Exchange card with replacementCard at the 0-based position
  *
  * @param {number[]} cards
  * @param {number} position
