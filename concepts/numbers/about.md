@@ -137,7 +137,7 @@ The global function `isFinite()` allows you to check whether a value is an actua
  ```
 
 ### The Two Zeros
-`+0` or `-0` can be produced if you represented a number, that is so small that it is indistinguishable from 0.
+`+0` or `-0` are distinct numbers in JavaScript. They can be produced if you represented a number, that is so small that it is indistinguishable from 0.
 The signed zero allows you to record “from which direction” you approached zero; that is, what sign the number had before it was considered zero.
 It is best practise to pretend there's only one zero.
 
