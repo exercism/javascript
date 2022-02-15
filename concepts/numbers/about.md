@@ -87,7 +87,7 @@ JavaScript has several special number values:
 
 ### NaN - Not a Number
 
-The error value `NaN`(aka "Not a Number"), is produced when:
+The error value `NaN`(aka "Not a Number") is produced in the following cases.
 
 - A number could not be parsed:
   ```javascript
