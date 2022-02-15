@@ -23,7 +23,7 @@ Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Lea
 
 ## Special Notations
 
-### Exponential notation
+### Exponential Notation
 The E-notation indicates a number that should be multiplied by 10 raised to a given power.
 The format of E-notation is to have a number, followed by `e` or `E`, than by the power of 10 to multiply by.
 ```javascript
@@ -37,7 +37,7 @@ num = 325987e-6; // Equals to 0. 325987
 // The notation essentially says, "Take 325987 and multiply it by 10^-6.
 ```
 
-### Underscore notation
+### Underscore Notation
 Underscores can be used to make large numbers easier to read for the user. The compiler will completely ignore the underscores.
 ```javascript
 let num = 1_000_000; // You can read this as 1,000,000
@@ -136,7 +136,7 @@ isNaN(123); // => false
  isFinite(NaN); // => false
  ```
 
-### The two zeros
+### The Two Zeros
 `+0` or `-0` can be produced if you represented a number, that is so small that it is indistinguishable from 0.
 The signed zero allows you to record “from which direction” you approached zero; that is, what sign the number had before it was considered zero.
 It is best practise to pretend there's only one zero.
