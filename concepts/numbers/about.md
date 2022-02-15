@@ -116,7 +116,7 @@ isNaN(123); // => false
 
 ### Infinity
 `Infinity` is an error value indicating one of two problems: 
-- A number can’t be represented because its magnitude is too large.
+- A number can't be represented because its magnitude is too large.
   ```javascript
   Math.pow(2, 1024); // => Infinity
   ```
