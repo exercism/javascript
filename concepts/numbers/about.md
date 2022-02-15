@@ -36,7 +36,7 @@ num = 325987e-6; // Equals to 0. 325987
 ```
 
 ### Underscore notation
-The underscore notaion is used to make lage numbers easier to read to the user. (The compiler will ignore the underscores)
+Underscores can be used to make large numbers easier to read for the user. The compiler will completely ignore the underscores.
 ```javascript
 let num = 1_000_000; // You can read this as 1,000,000
 console.log(num) // => 1000000
