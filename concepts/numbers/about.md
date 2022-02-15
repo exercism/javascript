@@ -19,6 +19,8 @@ There is no separate integer type in common everyday use.
 The `bigint` type is not designed to replace the `number` type for everyday uses.
 `42` is still a `Number`, not a `BigInt`.
 
+Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric lexical grammar [here][lexical-grammar].
+
 ## Special Notations
 
 ### Exponential notation
@@ -41,8 +43,6 @@ Underscores can be used to make large numbers easier to read for the user. The c
 let num = 1_000_000; // You can read this as 1,000,000
 console.log(num) // => 1000000
 ```
-
-Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric lexical grammar [here][lexical-grammar].
 
 ## Built-in Object
 
