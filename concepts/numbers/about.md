@@ -129,7 +129,7 @@ isNaN(123); // => false
  `Infinity` is larger than any other number (except `NaN`). 
  Similarly, `-Infinity` is smaller than any other number (except `NaN`)
 
- Additionally, the global function `sFinite()`allows you to check whether a value is an actual number (neither infinite nor NaN):
+The global function `isFinite()` allows you to check whether a value is an actual number (neither infinite nor `NaN`):
  ```javascript
  isFinite(80085); // => true
  isFinite(Infinity); // => false
