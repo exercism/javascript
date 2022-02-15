@@ -85,7 +85,7 @@ JavaScript has several special number values:
 - Two error values, `NaN` and `Infinity`.
 - Two values for zero, `+0` and `-0`.
 
-### NaN
+### NaN - Not a Number
 
 The error value `NaN`(aka "Not a Number"), is produced when:
 
