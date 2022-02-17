@@ -19,13 +19,13 @@ Nevertheless, we have two ways of creating a regular expression:
 1. **Regular Expression Literal**: 
 
 ```javascript
-const regex = /[a-z]/gi;
+const regex = /[a-z]/;
 ```
 
 2. Constructor **RegExp**: 
 
 ```javascript
-const re = new RegExp(/[a-z], 'gi'/);
+const regex = new RegExp("[a-z]");
 ``` 
 
 In both methods, JavaScript is also creating an Object out of the regex. It is recommended to use immutable patterns with the literal, and the RegExp for those regex which are probably going to change or we don't know yet (like an input). 
@@ -54,6 +54,14 @@ console.log(myArray);
 The ``g`` character allows us to parse all possible matches within a string. Without this feature, JavaScript would have extracted only the first ``Home`` match. 
 
 The Case Insensitive flag ``/i`` enables us to be flexible when it comes to finding a pattern. This way it doesn't matter if what we are looking for is in ``UPPERCASE`` or ``lowercase``.
+
+When using the ``RegExp`` constructor, the syntax of adding flags is different. In this case, we just need to pass the flags as a second argument. 
+
+```javascript
+let regex = /[a-z]/gi; // literal notation
+let regex = new RegExp('[a-z]', 'gi') // constructor with string pattern as first argument
+let regex = new RegExp(/[a-z]/, 'gi') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
+```
 
 ## 4. Most common Functions
 
