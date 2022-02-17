@@ -2,13 +2,13 @@
 
 ## 1. Regular Expressions in JavaScript
 
-A Regular Expression (or Regex) is a sequence of characters that we can use to target and manipulate certain elements in strings. Hence, we can: 
+A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of characters that we can use to target and manipulate certain elements in strings. Hence, we can: 
 
 - **Search** for a text in a string
 - **Replace** substrings in a string
 - **Extract** information from a string
 
-JavaScript's regex flavor is part of the ECMA-262 standard for the language. This means that you don't have to worry about browser-specific compatibility. 
+> 💡 JavaScript's regex flavor is part of the ECMA-262 standard for the language. This means that you don't have to worry about browser-specific compatibility. 
 
 ## 2. How to create Regular Expressions
 
@@ -32,7 +32,7 @@ In both methods, JavaScript is also creating an Object out of the regex. It is r
 
 ## 3. 🏴‍☠️ Flags 
 
-Regular expressions have optional superpowers called "flags" that allow for additional features. These flags can be used separately or together in any order, and are included as part of the regular expression.
+Regular expressions have optional superpowers called [``flags``][mdn-flags] that allow for additional features. These flags can be used separately or together in any order, and are included as part of the regular expression.
 
 Some of the widely used are:
 
@@ -63,7 +63,7 @@ These are some of the most common functions used alongside regex.
 
 ### Test 
 
-The ``test()`` method executes a search for a match between a regular expression and a specified string. Returns true or false.
+The [test()][[mdn-regex-test]] method executes a search for a match between a regular expression and a specified string. Returns true or false.
 
 ```javascript
 const str = 'It is difficult to test if you have a virus';
@@ -76,7 +76,7 @@ console.log(result); // true
 
 Okey but, what if we want to get the actual values of the regular expression search?
 
-Instead of returning just a boolean, with the ``match()`` method, we get a useful array whose contents depend on the presence or absence of the found matches.
+Instead of returning just a boolean, with the [match()][mdn-regex-match] method, we get a useful array whose contents depend on the presence or absence of the found matches.
 
 In this way, we are able both to **search** and to **extract** information from any string. For example:
 
@@ -102,7 +102,7 @@ funnyQuote.match(regex3) // ["If", "if"];
 
 ### Replace
 
-The replace() method in JavaScript allows us to search for a value within a given string, and replacing it with a desired new value. 
+The [replace()][mdn-regex-replace] method in JavaScript allows us to search for a value within a given string, and replacing it with a desired new value. 
 
 ```javascript
 string.replace(searchValue, newValue)
@@ -128,11 +128,11 @@ let result = text.replace(/chatbot|hello/gi, function (word) {
 // -> "Say HELLO to the CHATBOT"
 ``` 
 
-In the end, the combination of regular expressions and the ``replace()`` method is a more dynamic way of replacing elements. Using a single string may be limited. 
+> 💡 In the end, the combination of regular expressions and the ``replace()`` method is a more dynamic way of replacing elements. Using a single string may be limited. 
 
 ### Split
 
-The ``split()`` method in JavaScript represents a different way of using and manipulating strings with regular expressions. 
+The [split()][mdn-regex-split] method in JavaScript represents a different way of using and manipulating strings with regular expressions. 
 
 In this way, we will be using regex in order to divide a given string by recognizing a pattern, e.g. `str.split(/[,.\s]/)`. This pattern will be used as the ``separator``. 
 
