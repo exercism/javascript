@@ -24,24 +24,30 @@ Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Lea
 ## Special Notations
 
 ### Exponential Notation
+
 The E-notation indicates a number that should be multiplied by 10 raised to a given power.
 The format of E-notation is to have a number, followed by `e` or `E`, than by the power of 10 to multiply by.
+
 ```javascript
 const num = 3.125e7;
 // => 31250000
 // The notation essentially says, "Take 3.125 and multiply it by 10^7".
 ```
+
 E-notation can also be used to represent very small numbers:
+
 ```javascript
 num = 325987e-6; // Equals to 0. 325987
 // The notation essentially says, "Take 325987 and multiply it by 10^-6.
 ```
 
 ### Underscore Notation
+
 Underscores can be used to make large numbers easier to read for the user. The compiler will completely ignore the underscores.
+
 ```javascript
 let num = 1_000_000; // You can read this as 1,000,000
-console.log(num) // => 1000000
+console.log(num); // => 1000000
 ```
 
 ## Built-in Object
@@ -82,6 +88,7 @@ However, _every_ number between `Number.MIN_SAFE_INTEGER - 1` and `Number.MAX_SA
 ## Special Numbers Values
 
 JavaScript has several special number values:
+
 - Two error values, `NaN` and `Infinity`.
 - Two values for zero, `+0` and `-0`.
 
@@ -91,8 +98,8 @@ The error value `NaN`(aka "Not a Number") is produced in the following cases.
 
 - A number could not be parsed:
   ```javascript
-  Number("123"); // => 123
-  Number("Hello, World!"); // => NaN
+  Number('123'); // => 123
+  Number('Hello, World!'); // => NaN
   ```
 - An operation failed:
   ```javascript
@@ -104,18 +111,22 @@ The error value `NaN`(aka "Not a Number") is produced in the following cases.
   ```
 
 `NaN` is the only value that is not equal to itself:
+
 ```javascript
- NaN === NaN; // => false
+NaN === NaN; // => false
 ```
 
 If you want to check whether a value is `NaN`, you have to use the global function `isNaN()`:
+
 ```javascript
 isNaN(NaN); // => true
 isNaN(123); // => false
 ```
 
 ### Infinity
-`Infinity` is an error value indicating one of two problems: 
+
+`Infinity` is an error value indicating one of two problems:
+
 - A number can't be represented because its magnitude is too large.
   ```javascript
   Math.pow(2, 1024); // => Infinity
@@ -126,17 +137,19 @@ isNaN(123); // => false
   -6 / 0; // => -Infinity
   ```
 
- `Infinity` is larger than any other number (except `NaN`). 
- Similarly, `-Infinity` is smaller than any other number (except `NaN`)
+`Infinity` is larger than any other number (except `NaN`).
+Similarly, `-Infinity` is smaller than any other number (except `NaN`)
 
 The global function `isFinite()` allows you to check whether a value is an actual number (neither infinite nor `NaN`):
- ```javascript
- isFinite(80085); // => true
- isFinite(Infinity); // => false
- isFinite(NaN); // => false
- ```
+
+```javascript
+isFinite(80085); // => true
+isFinite(Infinity); // => false
+isFinite(NaN); // => false
+```
 
 ### The Two Zeros
+
 `+0` or `-0` are distinct numbers in JavaScript. They can be produced if you represented a number, that is so small that it is indistinguishable from 0.
 The signed zero allows you to record “from which direction” you approached zero; that is, what sign the number had before it was considered zero.
 It is best practise to pretend there's only one zero.
