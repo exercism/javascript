@@ -191,8 +191,8 @@ describe('make the top card disappear', () => {
   test('remove two cards from the bottom', () => {
     let stack = [1, 2, 3];
 
-    stack = removeItemFromTop(stack);
-    stack = removeItemFromTop(stack);
+    stack = removeItemAtBottom(stack);
+    stack = removeItemAtBottom(stack);
 
     const expected = [3];
     expect(stack).toStrictEqual(expected);
