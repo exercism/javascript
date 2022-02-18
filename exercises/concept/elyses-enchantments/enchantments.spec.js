@@ -149,7 +149,7 @@ describe('make cards disappear', () => {
     removeItem(stack, 1);
 
     const expected = [1, 4];
-    expect(expected).toStrictEqual(expected);
+    expect(stack).toStrictEqual(expected);
   });
 });
 
@@ -173,7 +173,7 @@ describe('make the top card disappear', () => {
     removeItemFromTop(stack);
 
     const expected = [1];
-    expect(expected).toStrictEqual(expected);
+    expect(stack).toStrictEqual(expected);
   });
 
   test('remove the only card from the bottom', () => {
@@ -191,11 +191,11 @@ describe('make the top card disappear', () => {
   test('remove two cards from the bottom', () => {
     const stack = [1, 2, 3];
 
-    removeItemFromTop(stack);
-    removeItemFromTop(stack);
+    removeItemAtBottom(stack);
+    removeItemAtBottom(stack);
 
     const expected = [3];
-    expect(expected).toStrictEqual(expected);
+    expect(stack).toStrictEqual(expected);
   });
 });
 
