@@ -110,7 +110,7 @@ describe('move', () => {
     programWindow.move(newPosition);
 
     expect(programWindow.position.x).toBe(0);
-    expect(programWindow.position.y).toBe(0);
+    expect(programWindow.position.y).toBe(60);
   });
 
   test('move respects limits due to screen and window size', () => {
@@ -121,7 +121,7 @@ describe('move', () => {
     programWindow.move(newPosition);
 
     expect(programWindow.position.x).toBe(700);
-    expect(programWindow.position.y).toBe(500);
+    expect(programWindow.position.y).toBe(650);
   });
 
   test('resize respects limits due to position and screen size', () => {
@@ -150,7 +150,7 @@ describe('changeWindow', () => {
     const updatedWindow = changeWindow(programWindow);
 
     expect(updatedWindow.position.x).toBe(100);
-    expect(updatedWindow.position.y).toBe(150);
+    expect(updatedWindow.position.y).toBe(300);
   });
 
   test('returns the same instance that was passed in', () => {
