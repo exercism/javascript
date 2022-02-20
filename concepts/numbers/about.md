@@ -46,7 +46,7 @@ const num = 325987e-6; // Equals to 0. 325987
 Underscores can be used to make large numbers easier to read for the user. The compiler will completely ignore the underscores.
 
 ```javascript
-let num = 1_000_000; // You can read this as 1,000,000
+const num = 1_000_000; // You can read this as 1,000,000
 console.log(num); // => 1000000
 ```
 
