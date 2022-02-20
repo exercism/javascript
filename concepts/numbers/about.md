@@ -47,7 +47,8 @@ Underscores can be used to make large numbers easier to read for the user. The c
 
 ```javascript
 const num = 1_000_000; // You can read this as 1,000,000
-console.log(num); // => 1000000
+console.log(num);
+// => 1000000
 ```
 
 ## Built-in Object
