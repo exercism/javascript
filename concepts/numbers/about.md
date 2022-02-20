@@ -37,7 +37,7 @@ const num = 3.125e7;
 E-notation can also be used to represent very small numbers:
 
 ```javascript
-num = 325987e-6; // Equals to 0. 325987
+const num = 325987e-6; // Equals to 0. 325987
 // The notation essentially says, "Take 325987 and multiply it by 10^-6.
 ```
 
