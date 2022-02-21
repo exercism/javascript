@@ -87,7 +87,7 @@ backDoorResponse('Stands so high   ');
 To enter the poetry club via the back door, you need to be extra polite.
 So to derive the password, this time you need to correctly capitalize the word and add `', please'` at the end.
 
-Implement the function `backDoorPassword` that accepts a string (the combined letters you found in task 3) and returns the polite version of the capitalized password.
+Implement the function `backDoorPassword` that accepts a string (the combined letters you found in task 2) and returns the polite version of the capitalized password.
 
 ```javascript
 backDoorPassword('horse');
