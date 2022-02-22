@@ -107,7 +107,7 @@ Coercion to boolean commonly occurs for
 ```javascript
 const num = 0;
 if (num) {
-  // this block NOT is executed because 0 is falsy
+  // this block is NOT executed because 0 is falsy
 }
 ```
 
