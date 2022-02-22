@@ -69,7 +69,8 @@ export function perfectlyOrdered(deck) {
 }
 
 /**
- * Reorders the deck so that the top card ends up at the bottom.
+ * Reorders the deck so that the top card ends up at the bottom,
+ * and vice-versa
  *
  * @param {number[]} deck
  *
