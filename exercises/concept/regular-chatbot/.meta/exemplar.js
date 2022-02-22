@@ -30,12 +30,12 @@
   * @param {string} phoneNumber
   * @returns {string} the Chatbot response to the phone Validation
   */
- export function totalTimeInMinutes(phoneNumber) {
+ export function checkPhoneNumber(number) {
    const regex = /^\+\(?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
-   if (regex.test(phoneNumber)) {
+   if (regex.test(number)) {
        return "Thanks! You can download me now on your Phone."
    } else {
-       return `Oops, it seems like I can't reach out to ${phoneNumber}`
+       return `Oops, it seems like I can't reach out to ${number}`
    }
  }
 
