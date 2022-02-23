@@ -1,16 +1,16 @@
 # Introduction
 
-A function allows to group code into a reusable unit.
+A function is a block of organized, reusable code that is used to perform some action.
 There are multiple ways to define functions in JavaScript.
-Here we will look at _function declarations_ and _function expressions_..
+Here we will look at _function declarations_ and _function expressions_.
 Other possibilities like [arrow functions][concept-arrow-functions] will be covered in other concepts.
 
 ## Function Declaration
 
 The standard way of defining a function in JavaScript is a _function declaration_, also called _function definition_ or _function statement_.
 
-It consists of the `function` keyword, the name of the function, and a comma-separated list of parameters in round brackets.
-This is followed by the function body (the code that should be executed) wrapped in curly brackets.
+It consists of the `function` keyword, the name of the function, and a comma-separated list of parameters enclosed in parentheses.
+This is followed by the function body (collection of statements that defines what a function does) wrapped in curly braces.
 
 ```javascript
 function someName(param1, param2, param3) {
@@ -18,7 +18,7 @@ function someName(param1, param2, param3) {
 }
 ```
 
-In JavaScript a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
+In JavaScript, a function is invoked (called) by stating the function name followed by parentheses that contain the arguments.
 
 ```javascript
 someName(arg1, arg2, arg3);
@@ -30,13 +30,41 @@ When working with parameters inside the function body, be aware of possible side
 
 - Values of [primitive data types][mdn-primitives] are _immutable_.
   The original value is never affected by what happens to the argument in the function body.
-- For all other values (objects, arrays, functions), a reassignment will not affect the original value.
-  However, if you modify such an argument (e.g. add a key to an object), that also modifies the original value that was passed in.
+  
+```javascript
+const num = 0;
 
-By default, all parameters defined in the function declaration are optional in JavaScript.
-If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
-In many cases it makes sense to assign a more appropriate default value than `undefined`.
-This can by done by specifying default parameters directly in the function definition.
+function add(num) {
+  return num + 1;
+};
+
+add(num);
+// => 1
+
+num;
+// => 0
+```
+
+- It is different for values like _objects_, _arrays_, _functions_. 
+  Since the reference is copied, a reassignment will not affect the original value.
+  However, since you are dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
+
+```javascript
+const nums = [0, 1, 2, 3, 4];
+
+function add(arr) {
+  arr.push(5);
+};
+
+add(nums);
+
+nums;
+// => (6) [0, 1, 2, 3, 4, 5]
+```
+
+If a function is provided with fewer arguments than there are parameters,
+the missing arguments will be `undefined` inside the function body, see [Null and Undefined][concept-null-undefined].
+In many cases, it makes more sense to initialize a parameter with a _default_ value if no value or `undefined` property is passed.
 
 ```javascript
 function someName(param1 = defaultValue1, param2 = defaultValue2) {
@@ -44,24 +72,52 @@ function someName(param1 = defaultValue1, param2 = defaultValue2) {
 }
 ```
 
+A function can be invoked (called) with more arguments than there were parameters in the function definition.
+All arguments, including those excess arguments, can be found in the [arguments "array"][mdn-arguments-object].
+
+It is also possible to define functions that accept an arbitrary number of arguments (variadic functions),
+see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for more details.
+
+It is also important to notice that when invoking a function, 
+the order in which the parameters are defined is the order in which the arguments should be passed in.
+
+```javascript
+function printNumbers(num1, num2, num3, num4) {
+  console.log('1: ', num1);
+  console.log('2: ', num2);
+  console.log('3: ', num3);
+  console.log('4: ', num4);
+};
+
+printNumbers(4, 2, 1, 3);
+// => 1:  4
+// => 2:  2
+// => 3:  1
+// => 4:  3
+
+printNumbers(1, 3, 4);
+// => 1:  1
+// => 2:  3
+// => 3:  4
+// => 4:  undefined
+```
+
 ## Return Statement
 
-Using the `return` statement, you can pass the result of a function to the code that called it.
-There can be multiple `return` statements in a function.
-The execution of the function ends as soon as it hits one of those `return`s.
+A function can have multiple `return` statements. A return statement ends the function execution and specifies a value to be returned to the function caller.
 
 ```javascript
 function checkNumber(num) {
   if (num === 0) {
     return 'You passed 0, please provide another number.';
-  }
+  };
 
   return 'Thanks for passing such a nice number.';
-}
+};
 ```
 
-If you use a naked return or no return at all, the result of the function is `undefined`.
-There are no implicit returns in JavaScript.
+The result of a function that `return`s no value or does not have a `return` statement is `undefined`.
+There are no implicit `return`s in JavaScript.
 
 ```javascript
 function nakedReturn(a) {
@@ -74,7 +130,7 @@ nakedReturn(1);
 
 function noReturn(a) {
   a * 2;
-}
+};
 
 noReturn(1);
 // => undefined
@@ -89,7 +145,7 @@ function divide(a, b) {
     quotient: Math.floor(a / b),
     remainder: a % b,
   };
-}
+};
 ```
 
 ## Function Expression
@@ -116,7 +172,10 @@ const obj = {
 ```
 
 [concept-arrow-functions]: /tracks/javascript/concepts/arrow-functions
+[wikipedia-shalllow-copy]: https://en.wikipedia.org/wiki/Object_copying#Shallow_copy
+[concept-rest-and-spread]: /tracks/javascript/concepts/rest-and-spread
 [concept-null-undefined]: /tracks/javascript/concepts/null-undefined
+[mdn-arguments-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 [concept-objects]: /tracks/javascript/concepts/objects
 [concept-arrays]: /tracks/javascript/concepts/arrays
 [concept-callbacks]: /tracks/javascript/concepts/callbacks
