@@ -30,13 +30,13 @@ When working with parameters inside the function body, be aware of possible side
 
 - Values of [primitive data types][mdn-primitives] are _immutable_.
   The original value is never affected by what happens to the argument in the function body.
-  
+
 ```javascript
 const num = 0;
 
 function add(num) {
   return num + 1;
-};
+}
 
 add(num);
 // => 1
@@ -45,7 +45,7 @@ num;
 // => 0
 ```
 
-- It is different for values like _objects_, _arrays_, _functions_. 
+- It is different for values like _objects_, _arrays_, _functions_.
   Since the reference is copied, a reassignment will not affect the original value.
   However, since you are dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
 
@@ -54,7 +54,7 @@ const nums = [0, 1, 2, 3, 4];
 
 function add(arr) {
   arr.push(5);
-};
+}
 
 add(nums);
 
@@ -78,7 +78,7 @@ All arguments, including those excess arguments, can be found in the [arguments 
 It is also possible to define functions that accept an arbitrary number of arguments (variadic functions),
 see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for more details.
 
-It is also important to notice that when invoking a function, 
+It is also important to notice that when invoking a function,
 the order in which the parameters are defined is the order in which the arguments should be passed in.
 
 ```javascript
@@ -87,7 +87,7 @@ function printNumbers(num1, num2, num3, num4) {
   console.log('2: ', num2);
   console.log('3: ', num3);
   console.log('4: ', num4);
-};
+}
 
 printNumbers(4, 2, 1, 3);
 // => 1:  4
@@ -110,10 +110,10 @@ A function can have multiple `return` statements. A return statement ends the fu
 function checkNumber(num) {
   if (num === 0) {
     return 'You passed 0, please provide another number.';
-  };
+  }
 
   return 'Thanks for passing such a nice number.';
-};
+}
 ```
 
 The result of a function that `return`s no value or does not have a `return` statement is `undefined`.
@@ -130,7 +130,7 @@ nakedReturn(1);
 
 function noReturn(a) {
   a * 2;
-};
+}
 
 noReturn(1);
 // => undefined
@@ -145,7 +145,7 @@ function divide(a, b) {
     quotient: Math.floor(a / b),
     remainder: a % b,
   };
-};
+}
 ```
 
 ## Function Expression
