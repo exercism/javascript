@@ -2,7 +2,7 @@
 
 In this exercise, you'll be providing a `TranslationService` where paid members have some quality assurance.
 
-You have found an out-of-space translation API that can fulfill any translation _request_ in a reasonable amount of time, and you want to capitalize on this.
+You have found an outer space translation API that can fulfill any translation _request_ in a reasonable amount of time, and you want to capitalize on this.
 
 **The API interface**
 
