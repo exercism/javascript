@@ -92,6 +92,17 @@ describe('resize', () => {
     expect(programWindow.size.width).toBe(1);
     expect(programWindow.size.height).toBe(1);
   });
+  
+    test('resize respects limits due to position and screen size', () => {
+    const programWindow = new ProgramWindow();
+    const newPosition = new Position(710, 525);
+    programWindow.move(newPosition);
+    const newSize = new Size(1000, 1000);
+    programWindow.resize(newSize);
+
+    expect(programWindow.size.width).toBe(90);
+    expect(programWindow.size.height).toBe(75);
+  });
 });
 
 describe('move', () => {
@@ -122,17 +133,6 @@ describe('move', () => {
 
     expect(programWindow.position.x).toBe(700);
     expect(programWindow.position.y).toBe(500);
-  });
-
-  test('resize respects limits due to position and screen size', () => {
-    const programWindow = new ProgramWindow();
-    const newPosition = new Position(710, 525);
-    programWindow.move(newPosition);
-    const newSize = new Size(1000, 1000);
-    programWindow.resize(newSize);
-
-    expect(programWindow.size.width).toBe(90);
-    expect(programWindow.size.height).toBe(75);
   });
 });
 
