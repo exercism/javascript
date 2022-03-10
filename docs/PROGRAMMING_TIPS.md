@@ -7,7 +7,8 @@ Consider the following recommendations when you name your function.
 - Choose meaningful words. 
   When you name your function, you should be clear on what it does. 
   On Function name `get(studentId, subject)`, you can't tell what it is geting mark for or what it is getting or whether it is getting Studnet name or Age or their marks. 
-  Function `getStudentGrade(studentId, subject)` told you everything you need to know about what it does. It will return the student grade.
+  Function `getStudentGrade(studentId, subject)` told you everything you need to know about what it does. 
+  It will return the student grade.
 - Don't make the name too short or too long. 
   It is good to be clear and precise but take care not to make too long name. 
   `checkStudentFailOrPassOrMeritOrDistinction(mark)` is an example of a unneccessarily long function name.
