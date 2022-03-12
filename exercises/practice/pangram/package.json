@@ -10,11 +10,11 @@
     "directory": "exercises/practice/pangram"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.4",
+    "@babel/core": "^7.17.5",
     "@exercism/babel-preset-javascript": "^0.1.2",
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.25",
+    "@types/node": "^16.11.26",
     "babel-jest": "^27.5.1",
     "core-js": "^3.21.1",
     "eslint": "^8.9.0",
