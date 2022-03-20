@@ -27,7 +27,7 @@
  /**
   * Given a certain phone number, help the chatbot recognize whether it is in the correct format.
   *
-  * @param {string} phoneNumber
+  * @param {string} number
   * @returns {string} the Chatbot response to the phone Validation
   */
  export function checkPhoneNumber(number) {
