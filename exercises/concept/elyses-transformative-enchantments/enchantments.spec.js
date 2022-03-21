@@ -53,7 +53,7 @@ describe('threeOfEachThree', () => {
     expect(threeOfEachThree(deck)).toEqual(expected);
   });
 
-  test('returns the same elements there are no 3s', () => {
+  test('returns the same elements if there are no 3s', () => {
     expect(threeOfEachThree([1, 2, 4])).toEqual([1, 2, 4]);
   });
 
