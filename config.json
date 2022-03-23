@@ -261,6 +261,14 @@
         "concepts": ["classes"],
         "prerequisites": ["objects", "functions", "conditionals-ternary"],
         "status": "beta"
+      },
+      {
+        "slug": "regular-chatbot",
+        "name": "Regular Chatbot",
+        "uuid": "dc118a0d-be89-4ea5-a814-e471897d921a",
+        "concepts": ["regular-expressions"],
+        "prerequisites": ["arrays", "classes"],
+        "status": "wip"
       }
     ],
     "practice": [
