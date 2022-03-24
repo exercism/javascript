@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.regular-expressions.info/javascript.html",
+    "description": "Using regular expressions in Javascript"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet",
+    "description": "MDN: Regex Cheatsheet"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions",
+    "description": "MDN: Regular Expressions"
+  },
+  {
+    "url": "https://livecodestream.dev/post/demystifying-regular-expressions-with-javascript/",
+    "description": "Demystifying regular expressions with JavaScript"
+  },
+  {
+    "url": "https://www.freecodecamp.org/news/javascript-regex-match-example-how-to-use-the-js-replace-method-on-a-string/",
+    "description": "How to use the Replace Method"
+  }
+]
