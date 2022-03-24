@@ -1298,7 +1298,6 @@
         "prerequisites": [
           "arrays",
           "array-loops",
-          "array-transformations",
           "classes",
           "conditionals"
         ],
@@ -1319,9 +1318,11 @@
         "uuid": "6be39d1f-f68d-4a52-bd72-85a38ffd509e",
         "practices": [],
         "prerequisites": [
+          "arrays",
           "array-transformations",
           "arrow-functions",
-          "functions",
+          "errors",
+          "for-loops",
           "rest-and-spread"
         ],
         "difficulty": 5,
@@ -1333,10 +1334,12 @@
         "uuid": "0bc6b478-40a8-47ab-889b-c403b922f7e5",
         "practices": [],
         "prerequisites": [
-          "array-analysis",
+          "arithmetic-operators",
           "classes",
           "conditionals",
-          "functions"
+          "errors",
+          "objects",
+          "while-loops"
         ],
         "difficulty": 6,
         "topics": [
@@ -1355,11 +1358,14 @@
         "uuid": "a602bd33-69fc-4b67-a3d3-95198853095e",
         "practices": [],
         "prerequisites": [
+          "arithmetic-operators",
           "array-analysis",
           "array-transformations",
           "conditionals",
           "for-loops",
-          "functions"
+          "functions",
+          "objects",
+          "rest-and-spread"
         ],
         "difficulty": 7,
         "topics": ["algorithms", "games"]
@@ -1370,10 +1376,13 @@
         "uuid": "2fa2c262-77ae-409b-bfd8-1d643faae772",
         "practices": [],
         "prerequisites": [
+          "arrays",
           "array-analysis",
+          "array-loops",
           "array-transformations",
-          "functions",
-          "for-loops"
+          "classes",
+          "conditionals",
+          "functions"
         ],
         "difficulty": 7,
         "topics": [
