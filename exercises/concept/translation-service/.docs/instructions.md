@@ -75,7 +75,7 @@ service.free("jIyajbe'");
 
 ## 2. Fetch a batch of translations, all-or-nothing
 
-Implement a method `batch([text, text, ...])` for free members that translates an array of text using the `this.free` method, returning all the translations, or a single error.
+Implement a method `batch([text, text, ...])` for free members that translates an array of text using the free service, returning all the translations, or a single error.
 
 - Resolves with all the translations (in the same order), if they are all available
 - Rejects with the first error that is encountered
