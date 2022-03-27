@@ -55,7 +55,7 @@ Ensure that you *never* request a translation if something has already been tran
 
 ## 1. Fetch a translation, ignoring the quality
 
-The free service only provides translations that are currently in our _datastore_. 
+The free service only provides translations that are currently in the _datastore_. 
 
 Implement a method `free(text)` that provides free members with translation that already exist in the _datastore_. Ignore the quality and forward any errors thrown by the API.
 
