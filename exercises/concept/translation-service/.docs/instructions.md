@@ -31,7 +31,7 @@ Some translations are sure to exist, but haven't been added to our _datastore_ y
 `api.request(text, callback)` requests that a translation of `text` be performed and added into the _datastore_.
 On completion the `callback` function is called.
 
-- On success `callback` is passed `undefined`. This indicates the translation was successful and is accessible using the `api.fetch` method.
+- On success `callback` is passed `undefined`: this indicates the translation was successful and is accessible using the `api.fetch` method.
 - On failure `callback` is passed an `error`. This indicates something went wrong. The outspace API is _unstable_, which means that the API fails often. If that happens, it is okay to `api.request` again.
 
 
