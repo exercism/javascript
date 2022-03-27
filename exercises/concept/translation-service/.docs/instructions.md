@@ -94,7 +94,9 @@ service.batch([]);
 
 ## 3. Request a translation, retrying at most 2 times
 
-Implement a premium user method `request(text)`, that _requests_ a translation be added to the _datastore_. The request should automaticaly retry if a failure occurs.  It should perform no more than **3 calls** for the same request (_don't upset the space translators!!!_).
+Implement a premium user method `request(text)`, that _requests_ a translation be added to the _datastore_. 
+The request should automatically retry if a failure occurs.  
+It should perform no more than **3 calls** for the same request (_don't upset the space translators!!!_).
 
 - If `api.request` does not return an error, resolve with `undefined`
 - If `api.request` returns an error, retry at most two times
