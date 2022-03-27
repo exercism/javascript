@@ -109,7 +109,9 @@ service.request("jIyajbe'");
 
 ## 4. Fetch a translation, inspect the quality, or request it
 
-Implement a premium user method `premium(text, quality)` to `api.fetch` a translation. If a translation is `notAvailable`, `api.request` the translation and `api.fetch` it after its been added to the _datastore_. The method should only return the translation if it meets a certain `quality` threshold.
+Implement a premium user method `premium(text, quality)` to fetch a translation.
+If a translation is `NotAvailable`, request the translation and fetch it after its been added to the _datastore_.
+The method should only return the translation if it meets a certain `quality` threshold.
 
 - If `api.fetch` resolves, check the quality before resolving
 - If `api.fetch` rejects, _request_ the translation instead
