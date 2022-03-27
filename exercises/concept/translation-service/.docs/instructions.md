@@ -4,7 +4,9 @@ In this exercise, you'll be providing a `TranslationService` that provides basic
 
 **The API**
 
-You have found an outer space translation API that fulfills any translation `request` in a reasonable amount of time. You want to capitalize on this. The space translators are extremely fickle and hate redundancy, so they also provide a _datastore_ in their API where you can `fetch` past translations without bothering them.
+You have found an outer space translation API that fulfills any translation `request` in a reasonable amount of time.
+You want to capitalize on this.
+The space translators are extremely fickle and hate redundancy, so they also provide a _datastore_ in their API where you can `fetch` past translations without bothering them.
 
 ***Fetching a translation***
 
