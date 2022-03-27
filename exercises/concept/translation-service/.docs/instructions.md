@@ -57,7 +57,9 @@ Ensure that you *never* request a translation if something has already been tran
 
 The free service only provides translations that are currently in the _datastore_. 
 
-Implement a method `free(text)` that provides free members with translation that already exist in the _datastore_. Ignore the quality and forward any errors thrown by the API.
+Implement a method `free(text)` that provides free members with translation that already exist in the _datastore_.
+Ignore the quality and forward any errors thrown by the API.
+``
 
 - Returns the translation if it can be retrieved, regardless of its quality
 - Forwards any error from the translation API
