@@ -61,7 +61,7 @@ Implement a method `free(text)` that provides free members with translation that
 
 - Returns the translation if it can be retrieved, regardless of its quality
 - Forwards any error from the translation API
-- Uses the `api.fetch` method ( remember that `api.fetch` returns a `promise` )
+- Uses the `api.fetch` method (`api.fetch` returns a `promise`)
 
 ```javascript
 service.free('jIyaj');
