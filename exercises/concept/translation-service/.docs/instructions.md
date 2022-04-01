@@ -8,7 +8,7 @@ You have found an outer space translation API that fulfills any translation `req
 You want to capitalize on this.
 The space translators are extremely fickle and hate redundancy, so they also provide _API storage_ satellites where you can `fetch` past translations without bothering them.
 
-***Fetching a translation***
+**_Fetching a translation_**
 
 `api.fetch(text)` fetches a translation of `text` from the _API storage_ and returns a `promise` that provides two values:
 
@@ -16,15 +16,15 @@ The space translators are extremely fickle and hate redundancy, so they also pro
 - `quality`: the quality expressed as a number
 
 If a translation is not found in the _API storage_, the API throws a `NotAvailable` error.
-Translations can be added using the `api.request` method. 
-If 'text' is not translatable, the API throws an `Untranslatable` error. 
+Translations can be added using the `api.request` method.
+If 'text' is not translatable, the API throws an `Untranslatable` error.
 
 ```javascript
 api.fetch('jIyaj');
 // => Promise({ resolved: 'I understand' })
 ```
 
-***Requesting a translation***
+**_Requesting a translation_**
 
 Some translations are sure to exist, but haven't been added to the _API storage_ yet. That's the difference between `NotAvailable` ( not in storage, but can be requested ) and `Untranslatable` ( cannot be translated ).
 
@@ -35,7 +35,6 @@ On completion the `callback` function is called.
 - On failure `callback` is passed an `error`: this indicates something went wrong.
   The outspace API is _unstable_, which means that the API fails often.
   If that happens, it is okay to `api.request` again.
-
 
 ```javascript
 api.request('majQa’');
@@ -55,7 +54,7 @@ Ensure that you *never* request a translation if something has already been tran
 
 ## 1. Fetch a translation, ignoring the quality
 
-The free service only provides translations that are currently in the _API storage_. 
+The free service only provides translations that are currently in the _API storage_.
 
 Implement a method `free(text)` that provides free members with translation that already exist in the _API storage_.
 Ignore the quality and forward any errors thrown by the API.
@@ -94,7 +93,7 @@ service.batch([]);
 
 ## 3. Request a translation, retrying at most 2 times
 
-Implement a premium user method `request(text)`, that _requests_ a translation be added to the _API storage_. 
+Implement a premium user method `request(text)`, that _requests_ a translation be added to the _API storage_.
 The request should automatically retry if a failure occurs.  
 It should perform no more than **3 calls** for the same request (_don't upset the space translators!!!_).
 
