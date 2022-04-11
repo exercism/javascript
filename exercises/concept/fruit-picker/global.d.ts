@@ -4,26 +4,23 @@
  * type information on the fly
  */
 
-type Status = 'OFFLINE' | 'ONLINE';
-type AvailabilityAction = 'NOOP' | 'PURCHASE';
-
-interface CheckStatus {
-  callback: StatusCallback;
-}
-
-type StatusCallback = (response: Status) => boolean;
-
-interface CheckInventory {
-  query: GrocerQuery;
-  callback: InventoryCallback;
-}
-
 type GrocerQuery = {
-  variety: string;
+  fruit: string;
   quantity: number;
 };
 
-type InventoryCallback = (
-  err: string | null,
-  isAvailable: boolean
-) => AvailabilityAction;
+type GrocerOnSuccess = (quantityOrdered: number) => unknown
+
+type GrocerOnError = (errorMessage: string) => unknown
+
+type FruitPickerSuccess = {
+  message: 'SUCCESS'
+}
+
+type FruitPickerError = {
+  message: 'ERROR'
+}
+
+type FruitPickerSuccessCallback = () => SuccessResult;
+
+type FruitPickerErrorCallback = () => ErrorResult;
