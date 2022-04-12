@@ -31,7 +31,7 @@ export function removeEmoji(message) {
  */
 export function checkPhoneNumber(number) {
   const regex =
-    /^\+\(?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
+    /^\(\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
   if (regex.test(number)) {
     return 'Thanks! You can download me now on your Phone.';
   } else {
@@ -47,7 +47,6 @@ export function checkPhoneNumber(number) {
  */
 export function getURL(userInput) {
   const regex = /(\w+\.)+\w+/g;
-
   return userInput.match(regex);
 }
 

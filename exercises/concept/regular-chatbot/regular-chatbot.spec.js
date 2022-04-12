@@ -59,14 +59,14 @@ describe('checkPhoneNumber', () => {
 
 describe('getURL', () => {
   test('returns only the link of the website', () => {
-    expect(getURL('I learned a lot from exercism.com')).toBe('exercism.com');
+    expect(getURL('I learned a lot from exercism.com')).toStrictEqual(['exercism.com']);
     expect(
       getURL('There is a cool website called theodinproject.com to learn from')
-    ).toBe('theodinproject.com');
+    ).toStrictEqual(['theodinproject.com']);
   });
 
   test('returns an array with the multiple websites links', () => {
-    expect(getURL('That was from reddit.com and notion.so')).toBe([
+    expect(getURL('That was from reddit.com and notion.so')).toStrictEqual([
       'reddit.com',
       'notion.so',
     ]);
@@ -75,9 +75,9 @@ describe('getURL', () => {
 
 describe('niceToMeetYou', () => {
   test('Greets the user by its proper name', () => {
-    expect(niceToMeetYou('smith, john')).toBe('Nice to meet you John Smith');
-    expect(niceToMeetYou('stephan, sandro')).toBe(
-      'Nice to meet you Sandro Stephan'
+    expect(niceToMeetYou('Smith, John')).toBe('Nice to meet you, John Smith');
+    expect(niceToMeetYou('Stephan, Sandro')).toBe(
+      'Nice to meet you, Sandro Stephan'
     );
   });
 });
