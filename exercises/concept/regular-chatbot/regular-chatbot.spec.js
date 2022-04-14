@@ -4,7 +4,7 @@ import {
   checkPhoneNumber,
   getURL,
   niceToMeetYou,
-} from './regular-chatbot.js';
+} from './regular-chatbot';
 
 describe('isValidCommand', () => {
   test('recognizes wheter the command is at the first position', () => {
