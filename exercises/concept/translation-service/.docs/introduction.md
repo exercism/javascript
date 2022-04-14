@@ -1,7 +1,7 @@
 # Introduction
 
 The [`Promise`][promise-docs] object represents the eventual completion (or failure) of an
-asynchronous operation, and its resulting value.
+asynchronous operation and its resulting value.
 
 The methods [`promise.then()`][promise-then], [`promise.catch()`][promise-catch], and [`promise.finally()`][promise-finally] are used to associate further action with a promise that becomes settled.
 
@@ -51,7 +51,7 @@ promise1.then(function (value) {
 
 **catch**
 
-> A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is resolved. It is used to handle rejected promises.[^2]
+> A `.catch()` is just a `.then()` without a slot for a callback function for the case when the promise is resolved. It is used to handle rejected promises.[^2]
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {

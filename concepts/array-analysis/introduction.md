@@ -2,7 +2,7 @@
 
 [Arrays][arrays-concept] have built-in methods to analyse the contents of the array.
 Most of these methods take a function that returns true or false as an argument.
-Such a function is called [`predicate`][predicate_in_programming].
+Such a function is called a [`predicate`][predicate_in_programming].
 
 The built-in methods are meant to be used _instead of a `for` loop_ or the built-in `forEach` method:
 

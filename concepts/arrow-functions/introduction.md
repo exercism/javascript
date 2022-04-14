@@ -3,7 +3,7 @@
 Besides function declarations and function expressions, JavaScript also has another very concise syntax for defining a function.
 These functions are called _arrow functions_.
 
-In this concept we will focus on the syntax used to write an arrow function.
+In this concept, we will focus on the syntax used to write an arrow function.
 There are differences in the way that an arrow function works, such as _this_ binding, that will be covered in other concepts.
 
 Here is a comparison between a function declaration and an arrow function.
@@ -37,7 +37,7 @@ const addUpTwoNumbers = (num1, num2) => num1 + num2;
 ```
 <!-- prettier-ignore-end -->
 
-In the special case of only returning an object from an arrow function, parenthesis are needed around the object to be able to omit the return statement.
+In the special case of only returning an object from an arrow function, parentheses are needed around the object to be able to omit the return statement.
 
 ```javascript
 // explicit return of object

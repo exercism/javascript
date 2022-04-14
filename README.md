@@ -6,7 +6,7 @@
 
 This is the JavaScript track, one of the many tracks on [Exercism][web-exercism].
 It holds all the _exercises_ that are currently implemented and available for students to complete.
-The track consists of various **concept** exercises which teach the [JavaScript syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
+The track consists of various **concept** exercises that teach the [JavaScript syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
 You can find this in the [`config.json`][file-config].
 
 ## Tools
@@ -70,7 +70,7 @@ ASSIGNMENT=practice/two-fer npx babel-node scripts/test
 
 ### Related TypeScript repositories
 
-A lot of the improvements made to this track and tooling, is also made to the TypeScript track and tooling and vice-versa.
+A lot of the improvements made to this track and tooling are also made to the TypeScript track and tooling and vice-versa.
 
 - [The TypeScript track][git-typescript]
 - [The TypeScript Analyzer][git-typescript-analyzer]

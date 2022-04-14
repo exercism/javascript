@@ -1,17 +1,17 @@
 # Instructions
 
-Your friend Li Mei runs her own juice bar where she sells delicious mixed fruit juices.
+Your friend Li Mei runs a juice bar where she sells delicious mixed fruit juices.
 You are a frequent customer in her shop and realized you could make your friend's life easier.
 You decide to use your coding skills to help Li Mei with her job.
 
 ## 1. Determine how long it takes to mix a juice
 
 Li Mei likes to tell her customers in advance how long they have to wait for a juice from the menu that they ordered.
-She has a hard time remembering the exact numbers, because the time it takes to mix the juices varies.
+She has a hard time remembering the exact numbers because the time it takes to mix the juices varies.
 `'Pure Strawberry Joy'` takes 0.5 minutes, `'Energizer'` and `'Green Garden'` take 1.5 minutes each, `'Tropical Island'` takes 3 minutes and `'All or Nothing'` takes 5 minutes.
 For all other drinks (e.g., special offers) you can assume a preparation time of 2.5 minutes.
 
-To help your friend, write a function `timeToMixJuice` that takes a juice from the menu as an argument and returns the number of minutes it take to mix that drink.
+To help your friend, write a function `timeToMixJuice` that takes a juice from the menu as an argument and returns the number of minutes it takes to mix that drink.
 
 ```javascript
 timeToMixJuice('Tropical Island');
@@ -47,10 +47,10 @@ There are often drinks that have been ordered but are not prepared yet when Li M
 Dmitry will then prepare the remaining juices.
 
 To make the hand-over easier, implement a function `remainingOrders` which takes the number of minutes left in Li Mei's shift and an array of juices that have been ordered but not prepared yet.
-The function should return the orders that Li Mei cannot start preparing before the end of her work day.
+The function should return the orders that Li Mei cannot start preparing before the end of her workday.
 
 The time left in the shift will always be greater than 0.
-Furthermore the orders are prepared in the order in which they appear in the array.
+Furthermore, the orders are prepared in the order in which they appear in the array.
 If Li Mei starts to mix a certain juice, she will always finish it even if she has to work a bit longer.
 If there are no remaining orders left that Dmitry needs to take care of, an empty array should be returned.
 

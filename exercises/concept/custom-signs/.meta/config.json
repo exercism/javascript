@@ -1,11 +1,26 @@
 {
-  "blurb": "Learn about template strings and the ternary operator ...",
-  "authors": ["pertrai1"],
-  "contributors": [],
+  "authors": [
+    "pertrai1"
+  ],
   "files": {
-    "solution": ["custom-signs.js"],
-    "test": ["custom-signs.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "custom-signs.js"
+    ],
+    "test": [
+      "custom-signs.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["swift/custom-signs"]
+  "forked_from": [
+    "swift/custom-signs"
+  ],
+  "blurb": "Learn about template strings and the ternary operator ...",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

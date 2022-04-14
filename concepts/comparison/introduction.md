@@ -30,8 +30,8 @@ The result of the comparison is always a boolean value, so either `true` or `fal
 
 ## Comparing Strings
 
-In JavaScript the comparison operators above can also be used to compare strings.
-In that case a dictionary (lexicographical) order is applied.
+In JavaScript, the comparison operators above can also be used to compare strings.
+In that case, a dictionary (lexicographical) order is applied.
 You can find a list of the exact order of all the characters [here][utf-16-list].
 
 ```javascript

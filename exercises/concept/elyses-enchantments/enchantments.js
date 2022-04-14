@@ -73,7 +73,7 @@ export function insertItemAtBottom(cards, newCard) {
 }
 
 /**
- * Remove card from the beginning of the cards cards
+ * Remove card from the beginning of the cards
  *
  * @param {number[]} cards
  *

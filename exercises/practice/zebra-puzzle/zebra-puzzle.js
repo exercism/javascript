@@ -16,5 +16,3 @@ export class ZebraPuzzle {
     throw new Error('Remove this statement and implement this function');
   }
 }
-
-module.exports = ZebraPuzzle;

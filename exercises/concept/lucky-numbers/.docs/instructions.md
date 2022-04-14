@@ -33,7 +33,7 @@ The sequence or pattern of the "lucky numbers" changes each month and each user 
 This months' lucky numbers should be numbers that are palindromes.
 Palindromic numbers remain the same when the digits are reversed.
 
-Implement the new `luckyNumber` function that accepts a number as parameter.
+Implement the new `luckyNumber` function that accepts a number as a parameter.
 The function should return `true` if the number is a palindrome and `false` otherwise.
 The input number will always be a positive integer.
 
@@ -57,10 +57,10 @@ Here is some more information on how the value of an input field is provided.
 - If the user types something but deletes it again, the variable will be an empty string.
 - Before the user even started typing, the variable can be `undefined` or `null`.
 
-Write a function `errorMessage` that accepts the user input as parameter.
+Write a function `errorMessage` that accepts the user input as a parameter.
 If the user did not provide any input, `errorMessage` should return `'Required field'`.
 If the input does not represent a non-zero number (according to the JavaScript conversion rules), `'Must be a number besides 0'` should be returned.
-In all other cases you can assume the input is valid, the return value should be an empty string.
+In all other cases, you can assume the input is valid, the return value should be an empty string.
 
 ```javascript
 errorMessage('123');

@@ -1,11 +1,27 @@
 {
-  "blurb": "Help Annalyn free her best friend using boolean logic in JavaScript",
-  "authors": ["ovidiu141"],
-  "contributors": ["rishiosaur", "SleeplessByte"],
+  "authors": [
+    "ovidiu141"
+  ],
+  "contributors": [
+    "rishiosaur",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["annalyns-infiltration.js"],
-    "test": ["annalyns-infiltration.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "annalyns-infiltration.js"
+    ],
+    "test": [
+      "annalyns-infiltration.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": []
+  "blurb": "Help Annalyn free her best friend using boolean logic in JavaScript",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

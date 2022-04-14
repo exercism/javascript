@@ -2,9 +2,9 @@
 
 There are two different kinds of numbers in JavaScript - numbers and "bigints"
 
-Numbers are the most used, and represent numeric data type in the double-precision 64-bit floating point format.
+Numbers are the most used, and represent numeric data type in the double-precision 64-bit floating-point format.
 
-- `number`: a numeric data type in the double-precision 64-bit floating point format (IEEE 754).
+- `number`: a numeric data type in the double-precision 64-bit floating-point format (IEEE 754).
   Examples are `-6`, `-2.4`, `0`, `0.1`, `1`, `3.14`, `16.984025`, `25`, `976`, `1024.0` and `500000`.
 - `bigint`: a numeric data type that can represent _integers_ in the arbitrary precision format.
   Examples are `-12n`, `0n`, `4n`, and `9007199254740991n`.
@@ -19,7 +19,37 @@ There is no separate integer type in common everyday use.
 The `bigint` type is not designed to replace the `number` type for everyday uses.
 `42` is still a `Number`, not a `BigInt`.
 
-Number may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric lexical grammar [here][lexical-grammar].
+Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric lexical grammar [here][lexical-grammar].
+
+## Special Notations
+
+### Exponential Notation
+
+The E-notation indicates a number that should be multiplied by 10 raised to a given power.
+The format of E-notation is to have a number, followed by `e` or `E`, than by the power of 10 to multiply by.
+
+```javascript
+const num = 3.125e7;
+// => 31250000
+// The notation essentially says, "Take 3.125 and multiply it by 10^7".
+```
+
+E-notation can also be used to represent very small numbers:
+
+```javascript
+const num = 325987e-6; // Equals to 0. 325987
+// The notation essentially says, "Take 325987 and multiply it by 10^-6.
+```
+
+### Underscore Notation
+
+Underscores can be used to make large numbers easier to read for the user. The compiler will completely ignore the underscores.
+
+```javascript
+const num = 1_000_000; // You can read this as 1,000,000
+console.log(num);
+// => 1000000
+```
 
 ## Built-in Object
 
@@ -56,6 +86,75 @@ There are three types of maximum (and minimum / maximum negative) values for num
 Because of how numbers in JavaScript are implemented, **not** every number between `Number.MIN_VALUE` and `Number.MAX_VALUE` can be represented.
 However, _every_ number between `Number.MIN_SAFE_INTEGER - 1` and `Number.MAX_SAFE_INTEGER + 1` **can** be represented.
 
+## Special Numbers Values
+
+JavaScript has several special number values:
+
+- Two error values, `NaN` and `Infinity`.
+- Two values for zero, `+0` and `-0`.
+
+### NaN - Not a Number
+
+The error value `NaN`(aka "Not a Number") is produced in the following cases.
+
+- A number could not be parsed:
+  ```javascript
+  Number('123'); // => 123
+  Number('Hello, World!'); // => NaN
+  ```
+- An operation failed:
+  ```javascript
+  Math.sqrt(-64); // => NaN
+  ```
+- One of the operands is NaN:
+  ```javascript
+  NaN + 69; // => NaN
+  ```
+
+`NaN` is the only value that is not equal to itself:
+
+```javascript
+NaN === NaN; // => false
+```
+
+If you want to check whether a value is `NaN`, you have to use the global function `isNaN()`:
+
+```javascript
+isNaN(NaN); // => true
+isNaN(123); // => false
+```
+
+### Infinity
+
+`Infinity` is an error value indicating one of two problems:
+
+- A number can't be represented because its magnitude is too large.
+  ```javascript
+  Math.pow(2, 1024); // => Infinity
+  ```
+- A division by zero has happened.
+  ```javascript
+  6 / 0; // => Infinity
+  -6 / 0; // => -Infinity
+  ```
+
+`Infinity` is larger than any other number (except `NaN`).
+Similarly, `-Infinity` is smaller than any other number (except `NaN`)
+
+The global function `isFinite()` allows you to check whether a value is an actual number (neither infinite nor `NaN`):
+
+```javascript
+isFinite(80085); // => true
+isFinite(Infinity); // => false
+isFinite(NaN); // => false
+```
+
+### The Two Zeros
+
+`+0` or `-0` are distinct numbers in JavaScript. They can be produced if you represented a number, that is so small that it is indistinguishable from 0.
+The signed zero allows you to record “from which direction” you approached zero; that is, what sign the number had before it was considered zero.
+It is best practise to pretend there's only one zero.
+
 ## Comparison
 
 Numbers are considered equal if they have the same value.
@@ -79,7 +178,7 @@ See [comparison][concept-comparison] for more information on comparisons in gene
 
 ## Pitfalls
 
-Because numbers in JavaScript are floating point numbers, all math using these values is floating point math.
+Because numbers in JavaScript are floating-point numbers, all math using these values is floating-point math.
 Therefore, in JavaScript:
 
 ```javascript
@@ -87,7 +186,7 @@ Therefore, in JavaScript:
 // => false
 ```
 
-See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in depth explanation.
+See [0.30000000000000004.com](https://0.30000000000000004.com/) for a brief explanation and [Appendix D](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) of Oracle's Numerical Computation Guide "What Every Computer Scientist Should Know About Floating-Point Arithmetic" for an in-depth explanation.
 
 [built-in-number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [built-in-math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math

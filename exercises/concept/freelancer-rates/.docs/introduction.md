@@ -4,7 +4,7 @@
 
 Many programming languages have specific numeric types to represent different types of numbers, but JavaScript only has two:
 
-- `number`: a numeric data type in the double-precision 64-bit floating point format (IEEE 754).
+- `number`: a numeric data type in the double-precision 64-bit floating-point format (IEEE 754).
   Examples are `-6`, `-2.4`, `0`, `0.1`, `1`, `3.14`, `16.984025`, `25`, `976`, `1024.0` and `500000`.
 - `bigint`: a numeric data type that can represent _integers_ in the arbitrary precision format.
   Examples are `-12n`, `0n`, `4n`, and `9007199254740991n`.
@@ -14,7 +14,7 @@ Otherwise, the `number` type is likely the better option.
 
 ### Rounding
 
-There is a built-in global object called `Math` that provides various [rounding functions][ref-math-object-rounding]. For example, you can round-down (`floor`) or round-up (`ceil`) decimal numbers to nearest whole numbers.
+There is a built-in global object called `Math` that provides various [rounding functions][ref-math-object-rounding]. For example, you can round down (`floor`) or round up (`ceil`) decimal numbers to the nearest whole numbers.
 
 ```javascript
 Math.floor(234.34); // => 234
@@ -25,7 +25,7 @@ Math.ceil(234.34); // => 235
 
 JavaScript provides 6 different operators to perform basic arithmetic operations on numbers.
 
-- `+`: The addition operator is used to find sum of numbers.
+- `+`: The addition operator is used to find the sum of numbers.
 - `-`: The subtraction operator is used to find the difference between two numbers
 - `*`: The multiplication operator is used to find the product of two numbers.
 - `/`: The division operator is used to divide two numbers.

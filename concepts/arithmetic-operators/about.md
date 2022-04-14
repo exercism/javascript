@@ -4,7 +4,7 @@
 
 JavaScript provides 6 different operators to perform basic arithmetic operations on numbers.
 
-- `+`: The addition operator is used to find sum of numbers.
+- `+`: The addition operator is used to find the sum of numbers.
 
   ```javascript
   1 + 2; // => 3
@@ -18,7 +18,7 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
   7.4 - 1.2; // => 1.5
   ```
 
-- `*`: The multiplication operator is used to find the product of two numbers two numbers
+- `*`: The multiplication operator is used to find the product of two numbers
 
   ```javascript
   7 * 5; // => 35
@@ -26,7 +26,7 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
   ```
 
 - `/`: The division operator is used to divide two numbers.
-  Since JavaScript numbers are always floating point numbers, there is no integer division.
+  Since JavaScript numbers are always floating-point numbers, there is no integer division.
 
   ```javascript
   8 / 2; // => 4

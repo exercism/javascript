@@ -1,10 +1,23 @@
 {
-  "blurb": "Tally the results of a small football competition.",
-  "authors": ["lpizzinidev"],
-  "contributors": [],
+  "authors": [
+    "lpizzinidev"
+  ],
   "files": {
-    "solution": ["tournament.js"],
-    "test": ["tournament.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "tournament.js"
+    ],
+    "test": [
+      "tournament.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Tally the results of a small football competition.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }

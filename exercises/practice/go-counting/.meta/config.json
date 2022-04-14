@@ -1,10 +1,23 @@
 {
-  "blurb": "Count the scored points on a Go board.",
-  "authors": ["lpizzinidev"],
-  "contributors": [],
+  "authors": [
+    "lpizzinidev"
+  ],
   "files": {
-    "solution": ["go-counting.js"],
-    "test": ["go-counting.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "go-counting.js"
+    ],
+    "test": [
+      "go-counting.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Count the scored points on a Go board.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }

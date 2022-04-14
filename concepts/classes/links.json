@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes",
+    "description": "MDN: Object prototypes"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain",
+    "description": "MDN: Inheritance and the prototype chain"
+  },
+  {
+    "url": "https://javascript.info/prototypes",
+    "description": "javascript.info: Prototypes, inheritance"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+    "description": "MDN: Classes"
+  }
+]

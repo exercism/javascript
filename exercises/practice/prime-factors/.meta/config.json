@@ -1,6 +1,7 @@
 {
-  "blurb": "Compute the prime factors of a given natural number.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "ankorGH",
     "matthewmorgan",
@@ -9,10 +10,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["prime-factors.js"],
-    "test": ["prime-factors.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "prime-factors.js"
+    ],
+    "test": [
+      "prime-factors.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Compute the prime factors of a given natural number.",
   "source": "The Prime Factors Kata by Uncle Bob",
-  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"
+  "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -1,6 +1,7 @@
 {
-  "blurb": "Convert a binary number, represented as a string (e.g. '101010'), to its decimal equivalent using first principles",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "Futuro212",
@@ -10,10 +11,23 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["binary.js"],
-    "test": ["binary.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "binary.js"
+    ],
+    "test": [
+      "binary.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Convert a binary number, represented as a string (e.g. '101010'), to its decimal equivalent using first principles",
   "source": "All of Computer Science",
-  "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-"
+  "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

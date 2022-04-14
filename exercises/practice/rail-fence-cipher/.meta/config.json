@@ -1,12 +1,25 @@
 {
-  "blurb": "Implement encoding and decoding for the rail fence cipher.",
-  "authors": ["lpizzinidev"],
-  "contributors": [],
+  "authors": [
+    "lpizzinidev"
+  ],
   "files": {
-    "solution": ["rail-fence-cipher.js"],
-    "test": ["rail-fence-cipher.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "rail-fence-cipher.js"
+    ],
+    "test": [
+      "rail-fence-cipher.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement encoding and decoding for the rail fence cipher.",
   "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Transposition_cipher#Rail_Fence_cipher"
+  "source_url": "https://en.wikipedia.org/wiki/Transposition_cipher#Rail_Fence_cipher",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

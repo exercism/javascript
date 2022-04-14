@@ -1,7 +1,7 @@
 # Introduction
 
 The for loop is one of the most commonly used statements to repeatedly execute some logic.
-In JavaScript it consists of the `for` keyword, a _header_ wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
+In JavaScript, it consists of the `for` keyword, a _header_ wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
 
 ```javascript
 for (initialization; condition; step) {
@@ -19,7 +19,7 @@ for (let i = 0; i < list.length; i++) {
 }
 ```
 
-Defining the step is often done using JavaScripts increment or decrement operator as shown in the example above.
+Defining the step is often done using JavaScript's increment or decrement operator as shown in the example above.
 These operators modify a variable in place.
 `++` adds one to a number, `--` subtracts one from a number.
 

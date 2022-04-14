@@ -1,0 +1,29 @@
+{
+  "name": "@exercism/javascript-windowing-system",
+  "description": "Exercism concept exercise on classes",
+  "author": "junedev",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/javascript",
+    "directory": "exercises/concept/windowing-system"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@exercism/babel-preset-javascript": "^0.1.2",
+    "@exercism/eslint-config-javascript": "^0.6.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.26",
+    "babel-jest": "^27.5.1",
+    "core-js": "^3.21.1",
+    "eslint": "^8.12.0",
+    "jest": "^27.5.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "jest ./*",
+    "watch": "jest --watch ./*",
+    "lint": "eslint ."
+  }
+}

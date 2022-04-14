@@ -24,7 +24,7 @@ names[1];
 // => Laura
 ```
 
-Arrays cannot use `strings` as element indexes, but must use integers ([`number`][concept-numbers]).
+Arrays cannot use `strings` as element indexes but must use integers ([`number`][concept-numbers]).
 Setting or accessing via non-integers using bracket notation (or dot notation) will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's object property collection.
 The array's object properties and list of array elements are separate, and the array's traversal and mutation operations cannot be applied to these named properties.
 
@@ -62,8 +62,8 @@ names.forEach((name) => console.log(name));
 ## Deleting items from an array
 
 Arrays in JavaScript are regular `objects`, and items can be deleted using the `delete` keyword.
-However, this does not change the _length_ of the array, and leaves a hole of `empty`.
-In other languages this is similar to a sparse array.
+However, this does not change the _length_ of the array and leaves a hole of `empty`.
+In other languages, this is similar to a sparse array.
 The `empty` holes are skipped when using traversal or mutation operations.
 
 ```javascript
@@ -82,7 +82,7 @@ names.forEach((name) => console.log(name));
 // => Megan
 ```
 
-If there should be no holes, and if the `length` should reflect the amount of items that will be traversed or mutated, use `splice` instead.
+If there should be no holes, and if the `length` should reflect the number of items that will be traversed or mutated, use `splice` instead.
 
 > The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.[^5]
 
@@ -181,7 +181,7 @@ names;
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 names.shift(); // => 'Jack'
 names;
-// => ['two', 3, 'four']
+// => ['Laura', 'Paul', 'Megan']
 ```
 
 ### unshift

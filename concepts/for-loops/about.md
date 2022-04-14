@@ -3,7 +3,7 @@
 ## General Syntax
 
 The for loop is one of the most commonly used statements to repeatedly execute some logic.
-In JavaScript it consists of the `for` keyword, a _header_ wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
+In JavaScript, it consists of the `for` keyword, a _header_ wrapped in round brackets and a code block that contains the _body_ of the loop wrapped in curly brackets.
 
 ```javascript
 for (initialization; condition; step) {
@@ -49,14 +49,14 @@ for (let i = 0; i < coords.length; i++) {
 
 ## Break, Continue and Labels
 
-Inside a loop body you can use the `break` keyword to stop the execution of the loop entirely.
+Inside a loop body, you can use the `break` keyword to stop the execution of the loop entirely.
 In contrast, the keyword `continue` only stops the execution of the current iteration and continues with the next one.
 
 When working with nested loops, `break` and `continue` always apply to the innermost loop by default.
 You can use labels to change that behavior.
 A label is an identifier name followed by a colon.
-It is placed in front (or above) the loop.
-Such a label can then be combined with `break` or `continue` to define to which loop the statement should apply to.
+It is placed in front of (or above) the loop.
+Such a label can then be combined with `break` or `continue` to define to which loop the statement should apply.
 
 ```javascript
 outer: for (let i = 0; i < 10; i++) {

@@ -11,7 +11,7 @@ etc.
 
 ## 1. Retrieve a card from a stack
 
-In order to pick a card, return the card at index `position` from
+To pick a card, return the card at index `position` from
 the given stack.
 
 ```javascript
@@ -23,19 +23,19 @@ getItem([1, 2, 4, 1], position);
 ## 2. Exchange a card in the stack
 
 Perform some sleight of hand and exchange the card at index `position`
-with the new card provided.
+with the replacement card provided.
 Return the adjusted stack.
 
 ```javascript
 const position = 2;
-const newCard = 6;
-setItem([1, 2, 4, 1], position, newCard);
+const replacementCard = 6;
+setItem([1, 2, 4, 1], position, replacementCard);
 // => [1, 2, 6, 1]
 ```
 
 ## 3. Insert a card at the top of the stack
 
-Make a card appear, by inserting a new card at the top of the stack.
+Make a card appear by inserting a new card at the top of the stack.
 Return the adjusted stack.
 
 ```javascript
@@ -44,18 +44,7 @@ insertItemAtTop([5, 9, 7, 1], newCard);
 // => [5, 9, 7, 1, 8]
 ```
 
-## 4. Insert a card at the bottom of the stack
-
-Make a card appear, by inserting a new card at the bottom of the stack.
-Return the adjusted stack.
-
-```javascript
-const newCard = 8;
-insertItemAtBottom([5, 9, 7, 1], newCard);
-// => [8, 5, 9, 7, 1]
-```
-
-## 5. Remove a card from the stack
+## 4. Remove a card from the stack
 
 Make a card disappear by removing the card at the given `position` from the stack.
 Return the adjusted stack.
@@ -66,7 +55,7 @@ removeItem([3, 2, 6, 4, 8], position);
 // => [3, 2, 4, 8]
 ```
 
-## 6. Remove the top card from the stack
+## 5. Remove the top card from the stack
 
 Make a card disappear by removing the card at the top of the stack.
 Return the adjusted stack.
@@ -74,6 +63,17 @@ Return the adjusted stack.
 ```javascript
 removeItemFromTop([3, 2, 6, 4, 8]);
 // => [3, 2, 6, 4]
+```
+
+## 6. Insert a card at the bottom of the stack
+
+Make a card appear by inserting a new card at the bottom of the stack.
+Return the adjusted stack.
+
+```javascript
+const newCard = 8;
+insertItemAtBottom([5, 9, 7, 1], newCard);
+// => [8, 5, 9, 7, 1]
 ```
 
 ## 7. Remove a card from the bottom of the stack

@@ -1,6 +1,7 @@
 {
-  "blurb": "Convert a long phrase to its acronym",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "cmccandless",
@@ -11,10 +12,23 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["acronym.js"],
-    "test": ["acronym.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "acronym.js"
+    ],
+    "test": [
+      "acronym.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Convert a long phrase to its acronym",
   "source": "Julien Vanier",
-  "source_url": "https://github.com/monkbroc"
+  "source_url": "https://github.com/monkbroc",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -1,6 +1,7 @@
 {
-  "blurb": "Determine if a sentence is a pangram.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "amscotti",
     "ankorGH",
@@ -12,10 +13,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["pangram.js"],
-    "test": ["pangram.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "pangram.js"
+    ],
+    "test": [
+      "pangram.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Determine if a sentence is a pangram.",
   "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Pangram"
+  "source_url": "https://en.wikipedia.org/wiki/Pangram",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -1,5 +1,4 @@
 {
-  "blurb": "Detect palindrome products in a given range.",
   "authors": [],
   "contributors": [
     "ankorGH",
@@ -16,10 +15,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["palindrome-products.js"],
-    "test": ["palindrome-products.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "palindrome-products.js"
+    ],
+    "test": [
+      "palindrome-products.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Detect palindrome products in a given range.",
   "source": "Problem 4 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=4"
+  "source_url": "http://projecteuler.net/problem=4",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": true
+  }
 }

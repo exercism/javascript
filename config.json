@@ -211,7 +211,8 @@
           "array-loops",
           "comparison",
           "rest-and-spread",
-          "arrays"
+          "arrays",
+          "classes"
         ],
         "status": "beta"
       },
@@ -228,7 +229,7 @@
         "name": "Factory Sensors",
         "uuid": "2ccafa38-2802-44c1-8758-7415edefa909",
         "concepts": ["errors", "inheritance"],
-        "prerequisites": ["null-undefined", "conditionals"],
+        "prerequisites": ["classes", "null-undefined", "conditionals"],
         "status": "beta"
       },
       {
@@ -236,8 +237,14 @@
         "name": "Elyses Transformative Enchantments",
         "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
         "concepts": ["array-transformations"],
-        "prerequisites": ["arrays", "callbacks", "arrow-functions"],
-        "status": "wip"
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "conditionals",
+          "callbacks",
+          "arrow-functions"
+        ],
+        "status": "beta"
       },
       {
         "slug": "custom-signs",
@@ -245,6 +252,14 @@
         "uuid": "02a9c753-614f-4814-a7a8-43c1971d2eb7",
         "concepts": ["conditionals-ternary", "template-strings"],
         "prerequisites": ["strings", "conditionals", "type-conversion"],
+        "status": "beta"
+      },
+      {
+        "slug": "windowing-system",
+        "name": "Windowing System",
+        "uuid": "d697850e-fd43-408c-a958-835aa8a510f7",
+        "concepts": ["classes"],
+        "prerequisites": ["objects", "functions", "conditionals-ternary"],
         "status": "beta"
       }
     ],
@@ -779,7 +794,11 @@
         "name": "Acronym",
         "uuid": "440d78d1-9dea-466f-9bd4-935eed067409",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "array-transformations"
+        ],
         "difficulty": 2,
         "topics": ["loops", "regular_expressions", "strings", "transforming"]
       },
@@ -802,7 +821,7 @@
         "name": "Isogram",
         "uuid": "3df577af-2854-40ee-b211-9b608dbbad58",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "arrays", "regular-expressions"],
         "difficulty": 2,
         "topics": ["filtering", "strings"]
       },
@@ -1016,7 +1035,13 @@
         "name": "Proverb",
         "uuid": "5626f5b6-207b-458b-92b6-eff2cadb240a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "conditionals",
+          "rest-and-spread",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
@@ -1032,7 +1057,7 @@
         "name": "Twelve Days",
         "uuid": "64de1776-d5c6-43fe-9abf-7e3aa08ae342",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "conditionals", "for-loops", "strings"],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1058,7 +1083,13 @@
         "name": "Yacht",
         "uuid": "77d0ab59-3824-4a79-9db3-e0bb35c6fc63",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "objects",
+          "sets"
+        ],
         "difficulty": 4,
         "topics": ["arrays", "conditionals", "filtering", "games"]
       },
@@ -1067,7 +1098,12 @@
         "name": "Beer Song",
         "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "conditionals",
+          "for-loops",
+          "template-strings"
+        ],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "strings"]
       },
@@ -1076,7 +1112,13 @@
         "name": "Resistor Color Trio",
         "uuid": "7170d6a3-a32f-44d7-b82e-524485c58aaf",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "array-analysis",
+          "classes",
+          "errors",
+          "template-strings"
+        ],
         "difficulty": 5,
         "topics": ["conditionals", "loops"]
       },
@@ -1085,7 +1127,14 @@
         "name": "Dominoes",
         "uuid": "3d155146-f3a9-43c6-a662-2a0679949a12",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "recursion",
+          "rest-and-spread",
+          "while-loops"
+        ],
         "difficulty": 6,
         "topics": ["graph_theory"]
       },
@@ -1094,7 +1143,16 @@
         "name": "Say",
         "uuid": "12989bb3-c593-4f68-bea4-e2c5b76bc3c0",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "comparison",
+          "conditionals",
+          "errors",
+          "for-loops",
+          "math",
+          "numbers",
+          "strings"
+        ],
         "difficulty": 6,
         "topics": [
           "conditionals",
@@ -1110,7 +1168,7 @@
         "name": "Diamond",
         "uuid": "6a1eee0e-f8d4-446d-9c52-f31c3700af1b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops", "strings"],
         "difficulty": 5,
         "topics": [
           "arrays",
@@ -1127,7 +1185,14 @@
         "name": "Rational Numbers",
         "uuid": "d8da6cdd-3804-40b0-9821-0dd5765876ff",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "classes",
+          "errors",
+          "math",
+          "numbers",
+          "while-loops"
+        ],
         "difficulty": 5,
         "topics": ["algorithms", "floating_point_numbers", "math"]
       },
@@ -1136,7 +1201,12 @@
         "name": "Sublist",
         "uuid": "bb00e97f-8dcf-40ba-b8c2-c3cb72bbaf97",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "comparison",
+          "conditionals"
+        ],
         "difficulty": 4,
         "topics": ["arrays", "lists"]
       },
@@ -1145,7 +1215,7 @@
         "name": "Binary Search Tree",
         "uuid": "6c4b4e25-c115-4789-9058-d28ab6ca0d26",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "conditionals", "recursion"],
         "difficulty": 6,
         "topics": ["algorithms", "conditionals", "loops", "recursion"]
       },
@@ -1154,7 +1224,13 @@
         "name": "Custom Set",
         "uuid": "75199d72-4cac-49ce-bffb-23fb659c57ae",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "classes",
+          "conditionals"
+        ],
         "difficulty": 6,
         "topics": [
           "arrays",
@@ -1172,7 +1248,14 @@
         "name": "Binary Search",
         "uuid": "7c569e5d-bb00-44b8-8adc-34253790c19b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "comparison",
+          "conditionals",
+          "errors",
+          "math",
+          "while-loops"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
       },
@@ -1181,7 +1264,13 @@
         "name": "Circular Buffer",
         "uuid": "bf0b1f95-3425-4345-8a12-3a80d49b49c9",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "comparison",
+          "conditionals",
+          "errors"
+        ],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -1197,7 +1286,7 @@
         "name": "Simple Linked List",
         "uuid": "a1591026-2f02-45f9-b189-24b2359eb43f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "conditionals", "for-loops"],
         "difficulty": 8,
         "topics": ["arrays", "data_structures", "lists"]
       },
@@ -1206,7 +1295,7 @@
         "name": "Word Search",
         "uuid": "0125f5a7-8883-4553-a6c1-45f19544af5e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "array-loops", "classes", "conditionals"],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -1223,7 +1312,14 @@
         "name": "Variable Length Quantity",
         "uuid": "6be39d1f-f68d-4a52-bd72-85a38ffd509e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "arrow-functions",
+          "errors",
+          "for-loops",
+          "rest-and-spread"
+        ],
         "difficulty": 5,
         "topics": ["bitwise_operations", "transforming"]
       },
@@ -1232,7 +1328,14 @@
         "name": "Two Bucket",
         "uuid": "0bc6b478-40a8-47ab-889b-c403b922f7e5",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "classes",
+          "conditionals",
+          "errors",
+          "objects",
+          "while-loops"
+        ],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -1249,7 +1352,16 @@
         "name": "Alphametics",
         "uuid": "a602bd33-69fc-4b67-a3d3-95198853095e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "array-analysis",
+          "array-transformations",
+          "conditionals",
+          "for-loops",
+          "functions",
+          "objects",
+          "rest-and-spread"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "games"]
       },
@@ -1258,7 +1370,15 @@
         "name": "Connect",
         "uuid": "2fa2c262-77ae-409b-bfd8-1d643faae772",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-loops",
+          "array-transformations",
+          "classes",
+          "conditionals",
+          "functions"
+        ],
         "difficulty": 7,
         "topics": [
           "arrays",
@@ -1730,6 +1850,52 @@
         ],
         "difficulty": 5,
         "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "4b3bc6f9-ebb0-49f5-a472-a00f0a94c36a",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "for-loops",
+          "objects",
+          "math",
+          "conditionals"
+        ],
+        "difficulty": 5,
+        "topics": ["algorithms", "logic"]
+      },
+      {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "bfc08dea-2a6b-4696-be20-9b55e282388d",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "objects",
+          "conditionals",
+          "recursion"
+        ],
+        "difficulty": 6,
+        "topics": []
+      },
+      {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "e855d32e-9d5d-4342-a3e9-e70cf2329499",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "array-loops",
+          "array-transformations",
+          "objects",
+          "conditionals",
+          "strings"
+        ],
+        "difficulty": 7,
+        "topics": []
       }
     ]
   },
@@ -1748,6 +1914,11 @@
       "uuid": "9f8f96bb-db13-485a-bfe4-6ae3fe2fbf46",
       "slug": "array-destructuring",
       "name": "Array Destructuring"
+    },
+    {
+      "uuid": "ee604998-ef59-4b9d-a288-355ba60587bc",
+      "slug": "array-transformations",
+      "name": "Array Transformations"
     },
     {
       "uuid": "5b0ab681-f44f-4910-b2cf-0b1fcd19ba55",
@@ -1888,6 +2059,11 @@
       "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
       "slug": "inheritance",
       "name": "Inheritance"
+    },
+    {
+      "uuid": "e0ff7a2b-d6f7-4513-9589-3e6854e14415",
+      "slug": "classes",
+      "name": "Prototypes & Classes"
     }
   ],
   "key_features": [

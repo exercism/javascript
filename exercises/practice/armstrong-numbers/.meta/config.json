@@ -1,6 +1,7 @@
 {
-  "blurb": "Determine if a number is an Armstrong number",
-  "authors": ["PakkuDon"],
+  "authors": [
+    "PakkuDon"
+  ],
   "contributors": [
     "ankorGH",
     "gargrave",
@@ -10,10 +11,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["armstrong-numbers.js"],
-    "test": ["armstrong-numbers.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "armstrong-numbers.js"
+    ],
+    "test": [
+      "armstrong-numbers.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Determine if a number is an Armstrong number",
   "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

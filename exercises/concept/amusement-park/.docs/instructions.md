@@ -3,14 +3,15 @@
 It is your job to provide and maintain parts of the IT system of an amusement park.
 In particular, you are responsible for the program that manages visitors and tickets.
 
-First, you will create a new visitor in the system, then you will provide a function for revoking a ticket.
-In task 3 and 4 you will work on the ticket tracking system that helps to prevent forgery.
-Lastly, you will help adapting the system to new legal requirements.
+First, you will create a new visitor in the system.
+Then you will provide a function for revoking a ticket.
+In tasks 3 and 4, you will work on the ticket tracking system that helps to prevent forgery.
+Lastly, you will help adapt the system to new legal requirements.
 
 ## 1. Create a new visitor
 
 When visitors come to the amusement park for the first time, they need to register by entering their name and age in a terminal and agreeing to the terms and conditions.
-Of course they also need to buy a ticket.
+Of course, they also need to buy a ticket.
 Each ticket has an identifier like `H32AZ123`.
 
 Write a function `createVisitor` that accepts three arguments.
@@ -50,7 +51,7 @@ revokeTicket(visitor);
 ## 3. Determine the ticket status
 
 To prevent forgery, the ticket identifiers are unique.
-Once a ticket is printed, its identifier is added as key in an object in the system so it can be tracked.
+Once a ticket is printed, its identifier is added as a key in an object in the system so it can be tracked.
 
 Before the ticket is sold to a visitor, it is stored with the value `null` in the ticket tracking object.
 When it is sold to a visitor, the visitor's name is assigned as a value.
@@ -96,13 +97,13 @@ const tickets = {
   '23LA9T41': 'Verena Nardi',
 };
 
-ticketStatus(tickets, '23LA9T41');
+simpleTicketStatus(tickets, '23LA9T41');
 // => 'Verena Nardi'
 
-ticketStatus(tickets, '0H2AZ123');
+simpleTicketStatus(tickets, '0H2AZ123');
 // => 'invalid ticket !!!'
 
-ticketStatus(tickets, 'RE90VAW7');
+simpleTicketStatus(tickets, 'RE90VAW7');
 // => 'invalid ticket !!!'
 ```
 
@@ -112,7 +113,7 @@ Due to new legal requirements, newly created visitor objects now also contain de
 You can see an example of the new visitor object below.
 
 The cashiers of the amusement park now need to check whether a visitor needs to sign a new version of the GTC.
-For this, implement a function `gtcVersion` that accepts a visitor object as argument and returns the GTC version if it is available.
+For this, implement a function `gtcVersion` that accepts a visitor object as an argument and returns the GTC version if it is available.
 If the version information is not available, nothing should be returned.
 
 ```javascript

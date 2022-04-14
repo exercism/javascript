@@ -2,32 +2,32 @@
 
 ## 1. Double every single card
 
-- There is a [built-in][map_method_docs] method great for simple transforms like this.
+- There is a built-in method great for [simple transforms][map_method_docs] like this.
 
 ## 2. Create multiple copies of every 3 found in the deck
 
-- There is a [built-in][reduce_method_docs] method perfect for custom transforms or accumulations (like summing an array, etc.)
+- There is a built-in method perfect for custom transforms or [accumulations][reduce_method_docs] (like summing an array, etc.)
 
 ## 3. Find two cards from the exact middle of the deck
 
-- There is a [built-in][slice_method_docs] method for slicing and dicing arrays into smaller segments.
+- There is a built-in method for [slicing and dicing][slice_method_docs] arrays into smaller segments.
 
 ## 4. The outside two cards will reappear in the middle of the deck
 
-- There is a [built-in][splice_method_docs] method for inserting or removing items from the middle of an array.
-- Array also has built-ins for removing the first and last elements. [MDN Array documentation][array_docs]
+- There is a built-in method for [inserting or removing][splice_method_docs] items from the middle of an array.
+- Array also has built-ins for removing the first and last elements, see [MDN Array documentation][array_docs].
 
 ## 5. Every card that isn't 2 disappears
 
-- There is a [built-in][filter_method_docs] method for filtering or excluding items in an array.
+- There is a built-in method for [filtering][filter_method_docs] or excluding items in an array.
 
 ## 6. Convert a shuffled deck into a perfectly ordered deck
 
-- There is a [built-in][sort_method_docs] method for sorting.
+- There is a built-in method for [sorting][sort_method_docs].
 
-## 7. Change every card to the total number of cards
+## 7. Reorder the deck
 
-- There is a [built-in][fill_method_docs] method for filling an array with a single value.
+- There is a built-in method for [reversing][reverse_method_docs] an array.
 
 [map_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [reduce_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
@@ -35,5 +35,5 @@
 [splice_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 [filter_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 [sort_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-[fill_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
+[reverse_method_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 [array_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/

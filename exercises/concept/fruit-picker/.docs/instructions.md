@@ -35,7 +35,7 @@ function action(err, data) {
 }
 
 pickFruit('pineapple', 20, action);
-// calls the checkInventory function with the query and passing along the `action` callback function
+// calls the checkInventory function with the query and passes along the `action` callback function
 ```
 
 ## 3. Create a callback to buy fruit if the inventory is available

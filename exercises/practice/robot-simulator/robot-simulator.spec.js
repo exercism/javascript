@@ -19,14 +19,14 @@ describe('Robot', () => {
       expect(robot.bearing).toEqual('north');
     });
 
-    test('facing east', () => {
+    xtest('facing east', () => {
       const robot = new Robot();
       robot.place({ direction: 'east', x: 0, y: 0 });
 
       expect(robot.bearing).toEqual('east');
     });
 
-    test('facing west, at origin', () => {
+    xtest('facing west, at origin', () => {
       const robot = new Robot();
       robot.place({ direction: 'west', x: 0, y: 0 });
 
@@ -34,7 +34,7 @@ describe('Robot', () => {
       expect(robot.coordinates).toEqual([0, 0]);
     });
 
-    test('at negative position facing south', () => {
+    xtest('at negative position facing south', () => {
       const robot = new Robot();
       robot.place({ direction: 'south', x: -1, y: -1 });
 

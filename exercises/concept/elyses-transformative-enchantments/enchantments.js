@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * Double every card in the deck
+ * Double every card in the deck.
  *
  * @param {number[]} deck
  *
@@ -12,7 +12,7 @@ export function seeingDouble(deck) {
 }
 
 /**
- *  Creates triplicates of every 3 found in the deck
+ *  Creates triplicates of every 3 found in the deck.
  *
  * @param {number[]} deck
  *
@@ -23,8 +23,8 @@ export function threeOfEachThree(deck) {
 }
 
 /**
- * Removes every card from the deck but the middle two
- * Assumes a deck is always 10 cards
+ * Extracts the middle two cards from a deck.
+ * Assumes a deck is always 10 cards.
  *
  * @param {number[]} deck of 10 cards
  *
@@ -35,9 +35,9 @@ export function middleTwo(deck) {
 }
 
 /**
- * Moves the outside two cards to the middle
+ * Moves the outside two cards to the middle.
  *
- * @param {number[]} deck with 10 cards
+ * @param {number[]} deck with even number of cards
  *
  * @returns {number[]} transformed deck
  */
@@ -47,7 +47,7 @@ export function sandwichTrick(deck) {
 }
 
 /**
- * Removes every card from the deck except 2s
+ * Removes every card from the deck except 2s.
  *
  * @param {number[]} deck
  *
@@ -58,7 +58,7 @@ export function twoIsSpecial(deck) {
 }
 
 /**
- * Returns a perfectly order deck from lowest to highest
+ * Returns a perfectly order deck from lowest to highest.
  *
  * @param {number[]} deck shuffled deck
  *
@@ -69,12 +69,12 @@ export function perfectlyOrdered(deck) {
 }
 
 /**
- * Returns a deck with every card equal to the total number of cards
+ * Reorders the deck so that the top card ends up at the bottom.
  *
  * @param {number[]} deck
  *
- * @returns {number[]} deck
+ * @returns {number[]} reordered deck
  */
-export function countingCards(deck) {
-  throw new Error('Implement the countingCards function');
+export function reorder(deck) {
+  throw new Error('Implement the reorder function');
 }

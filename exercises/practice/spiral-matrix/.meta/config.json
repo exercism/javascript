@@ -1,6 +1,7 @@
 {
-  "blurb": " Given the size, return a square matrix of numbers in spiral order.",
-  "authors": ["MattH-be"],
+  "authors": [
+    "MattH-be"
+  ],
   "contributors": [
     "ankorGH",
     "rchavarria",
@@ -10,10 +11,23 @@
     "ProProgrammer2504"
   ],
   "files": {
-    "solution": ["spiral-matrix.js"],
-    "test": ["spiral-matrix.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "spiral-matrix.js"
+    ],
+    "test": [
+      "spiral-matrix.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": " Given the size, return a square matrix of numbers in spiral order.",
   "source": "Reddit r/dailyprogrammer challenge #320 [Easy] Spiral Ascension.",
-  "source_url": "https://www.reddit.com/r/dailyprogrammer/comments/6i60lr/20170619_challenge_320_easy_spiral_ascension/"
+  "source_url": "https://www.reddit.com/r/dailyprogrammer/comments/6i60lr/20170619_challenge_320_easy_spiral_ascension/",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

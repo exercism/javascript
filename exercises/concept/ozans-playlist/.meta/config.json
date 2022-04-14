@@ -1,10 +1,26 @@
 {
-  "blurb": "Use sets to avoid repeating tracks in a playlist",
-  "authors": ["kristinaborn"],
-  "contributors": [],
+  "authors": [
+    "kristinaborn"
+  ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["ozans-playlist.js"],
-    "test": ["ozans-playlist.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "ozans-playlist.js"
+    ],
+    "test": [
+      "ozans-playlist.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
+  },
+  "blurb": "Use sets to avoid repeating tracks in a playlist",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }

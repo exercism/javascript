@@ -24,7 +24,7 @@ const NAME = 'Sally';
 // SyntaxError: Identifier 'NAME' has already been declared
 ```
 
-Variables declared using the `const` keyword are [block-scoped][concept-scope], meaning they are only accessible within the current block, and any contained sub-blocks.
+Variables declared using the `const` keyword are [block-scoped][concept-scope], meaning they are only accessible within the current block and any contained sub-blocks.
 
 The value that a variable declared using `const` holds can only be referenced _after_ it has been defined. This is known as the [Temporal Dead Zone][concept-temporal-dead-zone].
 

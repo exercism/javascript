@@ -5,7 +5,7 @@ Besides that, JavaScript also performs _type coercion_ (implicit type conversion
 
 ## Type Conversion
 
-JavaScript does not have a construct to cast into a (different) type like many other languages but there are built-in helpers that can be used instead.
+JavaScript does not have a construct to cast into a (different) type like many other languages but some built-in helpers can be used instead.
 Most notably, `Boolean`, `Number` and `String` can be used as functions to convert a value to the respective type.
 
 ### Converting to a Boolean (Truthy/Falsy Values)
@@ -102,12 +102,12 @@ Coercion to boolean commonly occurs for
 - the condition of an [if statement][concept-conditionals]
 - the first operand of the [ternary operator][mdn-ternary] `?`
 - the operand of the logical NOT operator `!`
-- the operands of the logical AND `&&` and OR `||` operators (the result is of the expression is one of the operands, not necessarily a boolean)
+- the operands of the logical AND `&&` and OR `||` operators (the result of the expression is one of the operands, not necessarily a boolean)
 
 ```javascript
 const num = 0;
 if (num) {
-  // this block NOT is executed because 0 is falsy
+  // this block is NOT executed because 0 is falsy
 }
 ```
 
@@ -125,7 +125,7 @@ let name;
 
 ### Numeric Context
 
-There are many operators that coerce the operands into numbers (if necessary) according to the logic of the `Number` function explained above.
+Many operators coerce the operands into numbers (if necessary) according to the logic of the `Number` function explained above.
 
 - Arithmetic operators: `+` (if no string is involved), `-`, `*`, `/`, `%`, `**`
 - Unary plus and unary negation operators: `+`, `-`

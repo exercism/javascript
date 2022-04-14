@@ -11,8 +11,8 @@
 - First, set up an integer variable to track the number of cards for the desired type (odd or even).
 - Then as mentioned in the instructions, use [for...of][mdn-for-of] to iterate over the deck.
 - The remainder when dividing by 2 tells you whether a number is odd or even.
-  You can calcuate the remainder using the [modulo operator][mdn-modulo] `%`.
-- Increase your counter variable when you visit a number that has the desired remainder.
+  You can calculate the remainder using the [modulo operator][mdn-modulo] `%`.
+- Increase your counter variable when you visit a number with the desired remainder.
 
 [mdn-foreach]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 [mdn-for-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of

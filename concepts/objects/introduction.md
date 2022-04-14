@@ -12,7 +12,7 @@ The values inside one object can have different types.
 They can be primitive types like numbers but also arrays, other objects or even functions.
 This makes objects very versatile so that they are also key entities for [object-oriented programming][oop] (OOP) in JavaScript.
 
-In the following we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][concept-classes].
+In the following, we will focus on objects as collections or maps. Other use cases of objects will be covered in other concepts, see e.g., [Classes][concept-classes].
 
 ## Creating an Object
 
@@ -74,13 +74,13 @@ obj[key];
 // => hello world
 ```
 
-Using the dot notation as a short-hand has the same restriction as omitting the quotation marks.
+Using the dot notation as a shorthand has the same restriction as omitting the quotation marks.
 It only works if the key follows the identifier naming rules.
 
 ## Adding or Changing a Value
 
 You can add or change a value using the assignment operator `=`.
-Again, there is dot and bracket notation available.
+Again, there are dot and bracket notations available.
 
 ```javascript
 const obj = { greeting: 'hello world' };
@@ -141,7 +141,7 @@ for (let key in obj) {
 ```
 
 To avoid subtle errors you should always assume the `for...in` loop visits the keys in an arbitrary order.
-Also be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
+Also, be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
 
 [oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
 [concept-classes]: /tracks/javascript/concepts/classes

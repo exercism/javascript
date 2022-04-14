@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "lpizzinidev"
+  ],
+  "files": {
+    "solution": [
+      "knapsack.js"
+    ],
+    "test": [
+      "knapsack.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Given a knapsack that can only carry a certain weight, determine which items to put in the knapsack in order to maximize their combined value.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Knapsack_problem",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+}

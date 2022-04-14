@@ -86,7 +86,7 @@ Some of the [static methods][promise-static-methods] that are available on `Prom
 
 ### Promise.all
 
-> The `Promise.all()` method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and will reject with this first rejection message / error.[^4]
+> The `Promise.all()` method takes an iterable of promises as an input and returns a single Promise that resolves to an array of the results of the input promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error and will reject with this first rejection message / error.[^4]
 
 ```javascript
 var p1 = Promise.resolve(10);

@@ -1,6 +1,7 @@
 {
-  "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "hyuko21",
     "msomji",
@@ -11,10 +12,23 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["wordy.js"],
-    "test": ["wordy.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "wordy.js"
+    ],
+    "test": [
+      "wordy.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
   "source": "Inspired by one of the generated questions in the Extreme Startup game.",
-  "source_url": "https://github.com/rchatley/extreme_startup"
+  "source_url": "https://github.com/rchatley/extreme_startup",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }
