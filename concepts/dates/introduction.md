@@ -17,7 +17,7 @@ However, different types of arguments can also be used to create date object, as
 ### Timestamp value
 
 > A timestamp is an integer number representing the number of **milliseconds** that has passed since **Jan 1st of 1970 [UTC][utc-defn]+0**, however, _with reference to your local time zone._
-This can be used as an argumect for the Date object. [^1]
+> This can be used as an argumect for the Date object. [^1]
 
 ```javascript
 const Jan01_1970 = new Date(0);
@@ -34,7 +34,7 @@ TODO: change to tidles after formatting
 ```exercism/note
 January 1st, 1970 at 00:00:00 UTC is referred to as the Unix epoch.
 Unix is an operating system originally developed in the 1960s.
-Early Unix engineers picked that date arbitrarily because they needed to set a uniform date for the start of time, and New Year's Day, 1970, seemed most convenient. 
+Early Unix engineers picked that date arbitrarily because they needed to set a uniform date for the start of time, and New Year's Day, 1970, seemed most convenient.
 ```
 
 [^2]
@@ -61,23 +61,24 @@ const t2 = new Date(t1);
 ### Individual date and time component values
 
 > Given at least a year and month, this form of `Date()` returns a `Date` object whose component values _(year, month, day, hour, minute, second, and millisecond)_ all come from the following parameters.
-Any missing fields are given the lowest possible value (1 for day and 0 for every other component).
+> Any missing fields are given the lowest possible value (1 for day and 0 for every other component).
 > The parameter values are all evaluated against the _local time zone, rather than UTC_.
+>
 > - `year`: Integer values from 0 to 99 map to the years 1900 to 1999.
-All other values are the actual year.
+>   All other values are the actual year.
 > - `monthIndex`: Integer value representing the month, beginning with _0 for January to 11 for December_.
-If a value greater than 11 is passed in, then those months will be added to the date.
-For example, new Date(1990, 12, 1) will return January 1st, 1991.
+>   If a value greater than 11 is passed in, then those months will be added to the date.
+>   For example, new Date(1990, 12, 1) will return January 1st, 1991.
 > - `day` (Optional): Integer value representing the day of the month.
-The default is 1.
+>   The default is 1.
 > - `hours` (Optional): Integer value between 0 and 23 representing the hour of the day.
-Defaults to 0.
+>   Defaults to 0.
 > - `minutes` (Optional): Integer value representing the minute segment of a time.
-The default is 0 minutes past the hour.
+>   The default is 0 minutes past the hour.
 > - `seconds` (Optional): Integer value representing the second segment of a time.
-The default is 0 seconds past the minute.
+>   The default is 0 seconds past the minute.
 > - `milliseconds` (Optional): Integer value representing the millisecond segment of a time.
-The default is 0 milliseconds past the second. [^3]
+>   The default is 0 milliseconds past the second. [^3]
 
 ```javascript
 const date1 = new Date(95, 11, 17); // Creates Date for Dec 17 1995
@@ -92,9 +93,9 @@ const date2 = new Date(2013, 12, 5, 13, 24, 0); // Creates Date for Jan 5 2014 1
 > - `T` - The character "T" is used as the delimiter
 > - `HH:mm:ss.sss` - is the time: hours, minutes, seconds and milliseconds.
 > - `Z` - This _optional_ part denotes the time zone.
-If `Z` is present, the `Date` will be set to UTC.
-If `Z` is not present, it will be Local Time.  
-> _If the format is invalid, `NaN` is returned_ [^4]
+>   If `Z` is present, the `Date` will be set to UTC.
+>   If `Z` is not present, it will be Local Time.  
+>   _If the format is invalid, `NaN` is returned_ [^4]
 
 Shorter variants are also possible, like `YYYY-MM-DD` or `YYYY-MM` or even `YYYY`. However not that these variants **set the `Date` to UTC**, even though `Z` not mentioned. To understand what exactly happens check out [this section][mdn-diff-assumed-timezone] of a MDN page.
 
@@ -155,8 +156,8 @@ The following methods allow to modify date/time components :
 > - `setSeconds(sec, [ms])`
 > - `setMilliseconds(ms)`
 > - `setTime(timestamp)` (sets the whole date by milliseconds since 01.01.1970 UTC)
-> Paremeters in `[]` above are _optional_. If not mentioned, the components are not modified
-> Every one of them except `setTime()` has a UTC-variant, for instance: `setUTCHours()`. [^7]
+>   Paremeters in `[]` above are _optional_. If not mentioned, the components are not modified
+>   Every one of them except `setTime()` has a UTC-variant, for instance: `setUTCHours()`. [^7]
 
 ```javascript
 let today = new Date();
@@ -180,7 +181,7 @@ let timeElapsed = d2.getTime() - d1.getTime(); // => 1033162979
 Moreover, if we wish to measure the time taken on a live basis, for example the time taken for execution for program, we could use `Date.now()` which provides the timestamp of current time.
 
 > As you might notice, this is semantically equivalent to `new Date().getTime()`, but it doesn’t create an intermediate `Date` object.
-Hence, it makes the code more efficient. [^8]
+> Hence, it makes the code more efficient. [^8]
 
 ```javascript
 const start = Date.now(); // milliseconds count from 1 Jan 1970
