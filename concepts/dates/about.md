@@ -214,6 +214,8 @@ d1Copy === d1; // false, even though they are same
 d1Copy.getTime() === d1.getTime(); //true
 ```
 
+Few passages have been taken from the sources below and slightly modified
+
 [^1]: https://javascript.info/date
 [^2]: https://kb.narrative.io/what-is-unix-time
 [^3]: https://javascript.info/date#setting-date-components
