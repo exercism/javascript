@@ -29,13 +29,11 @@ const Jan02_1970 = new Date(24 * 3600 * 1000);
 // Note that the objects created here would show the corresponding time in your time zone.
 ```
 
-TODO: change to tidles after formatting
-
-```exercism/note
+~~~exercism/note
 January 1st, 1970 at 00:00:00 UTC is referred to as the Unix epoch.
 Unix is an operating system originally developed in the 1960s.
 Early Unix engineers picked that date arbitrarily because they needed to set a uniform date for the start of time, and New Year's Day, 1970, seemed most convenient.
-```
+~~~
 
 [^2]
 
@@ -108,11 +106,9 @@ const d2 = Date.parse('2019-01-01T00:00:00.000Z');
 const d3 = Date.parse('2019-01-01T00:00:00.000'); // This would have a different value (unless you live in GMT) as it is set to your local time zone
 ```
 
-TODO: aaa
-
-```exercism/caution
+~~~exercism/caution
 The use of `Date.parse()` (and the timestamp string method which works similarly) is strongly discouraged due to browser differences and inconsistencies.
-```
+~~~
 
 [^5]
 
