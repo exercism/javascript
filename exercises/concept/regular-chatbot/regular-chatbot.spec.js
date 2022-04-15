@@ -59,7 +59,9 @@ describe('checkPhoneNumber', () => {
 
 describe('getURL', () => {
   test('returns only the link of the website', () => {
-    expect(getURL('I learned a lot from exercism.com')).toStrictEqual(['exercism.com']);
+    expect(getURL('I learned a lot from exercism.com')).toStrictEqual([
+      'exercism.com',
+    ]);
     expect(
       getURL('There is a cool website called theodinproject.com to learn from')
     ).toStrictEqual(['theodinproject.com']);
