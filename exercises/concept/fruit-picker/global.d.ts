@@ -4,21 +4,37 @@
  * type information on the fly
  */
 
+type FruitPickerSuccess = {
+  message: 'SUCCESS';
+};
+
+type FruitPickerError = {
+  message: 'ERROR';
+};
+
+declare module 'notifier' {
+  function notify(message: FruitPickerSuccess | FruitPickerError): void;
+}
+
 type GrocerQuery = {
-  fruit: string;
+  variety: string;
   quantity: number;
 };
 
-type GrocerOnSuccess = (quantityOrdered: number) => unknown
-
-type GrocerOnError = (errorMessage: string) => unknown
-
-type FruitPickerSuccess = {
-  message: 'SUCCESS'
+interface GrocerOnSuccessCallback {
+  (quantityOrdered: number): void;
 }
 
-type FruitPickerError = {
-  message: 'ERROR'
+interface GrocerOnErrorCallback {
+  (errorMessage: string): void;
+}
+
+declare module 'grocer' {
+  function order(
+    query: GrocerQuery,
+    onSuccess: GrocerOnSuccessCallback,
+    onError: GrocerOnErrorCallback
+  ): void;
 }
 
 type FruitPickerSuccessCallback = () => SuccessResult;

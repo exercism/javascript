@@ -16,7 +16,7 @@
       ".meta/exemplar.js"
     ],
     "editor": [
-      "grocer.js"
+      "grocer.js", "notifier.js"
     ]
   },
   "blurb": "Learn about callbacks picking fruit from the grocer",
