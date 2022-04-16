@@ -28,12 +28,12 @@ export function onError() {
 
 /**
  * @param {GrocerQuery} query
- * @param {FruitPickerSuccessCallback} onSuccess
- * @param {FruitPickerErrorCallback} onError
+ * @param {FruitPickerSuccessCallback} onSuccessCallback
+ * @param {FruitPickerErrorCallback} onErrorCallback
  * @return void
  */
-export function orderFromGrocer(query, onSuccess, onError) {
-  order(query, onSuccess, onError);
+export function orderFromGrocer(query, onSuccessCallback, onErrorCallback) {
+  order(query, onSuccessCallback, onErrorCallback);
 }
 
 /**
