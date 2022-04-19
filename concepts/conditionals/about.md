@@ -67,9 +67,13 @@ if (num >= 0 && num < 1) {
 
 // The inner brackets are obsolete because relational operators
 // have higher precedence than logical operators.
-if (num >= 0 && num < 1) {
+<!-- prettier-ignore-start -->
+
+if ((num >= 0) && (num < 1)) {
   // ...
 }
+<!-- prettier-ignore-end -->
+
 ```
 
 Also, consider using additional variables to make the code more readable.
