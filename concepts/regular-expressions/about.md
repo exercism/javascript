@@ -1,6 +1,6 @@
 # About
 
-## 1. Regular Expressions in JavaScript
+## Regular Expressions in JavaScript
 
 A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of characters that we can use to target and manipulate certain elements in strings. Hence, we can:
 
@@ -10,7 +10,7 @@ A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of char
 
 > 💡 JavaScript's regex flavor is part of the ECMA-262 standard for the language. This means that you don't have to worry about browser-specific compatibility.
 
-## 2. How to create Regular Expressions
+## How to create Regular Expressions
 
 1. **Regular Expression Literal**:
 
@@ -24,7 +24,7 @@ const regex = /[a-z]/;
 const regex = new RegExp('[a-z]');
 ```
 
-## 3. 🏴‍☠️ Flags
+## 🏴‍☠️ Flags
 
 Some of the widely used are:
 
@@ -37,23 +37,21 @@ Here is a simple example:
 ```javascript
 const re = /home/gi;
 const str = 'Home, sweet home.';
-const myArray = str.match(re);
-console.log(myArray);
 
-=> // ["Home", "home"]
+str.match(re);
+
+// => ["Home", "home"]
 ```
 
-```javascript
-let regex = /[a-z]/gi; // literal notation
-let regex = new RegExp('[a-z]', 'gi'); // constructor with string pattern as first argument
-let regex = new RegExp(/[a-z]/, 'gi'); // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
-```
-
-## 4. Most common Functions
+## Commonly used functions
 
 When regular expressions are combined with current build-in functions in JavaScript, we have some powerful ways of manipulating and getting data from strings.
 
-These are some of the most common functions used alongside regex.
+The ``test()`` method is a great way of searching and knowing if a target value exists within a given string. In this way, it returns a boolean value, `true` or `false`. 
+
+The ``match()`` method extracts the regular expression match from a given string. Returning an array with information and matches.
+
+`When to use one or the other?`  Use the ``test()`` when you want a fast way of checking a value within a string, use ``match()`` if you need to use that value or want more information about the match. 
 
 ### Test
 
@@ -61,12 +59,14 @@ These are some of the most common functions used alongside regex.
 const str = 'It is difficult to test if you have a virus';
 const result = /virus$/.test(str);
 
-console.log(result); // true
+console.log(result); 
+
+// => true
 ```
 
 ### Match
 
-In this way, we are able both to **search** and to **extract** information from any string. For example:
+Using ``match()``, we are able both to **search** and to **extract** information from any string. 
 
 ```javascript
 const funnyQuote =
@@ -74,12 +74,14 @@ const funnyQuote =
 const regex1 = /someone/;
 const regex2 = /happy/;
 
-funnyQuote.match(regex1); // ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
+funnyQuote.match(regex1); 
+// => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
-funnyQuote.match(regex2); // null
+funnyQuote.match(regex2); 
+// => null
 ```
 
-When the Global Search flag `/g` is present, instead of getting the only match alongside useful information such as the index or input, the method returns all of the occurances displayed in the array:
+When the Global Search flag `/g` is present, instead of getting the only match alongside useful information such as the index or input, the method returns all of the occurrences present in the array:
 
 ```javascript
 const funnyQuote =
@@ -87,7 +89,8 @@ const funnyQuote =
 
 const regex3 = /if/gi;
 
-funnyQuote.match(regex3); // ["If", "if"];
+funnyQuote.match(regex3); 
+// => ["If", "if"];
 ```
 
 ### Replace
@@ -115,7 +118,7 @@ let text = 'Say hello to the chatbot.';
 let result = text.replace(/chatbot|hello/gi, function (word) {
   return word.toUpperCase();
 });
-// -> "Say HELLO to the CHATBOT"
+// => "Say HELLO to the CHATBOT"
 ```
 
 ### Split
@@ -128,24 +131,20 @@ const str = 'hello,user.how are.you';
 const result = str.split(/[,.\s]/);
 
 console.log(result);
-//--> ['hello', 'user', 'how', 'are', 'you']
+// => ['hello', 'user', 'how', 'are', 'you']
 ```
 
-## 5. Performance with Regex
+## Performance with Regex
 
-Regarding performance, both of them create a RegExp object. The main difference is how often the regex is compiled:
+Regarding performance, the main difference is how often the regex is compiled:
 
 - With `Regular Expression Literal`: one time during initial code parsing and compiling
 - With `RegExp()` syntax: Every time new Object gets created.
 
-According to [this](https://stackoverflow.com/a/32523333)answer from Alexander Abakumov in StackOverflow, using literal syntax may be a better option not only because of performance, but also for simplicity and readability.
+Using literal syntax may be a better option not only because of performance, but also for simplicity and readability. For more details see [this](https://stackoverflow.com/a/32523333) Stackoverflow discussion.
 
 1. It is shorter and doesn’t force you to think in terms of class-like constructors.
 2. When using the `RegExp()` constructor, you also need to escape quotes and double-escape backslashes. It makes regular expressions that are hard to read and understand by their nature even more harder.
-
-Nevertheless, for this particular challenge, we are practising with both methods. Hence you are able to decide which one to apply depending on the occasion.
-
-## 6. Useful Resources
 
 [using-regular-expressions-in-javascript]: https://www.regular-expressions.info/javascript.html
 [mdn-regex-cheatsheet]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
