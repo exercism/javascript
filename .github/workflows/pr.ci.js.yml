@@ -33,7 +33,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ['16', '17']
+        node-version: ['16', '17', '18']
 
     steps:
       - name: Checkout PR
