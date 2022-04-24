@@ -1,11 +1,10 @@
 {
-  "blurb": "Learn the basics of Regular Expressions with JavaScript helping a Chatbot understand humans.",
-  "authors": ["julendiaz", "junedev"],
+  "blurb": "Learn the basics of regular expressions with JavaScript helping a chatbot understand humans.",
+  "authors": ["julendiaz"],
   "contributors": ["junedev"],
   "files": {
     "solution": ["regular-chatbot.js"],
     "test": ["regular-chatbot.spec.js"],
     "exemplar": [".meta/exemplar.js"]
-  },
-  "forked_from": ["exercism/javascript"]
+  }
 }
