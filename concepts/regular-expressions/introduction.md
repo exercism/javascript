@@ -1,6 +1,6 @@
 # Introduction
 
-## 1. Regular Expressions in JavaScript
+## Regular Expressions in JavaScript
 
 A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of characters that we can use to target and manipulate certain elements in strings. Hence, we can:
 
@@ -10,7 +10,7 @@ A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of char
 
 > 💡 JavaScript's regex flavor is part of the ECMA-262 standard for the language. This means that you don't have to worry about browser-specific compatibility.
 
-## 2. How to create Regular Expressions
+## How to create Regular Expressions
 
 In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers` where 'pattern' is the main regex, and 'modifiers' are a series of characters which we can add to indicate special options (like superpowers).
 
@@ -28,9 +28,11 @@ const regex = /[a-z]/;
 const regex = new RegExp('[a-z]');
 ```
 
-In both methods, JavaScript is also creating an Object out of the regex. It is recommended to use immutable patterns with the literal, and the RegExp for those regex which are probably going to change or we don't know yet (like an input).
+In both cases, JavaScript is creating an object out of the regex. It is recommended to use immutable patterns with the literal as default.
 
-## 3. 🏴‍☠️ Flags
+The RegExp constructor can be used for cases where the regex will change or we don't know it yet (like an input).
+
+## 🏴‍☠️ Flags
 
 Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. These flags can be used separately or together in any order, and are included as part of the regular expression.
 
@@ -48,7 +50,7 @@ const str = 'Home, sweet home.';
 const myArray = str.match(re);
 console.log(myArray);
 
-=> // ["Home", "home"]
+// => ["Home", "home"]
 ```
 
 The `g` character allows us to parse all possible matches within a string. Without this feature, JavaScript would have extracted only the first `Home` match.
@@ -63,7 +65,7 @@ let regex = new RegExp('[a-z]', 'gi'); // constructor with string pattern as fir
 let regex = new RegExp(/[a-z]/, 'gi'); // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 ```
 
-## 4. Most common Functions
+## Most common Functions
 
 When regular expressions are combined with current build-in functions in JavaScript, we have some powerful ways of manipulating and getting data from strings.
 
@@ -77,7 +79,9 @@ The [test()][mdn-regex-test]] method executes a search for a match between a reg
 const str = 'It is difficult to test if you have a virus';
 const result = /virus$/.test(str);
 
-console.log(result); // true
+console.log(result); 
+
+// => true
 ```
 
 ### Match
@@ -94,9 +98,11 @@ const funnyQuote =
 const regex1 = /someone/;
 const regex2 = /happy/;
 
-funnyQuote.match(regex1); // ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
+funnyQuote.match(regex1); 
+// => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
-funnyQuote.match(regex2); // null
+funnyQuote.match(regex2); 
+// => null
 ```
 
 When the Global Search flag `/g` is present, instead of getting the only match alongside useful information such as the index or input, the method returns all of the occurances displayed in the array:
@@ -107,7 +113,8 @@ const funnyQuote =
 
 const regex3 = /if/gi;
 
-funnyQuote.match(regex3); // ["If", "if"];
+funnyQuote.match(regex3); 
+// => ["If", "if"];
 ```
 
 ### Replace
@@ -135,7 +142,8 @@ let text = 'Say hello to the chatbot.';
 let result = text.replace(/chatbot|hello/gi, function (word) {
   return word.toUpperCase();
 });
-// -> "Say HELLO to the CHATBOT"
+
+// => "Say HELLO to the CHATBOT"
 ```
 
 > 💡 In the end, the combination of regular expressions and the `replace()` method is a more dynamic way of replacing elements. Using a single string may be limited.
@@ -152,14 +160,14 @@ const str = 'hello,user.how are.you';
 const result = str.split(/[,.\s]/);
 
 console.log(result);
-//--> ['hello', 'user', 'how', 'are', 'you']
+// => ['hello', 'user', 'how', 'are', 'you']
 ```
 
 In the last example, we said to the regex to search for all characters between the square brackets `[a comma, dot, and whitespace]`. After this process, the `split()` method recognizes this pattern as the `separator`, and divides the given string using that anchor.
 
 You don't have to worry about the `/g` flag in this case. The method does not stop on the first occurrence. However, you may want to use other flags such as `/i` or `/m`.
 
-## 5. Performance with Regex
+## Performance with Regex
 
 Regarding performance, both of them create a RegExp object. The main difference is how often the regex is compiled:
 
@@ -173,7 +181,6 @@ According to [this](https://stackoverflow.com/a/32523333)answer from Alexander A
 
 Nevertheless, for this particular challenge, we are practising with both methods. Hence you are able to decide which one to apply depending on the occasion.
 
-## 6. Useful Resources
 
 [using-regular-expressions-in-javascript]: https://www.regular-expressions.info/javascript.html
 [mdn-regex-cheatsheet]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet

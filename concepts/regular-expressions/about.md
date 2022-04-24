@@ -8,6 +8,8 @@ A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of char
 - **Replace** substrings in a string
 - **Extract** information from a string
 
+This concept is focused on using regular expressions in JavaScript. If you want to learn about how to write regular expressions, [Eloquent JavaScript][eloquent-javascript] might be a good resource.
+
 > 💡 JavaScript's regex flavor is part of the ECMA-262 standard for the language. This means that you don't have to worry about browser-specific compatibility.
 
 ## How to create Regular Expressions
@@ -157,3 +159,4 @@ Using literal syntax may be a better option not only because of performance, but
 [mdn-regex-split]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 [demystifying-regular-expressions-with-javascript]: https://livecodestream.dev/post/demystifying-regular-expressions-with-javascript/
 [how-to-use-the-js-replace-method-on-a-string]: https://www.freecodecamp.org/news/javascript-regex-match-example-how-to-use-the-js-replace-method-on-a-string/
+[eloquent-javascript]: https://eloquentjavascript.net/09_regexp.html
