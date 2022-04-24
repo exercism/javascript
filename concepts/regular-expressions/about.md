@@ -47,11 +47,11 @@ str.match(re);
 
 When regular expressions are combined with current build-in functions in JavaScript, we have some powerful ways of manipulating and getting data from strings.
 
-The ``test()`` method is a great way of searching and knowing if a target value exists within a given string. In this way, it returns a boolean value, `true` or `false`. 
+The `test()` method is a great way of searching and knowing if a target value exists within a given string. In this way, it returns a boolean value, `true` or `false`. 
 
-The ``match()`` method extracts the regular expression match from a given string. Returning an array with information and matches.
+The `match()` method extracts the regular expression match from a given string. Returning an array with information and matches.
 
-`When to use one or the other?`  Use the ``test()`` when you want a fast way of checking a value within a string, use ``match()`` if you need to use that value or want more information about the match. 
+*When to use one or the other?*  Use the `test()` when you want a fast way of checking a value within a string, use `match()` if you need to use that value or want more information about the match. 
 
 ### Test
 
@@ -66,7 +66,7 @@ console.log(result);
 
 ### Match
 
-Using ``match()``, we are able both to **search** and to **extract** information from any string. 
+Using `match()`, we are able both to **search** and to **extract** information from any string. 
 
 ```javascript
 const funnyQuote =
