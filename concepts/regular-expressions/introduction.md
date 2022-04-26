@@ -79,7 +79,7 @@ The [test()][mdn-regex-test]] method executes a search for a match between a reg
 const str = 'It is difficult to test if you have a virus';
 const result = /virus$/.test(str);
 
-console.log(result); 
+console.log(result);
 
 // => true
 ```
@@ -98,10 +98,10 @@ const funnyQuote =
 const regex1 = /someone/;
 const regex2 = /happy/;
 
-funnyQuote.match(regex1); 
+funnyQuote.match(regex1);
 // => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
-funnyQuote.match(regex2); 
+funnyQuote.match(regex2);
 // => null
 ```
 
@@ -113,7 +113,7 @@ const funnyQuote =
 
 const regex3 = /if/gi;
 
-funnyQuote.match(regex3); 
+funnyQuote.match(regex3);
 // => ["If", "if"];
 ```
 
@@ -180,7 +180,6 @@ According to [this](https://stackoverflow.com/a/32523333)answer from Alexander A
 2. When using the `RegExp()` constructor, you also need to escape quotes and double-escape backslashes. It makes regular expressions that are hard to read and understand by their nature even more harder.
 
 Nevertheless, for this particular challenge, we are practising with both methods. Hence you are able to decide which one to apply depending on the occasion.
-
 
 [using-regular-expressions-in-javascript]: https://www.regular-expressions.info/javascript.html
 [mdn-regex-cheatsheet]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
