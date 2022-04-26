@@ -7,6 +7,7 @@
 - How to pass flags in both versions
 - How to use the most common regex related functions, with special focus on test and match.
 - Understanding the different parts of the match result, incl. capture results
+- Using the replace method alongside regular expressions
 - Being aware of performance implications
 
 ## Out of scope
@@ -17,17 +18,10 @@ Explaining how to write regular expressions themselves is out of scope for the c
 
 ## Concepts
 
-- `Regular Expression Literal`
-- `RexExp` Constructor
-- `Flags`
-- `test()` Method
-- `match()` Method
-- `replace()` Method
-- `split()` Method
-- Performance with Regular Expressions
+- `regular-expressions`
 
 ## Prerequisites
 
 - `arrays` as this is the result of match and other common functions.
 - `classes` to understand the new `Regex` syntax.
-- ``objects` to know that every regular expression is creating an object out of the search.
+- `objects` to know that every regular expression is creating an object out of the search.
