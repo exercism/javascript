@@ -33,7 +33,7 @@ export function checkPhoneNumber(number) {
   const regex =
     /^\(\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
   if (regex.test(number)) {
-    return 'Thanks! You can download me now on your Phone.';
+    return 'Thanks! You can now download me to your phone.';
   } else {
     return `Oops, it seems like I can't reach out to ${number}`;
   }
@@ -43,7 +43,7 @@ export function checkPhoneNumber(number) {
  * Given a certain response from the user, help the chatbot get only the URL
  *
  * @param {string} userInput
- * @returns {Array} all the possible URL's that the user may have answered
+ * @returns {string[]} all the possible URL's that the user may have answered
  */
 export function getURL(userInput) {
   const regex = /(\w+\.)+\w+/g;

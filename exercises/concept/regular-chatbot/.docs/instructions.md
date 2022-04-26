@@ -54,7 +54,7 @@ The expected format is: (+##) ###-###-###
 
 ```javascript
 isValidNumber('(+34) 659-771-594');
-// => "Thanks! You can download me now on your Phone."
+// => "Thanks! You can now download me to your phone."
 isValidNumber('659-771-594');
 // => "Oops, it seems like I can't reach out to 659-771-594"
 ```
