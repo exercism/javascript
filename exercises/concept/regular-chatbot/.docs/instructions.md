@@ -35,7 +35,7 @@ Lines not containing emoji’s text should be returned unmodified.
 
 Just remove the emoji string. Do not attempt to adjust the whitespace.
 
-For this particular challenge, use only the `newRexEp` constructor for storing the regular expression.
+For this particular challenge, use constructor syntax for creating the regular expression.
 
 ```javascript
 removeEmoji("I love playing videogames emoji3465 it's one of my hobbies");
