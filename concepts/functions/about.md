@@ -9,8 +9,8 @@ Other possibilities like [arrow functions][concept-arrow-functions] will be cove
 
 The standard way of defining a function in JavaScript is a _function declaration_, also called _function definition_ or _function statement_.
 
-It consists of the `function` keyword, the name of the function, and a comma-separated list of parameters enclosed in parentheses.
-This is followed by the function body (collection of statements that defines what a function does) wrapped in curly braces.
+It consists of the `function` keyword, the name of the function, and a comma-separated list of parameters enclosed in round brackets.
+This is followed by the function body (collection of statements that defines what a function does) wrapped in curly brackets.
 
 ```javascript
 function someName(param1, param2, param3) {
@@ -20,7 +20,7 @@ function someName(param1, param2, param3) {
 
 ## Using a Function
 
-In JavaScript, a function is invoked (called) by stating the function name followed by parentheses that contain the arguments.
+In JavaScript, a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
 
 ```javascript
 someName(arg1, arg2, arg3);
@@ -34,9 +34,8 @@ function sayHello() {
 }
 
 sayHello;
-// => function sayHello() {
-//   console.log('Hello, World!');
-// }
+// => [Function: sayHello]
+// The text representations varies between environments.
 
 sayHello();
 // => 'Hello, World!'
@@ -44,45 +43,46 @@ sayHello();
 
 ## Parameters
 
-When working with parameters inside the function body, be aware of possible side effects.
+When working with parameters inside the function body, be aware of possible side effects to the original value that was passed to the function.
+In JavaScript, an argument is a copy of a reference to the original value.
+What this means in practice depends on the data type of the argument.
 
 - Values of [primitive data types][mdn-primitives] are _immutable_.
-  The original value is never affected by what happens to the argument in the function body.
+  All "modifications" always create a new primitive value.
+  Because of that, the original value is never affected by what happens to the argument in the function body.
 
-```javascript
-const num = 0;
+  ```javascript
+  const num = 0;
 
-function add(num) {
-  return num + 1;
-}
+  function increase(number) {
+    number = number + 1;
+  }
 
-add(num);
-// => 1
-
-num;
-// => 0
-```
+  increase(num);
+  num;
+  // => 0
+  ```
 
 - It is different for values like _objects_, _arrays_, _functions_.
   Since the reference is copied, a reassignment will not affect the original value.
   However, since you are dealing with a [shallow copy][wikipedia-shalllow-copy], modifying the argument in the function body will also change the original value that was passed in.
 
-```javascript
-const nums = [0, 1, 2, 3, 4];
+  ```javascript
+  const nums = [0, 1, 2, 3, 4];
 
-function add(arr) {
-  arr.push(5);
-}
+  function pushFive(arr) {
+    arr.push(5);
+  }
 
-add(nums);
+  pushFive(nums);
+  nums;
+  // => [0, 1, 2, 3, 4, 5]
+  ```
 
-nums;
-// => (6) [0, 1, 2, 3, 4, 5]
-```
-
-If a function is provided with fewer arguments than there are parameters,
-the missing arguments will be `undefined` inside the function body, see [Null and Undefined][concept-null-undefined].
+By default, all parameters defined in the function declaration are optional in JavaScript.
+If a function is provided with fewer arguments than there are parameters, the missing arguments will be `undefined` inside the function body, see [Null and Undefined][concept-null-undefined].
 In many cases, it makes more sense to initialize a parameter with a _default_ value if no value or `undefined` property is passed.
+This can be done by specifying default parameters directly in the function definition.
 
 ```javascript
 function someName(param1 = defaultValue1, param2 = defaultValue2) {
@@ -93,36 +93,11 @@ function someName(param1 = defaultValue1, param2 = defaultValue2) {
 A function can be invoked (called) with more arguments than there were parameters in the function definition.
 All arguments, including those excess arguments, can be found in the [arguments "array"][mdn-arguments-object].
 
-It is also possible to define functions that accept an arbitrary number of arguments (variadic functions),
-see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for more details.
-
-It is also important to notice that when invoking a function,
-the order in which the parameters are defined is the order in which the arguments should be passed in.
-
-```javascript
-function printNumbers(num1, num2, num3, num4) {
-  console.log('1: ', num1);
-  console.log('2: ', num2);
-  console.log('3: ', num3);
-  console.log('4: ', num4);
-}
-
-printNumbers(4, 2, 1, 3);
-// => 1:  4
-// => 2:  2
-// => 3:  1
-// => 4:  3
-
-printNumbers(1, 3, 4);
-// => 1:  1
-// => 2:  3
-// => 3:  4
-// => 4:  undefined
-```
+It is also possible to define functions that accept an arbitrary number of arguments (variadic functions), see rest parameters in [Rest and Spread Operators][concept-rest-and-spread] for more details.
 
 ## Return Statement
 
-A function can have multiple `return` statements. A return statement ends the function execution and specifies a value to be returned to the function caller.
+A `return` statement ends the function execution and specifies a value to be returned to the function caller. A function can have multiple `return` statements.
 
 ```javascript
 function checkNumber(num) {
