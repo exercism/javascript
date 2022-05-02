@@ -2,7 +2,7 @@
 
 ## Callback functions
 
-Callback functions are functions passed as arguments. This programming pattern facilitates creating a sequence of function calls in both synchronous and asynchronous contexts. Writing a callback function is no different from writing a function; however, the callback function must match the signature defined by the calling function.
+Callback functions are functions passed as arguments. This programming pattern creates a sequence of function calls in both synchronous and asynchronous programming. Writing a callback function is no different from writing a function; however, the callback function must match the signature defined by the calling function.
 
 ```javascript
 const squareLength = 5;

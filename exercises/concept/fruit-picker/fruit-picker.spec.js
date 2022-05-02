@@ -6,21 +6,13 @@ import { notify } from 'notifier';
 import { order } from 'grocer';
 import { onError, onSuccess, orderFromGrocer, postOrder } from './fruit-picker';
 
-jest.mock(
-  'notifier',
-  () => ({
-    notify: jest.fn(),
-  }),
-  { virtual: true }
-);
+jest.mock('./notifier', () => ({
+  notify: jest.fn(),
+}));
 
-jest.mock(
-  'grocer',
-  () => ({
-    order: jest.fn(),
-  }),
-  { virtual: true }
-);
+jest.mock('./grocer', () => ({
+  order: jest.fn(),
+}));
 
 describe('fruit-picker', () => {
   afterEach(() => {

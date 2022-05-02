@@ -44,5 +44,5 @@ You find that you are calling this function from many different places with the 
 
 ```javascript
 postOrder('peach', 100)
-// order submitted for 100 peaches
+// => order submitted for 100 peaches
 ```

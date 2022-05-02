@@ -1,6 +1,8 @@
 # Introduction
 
-Callbacks are functions that are passed as arguments to another function. This is often done to control the order of execution in an asynchronous context. Writing a callback function is no different from writing a function, but the callback function's arguments must match the signature required by the calling function.
+## Callback functions
+
+Callback functions are functions passed as arguments. This programming pattern creates a sequence of function calls in both synchronous and asynchronous programming. Writing a callback function is no different from writing a function; however, the callback function must match the signature defined by the calling function.
 
 ```javascript
 const squareLength = 5;
@@ -25,11 +27,3 @@ applyToSquare(function squarePerimeter(side) {
   return side * 4;
 });
 ```
-
-Or an anonymous inline arrow function expression:
-
-```javascript
-applyToSquare((side) => side * 4);
-```
-
-// The argument "(side) => side \* 4" is the callback

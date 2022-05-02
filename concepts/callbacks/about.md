@@ -1,68 +1,28 @@
 # About
 
-[_Callbacks_ describe the pattern][wiki-callbacks] where a function receives a function as an argument to invoke when it arrives at a condition. The condition may be that its work is done, or that an event has occurred, or that some predicate passes. It can be synchronous; it can be asynchronous.
+[_Callback_ functions][wiki-callbacks] are functions passed as arguments to other functions. The callback function may then be invoked to create a sequence of events. Often, _callbacks_ are used to handle the results of work done, or handle an action when an event occurs. _Callback_ functions can be used in synchronous and asynchronous programming.
 
-This is a useful pattern in JavaScript because it is designed as a single-threaded runtime where only one function call can be executed at a time. During execution, the runtime cannot respond to other events or continue execution until the function has returned. You might have noticed this on websites when they seem to "freeze" or become unresponsive.
+This is a useful pattern in JavaScript because JavaScript is designed as a single-threaded runtime where only one function call can be executed at a time. During execution, the runtime cannot respond to other events or continue execution until the function has returned.
 
-But many API calls (often I/O functions, timers, and event listeners) use an asynchronous mechanism to place the [current function call][mdn-concurrency-stack] on the side until the work is complete. Upon completion, a callback function is placed on the [message queue][mdn-concurrency-queue] so that when the runtime is in between function calls, the messages are then processed by invoking the callback function.
+Many API calls (I/O functions, timers, and event listeners) use an asynchronous mechanism to place the [current function call][mdn-concurrency-stack] on the side until the work is complete. Upon completion, a callback function is placed on the [message queue][mdn-concurrency-queue] so that when the runtime is in between function calls, the messages are then processed by invoking the callback function.
 
-It is also useful when the `callback` (the argument passed in) may not be defined (created) at the calling site. In other words: it may have been passed down from a different place in the program.
+It is also useful to use _callback functions_ because they may reference variables in its closure scope which are unavailable to the function where it is later invoked.
 
-If the `callback` function _returns_ a boolean or boolean-like value, which is intended to be used (as opposed to a throwaway return value), it's called a predicate.
+## Specific examples of callback functions
 
-## Synchronous Code
+### Event Handlers
 
-A synchronous call is when one function is executed after the other. The order is fixed.
-
-```javascript
-function triangleArea(height, base) {
-  return (height * base) / 2;
-}
-
-triangleArea(2, 10); // => 10
-triangleArea(40, 3); // => 60
-```
-
-## Asynchronous Code
-
-When an asynchronous function is invoked, there is no way to know for certain when it will finish its work. This means there is no value to act on when the function returns to the caller.
+_Event handlers_ are a common use-case for callbacks in JavaScript. Browser events like `'onload'` or `'onclick'` are signals which can trigger functions to be invoked. A DOM [[Document Object Model](mdn-dom) object's `addEventListener` method registers a callback function to be invoked when it "hears" that an event has occurred.
 
 ```javascript
-// This is broken, it may or may not return your value in time to be used
-let area = asynchronousTriangleArea(4, 7);
-console.log(area);
+document.addEventListener('onload', () => alert('The webpage has now been loaded'))
 ```
 
-So we can use callbacks to control the order of execution:
+### Node.js Convention
 
-```javascript
-function areaCallback(area) {
-  console.log(area);
-}
+In [Node.js][nodejs], [callback functions][node-callbacks] follow a [convention][node-error-convention] to control the flow of a program. They follow this pattern: the first argument of the callback function may receive an `Error` or `null`; The second and subsequent arguments receive the data that the calling function is designed to send.
 
-function asynchronousTriangleArea(height, base, areaCallback) {
-  areaCallback((height * base) / 2);
-}
-
-// This outputs the area of the triangle to the console as expected.
-asynchronousCallback(4, 7, areaCallback);
-```
-
-## Specific callback forms
-
-### Browser Events
-
-_Event handlers_ are a common use case for callbacks in JavaScript. This often takes the form of browser events like `'onload'` or `'onclick'`, where a DOM object's `addEventListener` method then registers a callback to be invoked when a specified event occurs.
-
-```javascript
-document.addEventListener('onload' () => alert('The webpage has now been loaded'))
-```
-
-### Node.js Error Convention
-
-In [Node.js][nodejs], [callbacks][node-callbacks] often follow a [similar convention][node-error-convention] for their arguments: The first argument receives an `Error` object or `null` if no error occurred, and the second and subsequent receive the data that the calling function is designed to send.
-
-If an error occurs, the second and subsequent arguments may not be present, so don't depend on them.
+If an error occurs, the second and subsequent arguments may not be present, so you may not depend on them to be present.
 
 ```javascript
 function operation(a, b, callback) {
@@ -78,7 +38,7 @@ function operation(a, b, callback) {
 
 function callback(error, returnedData) {
   if (error) {
-    // An error occured, handle it here.
+    // An error occurred, handle it here.
     return
   }
 
@@ -88,11 +48,12 @@ function callback(error, returnedData) {
 operation(1, 2, callback)
 ```
 
-You see this pattern often when dealing with asynchronous functions.
+You see this pattern often when dealing with asynchronous functions to assist with control flow.
 
 [mdn-callbacks]: https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
 [mdn-concurrency-stack]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#stack
 [mdn-concurrency-queue]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#queue
+[mdn-dom]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 [nodejs]: https://www.nodejs.org
 [node-callbacks]: https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/
 [node-error-convention]: https://nodejs.org/en/knowledge/errors/what-are-the-error-conventions/

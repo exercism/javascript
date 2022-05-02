@@ -5,7 +5,7 @@
     "solution": ["fruit-picker.js"],
     "test": ["fruit-picker.spec.js"],
     "exemplar": [".meta/exemplar.js"],
-    "editor": []
+    "editor": ["notifier.js", "grocer.js"]
   },
   "blurb": "Learn about callbacks ordering fruit from the grocer",
   "custom": {
