@@ -1,9 +1,7 @@
 // @ts-check
 
-// eslint-disable-next-line import/no-unresolved
-import { notify } from 'notifier';
-// eslint-disable-next-line import/no-unresolved
-import { order } from 'grocer';
+import { notify } from './notifier';
+import { order } from './grocer';
 import { onError, onSuccess, orderFromGrocer, postOrder } from './fruit-picker';
 
 jest.mock('./notifier', () => ({
