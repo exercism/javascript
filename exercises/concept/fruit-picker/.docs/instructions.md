@@ -4,20 +4,20 @@ You are creating a new online portal for your patrons to order their fruit fresh
 
 ## 1. Create a callback to be called when the order is successful
 
-Write a callback function called `onSuccess` to be called when the order is successful.  It should invoke the imported `notify` function passing a success message to it.
+Write a callback function called `onSuccess` to be called when the order is successful. It should invoke the imported `notify` function passing a success message to it.
 
 ```javascript
 onSuccess();
-// => `nofify` called with `{ message: 'SUCCESS' }`
+// => `notify` called with `{ message: 'SUCCESS' }`
 ```
 
 ## 2. Create a callback to be called when the order fails with an error
 
-Write a callback function called `onError` to be called when the order encounters an error.  It should invoke the imported `notify` function passing an error message to it.
+Write a callback function called `onError` to be called when the order encounters an error. It should invoke the imported `notify` function passing an error message to it.
 
 ```javascript
 onError();
-// => `nofify` called with `{ message: 'ERROR' }`
+// => `notify` called with `{ message: 'ERROR' }`
 ```
 
 ## 3. Create a wrapper to wrap the external api function
@@ -34,7 +34,11 @@ const query = {
 ```
 
 ```javascript
-orderFromGrocer({variety: 'pear', quantity: 12}, exampleSuccessCallback, exampleErrorCallback)
+orderFromGrocer(
+  { variety: 'pear', quantity: 12 },
+  exampleSuccessCallback,
+  exampleErrorCallback
+);
 // => `order` was called with the query and the callbacks
 ```
 
@@ -43,6 +47,6 @@ orderFromGrocer({variety: 'pear', quantity: 12}, exampleSuccessCallback, example
 You find that you are calling this function from many different places with the same functions. Seeing an opportunity to refactor your code, you want to create a function where you can supply the variety and quantity to order as arguments.
 
 ```javascript
-postOrder('peach', 100)
+postOrder('peach', 100);
 // => order submitted for 100 peaches
 ```

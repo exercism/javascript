@@ -15,7 +15,9 @@ It is also useful to use _callback functions_ because they may reference variabl
 _Event handlers_ are a common use-case for callbacks in JavaScript. Browser events like `'onload'` or `'onclick'` are signals which can trigger functions to be invoked. A DOM [[Document Object Model](mdn-dom) object's `addEventListener` method registers a callback function to be invoked when it "hears" that an event has occurred.
 
 ```javascript
-document.addEventListener('onload', () => alert('The webpage has now been loaded'))
+document.addEventListener('onload', function () {
+  alert('The webpage has now been loaded');
+});
 ```
 
 ### Node.js Convention
