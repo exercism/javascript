@@ -8,15 +8,15 @@ import {
 
 describe('isValidCommand', () => {
   test('recognizes wheter the command is at the first position', () => {
-    expect(isValidCommand("Chatbot, play a song from the 80's.")).toBe(true);
-    expect(isValidCommand('Hey Chatbot, where is the closest pharmacy?')).toBe(
+    expect(isValidCommand("Chatbot, Do you understand this command?")).toBe(true);
+    expect(isValidCommand('Hey Chatbot, please tell me what is the weather for tomorrow.')).toBe(
       false
     );
   });
 
   test('does not care about UPPERCASE or lowercase', () => {
     expect(
-      isValidCommand('CHATBOT, do you have a solution for this challenge?')
+      isValidCommand('CHATBOT, Is it okey if I shout at you?')
     ).toBe(true);
     expect(
       isValidCommand('chatbot, please tell me what is happening here.')
@@ -26,9 +26,9 @@ describe('isValidCommand', () => {
 
 describe('removeEmoji', () => {
   test('removes properly one single emoji encryption', () => {
-    const expected = "I love playing videogames  it's one of my hobbies";
+    const expected = "What was your name?  Sorry I forgot about it.";
     expect(
-      removeEmoji("I love playing videogames emoji3465 it's one of my hobbies")
+      removeEmoji("What was your name? emoji2134 Sorry I forgot about it.")
     ).toBe(expected);
   });
 
@@ -42,14 +42,14 @@ describe('removeEmoji', () => {
 
 describe('checkPhoneNumber', () => {
   test('recognizes a phone number with the correct format', () => {
-    const expected = 'Thanks! You can download me now on your Phone.';
-    expect(checkPhoneNumber('(+34) 659-771-594')).toBe(expected);
+    const expected = 'Thanks! You can now download me to your phone.';
+    expect(checkPhoneNumber('(+34) 643-876-459')).toBe(expected);
     expect(checkPhoneNumber('(+49) 543-928-190')).toBe(expected);
   });
 
   test('informs the user that it is a wrong phone number format', () => {
-    expect(checkPhoneNumber('659-771-594')).toBe(
-      "Oops, it seems like I can't reach out to 659-771-594"
+    expect(checkPhoneNumber('322-787-654')).toBe(
+      "Oops, it seems like I can't reach out to 322-787-654"
     );
     expect(checkPhoneNumber('4355-67-274')).toBe(
       "Oops, it seems like I can't reach out to 4355-67-274"
@@ -59,8 +59,8 @@ describe('checkPhoneNumber', () => {
 
 describe('getURL', () => {
   test('returns only the link of the website', () => {
-    expect(getURL('I learned a lot from exercism.com')).toStrictEqual([
-      'exercism.com',
+    expect(getURL('You can check more info on youtube.com')).toStrictEqual([
+      'youtube.com',
     ]);
     expect(
       getURL('There is a cool website called theodinproject.com to learn from')
@@ -77,7 +77,7 @@ describe('getURL', () => {
 
 describe('niceToMeetYou', () => {
   test('Greets the user by its proper name', () => {
-    expect(niceToMeetYou('Smith, John')).toBe('Nice to meet you, John Smith');
+    expect(niceToMeetYou('Sanz, Pablo')).toBe('Nice to meet you, Pablo Sanz');
     expect(niceToMeetYou('Stephan, Sandro')).toBe(
       'Nice to meet you, Sandro Stephan'
     );
