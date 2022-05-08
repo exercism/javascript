@@ -76,7 +76,7 @@ describe('getURL', () => {
 });
 
 describe('niceToMeetYou', () => {
-  test('Greets the user by its proper name', () => {
+  test('greets the user by its proper name', () => {
     expect(niceToMeetYou('Sanz, Pablo')).toBe('Nice to meet you, Pablo Sanz');
     expect(niceToMeetYou('Stephan, Sandro')).toBe(
       'Nice to meet you, Sandro Stephan'
