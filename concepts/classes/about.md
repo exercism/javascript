@@ -221,24 +221,24 @@ With the keywords `get` and `set` you can define functions that are executed whe
 ```javascript
 class Car {
   constructor() {
-    this._milage = 0;
+    this._mileage = 0;
   }
 
-  get milage() {
-    return this._milage;
+  get mileage() {
+    return this._mileage;
   }
 
   set milage(value) {
-    throw new Error(`Milage cannot be manipulated, ${value} is ignored.`);
+    throw new Error(`Mileage cannot be manipulated, ${value} is ignored.`);
     // Just an example, usually you would not provide a setter in this case.
   }
 }
 
 const myCar = new Car();
-myCar.milage;
+myCar.mileage;
 // => 0
-myCar.milage = 100;
-// => Error: Milage cannot be manipulated, 100 is ignored.
+myCar.mileage = 100;
+// => Error: Mileage cannot be manipulated, 100 is ignored.
 ```
 
 ### Class Fields and Class Methods
