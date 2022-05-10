@@ -228,7 +228,7 @@ class Car {
     return this._mileage;
   }
 
-  set milage(value) {
+  set mileage(value) {
     throw new Error(`Mileage cannot be manipulated, ${value} is ignored.`);
     // Just an example, usually you would not provide a setter in this case.
   }
