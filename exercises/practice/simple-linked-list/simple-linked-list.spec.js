@@ -109,10 +109,6 @@ describe('Lists with multiple elements', () => {
     const twoList = new List([1, 2]);
     expect(twoList.head.value).toEqual(2);
   });
-  xtest('can convert to an array', () => {
-    const oneList = new List([1]);
-    expect(oneList.toArray()).toEqual([1]);
-  });
   xtest('can convert longer list to an array', () => {
     expect(list.toArray()).toEqual([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
   });
