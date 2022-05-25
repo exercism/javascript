@@ -163,10 +163,6 @@ console.log(result);
 // => ['hello', 'user', 'how', 'are', 'you']
 ```
 
-In the last example, we said to the regex to search for all characters between the square brackets `[a comma, dot, and whitespace]`. After this process, the `split()` method recognizes this pattern as the `separator`, and divides the given string using that anchor.
-
-You don't have to worry about the `/g` flag in this case. The method does not stop on the first occurrence. However, you may want to use other flags such as `/i` or `/m`.
-
 ## Performance with Regex
 
 Regarding performance, both of them create a RegExp object. The main difference is how often the regex is compiled:

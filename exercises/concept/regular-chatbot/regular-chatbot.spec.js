@@ -8,16 +8,18 @@ import {
 
 describe('isValidCommand', () => {
   test('recognizes wheter the command is at the first position', () => {
-    expect(isValidCommand("Chatbot, Do you understand this command?")).toBe(true);
-    expect(isValidCommand('Hey Chatbot, please tell me what is the weather for tomorrow.')).toBe(
-      false
+    expect(isValidCommand('Chatbot, Do you understand this command?')).toBe(
+      true
     );
+    expect(
+      isValidCommand(
+        'Hey Chatbot, please tell me what is the weather for tomorrow.'
+      )
+    ).toBe(false);
   });
 
   test('does not care about UPPERCASE or lowercase', () => {
-    expect(
-      isValidCommand('CHATBOT, Is it okey if I shout at you?')
-    ).toBe(true);
+    expect(isValidCommand('CHATBOT, Is it okey if I shout at you?')).toBe(true);
     expect(
       isValidCommand('chatbot, please tell me what is happening here.')
     ).toBe(true);
@@ -26,9 +28,9 @@ describe('isValidCommand', () => {
 
 describe('removeEmoji', () => {
   test('removes properly one single emoji encryption', () => {
-    const expected = "What was your name?  Sorry I forgot about it.";
+    const expected = 'What was your name?  Sorry I forgot about it.';
     expect(
-      removeEmoji("What was your name? emoji2134 Sorry I forgot about it.")
+      removeEmoji('What was your name? emoji2134 Sorry I forgot about it.')
     ).toBe(expected);
   });
 
