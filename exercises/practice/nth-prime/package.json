@@ -10,14 +10,14 @@
     "directory": "exercises/practice/nth-prime"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.18.2",
     "@exercism/babel-preset-javascript": "^0.1.2",
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.35",
+    "@types/node": "^16.11.36",
     "babel-jest": "^28.1.0",
-    "core-js": "^3.22.5",
-    "eslint": "^8.15.0",
+    "core-js": "^3.22.7",
+    "eslint": "^8.16.0",
     "jest": "^28.1.0"
   },
   "dependencies": {},
