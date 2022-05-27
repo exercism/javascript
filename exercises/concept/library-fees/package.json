@@ -1,0 +1,30 @@
+{
+    "name": "@exercism/javascript-freelancer-rates",
+    "description": "Exercism concept exercise on numbers",
+    "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
+    "private": true,
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/exercism/javascript",
+      "directory": "exercises/concept/freelancer-rates"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.17.10",
+      "@exercism/babel-preset-javascript": "^0.1.2",
+      "@exercism/eslint-config-javascript": "^0.6.0",
+      "@types/jest": "^27.4.0",
+      "@types/node": "^16.11.35",
+      "babel-jest": "^28.1.0",
+      "core-js": "^3.22.5",
+      "eslint": "^8.15.0",
+      "jest": "^28.1.0"
+    },
+    "dependencies": {},
+    "scripts": {
+      "test": "jest ./*",
+      "watch": "jest --watch ./*",
+      "lint": "eslint ."
+    }
+  }
+  
