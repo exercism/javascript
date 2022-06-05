@@ -11,7 +11,7 @@ When you have lasagna in the oven, you want to know whether you can already take
 To make sure the lasagna does not burn in the oven, you usually set a timer.
 But sometimes you forget about that.
 
-Write a function `cookingStatus` with that accepts the remaining time on the timer in minutes as a parameter.
+Write a function `cookingStatus` that accepts the remaining time on the timer in minutes as a parameter.
 The function has three possible results.
 
 - If the timer shows `0`, it should return `'Lasagna is done.'`.
@@ -31,7 +31,7 @@ cookingStatus();
 ## 2. Estimate the preparation time
 
 For the next lasagna that you will prepare, you want to make sure you have enough time reserved so you can enjoy the cooking.
-You already made a plan which layers your lasagna will have.
+You already made a plan with all the layers your lasagna will have.
 Now you want to estimate how long the preparation will take based on that.
 
 Implement a function `preparationTime` that accepts an array of layers and the average preparation time per layer in minutes.
@@ -70,7 +70,7 @@ The friend sent you the list of ingredients and told you the last item on the li
 Now you want to add that secret ingredient to your recipe as well.
 
 Write a function `addSecretIngredient` that accepts two arrays of ingredients as parameters.
-The first parameter is the list your friend sent you, the second is the ingredient list for your own recipe.
+The first parameter is the list your friend sent you and the second is the ingredient list for your own recipe.
 The function should add the last item from your friend's list to the end of your list.
 The array that represents your recipe should be modified directly and the function should not return anything.
 However, the first argument should not be modified.
