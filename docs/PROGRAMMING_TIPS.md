@@ -22,6 +22,7 @@ Consider the following recommendations when you name your function.
 
 Stick to one convention for naming operations that do the same thing. 
 For example, if you name the function to get a student's name `getStudentName()`, you should not use a different verb in the function name to get a student's grade  (e.g. `retrieveStudentGrade()`).
-- Avoid using the same word for two purposes. 
-  For example, don't keep using 'add' when you want to put a group of items to a collection. 
-  Use 'insert' or 'append' instead.
+### Avoid using the same word for two purposes
+
+For example, don't keep using 'add' when you want to put a group of items into a collection. 
+Use 'insert' or 'append' instead.
