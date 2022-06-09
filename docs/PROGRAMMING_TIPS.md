@@ -1,7 +1,6 @@
 ## Naming A Function
 
-Naming a function is as important as writing codes. 
-A function name is important to be clear and precise. 
+Picking good function names is an essential part of writing good code. 
 Consider the following recommendations when you name your function. 
 
 ### Choose meaningful function names
