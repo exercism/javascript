@@ -15,9 +15,11 @@ Consider the following recommendations when you name your function.
   The longer the name is, the harder it get to remember and the more space it takes on the computer screen.
   On the other hand. making the name too short will also cause confusion. 
   `checkFPMD(mark)` is an example of the bad shortened name because when another programmer look at the function, he would get confused by what 'FPMD' mean.
-- Use the name that everyone understand. 
-  Your function name should be understandable by everyone who read your code. 
-  For example, don't use `DeathStar()` when you write delete item function. Use `deleteItem()` instead.
+### Use the name that everyone understands. 
+
+Your function name should be understandable by everyone who reads your code. 
+For example, an obscure function name like `DeathStar()` might be amusing to you, but the name doesn't communicate its purpose.
+
 ### Pick one convention for naming operations
 
 Stick to one convention for naming operations that do the same thing. 
