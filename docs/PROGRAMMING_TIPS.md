@@ -4,11 +4,13 @@ Naming a function is as important as writing codes.
 A function name is important to be clear and precise. 
 Consider the following recommendations when you name your function. 
 
-- Choose meaningful words. 
-  When you name your function, you should be clear on what it does. 
-  On Function name `get(studentId, subject)`, you can't tell what it is geting mark for or what it is getting or whether it is getting Studnet name or Age or their marks. 
-  Function `getStudentGrade(studentId, subject)` told you everything you need to know about what it does. 
-  It will return the student grade.
+### Choose meaningful function names
+
+When you name your function, you should be clear on what it does. 
+For example, the function `get(studentId, subject)` doesn't have a meaningful function name, and therefore, it is not clear what it does. 
+It might be getting the student's subject grade or getting their enrollment status. 
+A better name would be `getStudentGrade(studentId, subject)`, as it precisely communicates what the function does.
+
 ### Don't make the function name too long
 
 Take care not to make a function name too long. 
