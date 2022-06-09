@@ -18,8 +18,10 @@ Consider the following recommendations when you name your function.
 - Use the name that everyone understand. 
   Your function name should be understandable by everyone who read your code. 
   For example, don't use `DeathStar()` when you write delete item function. Use `deleteItem()` instead.
-- Pick one word per one concept and stick with it. 
-  For example, if you named getStudentName(), don't change get to retrieve like retrieveStudentGrade() when naming another function.
+### Pick one convention for naming operations
+
+Stick to one convention for naming operations that do the same thing. 
+For example, if you name the function to get a student's name `getStudentName()`, you should not use a different verb in the function name to get a student's grade  (e.g. `retrieveStudentGrade()`).
 - Avoid using the same word for two purposes. 
   For example, don't keep using 'add' when you want to put a group of items to a collection. 
   Use 'insert' or 'append' instead.
