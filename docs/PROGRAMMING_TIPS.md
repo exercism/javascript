@@ -9,12 +9,16 @@ Consider the following recommendations when you name your function.
   On Function name `get(studentId, subject)`, you can't tell what it is geting mark for or what it is getting or whether it is getting Studnet name or Age or their marks. 
   Function `getStudentGrade(studentId, subject)` told you everything you need to know about what it does. 
   It will return the student grade.
-- Don't make the name too short or too long. 
-  It is good to be clear and precise but take care not to make too long name. 
-  `checkStudentFailOrPassOrMeritOrDistinction(mark)` is an example of a unneccessarily long function name.
-  The longer the name is, the harder it get to remember and the more space it takes on the computer screen.
-  On the other hand. making the name too short will also cause confusion. 
-  `checkFPMD(mark)` is an example of the bad shortened name because when another programmer look at the function, he would get confused by what 'FPMD' mean.
+### Don't make the function name too long
+
+Take care not to make a function name too long. 
+For example,  `checkStudentFailOrPassOrMeritOrDistinction(mark)` is an unnecessarily long function name. 
+The longer the name is, the harder it gets to remember and the more space it takes on the computer screen.
+
+### Don't make the function name too short
+Conversely, making a function name too short can also confuse readers. 
+For example, `checkFPMD(mark)` is a bad function name as it isn't immediately obvious what 'FPMD' means.
+
 ### Use the name that everyone understands. 
 
 Your function name should be understandable by everyone who reads your code. 
