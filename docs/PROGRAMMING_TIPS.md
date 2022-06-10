@@ -1,3 +1,5 @@
+# Programming Tips
+
 ## Naming A Function
 
 Picking good function names is an essential part of writing good code.
