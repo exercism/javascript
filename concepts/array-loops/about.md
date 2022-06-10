@@ -23,7 +23,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 ## The `for...of` Loop
 
-When you want to work with the value directly in each iteration and do not require the index at all, you can use a `for .. of` loop.
+When you want to work with the value directly in each iteration and do not require the index at all, you can use a `for...of` loop.
 
 `for...of` works like the basic `for` loop shown above, but instead of having to deal with the _index_ as a variable in the loop, you are provided with the _value_ directly.
 
