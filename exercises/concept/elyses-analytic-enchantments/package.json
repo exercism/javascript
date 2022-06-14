@@ -18,7 +18,7 @@
     "babel-jest": "^28.1.1",
     "core-js": "^3.22.8",
     "eslint": "^8.17.0",
-    "jest": "^28.1.0"
+    "jest": "^28.1.1"
   },
   "dependencies": {},
   "scripts": {
