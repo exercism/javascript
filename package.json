@@ -16,7 +16,7 @@
     "@babel/core": "^7.18.5",
     "@exercism/babel-preset-javascript": "^0.1.2",
     "@exercism/eslint-config-javascript": "^0.6.0",
-    "@types/jest": "^28.1.1",
+    "@types/jest": "^28.1.2",
     "@types/node": "^18.0.0",
     "babel-jest": "^28.1.1",
     "chalk": "^5.0.0",
