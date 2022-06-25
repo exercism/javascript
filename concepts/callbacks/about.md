@@ -81,30 +81,33 @@ You see this pattern often when dealing with asynchronous functions to assist wi
 Common `Array` functions use callback functions to define their behaviour:
 
 - `Array.prototype.forEach`:
+
   - Accepts a callback, which applies the callback to each element of an array.
 
     ```javascript
     [1, 2, 3].forEach(function (element) {
-      doSomething(element)
+      doSomething(element);
     });
     // => doSomething() is invoked 3 times, once with each element
     ```
 
 - `Array.prototype.map`
+
   - Accepts a callback, which applies the callback to each element of an array using the result to create a new array.
 
     ```javascript
-    [1,2,3].map(function (element) {
+    [1, 2, 3].map(function (element) {
       return element + 1;
     });
     // => [2, 3, 4]
     ```
 
 - `Array.prototype.reduce`
+
   - Accepts a callback, which applies the callback to each element of an array, passing the result forward to the next invocation.
 
     ```javascript
-    [1,2,3].reduce(function (runningSum, element) {
+    [1, 2, 3].reduce(function (runningSum, element) {
       return runningSum + element;
     }, 0);
     // => 6
