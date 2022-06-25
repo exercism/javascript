@@ -109,7 +109,13 @@
         "name": "Elyses Analytic Enchantments",
         "uuid": "45d956db-d4ef-4468-b1d3-47021f172c15",
         "concepts": ["array-analysis"],
-        "prerequisites": ["arrays", "booleans", "callbacks", "numbers"],
+        "prerequisites": [
+          "arrays",
+          "arrow-functions",
+          "booleans",
+          "callbacks",
+          "numbers"
+        ],
         "status": "beta"
       },
       {
@@ -125,7 +131,13 @@
         "name": "Elyses Looping Enchantments",
         "uuid": "e06f8f70-019f-4cec-924b-3971414e15d9",
         "concepts": ["array-loops"],
-        "prerequisites": ["arrays", "callbacks", "for-loops", "conditionals"],
+        "prerequisites": [
+          "arrays",
+          "arrow-functions",
+          "callbacks",
+          "for-loops",
+          "conditionals"
+        ],
         "status": "beta"
       },
       {
@@ -169,7 +181,7 @@
         "slug": "fruit-picker",
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
-        "concepts": ["callbacks"],
+        "concepts": ["arrow-functions", "callbacks"],
         "prerequisites": ["functions", "objects"],
         "status": "beta"
       },
@@ -225,7 +237,13 @@
         "name": "Elyses Transformative Enchantments",
         "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
         "concepts": ["array-transformations"],
-        "prerequisites": ["numbers", "arrays", "conditionals", "callbacks"],
+        "prerequisites": [
+          "arrow-functions",
+          "numbers",
+          "arrays",
+          "conditionals",
+          "callbacks"
+        ],
         "status": "beta"
       },
       {
@@ -482,6 +500,7 @@
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
         "prerequisites": [
+          "arrow-functions",
           "strings",
           "objects",
           "regular-expressions",
@@ -1296,6 +1315,7 @@
         "prerequisites": [
           "arrays",
           "array-transformations",
+          "arrow-functions",
           "errors",
           "for-loops",
           "rest-and-spread"
