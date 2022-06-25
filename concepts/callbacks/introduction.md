@@ -17,13 +17,13 @@ function squareArea(side) {
   return side * side;
 }
 
-applyToSquare(areaOfSquare); // => 25
+applySideLength(areaOfSquare); // => 25
 ```
 
 You may also write callbacks as a function expression:
 
 ```javascript
-applyToSquare(function squarePerimeterLength(side) {
+applySideLength(function squarePerimeterLength(side) {
   return side * 4;
 });
 ```

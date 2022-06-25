@@ -1,6 +1,30 @@
 # About
 
-[_Callback_ functions][wiki-callbacks] are functions passed as arguments to other functions. The callback function may then be invoked to create a sequence of events. Often, _callbacks_ are used to handle the results of work done, or handle an action when an event occurs. _Callback_ functions can be used in synchronous and asynchronous programming.
+[_Callback_ functions][wiki-callbacks] are functions passed as arguments to other functions. The callback function may then be invoked to trigger a subsequent action. Often, _callbacks_ are used to handle the results of work done, or handle an action when an event occurs. _Callback_ functions can be used in synchronous and asynchronous programming.
+
+```javascript
+const sideLength = 5;
+
+// Caller function takes a callback function
+function applySideLength(callback) {
+  return callback(sideLength);
+}
+
+// Callback must expect the possible argument from the calling function
+function squareArea(side) {
+  return side * side;
+}
+
+applySideLength(areaOfSquare); // => 25
+```
+
+You may also write callbacks as a function expression:
+
+```javascript
+applySideLength(function squarePerimeter(side) {
+  return side * 4;
+});
+```
 
 This is a useful pattern in JavaScript because JavaScript is designed as a single-threaded runtime where only one function call can be executed at a time. During execution, the runtime cannot respond to other events or continue execution until the function has returned.
 
@@ -51,6 +75,40 @@ operation(1, 2, callback)
 ```
 
 You see this pattern often when dealing with asynchronous functions to assist with control flow.
+
+### Callbacks in disguise
+
+Common `Array` functions use callback functions to define their behaviour:
+
+- `Array.prototype.forEach`:
+  - Accepts a callback, which applies the callback to each element of an array.
+
+    ```javascript
+    [1, 2, 3].forEach(function (element) {
+      doSomething(element)
+    });
+    // => doSomething() is invoked 3 times, once with each element
+    ```
+
+- `Array.prototype.map`
+  - Accepts a callback, which applies the callback to each element of an array using the result to create a new array.
+
+    ```javascript
+    [1,2,3].map(function (element) {
+      return element + 1;
+    });
+    // => [2, 3, 4]
+    ```
+
+- `Array.prototype.reduce`
+  - Accepts a callback, which applies the callback to each element of an array, passing the result forward to the next invocation.
+
+    ```javascript
+    [1,2,3].reduce(function (runningSum, element) {
+      return runningSum + element;
+    }, 0);
+    // => 6
+    ```
 
 [mdn-callbacks]: https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
 [mdn-concurrency-stack]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#stack
