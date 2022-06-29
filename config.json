@@ -190,7 +190,7 @@
         "name": "Translation Service",
         "uuid": "4a967656-8615-474e-a009-5c0b09f4386f",
         "concepts": ["promises"],
-        "prerequisites": ["callbacks", "errors"],
+        "prerequisites": ["callbacks", "arrow-functions", "errors"],
         "status": "beta"
       },
       {
