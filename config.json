@@ -111,9 +111,9 @@
         "concepts": ["array-analysis"],
         "prerequisites": [
           "arrays",
+          "arrow-functions",
           "booleans",
           "callbacks",
-          "arrow-functions",
           "numbers"
         ],
         "status": "beta"
@@ -133,8 +133,8 @@
         "concepts": ["array-loops"],
         "prerequisites": [
           "arrays",
-          "callbacks",
           "arrow-functions",
+          "callbacks",
           "for-loops",
           "conditionals"
         ],
@@ -181,7 +181,7 @@
         "slug": "fruit-picker",
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
-        "concepts": ["callbacks", "arrow-functions"],
+        "concepts": ["arrow-functions", "callbacks"],
         "prerequisites": ["functions", "objects"],
         "status": "beta"
       },
@@ -238,11 +238,11 @@
         "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
         "concepts": ["array-transformations"],
         "prerequisites": [
+          "arrow-functions",
           "numbers",
           "arrays",
           "conditionals",
-          "callbacks",
-          "arrow-functions"
+          "callbacks"
         ],
         "status": "beta"
       },
@@ -500,9 +500,9 @@
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
         "prerequisites": [
+          "arrow-functions",
           "strings",
           "objects",
-          "arrow-functions",
           "regular-expressions",
           "errors"
         ],
