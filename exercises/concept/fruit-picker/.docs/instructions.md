@@ -1,6 +1,8 @@
 # Instructions
 
-You are creating a new online portal for your patrons to order their fruit fresh from the grocer. The grocer has an API that you can use to see if they have the inventory desired by your customers. You need to create a small library of functions for interacting with the grocer's API.
+As an online fruit seller, you will have to manage your stock inventory according to your customers so you can give them fresh fruits as quickly as possible. To keep things simple, you created the grocer's API, and now, you need to write a small functions library that will interact with your API and give you quick good results.
+
+You are creating a e-commerec
 
 ## 1. Create a callback to be called when the order is successful
 
