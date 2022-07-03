@@ -6,7 +6,8 @@ You are creating a e-commerec
 
 ## 1. Create a callback to be called when the order is successful
 
-Write a callback function called `onSuccess` to be called when the order is successful. It should invoke the imported `notify` function passing a success message to it.
+Write a callback function name `onSuccess` which should invoke the import `notify` function.
+You have to return a `SUCCESS` message when the order is successful.
 
 ```javascript
 onSuccess();
@@ -15,7 +16,8 @@ onSuccess();
 
 ## 2. Create a callback to be called when the order fails with an error
 
-Write a callback function called `onError` to be called when the order encounters an error. It should invoke the imported `notify` function passing an error message to it.
+Write a callback function name `onError` which should invoke the import `notify` function. 
+You have to return an `ERROR` message when the order encounters an error.
 
 ```javascript
 onError();
