@@ -17,7 +17,7 @@
     "@types/node": "^18.0.0",
     "babel-jest": "^28.1.1",
     "core-js": "^3.23.3",
-    "eslint": "^8.18.0",
+    "eslint": "^8.19.0",
     "jest": "^28.1.2"
   },
   "dependencies": {},
