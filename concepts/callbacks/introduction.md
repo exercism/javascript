@@ -13,7 +13,7 @@ function applySideLength(callback) {
 }
 
 // Callback must expect the possible argument from the calling function
-function squareArea(side) {
+function areaOfSquare(side) {
   return side * side;
 }
 
