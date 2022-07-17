@@ -109,12 +109,7 @@
         "name": "Elyses Analytic Enchantments",
         "uuid": "45d956db-d4ef-4468-b1d3-47021f172c15",
         "concepts": ["arrow-functions", "array-analysis"],
-        "prerequisites": [
-          "arrays",
-          "booleans",
-          "callbacks",
-          "numbers"
-        ],
+        "prerequisites": ["arrays", "booleans", "callbacks", "numbers"],
         "status": "beta"
       },
       {
