@@ -28,7 +28,7 @@ const result = doubleScale(6, -3);
 
 ## 3. Compose transformation functions
 
-Combine two transformation functions to perform a repeatable transformation. This is often called _function composition_, where the result of the first function _'f(x)'_ is used as the input to the second function _'g(x)'_.
+Combine two transformation functions to perform a repeatable transformation. This is often called _function composition_, where the result of the first function _'f(x)'_ is used as the input to the second function _'g(x)'_. In simple words you have to pass the result of first function into the second function and should return the result.
 
 ```javascript
 const moveCoordinatesRight2Px = translate2d(2, 0);
