@@ -133,7 +133,7 @@ As with `resize` the new position cannot exceed certain limits.
 - The maximum position in either direction depends on the current size of the window.
   The edges cannot move past the edges of the screen.
   Values larger than these bounds will be clipped to the largest size they can take.
-  E.g. if the window's size is at `x` = 250, `y` = 100 and a move to `x` = 600, `y` = 200 is requested, then the window would be moved to `x` = 550, `y` = 200 as the screen is not large enough in the `x` direction to fully accommodate the request.
+  E.g. if the window's size is at `x` = 550, `y` = 100 and a move to `x` = 600, `y` = 200 is requested, then the window would be moved to `x` = 550, `y` = 200 as the screen is not large enough in the `x` direction to fully accommodate the request.
 
 ```javascript
 const programWindow = new ProgramWindow();
