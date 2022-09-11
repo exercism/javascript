@@ -91,7 +91,7 @@ describe('composeTransform', () => {
     expect(composed(0, 0)).toEqual([-6, 10]);
   });
 
-  test('should compose in the opposite order: g(f(x))', () => {
+  test('should compose in the opposite order: f(g(x))', () => {
     const composed = composeTransform(translator, scaler);
     expect(composed(0, 0)).toEqual([-18, 20]);
   });
