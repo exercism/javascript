@@ -82,7 +82,7 @@ findDataById(4)
 
 ## Static Methods of the Promise Class
 
-Some of the [static methods][promise-static-methods] that are available on `Promise` can be used to resolve and reject promises. Here are a few of them:
+Some of the [static methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) that are [available][promise-static-methods] on `Promise` can be used to resolve and reject promises. Here are a few of them:
 
 ### Promise.all
 
