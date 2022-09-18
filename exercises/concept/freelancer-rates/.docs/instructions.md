@@ -37,5 +37,5 @@ The discount is always passed as a number, where `42%` becomes `0.42`. The resul
 
 ```javascript
 priceWithMonthlyDiscount(89, 230, 0.42);
-// => 97972
+// => 97971
 ```
