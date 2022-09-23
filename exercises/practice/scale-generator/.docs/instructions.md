@@ -35,11 +35,11 @@ For the scope of this exercise the scale is only ascending.
 Given a tonic, generate the 12 note chromatic scale starting with the tonic.
 
 - Shift the base scale appropriately so that all 12 notes are returned
-starting with the given tonic.
+  starting with the given tonic.
 - For the given tonic, determine if the scale is to be returned with flats
-or sharps.
+  or sharps.
 - Return all notes in uppercase letters (except for the `b` for flats)
-irrespective of the casing of the given tonic.
+  irrespective of the casing of the given tonic.
 
 ## Diatonic Scales
 
@@ -54,7 +54,7 @@ a "whole step" or "major second" (written as an upper-case "M"). The
 diatonic scales are built using only these two intervals between
 adjacent notes.
 
-Non-diatonic scales can contain other intervals.  An "augmented second"
+Non-diatonic scales can contain other intervals. An "augmented second"
 interval, written "A", has two interceding notes (e.g., from A to C or D♭ to E)
 or a "whole step" plus a "half step". There are also smaller and larger
 intervals, but they will not figure into this exercise.
@@ -71,13 +71,13 @@ Then, for each interval in the pattern, the next note is determined by starting 
 
 For example, starting with G and using the seven intervals MMmMMMm, there would be the following eight notes:
 
-Note | Reason
---|--
-G | Tonic
-A | M indicates a whole step from G, skipping G♯
-B | M indicates a whole step from A, skipping A♯
-C | m indicates a half step from B, skipping nothing
-D | M indicates a whole step from C, skipping C♯
-E | M indicates a whole step from D, skipping D♯
-F♯ | M indicates a whole step from E, skipping F
-G | m indicates a half step from F♯, skipping nothing
+| Note | Reason                                            |
+| ---- | ------------------------------------------------- |
+| G    | Tonic                                             |
+| A    | M indicates a whole step from G, skipping G♯      |
+| B    | M indicates a whole step from A, skipping A♯      |
+| C    | m indicates a half step from B, skipping nothing  |
+| D    | M indicates a whole step from C, skipping C♯      |
+| E    | M indicates a whole step from D, skipping D♯      |
+| F♯   | M indicates a whole step from E, skipping F       |
+| G    | m indicates a half step from F♯, skipping nothing |
