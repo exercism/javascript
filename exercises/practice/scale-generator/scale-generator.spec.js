@@ -38,7 +38,7 @@ describe('ScaleGenerator', () => {
       expect(new Scale('F').chromatic()).toEqual(expected);
     });
 
-    xtest('D chromatic scale', () => {
+    xtest('Chromatic scale with sharps from D', () => {
       const expected = [
         'D',
         'D#',
@@ -56,7 +56,7 @@ describe('ScaleGenerator', () => {
       expect(new Scale('D').chromatic()).toEqual(expected);
     });
 
-    xtest('d chromatic scale', () => {
+    xtest('Chromatic scale with flats from D', () => {
       const expected = [
         'D',
         'Eb',
