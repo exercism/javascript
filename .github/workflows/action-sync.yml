@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: 'Post acknowledgement that it will sync exercises'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@c713e510dbd7d213d92d41b7a7805a986f4c5c66
+        uses: actions/github-script@d4560e157075e2d93aa3022b5b51a42a880f1f93
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -84,7 +84,7 @@ jobs:
 
       - name: 'Post acknowledgement that it has synced the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@c713e510dbd7d213d92d41b7a7805a986f4c5c66
+        uses: actions/github-script@d4560e157075e2d93aa3022b5b51a42a880f1f93
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -98,7 +98,7 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@c713e510dbd7d213d92d41b7a7805a986f4c5c66
+        uses: actions/github-script@d4560e157075e2d93aa3022b5b51a42a880f1f93
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
