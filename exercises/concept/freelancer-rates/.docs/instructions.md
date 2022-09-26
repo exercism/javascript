@@ -5,7 +5,7 @@ In this exercise you will be writing code to help a freelancer communicate with 
 ## 1. Calculate the day rate given an hourly rate
 
 A client contacts the freelancer to enquire about their rates.
-The freelancer explains that he **_works 8 hours a day._**
+The freelancer explains that they **_work 8 hours a day._**
 However, the freelancer knows only their hourly rates for the project.
 Help them estimate a day rate given an hourly rate.
 
@@ -19,7 +19,7 @@ The day rate does not need to be rounded or changed to a "fixed" precision.
 ## 2. Calculate the number of workdays given a fixed budget
 
 Another day, a project manager offers the freelancer to work on a project with a fixed budget.
-Given the fixed budget and the freelancer's hourly rate, help them calculate the number of days he would work until the budget is exhausted.
+Given the fixed budget and the freelancer's hourly rate, help them calculate the number of days they would work until the budget is exhausted.
 The result _must_ be **rounded down** to the nearest whole number.
 
 ```javascript
