@@ -14,7 +14,7 @@
     "@exercism/babel-preset-javascript": "^0.1.2",
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^29.0.3",
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.7.19",
     "babel-jest": "^29.0.3",
     "core-js": "^3.25.2",
     "eslint": "^8.23.1",
