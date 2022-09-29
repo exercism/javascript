@@ -658,7 +658,7 @@
         "name": "Scrabble Score",
         "uuid": "11771d47-1109-4579-a62b-e0b8e9583485",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-transformations"],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "maps", "strings"]
       },
