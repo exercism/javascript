@@ -677,7 +677,7 @@
         "uuid": "0073ff9a-cd6a-43cf-b8bf-4d5d8117b81b",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 4,
         "topics": ["loops", "lists", "regular_expressions", "strings"]
       },
       {
