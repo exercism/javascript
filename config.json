@@ -1646,7 +1646,12 @@
         "name": "Roman Numerals",
         "uuid": "2fc4f834-a51c-42b8-a4d9-5263229e7648",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "pattern_recognition", "transforming"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "pattern_recognition",
+          "transforming"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -1660,7 +1665,15 @@
         "name": "Binary",
         "uuid": "0ba4d3b9-2519-49ac-bd93-f960aca6c11f",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "exception_handling", "integers", "math", "regular_expressions", "strings"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "exception_handling",
+          "integers",
+          "math",
+          "regular_expressions",
+          "strings"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1678,7 +1691,14 @@
         "name": "Hexadecimal",
         "uuid": "8ed2c9fe-a13f-4313-abf9-125f351c85c9",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "integers", "math", "regular_expressions", "strings"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "integers",
+          "math",
+          "regular_expressions",
+          "strings"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1695,7 +1715,14 @@
         "name": "Octal",
         "uuid": "dec66f89-39d0-4857-9679-a035cf4259d7",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "integers", "math", "regular_expressions", "strings"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "integers",
+          "math",
+          "regular_expressions",
+          "strings"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1721,7 +1748,14 @@
         "name": "Trinary",
         "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "integers", "math", "regular_expressions", "strings"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "integers",
+          "math",
+          "regular_expressions",
+          "strings"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -1738,7 +1772,14 @@
         "name": "All Your Base",
         "uuid": "d2d3cd13-b06c-4c24-9964-fb1554f70dd4",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "exception_handling", "integers", "math", "parsing"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "exception_handling",
+          "integers",
+          "math",
+          "parsing"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -1763,7 +1804,15 @@
         "name": "Queen Attack",
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
         "practices": [],
-        "prerequisites": ["conditionals", "loops", "equality", "exception_handling", "optional_values", "parsing", "text_formatting"],
+        "prerequisites": [
+          "conditionals",
+          "loops",
+          "equality",
+          "exception_handling",
+          "optional_values",
+          "parsing",
+          "text_formatting"
+        ],
         "difficulty": 8,
         "topics": [
           "conditionals",
