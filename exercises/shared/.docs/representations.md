@@ -15,7 +15,7 @@ Before you submit your representation feedback, please check the following thing
 1. You don't duplicate analyzer feedback
 2. You check the "examples" tab in the submit dialog and see if the feedback makes sense for _all_ tabs.
 3. You check that you have not referred to whitespace or comments
-4. You check that you don't refer to function names, or variable names as they appear in the solution, but rather use the mapping provided (or leave names out). 
+4. You check that you don't refer to function names, or variable names as they appear in the solution, but rather use the mapping provided (or leave names out).
    Only _exported_ names (required by the tests) you can safely refer to because these are always the same for everyone.
 
 ## Example
@@ -23,16 +23,16 @@ Before you submit your representation feedback, please check the following thing
 ```javascript
 // Clock constants
 
-const MINUTES_PER_HOUR = 60
-const HOURS_ON_THE_CLOCK = 24
+const MINUTES_PER_HOUR = 60;
+const HOURS_ON_THE_CLOCK = 24;
 
-const MINUTES_PER_CLOCK = MINUTES_PER_HOUR * HOURS_ON_THE_CLOCK
+const MINUTES_PER_CLOCK = MINUTES_PER_HOUR * HOURS_ON_THE_CLOCK;
 ```
 
 Given the snippet above, each declaration is transformed in the following way:
 
 ```javascript
-const MINUTES_PER_HOUR = 60
+const MINUTES_PER_HOUR = 60;
 ```
 
 Becomes
@@ -67,7 +67,7 @@ And keeps track of the mapping:
 The second declaration:
 
 ```javascript
-const HOURS_ON_THE_CLOCK = 24
+const HOURS_ON_THE_CLOCK = 24;
 ```
 
 Becomes
@@ -96,7 +96,7 @@ Becomes
 And keeps track of the mapping:
 
 ```json
-{ 
+{
   "IDENTIFIER_0": "MINUTES_PER_HOUR",
   "IDENTIFIER_1": "HOURS_ON_THE_CLOCK"
 }
@@ -105,7 +105,7 @@ And keeps track of the mapping:
 And finally the third declaration:
 
 ```javascript
-const MINUTES_PER_CLOCK = MINUTES_PER_HOUR * HOURS_ON_THE_CLOCK
+const MINUTES_PER_CLOCK = MINUTES_PER_HOUR * HOURS_ON_THE_CLOCK;
 ```
 
 will use the tracked mapping to replace its "variables".
@@ -140,19 +140,19 @@ will use the tracked mapping to replace its "variables".
 
 ## What is an identifier?
 
-In JavaScript, anything that _identifiers_ a variable, property, or function is an _identifier_. 
+In JavaScript, anything that _identifiers_ a variable, property, or function is an _identifier_.
 
 ```javascript
-const FOO = 42
+const FOO = 42;
 // => FOO is an identifier (variable)
 
-function bar() { } 
+function bar() {}
 // => bar is an identifier (function)
 
-class Baz { }
+class Baz {}
 // => Baz is an identifier (function)
 
-object.pew = {}
+object.pew = {};
 // => pew is an identifier (property)
 // => object is an identifier (variable)
 ```
@@ -164,10 +164,10 @@ You can drop any code into [AST explorer](https://astexplorer.net/) and configur
 Given all things just said, the following code snippets are equivalent:
 
 ```javascript
-const SECONDS_TO_RELOAD = 3
+const SECONDS_TO_RELOAD = 3;
 
 function bang_time() {
-  return SECONDS_TO_RELOAD + 1
+  return SECONDS_TO_RELOAD + 1;
 }
 ```
 
@@ -187,5 +187,5 @@ function pewpewpew() {
 - Different ways of declarating a variable.
   `const`, `var`, and `let` are _purposefully_ not normalised away, because each has its own use cases.
 - Different ways of declaring a function.
-  `const foo = () => {}`, `const foo = function() {}` and `function foo() {}` are all completely different, at the moment. 
+  `const foo = () => {}`, `const foo = function() {}` and `function foo() {}` are all completely different, at the moment.
   We may normalise this down the line.
