@@ -691,7 +691,7 @@
         "name": "Bank Account",
         "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "conditionals", "numbers"],
         "difficulty": 3,
         "topics": ["classes", "conditionals"]
       },
