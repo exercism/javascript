@@ -15,7 +15,7 @@ JavaScript provides 6 different operators to perform basic arithmetic operations
 
   ```javascript
   19 - 2; // => 17
-  7.4 - 1.2; // => 1.5
+  7.4 - 1.2; // => 6.2
   ```
 
 - `*`: The multiplication operator is used to find the product of two numbers
