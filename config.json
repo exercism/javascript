@@ -667,7 +667,7 @@
         "name": "Allergies",
         "uuid": "9d33d21c-e695-427f-9f58-dd9498d61318",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "math", "numbers", "for-loops", "arrays"],
         "difficulty": 6,
         "topics": ["arrays", "bitwise_operations", "conditionals", "loops"]
       },
