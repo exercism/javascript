@@ -90,7 +90,7 @@ The `package.json` file must be edited:
 
 Now create the following three files:
 
-- `<slug>.cs`. the stub implementation file, which is the starting point for students to work on the exercise.
+- `<slug>.js`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `<slug>.spec.js`: the test suite.
 - `.meta/exemplar.js`: an exemplar implementation that passes all the tests. It **should** be an idiomatic solution.
 
