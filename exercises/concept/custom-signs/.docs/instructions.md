@@ -13,9 +13,12 @@ buildSign('Birthday', 'Rob');
 
 ## 2. Build a birthday sign
 
-Implement the function `buildBirthdaySign(age)` that accepts an age and based on the age will determine part of the message on the sign. If the age is 50 or older, the sign will include the word _mature_, otherwise the sign will include the word _young_.
+Implement the function `buildBirthdaySign(age)` that accepts an age and based on the age will determine part of the message on the sign. If the age is 50 or older, the sign will refer user as _mature_, else it will refer them as _young_. The exact expected output is shown below:
 
 ```javascript
+buildBirthdaySign(50);
+// => "Happy Birthday! What a mature fellow you are."
+
 buildBirthdaySign(45);
 // => "Happy Birthday! What a young fellow you are."
 ```
