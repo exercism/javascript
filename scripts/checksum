@@ -30,7 +30,7 @@ function checksumAssignment(assignment, filename, baseFile, expectedSha) {
 
   let fileSha;
 
-  if (filename == 'package.json') {
+  if (filename === 'package.json') {
     const packageJson = helpers.prepareExercisePackageJson(filePath, false);
 
     fileSha = helpers.shaPackageJson(packageJson);
@@ -86,7 +86,7 @@ function checksumAll(filename, rootFileName = filename) {
 
   let expectedSha;
 
-  if (rootFileName == 'exercise-package.json') {
+  if (rootFileName === 'exercise-package.json') {
     expectedSha = shell.cat('exercise-package.json.sha').toString();
   } else {
     const fileContents = shell.cat(rootFileName).toString();
