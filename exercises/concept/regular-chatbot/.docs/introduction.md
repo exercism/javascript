@@ -1,6 +1,6 @@
 # Introduction
 
-## 1. Regular Expressions in JavaScript
+## Regular Expressions in JavaScript
 
 A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of characters that we can use to target and manipulate certain elements in strings. Hence, we can:
 
@@ -10,11 +10,11 @@ A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of char
 
 > 💡 JavaScript's regex flavor is part of the ECMA-262 standard for the language. This means that you don't have to worry about browser-specific compatibility.
 
-## 2. How to create Regular Expressions
+## How to create Regular Expressions
 
-In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers` where 'pattern' is the main regex, and 'modifiers' are a series of characters which we can add to indicate special options (like superpowers).
+In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers`.
 
-Nevertheless, we have two ways of creating a regular expression:
+We have two ways of creating a regular expression:
 
 1. **Regular Expression Literal**:
 
@@ -28,11 +28,13 @@ const regex = /[a-z]/;
 const regex = new RegExp('[a-z]');
 ```
 
-In both methods, JavaScript is also creating an Object out of the regex. It is recommended to use immutable patterns with the literal, and the RegExp for those regex which are probably going to change or we don't know yet (like an input).
+In both cases, JavaScript is creating an object out of the regex. It is recommended to use immutable patterns with the literal as default.
 
-## 3. 🏴‍☠️ Flags
+The RegExp constructor can be used for cases where the regex will change or we don't know it yet (like an input).
 
-Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. These flags can be used separately or together in any order, and are included as part of the regular expression.
+## 🏴‍☠️ Flags
+
+Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. 
 
 Some of the widely used are:
 
@@ -55,7 +57,7 @@ The `g` character allows us to parse all possible matches within a string. Witho
 
 The Case Insensitive flag `/i` enables us to be flexible when it comes to finding a pattern. This way it doesn't matter if what we are looking for is in `UPPERCASE` or `lowercase`.
 
-When using the `RegExp` constructor, the syntax of adding flags is different. In this case, we just need to pass the flags as a second argument.
+When using the `RegExp` constructor, the syntax of adding flags is different. 
 
 ```javascript
 let regex = /[a-z]/gi; // literal notation
@@ -63,7 +65,7 @@ let regex = new RegExp('[a-z]', 'gi'); // constructor with string pattern as fir
 let regex = new RegExp(/[a-z]/, 'gi'); // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 ```
 
-## 4. Most common Functions
+## Most common Functions
 
 When regular expressions are combined with current build-in functions in JavaScript, we have some powerful ways of manipulating and getting data from strings.
 
@@ -77,14 +79,14 @@ The [test()][mdn-regex-test]] method executes a search for a match between a reg
 const str = 'It is difficult to test if you have a virus';
 const result = /virus$/.test(str);
 
-console.log(result); // true
+console.log(result); 
+
+// => true
 ```
 
 ### Match
 
-Okey but, what if we want to get the actual values of the regular expression search?
-
-Instead of returning just a boolean, with the [match()][mdn-regex-match] method, we get a useful array whose contents depend on the presence or absence of the found matches.
+With the [match()][mdn-regex-match] method, we get a useful array whose contents depend on the presence or absence of the found matches.
 
 In this way, we are able both to **search** and to **extract** information from any string. For example:
 
@@ -94,9 +96,11 @@ const funnyQuote =
 const regex1 = /someone/;
 const regex2 = /happy/;
 
-funnyQuote.match(regex1); // ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
+funnyQuote.match(regex1); 
+// => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
-funnyQuote.match(regex2); // null
+funnyQuote.match(regex2); 
+// => null
 ```
 
 When the Global Search flag `/g` is present, instead of getting the only match alongside useful information such as the index or input, the method returns all of the occurances displayed in the array:
@@ -107,7 +111,8 @@ const funnyQuote =
 
 const regex3 = /if/gi;
 
-funnyQuote.match(regex3); // ["If", "if"];
+funnyQuote.match(regex3); 
+// => ["If", "if"];
 ```
 
 ### Replace
@@ -135,10 +140,8 @@ let text = 'Say hello to the chatbot.';
 let result = text.replace(/chatbot|hello/gi, function (word) {
   return word.toUpperCase();
 });
-// -> "Say HELLO to the CHATBOT"
+// => "Say HELLO to the CHATBOT"
 ```
-
-> 💡 In the end, the combination of regular expressions and the `replace()` method is a more dynamic way of replacing elements. Using a single string may be limited.
 
 ### Split
 
@@ -152,24 +155,22 @@ const str = 'hello,user.how are.you';
 const result = str.split(/[,.\s]/);
 
 console.log(result);
-//--> ['hello', 'user', 'how', 'are', 'you']
+// => ['hello', 'user', 'how', 'are', 'you']
 ```
 
-## 5. Performance with Regex
+## Performance with Regex
 
 Regarding performance, both of them create a RegExp object. The main difference is how often the regex is compiled:
 
 - With `Regular Expression Literal`: one time during initial code parsing and compiling
 - With `RegExp()` syntax: Every time new Object gets created.
 
-According to [this](https://stackoverflow.com/a/32523333)answer from Alexander Abakumov in StackOverflow, using literal syntax may be a better option not only because of performance, but also for simplicity and readability.
+Using literal syntax may be a better option not only because of performance, but also for simplicity and readability. For more details see [this](https://stackoverflow.com/a/32523333) Stackoverflow discussion.
 
 1. It is shorter and doesn’t force you to think in terms of class-like constructors.
 2. When using the `RegExp()` constructor, you also need to escape quotes and double-escape backslashes. It makes regular expressions that are hard to read and understand by their nature even more harder.
 
 Nevertheless, for this particular challenge, we are practising with both methods. Hence you are able to decide which one to apply depending on the occasion.
-
-## 6. Useful Resources
 
 [using-regular-expressions-in-javascript]: https://www.regular-expressions.info/javascript.html
 [mdn-regex-cheatsheet]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet

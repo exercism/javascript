@@ -12,9 +12,9 @@ A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of char
 
 ## How to create Regular Expressions
 
-In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers` where 'pattern' is the main regex, and 'modifiers' are a series of characters which we can add to indicate special options (like superpowers).
+In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers`. 
 
-Nevertheless, we have two ways of creating a regular expression:
+We have two ways of creating a regular expression:
 
 1. **Regular Expression Literal**:
 
@@ -34,7 +34,7 @@ The RegExp constructor can be used for cases where the regex will change or we d
 
 ## 🏴‍☠️ Flags
 
-Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. These flags can be used separately or together in any order, and are included as part of the regular expression.
+Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. 
 
 Some of the widely used are:
 
@@ -57,7 +57,7 @@ The `g` character allows us to parse all possible matches within a string. Witho
 
 The Case Insensitive flag `/i` enables us to be flexible when it comes to finding a pattern. This way it doesn't matter if what we are looking for is in `UPPERCASE` or `lowercase`.
 
-When using the `RegExp` constructor, the syntax of adding flags is different. In this case, we just need to pass the flags as a second argument.
+When using the `RegExp` constructor, the syntax of adding flags is different. 
 
 ```javascript
 let regex = /[a-z]/gi; // literal notation
@@ -86,9 +86,7 @@ console.log(result);
 
 ### Match
 
-Okey but, what if we want to get the actual values of the regular expression search?
-
-Instead of returning just a boolean, with the [match()][mdn-regex-match] method, we get a useful array whose contents depend on the presence or absence of the found matches.
+With the [match()][mdn-regex-match] method, we get a useful array whose contents depend on the presence or absence of the found matches.
 
 In this way, we are able both to **search** and to **extract** information from any string. For example:
 
@@ -146,8 +144,6 @@ let result = text.replace(/chatbot|hello/gi, function (word) {
 // => "Say HELLO to the CHATBOT"
 ```
 
-> 💡 In the end, the combination of regular expressions and the `replace()` method is a more dynamic way of replacing elements. Using a single string may be limited.
-
 ### Split
 
 The [split()][mdn-regex-split] method in JavaScript represents a different way of using and manipulating strings with regular expressions.
@@ -170,7 +166,7 @@ Regarding performance, both of them create a RegExp object. The main difference 
 - With `Regular Expression Literal`: one time during initial code parsing and compiling
 - With `RegExp()` syntax: Every time new Object gets created.
 
-According to [this](https://stackoverflow.com/a/32523333)answer from Alexander Abakumov in StackOverflow, using literal syntax may be a better option not only because of performance, but also for simplicity and readability.
+Using literal syntax may be a better option not only because of performance, but also for simplicity and readability. For more details see [this](https://stackoverflow.com/a/32523333) Stackoverflow discussion.
 
 1. It is shorter and doesn’t force you to think in terms of class-like constructors.
 2. When using the `RegExp()` constructor, you also need to escape quotes and double-escape backslashes. It makes regular expressions that are hard to read and understand by their nature even more harder.

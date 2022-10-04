@@ -4,7 +4,7 @@ You have been hired as a Regular Expression Specialist in a company that is deve
 
 It is in a very basic phase of development, hence your mission is to use Regular Expressions to improve the chatbot's ability to understand and generate natural language.
 
-## 1. Check Valid Command
+## Check Valid Command
 
 Apart from being smart, the Chatbot is also a loyal assistant.
 
@@ -23,7 +23,7 @@ isValidCommand("CHATBOT, do you have a solution for this challenge?";
 // => True
 ```
 
-## 2. Remove encrypted emojis
+## Remove encrypted emojis
 
 The Chatbot has a difficult time understanding how humans use emojis to express their emotions.
 
@@ -42,7 +42,7 @@ removeEmoji("I love playing videogames emoji3465 it's one of my hobbies");
 // => "I love playing videogames  it's one of my hobbies"
 ```
 
-## 3. Check Valid Phone Number
+## Check Valid Phone Number
 
 Considering the download of chatbot features on a mobile app, the user is expected to write a phone number during the conversation.
 
@@ -56,10 +56,10 @@ The expected format is: (+##) ###-###-###
 isValidNumber('(+34) 659-771-594');
 // => "Thanks! You can now download me to your phone."
 isValidNumber('659-771-594');
-// => "Oops, it seems like I can't reach out to 659-771-594"
+// => "Oops, it seems like I can't reach out to 6s59-771-594"
 ```
 
-## 4. Get website link
+## Get website link
 
 The Chatbot is a really curious software. Even though he can search on the internet about a particular topic, he likes to ask users about cool websites or URL’s to go find relevant information.
 
@@ -75,7 +75,7 @@ getURL('I learned a lot from exercism.com');
 // => ["exercism.com"];
 ```
 
-## 5. Greet the user
+## Greet the user
 
 For storing data from all the persons who have had a conversation with, the chatbot is able to get the Full Name from the user’s profile in this style: **“smith, john”**.
 
