@@ -45,10 +45,10 @@ availableTimes('12 December 2022 10:20 am', '18 December 2022 9:30 am');
 ## 5. Check if an appointment is now valid or not
 
 The function receives two arguments - appointment time and current time.
-If the appointment time is greater than the current time then the appointment is not valid anymore, and you should return `The appointment is not valid anymore.`
+If the appointment time is less than the current time then the appointment is not valid anymore, and you should return `The appointment is not valid anymore.`
 If not, the appointment is valid, and you should return `The appointment is valid.`
 
 ```javascript
 isValid('12 February 2022', '9 February 2022');
-// => The appointment is not valid anymore.
+// => The appointment is valid.
 ```
