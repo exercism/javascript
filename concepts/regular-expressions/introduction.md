@@ -12,7 +12,7 @@ A [Regular Expression][mdn-regular-expressions] (or Regex) is a sequence of char
 
 ## How to create Regular Expressions
 
-In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers`. 
+In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers`.
 
 We have two ways of creating a regular expression:
 
@@ -34,7 +34,7 @@ The RegExp constructor can be used for cases where the regex will change or we d
 
 ## 🏴‍☠️ Flags
 
-Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. 
+Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features.
 
 Some of the widely used are:
 
@@ -57,7 +57,7 @@ The `g` character allows us to parse all possible matches within a string. Witho
 
 The Case Insensitive flag `/i` enables us to be flexible when it comes to finding a pattern. This way it doesn't matter if what we are looking for is in `UPPERCASE` or `lowercase`.
 
-When using the `RegExp` constructor, the syntax of adding flags is different. 
+When using the `RegExp` constructor, the syntax of adding flags is different.
 
 ```javascript
 let regex = /[a-z]/gi; // literal notation

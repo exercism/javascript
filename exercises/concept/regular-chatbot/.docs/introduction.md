@@ -34,7 +34,7 @@ The RegExp constructor can be used for cases where the regex will change or we d
 
 ## 🏴‍☠️ Flags
 
-Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features. 
+Regular expressions have optional superpowers called [`flags`][mdn-flags] that allow for additional features.
 
 Some of the widely used are:
 
@@ -57,7 +57,7 @@ The `g` character allows us to parse all possible matches within a string. Witho
 
 The Case Insensitive flag `/i` enables us to be flexible when it comes to finding a pattern. This way it doesn't matter if what we are looking for is in `UPPERCASE` or `lowercase`.
 
-When using the `RegExp` constructor, the syntax of adding flags is different. 
+When using the `RegExp` constructor, the syntax of adding flags is different.
 
 ```javascript
 let regex = /[a-z]/gi; // literal notation
@@ -79,7 +79,7 @@ The [test()][mdn-regex-test]] method executes a search for a match between a reg
 const str = 'It is difficult to test if you have a virus';
 const result = /virus$/.test(str);
 
-console.log(result); 
+console.log(result);
 
 // => true
 ```
@@ -96,10 +96,10 @@ const funnyQuote =
 const regex1 = /someone/;
 const regex2 = /happy/;
 
-funnyQuote.match(regex1); 
+funnyQuote.match(regex1);
 // => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
-funnyQuote.match(regex2); 
+funnyQuote.match(regex2);
 // => null
 ```
 
@@ -111,7 +111,7 @@ const funnyQuote =
 
 const regex3 = /if/gi;
 
-funnyQuote.match(regex3); 
+funnyQuote.match(regex3);
 // => ["If", "if"];
 ```
 
