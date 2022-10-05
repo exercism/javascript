@@ -9,7 +9,7 @@ The function takes `x` as parameter and return the appointment time of `x` days 
 
 ```javascript
 createAppointment(4);
-// If current time is 2022-10-01T12:50:13.000Z then the function will return  2022-10-05T12:50:13.000Z
+// If current time is Sun Oct 05 2022 23:28:43 GMT+0600 (Bangladesh Standard Time) then the function will return  Sun Oct 09 2022 23:28:43 GMT+0600 (Bangladesh Standard Time)
 ```
 
 ## 2. Get details of an appointment
