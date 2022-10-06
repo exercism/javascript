@@ -255,6 +255,14 @@
         "concepts": ["classes"],
         "prerequisites": ["objects", "functions", "conditionals-ternary"],
         "status": "beta"
+      },
+      {
+        "slug": "appointment-time",
+        "name": "Appointment Time",
+        "uuid": "0f694053-a388-457f-89ca-f49be4560469",
+        "concepts": ["dates"],
+        "prerequisites": ["classes", "conditionals"],
+        "status": "beta"
       }
     ],
     "practice": [

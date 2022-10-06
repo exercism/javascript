@@ -8,13 +8,13 @@ import {
 
 describe('createAppointment', () => {
   test('creates appointment of 4 days later', () => {
-    expect(createAppointment(4)).toBe(
+    expect(createAppointment(4)).toEqual(
       new Date(Date.now() + 4 * 24 * 3600 * 1000)
     );
   });
 
   test('creates appointment of 124 days later', () => {
-    expect(createAppointment(124)).toBe(
+    expect(createAppointment(124)).toEqual(
       new Date(Date.now() + 124 * 24 * 3600 * 1000)
     );
   });
