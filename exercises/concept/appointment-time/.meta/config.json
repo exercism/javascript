@@ -1,9 +1,17 @@
 {
-  "authors": ["SalahuddinAhammed"],
+  "authors": [
+    "SalahuddinAhammed"
+  ],
   "files": {
-    "solution": ["appointment-time.js"],
-    "test": ["appointment-time.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "appointment-time.js"
+    ],
+    "test": [
+      "appointment-time.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
   "blurb": "Learn how to work with dates by managing appointments",
   "custom": {
