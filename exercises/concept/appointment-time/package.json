@@ -1,6 +1,7 @@
 {
   "name": "@exercism/javascript-appointment-time",
-  "author": "Salahuddin Ahammed <salahuddinahammed@yahoo.com>",
+  "description": "Exercism concept exercise on dates",
+  "author": "Salahuddin Ahammed",
   "private": true,
   "license": "MIT",
   "repository": {
