@@ -727,7 +727,7 @@
         "name": "Luhn",
         "uuid": "28872cc9-f1ef-487f-9a79-6bf7983148bf",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers", "conditionals", "array-transformations"],
         "difficulty": 4,
         "topics": ["conditionals", "loops", "integers", "strings"]
       },
