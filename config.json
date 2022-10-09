@@ -703,7 +703,13 @@
         "name": "Perfect Numbers",
         "uuid": "c6691fd2-e10d-47df-acbf-3adeac5a2f89",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "conditionals",
+          "errors",
+          "for-loops"
+        ],
         "difficulty": 3,
         "topics": ["arrays", "conditionals", "loops", "integers", "math"]
       },
