@@ -310,7 +310,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
         "practices": [],
         "prerequisites": ["strings", "array-transformations", "objects"],
@@ -395,7 +395,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "99493160-4673-402f-acda-62db5378148d",
         "practices": [],
         "prerequisites": ["arrays", "for-loops"],
@@ -608,7 +608,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "db16804b-0f63-445d-8beb-99e0f7218d66",
         "practices": [],
         "prerequisites": ["objects", "array-loops", "arrays", "strings"],
@@ -691,7 +691,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "7dfa878c-83a6-48ef-9170-b6633d51d601",
         "practices": [],
         "prerequisites": ["classes", "for-loops"],
@@ -934,7 +934,7 @@
       },
       {
         "slug": "ocr-numbers",
-        "name": "Ocr Numbers",
+        "name": "OCR Numbers",
         "uuid": "24c197ee-d492-4083-8615-629cb4b836b2",
         "practices": [],
         "prerequisites": [],
@@ -996,7 +996,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "b902c746-60d1-4645-a5bc-dafadec0ef32",
         "practices": [],
         "prerequisites": [],
@@ -1472,7 +1472,7 @@
       },
       {
         "slug": "diffie-hellman",
-        "name": "Diffie Hellman",
+        "name": "Diffie-Hellman",
         "uuid": "127eccbd-3009-4a8f-95c1-7d8aeb608550",
         "practices": [],
         "prerequisites": [],
@@ -1562,7 +1562,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "f7452f71-795b-40b6-847c-67ef4bb9db45",
         "practices": [],
         "prerequisites": [],
@@ -1617,7 +1617,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "6ac4ad5f-a64a-4646-91c5-169d53f289f9",
         "practices": [],
         "prerequisites": [],
@@ -1822,7 +1822,7 @@
       },
       {
         "slug": "rest-api",
-        "name": "Rest API",
+        "name": "REST API",
         "uuid": "75b4816d-a5d7-4840-92d6-7249c9e8beeb",
         "practices": [],
         "prerequisites": ["arrays", "classes", "array-loops", "objects"],
