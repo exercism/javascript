@@ -745,7 +745,7 @@
         "name": "Grains",
         "uuid": "d003975a-9045-4f03-9ad9-c15db584dc13",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["conditionals", "errors", "numbers", "math"],
         "difficulty": 5,
         "topics": ["loops", "integers"]
       },
