@@ -13,7 +13,7 @@
     "@babel/core": "^7.19.3",
     "@exercism/babel-preset-javascript": "^0.2.0",
     "@exercism/eslint-config-javascript": "^0.6.0",
-    "@types/jest": "^29.1.1",
+    "@types/jest": "^29.1.2",
     "@types/node": "^18.8.2",
     "babel-jest": "^29.1.2",
     "core-js": "~3.25.5",
