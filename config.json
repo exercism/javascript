@@ -754,7 +754,14 @@
         "name": "Pythagorean Triplet",
         "uuid": "394755a3-c743-4b85-b9b8-387907f4e32d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "arrays",
+          "for-loops",
+          "numbers",
+          "math",
+          "conditionals"
+        ],
         "difficulty": 5,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
