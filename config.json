@@ -770,7 +770,15 @@
         "name": "Palindrome Products",
         "uuid": "f6799d10-0210-4c73-ac08-d5cac1a00ff3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "errors",
+          "strings",
+          "objects",
+          "for-loops",
+          "arrays",
+          "conditionals"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
