@@ -867,7 +867,14 @@
         "name": "Series",
         "uuid": "5178ae53-5364-46c9-bee3-70e6e8a8c2e3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "errors",
+          "classes",
+          "conditionals",
+          "array-transformations"
+        ],
         "difficulty": 3,
         "topics": ["loops", "exception_handling", "strings", "text_formatting"]
       },
