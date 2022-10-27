@@ -916,7 +916,13 @@
         "name": "Grep",
         "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "for-loops",
+          "array-analysis",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": ["files", "searching", "text_formatting"]
       },
