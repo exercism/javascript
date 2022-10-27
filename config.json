@@ -940,7 +940,7 @@
         "name": "Spiral Matrix",
         "uuid": "c1abafcc-0d44-4fb5-afae-bff3ce2e1b39",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops", "conditionals"],
         "difficulty": 4,
         "topics": [
           "arrays",
