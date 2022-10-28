@@ -91,7 +91,7 @@ describe('updateScore', () => {
     };
 
     updateScore(scoreBoard, 'Min-seo Shin', 1999);
-    const actual = updateScore(scoreBoard, 'Jesse Johnson', 1337);
+    const actual = updateScore(scoreBoard, 'Jesse Johnson', 2674);
     expect(actual).toEqual(expected);
 
     // This checks that the same object that was passed in is returned.
