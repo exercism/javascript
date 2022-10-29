@@ -703,7 +703,13 @@
         "name": "Perfect Numbers",
         "uuid": "c6691fd2-e10d-47df-acbf-3adeac5a2f89",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "conditionals",
+          "errors",
+          "for-loops"
+        ],
         "difficulty": 3,
         "topics": ["arrays", "conditionals", "loops", "integers", "math"]
       },
@@ -721,7 +727,7 @@
         "name": "Luhn",
         "uuid": "28872cc9-f1ef-487f-9a79-6bf7983148bf",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers", "conditionals", "array-transformations"],
         "difficulty": 4,
         "topics": ["conditionals", "loops", "integers", "strings"]
       },
@@ -739,7 +745,7 @@
         "name": "Grains",
         "uuid": "d003975a-9045-4f03-9ad9-c15db584dc13",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["conditionals", "errors", "numbers", "math"],
         "difficulty": 5,
         "topics": ["loops", "integers"]
       },
@@ -748,7 +754,14 @@
         "name": "Pythagorean Triplet",
         "uuid": "394755a3-c743-4b85-b9b8-387907f4e32d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "arrays",
+          "for-loops",
+          "numbers",
+          "math",
+          "conditionals"
+        ],
         "difficulty": 5,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
@@ -757,7 +770,15 @@
         "name": "Palindrome Products",
         "uuid": "f6799d10-0210-4c73-ac08-d5cac1a00ff3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "errors",
+          "strings",
+          "objects",
+          "for-loops",
+          "arrays",
+          "conditionals"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
