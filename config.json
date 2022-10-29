@@ -824,7 +824,12 @@
         "name": "Matching Brackets",
         "uuid": "4d456646-3a9b-4393-9558-6b30e5c1039c",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "conditionals-switch",
+          "for-loops"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -862,7 +867,14 @@
         "name": "Series",
         "uuid": "5178ae53-5364-46c9-bee3-70e6e8a8c2e3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "errors",
+          "classes",
+          "conditionals",
+          "array-transformations"
+        ],
         "difficulty": 3,
         "topics": ["loops", "exception_handling", "strings", "text_formatting"]
       },
@@ -904,7 +916,13 @@
         "name": "Grep",
         "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "for-loops",
+          "array-analysis",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": ["files", "searching", "text_formatting"]
       },
@@ -922,7 +940,7 @@
         "name": "Spiral Matrix",
         "uuid": "c1abafcc-0d44-4fb5-afae-bff3ce2e1b39",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops", "conditionals"],
         "difficulty": 4,
         "topics": [
           "arrays",
