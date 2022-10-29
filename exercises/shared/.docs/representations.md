@@ -1,6 +1,6 @@
 ## JavaScript representations
 
-The [JavaScript representer][github-javascript-representer] applies the following normalizations: 
+The [JavaScript representer][github-javascript-representer] applies the following normalizations:
 
 - [All comments are removed][docs-representer-normalizations-comments]
 - [All whitespace is normalized][docs-representer-normalizations-whitespace]

@@ -16,7 +16,7 @@ The following examples are equivalent:
  */
 function hello(/* nothing*/) {
   // just return it
-  return 'hi there'
+  return 'hi there';
 }
 ```
 
@@ -24,7 +24,7 @@ function hello(/* nothing*/) {
 
 ```javascript
 function hello() {
-  return 'hi there'
+  return 'hi there';
 }
 ```
 
@@ -34,12 +34,11 @@ When the code is represented, it's _order_ is significant, but its physical loca
 This means that whitespace is normalized.
 The following examples are equivalent:
 
-
 ### Example with two-space indentation
 
 ```javascript
 function hello() {
-  return 'hello world'
+  return 'hello world';
 }
 ```
 
@@ -47,19 +46,16 @@ function hello() {
 
 ```javascript
 function hello() {
-    return 'hello world'
+  return 'hello world';
 }
 ```
 
 ### Example with interesting indentation
 
 ```javascript
-function   hello() {
-
-return 'hello world'
-
-
-    }
+function hello() {
+  return 'hello world';
+}
 ```
 
 ## Normalize identifiers
@@ -69,20 +65,20 @@ Identifiers are normalized to a placeholder value.
 ### Before
 
 ```javascript
-const MY_CONSTANT = 42
+const MY_CONSTANT = 42;
 
 function answer(multiplier, addition = 1) {
-  return MY_CONSTANT * multiplier + addition
+  return MY_CONSTANT * multiplier + addition;
 }
 ```
 
 ### After
 
 ```javascript
-const PLACEHOLDER_1 = 42
+const PLACEHOLDER_1 = 42;
 
 function PLACEHOLDER_2(PLACEHOLDER_3, PLACEHOLDER_4 = 1) {
-  return PLACEHOLDER_1 * PLACEHOLDER_3 + PLACEHOLDER_4
+  return PLACEHOLDER_1 * PLACEHOLDER_3 + PLACEHOLDER_4;
 }
 ```
 
