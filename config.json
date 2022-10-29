@@ -658,7 +658,7 @@
         "name": "Scrabble Score",
         "uuid": "11771d47-1109-4579-a62b-e0b8e9583485",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-transformations"],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "maps", "strings"]
       },
@@ -667,7 +667,7 @@
         "name": "Allergies",
         "uuid": "9d33d21c-e695-427f-9f58-dd9498d61318",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "math", "numbers", "for-loops", "arrays"],
         "difficulty": 6,
         "topics": ["arrays", "bitwise_operations", "conditionals", "loops"]
       },
@@ -676,7 +676,13 @@
         "name": "Word Count",
         "uuid": "0073ff9a-cd6a-43cf-b8bf-4d5d8117b81b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "for-loops",
+          "regular-expressions",
+          "arrays",
+          "objects"
+        ],
         "difficulty": 4,
         "topics": ["loops", "lists", "regular_expressions", "strings"]
       },
@@ -685,7 +691,7 @@
         "name": "Bank Account",
         "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "conditionals", "numbers"],
         "difficulty": 3,
         "topics": ["classes", "conditionals"]
       },
