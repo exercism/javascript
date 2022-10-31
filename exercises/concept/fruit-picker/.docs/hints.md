@@ -4,34 +4,29 @@
 
 - Callback functions are functions passed as an argument to a calling function.
 - Callback functions must meet the specification of the calling function.
-- These callbacks are all synchronous, meaning they all must return a value.
 
-## 1. Check if the grocer's service is online
 
-- Use the imported API function `checkStatus` in your function.
-- Pass a callback function to `checkStatus`. It should expect to receive a string argument.
-- Return the result from the `checkStatus` API function.
+## 1. Try to notify with a successful message
 
-## 2. See if the grocer has some fruit
+- Use the imported API function `notify` in your function.
+- Pass an object to `notify`. It should expect to receive an object with a property of `message`. Think about what the message property should be.
+- Return the result from the `notify` API function.
 
-- Use the imported API function `checkInventory` in your function.
-- Create the query _object_ to pass as an argument.
-  - Follow the template in the instructions.
-- Pass along the callback function to the `checkInventory` API function.
-- Return the result from the `checkInventory` API function.
+## 2. Try to notify with an error message
+
+- Use the imported API function `notify` in your function.
+- Pass another object to `notify`. It should expect to receive an object with a property of `message` like the previous task but with a different value. 
+- Return the result from the `notify` API function.
 
 ## 3. Create a callback to buy fruit if the inventory is available
 
-- If the `err` argument is not null, throw a new error using `err`'s message.
-  - See [Error()][mdn-error-constructor]
-- if the `err` is null, ignore it and just respond to the value of `isAvailable`
-  - This pattern is sometimes called a [`Node.js`-style callback][node-js-callback].
-- Return the action determined by `isAvailable`
+- Use the already imported `order` function. 
+- Since we are working on a wrapper think about whether we really need to return anything this time.
+- Cover both the chance of a successful outcome and a failed one by including the two callback functions. 
 
-## 4. Put it all together
+## 4. Refactor your awesome work so far into a more concise function
 
-- Reuse the functions you have already written, composing them together.
-- Return the value of the callback function.
+- Reuse the function from the previous task.
+- Try to think of a way to package variety and quantity together when they are passed to `orderFromGrocer`.
 
-[mdn-error-constructor]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error
-[node-js-callback]: https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/
+
