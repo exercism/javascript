@@ -927,7 +927,7 @@
         "name": "Transpose",
         "uuid": "9c140fb7-cc8b-411b-b613-a0e0081a9c3f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops", "strings", "conditionals"],
         "difficulty": 1,
         "topics": [
           "arrays",
