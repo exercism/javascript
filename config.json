@@ -910,7 +910,13 @@
         "name": "Largest Series Product",
         "uuid": "1f84305d-ea76-4fe2-9858-3b53576d683d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "errors",
+          "conditionals",
+          "array-transformations"
+        ],
         "difficulty": 7,
         "topics": [
           "conditionals",
