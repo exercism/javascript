@@ -37,8 +37,11 @@ On completion the `callback` function is called.
   If that happens, it is okay to `api.request` again.
 
 ```javascript
-api.request('majQa’');
-// => Promise({ resolved: undefined })
+api.request('majQa’', callback);
+// => undefined
+//
+// later: the passed callback is called with undefined
+//        because it was successful.
 ```
 
 **⚠ Warning! ⚠**
