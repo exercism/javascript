@@ -32,8 +32,7 @@ A `null` or `undefined` `String` would raise a `TypeError` if `trimEnd` were app
 
 The first half of the shout condition 
 
-```javascript
-
+```
 /[A-Z]{1}/.test(speech)
 ```
 
