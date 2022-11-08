@@ -2,12 +2,13 @@
 
 ```javascript
 export function hey (message) {
-  const speech = message.trim()
+  const speech = message.trimEnd()
+  if (speech == "")
+    return "Fine. Be that way!"
+    
   const isQuestion = speech.endsWith("?")
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
 
-  if (speech == "")
-    return "Fine. Be that way!"
   if (isShout)
     return isQuestion? "Calm down, I know what I'm doing!" : "Whoa, chill out!"
   if (isQuestion)
@@ -23,7 +24,10 @@ Note that there are no `else if` or `else` statements.
 If an `if` statement can return, then an `else if` or `else` is not needed.
 Execution will either return or will continue to the next statement anyway.
 
-The [`String`][string] method [endsWith][endswith] is used to determine if the input ends with a question mark.
+The [`String`][string] [trimEnd][trimend] method is applied to the input to eliminate any whitespace at the end of the input.
+If the string has no characters left, it returns the response for saying nothing.
+
+The `String` method [endsWith][endswith] is used to determine if the input ends with a question mark.
 
 ```exercism/caution
 Note that a `null` or `undefined` `String` would be different from a `String` of all whitespace.
@@ -54,6 +58,7 @@ if (speech == "") return "Fine. Be that way!"
 ```
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+[trimend]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 [endswith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
 [regex]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 [touppercase]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
