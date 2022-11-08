@@ -5,6 +5,7 @@ export function hey (message) {
   const speech = message.trim()
   const isQuestion = speech.endsWith("?")
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
+
   if (speech == "")
     return "Fine. Be that way!"
   if (isShout)
@@ -43,6 +44,14 @@ The uppercasing is done by using the `String` method [toUpperCase][touppercase].
 
 If `isShout ` is `true`, a [ternary operator][ternary] is used to return the response for whether `isQuestion` is also `true`,
 or only `isShout` is true.
+
+## Shortening
+
+When the body of an `if` statement is a single line, both the test expression and the body could be put on the same line, like so
+
+```csharp
+if (speech == "") return "Fine. Be that way!"
+```
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [endswith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
