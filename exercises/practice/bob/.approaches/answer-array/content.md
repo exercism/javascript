@@ -17,7 +17,7 @@ export function hey (message) {
 In this approach you define an array that contains Bob’s answers, and each condition is given a score.
 The correct answer is selected from the array by using the score as the array index.
 
-The `String` [trimEnd][trimend] method is applied to the input to eliminate any whitespace at the end of the input.
+The [`String`][string] [trimEnd][trimend] method is applied to the input to eliminate any whitespace at the end of the input.
 If the string has no characters left, it returns the response for saying nothing.
 
 ```exercism/caution
@@ -35,6 +35,8 @@ The first half of the shout condition
 is constructed from a [regular expression pattern][regex] to ensure there is at least one uppercase letter character in the `String`.
 This is because the second half of the condition tests that the uppercased input is the same as the input.
 If the input were only `"123"` it would equal itself uppercased, but without letters it would not be a shout.
+
+The uppercasing is done by using the `String` method [toUpperCase][touppercase].
 
 The conditions of being a question and being a shout are assigned scores through the use of the [ternary operator][ternary].
 For example, giving a question a score of `1` would use an index of `1` to get the element from the answers array, which is `"Sure."`.
@@ -55,6 +57,8 @@ When the body of an `if` statement is a single line, both the test expression an
 if (speech == "") return "Fine. Be that way!"
 ```
 
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [trimend]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 [regex]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+[touppercase]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 [ternary]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
