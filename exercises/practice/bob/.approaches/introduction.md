@@ -52,6 +52,7 @@ export function hey (message) {
   const speech = message.trim()
   const isQuestion = speech.endsWith("?")
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
+  
   switch (true) {
     case speech == "":
       return "Fine. Be that way!"
