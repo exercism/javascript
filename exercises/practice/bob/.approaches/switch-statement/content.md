@@ -1,23 +1,22 @@
 # `switch` statement
 
 ```javascript
-export function hey (message) {
-  const speech = message.trim()
-  if (speech == "")
-    return "Fine. Be that way!"
-  
-  const isQuestion = speech.endsWith("?")
-  const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
-  
+export function hey(message) {
+  const speech = message.trim();
+  if (speech == "") return "Fine. Be that way!";
+
+  const isQuestion = speech.endsWith("?");
+  const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
+
   switch (true) {
     case isQuestion && isShout:
-      return "Calm down, I know what I'm doing!"
+      return "Calm down, I know what I'm doing!";
     case isShout:
-      return "Whoa, chill out!"
+      return "Whoa, chill out!";
     case isQuestion:
-      return "Sure."
+      return "Sure.";
     default:
-      return "Whatever."
+      return "Whatever.";
   }
 }
 ```
@@ -51,7 +50,7 @@ If neither `isQuestion` and `isShout` are `true`, the `default` arm of the `swit
 
 ## Shortening
 
-When the body of an `if` statement is a single line, both the test expression and the body could be put on the same line, like so
+When the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
 if (input == "") return "Fine. Be that way!";
