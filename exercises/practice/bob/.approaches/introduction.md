@@ -30,12 +30,13 @@ Regardless of the approach used, some things you could look out for include
 
 ```javascript
 export function hey (message) {
-  const speech = message.trim()
+  const speech = message.trimEnd()
+  if (speech == "")
+    return "Fine. Be that way!"
+    
   const isQuestion = speech.endsWith("?")
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
 
-  if (speech == "")
-    return "Fine. Be that way!"
   if (isShout)
     return isQuestion? "Calm down, I know what I'm doing!" : "Whoa, chill out!"
   if (isQuestion)
@@ -51,12 +52,13 @@ For more information, check the [`if` statements approach][approach-if].
 ```javascript
 export function hey (message) {
   const speech = message.trim()
+  if (speech == "")
+    return "Fine. Be that way!"
+
   const isQuestion = speech.endsWith("?")
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
   
   switch (true) {
-    case speech == "":
-      return "Fine. Be that way!"
     case isQuestion && isShout:
       return "Calm down, I know what I'm doing!"
     case isShout:
