@@ -53,7 +53,7 @@ or only `isShout` is true.
 
 When the body of an `if` statement is a single line, both the test expression and the body could be put on the same line, like so
 
-```csharp
+```javascript
 if (speech == "") return "Fine. Be that way!"
 ```
 
