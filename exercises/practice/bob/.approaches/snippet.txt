@@ -1,0 +1,7 @@
+if (speech == "")
+  return "Fine. Be that way!"
+if (isShout)
+  return isQuestion? "Calm down, I know what I'm doing!" : "Whoa, chill out!"
+if (isQuestion)
+  return "Sure."
+return "Whatever."
