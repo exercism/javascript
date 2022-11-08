@@ -1,19 +1,19 @@
 # `if` statements
 
 ```javascript
-export function hey (message) {
-  const speech = message.trimEnd()
-  if (speech == "")
-    return "Fine. Be that way!"
-    
-  const isQuestion = speech.endsWith("?")
-  const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase()
+export function hey(message) {
+  const speech = message.trimEnd();
+  if (speech == "") return "Fine. Be that way!";
+
+  const isQuestion = speech.endsWith("?");
+  const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
 
   if (isShout)
-    return isQuestion? "Calm down, I know what I'm doing!" : "Whoa, chill out!"
-  if (isQuestion)
-    return "Sure."
-  return "Whatever."
+    return isQuestion
+      ? "Calm down, I know what I'm doing!"
+      : "Whoa, chill out!";
+  if (isQuestion) return "Sure.";
+  return "Whatever.";
 }
 ```
 
