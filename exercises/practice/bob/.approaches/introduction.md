@@ -29,7 +29,6 @@ Regardless of the approach used, some things you could look out for include
 
 
 ```javascript
-
 export function hey (message) {
   const speech = message.trim()
   const isQuestion = speech.endsWith("?")
