@@ -3,17 +3,17 @@
 ```javascript
 export function hey(message) {
   const speech = message.trimEnd();
-  if (speech == "") return "Fine. Be that way!";
+  if (speech == '') return 'Fine. Be that way!';
 
-  const isQuestion = speech.endsWith("?");
+  const isQuestion = speech.endsWith('?');
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
 
   if (isShout)
     return isQuestion
       ? "Calm down, I know what I'm doing!"
-      : "Whoa, chill out!";
-  if (isQuestion) return "Sure.";
-  return "Whatever.";
+      : 'Whoa, chill out!';
+  if (isQuestion) return 'Sure.';
+  return 'Whatever.';
 }
 ```
 
@@ -37,7 +37,7 @@ A `null` or `undefined` `String` would raise a `TypeError` if `trimEnd` were app
 The first half of the shout condition
 
 ```javascript
-/[A-Z]{1}/.test(speech)
+/[A-Z]{1}/.test(speech);
 ```
 
 is constructed from a [regular expression pattern][regex] to ensure there is at least one uppercase letter character in the `String`.
@@ -54,7 +54,7 @@ or only `isShout` is true.
 When the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
-if (speech == "") return "Fine. Be that way!"
+if (speech == '') return 'Fine. Be that way!';
 ```
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String

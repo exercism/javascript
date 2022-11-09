@@ -3,20 +3,20 @@
 ```javascript
 export function hey(message) {
   const speech = message.trim();
-  if (speech == "") return "Fine. Be that way!";
+  if (speech == '') return 'Fine. Be that way!';
 
-  const isQuestion = speech.endsWith("?");
+  const isQuestion = speech.endsWith('?');
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
 
   switch (true) {
     case isQuestion && isShout:
       return "Calm down, I know what I'm doing!";
     case isShout:
-      return "Whoa, chill out!";
+      return 'Whoa, chill out!';
     case isQuestion:
-      return "Sure.";
+      return 'Sure.';
     default:
-      return "Whatever.";
+      return 'Whatever.';
   }
 }
 ```
@@ -32,11 +32,10 @@ Note that a `null` or `undefined` `String` would be different from a `String` of
 A `null` or `undefined` `String` would raise a `TypeError` if `trimEnd` were applied to it.
 ```
 
-The first half of the shout condition 
+The first half of the shout condition
 
 ```javascript
-
-/[A-Z]{1}/.test(speech)
+/[A-Z]{1}/.test(speech);
 ```
 
 is constructed from a [regular expression pattern][regex] to ensure there is at least one uppercase letter character in the `String`.
@@ -53,7 +52,7 @@ If neither `isQuestion` and `isShout` are `true`, the `default` arm of the `swit
 When the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
-if (input == "") return "Fine. Be that way!";
+if (input == '') return 'Fine. Be that way!';
 ```
 
 [switch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch

@@ -2,17 +2,17 @@
 
 ```javascript
 const answers = [
-  "Whatever.",
-  "Sure.",
-  "Whoa, chill out!",
+  'Whatever.',
+  'Sure.',
+  'Whoa, chill out!',
   "Calm down, I know what I'm doing!",
 ];
 
 export function hey(message) {
   const speech = message.trimEnd();
-  if (speech == "") return "Fine. Be that way!";
+  if (speech == '') return 'Fine. Be that way!';
 
-  const isQuestion = speech.endsWith("?") ? 1 : 0;
+  const isQuestion = speech.endsWith('?') ? 1 : 0;
   const isShout =
     /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase() ? 2 : 0;
   return answers[isQuestion + isShout];
@@ -30,7 +30,7 @@ Note that a `null` or `undefined` `String` would be different from a `String` of
 A `null` or `undefined` `String` would raise a `TypeError` if `trimEnd` were applied to it.
 ```
 
-The first half of the shout condition 
+The first half of the shout condition
 
 ```
 /[A-Z]{1}/.test(speech)
@@ -52,13 +52,12 @@ For example, giving a question a score of `1` would use an index of `1` to get t
 | `true`  | `false`    | 2 + 0 = 2 | `"Whoa, chill out!"`                  |
 | `true`  | `true`     | 2 + 1 = 3 | `"Calm down, I know what I'm doing!"` |
 
-
 ## Shortening
 
 When the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
-if (speech == "") return "Fine. Be that way!"
+if (speech == '') return 'Fine. Be that way!';
 ```
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
