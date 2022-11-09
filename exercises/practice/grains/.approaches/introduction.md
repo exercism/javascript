@@ -22,7 +22,7 @@ You can see that the exponent, or power, that `2` is raised by is always one les
 
 You can use the `bigint` type and [BigInt][bigint] global object to support numbers above [`NUMBER.MAX_SAFE_INTEGER`][max-safe-integer].
 
-## Approach: exponentiation
+## Approach: Exponentiation
 
 ```javascript
 export function square(num) {
