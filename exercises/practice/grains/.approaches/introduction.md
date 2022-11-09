@@ -13,12 +13,12 @@ The second square has two grains, which is `2` to the power of `1`.
 The third square has four grains, which is `2` to the power of `2`.
 You can see that the exponent, or power, that `2` is raised by is always one less than the square number.
 
-| Square  | Power      | Value                   |
-| ------- | ---------- | ----------------------- |
-|       1 |          0 | 2 to the power of 0 = 1 |
-|       2 |          1 | 2 to the power of 1 = 2 |
-|       3 |          2 | 2 to the power of 2 = 4 |
-|       4 |          3 | 2 to the power of 4 = 8 |
+| Square | Power | Value                   |
+| ------ | ----- | ----------------------- |
+| 1      | 0     | 2 to the power of 0 = 1 |
+| 2      | 1     | 2 to the power of 1 = 2 |
+| 3      | 2     | 2 to the power of 2 = 4 |
+| 4      | 3     | 2 to the power of 4 = 8 |
 
 You can use the `bigint` type and [BigInt][bigint] global object to support numbers above [`NUMBER.MAX_SAFE_INTEGER`][max-safe-integer].
 
@@ -27,7 +27,7 @@ You can use the `bigint` type and [BigInt][bigint] global object to support numb
 ```javascript
 export function square(num) {
   if (num < 1 || num > 64) {
-    throw new Error("square must be between 1 and 64");
+    throw new Error('square must be between 1 and 64');
   }
   return 2n ** BigInt(num - 1);
 }
@@ -44,7 +44,7 @@ For more information, check the [exponentiation approach][approach-exponentiatio
 ```javascript
 export function square(num) {
   if (num < 1 || num > 64) {
-    throw "square must be between 1 and 64";
+    throw 'square must be between 1 and 64';
   }
   return 1n << (BigInt(num) - 1n);
 }

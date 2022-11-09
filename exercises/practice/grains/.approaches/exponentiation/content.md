@@ -3,7 +3,7 @@
 ```javascript
 export function square(num) {
   if (num < 1 || num > 64) {
-    throw new Error("square must be between 1 and 64");
+    throw new Error('square must be between 1 and 64');
   }
   return 2n ** BigInt(num - 1);
 }
