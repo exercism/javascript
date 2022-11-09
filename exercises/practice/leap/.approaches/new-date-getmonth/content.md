@@ -1,4 +1,4 @@
-# `new `Date` `getMonth`
+# `new Date` `getMonth`
 
 ```javascript
 export function isLeap(year) {
@@ -6,13 +6,16 @@ export function isLeap(year) {
 }
 ```
 
+```exercism/caution
 This approach may be considered a "cheat" for this exercise.
+```
+
 By creating a  `new` [`Date`][date] from February 29th for the year, you can see if the month is still February.
 If it is, then the year is a leap year.
-This is done by using the [getMonth][getmonth] method of the `Date`.
+This is checked by using the [getMonth][getmonth] method of the `Date` object.
 
 ```exercism/note
-Note that the vaue returnd from the `getMonth` method is zero-based, meaning that February is `1`, not `2`.
+Note that the value returned from the `getMonth` method is zero-based, meaning that February is `1`, not `2`.
 ```
 
 ## Shortening
@@ -27,3 +30,4 @@ Notice that `return` and the curly braces are not needed.
 
 [date]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 [getmonth]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
+[arrow-function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
