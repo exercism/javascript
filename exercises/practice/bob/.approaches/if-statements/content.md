@@ -20,9 +20,11 @@ export function hey(message) {
 In this approach you have a series of `if` statements using the private methods to evaluate the conditions.
 As soon as the right condition is found, the correct response is returned.
 
+```exercism/note
 Note that there are no `else if` or `else` statements.
 If an `if` statement can return, then an `else if` or `else` is not needed.
 Execution will either return or will continue to the next statement anyway.
+```
 
 The [`String`][string] [trimEnd][trimend] method is applied to the input to eliminate any whitespace at the end of the input.
 If the string has no characters left, it returns the response for saying nothing.
