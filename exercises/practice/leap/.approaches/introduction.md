@@ -56,11 +56,10 @@ Besides the aforementioned, idiomatic approaches, you could also approach the ex
 Create a new `Date` from February 29th for the year and see if the month is still February.
 For more information, see the [`new Date` `getMonth` approach][approach-new-date-getmonth].
 
-
 ## Which approach to use?
 
 - The chain of boolean expressions is most efficient, as it proceeds from the most likely to least likely conditions.
-It has a maximum of three checks.
+  It has a maximum of three checks.
 - The ternary operator has a maximum of only two checks, but it starts from a less likely condition.
 - The `switch` statement is more verbose and may be considered less readable.
 - Using a new `Date` with `getMonth` may be considered a "cheat" for the exercise.

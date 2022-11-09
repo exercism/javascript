@@ -10,7 +10,7 @@ export function isLeap(year) {
 This approach may be considered a "cheat" for this exercise.
 ```
 
-By creating a  `new` [`Date`][date] from February 29th for the year, you can see if the month is still February.
+By creating a `new` [`Date`][date] from February 29th for the year, you can see if the month is still February.
 If it is, then the year is a leap year.
 This is checked by using the [getMonth][getmonth] method of the `Date` object.
 
