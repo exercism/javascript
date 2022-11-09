@@ -49,7 +49,7 @@ If neither `isQuestion` and `isShout` are `true`, the `default` arm of the `swit
 
 ## Shortening
 
-When the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
+Notice that when the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
 if (input == '') return 'Fine. Be that way!';
