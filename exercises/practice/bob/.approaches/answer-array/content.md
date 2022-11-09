@@ -54,7 +54,7 @@ For example, giving a question a score of `1` would use an index of `1` to get t
 
 ## Shortening
 
-When the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
+Notice that when the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
 if (speech == '') return 'Fine. Be that way!';
