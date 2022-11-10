@@ -20,7 +20,7 @@ export function isPangram(input) {
 }
 ```
 
-For more information, check the [`every` with `includes`][approach-every-includes].
+For more information, check the [`every` with `includes` approach][approach-every-includes].
 
 ## Approach: `Set` with `size`
 
