@@ -1,0 +1,28 @@
+{
+  "introduction": {
+    "authors": ["bobahop"]
+  },
+  "approaches": [
+    {
+      "uuid": "ea821693-46a5-4f50-8f73-acd919346bdd",
+      "slug": "regex-search-dupe",
+      "title": "regex search for dupe",
+      "blurb": "Use regex to search for a dupicated letter.",
+      "authors": ["bobahop"]
+    },
+    {
+      "uuid": "fbdf0f92-77d0-4b8b-be96-372ac7a4911b",
+      "slug": "filter-set",
+      "title": "filter with Set",
+      "blurb": "Use filter to populate a Set.",
+      "authors": ["bobahop"]
+    },
+    {
+      "uuid": "1748fd8c-d72e-4cf5-a92d-dd63d64a83ec",
+      "slug": "bitfield",
+      "title": "Bit field",
+      "blurb": "Use a bit field to keep track of used letters.",
+      "authors": ["bobahop"]
+    }
+  ]
+}
