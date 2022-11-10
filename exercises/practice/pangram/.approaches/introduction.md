@@ -2,7 +2,7 @@
 
 There are various idomatic approaches to Pangram.
 You can use the `every` method with the `includes` method.
-Or you can use the `Set` object with the `size` method.
+Or you can use the `Set` object with the `size` property.
 
 ## General guidance
 
