@@ -45,7 +45,7 @@ For more information, check the [Bit field approach][approach-bitfield].
 
 Testing `"the _1_ quick brown fox jumps over the _2_ lazy dogs"` on [JSBench.me][jsbench-me],
 - the `every` with `includes` approach benched fastest.
-- Although the bit field approach is often faster in other languages, it was about 50% slower.
+- Although the bit field approach is often faster in other languages, it was about 45% slower.
 - `Set` with `size` was about 75% slower.
 
 [approach-every-includes]: https://exercism.org/tracks/csharp/exercises/pangram/approaches/every-includes
