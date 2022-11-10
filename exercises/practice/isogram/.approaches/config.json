@@ -7,7 +7,7 @@
       "uuid": "ea821693-46a5-4f50-8f73-acd919346bdd",
       "slug": "regex-search-dupe",
       "title": "regex search for dupe",
-      "blurb": "Use regex to search for a dupicated letter.",
+      "blurb": "Use regex to match a duplicated letter.",
       "authors": ["bobahop"]
     },
     {
