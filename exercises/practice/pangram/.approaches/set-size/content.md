@@ -18,7 +18,8 @@ This approach creates a [`Set`][set] of the unique letters in the `input` and te
 When the body of a function is a single expression, the function can be implemented as an [arrow function][arrow-function], like so
 
 ```javascript
-export const isPangram = (input) => new Set(input.toLowerCase().match(/[a-z]/g)).size === 26;
+export const isPangram = (input) =>
+  new Set(input.toLowerCase().match(/[a-z]/g)).size === 26;
 ```
 
 Notice that `return` and the curly braces are not needed.
