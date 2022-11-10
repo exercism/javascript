@@ -3,7 +3,7 @@
 ```javascript
 export function isPangram(input) {
   const inputLowered = input.toLowerCase();
-  return [..."abcdefghijklmnopqrstuvwxyz"].every((c) =>
+  return [...'abcdefghijklmnopqrstuvwxyz'].every((c) =>
     inputLowered.includes(c)
   );
 }
@@ -12,7 +12,7 @@ export function isPangram(input) {
 - This begins by lowercasing the input by using the [`String`][string] [`toLowerCase`][tolower] method.
 - It uses [spread syntax][spread-syntax] to make an [Array][array] out of a `string` of the alphabet.
 - It then checks if all letters in the alphabet are contained in the input,
-using the `Array` method [`every`][every] with the `String` method [`includes`][includes].
+  using the `Array` method [`every`][every] with the `String` method [`includes`][includes].
 
 If all letters of the alphabet are in the `input`, then the function returns `true`.
 

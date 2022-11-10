@@ -14,7 +14,7 @@ The occurrence of either the letter `a` or the letter `A` would count as the sam
 ```javascript
 export function isPangram(input) {
   const inputLowered = input.toLowerCase();
-  return [..."abcdefghijklmnopqrstuvwxyz"].every((c) =>
+  return [...'abcdefghijklmnopqrstuvwxyz'].every((c) =>
     inputLowered.includes(c)
   );
 }
@@ -44,6 +44,7 @@ For more information, check the [Bit field approach][approach-bitfield].
 ## Which approach to use?
 
 Testing `"the _1_ quick brown fox jumps over the _2_ lazy dogs"` on [JSBench.me][jsbench-me]:
+
 - The `every` with `includes` approach benched fastest.
 - Although the bit field approach is often faster in other languages, it was about 45% slower.
 - `Set` with `size` was about 75% slower.
