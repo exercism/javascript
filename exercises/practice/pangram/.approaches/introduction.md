@@ -48,7 +48,7 @@ Testing `"the _1_ quick brown fox jumps over the _2_ lazy dogs"` on [JSBench.me]
 - Although the bit field approach is often faster in other languages, it was about 45% slower.
 - `Set` with `size` was about 75% slower.
 
-[approach-every-includes]: https://exercism.org/tracks/csharp/exercises/pangram/approaches/every-includes
-[approach-set-size]: https://exercism.org/tracks/csharp/exercises/pangram/approaches/set-size
-[approach-bitfield]: https://exercism.org/tracks/csharp/exercises/pangram/approaches/bitfield
+[approach-every-includes]: https://exercism.org/tracks/javascript/exercises/pangram/approaches/every-includes
+[approach-set-size]: https://exercism.org/tracks/javascript/exercises/pangram/approaches/set-size
+[approach-bitfield]: https://exercism.org/tracks/javascript/exercises/pangram/approaches/bitfield
 [jsbench-me]: https://jsbench.me/
