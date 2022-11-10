@@ -60,7 +60,7 @@ For more information, check the [Bit-shifting approach][approach-bit-shifting].
 
 Exponentiation may be considered the most readable solution.
 
-Bit-shifting _may_ be a bit more performant, but may be considered less readable.
+Bit-shifting may be considered less readable, and is about 30% slower than exponentiation.
 
 [exponentiation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation
 [bigint]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
