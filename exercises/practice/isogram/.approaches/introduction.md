@@ -24,7 +24,7 @@ For more information, check the [regex approach][approach-regex].
 ## Approach: `filter` with `Set`
 
 ```javascript
-export function isIsogram(word) {
+export function isIsogram(string) {
   let word = [...string.toLowerCase()].filter(
     (letter) => letter >= "a" && letter <= "z"
   );
@@ -43,10 +43,38 @@ Besides the aforementioned, idiomatic approaches, you could also approach the ex
 Another approach can use a bit field to keep track of used letters.
 For more information, check the [Bit field approach][approach-bitfield].
 
+Stick the code here for now
+
+```javascript
+const A_LCASE = 97;
+const A_UCASE = 65;
+
+export function isIsogram(word) {
+  let letter_flags = 0;
+  for (const letter of [...word]) {
+    if (letter >= "a" && letter <= "z") {
+      if ((letter_flags & (1 << (letter.charCodeAt(0) - A_LCASE))) != 0)
+        return false;
+      else letter_flags |= 1 << (letter.charCodeAt(0) - A_LCASE);
+    } else if (letter >= "A" && letter <= "Z") {
+      if ((letter_flags & (1 << (letter.charCodeAt(0) - A_UCASE))) != 0)
+        return false;
+      else letter_flags |= 1 << (letter.charCodeAt(0) - A_UCASE);
+    }
+  }
+  return true;
+}
+```
+
 ## Which approach to use?
 
-To be determined...
+Testing `"thumbscrew-Jappingly"` on [JSBench.me][jsbench-me]:
+
+- The bit field approach was fastest.
+- The regular expression to match a duplicated letter approach was about 55% slower.
+- The `filter` with `Set` approach was about 66% slower.
 
 [approach-regex]: https://exercism.org/tracks/javascript/exercises/isogram/approaches/regex-match-dupe
 [approach-filter-set]: https://exercism.org/tracks/javascript/exercises/isogram/approaches/filter-set
 [approach-bitfield]: https://exercism.org/tracks/javascript/exercises/isogram/approaches/bitfield
+[jsbench-me]: https://jsbench.me/
