@@ -5,8 +5,8 @@
   "approaches": [
     {
       "uuid": "ea821693-46a5-4f50-8f73-acd919346bdd",
-      "slug": "regex-search-dupe",
-      "title": "regex search for dupe",
+      "slug": "regex-match-dupe",
+      "title": "regex match dupe",
       "blurb": "Use regex to match a duplicated letter.",
       "authors": ["bobahop"]
     },
