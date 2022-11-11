@@ -12,7 +12,7 @@ The occurrence of the letter `a` and the letter `A` count as a repeated letter, 
 
 ## Approach: regular expression to match a duplicated letter
 
-```javaascript
+```javascript
 export function isIsogram(word) {
   return !/([a-z]).*?\1/i.test(word);
 }
