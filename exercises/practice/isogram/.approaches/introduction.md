@@ -14,7 +14,7 @@ The occurrence of the letter `a` and the letter `A` count as a repeated letter, 
 
 ```javaascript
 export function isIsogram(word) {
-  return !/(\w).*?\1/i.test(word);
+  return !/([a-z]).*?\1/i.test(word);
 }
 ```
 
