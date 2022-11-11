@@ -1,6 +1,8 @@
 # Instructions
 
-Your friend is a train driver and has to drive cargo trains between cities. Although your friend isn't amazing with handling the computers and would like some help with it. Your friend would like your help organizing the train and correcting the mistakes in the data.
+Your friend is a train driver and has to drive cargo trains between cities.
+Although your friend isn't amazing with handling the computers and would like some help with it.
+Your friend would like your help organizing the train and correcting the mistakes in the data.
 
 
 ```exercism/note
@@ -13,7 +15,8 @@ Your friend has been keeping track of how much each wagon weighs. Although they 
 
 ```exercism/note
 
-Implement a function `getListOfWagons` that accepts an unknown amount of whole numbers that contains the weight of each wagon. It should return an array of all the wagon weights.
+Implement a function `getListOfWagons` that accepts an unknown amount of whole numbers that contains the weight of each wagon.
+It should return an array of all the wagon weights.
 
 ```
 
@@ -24,7 +27,8 @@ getListOfWagons(5, 7, 12, 3, 14, 8, 3);
 
 ## 2. Move the first two elements to the end of the array
 
-Now that you got a general feel for handling your friend's data. Your friend has noticed that the first two days' values are not in the correct place. Your friend would like you to move the first two days' value to the end of the array.
+Now that you got a general feel for handling your friend's data. Your friend has noticed that the first two days' values are not in the correct place. 
+Your friend would like you to move the first two days' value to the end of the array.
 
 ```exercism/note
 
