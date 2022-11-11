@@ -1,7 +1,7 @@
 # Introduction
 
 There are various idiomatic ways to solve Isogram.
-You can use a regular expression pattern to match a duplicated letter. 
+You can use a regular expression pattern to match a duplicated letter.
 Or you could use the `filter` method to populate a `Set` and compare the `size` of the `Set` with the `length` of the original phrase.
 
 ## General guidance
@@ -20,13 +20,12 @@ export function isIsogram(word) {
 
 For more information, check the [regex approach][approach-regex].
 
-
 ## Approach: `filter` with `Set`
 
 ```javascript
 export function isIsogram(string) {
   let word = [...string.toLowerCase()].filter(
-    (letter) => letter >= "a" && letter <= "z"
+    (letter) => letter >= 'a' && letter <= 'z'
   );
   return new Set(word).size == word.length;
 }
@@ -52,11 +51,11 @@ const A_UCASE = 65;
 export function isIsogram(word) {
   let letter_flags = 0;
   for (const letter of [...word]) {
-    if (letter >= "a" && letter <= "z") {
+    if (letter >= 'a' && letter <= 'z') {
       if ((letter_flags & (1 << (letter.charCodeAt(0) - A_LCASE))) != 0)
         return false;
       else letter_flags |= 1 << (letter.charCodeAt(0) - A_LCASE);
-    } else if (letter >= "A" && letter <= "Z") {
+    } else if (letter >= 'A' && letter <= 'Z') {
       if ((letter_flags & (1 << (letter.charCodeAt(0) - A_UCASE))) != 0)
         return false;
       else letter_flags |= 1 << (letter.charCodeAt(0) - A_UCASE);

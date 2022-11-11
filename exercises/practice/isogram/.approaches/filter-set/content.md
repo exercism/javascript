@@ -3,7 +3,7 @@
 ```javascript
 export function isIsogram(string) {
   let word = [...string.toLowerCase()].filter(
-    (letter) => letter >= "a" && letter <= "z"
+    (letter) => letter >= 'a' && letter <= 'z'
   );
   return new Set(word).size == word.length;
 }
@@ -15,7 +15,7 @@ With this approach you will instantiate a [`Set`][set] of the used letters and c
 - The [`filter`][filter] method is then called on the `Array` to filter out any character that is not `a`-`z`.
 - The letters that survive the filter are assigned to `word`.
 - A `Set` is initialized from the letters in `word`.
-The `size` of unique letters is compared with the `length` of the filtered word `length`.
+  The `size` of unique letters is compared with the `length` of the filtered word `length`.
 
 If the number of unique letters in the `Set` of used letters is the same as the number of filtered letters,
 then the function returns true.

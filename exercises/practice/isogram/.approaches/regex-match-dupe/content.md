@@ -8,9 +8,10 @@ export function isIsogram(word) {
 
 - This solution uses a [regular expression][regex] (also known as "regex') [`test`][test] method to see if there is a duplicated letter.
 - The `[a-z]` [character class][char-class] looks for any `a`-`z` letter.
--  The parentheses "capture" the letter and remember it in a [capturing group][group].
+- The parentheses "capture" the letter and remember it in a [capturing group][group].
 
-In the next part of the pattern `.*?`: 
+In the next part of the pattern `.*?`:
+
 - `.` looks for another character which is not a line terminator.
 - `*` looks for zero or more of those characters.
 - `?` looks for as few of those characters as possible, _until_
