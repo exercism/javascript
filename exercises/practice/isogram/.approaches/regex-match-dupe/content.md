@@ -1,6 +1,6 @@
 # Regular expression to match a duplicate letter
 
-```javaascript
+```javascript
 export function isIsogram(word) {
   return !/([a-z]).*?\1/i.test(word);
 }
