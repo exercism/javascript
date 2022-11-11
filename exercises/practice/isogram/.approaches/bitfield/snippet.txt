@@ -1,0 +1,8 @@
+for (const letter of [...word]) {
+  if (letter >= "a" && letter <= "z") {
+    if ((letter_flags & (1 << (letter.charCodeAt(0) - A_LCASE))) != 0)
+      return false;
+    else letter_flags |= 1 << (letter.charCodeAt(0) - A_LCASE);
+  }
+  // code snipped
+}
