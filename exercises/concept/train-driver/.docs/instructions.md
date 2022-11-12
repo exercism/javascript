@@ -12,7 +12,7 @@ To practice, use the rest or spread operator to solve each of the tasks below.
 
 Your friend has been keeping track of each wagon identifier. Although they are not sure how many wagons and would like the data to be returned as an array.
 
-Implement a function `getListOfWagons` that accepts an unknown amount of positive integer that contains the id of each wagon.
+Implement a function `getListOfWagons` that accepts an unknown amount of positive integers that contains the id of each wagon.
 It should return an array of all the wagon ids.
 
 ```javascript
