@@ -80,7 +80,7 @@ Your friend has noticed that they don't need the arrival time in the routing inf
 Therefore your friend would like you to separate the arrival time from the routing information.
 
 Implement a function `separateArrivalTime` that accepts an object with the routing information.
-The function should return two objects.
+The function should return an array there the first elment of the arrival time and the second element is an object with the routing information.
 
 ```javascript
 routeInformation= {
@@ -90,5 +90,5 @@ routeInformation= {
   timeOfArrival: "10:10"
 };
 separateTimeOfArrival(routeInformation);
-// => {timeOfArrival: "10:10"}, {from: "Berlin", to: "Hamburg", length: "100"}
+// => ["10:10", {from: "Berlin", to: "Hamburg", length: "100"}]
 ```
