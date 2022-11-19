@@ -27,7 +27,6 @@ This solution uses the [ASCII][ascii] value of the letter to set the correspondi
 Some [const][const]ants are defined for readability in the function.
 The ASCII value for `a` is `97`.
 The ASCII value for `A` is `65`.
-The value for all of the rightmost 26 bits being set is `67108863`.
 
 - [Spread syntax][spread-syntax] is used to make an [`Array`][array] of the characters in the `word`.
 - The `string` loops through its characters and looks for a character being `a` through `z` or `A` through `Z`.
