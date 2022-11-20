@@ -49,7 +49,7 @@ The wagon IDs of the second `array` should be added into the first `array` direc
 ```javascript
 eachWagonsWieght = [1, 5, 20, 7, 4, 8];
 missingWagons = [3, 17, 6, 15];
-CorrectListOfWagons(eachWagonsWieght, missingWagons);
+correctListOfWagons(eachWagonsWieght, missingWagons);
 // => [1, 3, 17, 6, 15, 5, 20, 7, 4, 8]
 ```
 
