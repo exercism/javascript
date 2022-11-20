@@ -31,8 +31,8 @@ Implement a function `fixListOfWagons` that accepts an array of the id of each w
 It `return` an `array` where the 2 first elements repositioned to the end of the `array`.
 
 ```javascript
-eachWagonsId = [2, 5, 1, 7, 4, 12, 6, 3, 13];
-fixListOfWagons(eachWagonsId);
+eachWagonsID = [2, 5, 1, 7, 4, 12, 6, 3, 13];
+fixListOfWagons(eachWagonsID);
 // => [1, 7, 4,  12, 6, 3, 13, 2, 5]
 ```
 
@@ -47,9 +47,9 @@ Given this new information, write a function called `CorrectListOfWagons` that t
 The wagon IDs of the second `array` should be added into the first `array` directly after the locomotive (ID 1).
 
 ```javascript
-eachWagonsWieght = [1, 5, 20, 7, 4, 8];
+eachWagonsID = [1, 5, 20, 7, 4, 8];
 missingWagons = [3, 17, 6, 15];
-correctListOfWagons(eachWagonsId, missingWagons);
+correctListOfWagons(eachWagonsID, missingWagons);
 // => [1, 3, 17, 6, 15, 5, 20, 7, 4, 8]
 ```
 
