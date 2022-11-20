@@ -22,7 +22,7 @@
  */
 export function fixListOfWagons(eachWagonsID) {
   const [first, second, ...rest] = eachWagonsID;
-  return [1, ...rest, first, second];
+  return [...rest, first, second];
 }
 
 /**
