@@ -31,8 +31,8 @@ Implement a function `fixListOfWagons` that accepts an array of the id of each w
 It `return` an `array` where the 2 first elements repositioned to the end of the `array`.
 
 ```javascript
-eachWagonsWieght = [2, 5, 1, 7, 4, 12, 6, 3, 13];
-fixListOfWagons(eachWagonsWieght);
+eachWagonsId = [2, 5, 1, 7, 4, 12, 6, 3, 13];
+fixListOfWagons(eachWagonsId);
 // => [1, 7, 4,  12, 6, 3, 13, 2, 5]
 ```
 
@@ -49,7 +49,7 @@ The wagon IDs of the second `array` should be added into the first `array` direc
 ```javascript
 eachWagonsWieght = [1, 5, 20, 7, 4, 8];
 missingWagons = [3, 17, 6, 15];
-correctListOfWagons(eachWagonsWieght, missingWagons);
+correctListOfWagons(eachWagonsId, missingWagons);
 // => [1, 3, 17, 6, 15, 5, 20, 7, 4, 8]
 ```
 
