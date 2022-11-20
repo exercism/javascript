@@ -28,7 +28,7 @@ Now the first two wagons in the `array` have to be moved to the back of the trai
 Your friend would be really grateful to you for fixing their mistake.
 
 Implement a function `fixListOfWagons` that accepts an array of the id of each wagon.
-It `return` an `array` where the 2 first elements repositioned to the end of the `array`.
+It `return` an `array` where the 2 first elements repositioned to the end of the `array` and the locomotive is added to the front.
 
 ```javascript
 eachWagonsID = [2, 5, 1, 7, 4, 12, 6, 3, 13];
