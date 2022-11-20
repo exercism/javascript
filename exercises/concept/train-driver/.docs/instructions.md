@@ -1,8 +1,7 @@
 # Instructions
 
-Your friend is a train driver and has to drive cargo trains between cities.
-Although your friend isn't amazing with handling the computers and would like some help with it.
-Your friend would like your help organizing the train and correcting mistakes in the data.
+Your friend is a Locomotive Engineer who drives cargo trains between cities.
+Although your friend is great handling the trains, they aren't amazing handling the logistics computers and would like your programming help organizing the train and correcting mistakes in the data.
 
 ```exercism/note
 To practice, use the rest or spread operator to solve each of the tasks below.
@@ -10,10 +9,9 @@ To practice, use the rest or spread operator to solve each of the tasks below.
 
 ## 1. Create a list of all wagons
 
-Your friend has been keeping track of each wagon identifier. Although they are not sure how many wagons and would like the data to be returned as an array.
+Your friend has been keeping track of each wagon identifier, but they're never sure how many wagons they are going to have to process at any given time. It would be much easier for the rest of the logistics program to have the data to be returned as an array.
 
-Implement a function `getListOfWagons` that accepts an unknown amount of positive integers that contains the id of each wagon.
-It should return an array of all the wagon ids.
+Implement a function `getListOfWagons` that accepts an unknown amount of positive integers which are the IDs of each wagon.
 
 ```javascript
 getListOfWagons(1, 7, 12, 3, 14, 8, 5);
@@ -22,14 +20,15 @@ getListOfWagons(1, 7, 12, 3, 14, 8, 5);
 
 ## 2. Move the first two elements to the end of the array
 
-Now that you got a general feel for handling your friend's data.
-The train id system works by the locomotive having id number one and the rest of the wagons having a random id.
-Your friend had to connect two new wagons to the train and forgot to update the id system.
-Now the first two wagons in the array have to be moved to the back of the train.
-Your friend would like you to move the first two wagons to the end of the array.
+At this point, you are starting to get a feel for your friend's data and how it's used in the logistics program.
+The train ID system works by assigning the locomotive an ID of `1` and then assigning the remainder of the wagons a randomly chosen ID greater than `1`.
+
+But then your friend had to connect two new wagons to the train and forgot to update the system!
+Now the first two wagons in the `array` have to be moved to the back of the train, or everything will be out of order.
+Your friend would be really grateful to you for fixing their mistake.
 
 Implement a function `fixListOfWagons` that accepts an array of the id of each wagon.
-It returns an array where the 2 first elements are moved to the end of the array.
+It `return` an `array` where the 2 first elements repositioned to the end of the `array`.
 
 ```javascript
 eachWagonsWieght = [2, 5, 1, 7, 4, 12, 6, 3, 13];
@@ -39,12 +38,13 @@ fixListOfWagons(eachWagonsWieght);
 
 ## 3. Add missing values
 
-Your friend realized that all data wasn't added and found another array which contains the missing wagons. 
-Your friend would like you to add the missing values to the array. 
-All they can remember is that the missing values should be placed after the locomotive in the array.
+Uh-oh. some wagons seem to have gone missing.
 
-Given this new information, write a function called `CorrectListOfWagons` that takes two arrays which have the id of each wagon as an argument. 
-The second array should be added after the first element of the first array.
+Fortunately, your friend just found another `array` which appears to contain the missing wagon IDs, and would like you to add them into the main wagon ID `array`.
+All they can remember is that the missing values should be placed directly after the designated locomotive.
+
+Given this new information, write a function called `CorrectListOfWagons` that takes two arrays which have the IDs of each wagon as the arguments. 
+The wagon IDs of the second `array` should be added into the first `array` directly after the locomotive (ID 1).
 
 ```javascript
 eachWagonsWieght = [1, 5, 20, 7, 4, 8];
@@ -55,13 +55,15 @@ CorrectListOfWagons(eachWagonsWieght, missingWagons);
 
 ## 4. Extend routing information
 
-Now that the wagon data is correct, your friend would like you to update the routing information. 
-Your friend has an object with the routing information and would like you to add more routing information to the object. 
-Every route requires a bit different information so your friend would prefer a generic solution.
+Now that all the wagon data is correct, your friend would like you to update the systems routing information.
+Initial routing information has been constructed as an `object`, and you friend would like you to update it with the additions provided.
+Every route requires slightly different information, so your friend would really prefer a generic solution.
 
-Implement a function `extendRouteInformation` that accepts two objects.
-The first object contains which city the train should go between and the second object contains more routing information.
-The function should return an object with the updated routing information.
+Implement a function extendRouteInformation that accepts two `objects`.
+The first `object` contains which cities the train route moves between.
+
+The second `object` contains other routing details such as train speed or length.
+The function should return a consolidated `object` with all routing information.
 
 ```exercism/note
 The variable `moreRouteInformation` can contain different properties.

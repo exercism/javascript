@@ -2,6 +2,10 @@
   "authors": [
     "meatball"
   ],
+  "contributors": [
+    "bethanyg",
+    "junedev"
+  ],
   "files": {
     "solution": [
       "train-driver.js"
