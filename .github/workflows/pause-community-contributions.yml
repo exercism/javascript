@@ -8,8 +8,8 @@ on:
     types:
       - opened
     paths-ignore:
-      - "exercises/*/*/.approaches/**"
-      - "exercises/*/*/.articles/**"
+      - 'exercises/*/*/.approaches/**'
+      - 'exercises/*/*/.articles/**'
   workflow_dispatch:
 
 jobs:
