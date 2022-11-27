@@ -8,14 +8,16 @@ import {
 
 describe('createAppointment', () => {
   test('creates appointment of 4 days later', () => {
+    const currentTime = Date.now();
     expect(createAppointment(4)).toEqual(
-      new Date(Date.now() + 4 * 24 * 3600 * 1000)
+      new Date(currentTime + 4 * 24 * 3600 * 1000)
     );
   });
 
   test('creates appointment of 124 days later', () => {
+    const currentTime = Date.now();
     expect(createAppointment(124)).toEqual(
-      new Date(Date.now() + 124 * 24 * 3600 * 1000)
+      new Date(currentTime + 124 * 24 * 3600 * 1000)
     );
   });
 });
