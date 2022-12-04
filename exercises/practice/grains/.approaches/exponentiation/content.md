@@ -14,6 +14,7 @@ export function total() {
 ```
 
 JavaScript uses the [exponential operator][exponentiation] to raise a number by a certain exponent.
+[`Math.pow()`][pow] can also be used to raise a number by an exponent, but it does not work with a [`BigInt`][bigint].
 
 Exponentiation is nicely suited to the problem, since we start with one grain and keep doubling the number of grains on each successive square.
 `1` grain is `2n ** 0`, `2` grains is `2n ** 1`, `4` is `2n ** 2`, and so on.
@@ -45,4 +46,6 @@ export const total = () => 2n ** 64n - 1n;
 Notice that `return` and the curly braces are not needed.
 
 [exponentiation]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation
+[bigint]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
+[pow]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
 [arrow-function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
