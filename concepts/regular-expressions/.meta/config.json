@@ -1,5 +1,5 @@
 {
-  "blurb": "A regular expression is a powerful way of manipulating and searching through data with JavaScript.",
+  "blurb": "JavaScript supports regular expressions as a powerful way of manipulating and searching through data.",
   "authors": ["julendiaz"],
   "contributors": ["junedev"]
 }

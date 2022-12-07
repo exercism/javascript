@@ -35,7 +35,7 @@ export function checkPhoneNumber(number) {
  * Given a certain response from the user, help the chatbot get only the URL
  *
  * @param {string} userInput
- * @returns {string[]} all the possible URL's that the user may have answered
+ * @returns {string[] | null} all the possible URL's that the user may have answered
  */
 export function getURL(userInput) {
   throw new Error('Please implement the userInput function');

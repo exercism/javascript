@@ -158,20 +158,6 @@ console.log(result);
 // => ['hello', 'user', 'how', 'are', 'you']
 ```
 
-## Performance with Regex
-
-Regarding performance, both of them create a RegExp object. The main difference is how often the regex is compiled:
-
-- With `Regular Expression Literal`: one time during initial code parsing and compiling
-- With `RegExp()` syntax: Every time new Object gets created.
-
-Using literal syntax may be a better option not only because of performance, but also for simplicity and readability. For more details see [this](https://stackoverflow.com/a/32523333) Stackoverflow discussion.
-
-1. It is shorter and doesn’t force you to think in terms of class-like constructors.
-2. When using the `RegExp()` constructor, you also need to escape quotes and double-escape backslashes. It makes regular expressions that are hard to read and understand by their nature even more harder.
-
-Nevertheless, for this particular challenge, we are practising with both methods. Hence you are able to decide which one to apply depending on the occasion.
-
 [using-regular-expressions-in-javascript]: https://www.regular-expressions.info/javascript.html
 [mdn-regex-cheatsheet]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 [mdn-regular-expressions]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
