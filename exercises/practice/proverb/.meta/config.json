@@ -1,6 +1,7 @@
 {
-  "blurb": "For want of a horseshoe nail, a kingdom was lost, or so the saying goes. Output the full text of this proverbial rhyme.",
-  "authors": ["skabbass1"],
+  "authors": [
+    "skabbass1"
+  ],
   "contributors": [
     "ankorGH",
     "serixscorpio",
@@ -9,10 +10,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["proverb.js"],
-    "test": ["proverb.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "proverb.js"
+    ],
+    "test": [
+      "proverb.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "For want of a horseshoe nail, a kingdom was lost, or so the saying goes. Output the full text of this proverbial rhyme.",
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/For_Want_of_a_Nail"
+  "source_url": "http://en.wikipedia.org/wiki/For_Want_of_a_Nail",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -1,6 +1,7 @@
 {
-  "blurb": "Output the lyrics to 'The Twelve Days of Christmas'",
-  "authors": ["AakashMallik"],
+  "authors": [
+    "AakashMallik"
+  ],
   "contributors": [
     "ankorGH",
     "cmccandless",
@@ -9,10 +10,23 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["twelve-days.js"],
-    "test": ["twelve-days.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "twelve-days.js"
+    ],
+    "test": [
+      "twelve-days.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Output the lyrics to 'The Twelve Days of Christmas'",
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)"
+  "source_url": "http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

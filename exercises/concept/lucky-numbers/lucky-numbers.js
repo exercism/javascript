@@ -15,7 +15,7 @@ export function twoSum(array1, array2) {
  * Checks whether a number is a palindrome.
  *
  * @param {number} value
- * @returns {boolean}  whether the number is a palindrome or not
+ * @returns {boolean} whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
   throw new Error('Implement the luckyNumber function');

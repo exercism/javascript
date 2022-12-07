@@ -5,7 +5,7 @@ import {
   changeWindow,
 } from './windowing-system';
 
-describe('Size', () => {
+describe('Size class', () => {
   test('allows to create a new instance', () => {
     const size = new Size(110, 220);
     expect(size.width).toBe(110);
@@ -26,7 +26,7 @@ describe('Size', () => {
   });
 });
 
-describe('Position', () => {
+describe('Position class', () => {
   test('allows to create a new instance', () => {
     const position = new Position(10, 20);
     expect(position.x).toBe(10);
@@ -47,7 +47,7 @@ describe('Position', () => {
   });
 });
 
-describe('ProgramWindow', () => {
+describe('ProgramWindow class', () => {
   test('allows to create a new instance', () => {
     const window = new ProgramWindow();
 
@@ -72,7 +72,9 @@ describe('ProgramWindow', () => {
     expect(programWindow.position.x).toBe(0);
     expect(programWindow.position.y).toBe(0);
   });
+});
 
+describe('resize', () => {
   test('provides a resize method', () => {
     const programWindow = new ProgramWindow();
     const newSize = new Size(300, 200);
@@ -90,18 +92,9 @@ describe('ProgramWindow', () => {
     expect(programWindow.size.width).toBe(1);
     expect(programWindow.size.height).toBe(1);
   });
+});
 
-  test('resize respects limits due to position and screen size', () => {
-    const programWindow = new ProgramWindow();
-    const newPosition = new Position(710, 525);
-    programWindow.move(newPosition);
-    const newSize = new Size(1000, 1000);
-    programWindow.resize(newSize);
-
-    expect(programWindow.size.width).toBe(90);
-    expect(programWindow.size.height).toBe(75);
-  });
-
+describe('move', () => {
   test('provides a move method', () => {
     const programWindow = new ProgramWindow();
     const newPosition = new Position(525, 450);
@@ -129,6 +122,17 @@ describe('ProgramWindow', () => {
 
     expect(programWindow.position.x).toBe(700);
     expect(programWindow.position.y).toBe(500);
+  });
+
+  test('resize respects limits due to position and screen size', () => {
+    const programWindow = new ProgramWindow();
+    const newPosition = new Position(710, 525);
+    programWindow.move(newPosition);
+    const newSize = new Size(1000, 1000);
+    programWindow.resize(newSize);
+
+    expect(programWindow.size.width).toBe(90);
+    expect(programWindow.size.height).toBe(75);
   });
 });
 

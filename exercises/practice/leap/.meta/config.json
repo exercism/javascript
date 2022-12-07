@@ -1,6 +1,7 @@
 {
-  "blurb": "Given a year, report if it is a leap year.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "ankorGH",
     "draalger",
@@ -14,10 +15,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["leap.js"],
-    "test": ["leap.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "leap.js"
+    ],
+    "test": [
+      "leap.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Given a year, report if it is a leap year.",
   "source": "JavaRanch Cattle Drive, exercise 3",
-  "source_url": "http://www.javaranch.com/leap.jsp"
+  "source_url": "http://www.javaranch.com/leap.jsp",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

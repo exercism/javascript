@@ -1,6 +1,7 @@
 {
-  "blurb": "Given a number n, determine what the nth prime is.",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "ankorGH",
     "hayashi-ay",
@@ -12,10 +13,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["nth-prime.js"],
-    "test": ["nth-prime.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "nth-prime.js"
+    ],
+    "test": [
+      "nth-prime.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Given a number n, determine what the nth prime is.",
   "source": "A variation on Problem 7 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=7"
+  "source_url": "http://projecteuler.net/problem=7",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

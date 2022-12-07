@@ -181,7 +181,7 @@ names;
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 names.shift(); // => 'Jack'
 names;
-// => ['two', 3, 'four']
+// => ['Laura', 'Paul', 'Megan']
 ```
 
 ### unshift
@@ -202,7 +202,7 @@ names;
 
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
-names.splice(2, 1, 'Jill');
+names.splice(2, 1, 'Jill'); // => ['Paul']
 names;
 // => ['Jack', 'Laura', 'Jill', 'Megan']
 ```

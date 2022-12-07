@@ -1,8 +1,8 @@
 # Introduction
 
-A function allows to group code into a reusable unit.
+A function is a block of organized, reusable code that is used to perform some action.
 There are multiple ways to define functions in JavaScript.
-Here we will look at _function declarations_ and _function expressions_..
+Here we will look at _function declarations_ and _function expressions_.
 Other possibilities like [arrow functions][concept-arrow-functions] will be covered in other concepts.
 
 ## Function Declaration
@@ -10,7 +10,7 @@ Other possibilities like [arrow functions][concept-arrow-functions] will be cove
 The standard way of defining a function in JavaScript is a _function declaration_, also called _function definition_ or _function statement_.
 
 It consists of the `function` keyword, the name of the function, and a comma-separated list of parameters in round brackets.
-This is followed by the function body (the code that should be executed) wrapped in curly brackets.
+This is followed by the function body (collection of statements that defines what a function does) wrapped in curly brackets.
 
 ```javascript
 function someName(param1, param2, param3) {
@@ -18,7 +18,7 @@ function someName(param1, param2, param3) {
 }
 ```
 
-In JavaScript a function is invoked (called) by stating the function name followed by round brackets that contain the arguments.
+In JavaScript, a function is invoked (called) by stating the function name followed by parentheses that contain the arguments.
 
 ```javascript
 someName(arg1, arg2, arg3);
@@ -34,9 +34,9 @@ When working with parameters inside the function body, be aware of possible side
   However, if you modify such an argument (e.g. add a key to an object), that also modifies the original value that was passed in.
 
 By default, all parameters defined in the function declaration are optional in JavaScript.
-If you provide less arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
-In many cases it makes sense to assign a more appropriate default value than `undefined`.
-This can by done by specifying default parameters directly in the function definition.
+If you provide fewer arguments than there are parameters, the missing arguments will be `undefined` inside the function, see [Null and Undefined][concept-null-undefined].
+In many cases, it makes sense to assign a more appropriate default value than `undefined`.
+This can be done by specifying default parameters directly in the function definition.
 
 ```javascript
 function someName(param1 = defaultValue1, param2 = defaultValue2) {
@@ -46,9 +46,7 @@ function someName(param1 = defaultValue1, param2 = defaultValue2) {
 
 ## Return Statement
 
-Using the `return` statement, you can pass the result of a function to the code that called it.
-There can be multiple `return` statements in a function.
-The execution of the function ends as soon as it hits one of those `return`s.
+A `return` statement ends the function execution and specifies a value to be returned to the function caller. A function can have multiple `return` statements.
 
 ```javascript
 function checkNumber(num) {
@@ -60,8 +58,8 @@ function checkNumber(num) {
 }
 ```
 
-If you use a naked return or no return at all, the result of the function is `undefined`.
-There are no implicit returns in JavaScript.
+The result of a function that `return`s no value or does not have a `return` statement is `undefined`.
+There are no implicit `return`s in JavaScript.
 
 ```javascript
 function nakedReturn(a) {
@@ -105,7 +103,7 @@ const someFunction = function (param) {
 };
 
 someOtherFunction(function (param) {
-  //...
+  // ...
 });
 
 const obj = {

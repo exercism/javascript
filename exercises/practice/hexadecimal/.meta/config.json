@@ -1,6 +1,7 @@
 {
-  "blurb": "Convert a hexadecimal number, represented as a string (e.g. \"10af8c\"), to its decimal equivalent using first principles (i.e. no, you may not use built-in or external libraries to accomplish the conversion).",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "rchavarria",
@@ -10,10 +11,23 @@
     "xarxziux"
   ],
   "files": {
-    "solution": ["hexadecimal.js"],
-    "test": ["hexadecimal.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "hexadecimal.js"
+    ],
+    "test": [
+      "hexadecimal.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Convert a hexadecimal number, represented as a string (e.g. \"10af8c\"), to its decimal equivalent using first principles (i.e. no, you may not use built-in or external libraries to accomplish the conversion).",
   "source": "All of Computer Science",
-  "source_url": "http://www.wolframalpha.com/examples/NumberBases.html"
+  "source_url": "http://www.wolframalpha.com/examples/NumberBases.html",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

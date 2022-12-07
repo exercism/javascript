@@ -1,12 +1,31 @@
 {
-  "blurb": "Connect to the Klingon Translation Service and learn about promises.",
-  "authors": ["SleeplessByte"],
-  "contributors": ["AndrewLawendy"],
+  "authors": [
+    "SleeplessByte"
+  ],
+  "contributors": [
+    "AndrewLawendy"
+  ],
   "files": {
-    "solution": ["service.js"],
-    "test": ["service.spec.js"],
-    "exemplar": [".meta/exemplar.js"],
-    "editor": ["api.js", "errors.js", "global.d.ts"]
+    "solution": [
+      "service.js"
+    ],
+    "test": [
+      "service.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ],
+    "editor": [
+      "api.js",
+      "errors.js",
+      "global.d.ts"
+    ]
   },
-  "forked_from": []
+  "blurb": "Connect to the Klingon Translation Service and learn about promises.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

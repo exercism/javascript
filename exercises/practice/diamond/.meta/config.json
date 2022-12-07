@@ -1,5 +1,4 @@
 {
-  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
   "authors": [],
   "contributors": [
     "ankorGH",
@@ -11,10 +10,23 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["diamond.js"],
-    "test": ["diamond.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "diamond.js"
+    ],
+    "test": [
+      "diamond.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
   "source": "Seb Rose",
-  "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"
+  "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -86,6 +86,30 @@
   description: "Work on Test Runners"
   color: "ffffff"
 
+# The `x:rep/<value>` labels describe the amount of reputation to award
+#
+# For more information on reputation and how these labels should be used,
+# check out https://exercism.org/docs/using/product/reputation
+- name: "x:rep/tiny"
+  description: "Tiny amount of reputation"
+  color: "ffffff"
+
+- name: "x:rep/small"
+  description: "Small amount of reputation"
+  color: "ffffff"
+
+- name: "x:rep/medium"
+  description: "Medium amount of reputation"
+  color: "ffffff"
+
+- name: "x:rep/large"
+  description: "Large amount of reputation"
+  color: "ffffff"
+
+- name: "x:rep/massive"
+  description: "Massive amount of reputation"
+  color: "ffffff"
+
 # The `x:size/<value>` labels describe the expected amount of work for a contributor
 - name: "x:size/tiny"
   description: "Tiny amount of work"
@@ -133,15 +157,15 @@
   description: "Work on Documentation"
   color: "ffffff"
 
-# This label can be added to accept PRs as part of Hacktoberfest
-- name: "hacktoberfest-accepted"
-  description: "Make this PR count for hacktoberfest"
-  color: "ff7518"
-
 # This Exercism-wide label is added to all automatically created pull requests that help migrate/prepare a track for Exercism v3
 - name: "v3-migration 🤖"
   description: "Preparing for Exercism v3"
   color: "e99695"
+
+# This Exercism-wide label can be used to bulk-close issues in preparation for pausing community contributions
+- name: "paused"
+  description: "Work paused until further notice"
+  color: "e4e669"
 
 # ----------------------------------------------------------------------------------------- #
 # These are the repository-specific labels that augment the Exercise-wide labels defined in #

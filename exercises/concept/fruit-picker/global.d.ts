@@ -4,18 +4,16 @@
  * type information on the fly
  */
 
-type Status = 'OFFLINE' | 'ONLINE';
-type AvailabilityAction = 'NOOP' | 'PURCHASE';
+type FruitPickerSuccess = {
+  message: 'SUCCESS';
+};
 
-interface CheckStatus {
-  callback: StatusCallback;
-}
+type FruitPickerError = {
+  message: 'ERROR';
+};
 
-type StatusCallback = (response: Status) => boolean;
-
-interface CheckInventory {
-  query: GrocerQuery;
-  callback: InventoryCallback;
+declare module 'notifier' {
+  function notify(message: FruitPickerSuccess | FruitPickerError): void;
 }
 
 type GrocerQuery = {
@@ -23,7 +21,22 @@ type GrocerQuery = {
   quantity: number;
 };
 
-type InventoryCallback = (
-  err: string | null,
-  isAvailable: boolean
-) => AvailabilityAction;
+interface GrocerOnSuccessCallback {
+  (quantityOrdered: number): void;
+}
+
+interface GrocerOnErrorCallback {
+  (errorMessage: string): void;
+}
+
+declare module 'grocer' {
+  function order(
+    query: GrocerQuery,
+    onSuccess: GrocerOnSuccessCallback,
+    onError: GrocerOnErrorCallback
+  ): void;
+}
+
+type FruitPickerSuccessCallback = () => SuccessResult;
+
+type FruitPickerErrorCallback = () => ErrorResult;

@@ -23,13 +23,13 @@ getItem([1, 2, 4, 1], position);
 ## 2. Exchange a card in the stack
 
 Perform some sleight of hand and exchange the card at index `position`
-with the new card provided.
+with the replacement card provided.
 Return the adjusted stack.
 
 ```javascript
 const position = 2;
-const newCard = 6;
-setItem([1, 2, 4, 1], position, newCard);
+const replacementCard = 6;
+setItem([1, 2, 4, 1], position, replacementCard);
 // => [1, 2, 6, 1]
 ```
 

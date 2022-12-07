@@ -1,11 +1,27 @@
 {
-  "blurb": "TODO: add blurb for nullability exercise",
-  "authors": ["SleeplessByte", "Jlamon"],
-  "contributors": [],
+  "authors": [
+    "SleeplessByte",
+    "Jlamon"
+  ],
   "files": {
-    "solution": ["nullability.js"],
-    "test": ["nullability.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "nullability.js"
+    ],
+    "test": [
+      "nullability.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["csharp/tim-from-marketing"]
+  "forked_from": [
+    "csharp/tim-from-marketing"
+  ],
+  "blurb": "TODO: add blurb for nullability exercise",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

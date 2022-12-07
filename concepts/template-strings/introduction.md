@@ -22,8 +22,8 @@ All types of expressions can be used with template strings.
 ```javascript
 const track = 'JavaScript';
 
-`This track on exercism.io is ${track.toUpperCase()}.`;
-// => This track on exercism.io is JAVASCRIPT.
+`This track on exercism.org is ${track.toUpperCase()}.`;
+// => This track on exercism.org is JAVASCRIPT.
 ```
 
 When you are needing to have strings formatted on multiple lines:

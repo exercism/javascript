@@ -1,11 +1,29 @@
 {
-  "blurb": "Learn the basics of JavaScript cooking a brilliant lasagna from your favorite cooking book.",
-  "authors": ["SleeplessByte"],
-  "contributors": ["junedev"],
+  "authors": [
+    "SleeplessByte"
+  ],
+  "contributors": [
+    "junedev"
+  ],
   "files": {
-    "solution": ["lasagna.js"],
-    "test": ["lasagna.spec.js"],
-    "exemplar": [".meta/exemplar.js"]
+    "solution": [
+      "lasagna.js"
+    ],
+    "test": [
+      "lasagna.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
   },
-  "forked_from": ["csharp/lasagna"]
+  "forked_from": [
+    "csharp/lasagna"
+  ],
+  "blurb": "Learn the basics of JavaScript cooking a brilliant lasagna from your favorite cooking book.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

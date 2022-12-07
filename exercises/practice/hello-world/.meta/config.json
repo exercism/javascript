@@ -1,6 +1,7 @@
 {
-  "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": ["rchavarria"],
+  "authors": [
+    "rchavarria"
+  ],
   "contributors": [
     "austinratcliff",
     "designfrontier",
@@ -12,10 +13,23 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["hello-world.js"],
-    "test": ["hello-world.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "hello-world.js"
+    ],
+    "test": [
+      "hello-world.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
   "source": "This is an exercise to introduce users to using Exercism",
-  "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"
+  "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

@@ -8,15 +8,7 @@ export class TwoBucket {
     throw new Error('Remove this statement and implement this function');
   }
 
-  moves() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  get goalBucket() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  get otherBucket() {
+  solve() {
     throw new Error('Remove this statement and implement this function');
   }
 }

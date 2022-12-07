@@ -185,7 +185,14 @@ describe('Premium service', () => {
     await expect(actual).rejects.toThrow(Error);
   });
 
-  test('it ensures the quality of the translation', async () => {
+  test('it recognizes sufficient quality', async () => {
+    const actual = service.premium('‘arlogh Qoylu’pu’?', 40);
+    const expected = 'What time is it?';
+
+    await expect(actual).resolves.toBe(expected);
+  });
+
+  test('it recognizes insufficient quality', async () => {
     const actual = service.premium('majQa’', 100);
     const expected = QualityThresholdNotMet;
 
@@ -193,11 +200,6 @@ describe('Premium service', () => {
   });
 
   test('it ensures the quality even after a request', async () => {
-    const actual = service.premium('‘arlogh Qoylu’pu’?', 40);
-    const expected = 'What time is it?';
-
-    await expect(actual).resolves.toBe(expected);
-
     const actualQuality = service.premium('‘arlogh Qoylu’pu’?', 100);
     const expectedQuality = QualityThresholdNotMet;
     await expect(actualQuality).rejects.toThrow(expectedQuality);

@@ -1,6 +1,7 @@
 {
-  "blurb": "Write a simple linked list implementation that uses Elements and a List",
-  "authors": ["apapirovski"],
+  "authors": [
+    "apapirovski"
+  ],
   "contributors": [
     "maruthimohan",
     "matthewmorgan",
@@ -8,10 +9,23 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["simple-linked-list.js"],
-    "test": ["simple-linked-list.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "simple-linked-list.js"
+    ],
+    "test": [
+      "simple-linked-list.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Write a simple linked list implementation that uses Elements and a List",
   "source": "Inspired by 'Data Structures and Algorithms with Object-Oriented Design Patterns in Ruby', singly linked-lists.",
-  "source_url": "https://web.archive.org/web/20160731005714/http://brpreiss.com/books/opus8/html/page96.html"
+  "source_url": "https://web.archive.org/web/20160731005714/http://brpreiss.com/books/opus8/html/page96.html",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

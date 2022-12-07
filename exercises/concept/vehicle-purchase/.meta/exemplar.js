@@ -39,7 +39,7 @@ export function chooseVehicle(option1, option2) {
  *
  * @param {number} originalPrice
  * @param {number} age
- * @returns expected resell price in the dealership
+ * @returns {number} expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
   let percentage;

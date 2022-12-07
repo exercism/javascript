@@ -1,0 +1,7 @@
+switch (true) {
+  case isQuestion && isShout:
+    return "Calm down, I know what I'm doing!"
+  case isShout:
+    return "Whoa, chill out!"
+  case isQuestion:
+    return "Sure."

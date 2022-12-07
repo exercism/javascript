@@ -108,14 +108,8 @@
         "slug": "elyses-analytic-enchantments",
         "name": "Elyses Analytic Enchantments",
         "uuid": "45d956db-d4ef-4468-b1d3-47021f172c15",
-        "concepts": ["array-analysis"],
-        "prerequisites": [
-          "arrays",
-          "booleans",
-          "callbacks",
-          "arrow-functions",
-          "numbers"
-        ],
+        "concepts": ["arrow-functions", "array-analysis"],
+        "prerequisites": ["arrays", "booleans", "callbacks", "numbers"],
         "status": "beta"
       },
       {
@@ -133,8 +127,8 @@
         "concepts": ["array-loops"],
         "prerequisites": [
           "arrays",
-          "callbacks",
           "arrow-functions",
+          "callbacks",
           "for-loops",
           "conditionals"
         ],
@@ -181,7 +175,7 @@
         "slug": "fruit-picker",
         "name": "Fruit Picker",
         "uuid": "a6348db8-cc2b-4c53-9f43-3c23248d66f0",
-        "concepts": ["callbacks", "arrow-functions"],
+        "concepts": ["callbacks"],
         "prerequisites": ["functions", "objects"],
         "status": "beta"
       },
@@ -238,11 +232,11 @@
         "uuid": "6e156d67-2bd2-4624-956d-ddcc3795bad5",
         "concepts": ["array-transformations"],
         "prerequisites": [
+          "arrow-functions",
           "numbers",
           "arrays",
           "conditionals",
-          "callbacks",
-          "arrow-functions"
+          "callbacks"
         ],
         "status": "beta"
       },
@@ -324,7 +318,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
         "practices": [],
         "prerequisites": ["strings", "array-transformations", "objects"],
@@ -409,7 +403,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "99493160-4673-402f-acda-62db5378148d",
         "practices": [],
         "prerequisites": ["arrays", "for-loops"],
@@ -508,9 +502,9 @@
         "uuid": "9131bdb8-2e0f-4526-b113-8a77712e7216",
         "practices": [],
         "prerequisites": [
+          "arrow-functions",
           "strings",
           "objects",
-          "arrow-functions",
           "regular-expressions",
           "errors"
         ],
@@ -622,7 +616,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "db16804b-0f63-445d-8beb-99e0f7218d66",
         "practices": [],
         "prerequisites": ["objects", "array-loops", "arrays", "strings"],
@@ -672,7 +666,7 @@
         "name": "Scrabble Score",
         "uuid": "11771d47-1109-4579-a62b-e0b8e9583485",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["strings", "array-transformations"],
         "difficulty": 5,
         "topics": ["conditionals", "loops", "maps", "strings"]
       },
@@ -681,7 +675,7 @@
         "name": "Allergies",
         "uuid": "9d33d21c-e695-427f-9f58-dd9498d61318",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "math", "numbers", "for-loops", "arrays"],
         "difficulty": 6,
         "topics": ["arrays", "bitwise_operations", "conditionals", "loops"]
       },
@@ -690,8 +684,14 @@
         "name": "Word Count",
         "uuid": "0073ff9a-cd6a-43cf-b8bf-4d5d8117b81b",
         "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
+        "prerequisites": [
+          "strings",
+          "for-loops",
+          "regular-expressions",
+          "arrays",
+          "objects"
+        ],
+        "difficulty": 4,
         "topics": ["loops", "lists", "regular_expressions", "strings"]
       },
       {
@@ -699,13 +699,13 @@
         "name": "Bank Account",
         "uuid": "8beedf70-28b4-4cfb-ab53-309ee6f6aa78",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "conditionals", "numbers"],
         "difficulty": 3,
         "topics": ["classes", "conditionals"]
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "7dfa878c-83a6-48ef-9170-b6633d51d601",
         "practices": [],
         "prerequisites": ["classes", "for-loops"],
@@ -717,7 +717,13 @@
         "name": "Perfect Numbers",
         "uuid": "c6691fd2-e10d-47df-acbf-3adeac5a2f89",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "conditionals",
+          "errors",
+          "for-loops"
+        ],
         "difficulty": 3,
         "topics": ["arrays", "conditionals", "loops", "integers", "math"]
       },
@@ -735,7 +741,7 @@
         "name": "Luhn",
         "uuid": "28872cc9-f1ef-487f-9a79-6bf7983148bf",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers", "conditionals", "array-transformations"],
         "difficulty": 4,
         "topics": ["conditionals", "loops", "integers", "strings"]
       },
@@ -753,7 +759,7 @@
         "name": "Grains",
         "uuid": "d003975a-9045-4f03-9ad9-c15db584dc13",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["conditionals", "errors", "numbers", "math"],
         "difficulty": 5,
         "topics": ["loops", "integers"]
       },
@@ -762,7 +768,14 @@
         "name": "Pythagorean Triplet",
         "uuid": "394755a3-c743-4b85-b9b8-387907f4e32d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "arrays",
+          "for-loops",
+          "numbers",
+          "math",
+          "conditionals"
+        ],
         "difficulty": 5,
         "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
@@ -771,7 +784,15 @@
         "name": "Palindrome Products",
         "uuid": "f6799d10-0210-4c73-ac08-d5cac1a00ff3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "errors",
+          "strings",
+          "objects",
+          "for-loops",
+          "arrays",
+          "conditionals"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
@@ -838,7 +859,12 @@
         "name": "Matching Brackets",
         "uuid": "4d456646-3a9b-4393-9558-6b30e5c1039c",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "conditionals-switch",
+          "for-loops"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -876,7 +902,14 @@
         "name": "Series",
         "uuid": "5178ae53-5364-46c9-bee3-70e6e8a8c2e3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "errors",
+          "classes",
+          "conditionals",
+          "array-transformations"
+        ],
         "difficulty": 3,
         "topics": ["loops", "exception_handling", "strings", "text_formatting"]
       },
@@ -918,7 +951,13 @@
         "name": "Grep",
         "uuid": "78bcbae1-a0f2-460c-ba89-e51844fe9397",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "for-loops",
+          "array-analysis",
+          "template-strings"
+        ],
         "difficulty": 4,
         "topics": ["files", "searching", "text_formatting"]
       },
@@ -936,7 +975,7 @@
         "name": "Spiral Matrix",
         "uuid": "c1abafcc-0d44-4fb5-afae-bff3ce2e1b39",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "for-loops", "conditionals"],
         "difficulty": 4,
         "topics": [
           "arrays",
@@ -948,7 +987,7 @@
       },
       {
         "slug": "ocr-numbers",
-        "name": "Ocr Numbers",
+        "name": "OCR Numbers",
         "uuid": "24c197ee-d492-4083-8615-629cb4b836b2",
         "practices": [],
         "prerequisites": [],
@@ -1010,7 +1049,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "b902c746-60d1-4645-a5bc-dafadec0ef32",
         "practices": [],
         "prerequisites": [],
@@ -1223,7 +1262,7 @@
         "name": "Binary Search Tree",
         "uuid": "6c4b4e25-c115-4789-9058-d28ab6ca0d26",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["classes", "conditionals", "recursion"],
         "difficulty": 6,
         "topics": ["algorithms", "conditionals", "loops", "recursion"]
       },
@@ -1232,7 +1271,13 @@
         "name": "Custom Set",
         "uuid": "75199d72-4cac-49ce-bffb-23fb659c57ae",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-transformations",
+          "classes",
+          "conditionals"
+        ],
         "difficulty": 6,
         "topics": [
           "arrays",
@@ -1250,7 +1295,14 @@
         "name": "Binary Search",
         "uuid": "7c569e5d-bb00-44b8-8adc-34253790c19b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "comparison",
+          "conditionals",
+          "errors",
+          "math",
+          "while-loops"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "arrays", "conditionals", "loops", "recursion"]
       },
@@ -1259,7 +1311,13 @@
         "name": "Circular Buffer",
         "uuid": "bf0b1f95-3425-4345-8a12-3a80d49b49c9",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "comparison",
+          "conditionals",
+          "errors"
+        ],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -1275,7 +1333,7 @@
         "name": "Simple Linked List",
         "uuid": "a1591026-2f02-45f9-b189-24b2359eb43f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "classes", "conditionals", "for-loops"],
         "difficulty": 8,
         "topics": ["arrays", "data_structures", "lists"]
       },
@@ -1284,7 +1342,7 @@
         "name": "Word Search",
         "uuid": "0125f5a7-8883-4553-a6c1-45f19544af5e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["arrays", "array-loops", "classes", "conditionals"],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -1301,7 +1359,14 @@
         "name": "Variable Length Quantity",
         "uuid": "6be39d1f-f68d-4a52-bd72-85a38ffd509e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-transformations",
+          "arrow-functions",
+          "errors",
+          "for-loops",
+          "rest-and-spread"
+        ],
         "difficulty": 5,
         "topics": ["bitwise_operations", "transforming"]
       },
@@ -1310,7 +1375,14 @@
         "name": "Two Bucket",
         "uuid": "0bc6b478-40a8-47ab-889b-c403b922f7e5",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "classes",
+          "conditionals",
+          "errors",
+          "objects",
+          "while-loops"
+        ],
         "difficulty": 6,
         "topics": [
           "algorithms",
@@ -1327,7 +1399,16 @@
         "name": "Alphametics",
         "uuid": "a602bd33-69fc-4b67-a3d3-95198853095e",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "array-analysis",
+          "array-transformations",
+          "conditionals",
+          "for-loops",
+          "functions",
+          "objects",
+          "rest-and-spread"
+        ],
         "difficulty": 7,
         "topics": ["algorithms", "games"]
       },
@@ -1336,7 +1417,15 @@
         "name": "Connect",
         "uuid": "2fa2c262-77ae-409b-bfd8-1d643faae772",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "array-analysis",
+          "array-loops",
+          "array-transformations",
+          "classes",
+          "conditionals",
+          "functions"
+        ],
         "difficulty": 7,
         "topics": [
           "arrays",
@@ -1436,7 +1525,7 @@
       },
       {
         "slug": "diffie-hellman",
-        "name": "Diffie Hellman",
+        "name": "Diffie-Hellman",
         "uuid": "127eccbd-3009-4a8f-95c1-7d8aeb608550",
         "practices": [],
         "prerequisites": [],
@@ -1526,7 +1615,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "f7452f71-795b-40b6-847c-67ef4bb9db45",
         "practices": [],
         "prerequisites": [],
@@ -1581,7 +1670,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "6ac4ad5f-a64a-4646-91c5-169d53f289f9",
         "practices": [],
         "prerequisites": [],
@@ -1786,7 +1875,7 @@
       },
       {
         "slug": "rest-api",
-        "name": "Rest API",
+        "name": "REST API",
         "uuid": "75b4816d-a5d7-4840-92d6-7249c9e8beeb",
         "practices": [],
         "prerequisites": ["arrays", "classes", "array-loops", "objects"],
@@ -1837,6 +1926,22 @@
           "recursion"
         ],
         "difficulty": 6,
+        "topics": []
+      },
+      {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "e855d32e-9d5d-4342-a3e9-e70cf2329499",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "array-loops",
+          "array-transformations",
+          "objects",
+          "conditionals",
+          "strings"
+        ],
+        "difficulty": 7,
         "topics": []
       }
     ]
@@ -1901,6 +2006,11 @@
       "uuid": "2d0b9f1f-c135-4014-b87c-25b081387002",
       "slug": "conditionals",
       "name": "Conditionals"
+    },
+    {
+      "uuid": "a748d628-f0e8-4625-9c90-6dd500b4fd64",
+      "slug": "dates",
+      "name": "Date and Time"
     },
     {
       "uuid": "95ba7bed-c370-4f20-9173-79cbd5c2416e",

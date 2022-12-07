@@ -55,7 +55,7 @@ export function doesStackIncludeOddCard(stack) {
  *
  * @param {number[]} stack
  *
- * @returns {number} the first odd value
+ * @returns {number | undefined} the first odd value
  */
 export function getFirstOddCard(stack) {
   throw new Error('Implement the getFirstOddCard function');

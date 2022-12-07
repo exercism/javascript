@@ -2,3 +2,10 @@
 /.github/workflows/sync-labels.yml
 exercises/**/README.md
 !/README.md
+
+# Originates from https://github.com/exercism/org-wide-files
+CODE_OF_CONDUCT.md
+LICENSE
+
+# These are formatted via configlet and will not match prettier
+exercises/**/.meta/config.json

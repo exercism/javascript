@@ -73,7 +73,7 @@ In practice, a closure often occurs when a function (or block) uses a variable f
 
 ### Function-scope
 
-The `var` keyword defines **function-scoped** variable. This means that variables defined by `var` are available anywhere in the function where they are defined and any nested lexical scope (either **function** or **block**).
+The `var` keyword defines a **function-scoped** variable. This means that variables defined by `var` are available anywhere in the function where they are defined and any nested lexical scope (either **function** or **block**).
 
 ```javascript
 {
@@ -86,7 +86,7 @@ var tenTimes = five * 10;
 
 ### Block-scope
 
-The `let` and `const` keywords define a **block-scoped** variables. `let` defines a mutable variable, whose value maybe set multiple times and may be defined but not initialized. `const` defines a variable which must be initialized when it is defined, and its value then may not change. If the `const` variable is set to a primitive value, it may not be mutated. If the `const` variable is set to a reference value, like an _array_ or _object_, the reference may not change but the array's contents may be mutated.
+The `let` and `const` keywords define **block-scoped** variables. `let` defines a mutable variable, whose value may be set multiple times and may be defined but not initialized. `const` defines a variable which must be initialized when it is defined, and its value then may not change. If the `const` variable is set to a primitive value, it may not be mutated. If the `const` variable is set to a reference value, like an _array_ or _object_, the reference may not change but the array's contents may be mutated.
 
 Consider this block:
 

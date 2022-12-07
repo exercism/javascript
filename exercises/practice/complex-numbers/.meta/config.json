@@ -1,6 +1,7 @@
 {
-  "blurb": "Implement complex numbers.",
-  "authors": ["MattH-be"],
+  "authors": [
+    "MattH-be"
+  ],
   "contributors": [
     "ankorGH",
     "burennto",
@@ -10,10 +11,23 @@
     "trvrfrd"
   ],
   "files": {
-    "solution": ["complex-numbers.js"],
-    "test": ["complex-numbers.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "complex-numbers.js"
+    ],
+    "test": [
+      "complex-numbers.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Implement complex numbers.",
   "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Complex_number"
+  "source_url": "https://en.wikipedia.org/wiki/Complex_number",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

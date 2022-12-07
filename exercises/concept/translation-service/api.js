@@ -39,6 +39,12 @@ export class ExternalApi {
    * @returns {Promise<Translation>}
    */
   fetch(text) {
+    if (typeof text !== 'string') {
+      throw new BadRequest(
+        `Expected text when calling fetch(text), actual ${typeof text}.`
+      );
+    }
+
     // Check if client is banned
     if (mutex.current) {
       return rejectWithRandomDelay(new AbusiveClientError());
@@ -60,6 +66,18 @@ export class ExternalApi {
    * @param {(err?: Error) => void} callback
    */
   request(text, callback) {
+    if (typeof text !== 'string') {
+      throw new BadRequest(
+        `Expected string text when calling request(text, callback), actual ${typeof text}.`
+      );
+    }
+
+    if (typeof callback !== 'function') {
+      throw new BadRequest(
+        `Expected callback function when calling fetch(text, callback), actual ${typeof callback}.`
+      );
+    }
+
     if (this.values[text] && this.values[text][0]) {
       mutex.current = true;
       callback(new AbusiveClientError());
@@ -97,4 +115,10 @@ function rejectWithRandomDelay(value) {
 
 function makeRandomError() {
   return new Error(`Error code ${Math.ceil(Math.random() * 10000)}`);
+}
+
+class BadRequest extends Error {
+  constructor(message) {
+    super(message);
+  }
 }

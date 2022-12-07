@@ -89,7 +89,7 @@ numbers;
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
-numbers.splice(2, 1, 'one');
+numbers.splice(2, 1, 'one'); // => [3]
 numbers;
 // => [1, 'two', 'one', 'four']
 ```

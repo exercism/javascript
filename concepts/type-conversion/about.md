@@ -161,7 +161,7 @@ When a value is used in a boolean context, JavaScript will apply the same rules 
   ```javascript
   const num = 0;
   if (num) {
-    // this block NOT is executed because 0 is falsy
+    // this block is NOT executed because 0 is falsy
   }
 
   const name = 'Jin';

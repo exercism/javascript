@@ -1,7 +1,7 @@
 import { Series } from './series';
 
 describe('Series', () => {
-  xtest('slices of one from one', () => {
+  test('slices of one from one', () => {
     expect(new Series('1').slices(1)).toEqual([[1]]);
   });
 

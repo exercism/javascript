@@ -1,116 +1,57 @@
 // @ts-check
 
-import {
-  purchaseInventoryIfAvailable,
-  isServiceOnline,
-  pickAndPurchaseFruit,
-  pickFruit,
-} from './fruit-picker';
-import {
-  setStatus,
-  resetStatus,
-  setResponse,
-  getLastQuery,
-  resetQuery,
-} from './grocer';
+import { notify } from './notifier';
+import { order } from './grocer';
+import { onError, onSuccess, orderFromGrocer, postOrder } from './fruit-picker';
 
-describe('service status', () => {
-  beforeEach(() => {
-    resetStatus();
-  });
+jest.mock('./notifier', () => ({
+  notify: jest.fn(),
+}));
 
-  test('returns the initial status of the service', () => {
-    expect(isServiceOnline()).toBe(false);
-  });
+jest.mock('./grocer', () => ({
+  order: jest.fn(),
+}));
 
-  test('returns the status when service is online', () => {
-    setStatus('ONLINE');
-    expect(isServiceOnline()).toBe(true);
+afterEach(() => {
+  jest.resetAllMocks();
+});
+
+describe('task 1', () => {
+  test('onSuccess should call notify with a success message', () => {
+    expect(onSuccess()).toEqual(undefined);
+    expect(notify).toHaveBeenCalledTimes(1);
+    expect(notify).toHaveBeenCalledWith({ message: 'SUCCESS' });
   });
 });
 
-describe('inventory service', () => {
-  beforeEach(() => {
-    resetQuery();
-  });
-
-  test('uses the query format', () => {
-    pickFruit('strawberry', 5, () => 'PURCHASE');
-    expect(getLastQuery()).toEqual({
-      variety: 'strawberry',
-      quantity: 5,
-    });
-  });
-
-  test('takes parameters for the query', () => {
-    pickFruit('blueberry', 20, () => 'PURCHASE');
-    expect(getLastQuery()).toEqual({
-      variety: 'blueberry',
-      quantity: 20,
-    });
-  });
-
-  test('returns synchronously', () => {
-    expect(pickFruit('melon', 1, () => 'PURCHASE')).toBe('PURCHASE');
-  });
-
-  test('returns the inventory status', () => {
-    expect(pickFruit('melon', 1, () => 'NOOP')).toBe('NOOP');
+describe('task 2', () => {
+  test('onError should call notify with an error message', () => {
+    expect(onError()).toEqual(undefined);
+    expect(notify).toHaveBeenCalledTimes(1);
+    expect(notify).toHaveBeenCalledWith({ message: 'ERROR' });
   });
 });
 
-describe('inventory result callback', () => {
-  test('throws error if receives inventory error', () => {
-    expect(() => {
-      purchaseInventoryIfAvailable('inventory error', undefined);
-    }).toThrow();
-  });
-
-  test('returns "PURCHASE" when inventory is available', () => {
-    expect(purchaseInventoryIfAvailable(null, true)).toBe('PURCHASE');
-  });
-
-  test('returns "NOOP" when inventory is unavailable', () => {
-    expect(purchaseInventoryIfAvailable(null, false)).toBe('NOOP');
+describe('task 3', () => {
+  test('order from grocer passes callback function arguments forward', () => {
+    const query = { variety: 'apple', quantity: 10 };
+    orderFromGrocer(query, onSuccess, onError);
+    expect(order).toHaveBeenCalledTimes(1);
+    expect(order).toHaveBeenCalledWith(query, onSuccess, onError);
   });
 });
 
-describe('putting it together', () => {
-  beforeEach(() => {
-    resetQuery();
-  });
+describe('task 4', () => {
+  test('postOrder composes a request to the grocer using the defined callbacks', () => {
+    const variety = 'banana';
+    const quantity = 5;
+    postOrder(variety, quantity);
 
-  test('uses the query format', () => {
-    setResponse(null, true);
-    pickAndPurchaseFruit('jackfruit', 15);
-    expect(getLastQuery()).toEqual({
-      variety: 'jackfruit',
-      quantity: 15,
-    });
-  });
-
-  test('takes parameters for the query', () => {
-    setResponse(null, true);
-    pickAndPurchaseFruit('raspberry', 30);
-    expect(getLastQuery()).toEqual({
-      variety: 'raspberry',
-      quantity: 30,
-    });
-  });
-
-  test('throws error if receives inventory error', () => {
-    expect(() => {
-      pickAndPurchaseFruit('honeydew', 3);
-    }).toThrow();
-  });
-
-  test('returns "NOOP" if quantity not available', () => {
-    setResponse(null, false);
-    expect(pickAndPurchaseFruit('apples', 12)).toBe('NOOP');
-  });
-
-  test('returns "PURCHASE" if quantity available', () => {
-    setResponse(null, true);
-    expect(pickAndPurchaseFruit('oranges', 22)).toBe('PURCHASE');
+    expect(order).toHaveBeenCalledTimes(1);
+    expect(order).toHaveBeenCalledWith(
+      { variety, quantity },
+      onSuccess,
+      onError
+    );
   });
 });

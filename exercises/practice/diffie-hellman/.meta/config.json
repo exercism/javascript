@@ -1,6 +1,7 @@
 {
-  "blurb": "Diffie-Hellman key exchange.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "ankorGH",
     "rchavarria",
@@ -9,10 +10,23 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": ["diffie-hellman.js"],
-    "test": ["diffie-hellman.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "diffie-hellman.js"
+    ],
+    "test": [
+      "diffie-hellman.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Diffie-Hellman key exchange.",
   "source": "Wikipedia, 1024 bit key from www.cryptopp.com/wiki.",
-  "source_url": "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
+  "source_url": "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

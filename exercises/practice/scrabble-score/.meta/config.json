@@ -1,6 +1,7 @@
 {
-  "blurb": "Given a word, compute the Scrabble score for that word.",
-  "authors": ["matthewmorgan"],
+  "authors": [
+    "matthewmorgan"
+  ],
   "contributors": [
     "amscotti",
     "ankorGH",
@@ -11,10 +12,23 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["scrabble-score.js"],
-    "test": ["scrabble-score.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "scrabble-score.js"
+    ],
+    "test": [
+      "scrabble-score.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
+  "blurb": "Given a word, compute the Scrabble score for that word.",
   "source": "Inspired by the Extreme Startup game",
-  "source_url": "https://github.com/rchatley/extreme_startup"
+  "source_url": "https://github.com/rchatley/extreme_startup",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
 }

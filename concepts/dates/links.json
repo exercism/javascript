@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://javascript.info/date",
+    "description": "javascript.info: Date"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date",
+    "description": "MDN: Date() Constructor"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse",
+    "description": "MDN: Date.parse()"
+  }
+]

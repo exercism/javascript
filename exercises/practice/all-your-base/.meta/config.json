@@ -1,6 +1,7 @@
 {
-  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-  "authors": ["javaeeeee"],
+  "authors": [
+    "javaeeeee"
+  ],
   "contributors": [
     "ankorGH",
     "matthewmorgan",
@@ -10,8 +11,21 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["all-your-base.js"],
-    "test": ["all-your-base.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "all-your-base.js"
+    ],
+    "test": [
+      "all-your-base.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
   }
 }
