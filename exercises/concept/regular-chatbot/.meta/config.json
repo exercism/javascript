@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "julendiaz"
+  ],
+  "contributors": [
+    "junedev"
+  ],
+  "files": {
+    "solution": [
+      "regular-chatbot.js"
+    ],
+    "test": [
+      "regular-chatbot.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
+  },
+  "blurb": "Learn the basics of regular expressions with JavaScript by helping a chatbot understand humans."
+}

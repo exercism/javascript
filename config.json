@@ -255,6 +255,14 @@
         "concepts": ["classes"],
         "prerequisites": ["objects", "functions", "conditionals-ternary"],
         "status": "beta"
+      },
+      {
+        "slug": "regular-chatbot",
+        "name": "Regular Chatbot",
+        "uuid": "dc118a0d-be89-4ea5-a814-e471897d921a",
+        "concepts": ["regular-expressions"],
+        "prerequisites": ["arrays", "classes", "objects", "template-strings"],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -2103,6 +2111,11 @@
       "uuid": "e0ff7a2b-d6f7-4513-9589-3e6854e14415",
       "slug": "classes",
       "name": "Prototypes & Classes"
+    },
+    {
+      "uuid": "e5695bba-50c1-4c55-af3e-2444883bd83b",
+      "slug": "regular-expressions",
+      "name": "Regular Expressions"
     }
   ],
   "key_features": [
