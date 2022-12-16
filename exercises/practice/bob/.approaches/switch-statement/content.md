@@ -3,20 +3,22 @@
 ```javascript
 export function hey(message) {
   const speech = message.trim();
-  if (speech == '') return 'Fine. Be that way!';
+  if (speech == "") {
+    return "Fine. Be that way!";
+  }
 
-  const isQuestion = speech.endsWith('?');
+  const isQuestion = speech.endsWith("?");
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
 
   switch (true) {
     case isQuestion && isShout:
       return "Calm down, I know what I'm doing!";
     case isShout:
-      return 'Whoa, chill out!';
+      return "Whoa, chill out!";
     case isQuestion:
-      return 'Sure.';
+      return "Sure.";
     default:
-      return 'Whatever.';
+      return "Whatever.";
   }
 }
 ```
@@ -54,6 +56,8 @@ Notice that when the body of an `if` statement is a short single line, both the 
 ```javascript
 if (input == '') return 'Fine. Be that way!';
 ```
+
+It may not comply with some coding styles, but your team preferences may allow it.
 
 [switch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
