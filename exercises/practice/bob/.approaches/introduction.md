@@ -45,7 +45,7 @@ export function hey(message) {
   if (isQuestion) {
     return "Sure.";
   }
-  retu
+  return "Whatever.";
 ```
 
 For more information, check the [`if` statements approach][approach-if].
