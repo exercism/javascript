@@ -10,7 +10,9 @@ const answers = [
 
 export function hey(message) {
   const speech = message.trimEnd();
-  if (speech == '') return 'Fine. Be that way!';
+  if (speech == '') {
+    return 'Fine. Be that way!';
+  }
 
   const isQuestion = speech.endsWith('?') ? 1 : 0;
   const isShout =
@@ -54,11 +56,13 @@ For example, giving a question a score of `1` would use an index of `1` to get t
 
 ## Shortening
 
-Notice that when the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
+Note that when the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
 if (speech == '') return 'Fine. Be that way!';
 ```
+
+It may not comply with some coding styles, but your team preferences may allow it.
 
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [trimend]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd

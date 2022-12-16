@@ -3,7 +3,9 @@
 ```javascript
 export function hey(message) {
   const speech = message.trim();
-  if (speech == '') return 'Fine. Be that way!';
+  if (speech == '') {
+    return 'Fine. Be that way!';
+  }
 
   const isQuestion = speech.endsWith('?');
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
@@ -49,11 +51,13 @@ If neither `isQuestion` and `isShout` are `true`, the `default` arm of the `swit
 
 ## Shortening
 
-Notice that when the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
+Note that when the body of an `if` statement is a short single line, both the test expression and the body could be put on the same line, like so
 
 ```javascript
 if (input == '') return 'Fine. Be that way!';
 ```
+
+It may not comply with some coding styles, but your team preferences may allow it.
 
 [switch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
