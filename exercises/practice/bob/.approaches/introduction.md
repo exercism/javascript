@@ -55,22 +55,22 @@ For more information, check the [`if` statements approach][approach-if].
 ```javascript
 export function hey(message) {
   const speech = message.trim();
-  if (speech == "") {
-    return "Fine. Be that way!";
+  if (speech == '') {
+    return 'Fine. Be that way!';
   }
 
-  const isQuestion = speech.endsWith("?");
+  const isQuestion = speech.endsWith('?');
   const isShout = /[A-Z]{1}/.test(speech) && speech == speech.toUpperCase();
 
   switch (true) {
     case isQuestion && isShout:
       return "Calm down, I know what I'm doing!";
     case isShout:
-      return "Whoa, chill out!";
+      return 'Whoa, chill out!';
     case isQuestion:
-      return "Sure.";
+      return 'Sure.';
     default:
-      return "Whatever.";
+      return 'Whatever.';
   }
 }
 ```
