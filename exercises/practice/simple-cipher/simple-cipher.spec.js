@@ -8,11 +8,11 @@ describe('Random key cipher', () => {
     // Here we take advantage of the fact that plaintext of "aaa..."
     // outputs the key. This is a critical problem with shift ciphers, some
     // characters will always output the key verbatim.
-    expect(cipher.encode('aaaaaaaaaa')).toEqual(cipher.key.substr(0, 10));
+    expect(cipher.encode('aaaaaaaaaa')).toEqual(cipher.key.substring(0, 10));
   });
 
   xtest('can decode', () => {
-    expect(cipher.decode(cipher.key.substr(0, 10))).toEqual('aaaaaaaaaa');
+    expect(cipher.decode(cipher.key.substring(0, 10))).toEqual('aaaaaaaaaa');
   });
 
   xtest('is reversible', () => {
