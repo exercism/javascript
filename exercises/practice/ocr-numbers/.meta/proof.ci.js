@@ -30,7 +30,7 @@ const splitIntoDigits = (row) => {
   for (let digitNumber = 0; digitNumber < rows[0].length; digitNumber += 3) {
     let digit = '';
     for (let rowNumber = 0; rowNumber < rows.length; rowNumber += 1) {
-      digit += rows[rowNumber].substr(digitNumber, 3);
+      digit += rows[rowNumber].substring(digitNumber, digitNumber+3);
     }
     digits.push(digit);
   }
