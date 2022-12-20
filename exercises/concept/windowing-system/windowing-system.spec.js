@@ -86,10 +86,10 @@ describe('resize', () => {
 
   test('does not resize below 1', () => {
     const programWindow = new ProgramWindow();
-    const newSize = new Size(0, -10);
+    const newSize = new Size(80, -10);
     programWindow.resize(newSize);
 
-    expect(programWindow.size.width).toBe(1);
+    expect(programWindow.size.width).toBe(80);
     expect(programWindow.size.height).toBe(1);
   });
 });
