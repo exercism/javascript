@@ -43,7 +43,7 @@ Uh-oh. some wagons seem to have gone missing.
 Fortunately, your friend just found another `array` which appears to contain the missing wagon IDs, and would like you to add them into the main wagon ID `array`.
 All they can remember is that the missing values should be placed directly after the designated locomotive.
 
-Given this new information, write a function called `CorrectListOfWagons` that takes two arrays which have the IDs of each wagon as the arguments. 
+Given this new information, write a function called `CorrectListOfWagons` that takes two arrays which have the IDs of each wagon as the arguments.
 The wagon IDs of the second `array` should be added into the first `array` directly after the locomotive (ID 1).
 
 ```javascript
@@ -70,8 +70,8 @@ The variable `moreRouteInformation` can contain different properties.
 ```
 
 ```javascript
-route  = {from: "Berlin", to: "Hamburg"};
-moreRouteInformation = {length: "100", speed: "50"};
+route = { from: "Berlin", to: "Hamburg" };
+moreRouteInformation = { length: "100", speed: "50" };
 extendRouteInformation(route, moreRouteInformation);
 // => {from: "Berlin", to: "Hamburg", length: "100", speed: "50"}
 ```
@@ -85,11 +85,11 @@ Implement a function `separateArrivalTime` that accepts an object with the routi
 The function should return an array there the first element of the array is the arrival time and the second element is an object with the routing information without arrival time.
 
 ```javascript
-routeInformation= {
+routeInformation = {
   from: "Berlin",
   to: "Hamburg",
   length: "100",
-  timeOfArrival: "10:10"
+  timeOfArrival: "10:10",
 };
 separateTimeOfArrival(routeInformation);
 // => ["10:10", {from: "Berlin", to: "Hamburg", length: "100"}]

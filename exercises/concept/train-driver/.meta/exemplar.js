@@ -10,8 +10,8 @@
  * @param {number[]} eachWagonsID
  * @returns {number[]} each Wagons Wiegth
  */
- export function getListOfWagons(...eachWagonsID) {
-  return eachWagonsID
+export function getListOfWagons(...eachWagonsID) {
+  return eachWagonsID;
 }
 
 /**

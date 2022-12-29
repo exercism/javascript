@@ -30,9 +30,9 @@ Similarly to arrays, the rest operator can also be used to collect one or more o
 
 ```javascript
 const { street, ...address } = {
-  street: 'Platz der Republik 1',
-  postalCode: '11011',
-  city: 'Berlin',
+  street: "Platz der Republik 1",
+  postalCode: "11011",
+  city: "Berlin",
 };
 street;
 // => 'Platz der Republik 1'
@@ -46,11 +46,11 @@ When `...` appears in a function definition next to its last argument, that para
 
 ```javascript
 function concat(...strings) {
-  return strings.join(' ');
+  return strings.join(" ");
 }
-concat('one');
+concat("one");
 // => 'one'
-concat('one', 'two', 'three');
+concat("one", "two", "three");
 // => 'one two three'
 ```
 
@@ -65,7 +65,7 @@ const oneToFive = [1, 2, 3, 4, 5];
 const oneToTen = [...oneToFive, 6, 7, 8, 9, 10];
 oneToTen;
 // => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const woow = ['A', ...oneToFive, 'B', 'C', 'D', 'E', ...oneToFive, 42];
+const woow = ["A", ...oneToFive, "B", "C", "D", "E", ...oneToFive, 42];
 woow;
 // =>  ["A", 1, 2, 3, 4, 5, "B", "C", "D", "E", 1, 2, 3, 4, 5, 42]
 ```
@@ -76,10 +76,10 @@ Similarly to arrays, the spread operator can also be used to copy properties fro
 
 ```javascript
 let address = {
-  postalCode: '11011',
-  city: 'Berlin',
+  postalCode: "11011",
+  city: "Berlin",
 };
-address = { ...address, country: 'Germany' };
+address = { ...address, country: "Germany" };
 // => {
 //   postalCode: '11011',
 //   city: 'Berlin',
