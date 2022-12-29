@@ -70,8 +70,8 @@ The variable `moreRouteInformation` can contain different properties.
 ```
 
 ```javascript
-route = { from: "Berlin", to: "Hamburg" };
-moreRouteInformation = { length: "100", speed: "50" };
+route = { from: 'Berlin', to: 'Hamburg' };
+moreRouteInformation = { length: '100', speed: '50' };
 extendRouteInformation(route, moreRouteInformation);
 // => {from: "Berlin", to: "Hamburg", length: "100", speed: "50"}
 ```
@@ -86,10 +86,10 @@ The function should return an array there the first element of the array is the 
 
 ```javascript
 routeInformation = {
-  from: "Berlin",
-  to: "Hamburg",
-  length: "100",
-  timeOfArrival: "10:10",
+  from: 'Berlin',
+  to: 'Hamburg',
+  length: '100',
+  timeOfArrival: '10:10',
 };
 separateTimeOfArrival(routeInformation);
 // => ["10:10", {from: "Berlin", to: "Hamburg", length: "100"}]
