@@ -9,14 +9,9 @@ import {
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 
 describe('day rate', () => {
-  test('at 16/hour', () => {
-    const actual = dayRate(16);
-    expect(actual).toBe(128);
-  });
-
-  test('at 25/hour', () => {
-    const actual = dayRate(25);
-    expect(actual).toBe(200);
+  test('calculates given hourly rate, assuming 8-hour day', () => {
+    expect(dayRate(1)).toBe(8);
+    expect(dayRate(2)).toBe(2 * 8);
   });
 
   test('at 31.40/hour', () => {
