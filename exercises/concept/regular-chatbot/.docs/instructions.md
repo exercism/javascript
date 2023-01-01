@@ -53,9 +53,9 @@ If the number is valid (matches the character sequence specified by the **regula
 The expected format is: (+##) ###-###-###
 
 ```javascript
-isValidNumber('(+34) 659-771-594');
+checkPhoneNumber('(+34) 659-771-594');
 // => "Thanks! You can now download me to your phone."
-isValidNumber('659-771-594');
+checkPhoneNumber('659-771-594');
 // => "Oops, it seems like I can't reach out to 6s59-771-594"
 ```
 
@@ -81,13 +81,13 @@ For storing data from all the persons who have had a conversation with, the chat
 
 In this way, we want our chatbot to be really polite and make a good impression.
 
-Write the function `NiceToMeetYou()` that takes a string with the full name of the user, and returns the string **“Nice to meet you, John Smith”**
+Write the function `niceToMeetYou()` that takes a string with the full name of the user, and returns the string **“Nice to meet you, John Smith”**
 
 For learning purposes, implement the function using a **replacement method** from Regular Expressions.
 
 ```javascript
-let str = 'smith, john';
+let str = 'Smith, John';
 
-NiceToMeetYou(str);
-// => "Nice to meet you John Smith"
+niceToMeetYou(str);
+// => "Nice to meet you, John Smith"
 ```

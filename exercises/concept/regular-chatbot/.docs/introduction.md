@@ -97,7 +97,7 @@ const regex1 = /someone/;
 const regex2 = /happy/;
 
 funnyQuote.match(regex1);
-// => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
+// => ["someone", index: 11, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
 funnyQuote.match(regex2);
 // => null
