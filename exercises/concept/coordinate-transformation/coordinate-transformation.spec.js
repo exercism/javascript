@@ -128,4 +128,14 @@ describe('memoizeTransform', () => {
     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
     expect(mockFunction).toBeCalledTimes(3);
   });
+
+  test('should recalculate when a new function is passed in', () => {
+    const sumFunction = (x, y) => x + y;
+    const differenceFunction = (x, y) => x - y;
+    const memoizedSum = memoizeTransform(sumFunction);
+    const memoizedDifference = memoizeTransform(differenceFunction);
+
+    expect(memoizedSum(1, 2)).toEqual(3);
+    expect(memoizedDifference(1, 2)).toEqual(-1);
+  });
 });
