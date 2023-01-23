@@ -73,7 +73,7 @@ _When to use one or the other?_ Use the `test()` when you want a fast way of che
 
 ### Test
 
-The [test()][mdn-regex-test]] method executes a search for a match between a regular expression and a specified string. Returns true or false.
+The [test()][mdn-regex-test] method executes a search for a match between a regular expression and a specified string. Returns true or false.
 
 ```javascript
 const str = 'It is difficult to test if you have a virus';
