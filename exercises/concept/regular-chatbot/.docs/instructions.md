@@ -56,7 +56,7 @@ The expected format is: (+##) ###-###-###
 checkPhoneNumber('(+34) 659-771-594');
 // => "Thanks! You can now download me to your phone."
 checkPhoneNumber('659-771-594');
-// => "Oops, it seems like I can't reach out to 6s59-771-594"
+// => "Oops, it seems like I can't reach out to 659-771-594"
 ```
 
 ## Get website link
