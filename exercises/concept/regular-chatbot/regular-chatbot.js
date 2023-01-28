@@ -12,7 +12,7 @@ export function isValidCommand(command) {
 }
 
 /**
- * Given a certain message, help the chatbot get rid of all the emoji's encryption throught the message.
+ * Given a certain message, help the chatbot get rid of all the emoji's encryption through the message.
  *
  * @param {string} message
  * @returns {string} The message without the emojis encryption
@@ -32,7 +32,7 @@ export function checkPhoneNumber(number) {
 }
 
 /**
- * Given a certain response from the user, help the chatbot get only the URL
+ * Given a certain response from the user, help the chatbot get only the URL.
  *
  * @param {string} userInput
  * @returns {string[] | null} all the possible URL's that the user may have answered
@@ -42,7 +42,7 @@ export function getURL(userInput) {
 }
 
 /**
- * Greet the user using its full name data from the profile
+ * Greet the user using the full name data from the profile.
  *
  * @param {string} fullName
  * @returns {string} Greeting from the chatbot
