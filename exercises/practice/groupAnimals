@@ -1,0 +1,15 @@
+
+function groupAnimals(animals) {
+  const animalGroups = {};
+
+  animals.forEach(animal => {
+    const firstLetter = animal[0];
+    if (!animalGroups[firstLetter]) {
+      animalGroups[firstLetter] = [animal];
+    } else {
+      animalGroups[firstLetter].push(animal);
+    }
+  });
+
+  return Object.values(animalGroups);
+}
