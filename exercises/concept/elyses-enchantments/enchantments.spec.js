@@ -97,10 +97,10 @@ describe('make cards appear at the top', () => {
   });
 
   test('adding multiple cards to the stack at the top', () => {
-    const stack = [1];
+    let stack = [1];
 
-    insertItemAtTop(stack, 5);
-    insertItemAtTop(stack, 9);
+    stack = insertItemAtTop(stack, 5);
+    stack = insertItemAtTop(stack, 9);
 
     const expected = [1, 5, 9];
     expect(stack).toStrictEqual(expected);
@@ -143,10 +143,10 @@ describe('make cards disappear', () => {
   });
 
   test('remove the middle two cards', () => {
-    const stack = [1, 2, 3, 4];
+    let stack = [1, 2, 3, 4];
 
-    removeItem(stack, 1);
-    removeItem(stack, 1);
+    stack = removeItem(stack, 1);
+    stack = removeItem(stack, 1);
 
     const expected = [1, 4];
     expect(stack).toStrictEqual(expected);
@@ -167,10 +167,10 @@ describe('make the top card disappear', () => {
   });
 
   test('remove two cards from the top', () => {
-    const stack = [1, 2, 3];
+    let stack = [1, 2, 3];
 
-    removeItemFromTop(stack);
-    removeItemFromTop(stack);
+    stack = removeItemFromTop(stack);
+    stack = removeItemFromTop(stack);
 
     const expected = [1];
     expect(stack).toStrictEqual(expected);
@@ -211,10 +211,10 @@ describe('make cards appear at the bottom', () => {
   });
 
   test('adding multiple cards to the stack to the bottom', () => {
-    const stack = [1];
+    let stack = [1];
 
-    insertItemAtBottom(stack, 5);
-    insertItemAtBottom(stack, 9);
+    stack = insertItemAtBottom(stack, 5);
+    stack = insertItemAtBottom(stack, 9);
 
     const expected = [9, 5, 1];
     expect(stack).toStrictEqual(expected);
@@ -235,10 +235,10 @@ describe('make the bottom card disappear', () => {
   });
 
   test('remove two cards from the bottom', () => {
-    const stack = [1, 2, 3];
+    let stack = [1, 2, 3];
 
-    removeItemAtBottom(stack);
-    removeItemAtBottom(stack);
+    stack = removeItemAtBottom(stack);
+    stack = removeItemAtBottom(stack);
 
     const expected = [3];
     expect(stack).toStrictEqual(expected);
