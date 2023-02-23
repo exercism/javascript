@@ -59,7 +59,7 @@ Now that your machine can detect errors, you will implement a function that reac
 - If the temperature is too high, you will either shut down the machine if the temperature exceeds 600°C or turn on a warning light if it is less than that.
 - If another error happens, you'll rethrow it.
 
-Implements a function `monitorTheMachine` that takes an argument `actions`.
+Implement a function `monitorTheMachine` that takes an argument `actions`.
 
 `actions` is an object that has 4 properties :
 
