@@ -171,7 +171,8 @@ All the mechanisms we learned about in the "Prototype Syntax" section above stil
 By default, all instance fields are public in JavaScript.
 They can be directly accessed and assigned to.
 
-However, there is an established convention that fields and methods that start with an underscore should be treated as private.
+However, there is a new feature introduced ECMAScript 2019 that allows us to mark class fields as private using the '#' symbol. 
+The private fields can only be accessed from the class itself.
 They should never be accessed directly from outside the class.
 
 Private fields are sometimes accompanied by [getters][mdn-get] and [setters][mdn-set].
@@ -179,25 +180,26 @@ With the keywords `get` and `set` you can define functions that are executed whe
 
 ```javascript
 class Car {
+  #milage;
   constructor() {
-    this._milage = 0;
+    this.#milage = 0;
   }
 
-  get milage() {
-    return this._milage;
+  getMilage() {
+    return this.#milage;
   }
 
-  set milage(value) {
+  setMilage(value) {
     throw new Error(`Milage cannot be manipulated, ${value} is ignored.`);
     // Just an example, usually you would not provide a setter in this case.
   }
 }
 
 const myCar = new Car();
-myCar.milage;
+myCar.getMilage;
 // => 0
 myCar.milage = 100;
-// => Error: Milage cannot be manipulated, 100 is ignored.
+// => SyntaxError: Private field '#milage' must be declared in an enclosing class
 ```
 
 ---
