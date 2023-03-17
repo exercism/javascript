@@ -41,7 +41,7 @@ For a rough estimate, assume if the vehicle is less than 3 years old, it costs 8
 If it is more than 10 years old, it costs 50%.
 If the vehicle is at least 3 years old but not older than 10 years, it costs 70% of the original price.
 
-Implement the `calculateResellPrice(originalPrice, age)` function that applies this logic using `if`, `else if` and `else` (there are other ways but you want to practice).
+Implement the `calculateResellPrice(originalPrice, age)` function that applies this logic using `if`, `else if` and `else` (there are other ways if you want to practice).
 It takes the original price and the age of the vehicle as arguments and returns the estimated price in the dealership.
 
 ```javascript
