@@ -75,7 +75,8 @@ obj[key];
 ```
 
 Using the dot notation as a shorthand has the same restriction as omitting the quotation marks.
-It only works if the key follows the identifier naming rules. In other words, if you're key is not a single word using only letters, you must use square bracket notation.
+It only works if the key follows the identifier naming rules.
+In other words, if you're key is not a single word using only letters, you must use square bracket notation.
 
 ## Adding or Changing a Value
 
