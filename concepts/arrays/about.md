@@ -31,7 +31,7 @@ The array's object properties and list of array elements are separate, and the a
 ```javascript
 const names = ['Jack', 'Laura', 'Paul', 'Megan'];
 names.length;
-// => 3
+// => 4
 
 // Properties can be set on arrays using bracket ['property'] or
 // dot .property notation, and this will affect the length, as
