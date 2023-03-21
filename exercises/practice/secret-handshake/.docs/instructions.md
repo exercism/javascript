@@ -2,7 +2,7 @@
 
 Your task is to convert a number between 1 and 31 to a sequence of actions in the secret handshake.
 
-The sequence of actions is chosen by looking at the rightmost five digits of the number once it's been converted to binary.
+The sequence of actions is chosen by looking at the five digits of the number (between 1 and 31 = 2 ^ 5 - 1) once it's been converted to binary. 
 Start at the right-most digit and move left.
 
 The actions for each number place are:
@@ -18,7 +18,7 @@ The actions for each number place are:
 Let's use the number `9` as an example:
 
 - 9 in binary is `1001`.
-- The digit that is farthest to the right is 1, so the first action is `wink`.
+- The digit that is closest to the right is 1, so the first action is `wink`.
 - Going left, the next digit is 0, so there is no double-blink.
 - Going left again, the next digit is 0, so you leave your eyes open.
 - Going left again, the next digit is 1, so you jump.
