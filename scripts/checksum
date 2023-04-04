@@ -125,8 +125,9 @@ helpers.createExercisePackageJson(true);
 
 checksumAll('package.json', 'exercise-package.json');
 
-['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE'].forEach((fileToCheck) => {
-  checksumAll(fileToCheck);
-});
+['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE', '.gitignore'].forEach((fileToCheck) => {
+    checksumAll(fileToCheck);
+  }
+);
 
 shell.echo('All files passed the checksum test');

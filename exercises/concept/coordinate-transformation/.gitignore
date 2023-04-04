@@ -1,3 +1,5 @@
-node_modules
-yarn-error.log
-
+/node_modules
+/bin/configlet
+/bin/configlet.exe
+/pnpm-lock.yaml
+/yarn.lock
