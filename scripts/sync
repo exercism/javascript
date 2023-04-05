@@ -38,9 +38,11 @@ function copyConfigForAssignment(assignment) {
     .ShellString(JSON.stringify(mergedPackageJson, undefined, 2) + '\n')
     .to(assignmentPackageFilename);
 
-  ['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE'].forEach((file) => {
-    shell.cp(file, destination);
-  });
+  ['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE', '.gitignore'].forEach(
+    (file) => {
+      shell.cp(file, destination);
+    }
+  );
 }
 
 function getCurrentPackageJson(assignmentPackageFilename) {
