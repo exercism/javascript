@@ -4,6 +4,7 @@ You work for a bioengineering company that specializes in developing therapeutic
 
 Your team has just been given a new project to develop a targeted therapy for a rare type of cancer.
 
+<!-- prettier-ignore -->
 ~~~~exercism/note
 It's all very complicated, but the basic idea is that sometimes people's bodies produce too much of a given protein.
 That can cause all sorts of havoc.
