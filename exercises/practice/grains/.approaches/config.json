@@ -1,6 +1,8 @@
 {
   "introduction": {
-    "authors": ["bobahop"]
+    "authors": [
+      "bobahop"
+    ]
   },
   "approaches": [
     {
@@ -8,14 +10,18 @@
       "slug": "exponentiation",
       "title": "exponentiation",
       "blurb": "Use exponentiation to raise 2 by a specified power.",
-      "authors": ["bobahop"]
+      "authors": [
+        "bobahop"
+      ]
     },
     {
       "uuid": "019b01f3-1955-45b1-96e9-06a233627f3e",
       "slug": "bit-shifting",
       "title": "Bit-shifting",
       "blurb": "Use bit-shifting to set the correct value.",
-      "authors": ["bobahop"]
+      "authors": [
+        "bobahop"
+      ]
     }
   ]
 }
