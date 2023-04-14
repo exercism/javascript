@@ -9,3 +9,4 @@ LICENSE
 
 # These are formatted via configlet and will not match prettier
 exercises/**/.meta/config.json
+exercises/**/.approaches/config.json
