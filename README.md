@@ -2,6 +2,10 @@
 
 [![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
 
+⚠️ We 💙 our community but **this repository does not accept community contributions at this time**.
+There are no active maintainers to review PRs.
+Please read this [community blog post][freeing-maintainers] for details. ⚠️
+
 **Exercism exercises in JavaScript**
 
 This is the JavaScript track, one of the many tracks on [Exercism][web-exercism].
@@ -93,3 +97,4 @@ A lot of the improvements made to this track and tooling are also made to the Ty
 [git-typescript-representer]: https://github.com/exercism/typescript-representer
 [git-typescript-test-runner]: https://github.com/exercism/typescript-test-runner
 [git-website-copy]: https://github.com/exercism/website-copy
+[freeing-maintainers]: https://exercism.org/blog/freeing-our-maintainers
