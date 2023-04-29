@@ -1054,9 +1054,8 @@
         "name": "House",
         "uuid": "a8b7187d-12eb-4efc-b966-87823654ccda",
         "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": ["arrays", "conditionals", "loops", "recursion", "strings"]
+        "prerequisites": ["for-loops", "arrays", "strings"],
+        "difficulty": 4
       },
       {
         "slug": "isbn-verifier",
