@@ -29,7 +29,7 @@ So when she starts her shift in the morning she needs to make sure the bin of li
 Implement the function `limesToCut` which takes the number of lime wedges Li Mei needs to cut and an array representing the supply of whole limes she has at hand.
 She can get 6 wedges from a `'small'` lime, 8 wedges from a `'medium'` lime and 10 from a `'large'` lime.
 She always cuts the limes in the order in which they appear in the list, starting with the first item.
-She keeps going until she reached the number of wedges that she needs or until she runs out of limes.
+She keeps going until she reaches the number of wedges that she needs or until she runs out of limes.
 
 Li Mei would like to know in advance how many limes she needs to cut.
 The `limesToCut` function should return the number of limes to cut.
