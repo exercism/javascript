@@ -1,8 +1,10 @@
 # Introduction
 
-The ability for something to be defined in terms of itself is called recursion. Recursive functions are functions that call themselves.
+The ability for something to be defined in terms of itself is called recursion.
+Recursive functions are functions that call themselves.
 
-Suppose that you have a function called `recurse`. This function is recursive if it calls itself inside its body, like this:
+Suppose that you have a function called `recurse`.
+This function is recursive if it calls itself inside its body, like this:
 
 ```js
 function recurse() {
@@ -25,7 +27,8 @@ function recurse() {
 }
 ```
 
-Recursive functions often can be used instead of `for` loops for more succinct code. For example, take a countdown.
+Recursive functions often can be used instead of `for` loops for more succinct code.
+For example, take a countdown.
 Here's the more intuitive `for` loop approach:
 
 ```js

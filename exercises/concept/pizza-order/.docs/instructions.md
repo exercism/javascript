@@ -33,7 +33,7 @@ pizzaPrice(
 
 ## Calculate the total price of an order
 
-Your function will take in a list of `PizzaOrder`s and should return the total price of the order in dollars.
+Your function is called with a list of `PizzaOrder`s and should return the total price of the order in dollars.
 Each `PizzaOrder` has a `pizza` property - the pizza's name, and an `extras` property - the list of extra options.
 
 ```js
@@ -43,4 +43,5 @@ orderPrice([margherita, caprese]);
 // => 18
 ```
 
-You'll realize that you can't write this using recursion, as one test with a tremendous amount of orders will raise a `Maximum call stack size exceeded`. No worries, this is intentional - try implementing this function using an imperative loop!
+You'll realize that you can't write this using recursion, as one test with a tremendous amount of orders will raise a `Maximum call stack size exceeded`.
+No worries, this is intentional - try implementing this function using an imperative loop!
