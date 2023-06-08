@@ -87,4 +87,3 @@ There are only two viable solutions to a call stack error caused by a synchronou
 - rewrite the recursive function to an imperative loop, which will execute the body of the loop, without having to enter a function, thus without increasing the stack.
 ~~~~
 <!-- prettier-ignore-end -->
-
