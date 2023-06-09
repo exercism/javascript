@@ -88,12 +88,12 @@ describe('composeTransform', () => {
 
   test('should compose in the correct order: g(f(x))', () => {
     const composed = composeTransform(scaler, translator);
-    expect(composed(0, 0)).toEqual([-6, 10]);
+    expect(composed(0, 0)).toEqual([-12, 20]);
   });
 
   test('should compose in the opposite order: f(g(x))', () => {
     const composed = composeTransform(translator, scaler);
-    expect(composed(0, 0)).toEqual([-18, 20]);
+    expect(composed(0, 0)).toEqual([-36, 40]);
   });
 });
 
