@@ -81,7 +81,7 @@ This method modifies the array it is called on.
 
 ### slice (pure)
 
-Given a start and an end index, creates a sub-array from the array passed as a parameter.
+Given a start and an end index, creates a sub-array from the array it is called on.
 
 The element at the end index will not be included.
 Also, all parameters are optional:

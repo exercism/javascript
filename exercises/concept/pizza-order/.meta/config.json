@@ -1,6 +1,7 @@
 {
   "authors": [
-    "SleeplessByte"
+    "SleeplessByte",
+    "safwansamsudeen"
   ],
   "files": {
     "solution": [
@@ -16,7 +17,7 @@
   "forked_from": [
     "fsharp/pizza-pricing"
   ],
-  "blurb": "TODO: add blurb for recursion exercise",
+  "blurb": "Allow customers to calculate the cost of their order",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

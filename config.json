@@ -161,7 +161,7 @@
           "array-destructuring",
           "array-transformations"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "coordinate-transformation",
