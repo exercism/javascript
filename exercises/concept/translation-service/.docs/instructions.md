@@ -17,7 +17,7 @@ The space translators are extremely fickle and hate redundancy, so they also pro
 
 If a translation is not found in the _API storage_, the API throws a `NotAvailable` error.
 Translations can be added using the `api.request` method.
-If 'text' is not translatable, the API throws an `Untranslatable` error.
+If `text` is not translatable, the API throws an `Untranslatable` error.
 
 ```javascript
 api.fetch('jIyaj');
