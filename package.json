@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
-    "@exercism/babel-preset-javascript": "^0.2.1",
+    "@exercism/babel-preset-javascript": "^0.4.0",
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.2.5",
