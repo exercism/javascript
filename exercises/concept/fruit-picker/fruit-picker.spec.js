@@ -33,7 +33,7 @@ describe('task 2', () => {
 });
 
 describe('task 3', () => {
-  test('order from grocer passes callback function arguments forward', () => {
+  test('orderFromGrocer passes query and callback function arguments forward', () => {
     const query = { variety: 'apple', quantity: 10 };
     orderFromGrocer(query, onSuccess, onError);
     expect(order).toHaveBeenCalledTimes(1);
