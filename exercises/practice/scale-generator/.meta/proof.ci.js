@@ -1,76 +1,49 @@
 export class Scale {
   constructor(tonic) {
-    this.INTERVAL_STEPS = ['m', 'M', 'A'];
-    this.SHARPS_SCALE = [
-      'A',
-      'A#',
-      'B',
-      'C',
-      'C#',
+    this.tonic = tonic;
+    this.notes = {
+      sharp: ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'],
+      flat: ['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab'],
+    };
+    this.sharpStart = [
+      'G',
       'D',
-      'D#',
+      'A',
       'E',
-      'F',
+      'B',
       'F#',
-      'G',
-      'G#',
-    ];
-    this.FLATS_SCALE = [
-      'A',
-      'Bb',
-      'B',
+      'e',
+      'b',
+      'f#',
+      'c#',
+      'g#',
+      'd#',
       'C',
-      'Db',
-      'D',
-      'Eb',
-      'E',
-      'F',
-      'Gb',
-      'G',
-      'Ab',
+      'a',
     ];
-    this.USE_FLATS = [
-      'F',
-      'Bb',
-      'Eb',
-      'Ab',
-      'Db',
-      'Gb',
-      'd',
-      'g',
-      'c',
-      'f',
-      'bb',
-      'eb',
-    ];
+    this.accidental =
+      this.notes[this.sharpStart.includes(this.tonic) ? 'sharp' : 'flat'];
+    this.index = this.accidental.indexOf(this.toTitleCase(this.tonic));
+    this.steps = { m: 1, M: 2, A: 3 };
+  }
 
-    this.tonic = tonic.slice(0, 1).toUpperCase() + tonic.slice(1);
-    // note use of original tonic argument
-    this.chromaticScale = this.USE_FLATS.includes(tonic)
-      ? this.FLATS_SCALE
-      : this.SHARPS_SCALE;
+  toTitleCase(str) {
+    return str.charAt(0).toUpperCase() + str.substring(1);
+  }
+
+  generateScale(intervals) {
+    return [this.accidental[this.index]].concat(
+      intervals
+        .split('')
+        .map((i) => this.accidental[(this.index += this.steps[i]) % 12])
+    );
   }
 
   chromatic() {
-    return this.reorderChromaticScale();
+    return this.generateScale('mmmmmmmmmmm');
   }
 
   interval(intervals) {
-    const scale = this.reorderChromaticScale();
-    const result = [];
-    let currentIndex = 0;
-
-    for (const step of intervals) {
-      result.push(scale[currentIndex]);
-      currentIndex = currentIndex + (this.INTERVAL_STEPS.indexOf(step) + 1);
-    }
-    return result;
-  }
-
-  reorderChromaticScale() {
-    const tonicIndex = this.chromaticScale.indexOf(this.tonic);
-    return this.chromaticScale
-      .slice(tonicIndex)
-      .concat(this.chromaticScale.slice(0, tonicIndex));
+    return this.generateScale(intervals);
   }
 }
