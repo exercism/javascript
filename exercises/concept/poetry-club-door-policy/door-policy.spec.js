@@ -61,12 +61,12 @@ describe('front door password', () => {
     expect(frontDoorPassword('SUMMER')).toBe('Summer');
   });
 
-  test('should capitalize SOPHIA', () => {
-    expect(frontDoorPassword('SOPHIA')).toBe('Sophia');
+  test('should capitalize sophia', () => {
+    expect(frontDoorPassword('sophia')).toBe('Sophia');
   });
 
-  test('should capitalize CODE', () => {
-    expect(frontDoorPassword('CODE')).toBe('Code');
+  test('should capitalize Code', () => {
+    expect(frontDoorPassword('Code')).toBe('Code');
   });
 });
 
