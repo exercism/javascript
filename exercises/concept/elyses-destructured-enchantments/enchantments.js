@@ -46,7 +46,7 @@ export function discardTopCard(deck) {
   throw new Error('Implement the discardTopCard function');
 }
 
-/** @type Card[] **/
+/** @type {Card[]} **/
 const FACE_CARDS = ['jack', 'queen', 'king'];
 
 /**
