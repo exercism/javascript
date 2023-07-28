@@ -15,7 +15,7 @@ describe('run-length encode a string', () => {
 
   xtest('encode string with single characters mixed with repeated characters', () => {
     expect(
-      encode('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB')
+      encode('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB'),
     ).toEqual('12WB12W3B24WB');
   });
 
@@ -43,7 +43,7 @@ describe('run-length decode a string', () => {
 
   xtest('decode string with single characters mixed with repeated characters', () => {
     expect(decode('12WB12W3B24WB')).toEqual(
-      'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB'
+      'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB',
     );
   });
 

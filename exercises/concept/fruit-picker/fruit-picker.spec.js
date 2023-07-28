@@ -51,7 +51,7 @@ describe('task 4', () => {
     expect(order).toHaveBeenCalledWith(
       { variety, quantity },
       onSuccess,
-      onError
+      onError,
     );
   });
 });

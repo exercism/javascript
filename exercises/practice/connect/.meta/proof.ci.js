@@ -36,7 +36,7 @@ export class Board {
     const matches = this.neighbors(pos).filter(
       ({ x, y }) =>
         this.matches({ x, y }, XorO) &&
-        checked.filter((spot) => spot.x === x && spot.y === y).length === 0
+        checked.filter((spot) => spot.x === x && spot.y === y).length === 0,
     );
     if (matches.length === 0) {
       return false;

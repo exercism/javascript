@@ -249,7 +249,7 @@ function expectObjectsToBeEqual(actualObj, expectedObj) {
   for (const key in expectedObj) {
     expect(actualObj[key]).toBeCloseTo(
       expectedObj[key],
-      DIFFERENCE_PRECISION_IN_DIGITS
+      DIFFERENCE_PRECISION_IN_DIGITS,
     );
   }
   expect(Object.keys(actualObj).length).toBe(Object.keys(expectedObj).length);

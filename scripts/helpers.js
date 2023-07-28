@@ -8,7 +8,7 @@ const crypto = require('crypto');
 
 const exerciseDirs = shell.ls(
   '-d',
-  path.join('exercises', '{practice,concept}', '*')
+  path.join('exercises', '{practice,concept}', '*'),
 );
 
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`);
@@ -19,7 +19,7 @@ export const assignments = shell.env['ASSIGNMENT']
 
 function knownAssignments() {
   return exerciseDirs.map((directory) =>
-    path.join(path.basename(path.dirname(directory)), path.basename(directory))
+    path.join(path.basename(path.dirname(directory)), path.basename(directory)),
   );
 }
 
@@ -49,13 +49,13 @@ Expected ${chalk.cyan(`{type}${path.sep}{slug}`)}, actual: ${chalk.yellow(assign
   }
 
   const suggestions = knownAssignments().filter((known) =>
-    known.includes(assignment)
+    known.includes(assignment),
   );
 
   if (suggestions.length > 0 && suggestions.length < 5) {
     shell.echo(
       '\nDid you mean:\n' +
-        suggestions.map((suggestion) => `- ${suggestion}`).join('\n')
+        suggestions.map((suggestion) => `- ${suggestion}`).join('\n'),
     );
   }
 
@@ -77,7 +77,7 @@ export function findExerciseDirectory(input) {
 
   return path.join(
     path.basename(path.dirname(directory)),
-    path.basename(directory)
+    path.basename(directory),
   );
 }
 
@@ -86,7 +86,7 @@ export function fileConfiguration(assignment) {
     'exercises',
     assignment,
     '.meta',
-    'config.json'
+    'config.json',
   );
 
   let files = undefined;
@@ -104,7 +104,7 @@ export function fileConfiguration(assignment) {
     files[key] = files[key].map((value) =>
       value
         .replace('%{kebab_slug}', path.basename(assignment))
-        .replace(/[/\\]/g, path.sep)
+        .replace(/[/\\]/g, path.sep),
     );
   });
 
@@ -115,7 +115,7 @@ export function hasStub(assignment) {
   const stubFiles = fileConfiguration(assignment).solution;
 
   return stubFiles.every((stubFile) =>
-    shell.test('-f', path.join('exercises', assignment, stubFile))
+    shell.test('-f', path.join('exercises', assignment, stubFile)),
   );
 }
 
@@ -194,11 +194,11 @@ export function createExercisePackageJson(writeSha = false) {
 
   // Filter out some unwanted packages and create package.json for exercises
   SKIP_PACKAGES_FOR_CHECKSUM.forEach(
-    (pkg) => delete packageJson['devDependencies'][pkg]
+    (pkg) => delete packageJson['devDependencies'][pkg],
   );
 
   const shellStr = new shell.ShellString(
-    JSON.stringify(packageJson, undefined, 2) + '\n'
+    JSON.stringify(packageJson, undefined, 2) + '\n',
   );
 
   shellStr.to('exercise-package.json');
@@ -224,7 +224,7 @@ export function mergePackageJsons(basePackageJson, packageJson, assignment) {
   });
 
   const extraRepositoryKeys = Object.keys(packageJson.repository || {}).filter(
-    (key) => !basePackageJson.repository[key]
+    (key) => !basePackageJson.repository[key],
   );
 
   extraRepositoryKeys.forEach((key) => {
@@ -233,7 +233,7 @@ export function mergePackageJsons(basePackageJson, packageJson, assignment) {
 
   mergedPackageJson.repository.directory = `exercises/${assignment.replace(
     '\\',
-    '/'
+    '/',
   )}`;
 
   return mergedPackageJson;
@@ -287,7 +287,7 @@ export function prepare(assignment) {
     if (!shell.test('-f', specFile)) {
       if (specFileName !== 'custom.spec.js') {
         console.warn(
-          `Skipped copying test file for ${assignment}: ${specFileName} because it doesn't exist`
+          `Skipped copying test file for ${assignment}: ${specFileName} because it doesn't exist`,
         );
       }
 
@@ -297,7 +297,7 @@ export function prepare(assignment) {
     const specFileDestination = path.join(
       'tmp_exercises',
       assignment,
-      specFileName
+      specFileName,
     );
 
     shell.mkdir('-p', path.dirname(specFileDestination));
@@ -325,7 +325,7 @@ export function prepare(assignment) {
     const exampleFileDestination = path.join(
       'tmp_exercises',
       assignment,
-      files.solution[i]
+      files.solution[i],
     );
 
     shell.sed("from '../", "from './", exampleFile).to(exampleFileDestination);
@@ -340,7 +340,7 @@ export function prepare(assignment) {
       const solutionFileDestination = path.join(
         'tmp_exercises',
         assignment,
-        extraLibFileName
+        extraLibFileName,
       );
 
       shell.cp(solutionFile, solutionFileDestination);
@@ -354,7 +354,7 @@ export function prepare(assignment) {
       const readonlyFileDestination = path.join(
         'tmp_exercises',
         assignment,
-        readonlyFileName
+        readonlyFileName,
       );
 
       shell.cp(readonlyFile, readonlyFileDestination);
@@ -366,7 +366,7 @@ export function prepare(assignment) {
   if (shell.test('-d', libDir)) {
     shell.cp(
       path.join(libDir, '*.js'),
-      path.join('tmp_exercises', assignment, 'lib')
+      path.join('tmp_exercises', assignment, 'lib'),
     );
   }
 
@@ -377,7 +377,7 @@ export function prepare(assignment) {
   if (shell.test('-d', dataDir)) {
     shell.cp(
       path.join(dataDir, '*'),
-      path.join('tmp_exercises', assignment, 'data')
+      path.join('tmp_exercises', assignment, 'data'),
     );
   }
 }
@@ -414,6 +414,6 @@ export function registerExitHandler() {
 
   //catches uncaught exceptions
   process.on('uncaughtException', (error) =>
-    exitHandler({ exit: true, error })
+    exitHandler({ exit: true, error }),
   );
 }

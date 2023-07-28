@@ -113,6 +113,6 @@ describe('Robot', () => {
 
       expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
     },
-    8 * 1000
+    8 * 1000,
   );
 });

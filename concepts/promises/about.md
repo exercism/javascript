@@ -112,7 +112,7 @@ Promise.reject(new Error('failed')).then(
   },
   function (error) {
     console.error(error); // error in the console
-  }
+  },
 );
 ```
 
@@ -127,7 +127,7 @@ Promise.resolve('resolved!').then(
   },
   function (value) {
     // not called
-  }
+  },
 );
 ```
 

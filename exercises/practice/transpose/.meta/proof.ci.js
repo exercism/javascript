@@ -10,6 +10,6 @@ export function transpose(input) {
   return [...Array(maxCol).keys()].map((col) =>
     trimTrailingUndefined(input.map((_v, row) => input[row][col]))
       .map((charOrUndefined) => charOrUndefined || ' ')
-      .join('')
+      .join(''),
   );
 }

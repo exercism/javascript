@@ -25,7 +25,7 @@ For more information, check the [regex approach][approach-regex].
 ```javascript
 export function isIsogram(string) {
   let word = [...string.toLowerCase()].filter(
-    (letter) => letter >= 'a' && letter <= 'z'
+    (letter) => letter >= 'a' && letter <= 'z',
   );
   return new Set(word).size == word.length;
 }

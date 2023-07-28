@@ -43,7 +43,7 @@ export class Zipper {
 
     return new Zipper(
       this.tree.left,
-      [['left', this.tree.value, this.tree.right]].concat(this.trail)
+      [['left', this.tree.value, this.tree.right]].concat(this.trail),
     );
   }
 
@@ -52,7 +52,7 @@ export class Zipper {
 
     return new Zipper(
       this.tree.right,
-      [['right', this.tree.value, this.tree.left]].concat(this.trail)
+      [['right', this.tree.value, this.tree.left]].concat(this.trail),
     );
   }
 
@@ -66,21 +66,21 @@ export class Zipper {
   setValue(value) {
     return new Zipper(
       { value, left: this.tree.left, right: this.tree.right },
-      this.trail
+      this.trail,
     );
   }
 
   setLeft(left) {
     return new Zipper(
       { value: this.tree.value, left, right: this.tree.right },
-      this.trail
+      this.trail,
     );
   }
 
   setRight(right) {
     return new Zipper(
       { value: this.tree.value, left: this.tree.left, right },
-      this.trail
+      this.trail,
     );
   }
 }

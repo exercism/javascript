@@ -17,7 +17,7 @@ export class Allergies {
   list() {
     // eslint-disable-next-line no-bitwise, no-restricted-properties
     return possibleAllergies.filter(
-      (allergy, i) => this.allergenIndex & Math.pow(2, i)
+      (allergy, i) => this.allergenIndex & Math.pow(2, i),
     );
   }
 

@@ -47,7 +47,7 @@ describe('Robot', () => {
 
       expect(InvalidInputError.prototype).toBeInstanceOf(Error);
       expect(() => robot.place({ direction: 'crood', x: 0, y: 0 })).toThrow(
-        InvalidInputError
+        InvalidInputError,
       );
     });
   });

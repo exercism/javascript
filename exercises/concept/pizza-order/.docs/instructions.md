@@ -26,7 +26,7 @@ pizzaPrice(
   'ExtraToppings',
   'ExtraToppings',
   'ExtraToppings',
-  'ExtraToppings'
+  'ExtraToppings',
 );
 // => 17
 ```

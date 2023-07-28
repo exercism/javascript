@@ -12,7 +12,7 @@ export class Trinary {
 
     return this.digits.reduce(
       (decimal, digit, index) => decimal + digit * BASE ** index,
-      0
+      0,
     );
   }
 

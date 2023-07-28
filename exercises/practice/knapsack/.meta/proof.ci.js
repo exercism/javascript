@@ -11,7 +11,7 @@ export const knapsack = (maximumWeight, items) => {
       } else {
         table[i + 1][capacity] = Math.max(
           table[i][capacity],
-          value + table[i][capacity - weight]
+          value + table[i][capacity - weight],
         );
       }
     }

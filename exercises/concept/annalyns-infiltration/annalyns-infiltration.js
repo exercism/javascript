@@ -69,7 +69,7 @@ export function canFreePrisoner(
   knightIsAwake,
   archerIsAwake,
   prisonerIsAwake,
-  petDogIsPresent
+  petDogIsPresent,
 ) {
   throw new Error('Remove this line and implement the function');
 }

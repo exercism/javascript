@@ -47,7 +47,7 @@ describe('FlattenArray', () => {
 
   xtest('all values in nested list are null', () => {
     expect(
-      flatten([null, [[[null]]], null, null, [[null, null], null], null])
+      flatten([null, [[[null]]], null, null, [[null, null], null], null]),
     ).toEqual([]);
   });
 });

@@ -35,7 +35,7 @@ export class Scale {
     return [this.accidental[this.index]].concat(
       intervals
         .split('')
-        .map((i) => this.accidental[(this.index += this.steps[i]) % 12])
+        .map((i) => this.accidental[(this.index += this.steps[i]) % 12]),
     );
   }
 

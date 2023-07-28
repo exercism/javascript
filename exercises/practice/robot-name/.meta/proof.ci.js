@@ -41,7 +41,7 @@ function generateName() {
   shuffledPointer += 1;
   if (shuffledPointer > shuffled.length) {
     throw new Error(
-      'Can not generate another name because all the names have been used.'
+      'Can not generate another name because all the names have been used.',
     );
   }
   return shuffled[shuffledPointer];

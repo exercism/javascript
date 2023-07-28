@@ -34,7 +34,7 @@ export class CustomSet {
 
   difference(other) {
     return new CustomSet(
-      Object.keys(this.data).filter((el) => other.data[el] === undefined)
+      Object.keys(this.data).filter((el) => other.data[el] === undefined),
     );
   }
 

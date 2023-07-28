@@ -14,26 +14,26 @@ class Rational {
     const commonDenominator = this.denominator * that.denominator;
     return new Rational(
       this.numerator * that.denominator + that.numerator * this.denominator,
-      commonDenominator
+      commonDenominator,
     );
   }
   sub(that) {
     const commonDenominator = this.denominator * that.denominator;
     return new Rational(
       this.numerator * that.denominator - that.numerator * this.denominator,
-      commonDenominator
+      commonDenominator,
     );
   }
   mul(that) {
     return new Rational(
       this.numerator * that.numerator,
-      this.denominator * that.denominator
+      this.denominator * that.denominator,
     );
   }
   div(that) {
     return new Rational(
       this.numerator * that.denominator,
-      this.denominator * that.numerator
+      this.denominator * that.numerator,
     );
   }
   abs() {
@@ -42,13 +42,13 @@ class Rational {
   exprational(n) {
     return new Rational(
       Math.pow(this.numerator, n),
-      Math.pow(this.denominator, n)
+      Math.pow(this.denominator, n),
     );
   }
   expreal(base) {
     return Math.pow(
       10.0,
-      Math.log10(Math.pow(base, this.numerator)) / this.denominator
+      Math.log10(Math.pow(base, this.numerator)) / this.denominator,
     );
   }
   reduce() {

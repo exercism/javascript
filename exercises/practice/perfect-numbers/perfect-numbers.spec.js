@@ -4,13 +4,13 @@ describe('Exercise - Perfect Numbers', () => {
   describe('Invalid Inputs', () => {
     test('Zero is rejected (not a natural number)', () => {
       expect(() => classify(0)).toThrow(
-        new Error('Classification is only possible for natural numbers.')
+        new Error('Classification is only possible for natural numbers.'),
       );
     });
 
     xtest('Negative integer is rejected (not a natural number)', () => {
       expect(() => classify(-1)).toThrow(
-        new Error('Classification is only possible for natural numbers.')
+        new Error('Classification is only possible for natural numbers.'),
       );
     });
   });

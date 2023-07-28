@@ -61,7 +61,7 @@ arr.reduce(
 
     return accumulator;
   },
-  { even: [], odd: [] }
+  { even: [], odd: [] },
 );
 // => { even: [2, 4], odd: [1, 3] }
 ```

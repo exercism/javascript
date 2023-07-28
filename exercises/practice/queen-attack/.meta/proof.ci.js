@@ -66,7 +66,7 @@ export class QueenAttack {
 
   toString() {
     return Array.from({ length: H }, (_, row) =>
-      this.board.slice(row * H, row * H + W).join(' ')
+      this.board.slice(row * H, row * H + W).join(' '),
     ).join('\n');
   }
 }

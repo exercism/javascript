@@ -84,7 +84,7 @@ export class GoCounting {
           case this.OPEN:
             if (
               !territory.some(
-                (value) => value[0] === cell.x && value[1] === cell.y
+                (value) => value[0] === cell.x && value[1] === cell.y,
               )
             ) {
               territory.push([cell.x, cell.y]);

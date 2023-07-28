@@ -29,7 +29,7 @@ export const decode = (msg, rails) => {
   });
   return cycles.reduce(
     (str, cycle, index) => str + stringRails[cycle][index],
-    ''
+    '',
   );
 };
 

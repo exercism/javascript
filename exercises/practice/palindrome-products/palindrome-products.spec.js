@@ -94,7 +94,7 @@ describe('Palindromes', () => {
       expect(largest.value).toEqual(expected.value);
       expect(sortFactors(largest.factors)).toEqual(expected.factors);
     },
-    20 * 1000
+    20 * 1000,
   );
 
   xtest('empty result for smallest if no palindrome in range', () => {
