@@ -41,6 +41,6 @@ export function pizzaPrice(pizza, ...[extra, ...otherExtras]) {
 export function orderPrice(pizzaOrders) {
   return pizzaOrders.reduce(
     (result, order) => result + pizzaPrice(order.pizza, ...order.extras),
-    0
+    0,
   );
 }

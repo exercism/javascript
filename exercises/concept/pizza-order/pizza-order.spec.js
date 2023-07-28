@@ -64,8 +64,8 @@ describe('Price for pizza caprese with a lot of extra toppings', () => {
         'ExtraToppings',
         'ExtraToppings',
         'ExtraToppings',
-        'ExtraToppings'
-      )
+        'ExtraToppings',
+      ),
     ).toBe(17);
   });
 });
@@ -108,14 +108,14 @@ describe('Order price for one pizza margherita with a LOT of sauce and one pizza
       'Margherita',
       'ExtraSauce',
       'ExtraSauce',
-      'ExtraSauce'
+      'ExtraSauce',
     );
     const toppedCaprese = new PizzaOrder(
       'Caprese',
       'ExtraToppings',
       'ExtraToppings',
       'ExtraToppings',
-      'ExtraToppings'
+      'ExtraToppings',
     );
 
     expect(orderPrice([saucyMargherita, toppedCaprese])).toBe(27);
@@ -136,14 +136,14 @@ describe('Order price for very large order', () => {
     const formaggio3 = new PizzaOrder(
       'Formaggio',
       'ExtraSauce',
-      'ExtraToppings'
+      'ExtraToppings',
     );
     const formaggio4 = new PizzaOrder(
       'Formaggio',
       'ExtraToppings',
       'ExtraSauce',
       'ExtraToppings',
-      'ExtraSauce'
+      'ExtraSauce',
     );
 
     const actual = orderPrice([
@@ -163,7 +163,7 @@ describe('Order price for very large order', () => {
 describe('Order price for a gigantic order', () => {
   it('orderPrice([/* lots of */])', () => {
     const allTheMargheritas = Array(100 * 1000).fill(
-      new PizzaOrder('Margherita')
+      new PizzaOrder('Margherita'),
     );
     const actual = orderPrice(allTheMargheritas);
     expect(actual).toBe(700 * 1000);

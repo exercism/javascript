@@ -34,7 +34,7 @@ function runTestsExpectingChain(dominoes) {
           if (i === result.length - 1) return true;
           return v[1] === result[i + 1][0];
         })
-        .every(Boolean)
+        .every(Boolean),
     ).toBe(true);
   });
 
@@ -49,7 +49,7 @@ function runTestsExpectingChain(dominoes) {
   xit('Should have the same dominoes', () => {
     const sortDomino = (domino) => [...domino].sort();
     expect([...dominoes].map(sortDomino).sort()).toEqual(
-      [...result].map(sortDomino).sort()
+      [...result].map(sortDomino).sort(),
     );
   });
 }
@@ -74,7 +74,7 @@ describe('Dominoes', () => {
         [3, 1],
         [2, 3],
       ],
-      true
+      true,
     );
   });
 
@@ -85,7 +85,7 @@ describe('Dominoes', () => {
         [1, 3],
         [2, 3],
       ],
-      true
+      true,
     );
   });
 
@@ -96,7 +96,7 @@ describe('Dominoes', () => {
         [4, 1],
         [2, 3],
       ],
-      false
+      false,
     );
   });
 
@@ -106,7 +106,7 @@ describe('Dominoes', () => {
         [1, 1],
         [2, 2],
       ],
-      false
+      false,
     );
   });
 
@@ -118,7 +118,7 @@ describe('Dominoes', () => {
         [3, 4],
         [4, 3],
       ],
-      false
+      false,
     );
   });
 
@@ -130,7 +130,7 @@ describe('Dominoes', () => {
         [3, 1],
         [4, 4],
       ],
-      false
+      false,
     );
   });
 
@@ -143,7 +143,7 @@ describe('Dominoes', () => {
         [2, 4],
         [2, 4],
       ],
-      true
+      true,
     );
   });
 
@@ -157,7 +157,7 @@ describe('Dominoes', () => {
         [2, 2],
         [3, 3],
       ],
-      true
+      true,
     );
   });
 
@@ -174,7 +174,7 @@ describe('Dominoes', () => {
         [3, 4],
         [5, 6],
       ],
-      true
+      true,
     );
   });
 });

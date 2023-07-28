@@ -6,7 +6,7 @@ export const commands = (handshake) => {
   }
 
   const shakeWith = handshakeCommands.filter(
-    (_, i) => handshake & Math.pow(2, i)
+    (_, i) => handshake & Math.pow(2, i),
   );
 
   if (handshake & Math.pow(2, 4)) shakeWith.reverse();

@@ -8,6 +8,6 @@ export function countNucleotides(strand) {
 
   return `${count(strand, 'A')} ${count(strand, 'C')} ${count(
     strand,
-    'G'
+    'G',
   )} ${count(strand, 'T')}`;
 }

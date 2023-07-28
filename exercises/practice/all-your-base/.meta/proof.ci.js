@@ -44,7 +44,7 @@ export const convert = (array, inputBase, outputBase) => {
   }
   const decimalValue = array.reduce(
     (accumulator, value) => accumulator * inputBase + value,
-    0
+    0,
   );
   return convertFromDecimalToBase(decimalValue, outputBase);
 };

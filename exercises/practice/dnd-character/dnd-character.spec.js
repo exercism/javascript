@@ -68,13 +68,13 @@ describe('D&D Character', () => {
 
     xtest('ability score less than 3 throws error', () => {
       expect(() => abilityModifier(2)).toThrow(
-        new Error('Ability scores must be at least 3')
+        new Error('Ability scores must be at least 3'),
       );
     });
 
     xtest('ability score greater than 18 throws error', () => {
       expect(() => abilityModifier(19)).toThrow(
-        new Error('Ability scores can be at most 18')
+        new Error('Ability scores can be at most 18'),
       );
     });
   });

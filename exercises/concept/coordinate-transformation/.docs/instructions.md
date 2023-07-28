@@ -35,7 +35,7 @@ const moveCoordinatesRight2Px = translate2d(2, 0);
 const doubleCoordinates = scale2d(2, 2);
 const composedTransformations = composeTransformation(
   moveCoordinatesRight2Px,
-  doubleCoordinates
+  doubleCoordinates,
 );
 const result = composedTransformations(0, 1);
 // result => [4, 2]

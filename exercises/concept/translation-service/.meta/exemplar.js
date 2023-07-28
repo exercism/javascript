@@ -96,7 +96,7 @@ export class QualityThresholdNotMet extends Error {
    */
   constructor(text) {
     super(
-      `The translation of ${text} does not meet the requested quality threshold.`
+      `The translation of ${text} does not meet the requested quality threshold.`,
     );
 
     this.text = text;
@@ -110,7 +110,7 @@ export class QualityThresholdNotMet extends Error {
 export class BatchIsEmpty extends Error {
   constructor() {
     super(
-      `Requested a batch translation, but there are no texts in the batch.`
+      `Requested a batch translation, but there are no texts in the batch.`,
     );
   }
 }

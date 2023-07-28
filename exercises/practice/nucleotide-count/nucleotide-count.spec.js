@@ -16,14 +16,14 @@ describe('count all nucleotides in a strand', () => {
   xtest('strand with multiple nucleotides', () => {
     expect(
       countNucleotides(
-        'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
-      )
+        'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC',
+      ),
     ).toEqual('20 12 17 21');
   });
 
   xtest('strand with invalid nucleotides', () => {
     expect(() => countNucleotides('AGXXACT')).toThrow(
-      new Error('Invalid nucleotide in strand')
+      new Error('Invalid nucleotide in strand'),
     );
   });
 });

@@ -3,7 +3,7 @@ import { findAnagrams } from './anagram';
 describe('Anagram', () => {
   test('no matches', () => {
     expect(
-      findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants'])
+      findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants']),
     ).toEqual([]);
   });
 
@@ -20,7 +20,7 @@ describe('Anagram', () => {
 
   xtest('detects anagram', () => {
     expect(
-      findAnagrams('listen', ['enlists', 'google', 'inlets', 'banana'])
+      findAnagrams('listen', ['enlists', 'google', 'inlets', 'banana']),
     ).toEqual(['inlets']);
   });
 
@@ -33,7 +33,7 @@ describe('Anagram', () => {
         'clergy',
         'largely',
         'leading',
-      ])
+      ]),
     ).toEqual(['gallery', 'regally', 'largely']);
   });
 
@@ -47,19 +47,19 @@ describe('Anagram', () => {
 
   xtest('detects anagrams case-insensitively', () => {
     expect(
-      findAnagrams('Orchestra', ['cashregister', 'Carthorse', 'radishes'])
+      findAnagrams('Orchestra', ['cashregister', 'Carthorse', 'radishes']),
     ).toEqual(['Carthorse']);
   });
 
   xtest('detects anagrams using case-insensitive subject', () => {
     expect(
-      findAnagrams('Orchestra', ['cashregister', 'carthorse', 'radishes'])
+      findAnagrams('Orchestra', ['cashregister', 'carthorse', 'radishes']),
     ).toEqual(['carthorse']);
   });
 
   xtest('detects anagrams using case-insensitive possible matches', () => {
     expect(
-      findAnagrams('orchestra', ['cashregister', 'Carthorse', 'radishes'])
+      findAnagrams('orchestra', ['cashregister', 'Carthorse', 'radishes']),
     ).toEqual(['Carthorse']);
   });
 

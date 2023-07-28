@@ -18,7 +18,7 @@ describe('Proverb', () => {
 
     expect(result).toEqual(
       `For want of a nail the shoe was lost.
-And all for the want of a nail.`
+And all for the want of a nail.`,
     );
   });
 
@@ -28,7 +28,7 @@ And all for the want of a nail.`
     expect(result).toEqual(
       `For want of a nail the shoe was lost.
 For want of a shoe the horse was lost.
-And all for the want of a nail.`
+And all for the want of a nail.`,
     );
   });
 
@@ -40,7 +40,7 @@ And all for the want of a nail.`
       'rider',
       'message',
       'battle',
-      'kingdom'
+      'kingdom',
     );
 
     expect(result).toEqual(
@@ -50,7 +50,7 @@ For want of a horse the rider was lost.
 For want of a rider the message was lost.
 For want of a message the battle was lost.
 For want of a battle the kingdom was lost.
-And all for the want of a nail.`
+And all for the want of a nail.`,
     );
   });
 
@@ -65,7 +65,7 @@ And all for the want of a nail.`
       `For want of a pin the gun was lost.
 For want of a gun the soldier was lost.
 For want of a soldier the battle was lost.
-And all for the want of a pin.`
+And all for the want of a pin.`,
     );
   });
 
@@ -78,7 +78,7 @@ And all for the want of a pin.`
       'message',
       'battle',
       'kingdom',
-      { qualifier: 'horseshoe' }
+      { qualifier: 'horseshoe' },
     );
 
     expect(result).toEqual(
@@ -88,7 +88,7 @@ For want of a horse the rider was lost.
 For want of a rider the message was lost.
 For want of a message the battle was lost.
 For want of a battle the kingdom was lost.
-And all for the want of a horseshoe nail.`
+And all for the want of a horseshoe nail.`,
     );
   });
 });

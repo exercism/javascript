@@ -91,7 +91,7 @@ export class DiffieHellman {
   getPublicKey(privateKey) {
     if (privateKey <= 1 || privateKey > this.p - 1) {
       throw Error(
-        'Private key a must be greater than one but less than modulus parameter p!'
+        'Private key a must be greater than one but less than modulus parameter p!',
       );
     }
     return this.g ** privateKey % this.p;

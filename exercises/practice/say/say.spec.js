@@ -47,7 +47,7 @@ describe('say', () => {
 
   xtest('one million two thousand three hundred forty-five', () => {
     expect(say(1002345)).toBe(
-      'one million two thousand three hundred forty-five'
+      'one million two thousand three hundred forty-five',
     );
   });
 

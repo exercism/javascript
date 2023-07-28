@@ -37,7 +37,7 @@ const query = {
 orderFromGrocer(
   { variety: 'pear', quantity: 12 },
   exampleSuccessCallback,
-  exampleErrorCallback
+  exampleErrorCallback,
 );
 // => `order` was called with the query and the callbacks
 ```

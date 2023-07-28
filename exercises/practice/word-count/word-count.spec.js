@@ -20,7 +20,7 @@ describe('countWords', () => {
       blue: 1,
     };
     expect(countWords('one fish two fish red fish blue fish')).toEqual(
-      expectedCounts
+      expectedCounts,
     );
   });
 
@@ -51,7 +51,7 @@ describe('countWords', () => {
       javascript: 1,
     };
     expect(countWords('car: carpet as java: javascript!!&@$%^&')).toEqual(
-      expectedCounts
+      expectedCounts,
     );
   });
 
@@ -81,7 +81,7 @@ describe('countWords', () => {
       cry: 1,
     };
     expect(countWords("First: don't laugh. Then: don't cry.")).toEqual(
-      expectedCounts
+      expectedCounts,
     );
   });
 
@@ -95,7 +95,7 @@ describe('countWords', () => {
       and: 1,
     };
     expect(countWords("Joe can't tell between 'large' and large.")).toEqual(
-      expectedCounts
+      expectedCounts,
     );
   });
 
@@ -111,7 +111,7 @@ describe('countWords', () => {
       a: 1,
     };
     expect(countWords("Joe can't tell between app, apple and a.")).toEqual(
-      expectedCounts
+      expectedCounts,
     );
   });
 

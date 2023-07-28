@@ -24,7 +24,7 @@ export class TwoBucket {
 
     if (this.goal % gcd(this.first.size, this.second.size) !== 0) {
       throw new Error(
-        'Goal must be a multiple of the GCD of the sizes of the two buckets.'
+        'Goal must be a multiple of the GCD of the sizes of the two buckets.',
       );
     }
   }

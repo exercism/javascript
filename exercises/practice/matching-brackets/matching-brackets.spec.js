@@ -68,8 +68,8 @@ describe('Matching Brackets', () => {
   xtest('complex latex expression', () => {
     expect(
       isPaired(
-        '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)'
-      )
+        '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)',
+      ),
     ).toEqual(true);
   });
 });

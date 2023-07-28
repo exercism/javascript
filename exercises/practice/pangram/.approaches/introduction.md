@@ -15,7 +15,7 @@ The occurrence of either the letter `a` or the letter `A` would count as the sam
 export function isPangram(input) {
   const inputLowered = input.toLowerCase();
   return [...'abcdefghijklmnopqrstuvwxyz'].every((c) =>
-    inputLowered.includes(c)
+    inputLowered.includes(c),
   );
 }
 ```

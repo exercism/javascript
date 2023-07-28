@@ -7,7 +7,7 @@ export class DNA {
     let distance = 0;
     const calculationDistance = Math.min(
       this.nucleotides.length,
-      comparison.length
+      comparison.length,
     );
 
     for (let i = 0; i < calculationDistance; i += 1) {

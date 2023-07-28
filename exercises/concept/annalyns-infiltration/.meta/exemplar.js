@@ -69,7 +69,7 @@ export function canFreePrisoner(
   knightIsAwake,
   archerIsAwake,
   prisonerIsAwake,
-  petDogIsPresent
+  petDogIsPresent,
 ) {
   return (
     (!knightIsAwake && !archerIsAwake && prisonerIsAwake) ||

@@ -20,19 +20,19 @@ describe('buildSign', () => {
 describe('buildBirthdaySign', () => {
   test('age is less than 50', () => {
     expect(buildBirthdaySign(49)).toBe(
-      'Happy Birthday! What a young fellow you are.'
+      'Happy Birthday! What a young fellow you are.',
     );
   });
 
   test('age is 50 or older', () => {
     expect(buildBirthdaySign(51)).toBe(
-      'Happy Birthday! What a mature fellow you are.'
+      'Happy Birthday! What a mature fellow you are.',
     );
   });
 
   test('age is 50', () => {
     expect(buildBirthdaySign(50)).toBe(
-      'Happy Birthday! What a mature fellow you are.'
+      'Happy Birthday! What a mature fellow you are.',
     );
   });
 });

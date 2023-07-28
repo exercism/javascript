@@ -24,19 +24,22 @@ describe('Affine cipher', () => {
 
     xtest('encode numbers', () => {
       expect(encode('Testing,1 2 3, testing.', { a: 3, b: 4 })).toBe(
-        'jqgjc rw123 jqgjc rw'
+        'jqgjc rw123 jqgjc rw',
       );
     });
 
     xtest('encode deep thought', () => {
       expect(encode('Truth is fiction.', { a: 5, b: 17 })).toBe(
-        'iynia fdqfb ifje'
+        'iynia fdqfb ifje',
       );
     });
 
     xtest('encode all the letters', () => {
       expect(
-        encode('The quick brown fox jumps over the lazy dog.', { a: 17, b: 33 })
+        encode('The quick brown fox jumps over the lazy dog.', {
+          a: 17,
+          b: 33,
+        }),
       ).toBe('swxtj npvyk lruol iejdc blaxk swxmh qzglf');
     });
 
@@ -53,31 +56,31 @@ describe('Affine cipher', () => {
 
     xtest('decode a sentence', () => {
       expect(
-        decode('qdwju nqcro muwhn odqun oppmd aunwd o', { a: 19, b: 16 })
+        decode('qdwju nqcro muwhn odqun oppmd aunwd o', { a: 19, b: 16 }),
       ).toBe('anobstacleisoftenasteppingstone');
     });
 
     xtest('decode numbers', () => {
       expect(decode('odpoz ub123 odpoz ub', { a: 25, b: 7 })).toBe(
-        'testing123testing'
+        'testing123testing',
       );
     });
 
     xtest('decode all the letters', () => {
       expect(
-        decode('swxtj npvyk lruol iejdc blaxk swxmh qzglf', { a: 17, b: 33 })
+        decode('swxtj npvyk lruol iejdc blaxk swxmh qzglf', { a: 17, b: 33 }),
       ).toBe('thequickbrownfoxjumpsoverthelazydog');
     });
 
     xtest('decode with no spaces in input', () => {
       expect(
-        decode('swxtjnpvyklruoliejdcblaxkswxmhqzglf', { a: 17, b: 33 })
+        decode('swxtjnpvyklruoliejdcblaxkswxmhqzglf', { a: 17, b: 33 }),
       ).toBe('thequickbrownfoxjumpsoverthelazydog');
     });
 
     xtest('decode with too many spaces', () => {
       expect(decode('vszzm    cly   yd cg    qdp', { a: 15, b: 16 })).toBe(
-        'jollygreengiant'
+        'jollygreengiant',
       );
     });
 

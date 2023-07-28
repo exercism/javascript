@@ -61,7 +61,7 @@ describe('diffie-hellman', () => {
 
     xtest('can calculate public key using private key', () => {
       expect(diffieHellman.getPublicKey(alicePrivateKey)).toEqual(
-        alicePublicKey
+        alicePublicKey,
       );
     });
 

@@ -98,7 +98,7 @@ class Cons {
   filter(predicate) {
     return this.foldl(
       (result, item) => (predicate(item) && result.push(item)) || result,
-      Null
+      Null,
     );
   }
 

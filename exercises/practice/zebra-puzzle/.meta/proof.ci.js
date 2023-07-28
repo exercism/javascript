@@ -56,7 +56,7 @@ export class ZebraPuzzle {
 
     for (let i = 0; i < arr.length; i++) {
       const rest = this.permutateValues(
-        arr.slice(0, i).concat(arr.slice(i + 1))
+        arr.slice(0, i).concat(arr.slice(i + 1)),
       );
 
       if (!rest.length) {

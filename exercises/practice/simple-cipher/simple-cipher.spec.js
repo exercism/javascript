@@ -47,7 +47,7 @@ describe('Substitution cipher', () => {
 
   xtest('can double shift encode', () => {
     expect(new Cipher('iamapandabear').encode('iamapandabear')).toEqual(
-      'qayaeaagaciai'
+      'qayaeaagaciai',
     );
   });
 

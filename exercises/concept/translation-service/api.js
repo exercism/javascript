@@ -41,7 +41,7 @@ export class ExternalApi {
   fetch(text) {
     if (typeof text !== 'string') {
       throw new BadRequest(
-        `Expected text when calling fetch(text), actual ${typeof text}.`
+        `Expected text when calling fetch(text), actual ${typeof text}.`,
       );
     }
 
@@ -68,13 +68,13 @@ export class ExternalApi {
   request(text, callback) {
     if (typeof text !== 'string') {
       throw new BadRequest(
-        `Expected string text when calling request(text, callback), actual ${typeof text}.`
+        `Expected string text when calling request(text, callback), actual ${typeof text}.`,
       );
     }
 
     if (typeof callback !== 'function') {
       throw new BadRequest(
-        `Expected callback function when calling fetch(text, callback), actual ${typeof callback}.`
+        `Expected callback function when calling fetch(text, callback), actual ${typeof callback}.`,
       );
     }
 
@@ -90,7 +90,7 @@ export class ExternalApi {
       // If it's now available, yay, otherwise, nay
       setTimeout(
         () => callback(this.values[text][0] ? undefined : makeRandomError()),
-        1
+        1,
       );
       return;
     }

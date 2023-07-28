@@ -84,7 +84,7 @@ export class QualityThresholdNotMet extends Error {
     super(
       `
 The translation of ${text} does not meet the requested quality threshold.
-    `.trim()
+    `.trim(),
     );
 
     this.text = text;
@@ -100,7 +100,7 @@ export class BatchIsEmpty extends Error {
     super(
       `
 Requested a batch translation, but there are no texts in the batch.
-    `.trim()
+    `.trim(),
     );
   }
 }

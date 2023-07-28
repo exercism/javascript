@@ -31,19 +31,19 @@ describe('chooseVehicle', () => {
 
   test('correctly recommends the first option', () => {
     expect(chooseVehicle('Bugatti Veyron', 'Ford Pinto')).toBe(
-      'Bugatti Veyron' + rest
+      'Bugatti Veyron' + rest,
     );
     expect(chooseVehicle('Chery EQ', 'Kia Niro Elektro')).toBe(
-      'Chery EQ' + rest
+      'Chery EQ' + rest,
     );
   });
 
   test('correctly recommends the second option', () => {
     expect(chooseVehicle('Ford Pinto', 'Bugatti Veyron')).toBe(
-      'Bugatti Veyron' + rest
+      'Bugatti Veyron' + rest,
     );
     expect(chooseVehicle('2020 Gazelle Medeo', '2018 Bergamont City')).toBe(
-      '2018 Bergamont City' + rest
+      '2018 Bergamont City' + rest,
     );
   });
 });

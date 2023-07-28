@@ -38,7 +38,7 @@ function testPermutation(letterCounts, numbers) {
   return counts.reduce((sum, count, i) => sum + count * numbers[i], 0) === 0
     ? letters.reduce(
         (solution, letter, i) => ({ ...solution, [letter]: numbers[i] }),
-        {}
+        {},
       )
     : null;
 }

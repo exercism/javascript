@@ -35,7 +35,7 @@ const getScoreForTheLittleStraightCategory = (dices) => {
     counterArray,
     0,
     counterArray.length - 1,
-    1
+    1,
   );
   return isLittleStraight ? 30 : 0;
 };
@@ -46,7 +46,7 @@ const getScoreForTheBigStraightCategory = (dices) => {
     counterArray,
     1,
     counterArray.length,
-    1
+    1,
   );
   return isBigStraight ? 30 : 0;
 };

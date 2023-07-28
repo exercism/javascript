@@ -3,7 +3,7 @@ export class NotAvailable extends Error {
     super(
       `
 The requested text "${text}" has not been translated yet.
-    `.trim()
+    `.trim(),
     );
   }
 }
@@ -15,7 +15,7 @@ export class AbusiveClientError extends Error {
 Your client has been rejected because of abusive behaviour.
 
 naDevvo’ yIghoS!
-    `.trim()
+    `.trim(),
     );
   }
 }

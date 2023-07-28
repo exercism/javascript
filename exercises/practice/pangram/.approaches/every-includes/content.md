@@ -4,7 +4,7 @@
 export function isPangram(input) {
   const inputLowered = input.toLowerCase();
   return [...'abcdefghijklmnopqrstuvwxyz'].every((c) =>
-    inputLowered.includes(c)
+    inputLowered.includes(c),
   );
 }
 ```

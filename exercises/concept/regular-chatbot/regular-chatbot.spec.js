@@ -9,19 +9,19 @@ import {
 describe('isValidCommand', () => {
   test('recognizes wheter the command is at the first position', () => {
     expect(isValidCommand('Chatbot, Do you understand this command?')).toBe(
-      true
+      true,
     );
     expect(
       isValidCommand(
-        'Hey Chatbot, please tell me what is the weather for tomorrow.'
-      )
+        'Hey Chatbot, please tell me what is the weather for tomorrow.',
+      ),
     ).toBe(false);
   });
 
   test('does not care about UPPERCASE or lowercase', () => {
     expect(isValidCommand('CHATBOT, Is it okey if I shout at you?')).toBe(true);
     expect(
-      isValidCommand('chatbot, please tell me what is happening here.')
+      isValidCommand('chatbot, please tell me what is happening here.'),
     ).toBe(true);
   });
 });
@@ -30,14 +30,14 @@ describe('removeEmoji', () => {
   test('removes properly one single emoji encryption', () => {
     const expected = 'What was your name?  Sorry I forgot about it.';
     expect(
-      removeEmoji('What was your name? emoji2134 Sorry I forgot about it.')
+      removeEmoji('What was your name? emoji2134 Sorry I forgot about it.'),
     ).toBe(expected);
   });
 
   test('removes all the emoji encryption', () => {
     const expected = ' How about ordering  ?';
     expect(removeEmoji('emoji5321 How about ordering emoji8921 ?')).toBe(
-      expected
+      expected,
     );
   });
 });
@@ -51,10 +51,10 @@ describe('checkPhoneNumber', () => {
 
   test('informs the user that it is a wrong phone number format', () => {
     expect(checkPhoneNumber('322-787-654')).toBe(
-      "Oops, it seems like I can't reach out to 322-787-654"
+      "Oops, it seems like I can't reach out to 322-787-654",
     );
     expect(checkPhoneNumber('4355-67-274')).toBe(
-      "Oops, it seems like I can't reach out to 4355-67-274"
+      "Oops, it seems like I can't reach out to 4355-67-274",
     );
   });
 });
@@ -65,7 +65,7 @@ describe('getURL', () => {
       'youtube.com',
     ]);
     expect(
-      getURL('There is a cool website called theodinproject.com to learn from')
+      getURL('There is a cool website called theodinproject.com to learn from'),
     ).toStrictEqual(['theodinproject.com']);
   });
 
@@ -81,7 +81,7 @@ describe('niceToMeetYou', () => {
   test('greets the user by its proper name', () => {
     expect(niceToMeetYou('Sanz, Pablo')).toBe('Nice to meet you, Pablo Sanz');
     expect(niceToMeetYou('Stephan, Sandro')).toBe(
-      'Nice to meet you, Sandro Stephan'
+      'Nice to meet you, Sandro Stephan',
     );
   });
 });

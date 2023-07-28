@@ -37,12 +37,12 @@ describe('Crypto', () => {
     '54 character plaintext results in 7 chunks, the last two with trailing spaces',
     () => {
       const crypto = new Crypto(
-        'If man was meant to stay on the ground, god would have given us roots.'
+        'If man was meant to stay on the ground, god would have given us roots.',
       );
       expect(crypto.ciphertext).toEqual(
-        'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '
+        'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ',
       );
     },
-    20 * 1000
+    20 * 1000,
   );
 });
