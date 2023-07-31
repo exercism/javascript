@@ -18,7 +18,7 @@
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
-    "babel-jest": "^29.4.3",
+    "babel-jest": "^29.6.2",
     "chalk": "^4.1.2",
     "core-js": "~3.32.0",
     "diff": "^5.1.0",
