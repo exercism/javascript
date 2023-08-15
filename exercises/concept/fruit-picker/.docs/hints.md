@@ -24,7 +24,7 @@
 - Pay attention to the JSDoc type hints -- the function should receive 3 arguments and not return a value.
 - Reuse the previously created callbacks as arguments to the order function.
 
-## 4. Refactor your awesome work so far into a more concise function
+## 4. Refactor your work into a more concise function
 
 - Reuse the function from the previous task.
 - Try to think of a way to package variety and quantity together when they are passed to `orderFromGrocer`.
