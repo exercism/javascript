@@ -21,7 +21,7 @@
 ## 3. Create a callback to buy fruit if the inventory is available
 
 - Use the already imported `order` function.
-- Since we are working on a wrapper think about whether we really need to return anything this time.
+- Pay attention to the JSDoc type hints -- the function should receive 3 arguments and not return a value.
 - Cover both the chance of a successful outcome and a failed one by including the two callback functions.
 
 ## 4. Refactor your awesome work so far into a more concise function
