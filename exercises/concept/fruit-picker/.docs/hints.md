@@ -15,7 +15,8 @@
 
 - Use the imported API function `notify` in your function.
 - Pass another object to `notify`. It should have a property of `message`. The message value should differ from the last part.
-- Return the result from the `notify` API function.
+- Pay attention to the comments [JSDoc] above the function definition:
+  - The function should not return a value.
 
 ## 3. Create a callback to buy fruit if the inventory is available
 
