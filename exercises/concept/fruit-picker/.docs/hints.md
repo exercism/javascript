@@ -27,4 +27,5 @@
 ## 4. Refactor your work into a more concise function
 
 - Reuse the functions from the previous tasks.
-- Try to think of a way to package variety and quantity together when they are passed to `orderFromGrocer`.
+- Pay attention to the JSDoc type hints -- the function should receive 2 arguments and not return a value.
+- Combine the arguments into an object representing the query to the grocer to place an order.
