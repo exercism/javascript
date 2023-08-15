@@ -8,7 +8,7 @@
 ## 1. Try to notify with a successful message
 
 - Use the imported API function `notify` in your function.
-- Pass an object to `notify`. It should expect to receive an object with a property of `message`. Think about what the message property should be.
+- Pass an object to `notify`. It should have a property of `message`. Think about what the message value should be.
 - Return the result from the `notify` API function.
 
 ## 2. Try to notify with an error message
