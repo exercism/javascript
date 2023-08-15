@@ -14,7 +14,7 @@
 ## 2. Try to notify with an error message
 
 - Use the imported API function `notify` in your function.
-- Pass another object to `notify`. It should expect to receive an object with a property of `message` like the previous task but with a different value.
+- Pass another object to `notify`. It should have a property of `message`. The message value should differ from the last part.
 - Return the result from the `notify` API function.
 
 ## 3. Create a callback to buy fruit if the inventory is available
