@@ -5,7 +5,7 @@
 - Callback functions are functions passed as an argument to a calling function.
 - Callback functions must meet the specification of the calling function.
 
-## 1. Try to notify with a successful message
+## 1. Notify with a successful message
 
 - Use the imported API function `notify` in your function.
 - Pass an object to `notify`. It should have a property of `message`. Think about what the message value should be.
