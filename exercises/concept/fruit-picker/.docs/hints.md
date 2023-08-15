@@ -26,5 +26,5 @@
 
 ## 4. Refactor your work into a more concise function
 
-- Reuse the function from the previous task.
+- Reuse the functions from the previous tasks.
 - Try to think of a way to package variety and quantity together when they are passed to `orderFromGrocer`.
