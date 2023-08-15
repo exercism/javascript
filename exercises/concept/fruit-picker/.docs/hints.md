@@ -18,7 +18,7 @@
 - Pay attention to the comments [JSDoc] above the function definition:
   - The function should not return a value.
 
-## 3. Create a callback to buy fruit if the inventory is available
+## 3. Place an order to buy fruit
 
 - Use the already imported `order` function.
 - Pay attention to the JSDoc type hints -- the function should receive 3 arguments and not return a value.
