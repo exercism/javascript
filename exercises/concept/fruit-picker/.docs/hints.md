@@ -11,7 +11,7 @@
 - Pass an object to `notify`. It should have a property of `message`. Think about what the message value should be.
 - Pay attention to the JSDoc type hint -- the function should not return a value.
 
-## 2. Try to notify with an error message
+## 2. Notify with an error message
 
 - Use the imported API function `notify` in your function.
 - Pass another object to `notify`. It should have a property of `message`. The message value should differ from the last part.
