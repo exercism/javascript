@@ -9,7 +9,7 @@
 
 - Use the imported API function `notify` in your function.
 - Pass an object to `notify`. It should have a property of `message`. Think about what the message value should be.
-- Return the result from the `notify` API function.
+- Pay attention to the JSDoc type hint -- the function should not return a value.
 
 ## 2. Try to notify with an error message
 
