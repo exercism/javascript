@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export function hello() {
-  return 'Goodbye, Mars!';
+export const hello = () => {
+  return 'Hello, World!';
 }
