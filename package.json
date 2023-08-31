@@ -13,7 +13,7 @@
     "url": "https://github.com/exercism/javascript"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.10",
+    "@babel/core": "^7.22.11",
     "@exercism/babel-preset-javascript": "^0.2.1",
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^29.5.4",
