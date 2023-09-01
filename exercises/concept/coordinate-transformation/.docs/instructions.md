@@ -33,7 +33,7 @@ Combine two transformation functions to perform a repeatable transformation. Thi
 ```javascript
 const moveCoordinatesRight2Px = translate2d(2, 0);
 const doubleCoordinates = scale2d(2, 2);
-const composedTransformations = composeTransformation(
+const composedTransformations = composeTransform(
   moveCoordinatesRight2Px,
   doubleCoordinates,
 );
