@@ -77,7 +77,7 @@ describe('monitorTheMachine', () => {
     expect(actions.shutdown).not.toHaveBeenCalled();
   });
 
-  test('should call only the shutdown action if the check throws an OverheatingError with a temperature equals to 651°C', () => {
+  test('should call only the shutdown action if the check throws an OverheatingError with a temperature of 651°C', () => {
     actions.check = jest.fn(() => {
       throw new OverheatingError(651);
     });
