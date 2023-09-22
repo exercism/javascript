@@ -7,11 +7,12 @@
 
 ## 1. Create a list of all wagons
 
-- Multiple arguments in the function parameters can be packed with the `...<args>` operator.
+- Multiple arguments in the function parameters can be packed with the [`...<args>` (spread) syntax][spread-syntax]. operator.
 
 ## 2. Move the first two elements to the end of the array
 
-- Using unpacking with the rest operator(`...`), lets you extract the first two elements of a `array` while keeping the rest intact.
+- You can unpack a series of parameters using [a destructuring assignment (`...`)][destructuring-assignment].
+  This lets you extract the first two elements of a `array` while keeping the rest intact.
 - To add another `array` into an existing `array`, you can use the `...` operator to "spread" the `array`.
 
 ## 3. Add missing values
@@ -26,3 +27,6 @@
 ## 5. Separate arrival time from routing information
 
 - To extract a value from an `object` while keeping the rest intact, you can use the rest operator(`...`).
+
+[spread-syntax]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+[destructuring-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
