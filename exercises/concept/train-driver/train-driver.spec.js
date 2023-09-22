@@ -85,7 +85,7 @@ describe('extendRouteInformation', () => {
       temperature: '5',
     };
     expect(extendRouteInformation(route, moreRouteInformation)).toEqual(
-      expected
+      expected,
     );
   });
 
@@ -99,7 +99,7 @@ describe('extendRouteInformation', () => {
       temperature: '20',
     };
     expect(extendRouteInformation(route, moreRouteInformation)).toEqual(
-      expected
+      expected,
     );
   });
 
@@ -118,7 +118,7 @@ describe('extendRouteInformation', () => {
       temperature: '-6',
     };
     expect(extendRouteInformation(route, moreRouteInformation)).toEqual(
-      expected
+      expected,
     );
   });
 });
