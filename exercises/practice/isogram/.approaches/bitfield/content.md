@@ -32,10 +32,10 @@ The ASCII value for `A` is `65`.
 - The `string` loops through its characters and looks for a character being `a` through `z` or `A` through `Z`.
 - If a letter is found, then its ASCII value is taken by the [`charCodeAt`][charcodeat] method.
 
-```exercism/note
+~~~~exercism/note
 `charCodeAt` actually returns the UTF-16 code unit for the character, which is an integer between `0` and `65535`.
 For the letters `a`-`z` and `A`-`Z`, the UTF-16 number is the same value as the ASCII value.
-```
+~~~~
 
 - If the lowercase letter is subtracted by `97`, then `a` will result in `0`, because `97` minus `97` equals `0`.
   `z` would result in `25`, because `122` minus `97` equals `25`.
