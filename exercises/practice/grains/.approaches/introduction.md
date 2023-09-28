@@ -44,7 +44,7 @@ For more information, check the [exponentiation approach][approach-exponentiatio
 ```javascript
 export function square(num) {
   if (num < 1 || num > 64) {
-    throw 'square must be between 1 and 64';
+    throw new Error('square must be between 1 and 64');
   }
   return 1n << (BigInt(num) - 1n);
 }
