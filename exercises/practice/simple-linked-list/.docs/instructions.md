@@ -7,6 +7,7 @@ Given a range of numbers (the song IDs), create a singly linked list.
 
 Given a singly linked list, you should be able to reverse the list to play the songs in the opposite order.
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/note
 The linked list is a fundamental data structure in computer science, often used in the implementation of other data structures.
 
@@ -17,3 +18,4 @@ If you want to dig deeper into linked lists, check out [this article][intro-link
 
 [intro-linked-list]: https://medium.com/basecs/whats-a-linked-list-anyway-part-1-d8b7e6508b9d
 ~~~~
+<!-- prettier-ignore-end -->

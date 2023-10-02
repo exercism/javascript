@@ -29,10 +29,12 @@ The `switch` returns the right response for a question, shout, shouted question,
 The [`String`][string] [trimEnd][trimend] method is applied to the input to eliminate any whitespace at the end of the input.
 If the string has no characters left, it returns the response for saying nothing.
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/caution
 Note that a `null` or `undefined` `String` would be different from a `String` of all whitespace.
 A `null` or `undefined` `String` would raise a `TypeError` if `trimEnd` were applied to it.
 ~~~~
+<!-- prettier-ignore-end -->
 
 The first half of the shout condition
 

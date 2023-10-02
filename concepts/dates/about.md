@@ -32,11 +32,13 @@ However, different types of arguments can also be used to create date object, as
 >
 > [^1]
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/note
 > January 1st, 1970 at 00:00:00 UTC is referred to as the Unix epoch.
 > Unix is an operating system originally developed in the 1960s.
 > Early Unix engineers picked that date arbitrarily because they needed to set a uniform date for the start of time, and > New Year's Day, 1970, seemed most convenient. [^2]
 ~~~~
+<!-- prettier-ignore-end -->
 
 ### Timestamp string
 
@@ -115,9 +117,11 @@ const d3 = Date.parse('2019-01-01T00:00:00.000');
 // it is set to your local time zone.
 ```
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/caution
 The use of `Date.parse()` (and the timestamp string method which works similarly) is strongly discouraged due to browser differences and inconsistencies. [^5]
 ~~~~
+<!-- prettier-ignore-end -->
 
 ## Accessing `Date` components
 
@@ -141,12 +145,14 @@ const date1 = new Date(2020, 11, 13, 5); // Dec 13 2020 5:00:00
 let millsecs = date1.getTime(); // find out how many have milliseconds passed since Jan 1 1890!
 ```
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/caution
 Many JavaScript engines implement a non-standard method `getYear()`.
 **This method is deprecated.**
 It returns a 2-digit year sometimes.
 Hence, `getFullYear()` must always be used instead.
 ~~~~
+<!-- prettier-ignore-end -->
 
 ## Modifying `Date` components
 

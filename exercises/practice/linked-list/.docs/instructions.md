@@ -13,6 +13,7 @@ Sometimes a station gets closed down, and in that case the station needs to be r
 
 The size of a route is measured not by how far the train travels, but by how many stations it stops at.
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/note
 The linked list is a fundamental data structure in computer science, often used in the implementation of other data structures.
 As the name suggests, it is a list of nodes that are linked together.
@@ -24,3 +25,4 @@ If you want to dig deeper into linked lists, check out [this article][intro-link
 
 [intro-linked-list]: https://medium.com/basecs/whats-a-linked-list-anyway-part-1-d8b7e6508b9d
 ~~~~
+<!-- prettier-ignore-end -->

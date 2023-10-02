@@ -31,6 +31,7 @@ Every instance object includes a hidden, internal property referred to as `[[pro
 It holds a reference to the value of the `prototype` key of the constructor function.
 Yes, you read that correctly, a JavaScript function can have key/value pairs because it is also an object behind the scenes.
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/note
 To summarize:
 
@@ -39,6 +40,7 @@ To summarize:
 - Functions are objects (callable objects) and therefore they can have properties.
 - The constructor's (function) `prototype` property will become the instance's _prototype_.
 ~~~~
+<!-- prettier-ignore-end -->
 
 ### Instance Fields
 
@@ -117,11 +119,13 @@ The `[[prototype]]` property of `Car.prototype` (`myCar.[[prototype]].[[prototyp
 It contains general methods that are available for all JavaScript objects, e.g. `toString()`.
 In conclusion, you can call `myCar.toString()` and that method will exist because JavaScript searches for that method throughout the whole prototype chain.
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/caution
 Note that the prototype chain is only travelled when retrieving a value.
 Setting a property directly or deleting a property of an instance object only targets that specific instance.
 This might not be what you would expect when you are used to a language with class-based inheritance.
 ~~~~
+<!-- prettier-ignore-end -->
 
 ## Class Syntax
 

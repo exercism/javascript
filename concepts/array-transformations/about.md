@@ -144,6 +144,7 @@ console.log(arr);
 // => ['a', 'b', 'c', 'z']
 ```
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/caution
 This default behavior leads to wrong results when you try to sort numbers.
 
@@ -154,6 +155,7 @@ arr.sort();
 // Because the string '10' comes before '2' in dictionary order.
 ```
 ~~~~
+<!-- prettier-ignore-end -->
 
 To customize the sorting behavior, you can pass a comparison function as an argument.
 The comparison function itself is called with two arguments which are two elements of the array.

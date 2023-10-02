@@ -13,6 +13,7 @@ Then we can use metric system prefixes for writing large numbers of seconds in m
 - Perhaps you and your family would travel to somewhere exotic for two megaseconds (that's two million seconds).
 - And if you and your spouse were married for _a thousand million_ seconds, you would celebrate your one gigasecond anniversary.
 
+<!-- prettier-ignore-start -->
 ~~~~exercism/note
 If we ever colonize Mars or some other planet, measuring time is going to get even messier.
 If someone says "year" do they mean a year on Earth or a year on Mars?
@@ -22,3 +23,4 @@ In it the author uses the metric system as the basis for time measurements.
 
 [vinge-novel]: https://www.tor.com/2017/08/03/science-fiction-with-something-for-everyone-a-deepness-in-the-sky-by-vernor-vinge/
 ~~~~
+<!-- prettier-ignore-end -->
