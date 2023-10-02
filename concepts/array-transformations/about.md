@@ -144,7 +144,7 @@ console.log(arr);
 // => ['a', 'b', 'c', 'z']
 ```
 
-~~~~exercism/caution
+````exercism/caution
 This default behavior leads to wrong results when you try to sort numbers.
 
 ```javascript
@@ -153,7 +153,7 @@ arr.sort();
 // => [1, 10, 2, 3]
 // Because the string '10' comes before '2' in dictionary order.
 ```
-~~~~
+````
 
 To customize the sorting behavior, you can pass a comparison function as an argument.
 The comparison function itself is called with two arguments which are two elements of the array.

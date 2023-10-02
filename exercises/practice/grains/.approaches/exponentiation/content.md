@@ -19,9 +19,9 @@ JavaScript uses the [exponential operator][exponentiation] to raise a number by 
 Exponentiation is nicely suited to the problem, since we start with one grain and keep doubling the number of grains on each successive square.
 `1` grain is `2n ** 0`, `2` grains is `2n ** 1`, `4` is `2n ** 2`, and so on.
 
-~~~~exercism/note
+```exercism/note
 Note that a [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) literal can be specified by appending `n` to the value.
-~~~~
+```
 
 So, to get the right exponent, we subtract `1` from the square number `num`.
 
