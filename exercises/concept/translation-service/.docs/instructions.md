@@ -46,14 +46,16 @@ api.request('majQa’', callback);
 
 **⚠ Warning! ⚠**
 
-```exercism/caution
+<!-- prettier-ignore-start -->
+~~~~exercism/caution
 The API works its magic by teleporting in the various translators when a `request` comes in.
 This is a very costly action, so it shouldn't be called when a translation *is* available.
 Unfortunately, not everyone reads the manual, so there is a system in place to kick-out bad actors.
 
 If an `api.request` is called for `text` is available, the API throws an `AbusiveClientError` for this call, **and every call after that**.
 Ensure that you *never* request a translation if something has already been translated.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ## 1. Fetch a translation, ignoring the quality
 
@@ -96,7 +98,7 @@ service.batch([]);
 ## 3. Request a translation, retrying at most 2 times
 
 Implement a premium user method `request(text)`, that _requests_ a translation be added to the _API storage_.
-The request should automatically retry if a failure occurs.  
+The request should automatically retry if a failure occurs.
 It should perform no more than **3 calls** for the same request (_don't upset the space translators!!!_).
 
 - If `api.request` does not return an error, resolve with `undefined`
@@ -131,6 +133,8 @@ service.premium("'arlogh Qoylu'pu'?", 40);
 
 **N.B.**
 
-```exercism/note
+<!-- prettier-ignore-start -->
+~~~~exercism/note
 The correct translation of `'arlogh Qoylu'pu'?` is **How many times has it been heard?**.
-```
+~~~~
+<!-- prettier-ignore-end -->

@@ -6,9 +6,11 @@ You already digitalized the bird counts per day for the past weeks that you kept
 
 Now you want to determine the total number of birds that you counted, calculate the bird count for a specific week and correct a counting mistake.
 
-```exercism/note
+<!-- prettier-ignore-start -->
+~~~~exercism/note
 To practice, use a for loop to solve each of the tasks below.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ## 1. Determine the total number of birds that you counted so far
 

@@ -15,9 +15,11 @@ export function total() {
 
 Instead of using math to calculate the number of grains on a square, you can set a bit in the correct position of a [`BigInt`][bigint] value.
 
-```exercism/note
+<!-- prettier-ignore-start -->
+~~~~exercism/note
 Note that a `BigInt` literal can be specified by appending `n` to the value.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 To understand how this works, consider just two squares that are represented in binary bits as `00`.
 
