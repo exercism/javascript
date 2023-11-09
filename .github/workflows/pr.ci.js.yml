@@ -7,7 +7,7 @@ on: pull_request
 
 jobs:
   precheck:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout PR
@@ -29,7 +29,7 @@ jobs:
             xargs -r npx babel-node scripts/pr-check
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
