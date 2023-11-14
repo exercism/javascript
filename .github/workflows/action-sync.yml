@@ -7,7 +7,7 @@ on:
 jobs:
   format:
     name: 'Sync all exercises'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/sync')
     steps:
       - name: 'Post acknowledgement that it will sync exercises'
