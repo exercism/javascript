@@ -16,7 +16,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Generate musical scales, given a starting note and a set of intervals. ",
+  "blurb": "Generate musical scales, given a starting note and a set of intervals.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

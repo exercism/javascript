@@ -24,7 +24,7 @@
   },
   "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
   "source": "The Roman Numeral Kata",
-  "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals",
+  "source_url": "https://codingdojo.org/kata/RomanNumerals/",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

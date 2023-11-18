@@ -26,7 +26,7 @@
   },
   "blurb": "A data structure that uses a single, fixed-size buffer as if it were connected end-to-end.",
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Circular_buffer",
+  "source_url": "https://en.wikipedia.org/wiki/Circular_buffer",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

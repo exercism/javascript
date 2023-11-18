@@ -23,7 +23,6 @@
   },
   "blurb": "Insert and search for numbers in a binary tree.",
   "source": "Josh Cheek",
-  "source_url": "https://twitter.com/josh_cheek",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,
