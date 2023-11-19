@@ -30,8 +30,15 @@ Boolean(' ');
 Boolean('');
 // => false
 ```
-
 Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **truthy** in JavaScript.
+
+[comment]: # (This line is not understandable, not clear, and misleading 
+in the above paragraph, it's clear that false and 0 are false, here we say they are truth which makes the learner confused - I understand that here they are strings and strings are truth, but I think this needs to be clearer and described.)
+
+[comment]: # (this is a simple "Improved version, more clarity"
+Note that because of the described rules, `'0'`, `'false'`, `[]` and `{}` are **truthy** in JavaScript.
+Notice: Here "false" and "0" are strings, - note the " " around the values-, not the original false and 0 values for that they are true because they are strings - On the other hand, the 0 and false values are falsy values, which means any falsy values as a string will be truthy like "NaN", "null", "undefined" etc)
+
 
 ### Converting to a Number
 
