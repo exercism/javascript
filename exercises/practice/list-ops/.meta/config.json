@@ -23,7 +23,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Implement basic list operations",
+  "blurb": "Implement basic list operations.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

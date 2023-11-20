@@ -20,7 +20,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Write a function that returns the earned points in a single toss of a Darts game",
+  "blurb": "Write a function that returns the earned points in a single toss of a Darts game.",
   "source": "Inspired by an exercise created by a professor Della Paolera in Argentina",
   "custom": {
     "version.tests.compatibility": "jest-27",
