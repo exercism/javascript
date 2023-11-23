@@ -5,7 +5,7 @@ Your task is to find the potential trees where you could build your tree house.
 The data company provides the data as grids that show the heights of the trees.
 The rows of the grid represent the east-west direction, and the columns represent the north-south direction.
 
-An acceptable tree will be the the largest in its row, while being the smallest in its column.
+An acceptable tree will be the largest in its row, while being the smallest in its column.
 
 A grid might not have any good trees at all.
 Or it might have one, or even several.
