@@ -33,5 +33,27 @@ export function increment() {
   return counter;
 }
 ```
+## Currying Functions
+
+Some times we can attach several functions. In this cases we can make closusres in a lexic ambit, 
+where a functions with multiple parameters are transformed into a series of functions, each taking a some parameters.
+
+```javascript
+// This is a currying  functions takes two params (a,b),
+// in the next called it will ad a1 and b1
+
+export function sum(a, b) {
+  return function(a1, bi){
+    return [a + a1, b + b1]
+  }
+
+let addition = sum (0,1)
+
+//It will return a function
+//If we execute the expressed adition function it will return an array
+
+console.log(addition(4,5)) //[0+4, 1+5] = [4,6]
+
+```
 
 [wiki-lexical-scope]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping
