@@ -73,7 +73,7 @@ describe('Robot', () => {
     const modifyInternal = () => {
       robot.name += 'a modification';
     };
-    expect(modifyInternal).toThrow();
+    expect(() => modifyInternal()).toThrow();
   });
 
   xtest('new names should not be sequential', () => {
