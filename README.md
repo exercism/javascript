@@ -1,6 +1,6 @@
 # Exercism JavaScript Track
 
-[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
+[![Configlet](https://github.com/exercism/javascript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/javascript/actions/workflows/configlet.yml) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
 
 ⚠️ We 💙 our community but **this repository does not accept community contributions at this time**.
 There are no active maintainers to review PRs.
