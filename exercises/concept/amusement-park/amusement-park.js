@@ -16,7 +16,7 @@ export function createVisitor(name, age, ticketId) {
 /**
  * Revokes a ticket for a visitor.
  *
- * @param {Visitor} visitor the visitor with an active ticket
+ * @param {Visitor} the visitor with an active ticket
  * @returns {Visitor} the visitor without a ticket
  */
 export function revokeTicket(visitor) {
