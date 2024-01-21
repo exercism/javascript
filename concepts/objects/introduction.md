@@ -55,6 +55,21 @@ const obj = {
 };
 ```
 
+If the key of an object is the same name as a variable, you can use a shortcut:
+
+```javascript
+const country = "France"
+
+const obj = {
+  country
+};
+
+// This is the exact same
+const obj = {
+  country: country
+}
+```
+
 ## Retrieving a Value
 
 There are two ways to retrieve the value for a given key, dot notation and bracket notation.
