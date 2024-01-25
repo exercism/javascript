@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "Cool-Katt"
+  ],
   "files": {
     "solution": [
       "pop-count.js"
