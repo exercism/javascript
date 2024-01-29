@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "Cool-Katt"
+  ],
+  "files": {
+    "solution": [
+      "parallel-letter-frequency.js"
+    ],
+    "test": [
+      "parallel-letter-frequency.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Count the frequency of letters in texts using parallel computation."
+}
