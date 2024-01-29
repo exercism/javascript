@@ -1,7 +1,7 @@
 export const parallelLetterFrequency = (texts) => {
   let result = {}
   let formatedTexts = texts.map(x => x.toLowerCase().match(/\p{Letter}+/gu) ?? []).flat()
-  let _ = Promise.all(formatedTexts.map(t => processSingleText(t, result)))
+  Promise.all(formatedTexts.map(t => processSingleText(t, result)))
   return result
 };
 
@@ -11,5 +11,5 @@ const processSingleText = (text, result) => {
     return acc
   }, result)
 
-  return new Promise((resolve, _) => resolve(res))
+  return new Promise((resolve) => { resolve(res) })
 }

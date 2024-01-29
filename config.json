@@ -2541,7 +2541,13 @@
         "name": "Eliud's Eggs",
         "uuid": "2a3ecf62-fb5d-4dac-8369-72e7976a8f57",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "rest-and-spread",
+          "arrow-functions",
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -2549,7 +2555,13 @@
         "name": "Parallel Letter Frequency",
         "uuid": "63126f78-ba0d-4271-978d-49e9312f0db2",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "rest-and-spread",
+          "arrow-functions",
+          "basics"
+        ],
         "difficulty": 7
       }
     ]
