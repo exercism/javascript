@@ -12,7 +12,7 @@ const processSingleText = (text, result) => {
     let res = [...text].reduce((acc, cur) => {
       acc[cur] = (acc[cur] || 0) + 1;
       return acc;
-      }, result);
+    }, result);
     resolve(res);
   });
 };
