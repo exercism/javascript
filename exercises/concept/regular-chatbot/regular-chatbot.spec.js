@@ -56,6 +56,30 @@ describe('checkPhoneNumber', () => {
     expect(checkPhoneNumber('4355-67-274')).toBe(
       "Oops, it seems like I can't reach out to 4355-67-274",
     );
+    expect(checkPhoneNumber('(+34) 6433-876-459')).toBe(
+      "Oops, it seems like I can't reach out to (+34) 6433-876-459",
+    );
+    expect(checkPhoneNumber('(+) 643-876-459')).toBe(
+      "Oops, it seems like I can't reach out to (+) 643-876-459",
+    );
+    expect(checkPhoneNumber(' ')).toBe(
+      "Oops, it seems like I can't reach out to  ",
+    );
+    expect(checkPhoneNumber('(+49) --')).toBe(
+      "Oops, it seems like I can't reach out to (+49) --",
+    );
+    expect(checkPhoneNumber('(+49) 322-876666')).toBe(
+      "Oops, it seems like I can't reach out to (+49) 322-876666",
+    );
+    expect(checkPhoneNumber('(+49) 322787654')).toBe(
+      "Oops, it seems like I can't reach out to (+49) 322787654",
+    );
+    expect(checkPhoneNumber('(+4) 643-876-459')).toBe(
+      "Oops, it seems like I can't reach out to (+4) 643-876-459",
+    );
+    expect(checkPhoneNumber('(+) --')).toBe(
+      "Oops, it seems like I can't reach out to (+) --",
+    );
   });
 });
 
