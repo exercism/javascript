@@ -17,9 +17,11 @@ Even though Javascript by default is single-threaded, there is a way to execute 
 through the [Web Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API).
 
 As described by MDN:
+
 > Web Workers makes it possible to run a script operation in a background thread separate from the main execution thread of a web application.
 
 Here's a simple demo (taken from [here](https://medium.com/@ns-tech-learn/what-is-a-web-worker-how-to-use-it-and-example-2273de521f04))
+
 ```js
 // main.js
 const myWorker = new Worker('worker.js');
@@ -30,6 +32,7 @@ myWorker.onmessage = function (event) {
   console.log('Received result from worker:', event.data);
 };
 ```
+
 ```js
 // worker.js
 onmessage = function (event) {
@@ -45,11 +48,11 @@ onmessage = function (event) {
 
 As a stretch goal, consider if your implementation can be adapted to make use of `Web workers`.
 
-------
+---
 
 ## Further reading
 
-* [MDN demo](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)
-* [MDN - Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-* [Article about multi-threading in JS](https://medium.com/techtrument/multithreading-javascript-46156179cf9a)
-* [Web Worker primer](https://medium.com/@ns-tech-learn/what-is-a-web-worker-how-to-use-it-and-example-2273de521f04)
+- [MDN demo](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)
+- [MDN - Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Article about multi-threading in JS](https://medium.com/techtrument/multithreading-javascript-46156179cf9a)
+- [Web Worker primer](https://medium.com/@ns-tech-learn/what-is-a-web-worker-how-to-use-it-and-example-2273de521f04)
