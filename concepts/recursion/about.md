@@ -7,7 +7,7 @@ In this tutorial, we'll explore recursion in JavaScript with easy-to-understand 
 ## What is Recursion?
 
 Recursion occurs when a function calls itself, either directly or indirectly.
-It's similar to a loop, but it involves breaking a problem down into smaller, more manageable sub-problems.
+It's similar to a loop, but it may involve breaking a problem down into smaller, more manageable sub-problems.
 
 ### Example 1: Countdown
 
