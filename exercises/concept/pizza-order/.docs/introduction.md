@@ -84,7 +84,7 @@ The recursive case defines how the function calls itself with a smaller or simpl
 
 ## Conclusion
 
-Recursion is a valuable technique that simplifies complex problems by breaking them into smaller, more manageable sub-problems.
+Recursion is a valuable technique that can simplify complex problems by breaking them into smaller, more manageable sub-problems.
 Understanding base cases and recursive cases is crucial for implementing effective recursive solutions in JavaScript.
 
 **Learn More:**
