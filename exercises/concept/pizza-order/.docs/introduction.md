@@ -63,7 +63,7 @@ In this example:
 
 ### Base Case
 
-Every recursive function should have at least one base case, a condition where the function stops calling itself.
+Every recursive function must have at least one base case, a condition where the function stops calling itself.
 Without a base case, the recursion would continue indefinitely, leading to a stack overflow.
 
 ### Recursive Case
