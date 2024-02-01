@@ -27,3 +27,5 @@ Implement the following operations:
 - conjugate, absolute value, exponent of a given complex number.
 
 Assume the programming language you are using does not have an implementation of complex numbers.
+## Note
+- '^' denotes to square of number.So 3 ^ 2 = 3 * 3
