@@ -53,8 +53,7 @@ The version should match the one on the website.
 > Any open terminal windows might not have been refreshed after the installation completed.
 > This means that the open terminals don't know that a new program was installed.
 
-> [!IMPORTANT]
-> _**Help**_: `'node' is not recognised`
+> [!IMPORTANT] > _**Help**_: `'node' is not recognised`
 >
 > If you've used the official installer, your `PATH` should have been automatically configured, but if your shell has trouble locating your globally installed modules &mdash; or if you build Node.js from source &mdash; update your `PATH` to include the `npm` binaries.
 >
@@ -88,8 +87,7 @@ They can be installed running this command within each assignment directory:
 npm install
 ```
 
-> [!IMPORTANT]
-> _**Help**_: `'<package>' is missing / cannot be found`
+> [!IMPORTANT] > _**Help**_: `'<package>' is missing / cannot be found`
 >
 > If you see this after _upgrading_ your exercise, welcome to npm 7.
 > Delete `node_modules` and `package-lock.json` and re-run the command to resolve this.
