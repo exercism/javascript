@@ -2549,6 +2549,20 @@
           "basics"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "63126f78-ba0d-4271-978d-49e9312f0db2",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "rest-and-spread",
+          "arrow-functions",
+          "basics"
+        ],
+        "difficulty": 7
       }
     ]
   },
