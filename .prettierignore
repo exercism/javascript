@@ -10,3 +10,8 @@ LICENSE
 # These are formatted via configlet and will not match prettier
 exercises/**/.meta/config.json
 exercises/**/.approaches/config.json
+config.json
+
+# Originates from https://github.com/exercism/problem-specifications
+exercises/practice/**/.docs/instructions.md
+exercises/practice/**/.docs/introduction.md
