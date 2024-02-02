@@ -79,11 +79,11 @@ function Car() {
   // ...
 }
 
-Car.prototype.startEngine = function () {
+Car.prototype.startEngine = function startEngine() {
   this.engineRunning = true;
 };
 
-Car.prototype.addGas = function (litre) {
+Car.prototype.addGas = function addGas(litre) {
   // ...
 };
 
