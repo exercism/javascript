@@ -6,7 +6,8 @@ It's not uncommon that people discover incorrect implementations of certain test
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
-> :warning: This guide is slightly outdated and doesn't hold the V3 changes yet.
+> [!WARNING]  
+> This guide is slightly outdated and doesn't hold the V3 changes yet.
 
 ---
 
@@ -209,7 +210,8 @@ It then interactively gives the maintainer the option to include or exclude test
 
 We have various `scripts` to aid with maintaining and contributing to this repository.
 
-> ⚠ If you encounter the following error:
+> [!IMPORTANT]  
+> If you encounter the following error:
 >
 > ```text
 > SyntaxError: Unexpected token 'export'

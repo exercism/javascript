@@ -4,6 +4,7 @@ A falsy value is a value that is considered `false` when encountered in a [Boole
 
 [JavaScript][language-javascript] uses [Type Conversion][concept-type-coercion] to coerce any value to a [Boolean][type-boolean] in contexts that require it, such as [conditionals][concept-conditionals] and [loops][concept-loops].
 
+> [!NOTE]
 > There are 7 falsy values in JavaScript.
 >
 > This means that when JavaScript is expecting a boolean and it is given one of the values below, it will always evaluate to "falsy".

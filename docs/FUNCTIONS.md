@@ -6,7 +6,8 @@ In JavaScript, functions are _first class objects_ which means they can be assig
 
 JavaScript functions allow you to pass arguments when they are called. Arguments are always [passed by value](https://dev.to/xpbytes/javascript-ruby-and-c-are-not-call-by-reference-23f7). In other words, if a function reassigns a parameter inside the function, the value won't change outside the function. That doesn't mean that passed-in objects cannot be mutated.
 
-> 💡 When an object is passed in, the reference to that object is passed in by value. This makes it _seem_ like passing in objects are handled differently, but that's not the case.
+> [!TIP]
+> When an object is passed in, the reference to that object is passed in by value. This makes it _seem_ like passing in objects are handled differently, but that's not the case.
 
 An example of a function that takes two arguments and multiplies them is:
 
