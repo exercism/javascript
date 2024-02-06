@@ -1580,13 +1580,9 @@
         "name": "Beer Song",
         "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
         "practices": [],
-        "prerequisites": [
-          "arrays",
-          "conditionals",
-          "for-loops",
-          "template-strings"
-        ],
+        "prerequisites": [],
         "difficulty": 5,
+        "status": "deprecated",
         "topics": [
           "conditionals",
           "loops",
@@ -2563,6 +2559,24 @@
           "basics"
         ],
         "difficulty": 7
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "2da8329c-2a92-4232-b104-2a08a76cab60",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "conditionals",
+          "for-loops",
+          "template-strings"
+        ],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "loops",
+          "strings"
+        ]
       }
     ]
   },
