@@ -1579,10 +1579,10 @@
         "slug": "beer-song",
         "name": "Beer Song",
         "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
-        "status":"deprecated",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
+        "status": "deprecated",
         "topics": [
           "conditionals",
           "loops",

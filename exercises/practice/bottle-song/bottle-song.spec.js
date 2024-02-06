@@ -35,8 +35,8 @@ describe('Beer Song', () => {
 
       xtest('verse with 1 bottle', () => {
         let expected = [
-          `One green bottles hanging on the wall,`,
-          `One green bottles hanging on the wall,`,
+          `One green bottle hanging on the wall,`,
+          `One green bottle hanging on the wall,`,
           `And if one green bottle should accidentally fall,`,
           `There'll be no green bottles hanging on the wall.`,
         ];
@@ -72,7 +72,7 @@ describe('Beer Song', () => {
           `Two green bottles hanging on the wall,`,
           `Two green bottles hanging on the wall,`,
           `And if one green bottle should accidentally fall,`,
-          `There'll be one green bottle hanging on the wall.```,
+          `There'll be one green bottle hanging on the wall.`,
           ``,
           `One green bottle hanging on the wall,`,
           `One green bottle hanging on the wall,`,
