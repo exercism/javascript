@@ -1,6 +1,6 @@
 import { recite } from './bottle-song';
 
-describe('Beer Song', () => {
+describe('Bottle Song', () => {
   describe('verse', () => {
     describe('single verse', () => {
       test('first generic verse', () => {
