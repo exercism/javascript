@@ -2582,9 +2582,14 @@
         "slug": "ledger",
         "name": "Ledger",
         "uuid": "8716b347-e18f-48a6-b373-426cc4ca98cb",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
+        "practices": [
+          "strings",
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "string-formatting"
+        ],
+        "difficulty": 4
       }
     ]
   },
