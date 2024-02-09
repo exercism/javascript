@@ -66,13 +66,13 @@ The Chatbot is a really curious software. Even though he can search on the inter
 Example of Conversation:
 
 - **Chatbot**: Hey username, I would like to learn how to code in JavaScript, do you know any cool website where I could learn?
-- **User**: I learned a lot from [exercism.com](http://website.com)
+- **User**: I learned a lot from [exercism.org](http://exercism.org)
 
 Implement the function `getURL()` which is able to return an array with just the link of each website.
 
 ```javascript
-getURL('I learned a lot from exercism.com');
-// => ["exercism.com"];
+getURL('I learned a lot from exercism.org');
+// => ["exercism.org"];
 ```
 
 ## Greet the user
