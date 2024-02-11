@@ -1,0 +1,25 @@
+{
+  "authors": ["sarava338"],
+  "contributors": [],
+  "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 2
+  },
+  "files": {
+    "solution": "lens-person.js",
+    "test": "lens-person.spec.js",
+    "example": ".meta/proof.ci.js"
+  },
+ "blurb": "Use lenses to update nested records (specific to languages with immutable data).",
+  "source": "",
+  "source_url": "",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+
+
+}
