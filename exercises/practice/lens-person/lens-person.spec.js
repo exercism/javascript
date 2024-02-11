@@ -3,8 +3,8 @@ import { Name } from './src/Name';
 import { Address } from './src/Address';
 import { Born } from './src/Born';
 
-import { nameLens, bornAtLens, streetLens } from './.meta/proof.ci';
-// import { nameLens, bornAtLens, streetLens } from './lens-person';
+// import { nameLens, bornAtLens, streetLens } from './.meta/proof.ci';
+import { nameLens, bornAtLens, streetLens } from './lens-person';
 
 // test data
 const person = new Person(
