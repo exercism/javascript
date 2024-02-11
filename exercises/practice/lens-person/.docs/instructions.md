@@ -7,3 +7,10 @@ Updating fields of nested, immutable records is kind of annoying. The code for s
 One solution to this problem is to use [lenses](../../leap/.gitignore).
 
 Implement several record accessing functions using lenses. The test suite also allows you to avoid lenses altogether so you can experiment with different approaches.
+
+## 1. Implement nameLens by passing getter and setter
+
+## 2. Implement bornAtLens by passing getter and setter
+
+## 3. Implement streetLens by passing getter and setter
+
