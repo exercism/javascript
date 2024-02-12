@@ -2353,8 +2353,14 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "d2d3cd13-b06c-4c24-9964-fb1554f70dd4",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "bit-manipulation"
+      ],
+        "prerequisites": [
+          "integers",
+          "numbers",
+          "math"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
