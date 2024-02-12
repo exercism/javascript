@@ -2414,8 +2414,14 @@
         "slug": "react",
         "name": "React",
         "uuid": "303c6969-9446-41aa-871a-11223a43e810",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "events",
+          "reactive_programming"
+        ],
+        "prerequisites": [
+          "data_structures",
+          "algorithms"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
