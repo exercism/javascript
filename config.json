@@ -2582,9 +2582,12 @@
         "slug": "markdown",
         "name": "Markdown",
         "uuid": "cd666b3a-7114-4ba9-9b2a-7622a2c8c12c",
-        "practices": [],
+        "practices": [
+          "strings",
+          "string-formatting"
+        ],
         "prerequisites": [],
-        "difficulty": 1
+        "difficulty": 5
       }
     ]
   },
