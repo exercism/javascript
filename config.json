@@ -2433,8 +2433,14 @@
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "fd1575f3-3087-4cfa-8a26-168fba6d0606",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "data_structures",
+          "algorithms"
+        ],
+        "prerequisites": [
+          "data_structures",
+          "algorithms"
+        ],
         "difficulty": 8,
         "topics": [
           "recursion",
