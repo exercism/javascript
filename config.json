@@ -2316,8 +2316,14 @@
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "numbers",
+          "for-loops"
+        ],
         "difficulty": 4,
         "topics": [
           "bitwise_operations",
