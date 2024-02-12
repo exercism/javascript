@@ -2391,8 +2391,14 @@
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "array-transformations",
+          "array-analysis"
+        ],
+        "prerequisites": [
+          "arrays",
+          "array-analysis"
+        ],
         "difficulty": 8,
         "topics": [
           "conditionals",
