@@ -2242,8 +2242,16 @@
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "2fc4f834-a51c-42b8-a4d9-5263229e7648",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "math",
+          "recursion"
+        ],
+        "prerequisites": [
+          "while-loops",
+          "maps",
+          "objects", 
+          "numbers"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
