@@ -2376,7 +2376,10 @@
         "name": "Minesweeper",
         "uuid": "8bafe6c4-9154-4037-9070-7f57f91d495a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "classes"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
