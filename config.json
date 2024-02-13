@@ -2577,6 +2577,14 @@
           "loops",
           "strings"
         ]
+      },
+      {
+        "slug": "micro-blog",
+        "name": "Micro Blog",
+        "uuid": "ee771d09-33fb-4450-b9c3-d591a4a90a99",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
