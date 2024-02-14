@@ -1,4 +1,0 @@
-let string = '👨‍👨‍👧‍👧💜🤧🤒🏥😀';
-
-const splitWithIterator = (s) => [...s].slice(0, 5).join('');
-console.log(splitWithIterator(string)) // will be "👨‍👨‍👧" - incorrect
