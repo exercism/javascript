@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "Cool-Katt"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "ebd5893b-1f62-4634-a086-414338da1842",
+      "slug": "regex",
+      "title": "Regex",
+      "blurb": "Split a Unicode string using a RegEx.",
+      "authors": [
+        "Cool-Katt"
+      ]
+    },
+    {
+      "uuid": "a12fa836-201c-43bb-b7e2-28f441c270db",
+      "slug": "iterators",
+      "title": "Iterators",
+      "blurb": "Split a Unicode string using a string iterator.",
+      "authors": [
+        "Cool-Katt"
+      ]
+    },
+    {
+      "uuid": "c8b58d62-a129-41ad-afa6-cc6afb5b284c",
+      "slug": "intl-segmenter",
+      "title": "Intl.Segmenter",
+      "blurb": "Split a Unicode string using Intl.Segmenter.",
+      "authors": [
+        "Cool-Katt"
+      ]
+    }
+  ]
+}

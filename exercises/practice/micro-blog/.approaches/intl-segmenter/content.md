@@ -5,17 +5,15 @@ let string = '👨‍👨‍👧‍👧💜🤧🤒🏥😀';
 
 const splitWithSegmenter = (s) =>
   Array.from(new Intl.Segmenter().segment(String(s)), (x) => x.segment)
-    .slice(0, 5)
-    .join('');
+    .slice(0, 5).join('');
 
 console.log(splitWithSegmenter(string)); // will be "👨‍👨‍👧‍👧💜🤧🤒🏥" - correct, yay!
 ```
 
 This solution:
-
-- Uses the [Intl.Segmenter object][segmenter] to split the string by graphemes and form an array from the result.
-- Then it separates the first 5 graphemes.
-- Finally, it joins them back into a string.
+* Uses the [Intl.Segmenter object][segmenter] to split the string by graphemes and form an array from the result.
+* Then it separates the first 5 graphemes.
+* Finally, it joins them back into a string.
 
 <!-- prettier-ignore-start -->
 ~~~~exercism/note

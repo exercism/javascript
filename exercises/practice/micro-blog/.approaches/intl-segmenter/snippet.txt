@@ -1,0 +1,7 @@
+let string = '👨‍👨‍👧‍👧💜🤧🤒🏥😀';
+
+const splitWithSegmenter = (s) =>
+  Array.from(new Intl.Segmenter().segment(String(s)), (x) => x.segment)
+    .slice(0, 5)
+    .join('');
+console.log(splitWithSegmenter(string)); // will be "👨‍👨‍👧‍👧💜🤧🤒🏥" - correct, yay!
