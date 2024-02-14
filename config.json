@@ -2416,10 +2416,10 @@
         "uuid": "303c6969-9446-41aa-871a-11223a43e810",
         "practices": [
           "events",
-          "reactive_programming"
+          "reactive-programming"
         ],
         "prerequisites": [
-          "data_structures",
+          "data-structures",
           "algorithms"
         ],
         "difficulty": 8,
@@ -2434,11 +2434,11 @@
         "name": "Zipper",
         "uuid": "fd1575f3-3087-4cfa-8a26-168fba6d0606",
         "practices": [
-          "data_structures",
+          "data-structures",
           "algorithms"
         ],
         "prerequisites": [
-          "data_structures",
+          "data-structures",
           "algorithms"
         ],
         "difficulty": 8,
