@@ -2583,6 +2583,21 @@
           "loops",
           "strings"
         ]
+      }, {
+        "slug": "lens-person",
+        "name": "Lens-Person",
+        "uuid": "",
+        "practices": [],
+        "prerequisites": [
+          "prototypes-and-classes",
+          "callbacks"
+        ],
+        "difficulty": 7,
+        "topics": [
+          "lens",
+          "classes",
+          "callbacks"
+        ]
       }
     ]
   },
