@@ -7,16 +7,29 @@
     "indent_size": 2
   },
   "files": {
-    "solution": "lens-person.js",
-    "test": "lens-person.spec.js",
-    "example": ".meta/proof.ci.js"
+    "solution": [
+      "lens-person.js"
+    ],
+    "test": [
+      "lens-person.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ],
+    "editor": [
+      "src/Address.js",
+      "src/Born.js",
+      "src/Lens.js",
+      "src/Name.js",
+      "src/Person.js"
+    ]
   },
  "blurb": "Use lenses to update nested records (specific to languages with immutable data).",
   "source": "https://javascript.plainenglish.io/ever-heard-of-lenses-a480bea08786",
   "source_url": "https://javascript.plainenglish.io/ever-heard-of-lenses-a480bea08786",
   "custom": {
     "version.tests.compatibility": "jest-27",
-    "flag.tests.task-per-describe": false,
+    "flag.tests.task-per-describe": true,
     "flag.tests.may-run-long": false,
     "flag.tests.includes-optional": false
   }
