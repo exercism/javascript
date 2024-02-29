@@ -15,7 +15,7 @@ export function pizzaPrice(pizza, ...extras) {
 }
 
 /**
- * Calculate the prize of the total order, given individual orders
+ * Calculate the price of the total order, given individual orders
  *
  * @param {PizzaOrder[]} pizzaOrders a list of pizza orders
  * @returns {number} the price of the total order
