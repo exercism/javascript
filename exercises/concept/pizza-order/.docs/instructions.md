@@ -10,7 +10,7 @@ If customers want, they can add an unlimited number of extra options: either "Ex
 
 Your task is to write code that assists the customer in figuring out the cost to them.
 
-## Calculate the price of a pizza
+## 1. Calculate the price of a pizza
 
 Provided the pizza's name as the first argument, and an unlimited number of added options, calculate the price of the pizza in dollars.
 
@@ -31,7 +31,7 @@ pizzaPrice(
 // => 17
 ```
 
-## Calculate the total price of an order
+## 2. Calculate the total price of an order
 
 Your function is called with a list of `PizzaOrder`s and should return the total price of the order in dollars.
 Each `PizzaOrder` has a `pizza` property - the pizza's name, and an `extras` property - the list of extra options.
