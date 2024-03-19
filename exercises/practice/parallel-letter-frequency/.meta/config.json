@@ -2,6 +2,9 @@
   "authors": [
     "Cool-Katt"
   ],
+  "contributors": [
+    "mk-mxp"
+  ],
   "files": {
     "solution": [
       "parallel-letter-frequency.js"
