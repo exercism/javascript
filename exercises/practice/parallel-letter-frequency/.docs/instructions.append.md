@@ -1,8 +1,23 @@
 # Instructions append
 
 Due to the single-threaded nature of Javascript, code that appears to execute in parallel,
-such as `async functions` or `Promises`, actually execute concurrently.
-Such solutions will pass all the tests, even though they do not meet the requrement for parallel execution.
+such as `async functions` or `Promise`, actually execute concurrently at most.
+In fact, all code is executed synchronously even in `Promise` constructors, until control is passed back to the Event-Loop (the outermost function call ends).
+Such solutions will pass all the tests, even though they do not meet the requirement for parallel or concurrent execution.
+
+## Achieving concurrent execution for the exercise
+
+To use concurrent execution to solve the exercise, you need to return from the function before executing the algorithm to solve the problem.
+This can be acheived by using `setTimeout()` to "delay" execution of a `Promise` constructor:
+
+```javascript
+return new Promise((resolve) => {
+  setTimeout(() => {
+    // The code to run concurrently
+    // Use `resolve()` to report the result
+  }, 1);
+});
+```
 
 ## Concurency vs. Parallelism
 
@@ -47,6 +62,8 @@ onmessage = function (event) {
 ```
 
 As a stretch goal, consider if your implementation can be adapted to make use of `Web workers`.
+But beware, the Web worker API differs largely between browsers and other JavaScript environments.
+Make sure you use the target environments documentation, which is Node.js LTS for this exercise.
 
 ---
 
