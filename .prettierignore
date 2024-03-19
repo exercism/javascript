@@ -1,5 +1,6 @@
 /.github/labels.yml
 /.github/workflows/sync-labels.yml
+/.github/workflows/no-important-files-changed.yml
 exercises/**/README.md
 !/README.md
 
