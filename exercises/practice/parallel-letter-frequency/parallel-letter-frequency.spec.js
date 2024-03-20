@@ -1,22 +1,22 @@
 import { parallelLetterFrequency } from './parallel-letter-frequency';
 
 describe('ParallelLetterFrequency', () => {
-  test('no texts', () => {
+  test('no texts', async () => {
     const expected = {};
     const actual = parallelLetterFrequency([]);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('one text with one letter', () => {
+  test('one text with one letter', async () => {
     const texts = ['a'];
     const expected = {
       a: 1,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('one text with multiple letters', () => {
+  test('one text with multiple letters', async () => {
     const texts = ['bbcccd'];
     const expected = {
       b: 2,
@@ -24,20 +24,20 @@ describe('ParallelLetterFrequency', () => {
       d: 1,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('two texts with one letter', () => {
+  test('two texts with one letter', async () => {
     const texts = ['e', 'f'];
     const expected = {
       e: 1,
       f: 1,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('two texts with multiple letters', () => {
+  test('two texts with multiple letters', async () => {
     const texts = ['ggh', 'hhi'];
     const expected = {
       g: 2,
@@ -45,40 +45,40 @@ describe('ParallelLetterFrequency', () => {
       i: 1,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('ignore letter casing', () => {
+  test('ignore letter casing', async () => {
     const texts = ['m', 'M'];
     const expected = {
       m: 2,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('ignore whitespace', () => {
+  test('ignore whitespace', async () => {
     const texts = ['   ', '\t', '\r\n'];
     const expected = {};
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('ignore punctuation', () => {
+  test('ignore punctuation', async () => {
     const texts = ['!', '?', ';', ',', '.'];
     const expected = {};
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('ignore numbers', () => {
+  test('ignore numbers', async () => {
     const texts = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
     const expected = {};
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('Unicode letters', () => {
+  test('Unicode letters', async () => {
     const texts = ['本', 'φ', 'ほ', 'ø'];
     const expected = {
       本: 1,
@@ -87,10 +87,10 @@ describe('ParallelLetterFrequency', () => {
       ø: 1,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('combination of lower- and uppercase letters, punctuation and white space', () => {
+  test('combination of lower- and uppercase letters, punctuation and white space', async () => {
     const texts = [
       'There, peeping among the cloud-wrack above a dark tower high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end, the shadow was only a small and passing thing: there was light and high beauty forever beyond its reach.',
     ];
@@ -119,10 +119,10 @@ describe('ParallelLetterFrequency', () => {
       y: 4,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('large texts', () => {
+  test('large texts', async () => {
     const texts = [
       "I am a sick man.... I am a spiteful man. I am an unattractive man.\nI believe my liver is diseased. However, I know nothing at all about my disease, and do not\nknow for certain what ails me. I don't consult a doctor for it,\nand never have, though I have a respect for medicine and doctors.\nBesides, I am extremely superstitious, sufficiently so to respect medicine,\nanyway (I am well-educated enough not to be superstitious, but I am superstitious).\nNo, I refuse to consult a doctor from spite.\nThat you probably will not understand. Well, I understand it, though.\nOf course, I can't explain who it is precisely that I am mortifying in this case by my spite:\nI am perfectly well aware that I cannot \"pay out\" the doctors by not consulting them;\nI know better than anyone that by all this I am only injuring myself and no one else.\nBut still, if I don't consult a doctor it is from spite.\nMy liver is bad, well - let it get worse!\nI have been going on like that for a long time - twenty years. Now I am forty.\nI used to be in the government service, but am no longer.\nI was a spiteful official. I was rude and took pleasure in being so.\nI did not take bribes, you see, so I was bound to find a recompense in that, at least.\n(A poor jest, but I will not scratch it out. I wrote it thinking it would sound very witty;\nbut now that I have seen myself that I only wanted to show off in a despicable way -\nI will not scratch it out on purpose!) When petitioners used to come for\ninformation to the table at which I sat, I used to grind my teeth at them,\nand felt intense enjoyment when I succeeded in making anybody unhappy.\nI almost did succeed. For the most part they were all timid people - of course,\nthey were petitioners. But of the uppish ones there was one officer in particular\nI could not endure. He simply would not be humble, and clanked his sword in a disgusting way.\nI carried on a feud with him for eighteen months over that sword. At last I got the better of him.\nHe left off clanking it. That happened in my youth, though. But do you know,\ngentlemen, what was the chief point about my spite? Why, the whole point,\nthe real sting of it lay in the fact that continually, even in the moment of the acutest spleen,\nI was inwardly conscious with shame that I was not only not a spiteful but not even an embittered man,\nthat I was simply scaring sparrows at random and amusing myself by it.\nI might foam at the mouth, but bring me a doll to play with, give me a cup of tea with sugar in it,\nand maybe I should be appeased. I might even be genuinely touched,\nthough probably I should grind my teeth at myself afterwards and lie awake at night with shame for\nmonths after. That was my way. I was lying when I said just now that I was a spiteful official.\nI was lying from spite. I was simply amusing myself with the petitioners and with the officer,\nand in reality I never could become spiteful. I was conscious every moment in myself of many,\nvery many elements absolutely opposite to that. I felt them positively swarming in me,\nthese opposite elements. I knew that they had been swarming in me all my life and craving some outlet from me,\nbut I would not let them, would not let them, purposely would not let them come out.\nThey tormented me till I was ashamed: they drove me to convulsions and - sickened me, at last,\nhow they sickened me!",
       'Gentlemen, I am joking, and I know myself that my jokes are not brilliant\n,but you know one can take everything as a joke. I am, perhaps, jesting against the grain.\nGentlemen, I am tormented by questions; answer them for me. You, for instance, want to cure men of their\nold habits and reform their will in accordance with science and good sense.\nBut how do you know, not only that it is possible, but also that it is\ndesirable to reform man in that way? And what leads you to the conclusion that man\'s\ninclinations need reforming? In short, how do you know that such a reformation will be a benefit to man?\nAnd to go to the root of the matter, why are you so positively convinced that not to act against\nhis real normal interests guaranteed by the conclusions of reason and arithmetic is certainly always\nadvantageous for man and must always be a law for mankind? So far, you know,\nthis is only your supposition. It may be the law of logic, but not the law of humanity.\nYou think, gentlemen, perhaps that I am mad? Allow me to defend myself. I agree that man\nis pre-eminently a creative animal, predestined to strive consciously for an object and to engage in engineering -\nthat is, incessantly and eternally to make new roads, wherever\nthey may lead. But the reason why he wants sometimes to go off at a tangent may just be that he is\npredestined to make the road, and perhaps, too, that however stupid the "direct"\npractical man may be, the thought sometimes will occur to him that the road almost always does lead\nsomewhere, and that the destination it leads to is less important than the process\nof making it, and that the chief thing is to save the well-conducted child from despising engineering,\nand so giving way to the fatal idleness, which, as we all know,\nis the mother of all the vices. Man likes to make roads and to create, that is a fact beyond dispute.\nBut why has he such a passionate love for destruction and chaos also?\nTell me that! But on that point I want to say a couple of words myself. May it not be that he loves\nchaos and destruction (there can be no disputing that he does sometimes love it)\nbecause he is instinctively afraid of attaining his object and completing the edifice he is constructing?\nWho knows, perhaps he only loves that edifice from a distance, and is by no means\nin love with it at close quarters; perhaps he only loves building it and does not want to live in it,\nbut will leave it, when completed, for the use of les animaux domestiques -\nsuch as the ants, the sheep, and so on. Now the ants have quite a different taste.\nThey have a marvellous edifice of that pattern which endures for ever - the ant-heap.\nWith the ant-heap the respectable race of ants began and with the ant-heap they will probably end,\nwhich does the greatest credit to their perseverance and good sense. But man is a frivolous and\nincongruous creature, and perhaps, like a chess player, loves the process of the game, not the end of it.\nAnd who knows (there is no saying with certainty), perhaps the only goal on earth\nto which mankind is striving lies in this incessant process of attaining, in other words,\nin life itself, and not in the thing to be attained, which must always be expressed as a formula,\nas positive as twice two makes four, and such positiveness is not life, gentlemen,\nbut is the beginning of death.',
@@ -157,10 +157,10 @@ describe('ParallelLetterFrequency', () => {
       y: 251,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 
-  xtest('many small texts', () => {
+  test('many small texts', async () => {
     const texts = Array(50).fill('abbccc');
     const expected = {
       a: 50,
@@ -168,6 +168,6 @@ describe('ParallelLetterFrequency', () => {
       c: 150,
     };
     const actual = parallelLetterFrequency(texts);
-    expect(actual).toEqual(expected);
+    await expect(actual).resolves.toEqual(expected);
   });
 });
