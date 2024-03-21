@@ -2224,8 +2224,14 @@
         "slug": "darts",
         "name": "Darts",
         "uuid": "6c64649b-ea81-4118-9e74-a0a55018ffbc",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "arithmetic-operators",
+          "conditionals",
+          "conditionals-switch"
+        ],
         "difficulty": 3
       },
       {
@@ -2576,6 +2582,21 @@
           "conditionals",
           "loops",
           "strings"
+        ]
+      }, {
+        "slug": "lens-person",
+        "name": "Lens-Person",
+        "uuid": "",
+        "practices": [],
+        "prerequisites": [
+          "prototypes-and-classes",
+          "callbacks"
+        ],
+        "difficulty": 7,
+        "topics": [
+          "lens",
+          "classes",
+          "callbacks"
         ]
       }
     ]
