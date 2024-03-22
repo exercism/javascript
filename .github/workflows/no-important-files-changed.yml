@@ -5,12 +5,12 @@ on:
     types: [opened]
     branches: [main]
     paths:
-      - "exercises/concept/**"
-      - "exercises/practice/**"
-      - "!exercises/*/*/.approaches/**"
-      - "!exercises/*/*/.articles/**"
-      - "!exercises/*/*/.docs/**"
-      - "!exercises/*/*/.meta/**"
+      - 'exercises/concept/**'
+      - 'exercises/practice/**'
+      - '!exercises/*/*/.approaches/**'
+      - '!exercises/*/*/.articles/**'
+      - '!exercises/*/*/.docs/**'
+      - '!exercises/*/*/.meta/**'
 
 permissions:
   pull-requests: write
