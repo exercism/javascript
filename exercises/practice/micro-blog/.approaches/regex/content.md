@@ -17,4 +17,11 @@ This solution:
   - This matches characters by code points as well.
 - Then it returns the first match as the output string.
 
+<!-- prettier-ignore-start -->
+~~~~exercism/note
+This approach will not yield the correct result when applied to characters that are made of multiple
+graphere clusters and are meant to represent a single visual unit, such as some emoji.
+~~~~
+<!-- prettier-ignore-end -->
+
 [match]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match

@@ -1,6 +1,6 @@
 # Introduction
 
-As noted in this exercise's introduction, moso built-in Javascript methods for working with strings are Unicode-aware, but work with UTF-16 code units.
+As noted in this exercise's introduction, most built-in Javascript methods for working with strings are Unicode-aware, but work with UTF-16 code units.
 This might not be a problem, if all of the input contains characters represented by one code unit and you might not even notice it.
 Unfortunately, this isn't the case with our micro-blog.
 
@@ -41,7 +41,7 @@ But what about characters made of multiple code _points_, like some emoji?
 
 ### Other approach: `Intl.Segmenter`
 
-The `Intl.Segmenter` object enables locale-sensitive string splitting abd by default splits by graphemes,
+The `Intl.Segmenter` object enables locale-sensitive string splitting and by default splits by graphemes,
 so it should work well with symbols like emoji made of multiple code points.
 For more information, and a detailed explanation, check the [`Intl.Segmenter` approach][separator].
 

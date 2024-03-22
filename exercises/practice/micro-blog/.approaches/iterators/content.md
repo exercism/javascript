@@ -17,4 +17,11 @@ This solution:
 - Then it separates the first 5 characters (code points).
 - Finally, it joins them back into a string.
 
+<!-- prettier-ignore-start -->
+~~~~exercism/note
+This approach will not yield the correct result when applied to characters that are made of multiple
+graphere clusters and are meant to represent a single visual unit, such as some emoji.
+~~~~
+<!-- prettier-ignore-end -->
+
 [spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
