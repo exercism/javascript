@@ -74,7 +74,7 @@ export class ExternalApi {
 
     if (typeof callback !== 'function') {
       throw new BadRequest(
-        `Expected callback function when calling fetch(text, callback), actual ${typeof callback}.`,
+        `Expected callback function when calling request(text, callback), actual ${typeof callback}.`,
       );
     }
 

@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const parallelLetterFrequency = (texts) => {
+export const parallelLetterFrequency = async (texts) => {
   throw new Error('Remove this statement and implement this function');
 };
