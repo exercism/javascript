@@ -2603,6 +2603,7 @@
         "slug": "ledger",
         "name": "Ledger",
         "uuid": "8716b347-e18f-48a6-b373-426cc4ca98cb",
+        "practices": [],
         "prerequisites": [
           "string-formatting"
         ],
