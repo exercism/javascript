@@ -6,62 +6,94 @@ class LedgerEntry {
   }
 }
 
-const headerRow = (locale) =>
-  locale === 'en-US'
-    ? `${`Date`.padEnd(10, ` `)} | ${`Description`.padEnd(
-        25,
-        ` `,
-      )} | ${`Change`.padEnd(13, ` `)}`
-    : `${`Datum`.padEnd(10, ` `)} | ${`Omschrijving`.padEnd(
-        25,
-        ` `,
-      )} | ${`Verandering`.padEnd(13, ` `)}`;
+class FormattedLedgerEntry {
+  constructor(entry, locale, dateFormat, currencyFormat) {
+    this.entry = entry;
+    this.locale = locale;
+    this.dateFormat = dateFormat;
+    this.currencyFormat = currencyFormat;
+  }
+
+  date() {
+    return this.entry.date.toLocaleDateString(this.locale, this.dateFormat);
+  }
+
+  description(length = 25) {
+    if (this.entry.description.length > length) {
+      return `${this.entry.description.substring(0, length - 3)}...`;
+    }
+
+    return this.entry.description.padEnd(length, ' ');
+  }
+
+  change(offset = 13) {
+    const formatted = (this.entry.change / 100).toLocaleString(
+      this.locale,
+      this.currencyFormat,
+    );
+
+    const trailingSpace = formatted.includes(')') ? '' : ' ';
+    return `${formatted}${trailingSpace}`.padStart(offset, ' ');
+  }
+
+  toTableRow() {
+    return [this.date(), this.description(), this.change()].join(' | ');
+  }
+}
+
+const OPTIONS = {
+  HEADERS: {
+    'en-US': ['Date', 'Description', 'Change'],
+    'nl-NL': ['Datum', 'Omschrijving', 'Verandering'],
+  },
+  headerRow: function (locale) {
+    const [date, description, change] = this.HEADERS[locale];
+    return [
+      date.padEnd(10, ' '),
+      description.padEnd(25, ' '),
+      change.padEnd(13, ' '),
+    ].join(' | ');
+  },
+  dateFormatOptions: function () {
+    return {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+    };
+  },
+  currencyFormatOptions: function (currency, locale) {
+    return {
+      style: 'currency',
+      currency: currency,
+      currencySign: locale === 'en-US' ? 'accounting' : 'standard',
+      currencyDisplay: locale === 'en-US' ? 'symbol' : 'narrowSymbol',
+    };
+  },
+};
 
 export const createEntry = (date, description, change) =>
   new LedgerEntry(date, description, change);
 
 export function formatEntries(currency, locale, entries) {
-  // Generate Header Row
-  let table = headerRow(locale);
-  // Set Formatting Options
-  let formattingOptions = {
-    style: 'currency',
-    currency: currency,
-    currencySign: locale === 'en-US' ? 'accounting' : 'standard',
-    currencyDisplay: locale === 'en-US' ? 'symbol' : 'narrowSymbol',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  };
-  // Sort Entries
-  entries.sort(
-    (a, b) =>
-      a.date - b.date ||
-      a.change - b.change ||
-      a.description.localeCompare(b.description),
-  );
-  // Writing each entry to table
-  entries.forEach((entry) => {
-    table += '\n';
-    // Write entry date to table
-    table += `${entry.date.toLocaleDateString(locale, {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    })} | `;
-    // Write entry description to table
-    let truncatedDescription =
-      entry.description.length > 25
-        ? `${entry.description.substring(0, 22)}...`
-        : entry.description.padEnd(25, ' ');
-    table += `${truncatedDescription} | `;
-    // Write entry change to table
-    let changeStr = (entry.change / 100).toLocaleString(
-      locale,
-      formattingOptions,
-    );
-    let trailingSpace = changeStr.includes(')') ? '' : ' ';
-    table += `${changeStr}${trailingSpace}`.padStart(13, ' ');
-  });
+  let dateFormat = OPTIONS.dateFormatOptions();
+  let currencyFormat = OPTIONS.currencyFormatOptions(currency, locale);
 
-  return table;
+  let rows = entries
+    .sort(
+      (a, b) =>
+        a.date - b.date ||
+        a.change - b.change ||
+        a.description.localeCompare(b.description),
+    )
+    .map((entry) => {
+      let formattedEntry = new FormattedLedgerEntry(
+        entry,
+        locale,
+        dateFormat,
+        currencyFormat,
+      );
+      return formattedEntry.toTableRow();
+    });
+
+  return [OPTIONS.headerRow(locale), ...rows].join('\n');
 }
