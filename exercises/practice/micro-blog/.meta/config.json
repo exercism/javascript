@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "Cool-Katt"
+  ],
+  "files": {
+    "solution": [
+      "micro-blog.js"
+    ],
+    "test": [
+      "micro-blog.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Given an input string, truncate it to 5 characters."
+}

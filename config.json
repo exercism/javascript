@@ -2533,7 +2533,7 @@
         "difficulty": 7
       },
       {
-        "slug": "pop-count",
+        "slug": "eliuds-eggs",
         "name": "Eliud's Eggs",
         "uuid": "2a3ecf62-fb5d-4dac-8369-72e7976a8f57",
         "practices": [],
@@ -2588,6 +2588,16 @@
         ],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "micro-blog",
+        "name": "Micro Blog",
+        "uuid": "ee771d09-33fb-4450-b9c3-d591a4a90a99",
+        "practices": [],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 2
       }
     ]
   },
