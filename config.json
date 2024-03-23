@@ -2579,6 +2579,17 @@
         ]
       },
       {
+        "slug": "markdown",
+        "name": "Markdown",
+        "uuid": "cd666b3a-7114-4ba9-9b2a-7622a2c8c12c",
+        "practices": [
+          "strings",
+          "string-formatting"
+        ],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "micro-blog",
         "name": "Micro Blog",
         "uuid": "ee771d09-33fb-4450-b9c3-d591a4a90a99",
