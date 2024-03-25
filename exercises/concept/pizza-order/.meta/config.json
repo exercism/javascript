@@ -3,6 +3,9 @@
     "SleeplessByte",
     "safwansamsudeen"
   ],
+  "contributors": [
+    "Cool-Katt"
+  ],
   "files": {
     "solution": [
       "pizza-order.js"
@@ -12,6 +15,9 @@
     ],
     "exemplar": [
       ".meta/exemplar.js"
+    ],
+    "editor": [
+      "global.d.ts"
     ]
   },
   "forked_from": [
