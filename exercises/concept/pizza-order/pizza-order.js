@@ -17,6 +17,9 @@ export function pizzaPrice(pizza, ...extras) {
 /**
  * Calculate the price of the total order, given individual orders
  *
+ * (HINT: For this exercise, you can take a look at the supplied "global.d.ts" file
+ * for a more info about the type definitions used)
+ *
  * @param {PizzaOrder[]} pizzaOrders a list of pizza orders
  * @returns {number} the price of the total order
  */
