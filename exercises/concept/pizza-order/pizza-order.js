@@ -3,7 +3,7 @@
 // @ts-check
 
 /**
- * Determine the prize of the pizza given the pizza and optional extras
+ * Determine the price of the pizza given the pizza and optional extras
  *
  * @param {Pizza} pizza name of the pizza to be made
  * @param {Extra[]} extras list of extras
