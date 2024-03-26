@@ -2608,6 +2608,14 @@
           "string-formatting"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "lens-person",
+        "name": "Lens Person",
+        "uuid": "a1e71425-0e7e-442a-9c8e-cc252f440760",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
