@@ -12,6 +12,13 @@
     ],
     "example": [
       ".meta/proof.ci.js"
+    ],
+    "editor": [
+      "address.js",
+      "born.js",
+      "lens.js",
+      "name.js",
+      "person.js"
     ]
   },
   "blurb": "Use lenses to update nested records (specific to languages with immutable data)."

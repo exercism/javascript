@@ -10,7 +10,6 @@ import { Born } from './born';
 import { Address } from './address';
 import { Lens } from './lens';
 
-
 // Implement the nameLens with the getter and setter
 export const nameLens = new Lens(
   () => {
@@ -19,7 +18,7 @@ export const nameLens = new Lens(
   () => {
     throw new Error('Remove this statement and implement this function');
   },
-  );
+);
 
 // Implement the bornAtLens with the getter and setter
 export const bornAtLens = new Lens(
@@ -29,7 +28,7 @@ export const bornAtLens = new Lens(
   () => {
     throw new Error('Remove this statement and implement this function');
   },
-  );
+);
 
 // Implement the streetLens with the getter and setter
 export const streetLens = new Lens(
@@ -39,4 +38,4 @@ export const streetLens = new Lens(
   () => {
     throw new Error('Remove this statement and implement this function');
   },
-  );
+);

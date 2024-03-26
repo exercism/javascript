@@ -12,9 +12,9 @@ const person = new Person(
   new Born(
     new Address(100, 'Hospital street', 'Tamil Nadu', 'India'),
     new Date(),
-    ),
+  ),
   new Address(1, 'Coder street', 'Tamil Nadu', 'India'),
-  );
+);
 
 // test suite for nameLens
 describe('nameLens', () => {
@@ -34,12 +34,8 @@ describe('nameLens', () => {
 
   xtest('should ensure immutability by checking the original person object', () => {
     expect(person).not.toStrictEqual(
-      new Person(
-        new Name('Sara', 'Lakshamanan'),
-        person.born,
-        person.address,
-        ),
-        );
+      new Person(new Name('Sara', 'Lakshamanan'), person.born, person.address),
+    );
   });
 });
 
@@ -53,7 +49,7 @@ describe('bornAtLens', () => {
     const updatedPerson = bornAtLens.set(
       person,
       new Address(2, 'Exercism street', 'Tamil Nadu', 'India'),
-      );
+    );
     expect(bornAtLens.get(updatedPerson)).toEqual(updatedPerson.born.bornAt);
   });
 
@@ -64,10 +60,10 @@ describe('bornAtLens', () => {
         new Born(
           new Address(2, 'Exercism street', 'Tamil Nadu', 'India'),
           person.born.bornOn,
-          ),
-        person.address,
         ),
-        );
+        person.address,
+      ),
+    );
   });
 });
 
@@ -92,8 +88,8 @@ describe('streetLens', () => {
           'Exercism Street',
           person.address.place,
           person.address.country,
-          ),
-          ),
-          );
+        ),
+      ),
+    );
   });
 });
