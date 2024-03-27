@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "sarava338",
+    "Cool-Katt"
+  ],
+  "files": {
+    "solution": [
+      "lens-person.js"
+    ],
+    "test": [
+      "lens-person.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ],
+    "editor": [
+      "address.js",
+      "born.js",
+      "lens.js",
+      "name.js",
+      "person.js"
+    ]
+  },
+  "blurb": "Use lenses to update nested records (specific to languages with immutable data)."
+}
