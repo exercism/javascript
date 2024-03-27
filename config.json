@@ -2224,16 +2224,30 @@
         "slug": "darts",
         "name": "Darts",
         "uuid": "6c64649b-ea81-4118-9e74-a0a55018ffbc",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "arithmetic-operators",
+          "conditionals",
+          "conditionals-switch"
+        ],
         "difficulty": 3
       },
       {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "2fc4f834-a51c-42b8-a4d9-5263229e7648",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "math",
+          "recursion"
+        ],
+        "prerequisites": [
+          "while-loops",
+          "maps",
+          "objects", 
+          "numbers"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -2298,8 +2312,14 @@
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "math"
+        ],
+        "prerequisites": [
+          "math",
+          "numbers",
+          "for-loops"
+        ],
         "difficulty": 4,
         "topics": [
           "bitwise_operations",
@@ -2329,8 +2349,14 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "d2d3cd13-b06c-4c24-9964-fb1554f70dd4",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "bit-manipulation"
+      ],
+        "prerequisites": [
+          "integers",
+          "numbers",
+          "math"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -2346,7 +2372,10 @@
         "name": "Minesweeper",
         "uuid": "8bafe6c4-9154-4037-9070-7f57f91d495a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "classes"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
@@ -2358,8 +2387,14 @@
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "array-transformations",
+          "array-analysis"
+        ],
+        "prerequisites": [
+          "arrays",
+          "array-analysis"
+        ],
         "difficulty": 8,
         "topics": [
           "conditionals",
@@ -2375,8 +2410,14 @@
         "slug": "react",
         "name": "React",
         "uuid": "303c6969-9446-41aa-871a-11223a43e810",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "events",
+          "reactive-programming"
+        ],
+        "prerequisites": [
+          "data-structures",
+          "algorithms"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
@@ -2388,8 +2429,14 @@
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "fd1575f3-3087-4cfa-8a26-168fba6d0606",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "data-structures",
+          "algorithms"
+        ],
+        "prerequisites": [
+          "data-structures",
+          "algorithms"
+        ],
         "difficulty": 8,
         "topics": [
           "recursion",
