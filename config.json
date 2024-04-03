@@ -2608,6 +2608,19 @@
           "string-formatting"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "b381543d-2bcf-4999-9d44-788a2b39c1a0",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "array-loops",
+          "conditionals",
+          "errors"
+        ],
+        "difficulty": 5
       }
     ]
   },
