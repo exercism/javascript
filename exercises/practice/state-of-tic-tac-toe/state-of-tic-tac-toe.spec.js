@@ -196,7 +196,7 @@ describe('Invalid boards', () => {
     const expected = new Error(
       'Impossible board: game should have ended after the game was won',
     );
-    const actual = () =>  gamestate(board);
+    const actual = () => gamestate(board);
     expect(actual).toThrow(expected);
   });
 });
