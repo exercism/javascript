@@ -14,7 +14,7 @@ const myPromise = new Promise(function (resolve, reject) {
   if (sampleData[randomNumber]) {
     resolve(sampleData[randomNumber]);
   } else {
-    reject('An error occured!');
+    reject('An error occurred!');
   }
 });
 
@@ -55,13 +55,13 @@ promise1.then(function (value) {
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
-  throw 'An error occured';
+  throw 'An error occurred';
 });
 
 promise1.catch(function (error) {
   console.error(error);
 });
-// expected output: An error occured
+// expected output: An error occurred
 ```
 
 **finally**
