@@ -15,8 +15,8 @@ function recurse() {
 ```
 
 A recursive function usually has a condition to stop calling itself and return a value, known as a _base case_.
-If a base case is missing, in most cases, because it will call itself indefinitely, it would be able to run forever.
-In reality, in most of those situations, you'll end up with a "StackSize error": an error raised by the runtime because the _stack_ of function calls has grown beyond a predefined limit because each recursive call adds to this _stack_ until it returns (and it doesn't).
+If a base case is missing, it can call itself indefinitely and run forever.
+Realistically, you'll end up with a "StackSize error" raised by the runtime because the _stack_ of function calls has grown beyond a predefined limit because each recursive call adds to this _stack_ until it returns (and it doesn't).
 The message of this error is `Maximum call stack size exceeded`.
 
 ```js
