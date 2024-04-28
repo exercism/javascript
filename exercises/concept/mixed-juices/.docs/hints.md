@@ -23,7 +23,7 @@
 - You can combine two conditions for the loop using [logical operators][concept-booleans].
 
 [mdn-switch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#
-[mdn-fallthrough]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#what_happens_if_i_forgot_a_break
+[mdn-fallthrough]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#taking_advantage_of_fall-through
 [mdn-while]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
 [mdn-do-while]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
 [concept-booleans]: /tracks/javascript/concepts/booleans
