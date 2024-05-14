@@ -2610,6 +2610,19 @@
         "difficulty": 5
       },
       {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "b381543d-2bcf-4999-9d44-788a2b39c1a0",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "array-loops",
+          "conditionals",
+          "errors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "lens-person",
         "name": "Lens Person",
         "uuid": "a1e71425-0e7e-442a-9c8e-cc252f440760",
