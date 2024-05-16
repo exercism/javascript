@@ -11,7 +11,7 @@ onSuccess();
 // => `notify` called with `{ message: 'SUCCESS' }`
 ```
 
-## 2. Let your customer know that their order was unsuccessful
+## 2. Notify your customer when their order was unsuccessful
 
 The portal should notify your customer if their order was unsuccessful. Define the `onError` callback function that will be called if the order was unsuccessful because the grocer _does not have_ the fruit in stock or there was an error. This function should invoke the imported `notify` function, passing `{ message: 'ERROR' }` to let your customer know that their order was unsuccessful.
 
