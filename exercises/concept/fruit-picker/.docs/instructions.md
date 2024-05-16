@@ -4,7 +4,7 @@ You are creating a new online portal for your patrons to order their fruit fresh
 
 ## 1. Notify your customer when their order was successful
 
-The portal should notify your customer if their order was successful. Define the `onSuccess` callback function that will be called if the order was successful because the grocer _has_ the fruit in stock. This function should invoke the imported `notify` function, passing `{ message: 'SUCCESS' }` to let your customer know that their order was successful.
+The portal should notify your customer if their order was successful. Define the `onSuccess` callback function that will be called if the order was successful due to the grocer having enough fruit in stock. This function should invoke the imported `notify` function, passing `{ message: 'SUCCESS' }` to let your customer know that their order was successful.
 
 ```javascript
 onSuccess();
