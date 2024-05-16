@@ -2,7 +2,7 @@
 
 You are creating a new online portal for your patrons to order their fruit fresh from the grocer. The grocer has an API that you can use to see if they have the inventory desired by your customers. You need to create a small library of functions for interacting with the grocer's API.
 
-## 1. Let your customer know that their order was successful
+## 1. Notify your customer when their order was successful
 
 The portal should notify your customer if their order was successful. Define the `onSuccess` callback function that will be called if the order was successful because the grocer _has_ the fruit in stock. This function should invoke the imported `notify` function, passing `{ message: 'SUCCESS' }` to let your customer know that their order was successful.
 
