@@ -14,7 +14,7 @@ This concept is focused on using regular expressions in JavaScript. If you want 
 
 ## How to create Regular Expressions
 
-In JavaScript, a regular expressions is mostly written in the format `/pattern/modifiers` where 'pattern' is the main regex, and 'modifiers' are a series of characters which we can add to indicate special options (like superpowers).
+In JavaScript, regular expressions are mostly written in the format `/pattern/modifiers` where 'pattern' is the main regex, and 'modifiers' are a series of characters which we can add to indicate special options (like superpowers).
 
 Nevertheless, we have two ways of creating a regular expression:
 
@@ -119,7 +119,7 @@ funnyQuote.match(regex3);
 
 ### Replace
 
-The [replace()][mdn-regex-replace] method in JavaScript allows us to search for a value within a given string, and replacing it with a desired new value.
+The [replace()][mdn-regex-replace] method in JavaScript allows us to search for a value within a given string, and replace it with a new value.
 
 ```javascript
 string.replace(searchValue, newValue);
