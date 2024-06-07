@@ -1,4 +1,4 @@
-# Introduction
+ # Introduction
 
 JavaScript is a dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
@@ -45,17 +45,20 @@ add(1, 3);
 
 ## Exposing to Other Files
 
-To make a `function`, a constant, or a variable available in _other files_, they need to be [exported][mdn-export] using the `export` keyword. Another file may then [import][mdn-import] these using the `import` keyword. This is also known as the module system. A great example is how all the tests work. Each exercise has at least one file, for example `lasagna.js`, which contains the _implementation_. Additionally, there is at least one other file, for example `lasagna.spec.js`, that contains the _tests_. This file _imports_ the public (i.e. exported) entities to test the implementation:
+To make a `function`, a constant, or a variable available in _other files_, they need to be [exported][mdn-export] using the `export` keyword. Another file may then [import][mdn-import] these using the `import` keyword. This is also known as the module system. A great example is how all the tests work. Each exercise has at least one file, for example `lasagna.js`, which contains the _implementation_. Additionally, there is at least one other file, for example `lasagna.spec.js`, that contains the _tests_. This file _imports_ the public (i.e. exported) entities to test the implementation: 
+
+To expose files to others using the ES6 import syntax , remane the files to a .mjs extension , so that they may be consumable. 
+
 
 ```javascript
-// file.js
+// file.mjs
 export const MY_VALUE = 10;
 
 export function add(num1, num2) {
   return num1 + num2;
 }
 
-// file.spec.js
+// file.spec.mjs
 import { MY_VALUE, add } from './file';
 
 add(MY_VALUE, 5);
