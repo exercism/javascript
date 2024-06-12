@@ -12,7 +12,7 @@ Having found the kidnappers, Annalyn considers which of the following actions sh
 
 - _Fast attack_: a fast attack can be made if the **knight** is **_sleeping_**, as it takes time for him to get his armor on, so he will be vulnerable.
 - _Spy_: the group can be spied upon if **at least one** of them is **_awake_**. Otherwise, spying is a waste of time.
-- _Signal prisoner_: the prisoner can be signalled using bird sounds if the **prisoner** is **_awake_** and the **archer** is **_sleeping_**, as archers are trained in bird signaling so they could intercept the message.
+- _Signal prisoner_: the prisoner can be signalled using bird sounds if the **prisoner** is **_awake_** and the **archer** is **_sleeping_**, as archers are trained in bird signaling so they can intercept the message.
 - _Free prisoner_: Annalyn can try sneaking into the camp to free the prisoner.
   This is a risky thing to do and can only succeed in one of two ways:
   - If Annalyn has her pet dog with her she can rescue the prisoner if the **archer** is **_asleep_**.
@@ -36,7 +36,7 @@ canExecuteFastAttack(knightIsAwake);
 
 ## 2. Check if the 'Spy' action is possible
 
-Implement a function named `canSpy` that takes three boolean values, indicating if the knight, archer and the prisoner, respectively, are awake.
+Implement a function named `canSpy` that takes three boolean values, indicating if the knight, archer and prisoner, respectively, are awake.
 The function returns `true` if the 'Spy' action is available based on the state of the characters.
 Otherwise, returns `false`:
 
