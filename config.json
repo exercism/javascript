@@ -2621,6 +2621,22 @@
           "errors"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "lens-person",
+        "name": "Lens Person",
+        "uuid": "a1e71425-0e7e-442a-9c8e-cc252f440760",
+        "practices": [],
+        "prerequisites": [
+          "prototypes-and-classes",
+          "callbacks"
+        ],
+        "difficulty": 7,
+        "topics": [
+          "lens",
+          "classes",
+          "callbacks"
+        ]
       }
     ]
   },
