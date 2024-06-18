@@ -2,12 +2,12 @@
 
 JavaScript includes the capabilities for object-oriented programming ([OOP][wiki-oop]).
 In OOP, you want to create objects (_instances_) from "templates" (_classes_) so that they include certain data and functionality.
-The data properties are called _fields_ in the OOP context, function properties are called _methods_.
+The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
 
 JavaScript did not have classes at all before they were added to the language specification in 2015 but allowed for object-oriented programming using prototype-based inheritance.
 And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
-To understand what it means to be a prototype-based language and how JavaScript works, we will go back to the time when there were no classes.
+To understand what it means to be a prototype-based language and how JavaScript actually works, we will go back to the time when there were no classes.
 
 ## Prototype Syntax
 
@@ -184,24 +184,24 @@ With the keywords `get` and `set` you can define functions that are executed whe
 ```javascript
 class Car {
   constructor() {
-    this._milage = 0;
+    this._mileage = 0;
   }
 
-  get milage() {
-    return this._milage;
+  get mileage() {
+    return this._mileage;
   }
 
-  set milage(value) {
-    throw new Error(`Milage cannot be manipulated, ${value} is ignored.`);
+  set mileage(value) {
+    throw new Error(`Mileage cannot be manipulated, ${value} is ignored.`);
     // Just an example, usually you would not provide a setter in this case.
   }
 }
 
 const myCar = new Car();
-myCar.milage;
+myCar.mileage;
 // => 0
-myCar.milage = 100;
-// => Error: Milage cannot be manipulated, 100 is ignored.
+myCar.mileage = 100;
+// => Error: Mileage cannot be manipulated, 100 is ignored.
 ```
 
 ---
