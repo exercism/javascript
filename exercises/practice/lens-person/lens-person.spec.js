@@ -1,10 +1,9 @@
-import { Person } from './person';
-import { Name } from './name';
 import { Address } from './address';
 import { Born } from './born';
+import { Name } from './name';
+import { Person } from './person';
 
-// import { nameLens, bornAtLens, streetLens } from './.meta/proof.ci';
-import { nameLens, bornAtLens, streetLens } from './lens-person';
+import { bornAtLens, nameLens, streetLens } from './lens-person';
 
 // test data
 const person = new Person(

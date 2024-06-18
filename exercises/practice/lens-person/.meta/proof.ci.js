@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { Person } from '../person';
-import { Name } from '../name';
-import { Born } from '../born';
 import { Address } from '../address';
+import { Born } from '../born';
 import { Lens } from '../lens';
+import { Name } from '../name';
+import { Person } from '../person';
 
 // Implement the nameLens with the getter and setter
 export const nameLens = new Lens(
