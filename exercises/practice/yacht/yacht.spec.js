@@ -37,6 +37,10 @@ describe('Yacht', () => {
     expect(score([3, 3, 3, 3, 3], 'fives')).toEqual(0);
   });
 
+  xtest('Fives', () => {
+    expect(score([1, 5, 3, 5, 3], 'fives')).toEqual(10);
+  });
+
   xtest('Sixes', () => {
     expect(score([2, 3, 4, 5, 6], 'sixes')).toEqual(6);
   });
