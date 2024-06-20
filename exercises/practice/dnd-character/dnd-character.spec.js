@@ -84,21 +84,44 @@ describe('D&D Character', () => {
     expect(Character.rollAbility()).toBeGreaterThanOrEqual(3);
   });
 
-  xtest('random character is valid', () => {
+  xtest('random character is valid - strength', () => {
     const Drizzt = new Character();
-
     expect(Drizzt.strength).toBeLessThanOrEqual(18);
     expect(Drizzt.strength).toBeGreaterThanOrEqual(3);
+  });
+
+  xtest('random character is valid - dexterity', () => {
+    const Drizzt = new Character();
     expect(Drizzt.dexterity).toBeLessThanOrEqual(18);
     expect(Drizzt.dexterity).toBeGreaterThanOrEqual(3);
+  });
+
+  xtest('random character is valid - constitution', () => {
+    const Drizzt = new Character();
     expect(Drizzt.constitution).toBeLessThanOrEqual(18);
     expect(Drizzt.constitution).toBeGreaterThanOrEqual(3);
+  });
+
+  xtest('random character is valid - intelligence', () => {
+    const Drizzt = new Character();
     expect(Drizzt.intelligence).toBeLessThanOrEqual(18);
     expect(Drizzt.intelligence).toBeGreaterThanOrEqual(3);
+  });
+
+  xtest('random character is valid - wisdom', () => {
+    const Drizzt = new Character();
     expect(Drizzt.wisdom).toBeLessThanOrEqual(18);
     expect(Drizzt.wisdom).toBeGreaterThanOrEqual(3);
+  });
+
+  xtest('random character is valid - charisma', () => {
+    const Drizzt = new Character();
     expect(Drizzt.charisma).toBeLessThanOrEqual(18);
     expect(Drizzt.charisma).toBeGreaterThanOrEqual(3);
+  });
+
+  xtest('random character is valid - hitpoints', () => {
+    const Drizzt = new Character();
     expect(Drizzt.hitpoints).toEqual(10 + abilityModifier(Drizzt.constitution));
   });
 
