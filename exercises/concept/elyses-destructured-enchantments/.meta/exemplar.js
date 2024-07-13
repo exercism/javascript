@@ -42,7 +42,7 @@ export function swapTopTwoCards([a, b, ...rest]) {
  * @returns {[Card, Card[]]} the top card of the given
  * deck and a new deck containing all the other cards
  */
-export function discardTopCard([first, ..rest]) {
+export function discardTopCard([first, ...rest]) {
   return [first, rest];
 }
 
