@@ -8,9 +8,7 @@
  *
  * @returns {Card} the first card in the deck
  */
-export function getFirstCard(deck) {
-  const [first] = deck;
-
+export function getFirstCard([first]) {
   return first;
 }
 
@@ -21,9 +19,7 @@ export function getFirstCard(deck) {
  *
  * @returns {Card} the second card in the deck
  */
-export function getSecondCard(deck) {
-  const [, second] = deck;
-
+export function getSecondCard([, second]) {
   return second;
 }
 
@@ -46,9 +42,7 @@ export function swapTopTwoCards([a, b, ...rest]) {
  * @returns {[Card, Card[]]} the top card of the given
  * deck and a new deck containing all the other cards
  */
-export function discardTopCard(deck) {
-  const [first, ...rest] = deck;
-
+export function discardTopCard([first, ..rest]) {
   return [first, rest];
 }
 
