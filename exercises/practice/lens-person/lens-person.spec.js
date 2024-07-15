@@ -7,7 +7,7 @@ import { bornAtLens, nameLens, streetLens } from './lens-person';
 
 // test data
 const person = new Person(
-  new Name('Saravanan', 'Lakshamanan'),
+  new Name('Saravanan', 'Lakshmanan'),
   new Born(
     new Address(100, 'Hospital street', 'Tamil Nadu', 'India'),
     new Date(),
@@ -32,9 +32,7 @@ describe('nameLens', () => {
   });
 
   xtest('should ensure immutability by checking the original person object', () => {
-    expect(person).not.toStrictEqual(
-      new Person(new Name('Sara', 'Lakshamanan'), person.born, person.address),
-    );
+    expect(person.name).toStrictEqual(new Name('Saravanan', 'Lakshmanan'));
   });
 });
 
@@ -53,15 +51,8 @@ describe('bornAtLens', () => {
   });
 
   xtest('should ensure immutability by checking the original person object', () => {
-    expect(person).not.toEqual(
-      new Person(
-        person.name,
-        new Born(
-          new Address(2, 'Exercism street', 'Tamil Nadu', 'India'),
-          person.born.bornOn,
-        ),
-        person.address,
-      ),
+    expect(person.born.bornAt).toStrictEqual(
+      new Address(100, 'Hospital street', 'Tamil Nadu', 'India'),
     );
   });
 });
@@ -78,17 +69,6 @@ describe('streetLens', () => {
   });
 
   xtest('should ensure immutability by checking the original person object', () => {
-    expect(person).not.toEqual(
-      new Person(
-        person.name,
-        person.born,
-        new Address(
-          person.address.houseNumber,
-          'Exercism Street',
-          person.address.place,
-          person.address.country,
-        ),
-      ),
-    );
+    expect(person.address.street).toStrictEqual('Coder street');
   });
 });
