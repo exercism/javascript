@@ -72,5 +72,4 @@ memoizedScale(4, 3); // => [12, 9], this is remembered, since it was computed al
 ```
 
 [wiki-translate]: https://en.wikipedia.org/wiki/Translation_(geometry)
-
 [wiki-scale]: https://en.wikipedia.org/wiki/Scaling_(geometry)
