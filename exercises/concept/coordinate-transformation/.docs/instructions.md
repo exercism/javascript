@@ -1,8 +1,7 @@
 # Instructions
 
 Your design company has primarily been working with CSS transformations to build web pages. After some discussion, a
-decision is made
-to start using JavaScript to perform some calculations dynamically. Some of your teammates are less experienced with
+decision is made to start using JavaScript to perform some calculations dynamically. Some of your teammates are less experienced with
 JavaScript, so you decide to use a function closure to create reusable transformation for `{x, y}` coordinate pairs.
 
 ## 1. Translate the coordinates
@@ -54,8 +53,7 @@ Implement the `memoizeTransform` function. It takes a function to _memoize_, the
 
 > Memoizing is sometimes used in _dynamic programming_.
 > It allows for expensive operations to be done only once since their results are remembered.
-> **Note** that in this exercise only the last result is remembered, unlike some solutions in dynamic programming that
-> memoize _all_ results.
+> **Note** that in this exercise only the last result is remembered, unlike some solutions in dynamic programming that memoize _all_ results.
 
 ```javascript
 const tripleScale = scale2d(3, 3);
