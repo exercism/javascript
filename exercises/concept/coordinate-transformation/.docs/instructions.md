@@ -7,8 +7,7 @@ JavaScript, so you decide to use a function closure to create reusable transform
 
 ## 1. Translate the coordinates
 
-Implement the `translate2d` function that returns a function making use of a closure to perform a repeatable 2d
-translation of a coordinate pair.
+Implement the `translate2d` function that returns a function making use of a closure to perform a repeatable 2d translation of a coordinate pair.
 
 > In Geometry, [translation][wiki-translate] reffers to moving points, vectors or shapes the same distance in one
 > direction. It can be interpreted as addition of a constant to every point.
@@ -21,8 +20,7 @@ const result = moveCoordinatesRight2Px(4, 8);
 
 ## 2. Scale the coordinates
 
-Implement the `scale2d` function that returns a function making use of a closure to perform a repeatable 2d scale of a
-coordinate pair.
+Implement the `scale2d` function that returns a function making use of a closure to perform a repeatable 2d scale of a coordinate pair.
 
 > In geometry, uniform [scaling][wiki-scale] reffers to enlarging or shrinking vectors or shapes in the same
 > diraction. It can be interpreted as multiplying every point by a constant (scaling factor).
@@ -37,8 +35,7 @@ const result = doubleScale(6, -3);
 
 ## 3. Compose transformation functions
 
-Combine two transformation functions to perform a repeatable transformation. This is often called _function
-composition_, where the result of the first function _'f(x)'_ is used as the input to the second function _'g(x)'_.
+Combine two transformation functions to perform a repeatable transformation. This is often called _function composition_, where the result of the first function _'f(x)'_ is used as the input to the second function _'g(x)'_.
 
 ```javascript
 const moveCoordinatesRight2Px = translate2d(2, 0);
@@ -53,9 +50,7 @@ const result = composedTransformations(0, 1);
 
 ## 4. Save the results of functions
 
-Implement the `memoizeTransform` function. It takes a function to _memoize_, then returns a new function that remembers
-the inputs to the supplied function so that the last return value can be "remembered" and only calculated once if it is
-called again with the same arguments.
+Implement the `memoizeTransform` function. It takes a function to _memoize_, then returns a new function that remembers the inputs to the supplied function so that the last return value can be "remembered" and only calculated once if it is called again with the same arguments.
 
 > Memoizing is sometimes used in _dynamic programming_.
 > It allows for expensive operations to be done only once since their results are remembered.
