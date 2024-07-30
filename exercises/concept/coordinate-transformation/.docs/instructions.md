@@ -21,9 +21,9 @@ const result = moveCoordinatesRight2Px(4, 8);
 
 Implement the `scale2d` function that returns a function making use of a closure to perform a repeatable 2d scale of a coordinate pair.
 
-> In geometry, uniform [scaling][wiki-scale] refers to enlarging or shrinking vectors or shapes in the same direction. 
+> In geometry, uniform [scaling][wiki-scale] refers to enlarging or shrinking vectors or shapes in the same direction.
 > It can be interpreted as multiplying every point by a constant (scaling factor).
-> 
+>
 > For this exercise, assume only positive scaling values.
 
 ```javascript
