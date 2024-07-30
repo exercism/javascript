@@ -8,8 +8,8 @@ so you decide to use a function closure to create reusable transformation for `{
 
 Implement the `translate2d` function that returns a function making use of a closure to perform a repeatable 2d translation of a coordinate pair.
 
-> In Geometry, [translation][wiki-translate] reffers to moving points, vectors or shapes the same distance in one
-> direction. It can be interpreted as addition of a constant to every point.
+> In Geometry, [translation][wiki-translate] refers to moving points, vectors or shapes the same distance in one direction.
+> It can be interpreted as addition of a constant to every point.
 
 ```javascript
 const moveCoordinatesRight2Px = translate2d(2, 0);
