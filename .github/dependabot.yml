@@ -5,7 +5,7 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'monthly'
     labels:
       - 'dependencies :arrow_up_small:'
       - 'github_actions'
@@ -17,7 +17,7 @@ updates:
     directory: '/'
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: 'daily'
+      interval: 'monthly'
     labels:
       - 'dependencies :arrow_up_small:'
       - 'javascript'
