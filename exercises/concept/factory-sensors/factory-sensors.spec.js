@@ -25,6 +25,10 @@ describe('reportOverheating', () => {
     expect(() => reportOverheating(null)).toThrow(ArgumentError);
   });
 
+  test('should not throw if the temperature is 0°C', () => {
+    expect(() => reportOverheating(0)).not.toThrow();
+  });
+
   test('should throw an OverheatingError if the temperature is 501°C', () => {
     expect(() => reportOverheating(501)).toThrow(OverheatingError);
 
