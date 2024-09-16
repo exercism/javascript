@@ -25,3 +25,9 @@ export class Untranslatable extends Error {
     super('jIyajbe’');
   }
 }
+
+export class ConnectionError extends Error {
+  constructor(message) {
+    super(message);
+  }
+}

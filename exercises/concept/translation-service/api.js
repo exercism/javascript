@@ -1,4 +1,4 @@
-import { AbusiveClientError, NotAvailable, Untranslatable } from './errors';
+import { AbusiveClientError, NotAvailable, Untranslatable, ConnectionError } from './errors';
 
 const mutex = { current: false };
 
@@ -116,7 +116,7 @@ function rejectWithRandomDelay(value) {
 }
 
 function makeRandomError() {
-  return new Error(`Error code ${Math.ceil(Math.random() * 10000)}`);
+  return new ConnectionError(`Error code ${Math.ceil(Math.random() * 10000)}`);
 }
 
 class BadRequest extends Error {
