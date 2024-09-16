@@ -85,11 +85,13 @@ export class ExternalApi {
     }
 
     if (this.values[text]) {
-      this.values[text].shift();
-
-      // If it's now available, yay, otherwise, nay
       setTimeout(
-        () => callback(this.values[text][0] ? undefined : makeRandomError()),
+        () => {
+          this.values[text].shift();
+
+          // If it's now available, yay, otherwise, nay
+          callback(this.values[text][0] ? undefined : makeRandomError())
+        },
         1,
       );
       return;
