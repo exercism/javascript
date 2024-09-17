@@ -58,6 +58,17 @@ function checkNumber(num) {
 }
 ```
 
+The return value of a function can be stored in a variable.
+
+```javascript
+function sum(x, y) {
+  return x + y;
+}
+
+const total = sum(5, 10);
+// => 15
+```
+
 The result of a function that `return`s no value or does not have a `return` statement is `undefined`.
 There are no implicit `return`s in JavaScript.
 
