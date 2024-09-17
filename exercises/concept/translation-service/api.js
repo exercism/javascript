@@ -1,4 +1,9 @@
-import { AbusiveClientError, NotAvailable, Untranslatable, ConnectionError } from './errors';
+import {
+  AbusiveClientError,
+  NotAvailable,
+  Untranslatable,
+  ConnectionError,
+} from './errors';
 
 const mutex = { current: false };
 
@@ -85,15 +90,12 @@ export class ExternalApi {
     }
 
     if (this.values[text]) {
-      setTimeout(
-        () => {
-          this.values[text].shift();
+      setTimeout(() => {
+        this.values[text].shift();
 
-          // If it's now available, yay, otherwise, nay
-          callback(this.values[text][0] ? undefined : makeRandomError())
-        },
-        1,
-      );
+        // If it's now available, yay, otherwise, nay
+        callback(this.values[text][0] ? undefined : makeRandomError());
+      }, 1);
       return;
     }
 
