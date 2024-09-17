@@ -1,4 +1,9 @@
-import { AbusiveClientError, NotAvailable, Untranslatable } from './errors';
+import {
+  AbusiveClientError,
+  NotAvailable,
+  Untranslatable,
+  ConnectionError,
+} from './errors';
 
 const mutex = { current: false };
 
@@ -85,13 +90,12 @@ export class ExternalApi {
     }
 
     if (this.values[text]) {
-      this.values[text].shift();
+      setTimeout(() => {
+        this.values[text].shift();
 
-      // If it's now available, yay, otherwise, nay
-      setTimeout(
-        () => callback(this.values[text][0] ? undefined : makeRandomError()),
-        1,
-      );
+        // If it's now available, yay, otherwise, nay
+        callback(this.values[text][0] ? undefined : makeRandomError());
+      }, 1);
       return;
     }
 
@@ -114,7 +118,7 @@ function rejectWithRandomDelay(value) {
 }
 
 function makeRandomError() {
-  return new Error(`Error code ${Math.ceil(Math.random() * 10000)}`);
+  return new ConnectionError(`Error code ${Math.ceil(Math.random() * 10000)}`);
 }
 
 class BadRequest extends Error {
