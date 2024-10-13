@@ -2224,7 +2224,9 @@
         "slug": "darts",
         "name": "Darts",
         "uuid": "6c64649b-ea81-4118-9e74-a0a55018ffbc",
-        "practices": [],
+        "practices": [
+          "math"
+        ],
         "prerequisites": [
           "arithmetic-operators",
           "comparison",
