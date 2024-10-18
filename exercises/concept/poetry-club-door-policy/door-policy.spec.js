@@ -1,10 +1,9 @@
-// @ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
-  frontDoorResponse,
+  backDoorPassword,
   backDoorResponse,
   frontDoorPassword,
-  backDoorPassword,
+  frontDoorResponse,
 } from './door-policy';
 
 const recite = (poem, responseFn) => {

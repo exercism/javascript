@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { prime } from './nth-prime';
 
 describe('nth-prime', () => {

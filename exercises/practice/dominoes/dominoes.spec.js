@@ -1,3 +1,4 @@
+import { describe, expect } from '@jest/globals';
 import { chain } from './dominoes';
 
 function runTest(dominoes, expected) {

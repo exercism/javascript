@@ -1,10 +1,9 @@
-//@ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
-  buildSign,
   buildBirthdaySign,
-  graduationFor,
+  buildSign,
   costOf,
+  graduationFor,
 } from './custom-signs';
 
 describe('buildSign', () => {

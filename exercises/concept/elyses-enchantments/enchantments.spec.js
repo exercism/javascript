@@ -1,14 +1,13 @@
-//@ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
-  getItem,
-  setItem,
-  insertItemAtTop,
-  insertItemAtBottom,
-  removeItem,
-  removeItemFromTop,
-  removeItemAtBottom,
   checkSizeOfStack,
+  getItem,
+  insertItemAtBottom,
+  insertItemAtTop,
+  removeItem,
+  removeItemAtBottom,
+  removeItemFromTop,
+  setItem,
 } from './enchantments';
 
 describe('pick a card', () => {
