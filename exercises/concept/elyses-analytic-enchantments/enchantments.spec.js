@@ -1,12 +1,11 @@
-// @ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
-  getCardPosition,
   doesStackIncludeCard,
-  isEachCardEven,
   doesStackIncludeOddCard,
-  getFirstOddCard,
+  getCardPosition,
   getFirstEvenCardPosition,
+  getFirstOddCard,
+  isEachCardEven,
 } from './enchantments';
 
 describe('getCardPosition', () => {

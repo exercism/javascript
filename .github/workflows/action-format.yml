@@ -60,12 +60,18 @@ jobs:
           git clone $HEAD_REPO .
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
-      - name: Use Node.js LTS (18.x)
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable pnpm
+
+      - name: Use Node.js LTS (20.x)
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
-          node-version: '18'
+          node-version: 20.x
+          cache: 'pnpm'
+
       - name: Install project development dependencies
-        run: npm install --no-save
+        run: corepack pnpm install --no-save
+
       - name: 'Format code'
         run: ./bin/format.sh
 

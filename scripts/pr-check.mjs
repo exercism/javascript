@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * npx babel-node scripts/pr-check path/1 path/2 path/3
+ * $ corepack pnpm node scripts/pr-check.mjs path/1 path/2 path/3
  *
  * This will run following checks:
  * 1. Find the exercises at all the paths provided
@@ -12,23 +12,23 @@
  * 4. Run eslint for those exercises to check code-style
  */
 
-const {
+import shell from 'shelljs';
+import path from 'node:path';
+import {
   findExerciseDirectory,
+  prepare,
   cleanUp,
   registerExitHandler,
   envIsThruthy,
   hasStub,
-  prepare,
   assignments,
-} = require('./helpers');
+} from './helpers.mjs';
 
-const shell = require('shelljs');
-const path = require('path');
 const files = process.argv.slice(2);
 
 if (files.length === 0) {
   shell.echo(
-    '[Failure] No files passed in. Pass in paths to exercise directories or its file.'
+    '[Failure] No files passed in. Pass in paths to exercise directories or its file.',
   );
   shell.exit(-1);
 }
@@ -47,12 +47,12 @@ const hasRootFile = files.some((file) => file === 'package.json');
 
 if (hasRootFile) {
   shell.echo(
-    '[Root PR] When package.json is changed, all exercises need to be checked'
+    '[Root PR] When package.json is changed, all exercises need to be checked',
   );
 } else if (_exercises.length > 8) {
   shell.echo(
     '[Big PR] When more than 8 exercises are being checked, all of them are ' +
-      'checked as this is likely a PR affecting everything.'
+      'checked as this is likely a PR affecting everything.',
   );
 }
 
@@ -89,46 +89,46 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     shell.env['ASSIGNMENT'] = exercise;
 
     const checkResult = shell.exec(
-      `npx babel-node ${path.join('scripts', 'checksum')}`
+      `corepack pnpm node ${path.join('scripts', 'checksum.mjs')}`,
     ).code;
 
     if (checkResult !== 0) {
       shell.echo(
-        `scripts/checksum returned a non-zero exit code: ${checkResult}`
+        `scripts/checksum.mjs returned a non-zero exit code: ${checkResult}`,
       );
       shell.exit(checkResult);
     }
 
     const nameCheckResult = shell.exec(
-      `npx babel-node ${path.join('scripts', 'name-check')}`
+      `corepack pnpm node ${path.join('scripts', 'name-check.mjs')}`,
     ).code;
 
     if (nameCheckResult !== 0) {
       shell.echo(
-        `scripts/name-check returned a non-zero exit code: ${nameCheckResult}`
+        `scripts/name-check.mjs returned a non-zero exit code: ${nameCheckResult}`,
       );
       shell.exit(nameCheckResult);
     }
   });
 
   const nameUniqResult = shell.exec(
-    `npx babel-node ${path.join('scripts', 'name-uniq')}`
+    `corepack pnpm node ${path.join('scripts', 'name-uniq.mjs')}`,
   ).code;
 
   if (nameUniqResult !== 0) {
     shell.echo(
-      `scripts/name-uniq returned a non-zero exit code: ${nameUniqResult}`
+      `scripts/name-uniq.mjs returned a non-zero exit code: ${nameUniqResult}`,
     );
     shell.exit(nameUniqResult);
   }
 
   const directoryResult = shell.exec(
-    `npx babel-node ${path.join('scripts', 'directory-check')}`
+    `ncorepack pnpm node ${path.join('scripts', 'directory-check.mjs')}`,
   ).code;
 
   if (directoryResult !== 0) {
     shell.echo(
-      `scripts/directory-check returned a non-zero exit code: ${directoryResult}`
+      `scripts/directory-check.mjs returned a non-zero exit code: ${directoryResult}`,
     );
     shell.exit(directoryResult);
   }
@@ -154,7 +154,7 @@ exercises.forEach(prepare);
 shell.env['CLEANUP'] = true;
 
 const checkResult = shell.exec(
-  `npx babel-node ${path.join('scripts', 'lint')}`
+  `corepack pnpm node ${path.join('scripts', 'lint.mjs')}`,
 ).code;
 if (checkResult !== 0) {
   shell.echo(`scripts/lint returned a non-zero exit code: ${checkResult}`);

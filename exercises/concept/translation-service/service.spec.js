@@ -1,13 +1,12 @@
-// @ts-check
-
+import { beforeEach, describe, expect, test } from '@jest/globals';
 import {
-  TranslationService,
-  QualityThresholdNotMet,
   BatchIsEmpty,
+  QualityThresholdNotMet,
+  TranslationService,
 } from './service';
 
-import { NotAvailable, Untranslatable, ConnectionError } from './errors';
 import { ExternalApi } from './api';
+import { ConnectionError, NotAvailable, Untranslatable } from './errors';
 
 describe('Free service', () => {
   /** @type {TranslationService} */

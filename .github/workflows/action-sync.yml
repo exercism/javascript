@@ -61,9 +61,11 @@ jobs:
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
       - name: 'Install dependencies'
-        run: yarn install
+        run: |
+          corepack enable pnpm
+          corepack pnpm install
       - name: 'Sync exercises'
-        run: npx babel-node scripts/sync
+        run: corepack pnpm node scripts/sync.mjs
 
       - name: 'Commit changes'
         run: |

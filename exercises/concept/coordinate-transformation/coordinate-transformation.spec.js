@@ -1,8 +1,9 @@
+import { describe, expect, test } from '@jest/globals';
 import {
-  translate2d,
-  scale2d,
   composeTransform,
   memoizeTransform,
+  scale2d,
+  translate2d,
 } from './coordinate-transformation';
 
 const fakeTransform = () => {

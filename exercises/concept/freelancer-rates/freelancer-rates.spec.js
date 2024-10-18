@@ -1,5 +1,4 @@
-// @ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
   dayRate,
   daysInBudget,

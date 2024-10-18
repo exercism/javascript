@@ -1,7 +1,8 @@
+import { describe, expect, test } from '@jest/globals';
 import {
-  needsLicense,
-  chooseVehicle,
   calculateResellPrice,
+  chooseVehicle,
+  needsLicense,
 } from './vehicle-purchase';
 
 describe('needsLicense', () => {
