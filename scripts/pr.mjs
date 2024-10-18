@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * npx babel-node scripts/pr path/1 path/2 path/3
+ * $ corepack pnpm node scripts/pr.mjs path/1 path/2 path/3
  *
  * This will run following checks:
  *
@@ -11,21 +11,21 @@
  * 2. Run tests for those exercises against sample solutions
  */
 
-const {
+import shell from 'shelljs';
+import {
   findExerciseDirectory,
   prepareAndRun,
   prepare,
   cleanUp,
   registerExitHandler,
   assignments,
-} = require('./helpers');
+} from './helpers.mjs';
 
-const shell = require('shelljs');
 const files = process.argv.slice(2);
 
 if (files.length === 0) {
   shell.echo(
-    '[Failure] No files passed in. Pass in paths to exercise directories or its file.'
+    '[Failure] No files passed in. Pass in paths to exercise directories or its file.',
   );
   shell.exit(-1);
 }
@@ -44,12 +44,12 @@ const hasRootFile = files.some((file) => file === 'package.json');
 
 if (hasRootFile) {
   shell.echo(
-    '[Root PR] When package.json is changed, all exercises need to be checked'
+    '[Root PR] When package.json is changed, all exercises need to be checked',
   );
 } else if (_exercises.length > 8) {
   shell.echo(
     '[Big PR] When more than 8 exercises are being checked, all of them are ' +
-      'checked as this is likely a PR affecting everything.'
+      'checked as this is likely a PR affecting everything.',
   );
 }
 
@@ -75,12 +75,16 @@ const failureStr = '[Failure] Tests failed!';
 exercises.forEach(prepare);
 
 // Run tests
-prepareAndRun('npx jest --bail tmp_exercises --runInBand', infoStr, failureStr);
+prepareAndRun(
+  'corepack pnpm jest --bail tmp_exercises --runInBand',
+  infoStr,
+  failureStr,
+);
 
 shell.echo(
   exercises.length === 1
     ? `[Success] Tests passed for ${exercises[0]}`
-    : `[Success] Tests passed for all ${exercises.length} exercises`
+    : `[Success] Tests passed for all ${exercises.length} exercises`,
 );
 
 // Cleanup

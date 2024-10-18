@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx babel-node scripts/sync
+ * Run this script (from root directory):
+ *
+ * $ corepack yarn sync
  *
  * This script is used to copy the following files to all exercises and keep
  * them in sync:
@@ -15,10 +17,11 @@
  * (see checksum script for more info).
  */
 
-const shell = require('shelljs');
+import shell from 'shelljs';
+import * as helpers from './helpers.mjs';
+import path from 'node:path';
+
 const assignment = shell.env['ASSIGNMENT'];
-const helpers = require('./helpers');
-const path = require('path');
 
 function copyConfigForAssignment(assignment) {
   const destination = path.join('exercises', assignment);
@@ -26,30 +29,41 @@ function copyConfigForAssignment(assignment) {
 
   const packageJson = getCurrentPackageJson(assignmentPackageFilename);
   const basePackageJson = JSON.parse(
-    shell.cat('exercise-package.json').toString()
+    shell.cat('exercise-package.json').toString(),
   );
   const mergedPackageJson = helpers.mergePackageJsons(
     basePackageJson,
     packageJson,
-    assignment
+    assignment,
   );
 
   shell
     .ShellString(JSON.stringify(mergedPackageJson, undefined, 2) + '\n')
     .to(assignmentPackageFilename);
 
-  ['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE', '.gitignore'].forEach(
-    (file) => {
-      shell.cp(file, destination);
-    }
-  );
+  // DELETE legacy
+  ['.eslintignore', '.eslintrc'].forEach((file) => {
+    const source = path.join(destination, file);
+    shell.rm('-f', source);
+  });
+
+  [
+    '.npmrc',
+    'babel.config.js',
+    'eslint.config.mjs',
+    'jest.config.js',
+    'LICENSE',
+    '.gitignore',
+  ].forEach((file) => {
+    shell.cp(file, destination);
+  });
 }
 
 function getCurrentPackageJson(assignmentPackageFilename) {
   const packageFile = shell.cat(assignmentPackageFilename).toString();
   if (!packageFile) {
     const packageJson = JSON.parse(
-      shell.cat('exercise-package.json').toString()
+      shell.cat('exercise-package.json').toString(),
     );
 
     const conceptName = path

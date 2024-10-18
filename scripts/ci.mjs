@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * npx babel-node scripts/ci
+ * corepack pnpm node scripts/ci.mjs
  *
  * This will run following checks:
  *
@@ -11,27 +11,28 @@
  * 2. Run tests against sample solutions
  */
 
-const {
+import {
   prepareAndRun,
   prepare,
   cleanUp,
   registerExitHandler,
   assignments,
-} = require('./helpers');
+} from './helpers.mjs';
+import shelljs from 'shelljs';
 
-const shell = require('shelljs');
+const { echo, exit, env } = shelljs;
 
 const exercises = assignments;
 
 if (exercises.length === 0) {
-  shell.echo('[Skip] None of the files are inside an exercise directory.');
-  shell.exit(0);
+  echo('[Skip] None of the files are inside an exercise directory.');
+  exit(0);
 }
 
 registerExitHandler();
 
-shell.env['PREPARE'] = false;
-shell.env['CLEANUP'] = false;
+env['PREPARE'] = false;
+env['CLEANUP'] = false;
 
 const infoStr = `Running tests for ${
   exercises.length === 1 ? exercises[0] : `${exercises.length} exercises\n`
@@ -42,12 +43,12 @@ const failureStr = '[Failure] Tests failed!';
 exercises.forEach(prepare);
 
 // Run tests
-prepareAndRun('npx jest --bail tmp_exercises', infoStr, failureStr);
+prepareAndRun('corepack pnpm jest --bail tmp_exercises', infoStr, failureStr);
 
-shell.echo(
+echo(
   exercises.length === 1
     ? `[Success] Tests passed for ${exercises[0]}`
-    : `[Success] Tests passed for all ${exercises.length} exercises`
+    : `[Success] Tests passed for all ${exercises.length} exercises`,
 );
 
 // Cleanup

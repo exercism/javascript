@@ -2,9 +2,9 @@
  * This file provides helper functions & is NOT intended to be run as a script.
  */
 
-const shell = require('shelljs');
-const path = require('path');
-const crypto = require('crypto');
+import shell from 'shelljs';
+import path from 'node:path';
+import crypto from 'node:crypto';
 
 const exerciseDirs = shell.ls(
   '-d',
