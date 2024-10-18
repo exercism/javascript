@@ -8,9 +8,9 @@
  * This runs `jest` tests for all sample solutions
  */
 
-const shell = require('shelljs');
-const helpers = require('./helpers');
-const assignment = shell.env['ASSIGNMENT'];
+import { env } from 'shelljs';
+import { prepareAndRun } from './helpers.mjs';
+const assignment = env['ASSIGNMENT'];
 
 const infoStr = assignment
   ? '\nRunning tests for ' + assignment + '...'
@@ -18,13 +18,9 @@ const infoStr = assignment
 const failureStr = '[Failure] Tests failed!';
 
 // Copies the necessary files
-shell.env['PREPARE'] = true;
+env['PREPARE'] = true;
 
 // Cleans up after
-shell.env['CLEANUP'] = true;
+env['CLEANUP'] = true;
 
-helpers.prepareAndRun(
-  'corepack pnpm jest --bail tmp_exercises',
-  infoStr,
-  failureStr,
-);
+prepareAndRun('corepack pnpm jest --bail tmp_exercises', infoStr, failureStr);
