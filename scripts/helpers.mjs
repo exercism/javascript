@@ -37,14 +37,13 @@ export function assertAssignment(assignment, shouldExist = true) {
   }
 
   shell.echo("[Failure] that's not a valid assignment reference");
-  const chalk = require('chalk');
 
   if (assignment.split(path.sep).length === 1) {
     // prettier-ignore
     shell.echo(`
-Expected ${chalk.cyan(`{type}${path.sep}{slug}`)}, actual: ${chalk.yellow(assignment)}.
-- Use ${chalk.green(`concept${path.sep}${assignment}`)} if ${chalk.yellow(assignment)} is a concept exercise.
-- Use ${chalk.green(`practice${path.sep}${assignment}`)} if ${chalk.yellow(assignment)} is a practice exercise.
+Expected ${`{type}${path.sep}{slug}`}, actual: ${assignment}.
+- Use ${`concept${path.sep}${assignment}`} if ${assignment} is a concept exercise.
+- Use ${`practice${path.sep}${assignment}`} if ${assignment} is a practice exercise.
     `.trim());
   }
 
@@ -172,13 +171,7 @@ export function cleanUp() {
 // These packages will be skipped while performing checksum. In other words,
 // these packages are only interesting for maintaining this repository and not
 // for the student.
-const SKIP_PACKAGES_FOR_CHECKSUM = [
-  'shelljs',
-  '@babel/node',
-  'prettier',
-  'diff',
-  'chalk',
-];
+const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs', 'prettier'];
 
 // These fields may differ between package.json files.
 const SKIP_FIELDS_FOR_CHECKSUM = [
