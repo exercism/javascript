@@ -6,7 +6,7 @@ It's not uncommon that people discover incorrect implementations of certain test
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
-> [!WARNING]  
+> [!WARNING]
 > This guide is slightly outdated and doesn't hold the V3 changes yet.
 
 ---
@@ -168,7 +168,7 @@ You may improve these files by making the required changes and opening a new Pul
 ## Tools
 
 You'll need LTS or higher Node.js to contribute to the _code_ in this repository.
-Run `npm install` in the root to be able to run the scripts as listed below.
+Run `corepack pnpm install` in the root to be able to run the scripts as listed below.
 We use the following dependencies:
 
 - `shelljs` to provide shell interface to scripts
@@ -177,9 +177,9 @@ We use the following dependencies:
 - `babel` to transpile everything so it works _regardless of your version of Node.js_.
 
 We also use `prettier` to format the files.
-**Prettier is installed when using `npm install`**.
-You may use `npx babel-node scripts/format` to run prettier.
-If you want to auto-format using your editor, install via `npm install` and it will Just Work™.
+**Prettier is installed when using `corepack pnpm install`**.
+You may use `corepack pnpm node scripts/format.mjs` to run prettier.
+If you want to auto-format using your editor, install via `corepack pnpm install` and it will Just Work™.
 
 ### Fetch configlet
 
@@ -210,7 +210,7 @@ It then interactively gives the maintainer the option to include or exclude test
 
 We have various `scripts` to aid with maintaining and contributing to this repository.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > If you encounter the following error:
 >
 > ```text
@@ -243,7 +243,7 @@ We have various `scripts` to aid with maintaining and contributing to this repos
 ```
 
 Use this action to format all the files using the correct version of prettier.
-If you want your editor to do this automatically, install the project development dependencies (`npm i`), which includes `prettier`.
+If you want your editor to do this automatically, install the project development dependencies (`corepack pnpm install`), which includes `prettier`.
 The correct version will be extracted when running `.github/workflows/verify-code-formatting.yml`.
 
 #### `lint`

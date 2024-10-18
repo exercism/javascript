@@ -3,20 +3,20 @@
 Execute the tests with:
 
 ```shell
-npm run test
+corepack pnpm test
 ```
 
 Be sure your code follows best practices and coding styles, as other users do, with ESLint, a tool to perform static analysis on your code.
 Sometimes, tools like this save you some time detecting typos or silly mistakes in your JavaScript code:
 
 ```shell
-npm run lint
+corepack pnpm lint
 ```
 
 You can also run Jest in "watch" mode, which will re-run your tests automatically when you save changes to the code or test module:
 
 ```shell
-npm run watch
+corepack pnpm watch
 ```
 
 ## Understanding Skip Tests
