@@ -116,13 +116,13 @@ describe('Rectangles', () => {
   xtest('rectangles must have four sides', () => {
     const expected = 5;
     const actual = count([
-      "+-+ +-+",
-      "| | | |",
-      "+-+-+-+",
-      "  | |  ",
-      "+-+-+-+",
-      "| | | |",
-      "+-+ +-+"
+      '+-+ +-+',
+      '| | | |',
+      '+-+-+-+',
+      '  | |  ',
+      '+-+-+-+',
+      '| | | |',
+      '+-+ +-+',
     ]);
 
     expect(actual).toEqual(expected);
