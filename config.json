@@ -2642,6 +2642,20 @@
           "classes",
           "callbacks"
         ]
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "4b6b00cd-62f8-4e9e-b59d-79f153f8efb5",
+        "practices": [],
+        "prerequisites": [
+          "conditionals",
+          "recursion",
+          "loops",
+          "numbers",
+          "lists"
+        ],
+        "difficulty": 5
       }
     ]
   },
