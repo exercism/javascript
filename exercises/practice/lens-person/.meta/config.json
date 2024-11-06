@@ -3,6 +3,9 @@
     "sarava338",
     "Cool-Katt"
   ],
+  "contributors": [
+    "themetar"
+  ],
   "files": {
     "solution": [
       "lens-person.js"
