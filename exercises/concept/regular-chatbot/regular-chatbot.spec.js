@@ -1,9 +1,10 @@
+import { describe, expect, test } from '@jest/globals';
 import {
-  isValidCommand,
-  removeEmoji,
   checkPhoneNumber,
   getURL,
+  isValidCommand,
   niceToMeetYou,
+  removeEmoji,
 } from './regular-chatbot';
 
 describe('isValidCommand', () => {

@@ -1,4 +1,5 @@
-import { twoSum, luckyNumber, errorMessage } from './lucky-numbers';
+import { describe, expect, test } from '@jest/globals';
+import { errorMessage, luckyNumber, twoSum } from './lucky-numbers';
 
 describe('twoSum', () => {
   test('sums the numbers correctly for short arrays', () => {

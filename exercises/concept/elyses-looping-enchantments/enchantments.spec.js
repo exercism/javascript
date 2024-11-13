@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { cardTypeCheck, determineOddEvenCards } from './enchantments';
 
 const TYPE_IS_ODD = false;

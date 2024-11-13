@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): npx babel-node scripts/lint
+ * Run this script (from root directory):
+ *
+ * $ corepack pnpm node scripts/lint.mjs
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
 
-const shell = require('shelljs');
-const {
+import shell from 'shelljs';
+import {
   registerExitHandler,
   prepareAndRun,
-  assignments: exercises,
+  assignments as exercises,
   shouldPrepare,
-} = require('./helpers');
+} from './helpers.mjs';
 
 registerExitHandler();
 
@@ -31,15 +33,18 @@ const infoStr = assignment
   : `Running lint for ${count} exercises...`;
 const failureStr = '[Failure] Lint check failed!';
 
+shell.mkdir('-p', 'tmp_exercises');
+shell.cp('eslint.config.mjs', path.join('tmp_exercises', 'eslint.config.mjs'));
+
 // Run lint all at once
 prepareAndRun(
-  'npx eslint tmp_exercises -c node_modules/@exercism/eslint-config-javascript/maintainers.js',
+  'corepack pnpm eslint tmp_exercises -c tmp_exercises/eslint.config.mjs',
   infoStr,
-  failureStr
+  failureStr,
 );
 
 shell.echo(
   assignment
     ? `[Success] Lint passed for ${assignment}`
-    : `[Success] Lint passed for ${count} exercises`
+    : `[Success] Lint passed for ${count} exercises`,
 );

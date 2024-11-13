@@ -1,9 +1,10 @@
+import { describe, expect, test } from '@jest/globals';
 import {
   createVisitor,
-  revokeTicket,
-  ticketStatus,
-  simpleTicketStatus,
   gtcVersion,
+  revokeTicket,
+  simpleTicketStatus,
+  ticketStatus,
 } from './amusement-park';
 
 describe('createVisitor', () => {

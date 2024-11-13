@@ -70,6 +70,14 @@ The version should match the one on the website.
 >
 > Close any open terminals and open a new one.
 
+## Enabling corepack
+
+In order to use a versioned package manager compatible with this track, `corepack` needs to be enabled once:
+
+```shell
+corepack enable pnpm
+```
+
 ## Assignment Requirements
 
 Please follow [these instructions][cli-walkthrough] to download the Exercism CLI for your OS.
@@ -84,26 +92,23 @@ Each assignment then needs some tools to run the tests.
 They can be installed running this command within each assignment directory:
 
 ```shell
-npm install
+corepack pnpm install
 ```
 
-> [!IMPORTANT] > _**Help**_: `'<package>' is missing / cannot be found`
->
-> If you see this after _upgrading_ your exercise, welcome to npm 7.
-> Delete `node_modules` and `package-lock.json` and re-run the command to resolve this.
+As this track has switched to pnpm, you should not be concerned about disk space.
+Take a look at [pnpm](https://pnpm.io/), which ensures only one copy of each package-version is ever installed on disk.
 
-If you're concerned about disk space and are okay installing another tool, take a look at [pnpm](https://pnpm.io/), which ensure only one copy of each package-version is ever installed on disk.
-In this case, run `pnpm install` instead of `npm install`, and everything should work as expected.
-
-> **But what is npm and why does this work?**
+> **But what is corepack and why does this work?**
 >
 > You don't need this information to complete the JavaScript track, but if you're eager to understand what just happened, the following paragraphs are for you:
 >
-> This works because `npm` is a package manager that comes bundled with Node.js, which has been installed per the steps above.
-> The `npm` command looks for a `package.json` file, which is present in _each_ assignment folder.
-> This file lists the `"dependencies"` above, which are then downloaded by `npm` and placed into the `node_modules` folder.
+> This works because `corepack` is a tool that comes bundled with Node.js, which has been installed per the steps above.
+> It can install the package manager `pnpm`. It configures the system
+> The `corepack` command looks for a `package.json` file, which is present in _each_ assignment folder.
+> It then checks `packageManager` which matches `pnpm`, so it may continue. If necessary it will upgrade `pnpm` first.
+> This file also lists the `"dependencies"` above, which are then downloaded by `pnpm` and placed into a local cache.
 >
-> The scripts in the `package.json` use the binaries from the local `node_modules` folder, and it's these scripts that are used to run the tests, as listed in the `exercise` description.
+> The scripts in the `package.json` use the binaries from the local cache, and it's these scripts that are used to run the tests, as listed in the `exercise` description.
 
 [web-nodejs]: https://nodejs.org/
 [web-nodejs-download]: https://nodejs.org/en/download/
