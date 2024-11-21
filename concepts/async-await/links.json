@@ -1,0 +1,10 @@
+[
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+      "description": "MDN: async function"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve",
+      "description": "MDN: Promise.resolve()"
+    }
+  ]
