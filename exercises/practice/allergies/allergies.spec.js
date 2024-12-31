@@ -255,7 +255,7 @@ describe('Allergies', () => {
         'tomatoes',
         'chocolate',
         'pollen',
-        'cats',
+        'cats'
       ]);
     });
 
@@ -269,7 +269,7 @@ describe('Allergies', () => {
         'tomatoes',
         'chocolate',
         'pollen',
-        'cats',
+        'cats'
       ]);
     });
 
@@ -282,8 +282,13 @@ describe('Allergies', () => {
         'tomatoes',
         'chocolate',
         'pollen',
-        'cats',
+        'cats'
       ]);
+    });
+
+    xtest('no allergen score parts without highest valid score', () => {
+      const allergies = new Allergies(257);
+      expect(allergies.list()).toEqual(['eggs']);
     });
   });
 });
