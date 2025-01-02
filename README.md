@@ -24,7 +24,7 @@ It also has a list of tools you can use, of which the `test` tool is one of them
 This run `eslint` for all files that _require_ linting.
 
 ```shell
-npx eslint exercises/**/*.spec.js exercises/**/.meta/*.js --fix
+corepack pnpm node scripts/lint.mjs --fix
 ```
 
 These are also the files that are linted using the lint script, mentioned in [CONTRIBUTING.md][file-contributing].
