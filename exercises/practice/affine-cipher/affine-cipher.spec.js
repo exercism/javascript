@@ -47,7 +47,7 @@ describe('Affine cipher', () => {
     xtest('encode with a not coprime to m', () => {
       expect(() => {
         encode('This is a test.', { a: 6, b: 17 });
-      }).toThrowError('a and m must be coprime.');
+      }).toThrow('a and m must be coprime.');
     });
   });
   describe('decode', () => {
@@ -88,7 +88,7 @@ describe('Affine cipher', () => {
     xtest('decode with a not coprime to m', () => {
       expect(() => {
         decode('Test', { a: 13, b: 5 });
-      }).toThrowError('a and m must be coprime.');
+      }).toThrow('a and m must be coprime.');
     });
   });
 });

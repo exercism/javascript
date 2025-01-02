@@ -80,11 +80,13 @@ export class TranslationService {
    */
   async request(text, attempt = 1) {
     try {
-      await new Promise((resolve, reject) => {
-        this.api.request(text, (err) => {
-          err ? reject(err) : resolve();
-        });
-      });
+      await /** @type {Promise<void>} */ (
+        new Promise((resolve, reject) => {
+          this.api.request(text, (err) => {
+            err ? reject(err) : resolve();
+          });
+        })
+      );
     } catch (err) {
       if (attempt === 3) {
         throw err;

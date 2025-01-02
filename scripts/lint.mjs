@@ -8,6 +8,7 @@
  * This runs `eslint` on all sample solutions (and test) files
  */
 
+import path from 'node:path';
 import shell from 'shelljs';
 import {
   registerExitHandler,
@@ -34,7 +35,21 @@ const infoStr = assignment
 const failureStr = '[Failure] Lint check failed!';
 
 shell.mkdir('-p', 'tmp_exercises');
+shell.cp('babel.config.js', path.join('tmp_exercises', 'babel.config.js'));
 shell.cp('eslint.config.mjs', path.join('tmp_exercises', 'eslint.config.mjs'));
+
+shell.sed(
+  '-i',
+  '\\*\\.spec\\.js',
+  '**/*.spec.js',
+  path.join('tmp_exercises', 'eslint.config.mjs'),
+);
+shell.sed(
+  '-i',
+  '// <<inject-rules-here>>',
+  "{ files: ['**/*.spec.js'], rules: { 'no-unused-vars': ['error', { varsIgnorePattern: 'xdescribe|xtest' }] }},",
+  path.join('tmp_exercises', 'eslint.config.mjs'),
+);
 
 // Run lint all at once
 prepareAndRun(

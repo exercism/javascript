@@ -307,7 +307,7 @@ export function prepare(assignment) {
       .sed(/x(test|it)\(/, 'test(', specFileDestination)
       .to(specFileDestination);
     shell
-      .sed('xdescribe', 'describe', specFileDestination)
+      .sed(/xdescribe\(/, 'describe(', specFileDestination)
       .to(specFileDestination);
   });
 
@@ -377,7 +377,9 @@ export function prepare(assignment) {
 
 export function registerExitHandler() {
   function exitHandler(options, exitCode) {
-    cleanUp();
+    if (shouldCleanup()) {
+      cleanUp();
+    }
 
     if (options.error) {
       console.error(options.error);

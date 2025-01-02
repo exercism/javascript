@@ -7,9 +7,12 @@ import globals from 'globals';
 
 export default [
   ...config,
+  ...maintainersConfig,
   {
-    files: ['.meta/proof.ci.js', '.meta/exemplar.js', '*.spec.js'],
-    extends: maintainersConfig,
+    files: maintainersConfig[1].files,
+    rules: {
+      'jest/expect-expect': ['warn', { assertFunctionNames: ['expect*'] }],
+    },
   },
   {
     files: ['scripts/**/*.mjs'],
@@ -19,6 +22,7 @@ export default [
       },
     },
   },
+  // <<inject-rules-here>>
   {
     ignores: [
       // # Protected or generated

@@ -77,18 +77,18 @@ The baseline of work is as follows:
 1. We'll assign the issue to you, so you get to work on this exercise
 1. Create a new folder in `/exercises`
 1. You'll need to sync this folder with the matching config files.
-   You can use `scripts/sync` to do this: `ASSIGNMENT=slug npx babel-node scripts/sync`.
+   You can use `scripts/sync` to do this.
 1. Create a `<slug>.js` stub file.
 1. Create a `<slug>.spec.js` test file. Here add the tests, per canonical data if possible (more on canonical data below).
 1. Create an `example.js` file. Place a working implementation, assuming it's renamed to `<slug>.js`
 1. Create `.meta/tests.toml`.
    If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented.
    Scroll down to [tools](#tools) to find configlet which aids in generating this file _interactively_.
-1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug npx babel-node scripts/test`.
-1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug npx babel-node scripts/lint`.
+1. Run the tests locally, using `scripts/test`.
+1. Run the linter locally, using `scripts/lint`.
 1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane.
    Currently, the file is ordered first on concept exercise, then on "original core", finally everything else, on difficulty low to high, and ultimately lexicographically.
-1. Format the files, using `scripts/format`: `npx babel-node scripts/format`.
+1. Format the files, using `scripts/format`.
 
 The final step is opening a Pull Request, with these items all checked off.
 Make sure the tests run and the linter is happy. It will run automatically on your PR.
@@ -210,27 +210,6 @@ It then interactively gives the maintainer the option to include or exclude test
 
 We have various `scripts` to aid with maintaining and contributing to this repository.
 
-> [!IMPORTANT]
-> If you encounter the following error:
->
-> ```text
-> SyntaxError: Unexpected token 'export'
-> ```
->
-> It's because your local Node.js version does **not** support es6
-> `import` and `export` statements in regular `.js` files, or
-> files without extension. This is one of the reasons why these
-> scripts are meant to be run through Node.js:
->
-> ```shell
-> npx babel-node scripts/the-script
-> ```
->
-> Additionally, this ensures that the code written in the scripts
-> and their dependencies can be executed by your current Node.js
-> version, which may be different from the version used by the
-> maintainer or contributor who contributed to the script.
-
 #### `format`
 
 ```js
@@ -250,7 +229,7 @@ The correct version will be extracted when running `.github/workflows/verify-cod
 
 ```js
 /*
- * Run this script (from root directory): npx babel-node scripts/lint
+ * Run this script (from root directory): corepack pnpm node scripts/lint.mjs
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
@@ -267,7 +246,7 @@ ASSIGNMENT=two-fer npx babel-node scripts/lint
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/test
+ * Run this script (from root directory): corepack pnpm node scripts/test.mjs
  *
  * This runs `jest` tests for all sample solutions
  */
@@ -277,14 +256,24 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the `example.js` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer npx babel-node scripts/test
+ASSIGNMENT=practice/two-fer corepack pnpm node scripts/test.mjs
+```
+
+Note: on Windows, if you're not in a POSIX style command line, you can use `cross-env` to make this work:
+
+```shell
+# if installed globally
+cross-env ASSIGNMENT=practice/two-fer corepack pnpm node scripts/test.mjs
+
+# otherwise
+corepack pnpm dlx cross-env ASSIGNMENT=practice/two-fer node scripts/test.mjs
 ```
 
 #### `sync`
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/sync
+ * Run this script (from root directory): corepack pnpm node scripts/sync.mjs
  *
  * This script is used to propagate any change to root package.json to
  * all exercises and keep them in sync.
@@ -297,14 +286,24 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to sync the files for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer npx babel-node scripts/sync
+ASSIGNMENT=practice/two-fer corepack pnpm node scripts/sync.mjs
+```
+
+Note: on Windows, if you're not in a POSIX style command line, you can use `cross-env` to make this work:
+
+```shell
+# if installed globally
+cross-env ASSIGNMENT=practice/two-fer corepack pnpm node scripts/sync.mjs
+
+# otherwise
+corepack pnpm dlx cross-env ASSIGNMENT=practice/two-fer node scripts/sync.mjs
 ```
 
 #### `checksum`
 
 ```js
 /*
- * Run this script (from root directory): npx babel-node scripts/checksum
+ * Run this script (from root directory): corepack pnpm node scripts/checksum.mjs
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies that are only used at build-time and not served to end-users
@@ -317,7 +316,7 @@ ASSIGNMENT=two-fer npx babel-node scripts/sync
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/ci-check
+ * Run this script (from root directory): corepack pnpm node scripts/ci-check.mjs
  *
  * This will run the following checks:
  *
@@ -333,7 +332,7 @@ Run this script to check stubs, configuration integrity and lint the code.
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/ci
+ * Run this script (from root directory): corepack pnpm node scripts/ci.mjs
  *
  * This will run the following checks:
  *
@@ -348,13 +347,13 @@ Run this script to test all exercises.
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/name-check
+ * Run this script (from root directory): corepack pnpm node scripts/name-check.mjs
  *
  * This will run the following checks:
  *
  * 1. Package name is of the format "@exercism/javascript-<exercise>"
  *
- * This script also allows fixing these names: npx babel-node scripts/name-check --fix
+ * This script also allows fixing these names: corepack pnpm node scripts/name-check.mjs --fix
  */
 ```
 
@@ -364,7 +363,7 @@ Run this script to check if the package name in package.json of exercises is in 
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/name-uniq
+ * Run this script (from root directory): corepack pnpm node scripts/name-uniq.mjs
  *
  * This will run the following checks:
  *
@@ -378,13 +377,13 @@ Run this script to check if there is any duplicate package name.
 
 ```js
 /**
- * Run this script (from root directory): npx babel-node scripts/directory-check
+ * Run this script (from root directory): corepack pnpm node scripts/directory-check.mjs
  *
  * This will run the following checks:
  *
  * 1. The package has the correct directory based on the path to the exercise.
  *
- * This script also allows fixing these directories: npx babel-node scripts/directory-check --fix
+ * This script also allows fixing these directories: corepack pnpm node scripts/directory-check.mjs --fix
  */
 ```
 
@@ -393,7 +392,17 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the directory for `concept/closures`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=concept/closures npx babel-node scripts/directory-check
+ASSIGNMENT=concept/closures corepack pnpm node scripts/directory-check.mjs
+```
+
+Note: on Windows, if you're not in a POSIX style command line, you can use `cross-env` to make this work:
+
+```shell
+# if installed globally
+cross-env ASSIGNMENT=concept/closures corepack pnpm node scripts/directory-check.mjs
+
+# otherwise
+corepack pnpm dlx cross-env ASSIGNMENT=concept/closures node scripts/directory-check.mjs
 ```
 
 [configlet]: https://exercism.org/docs/building/configlet

@@ -1,6 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
 import {
-  // eslint-disable-next-line import/named
   EXPECTED_MINUTES_IN_OVEN,
   preparationTimeInMinutes,
   remainingMinutesInOven,

@@ -6,7 +6,7 @@ describe('strain', () => {
     expect(keep([], (e) => e < 10)).toEqual([]);
   });
 
-  xtest('keeps everything ', () => {
+  xtest('keeps everything', () => {
     expect(keep([1, 2, 3], (e) => e < 10)).toEqual([1, 2, 3]);
   });
 
