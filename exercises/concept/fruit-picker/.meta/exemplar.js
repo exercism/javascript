@@ -2,8 +2,8 @@
 //
 // @ts-check
 
-import { notify } from '../notifier';
-import { order } from '../grocer';
+import { notify } from './notifier';
+import { order } from './grocer';
 
 /**
  * @return void
