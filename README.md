@@ -2,7 +2,7 @@
 
 [![Configlet](https://github.com/exercism/javascript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/javascript/actions/workflows/configlet.yml) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > We 💙 our community but **this repository does not accept community contributions at this time**.<br>
 > There are no active maintainers to review PRs.<br>
 > Please read this [community blog post][freeing-maintainers] for details.
@@ -48,21 +48,25 @@ This runs `jest` tests for all sample solutions.
 This _does not_ use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
 ```shell
-npx babel-node scripts/test
+corepack pnpm node scripts/test.mjs
 ```
 
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the `example.js` for the practice exercise `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer npx babel-node scripts/test
+ASSIGNMENT=practice/two-fer corepack pnpm node scripts/test.mjs
 ```
 
 > Running on Windows? Depending on your shell, environment variables are set differently.
 > You can use `cross-env` to normalize this. The following should work across environments:
 >
 > ```bash
-> npx cross-env ASSIGNMENT=practice/two-fer babel-node scripts/test
+> # if installed globally
+> cross-env ASSIGNMENT=practice/two-fer corepack pnpm node scripts/test.mjs
+>
+> # otherwise
+> corepack pnpm dlx cross-env ASSIGNMENT=practice/two-fer node scripts/test.mjs
 > ```
 
 ## Related repositories

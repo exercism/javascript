@@ -99,9 +99,9 @@ function checksumAll(filename, rootFileName = filename) {
     `Checking integrity of ${filename} in all ${_assignments.length} exercises`,
   );
 
-  _assignments.forEach((assignment) =>
-    checksumAssignment(assignment, filename, rootFileName, expectedSha),
-  );
+  _assignments.forEach((assignment) => {
+    checksumAssignment(assignment, filename, rootFileName, expectedSha);
+  });
 }
 
 registerExitHandler();
@@ -109,10 +109,15 @@ createExercisePackageJson(true);
 
 checksumAll('package.json', 'exercise-package.json');
 
-['.eslintrc', '.npmrc', 'babel.config.js', 'LICENSE', '.gitignore'].forEach(
-  (fileToCheck) => {
-    checksumAll(fileToCheck);
-  },
-);
+[
+  '.gitignore',
+  '.npmrc',
+  'babel.config.js',
+  'eslint.config.mjs',
+  'jest.config.js',
+  'LICENSE',
+].forEach((fileToCheck) => {
+  checksumAll(fileToCheck);
+});
 
 echo('All files passed the checksum test');

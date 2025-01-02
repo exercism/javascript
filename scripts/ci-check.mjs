@@ -47,7 +47,9 @@ if (!envIsThruthy('SKIP_STUB', false)) {
 
   if (noStubs.length > 0) {
     echo(`[FAILURE] ${noStubs.length} missing a stub`);
-    noStubs.forEach((stub) => echo(`${stub} is missing a stub file`));
+    noStubs.forEach((stub) => {
+      echo(`${stub} is missing a stub file`);
+    });
     exit(-1);
   } else {
     echo('[SUCCES] All stubs are present');
@@ -61,7 +63,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   // TODO: be able to pass in any amount of exercises at once
   if (exercises.length >= 8) {
     const checkResult = exec(
-      `npx babel-node ${join('scripts', 'checksum')}`,
+      `corepack pnpm node ${join('scripts', 'checksum.mjs')}`,
     ).code;
 
     if (checkResult !== 0) {
@@ -69,7 +71,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     }
 
     const nameCheckResult = exec(
-      `npx babel-node ${join('scripts', 'name-check')}`,
+      `corepack pnpm node ${join('scripts', 'name-check.mjs')}`,
     ).code;
 
     if (nameCheckResult !== 0) {
@@ -80,7 +82,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       env['ASSIGNMENT'] = exercise;
 
       const checkResult = exec(
-        `npx babel-node ${join('scripts', 'checksum')}`,
+        `corepack pnpm node ${join('scripts', 'checksum.mjs')}`,
       ).code;
 
       if (checkResult !== 0) {
@@ -88,7 +90,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       }
 
       const nameCheckResult = exec(
-        `npx babel-node ${join('scripts', 'name-check')}`,
+        `corepack pnpm node ${join('scripts', 'name-check.mjs')}`,
       ).code;
 
       if (nameCheckResult !== 0) {
@@ -98,7 +100,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const nameUniqResult = exec(
-    `npx babel-node ${join('scripts', 'name-uniq')}`,
+    `corepack pnpm node ${join('scripts', 'name-uniq.mjs')}`,
   ).code;
 
   if (nameUniqResult !== 0) {
@@ -106,7 +108,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const directoryResult = exec(
-    `npx babel-node ${join('scripts', 'directory-check')}`,
+    `corepack pnpm node ${join('scripts', 'directory-check.mjs')}`,
   ).code;
 
   if (directoryResult !== 0) {
@@ -135,7 +137,9 @@ exercises.forEach(prepare);
 
 env['CLEANUP'] = true;
 
-const checkResult = exec(`npx babel-node ${join('scripts', 'lint')}`).code;
-if (checkResult != 0) {
+const checkResult = exec(
+  `corepack pnpm node ${join('scripts', 'lint.mjs')}`,
+).code;
+if (checkResult !== 0) {
   exit(checkResult);
 }

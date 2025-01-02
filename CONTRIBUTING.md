@@ -214,7 +214,7 @@ We have various `scripts` to aid with maintaining and contributing to this repos
 
 ```js
 /*
- * Run this script (from root directory): npx babel-node scripts/format
+ * Run this script (from root directory): corepack pnpm node scripts/format.mjs
  *
  * This runs `prettier` on all applicable files, FORCES using the same version
  * as the CI uses to check if the files have been formatted.
@@ -239,7 +239,17 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to lint `two-fer`, you may, depending on your environment use:
 
 ```shell
-ASSIGNMENT=two-fer npx babel-node scripts/lint
+ASSIGNMENT=practice/two-fer corepack pnpm node scripts/lint.mjs
+```
+
+Note: on Windows, if you're not in a POSIX style command line, you can use `cross-env` to make this work:
+
+```shell
+# if installed globally
+cross-env ASSIGNMENT=practice/two-fer corepack pnpm node scripts/lint.mjs
+
+# otherwise
+corepack pnpm dlx cross-env ASSIGNMENT=practice/two-fer node scripts/lint.mjs
 ```
 
 #### `test`

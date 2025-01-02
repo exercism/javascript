@@ -21,7 +21,7 @@ import shell from 'shelljs';
 import * as helpers from './helpers.mjs';
 import path from 'node:path';
 
-const assignment = shell.env['ASSIGNMENT'];
+const assignmentFromEnv = shell.env['ASSIGNMENT'];
 
 function copyConfigForAssignment(assignment) {
   const destination = path.join('exercises', assignment);
@@ -82,13 +82,13 @@ function getCurrentPackageJson(assignmentPackageFilename) {
 helpers.registerExitHandler();
 helpers.createExercisePackageJson(false);
 
-if (assignment) {
-  if (!helpers.assertAssignment(assignment)) {
+if (assignmentFromEnv) {
+  if (!helpers.assertAssignment(assignmentFromEnv)) {
     shell.exit(1);
   }
 
-  shell.echo('Syncing ' + assignment + '...');
-  copyConfigForAssignment(assignment);
+  shell.echo('Syncing ' + assignmentFromEnv + '...');
+  copyConfigForAssignment(assignmentFromEnv);
 } else {
   shell.echo('Syncing all assignments...');
   helpers.assignments.forEach((assignment) => {
