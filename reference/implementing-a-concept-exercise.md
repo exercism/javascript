@@ -55,7 +55,7 @@ github/exercism
                 ├── &lt;slug&gt;.js
                 ├── &lt;slug&gt;.spec.js
                 ├── package.json
-                └── yarn.lock
+                └── pnpm-lock.yaml
 </pre>
 
 ## Step 1: Add code files
@@ -70,7 +70,7 @@ The configuration files may be copied from another exercise. We aim to keep thes
 - `eslint.config.mjs`
 - `jest.config.js`
 - `package.json`
-- `yarn.lock`
+- `pnpm-lock.yaml`
 
 The `package.json` file must be edited:
 

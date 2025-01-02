@@ -29,7 +29,7 @@ if (exercises.length === 0) {
   exit(0);
 }
 
-registerExitHandler();
+registerExitHandler(false);
 
 env['PREPARE'] = false;
 env['CLEANUP'] = false;

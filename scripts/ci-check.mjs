@@ -36,7 +36,7 @@ if (exercises.length === 1) {
   }
 }
 
-registerExitHandler();
+registerExitHandler(false);
 
 if (!envIsThruthy('SKIP_STUB', false)) {
   echo('\n==========\nEnsure stubs are present\n');

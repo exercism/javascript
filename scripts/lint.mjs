@@ -17,7 +17,7 @@ import {
   shouldPrepare,
 } from './helpers.mjs';
 
-registerExitHandler();
+registerExitHandler(false);
 
 const assignment = exercises.length === 0 ? exercises[0] : undefined;
 

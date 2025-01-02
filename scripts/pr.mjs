@@ -61,7 +61,7 @@ if (exercises.length === 0) {
   shell.exit(0);
 }
 
-registerExitHandler();
+registerExitHandler(false);
 
 shell.env['PREPARE'] = false;
 shell.env['CLEANUP'] = false;

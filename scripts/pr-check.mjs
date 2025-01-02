@@ -64,7 +64,7 @@ if (exercises.length === 0) {
   shell.exit(0);
 }
 
-registerExitHandler();
+registerExitHandler(false);
 
 if (!envIsThruthy('SKIP_STUB', false)) {
   shell.echo('\n==========\nEnsure stubs are present\n');
@@ -75,7 +75,9 @@ if (!envIsThruthy('SKIP_STUB', false)) {
 
   if (noStubs.length > 0) {
     shell.echo(`[FAILURE] ${noStubs.length} missing a stub`);
-    noStubs.forEach((stub) => shell.echo(`${stub} is missing a stub file`));
+    noStubs.forEach((stub) => {
+      shell.echo(`${stub} is missing a stub file`);
+    });
     shell.exit(-1);
   } else {
     shell.echo('[SUCCES] All stubs are present');

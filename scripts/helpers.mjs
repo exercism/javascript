@@ -186,9 +186,9 @@ export function createExercisePackageJson(writeSha = false) {
   const packageJson = JSON.parse(packageFile);
 
   // Filter out some unwanted packages and create package.json for exercises
-  SKIP_PACKAGES_FOR_CHECKSUM.forEach(
-    (pkg) => delete packageJson['devDependencies'][pkg],
-  );
+  SKIP_PACKAGES_FOR_CHECKSUM.forEach((pkg) => {
+    delete packageJson['devDependencies'][pkg];
+  });
 
   const shellStr = new shell.ShellString(
     JSON.stringify(packageJson, undefined, 2) + '\n',
@@ -375,9 +375,9 @@ export function prepare(assignment) {
   }
 }
 
-export function registerExitHandler() {
+export function registerExitHandler(forceCleanup = true) {
   function exitHandler(options, exitCode) {
-    if (shouldCleanup()) {
+    if (shouldCleanup() || forceCleanup) {
       cleanUp();
     }
 

@@ -3,15 +3,9 @@
 /**
  * Run this script (from root directory):
  *
- * $ corepack yarn sync
+ * $ corepack pnpm scripts/sync.mjs
  *
- * This script is used to copy the following files to all exercises and keep
- * them in sync:
- *
- * - .eslintrc
- * - babel.config.js
- * - package.json (modified version)
- * - .npmrc
+ * This script is used to copy the required files.
  *
  * There is a CI step which checks that package.json in root & exercises match
  * (see checksum script for more info).
