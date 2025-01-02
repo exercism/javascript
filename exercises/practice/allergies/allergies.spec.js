@@ -285,5 +285,10 @@ describe('Allergies', () => {
         'cats',
       ]);
     });
+
+    xtest('no allergen score parts without highest valid score', () => {
+      const allergies = new Allergies(257);
+      expect(allergies.list()).toEqual(['eggs']);
+    });
   });
 });
