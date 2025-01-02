@@ -1,4 +1,5 @@
-import { totalBirdCount, birdsInWeek, fixBirdCountLog } from './bird-watcher';
+import { describe, expect, test } from '@jest/globals';
+import { birdsInWeek, fixBirdCountLog, totalBirdCount } from './bird-watcher';
 
 describe('totalBirdCount', () => {
   test('calculates the correct total number of birds', () => {

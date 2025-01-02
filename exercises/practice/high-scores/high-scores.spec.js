@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { HighScores } from './high-scores';
 
 describe('High Scores Test Suite', () => {

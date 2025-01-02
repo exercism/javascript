@@ -1,8 +1,9 @@
+import { describe, expect, test } from '@jest/globals';
 import {
   canExecuteFastAttack,
-  canSpy,
-  canSignalPrisoner,
   canFreePrisoner,
+  canSignalPrisoner,
+  canSpy,
 } from './annalyns-infiltration';
 
 describe('can execute fast attack', () => {

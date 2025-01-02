@@ -1,9 +1,10 @@
+import { beforeEach, describe, expect, test, jest } from '@jest/globals';
 import {
-  checkHumidityLevel,
-  reportOverheating,
-  monitorTheMachine,
   ArgumentError,
+  checkHumidityLevel,
+  monitorTheMachine,
   OverheatingError,
+  reportOverheating,
 } from './factory-sensors';
 
 describe('checkHumidityLevel', () => {

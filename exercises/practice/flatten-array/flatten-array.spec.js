@@ -1,7 +1,8 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { flatten } from './flatten-array';
 
 describe('FlattenArray', () => {
-  xtest('empty', () => {
+  test('empty', () => {
     expect(flatten([])).toEqual([]);
   });
 

@@ -92,7 +92,6 @@ export class LinkedList {
     while (element) {
       if (element.value !== value) {
         element = element.next;
-        // eslint-disable-next-line no-continue
         continue;
       }
 

@@ -1,4 +1,4 @@
-/* eslint-disable no-new */
+import { describe, expect, test, xtest } from '@jest/globals';
 import { DiffieHellman } from './diffie-hellman';
 
 describe('diffie-hellman', () => {
