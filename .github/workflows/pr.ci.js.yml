@@ -28,7 +28,8 @@ jobs:
         run: corepack enable pnpm
         
       - name: Use Node.js LTS (22.x)
-        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0bwith:
+        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
+        with:
           node-version: 22.x
           cache: 'pnpm'
 
