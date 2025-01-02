@@ -16,10 +16,10 @@ jobs:
       - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
         run: corepack enable pnpm
 
-      - name: Use Node.js LTS (20.x)
+      - name: Use Node.js LTS (22.x)
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: 'pnpm'
 
       - name: Install project dependencies
@@ -33,7 +33,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
