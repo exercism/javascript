@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
         run: corepack enable pnpm
-        
+
       - name: Use Node.js LTS (22.x)
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
