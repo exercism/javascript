@@ -37,4 +37,12 @@ describe('Armstrong Numbers', () => {
   xtest('Seven digit number that is not an Armstrong number', () => {
     expect(isArmstrongNumber(9926314)).toEqual(false);
   });
+
+  xtest('Armstrong number containing seven zeroes', () => {
+    expect(isArmstrongNumber(186709961001538790100634132976990)).toEqual(true);
+  });
+
+  xtest('The largest and last Armstrong number', () => {
+    expect(isArmstrongNumber(115132219018763992565095597973971522401)).toEqual(true);
+  });
 });
