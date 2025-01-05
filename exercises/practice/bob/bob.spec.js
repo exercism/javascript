@@ -103,7 +103,7 @@ describe('Bob', () => {
   });
 
   xtest('multiple line question', () => {
-    const result = hey('\nDoes this cryogenic chamber make me look fat?\nno');
+    const result = hey('\nDoes this cryogenic chamber make me look fat?\nNo.');
     expect(result).toEqual('Whatever.');
   });
 
