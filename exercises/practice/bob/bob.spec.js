@@ -103,8 +103,8 @@ describe('Bob', () => {
   });
 
   xtest('multiple line question', () => {
-    const result = hey('\nDoes this cryogenic chamber make me look fat?\nNo.');
-    expect(result).toEqual('Whatever.');
+    const result = hey('\nDoes this cryogenic chamber make\n me look fat?');
+    expect(result).toEqual('Sure.');
   });
 
   xtest('starting with whitespace', () => {
