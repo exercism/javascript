@@ -13,7 +13,7 @@ describe('diffie-hellman', () => {
       new DiffieHellman(10, 13);
     }).toThrow();
   });
- 
+
   describe('private key is greater than 1 and less than p', () => {
     const p = 23;
     const g = 5;
