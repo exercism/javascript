@@ -39,10 +39,13 @@ describe('Armstrong Numbers', () => {
   });
 
   xtest('Armstrong number containing seven zeroes', () => {
-    expect(isArmstrongNumber(186709961001538790100634132976990)).toEqual(true);
+    const largeNumber = BigInt(`186709961001538790100634132976990`);
+    expect(isArmstrongNumber(largeNumber)).toEqual(true);
   });
 
   xtest('The largest and last Armstrong number', () => {
-    expect(isArmstrongNumber(115132219018763992565095597973971522401)).toEqual(true);
+    expect(
+      isArmstrongNumber(`115132219018763992565095597973971522401`),
+    ).toEqual(true);
   });
 });
