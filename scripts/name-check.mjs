@@ -27,9 +27,9 @@ let exitCode = 0;
 const fix = process.argv.slice(2).includes('--fix');
 
 if (fix) {
-  shell.echo('==============================================');
+  shell.echo('===============================================');
   shell.echo('Fixing package names where necessary');
-  shell.echo('----------------------------------------------');
+  shell.echo('-----------------------------------------------');
 }
 
 const envAssignment = shell.env['ASSIGNMENT'];
