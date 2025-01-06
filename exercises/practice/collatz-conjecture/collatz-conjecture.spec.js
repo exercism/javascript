@@ -21,12 +21,12 @@ describe('steps()', () => {
   xtest('zero is an error', () => {
     expect(() => {
       steps(0);
-    }).toThrow(new Error('Only positive numbers are allowed'));
+    }).toThrow(new Error('Only positive integers are allowed'));
   });
 
   xtest('negative value is an error', () => {
     expect(() => {
       steps(-15);
-    }).toThrow(new Error('Only positive numbers are allowed'));
+    }).toThrow(new Error('Only positive integers are allowed'));
   });
 });
