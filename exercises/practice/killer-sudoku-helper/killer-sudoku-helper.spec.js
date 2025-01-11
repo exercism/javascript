@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { combinations } from './killer-sudoku-helper';
 
 describe('Trivial 1-digit cages', () => {
