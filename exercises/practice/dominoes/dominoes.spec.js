@@ -178,4 +178,18 @@ describe('Dominoes', () => {
       true,
     );
   });
+
+  xdescribe('separate three-domino loops', () => {
+    runTest(
+      [
+        [1, 2],
+        [2, 3],
+        [3, 1],
+        [4, 5],
+        [5, 6],
+        [6, 4],
+      ],
+      false,
+    );
+  });
 });
