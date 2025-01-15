@@ -7,7 +7,12 @@ const areSetsEqual = (setA, setB) =>
 describe('Anagram', () => {
   test('no matches', () => {
     const expected = [];
-    const actual = findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants']);
+    const actual = findAnagrams('diaper', [
+      'hello',
+      'world',
+      'zombies',
+      'pants',
+    ]);
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 
