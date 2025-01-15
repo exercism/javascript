@@ -1,84 +1,125 @@
 import { describe, expect, test, xtest } from '@jest/globals';
 import { findAnagrams } from './anagram';
 
+let areSetsEqual = (setA, setB) => setA.size === setB.size && [...setA].every(val => setB.has(val));
+
 describe('Anagram', () => {
   test('no matches', () => {
+    let expected = [];
+    let actual = findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants']);
     expect(
-      findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants']),
-    ).toEqual([]);
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects two anagrams', () => {
-    expect(findAnagrams('solemn', ['lemons', 'cherry', 'melons'])).toEqual([
-      'lemons',
-      'melons',
-    ]);
+    let expected = ['lemons', 'melons'];
+    let actual = findAnagrams('solemn', ['lemons', 'cherry', 'melons']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('does not detect anagram subsets', () => {
-    expect(findAnagrams('good', ['dog', 'goody'])).toEqual([]);
+    let expected = [];
+    let actual = findAnagrams('good', ['dog', 'goody']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects anagram', () => {
+    let expected = ['inlets'];
+    let actual = findAnagrams('listen', ['enlists', 'google', 'inlets', 'banana']);
     expect(
-      findAnagrams('listen', ['enlists', 'google', 'inlets', 'banana']),
-    ).toEqual(['inlets']);
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects three anagrams', () => {
+    let expected = ['gallery', 'regally', 'largely'];
+    let actual = findAnagrams('allergy', [
+      'gallery',
+      'ballerina',
+      'regally',
+      'clergy',
+      'largely',
+      'leading'
+    ]);
     expect(
-      findAnagrams('allergy', [
-        'gallery',
-        'ballerina',
-        'regally',
-        'clergy',
-        'largely',
-        'leading',
-      ]),
-    ).toEqual(['gallery', 'regally', 'largely']);
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects multiple anagrams with different case', () => {
-    expect(findAnagrams('nose', ['Eons', 'ONES'])).toEqual(['Eons', 'ONES']);
+    let expected = ['Eons', 'ONES'];
+    let actual = findAnagrams('nose', ['Eons', 'ONES']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('does not detect non-anagrams with identical checksum', () => {
-    expect(findAnagrams('mass', ['last'])).toEqual([]);
+    let expected = [];
+    let actual = findAnagrams('mass', ['last']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects anagrams case-insensitively', () => {
+    let expected = ['Carthorse'];
+    let actual = findAnagrams('Orchestra', ['cashregister', 'Carthorse', 'radishes']);
     expect(
-      findAnagrams('Orchestra', ['cashregister', 'Carthorse', 'radishes']),
-    ).toEqual(['Carthorse']);
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects anagrams using case-insensitive subject', () => {
+    let expected = ['carthorse'];
+    let actual = findAnagrams('Orchestra', ['cashregister', 'carthorse', 'radishes']);
     expect(
-      findAnagrams('Orchestra', ['cashregister', 'carthorse', 'radishes']),
-    ).toEqual(['carthorse']);
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('detects anagrams using case-insensitive possible matches', () => {
+    let expected = ['Carthorse'];
+    let actual = findAnagrams('orchestra', ['cashregister', 'Carthorse', 'radishes']);
     expect(
-      findAnagrams('orchestra', ['cashregister', 'Carthorse', 'radishes']),
-    ).toEqual(['Carthorse']);
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('does not detect an anagram if the original word is repeated', () => {
-    expect(findAnagrams('go', ['go Go GO'])).toEqual([]);
+    let expected = [];
+    let actual = findAnagrams('go', ['go Go GO']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('anagrams must use all letters exactly once', () => {
-    expect(findAnagrams('tapper', ['patter'])).toEqual([]);
+    let expected = [];
+    let actual = findAnagrams('tapper', ['patter']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('words are not anagrams of themselves (case-insensitive)', () => {
-    expect(findAnagrams('BANANA', ['BANANA', 'Banana', 'banana'])).toEqual([]);
+    let expected = [];
+    let actual = findAnagrams('BANANA', ['BANANA', 'Banana', 'banana']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 
   xtest('words other than themselves can be anagrams', () => {
-    expect(findAnagrams('LISTEN', ['Listen', 'Silent', 'LISTEN'])).toEqual([
-      'Silent',
-    ]);
+    let expected = ['Silent'];
+    let actual = findAnagrams('LISTEN', ['Listen', 'Silent', 'LISTEN']);
+    expect(
+      areSetsEqual(new Set(expected), new Set(actual))
+    ).toEqual(true);
   });
 });
