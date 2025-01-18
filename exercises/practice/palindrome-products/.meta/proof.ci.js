@@ -1,88 +1,38 @@
-const reverseString = (str) => str.split('').reverse().join('');
-
-class Palindrome {
-  constructor(factor1, factor2) {
-    this.value = factor1 * factor2;
-    this.factors = [[factor1, factor2]];
-  }
-
-  withFactors(factors) {
-    this.factors.push(factors);
-    return this;
-  }
-
-  valid() {
-    const s = `${this.value}`;
-    return s === reverseString(s);
-  }
-
-  merge(other) {
-    other.factors.forEach((f) => {
-      this.factors.push(f);
-    });
-    return this;
-  }
-}
-
 export class Palindromes {
-  constructor(maxFactor, minFactor = 1) {
-    this.maxFactor = maxFactor;
-    this.minFactor = minFactor;
-  }
-
-  get largest() {
-    let left = this.maxFactor,
-      right = this.maxFactor,
-      best = new Palindrome(this.minFactor, this.minFactor);
-
-    while (right >= this.minFactor) {
-      let p = new Palindrome(left, right);
-
-      if (best.value && p.value < best.value) {
-        right--;
-        left = right;
-        continue;
-      }
-
-      if (p.valid()) {
-        if (best.value < p.value) {
-          best = p;
-        } else if (best.value === p.value) {
-          best = p.merge(best);
+  static generate({ minFactor, maxFactor }) {
+    if (minFactor > maxFactor) throw new Error('min must be <= max');
+    let isPalindrome = (n) =>
+      [...n.toString()].reverse().join('') === n.toString();
+    let search = (n, pred, fn) => {
+      while (pred(n)) {
+        if (!isPalindrome(n)) {
+          n = fn(n);
+          continue;
         }
-      }
-
-      if (left <= this.minFactor) {
-        right--;
-        left = right;
-      } else {
-        left--;
-      }
-    }
-
-    if (best.valid()) {
-      return best;
-    }
-
-    return { value: null, factors: [] };
-  }
-
-  get smallest() {
-    for (let m = this.minFactor; m <= this.maxFactor; m += 1) {
-      for (let n = m; n <= this.maxFactor; n += 1) {
-        const p = new Palindrome(m, n);
-        if (p.valid()) {
-          return p;
+        let factors = [];
+        for (let p = minFactor; p <= n / p; p++) {
+          if (n % p === 0) {
+            let q = n / p;
+            if (q <= maxFactor) factors.push([p, q]);
+          }
         }
+        if (factors.length > 0) return { value: n, factors };
+        n = fn(n);
       }
-    }
-    return { value: null, factors: [] };
-  }
-
-  static generate(params) {
-    if ((params.minFactor || 1) > params.maxFactor) {
-      throw new Error('min must be <= max');
-    }
-    return new Palindromes(params.maxFactor, params.minFactor || 1);
+      return { value: null, factors: [] };
+    };
+    let [lower, upper] = [minFactor * minFactor, maxFactor * maxFactor];
+    return {
+      largest: search(
+        upper,
+        (n) => n >= lower,
+        (x) => x - 1,
+      ),
+      smallest: search(
+        lower,
+        (n) => n <= upper,
+        (x) => x + 1,
+      ),
+    };
   }
 }
