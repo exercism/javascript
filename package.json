@@ -19,7 +19,7 @@
     "@types/node": "^22.10.3",
     "@types/shelljs": "^0.8.15",
     "babel-jest": "^29.7.0",
-    "core-js": "~3.39.0",
+    "core-js": "~3.40.0",
     "diff": "^7.0.0",
     "eslint": "^9.17.0",
     "expect": "^29.7.0",
