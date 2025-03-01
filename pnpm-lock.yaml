@@ -27,8 +27,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.25.8)
       core-js:
-        specifier: ~3.40.0
-        version: 3.40.0
+        specifier: ~3.41.0
+        version: 3.41.0
       diff:
         specifier: ^7.0.0
         version: 7.0.0
@@ -1132,8 +1132,8 @@ packages:
   core-js@3.38.1:
     resolution: {integrity: sha512-OP35aUorbU3Zvlx7pjsFdu1rGNnD4pgw/CWoYzRY3t2EzoVT7shKHY1dlAy3f41cGIO7ZDPQimhGFTlEYkG/Hw==}
 
-  core-js@3.40.0:
-    resolution: {integrity: sha512-7vsMc/Lty6AGnn7uFpYT56QesI5D2Y/UkgKounk87OP9Z2H9Z8kj6jzcSGAxFmUtDOS0ntK6lbQz+Nsa0Jj6mQ==}
+  core-js@3.41.0:
+    resolution: {integrity: sha512-SJ4/EHwS36QMJd6h/Rg+GyR4A5xE0FSI3eZ+iBVpfqf1x0eTSg1smWLHrA+2jQThZSh97fmSgFSU8B61nxosxA==}
 
   create-jest@29.7.0:
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
@@ -2606,7 +2606,7 @@ snapshots:
       '@babel/core': 7.25.8
       '@babel/register': 7.25.7(@babel/core@7.25.8)
       commander: 6.2.1
-      core-js: 3.40.0
+      core-js: 3.41.0
       node-environment-flags: 1.0.6
       regenerator-runtime: 0.14.1
       v8flags: 3.2.0
@@ -3838,7 +3838,7 @@ snapshots:
 
   core-js@3.38.1: {}
 
-  core-js@3.40.0: {}
+  core-js@3.41.0: {}
 
   create-jest@29.7.0(@types/node@22.10.3):
     dependencies:
