@@ -17,7 +17,7 @@ jobs:
         run: corepack enable pnpm
 
       - name: Use Node.js LTS (22.x)
-        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e
         with:
           node-version: 22.x
           cache: 'pnpm'
@@ -41,7 +41,7 @@ jobs:
         run: corepack enable pnpm
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
