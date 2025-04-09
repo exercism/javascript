@@ -1,9 +1,17 @@
 {
-  "authors": ["BNAndras"],
+  "authors": [
+    "BNAndras"
+  ],
   "files": {
-    "solution": ["game-of-life.js"],
-    "test": ["game-of-life.spec.js"],
-    "example": [".meta/proof.ci.js"]
+    "solution": [
+      "game-of-life.js"
+    ],
+    "test": [
+      "game-of-life.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
   },
   "blurb": "Implement Conway's Game of Life.",
   "source": "Wikipedia",
