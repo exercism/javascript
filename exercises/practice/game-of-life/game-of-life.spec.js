@@ -3,7 +3,7 @@ import { GameOfLife } from './game-of-life';
 
 describe('Game of Life', () => {
   // Empty matrix
-  test('tells a gigasecond anniversary since midnight', () => {
+  test('empty matrix', () => {
     const matrix = [];
     const game = new GameOfLife(matrix);
     game.tick();
