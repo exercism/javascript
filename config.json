@@ -2661,7 +2661,10 @@
         "slug": "game-of-life",
         "name": "Conway's Game of Life",
         "uuid": "e51c01e9-b7b1-4877-939a-6254c4efe338",
-        "practices": [],
+        "practices": [
+          "array-loops",
+          "array-transformations"
+        ],
         "prerequisites": [],
         "difficulty": 2
       }
