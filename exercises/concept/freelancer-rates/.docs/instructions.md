@@ -3,7 +3,8 @@
 In this exercise you will be writing code to help a freelancer communicate with their clients about the prices of certain projects. You will write a few utility functions to quickly calculate the costs for the clients.
 
 ~~~~exercism/note
-In the next tasks, the ==ratePerHour== variable and the ==dayRate== function are related to money. The units of measurement are money for a unit of time (hours and days respectively).
+The `ratePerHour` variable and the `dayRate` function are related to money.
+The units of measurement are money for a unit of time: hours and days respectively.
 ~~~~
 
 ## 1. Calculate the day rate given an hourly rate
