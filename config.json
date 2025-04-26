@@ -1415,6 +1415,14 @@
         ]
       },
       {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "c72faac5-8d41-404b-8558-759b94ea22ec",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "saddle-points",
         "name": "Saddle Points",
         "uuid": "a01aa48c-65c4-4b1f-b3d9-3ec7da2ef754",
