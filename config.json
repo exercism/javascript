@@ -1277,7 +1277,8 @@
           "pattern_recognition",
           "strings",
           "arrays"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "series",
