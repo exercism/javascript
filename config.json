@@ -1265,13 +1265,9 @@
         "name": "Scale Generator",
         "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
         "practices": [],
-        "prerequisites": [
-          "classes",
-          "arrays",
-          "strings",
-          "array-transformations"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "loops",
           "pattern_recognition",
