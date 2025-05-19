@@ -113,4 +113,8 @@ export class DiffieHellman {
       PRIMES.includes(g)
     );
   }
+
+  static getPrivateKey(p) {
+    return Math.floor(Math.random() * (p - 1) + 2);
+  }
 }
