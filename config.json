@@ -2369,7 +2369,7 @@
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 8,
+        "difficulty": 4,
         "topics": [
           "conditionals",
           "loops",
