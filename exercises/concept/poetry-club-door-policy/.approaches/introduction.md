@@ -51,7 +51,7 @@ export function frontDoorPassword(word) {
     charCode = word.charCodeAt(index);
     if (charCode <= 90) charCode += 32;
     password += String.fromCharCode(charCode);
-  };
+  }
   return password;
 }
 ```
@@ -120,8 +120,8 @@ export function backDoorResponse(line) {
   for (let index = line.length - 1; index >= 0; index--) {
     if (line[index] != ' ') {
       return line[index];
-    };
-  };
+    }
+  }
   return '';
 }
 ```
