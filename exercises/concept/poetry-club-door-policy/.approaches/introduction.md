@@ -1,16 +1,17 @@
 # Introduction
 
-There are various ways to solve each part of Poetry Club Door Policy. A commonality between most of the parts is needing to get a character from the provided string.
+There are various ways to solve each part of Poetry Club Door Policy.
+A commonality between most of the parts is needing to get a character from the provided string.
 
 There are multiple ways to do this, one of which is the standard way of using `[index]` access.
 
 One other way is to use [`charAt`][mdn-char-at], which is the same as `[index]` access for most purposes.
 
 Another method is [`at`][mdn-at], which is the same as `[index]` access, except it accepts negative numbers.
-
 A negative number will count backwards from the end of the string, unlike positive numbers, which count forwards from the start.
 
-In addition, [`substring`][mdn-substring] and [`slice`][mdn-slice] can be used. These string methods are normally used to get portions of strings, rather than a single character.
+In addition, [`substring`][mdn-substring] and [`slice`][mdn-slice] can be used.
+These string methods are normally used to get portions of strings, rather than a single character.
 
 An important distiction is that `slice` accepts negative numbers like `at` does, but `substring` does not.
 
@@ -36,20 +37,38 @@ export function frontDoorPassword(word) {
 }
 ```
 
-This approach uses [`toLocaleUpperCase`][mdn-to-locale-upper-case] and [`toLocaleLowerCase`][mdn-to-locale-lower-case], which are very similar to `toUpperCase` and `toLowerCase`.
+This approach uses [`toLocaleUpperCase`][mdn-to-locale-upper-case] and [`toLocaleLowerCase`][mdn-to-locale-lower-case], which are very similar to `toUpperCase` and `toLowerCase`, but work with either the current locale or a given locale, which can be specified as an argument.
+This approach is necessary when the language locale has a non-standard mapping between lower and uppercase.
 
-When using `toLocaleUpperCase` or `toLocaleLowerCase`, you can specify a locale string as an argument and the output will be adjusted to that locale.
+```javascript
+const str = "istanbul";
+
+str.toUpperCase()
+// => 'ISTANBUL'
+str.toLocaleUpperCase('en-US')
+// => 'ISTANBUL'
+
+str.toLocaleUpperCase('tr')
+// => 'İSTANBUL'
+```
 
 ### Approach: `String.fromCharCode` and `charCodeAt`
 
 ```js
 export function frontDoorPassword(word) {
   let charCode = word.charCodeAt(0);
-  if (charCode >= 97) charCode -= 32;
+  if (charCode >= 97) {
+    charCode -= 32;
+  }
+  
   let password = String.fromCharCode(charCode);
+  
   for (let index = 1; index < word.length; index++) {
     charCode = word.charCodeAt(index);
-    if (charCode <= 90) charCode += 32;
+    if (charCode <= 90) {
+      charCode += 32;
+    }
+    
     password += String.fromCharCode(charCode);
   }
   return password;
@@ -126,7 +145,8 @@ export function backDoorResponse(line) {
 }
 ```
 
-This approach does not trim whitespace. Instead, it uses a [for loop][mdn-for] to return the first character that is not a space from the end of the string.
+This approach does not trim whitespace.
+Instead, it uses a [for loop][mdn-for] to return the first character that is not a space from the end of the string.
 
 [mdn-char-at]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 [mdn-at]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at
