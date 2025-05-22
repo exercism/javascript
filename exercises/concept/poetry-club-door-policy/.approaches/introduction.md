@@ -41,14 +41,14 @@ This approach uses [`toLocaleUpperCase`][mdn-to-locale-upper-case] and [`toLocal
 This approach is necessary when the language locale has a non-standard mapping between lower and uppercase.
 
 ```javascript
-const str = "istanbul";
+const str = 'istanbul';
 
-str.toUpperCase()
+str.toUpperCase();
 // => 'ISTANBUL'
-str.toLocaleUpperCase('en-US')
+str.toLocaleUpperCase('en-US');
 // => 'ISTANBUL'
 
-str.toLocaleUpperCase('tr')
+str.toLocaleUpperCase('tr');
 // => 'İSTANBUL'
 ```
 
@@ -60,15 +60,15 @@ export function frontDoorPassword(word) {
   if (charCode >= 97) {
     charCode -= 32;
   }
-  
+
   let password = String.fromCharCode(charCode);
-  
+
   for (let index = 1; index < word.length; index++) {
     charCode = word.charCodeAt(index);
     if (charCode <= 90) {
       charCode += 32;
     }
-    
+
     password += String.fromCharCode(charCode);
   }
   return password;
