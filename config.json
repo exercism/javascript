@@ -461,7 +461,6 @@
         "uuid": "fd7b62d4-266b-4e84-a526-bf3d47901216",
         "practices": [],
         "prerequisites": [
-          "dates",
           "numbers",
           "arithmetic-operators"
         ],
@@ -664,9 +663,7 @@
         "prerequisites": [
           "classes",
           "arrays",
-          "strings",
-          "randomness",
-          "codepoints"
+          "strings"
         ],
         "difficulty": 6,
         "topics": [
@@ -686,9 +683,7 @@
           "strings",
           "arrays",
           "classes",
-          "numbers",
-          "codepoints",
-          "randomness"
+          "numbers"
         ],
         "difficulty": 6,
         "topics": [
@@ -730,7 +725,6 @@
         "uuid": "74bbc9e3-edc5-41e0-84d7-5b2d98dd8370",
         "practices": [],
         "prerequisites": [
-          "bit-manipulation",
           "array-analysis",
           "errors"
         ],
@@ -840,7 +834,6 @@
         "uuid": "98617798-b49d-4d43-9f65-7131ee73d626",
         "practices": [],
         "prerequisites": [
-          "dates",
           "array-analysis",
           "conditionals-switch"
         ],
@@ -953,7 +946,6 @@
         "practices": [],
         "prerequisites": [
           "classes",
-          "math",
           "numbers",
           "for-loops",
           "arrays"
@@ -1047,8 +1039,7 @@
         "practices": [],
         "prerequisites": [
           "classes",
-          "numbers",
-          "math"
+          "numbers"
         ],
         "difficulty": 4,
         "topics": [
@@ -1100,8 +1091,7 @@
         "prerequisites": [
           "conditionals",
           "errors",
-          "numbers",
-          "math"
+          "numbers"
         ],
         "difficulty": 5,
         "topics": [
@@ -1119,7 +1109,6 @@
           "arrays",
           "for-loops",
           "numbers",
-          "math",
           "conditionals"
         ],
         "difficulty": 5,
@@ -1640,7 +1629,6 @@
           "conditionals",
           "errors",
           "for-loops",
-          "math",
           "numbers",
           "strings"
         ],
@@ -1684,7 +1672,6 @@
           "arithmetic-operators",
           "classes",
           "errors",
-          "math",
           "numbers",
           "while-loops"
         ],
@@ -1764,7 +1751,6 @@
           "comparison",
           "conditionals",
           "errors",
-          "math",
           "while-loops"
         ],
         "difficulty": 7,
@@ -2414,8 +2400,7 @@
         "prerequisites": [
           "arrays",
           "classes",
-          "for-loops",
-          "maps"
+          "for-loops"
         ],
         "difficulty": 7,
         "topics": [
@@ -2503,7 +2488,6 @@
           "arrays",
           "for-loops",
           "objects",
-          "math",
           "conditionals"
         ],
         "difficulty": 5,
@@ -2592,8 +2576,7 @@
         "name": "Markdown",
         "uuid": "cd666b3a-7114-4ba9-9b2a-7622a2c8c12c",
         "practices": [
-          "strings",
-          "string-formatting"
+          "strings"
         ],
         "prerequisites": [],
         "difficulty": 5
@@ -2614,7 +2597,6 @@
         "uuid": "8716b347-e18f-48a6-b373-426cc4ca98cb",
         "practices": [],
         "prerequisites": [
-          "string-formatting"
         ],
         "difficulty": 5
       },
@@ -2637,7 +2619,6 @@
         "uuid": "a1e71425-0e7e-442a-9c8e-cc252f440760",
         "practices": [],
         "prerequisites": [
-          "prototypes-and-classes",
           "callbacks"
         ],
         "difficulty": 7,
@@ -2655,9 +2636,7 @@
         "prerequisites": [
           "conditionals",
           "recursion",
-          "loops",
-          "numbers",
-          "lists"
+          "numbers"
         ],
         "difficulty": 5
       },
