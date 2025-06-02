@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { score } from './yacht';
 
 describe('Yacht', () => {
@@ -35,6 +36,10 @@ describe('Yacht', () => {
 
   xtest('Yacht of 3s counted as fives', () => {
     expect(score([3, 3, 3, 3, 3], 'fives')).toEqual(0);
+  });
+
+  xtest('Fives', () => {
+    expect(score([1, 5, 3, 5, 3], 'fives')).toEqual(10);
   });
 
   xtest('Sixes', () => {

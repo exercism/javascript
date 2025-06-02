@@ -1,8 +1,12 @@
 export const isArmstrongNumber = (input) => {
-  const digits = [...String(input)];
+  const bigInput = BigInt(input);
+
+  const digits = [...String(bigInput)];
+
   const sum = digits.reduce(
-    (total, current) => total + current ** digits.length,
-    0
+    (total, current) => total + BigInt(current) ** BigInt(digits.length),
+    BigInt(0),
   );
-  return sum === input;
+
+  return sum === bigInput;
 };

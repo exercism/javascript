@@ -2,12 +2,12 @@
 
 JavaScript includes the capabilities for object-oriented programming ([OOP][wiki-oop]).
 In OOP, you want to create objects (_instances_) from "templates" (_classes_) so that they include certain data and functionality.
-The data properties are called _fields_ in the OOP context, function properties are called _methods_.
+The data properties are called _fields_ in the OOP context, the function properties are called _methods_.
 
 JavaScript did not have classes at all before they were added to the language specification in 2015 but allowed for object-oriented programming using prototype-based inheritance.
 And even though a `class` keyword is available nowadays, JavaScript is still a _prototype-based_ language.
 
-To understand what it means to be a prototype-based language and how JavaScript works, we will go back to the time when there were no classes.
+To understand what it means to be a prototype-based language and how JavaScript actually works, we will go back to the time when there were no classes.
 
 ## Prototype Syntax
 
@@ -31,14 +31,16 @@ Every instance object includes a hidden, internal property referred to as `[[pro
 It holds a reference to the value of the `prototype` key of the constructor function.
 Yes, you read that correctly, a JavaScript function can have key/value pairs because it is also an object behind the scenes.
 
-```exercism/note
+<!-- prettier-ignore-start -->
+~~~~exercism/note
 To summarize:
 
 - Constructors in JavaScript are regular functions.
 - Constructing a new instance creates an object with a relation to its constructor called its _prototype_.
 - Functions are objects (callable objects) and therefore they can have properties.
 - The constructor's (function) `prototype` property will become the instance's _prototype_.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ### Instance Fields
 
@@ -117,11 +119,13 @@ The `[[prototype]]` property of `Car.prototype` (`myCar.[[prototype]].[[prototyp
 It contains general methods that are available for all JavaScript objects, e.g. `toString()`.
 In conclusion, you can call `myCar.toString()` and that method will exist because JavaScript searches for that method throughout the whole prototype chain.
 
-```exercism/caution
+<!-- prettier-ignore-start -->
+~~~~exercism/caution
 Note that the prototype chain is only travelled when retrieving a value.
 Setting a property directly or deleting a property of an instance object only targets that specific instance.
 This might not be what you would expect when you are used to a language with class-based inheritance.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ## Class Syntax
 
@@ -180,24 +184,24 @@ With the keywords `get` and `set` you can define functions that are executed whe
 ```javascript
 class Car {
   constructor() {
-    this._milage = 0;
+    this._mileage = 0;
   }
 
-  get milage() {
-    return this._milage;
+  get mileage() {
+    return this._mileage;
   }
 
-  set milage(value) {
-    throw new Error(`Milage cannot be manipulated, ${value} is ignored.`);
+  set mileage(value) {
+    throw new Error(`Mileage cannot be manipulated, ${value} is ignored.`);
     // Just an example, usually you would not provide a setter in this case.
   }
 }
 
 const myCar = new Car();
-myCar.milage;
+myCar.mileage;
 // => 0
-myCar.milage = 100;
-// => Error: Milage cannot be manipulated, 100 is ignored.
+myCar.mileage = 100;
+// => Error: Mileage cannot be manipulated, 100 is ignored.
 ```
 
 ---

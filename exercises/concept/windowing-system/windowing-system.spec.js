@@ -1,7 +1,8 @@
+import { describe, expect, test } from '@jest/globals';
 import {
-  Size,
   Position,
   ProgramWindow,
+  Size,
   changeWindow,
 } from './windowing-system';
 

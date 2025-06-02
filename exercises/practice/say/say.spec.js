@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { say } from './say';
 
 describe('say', () => {
@@ -47,7 +48,7 @@ describe('say', () => {
 
   xtest('one million two thousand three hundred forty-five', () => {
     expect(say(1002345)).toBe(
-      'one million two thousand three hundred forty-five'
+      'one million two thousand three hundred forty-five',
     );
   });
 

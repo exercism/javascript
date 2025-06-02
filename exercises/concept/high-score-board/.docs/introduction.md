@@ -4,7 +4,7 @@
 
 Besides primitive data types like `number` and `string`, there is another important data type in JavaScript called `object`.
 Objects are collections of key-value pairs.
-As such, they can be used as what is often referred to as maps or dictionaries in other languages.
+As such, they can be used in the same way as what are often referred to as maps or dictionaries in other languages.
 
 In other languages, all values in a map often need to have the same data type.
 In JavaScript, only the type of the key is restricted: it has to be a string.
@@ -143,7 +143,7 @@ for (let key in obj) {
 To avoid subtle errors, you should always assume the `for...in` loop visits the keys in an arbitrary order.
 Also, be aware that `for...in` includes [inherited keys][concept-inheritance] in its iteration.
 
-[oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+[oop]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
 [concept-classes]: /tracks/javascript/concepts/classes
 [mdn-identifier]: https://developer.mozilla.org/en-US/docs/Glossary/Identifier
 [concept-inheritance]: /tracks/javascript/concepts/inheritance

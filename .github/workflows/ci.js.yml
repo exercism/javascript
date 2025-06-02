@@ -9,37 +9,45 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
-      - name: Use Node.js LTS (16.x)
-        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable pnpm
+
+      - name: Use Node.js LTS (22.x)
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
-          node-version: '16'
+          node-version: 22.x
+          cache: 'pnpm'
 
       - name: Install project dependencies
-        run: npm ci
+        run: corepack pnpm install --frozen-lockfile
 
       - name: Run exercism/javascript ci precheck (checks config, lint code, and runs tests) for all exercises
-        run: npx babel-node scripts/ci-check
+        run: corepack pnpm node scripts/ci-check.mjs
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
-        node-version: ['16', '17', '18']
+        node-version: [22.x]
 
     steps:
-      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable pnpm
+
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
       - name: Install project dependencies
-        run: npm ci
+        run: corepack pnpm install --frozen-lockfile
 
       - name: Run exercism/javascript ci (checks config, lint code, and runs tests) for all exercises
-        run: npx babel-node scripts/ci
+        run: corepack pnpm node scripts/ci.mjs

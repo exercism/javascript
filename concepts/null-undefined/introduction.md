@@ -31,15 +31,38 @@ That means while `null` represents an empty value (but still a value), `undefine
 `undefined` appears in different contexts.
 
 - If a variable is declared without a value (initialization), it is `undefined`.
+
+  ```js
+  let name;
+  console.log(name); // => undefined
+  ```
+
 - If you try to access a value for a non-existing key in an object, you get `undefined`.
+
+  ```js
+  let obj = {
+    name: 'John',
+  };
+  console.log(obj.age); // => undefined
+  ```
+
 - If a function does not return a value, the result is `undefined`.
+
+  ```js
+  function printName(name) {
+    'My name is ' + name;
+  }
+  console.log(printName('John')); // => undefined
+  ```
+
 - If an argument is not passed to a function, it is `undefined`, unless that argument has a default value.
 
-```javascript
-let name;
-console.log(name);
-// => undefined
-```
+  ```js
+  function printName(name) {
+    return name;
+  }
+  console.log(printName()); // => undefined
+  ```
 
 You can check whether a variable is undefined using the strict equality operator `===`.
 

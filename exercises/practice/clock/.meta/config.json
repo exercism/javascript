@@ -25,7 +25,6 @@
   },
   "blurb": "Implement a clock that handles times without dates.",
   "source": "Pairing session with Erin Drummond",
-  "source_url": "https://twitter.com/ebdrummond",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

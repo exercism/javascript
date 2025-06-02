@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "bobahop"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "2495f79d-9ef9-4f38-abad-f3af8f1f217e",
+      "slug": "every-includes",
+      "title": "every with includes",
+      "blurb": "Use every with includes.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "5d19ca5a-9eb2-42fc-bf23-ebf66b7e4959",
+      "slug": "set-size",
+      "title": "Set with size",
+      "blurb": "Use Set with size.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "44eff693-c28f-4928-9f45-7a9c7e79b843",
+      "slug": "bitfield",
+      "title": "Bit field",
+      "blurb": "Use a bit field to keep track of used letters.",
+      "authors": [
+        "bobahop"
+      ]
+    }
+  ]
+}

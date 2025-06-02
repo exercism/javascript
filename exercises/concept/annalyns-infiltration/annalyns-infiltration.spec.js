@@ -1,8 +1,9 @@
+import { describe, expect, test } from '@jest/globals';
 import {
   canExecuteFastAttack,
-  canSpy,
-  canSignalPrisoner,
   canFreePrisoner,
+  canSignalPrisoner,
+  canSpy,
 } from './annalyns-infiltration';
 
 describe('can execute fast attack', () => {
@@ -29,7 +30,7 @@ describe('can spy', () => {
     const expected = false;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 
@@ -40,7 +41,7 @@ describe('can spy', () => {
     const expected = true;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 
@@ -51,7 +52,7 @@ describe('can spy', () => {
     const expected = true;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 
@@ -62,7 +63,7 @@ describe('can spy', () => {
     const expected = true;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 
@@ -73,7 +74,7 @@ describe('can spy', () => {
     const expected = true;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 
@@ -84,7 +85,7 @@ describe('can spy', () => {
     const expected = true;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 
@@ -95,7 +96,7 @@ describe('can spy', () => {
     const expected = true;
 
     expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
-      expected
+      expected,
     );
   });
 });
@@ -147,8 +148,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -164,8 +165,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -181,8 +182,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -198,8 +199,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -215,8 +216,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -232,8 +233,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -249,8 +250,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -266,8 +267,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -283,8 +284,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -300,8 +301,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -317,8 +318,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -334,8 +335,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -351,8 +352,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -368,8 +369,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -385,8 +386,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 
@@ -402,8 +403,8 @@ describe('can free prisoner', () => {
         knightIsAwake,
         archerIsAwake,
         prisonerIsAwake,
-        petDogIsPresent
-      )
+        petDogIsPresent,
+      ),
     ).toBe(expected);
   });
 });

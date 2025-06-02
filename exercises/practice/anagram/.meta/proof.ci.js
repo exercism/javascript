@@ -7,6 +7,6 @@ export const findAnagrams = (subject, candidates) => {
   const wordsCopy = Array.isArray(candidates) ? candidates : [...candidates];
   return wordsCopy.filter(
     (candidate) =>
-      !sameWord(subject, candidate) && isAnagram(subject, candidate)
+      !sameWord(subject, candidate) && isAnagram(subject, candidate),
   );
 };

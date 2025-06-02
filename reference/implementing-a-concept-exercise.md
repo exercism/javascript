@@ -47,27 +47,30 @@ github/exercism
                 |   |── config.json
                 |   |── design.md
                 |   └── exemplar.js
-                ├── .eslintrc
                 ├── .gitignore
                 ├── babel.config.js
+                ├── eslint.config.mjs
                 ├── global.d.ts (only if there are complex types required)
+                ├── jest.config.js
                 ├── &lt;slug&gt;.js
                 ├── &lt;slug&gt;.spec.js
                 ├── package.json
-                └── yarn.lock
+                └── pnpm-lock.yaml
 </pre>
 
 ## Step 1: Add code files
 
 The configuration files may be copied from another exercise. We aim to keep these in sync:
 
-> ⚠ Just like with _practice_ exercises, we will provide a script for you to run. This script needs to be updated from its v2 version, which has not yet been done.
+> [!WARNING]
+> Just like with _practice_ exercises, we will provide a script for you to run. This script needs to be updated from its v2 version, which has not yet been done.
 
-- `.eslintrc`
 - `.gitignore`
 - `babel.config.js`
+- `eslint.config.mjs`
+- `jest.config.js`
 - `package.json`
-- `yarn.lock`
+- `pnpm-lock.yaml`
 
 The `package.json` file must be edited:
 
@@ -90,7 +93,7 @@ The `package.json` file must be edited:
 
 Now create the following three files:
 
-- `<slug>.cs`. the stub implementation file, which is the starting point for students to work on the exercise.
+- `<slug>.js`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `<slug>.spec.js`: the test suite.
 - `.meta/exemplar.js`: an exemplar implementation that passes all the tests. It **should** be an idiomatic solution.
 

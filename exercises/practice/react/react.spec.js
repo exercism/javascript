@@ -1,4 +1,5 @@
-import { InputCell, ComputeCell, CallbackCell } from './react';
+import { describe, expect, test, xtest } from '@jest/globals';
+import { CallbackCell, ComputeCell, InputCell } from './react';
 
 describe('React module', () => {
   test('accepts input', () => {
@@ -24,7 +25,7 @@ describe('React module', () => {
 
     const computeCell = new ComputeCell(
       inputCells,
-      (inputs) => inputs[0].value + inputs[1].value * 10
+      (inputs) => inputs[0].value + inputs[1].value * 10,
     );
 
     expect(computeCell.value).toEqual(21);
@@ -34,7 +35,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const computeCell = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value + 1
+      (inputs) => inputs[0].value + 1,
     );
     inputCell.setValue(3);
     expect(computeCell.value).toEqual(4);
@@ -44,17 +45,17 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const timesTwo = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value * 2
+      (inputs) => inputs[0].value * 2,
     );
 
     const timesThirty = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value * 30
+      (inputs) => inputs[0].value * 30,
     );
 
     const sum = new ComputeCell(
       [timesTwo, timesThirty],
-      (inputs) => inputs[0].value + inputs[1].value
+      (inputs) => inputs[0].value + inputs[1].value,
     );
 
     expect(sum.value).toEqual(32);
@@ -67,7 +68,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value + 1
+      (inputs) => inputs[0].value + 1,
     );
 
     const callback = new CallbackCell((cell) => cell.value);
@@ -80,7 +81,7 @@ describe('React module', () => {
   xtest('callbacks fire only when output values change', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell([inputCell], (inputs) =>
-      inputs[0].value < 3 ? 111 : 222
+      inputs[0].value < 3 ? 111 : 222,
     );
 
     const callback = new CallbackCell((cell) => cell.value);
@@ -96,7 +97,7 @@ describe('React module', () => {
   xtest('static callbacks fire even if their own value has not changed', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell([inputCell], (inputs) =>
-      inputs[0].value < 3 ? 111 : 222
+      inputs[0].value < 3 ? 111 : 222,
     );
 
     const callback = new CallbackCell(() => 'cell changed');
@@ -119,7 +120,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value + 1
+      (inputs) => inputs[0].value + 1,
     );
 
     const callback1 = new CallbackCell((cell) => cell.value);
@@ -146,7 +147,7 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const output = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value + 1
+      (inputs) => inputs[0].value + 1,
     );
 
     const callback1 = new CallbackCell((cell) => cell.value);
@@ -169,22 +170,22 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const plusOne = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value + 1
+      (inputs) => inputs[0].value + 1,
     );
 
     const minusOne1 = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value - 1
+      (inputs) => inputs[0].value - 1,
     );
 
     const minusOne2 = new ComputeCell(
       [minusOne1],
-      (inputs) => inputs[0].value - 1
+      (inputs) => inputs[0].value - 1,
     );
 
     const output = new ComputeCell(
       [plusOne, minusOne2],
-      (inputs) => inputs[0].value * inputs[1].value
+      (inputs) => inputs[0].value * inputs[1].value,
     );
 
     const callback1 = new CallbackCell((cell) => cell.value);
@@ -199,17 +200,17 @@ describe('React module', () => {
     const inputCell = new InputCell(1);
     const plusOne = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value + 1
+      (inputs) => inputs[0].value + 1,
     );
 
     const minusOne = new ComputeCell(
       [inputCell],
-      (inputs) => inputs[0].value - 1
+      (inputs) => inputs[0].value - 1,
     );
 
     const alwaysTwo = new ComputeCell(
       [plusOne, minusOne],
-      (inputs) => inputs[0].value - inputs[1].value
+      (inputs) => inputs[0].value - inputs[1].value,
     );
 
     const callback = new CallbackCell((cell) => cell.value);

@@ -18,7 +18,7 @@
   },
   "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Affine_cipher",
+  "source_url": "https://en.wikipedia.org/wiki/Affine_cipher",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

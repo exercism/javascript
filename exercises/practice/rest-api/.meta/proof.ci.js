@@ -17,7 +17,7 @@ export class RestAPI {
           if (pName === 'users') {
             return {
               users: this.database.users.filter((user) =>
-                pData.includes(user.name)
+                pData.includes(user.name),
               ),
             };
           }
@@ -36,7 +36,7 @@ export class RestAPI {
     switch (url) {
       case '/add': {
         const existingUser = this.database.users.find(
-          (user) => user.name === payload.user
+          (user) => user.name === payload.user,
         );
         if (existingUser) return existingUser;
         const newUser = {

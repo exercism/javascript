@@ -21,7 +21,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Implement an evaluator for a very simple subset of Forth",
+  "blurb": "Implement an evaluator for a very simple subset of Forth.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

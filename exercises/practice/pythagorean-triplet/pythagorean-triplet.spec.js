@@ -1,8 +1,9 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { triplets } from './pythagorean-triplet';
 
 function tripletsWithSum(sum, options = {}) {
   return triplets({ ...options, sum }).map((triplet) =>
-    triplet.toArray().sort((a, b) => a - b)
+    triplet.toArray().sort((a, b) => a - b),
   );
 }
 
@@ -71,6 +72,6 @@ describe('Triplet', () => {
         [7500, 10000, 12500],
       ]);
     },
-    20 * 1000
+    20 * 1000,
   );
 });

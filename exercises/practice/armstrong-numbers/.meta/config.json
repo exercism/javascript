@@ -6,6 +6,7 @@
     "ankorGH",
     "gargrave",
     "hayashi-ay",
+    "jagdish-15",
     "ovidiu141",
     "SleeplessByte",
     "xarxziux"
@@ -21,7 +22,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Determine if a number is an Armstrong number",
+  "blurb": "Determine if a number is an Armstrong number.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number",
   "custom": {

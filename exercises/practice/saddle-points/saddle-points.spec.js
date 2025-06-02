@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { saddlePoints } from './saddle-points';
 
 describe('Saddle Points', () => {
@@ -8,7 +9,7 @@ describe('Saddle Points', () => {
         [9, 8, 7],
         [5, 3, 2],
         [6, 6, 7],
-      ])
+      ]),
     ).toEqual(expected);
   });
 
@@ -22,7 +23,7 @@ describe('Saddle Points', () => {
         [1, 2, 3],
         [3, 1, 2],
         [2, 3, 1],
-      ])
+      ]),
     ).toEqual([]);
   });
 
@@ -37,7 +38,7 @@ describe('Saddle Points', () => {
         [4, 5, 4],
         [3, 5, 5],
         [1, 5, 4],
-      ])
+      ]),
     ).toEqual(expected);
   });
 
@@ -52,7 +53,7 @@ describe('Saddle Points', () => {
         [6, 7, 8],
         [5, 5, 5],
         [7, 5, 6],
-      ])
+      ]),
     ).toEqual(expected);
   });
 
@@ -63,7 +64,7 @@ describe('Saddle Points', () => {
         [8, 7, 9],
         [6, 7, 6],
         [3, 2, 5],
-      ])
+      ]),
     ).toEqual(expected);
   });
 
@@ -76,7 +77,7 @@ describe('Saddle Points', () => {
       saddlePoints([
         [3, 1, 3],
         [3, 2, 4],
-      ])
+      ]),
     ).toEqual(expected);
   });
 

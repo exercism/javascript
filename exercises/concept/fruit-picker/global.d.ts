@@ -33,7 +33,7 @@ declare module 'grocer' {
   function order(
     query: GrocerQuery,
     onSuccess: GrocerOnSuccessCallback,
-    onError: GrocerOnErrorCallback
+    onError: GrocerOnErrorCallback,
   ): void;
 }
 

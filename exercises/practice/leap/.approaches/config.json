@@ -1,0 +1,45 @@
+{
+  "introduction": {
+    "authors": [
+      "bobahop"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "8d500d37-9bf0-4c92-a1f8-1b8e5e688d11",
+      "slug": "boolean-chain",
+      "title": "Boolean chain",
+      "blurb": "Use a chain of boolean expressions.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "05a2ccf2-0878-48ed-b0dc-72c214813a8e",
+      "slug": "ternary-operator",
+      "title": "Ternary operator",
+      "blurb": "Use a ternary operator of boolean expressions.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "a891670c-ea07-4171-bb91-06321663b6b1",
+      "slug": "switch-statement",
+      "title": "switch statement",
+      "blurb": "Use a switch statement.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "eec0b9f3-331b-4df9-b33d-75d19f78c03e",
+      "slug": "new-date-getmonth",
+      "title": "new Date getMonth",
+      "blurb": "Get the month for a new Date.",
+      "authors": [
+        "bobahop"
+      ]
+    }
+  ]
+}

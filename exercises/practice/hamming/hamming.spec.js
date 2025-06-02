@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { compute } from './hamming';
 
 describe('Hamming', () => {
@@ -23,25 +24,25 @@ describe('Hamming', () => {
 
   xtest('disallow first strand longer', () => {
     expect(() => compute('AATG', 'AAA')).toThrow(
-      new Error('strands must be of equal length')
+      new Error('strands must be of equal length'),
     );
   });
 
   xtest('disallow second strand longer', () => {
     expect(() => compute('ATA', 'AGTG')).toThrow(
-      new Error('strands must be of equal length')
+      new Error('strands must be of equal length'),
     );
   });
 
   xtest('disallow empty first strand', () => {
     expect(() => compute('', 'G')).toThrow(
-      new Error('strands must be of equal length')
+      new Error('strands must be of equal length'),
     );
   });
 
   xtest('disallow empty second strand', () => {
     expect(() => compute('G', '')).toThrow(
-      new Error('strands must be of equal length')
+      new Error('strands must be of equal length'),
     );
   });
 });

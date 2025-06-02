@@ -112,7 +112,7 @@ Promise.reject(new Error('failed')).then(
   },
   function (error) {
     console.error(error); // error in the console
-  }
+  },
 );
 ```
 
@@ -127,17 +127,22 @@ Promise.resolve('resolved!').then(
   },
   function (value) {
     // not called
-  }
+  },
 );
 ```
 
 ---
 
 [^4]: `all`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all>
+
 [^5]: `reject`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject>
+
 [^6]: `resolve`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve>
+
 [^1]: `then`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then>
+
 [^2]: `catch`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch>
+
 [^3]: `finally`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally>
 
 [promise-catch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch

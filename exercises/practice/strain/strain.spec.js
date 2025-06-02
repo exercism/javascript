@@ -1,11 +1,12 @@
-import { keep, discard } from './strain';
+import { describe, expect, test, xtest } from '@jest/globals';
+import { discard, keep } from './strain';
 
 describe('strain', () => {
   test('keeps on empty array returns empty array', () => {
     expect(keep([], (e) => e < 10)).toEqual([]);
   });
 
-  xtest('keeps everything ', () => {
+  xtest('keeps everything', () => {
     expect(keep([1, 2, 3], (e) => e < 10)).toEqual([1, 2, 3]);
   });
 

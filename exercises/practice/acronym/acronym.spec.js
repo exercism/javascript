@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { parse } from './acronym';
 
 describe('Acronyms are produced from', () => {
@@ -30,8 +31,8 @@ describe('Acronyms are produced from', () => {
   xtest('long phrases', () => {
     expect(
       parse(
-        'Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me'
-      )
+        'Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me',
+      ),
     ).toEqual('ROTFLSHTMDCOALM');
   });
 

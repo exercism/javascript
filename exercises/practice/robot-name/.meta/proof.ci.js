@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 // This generates ALL the possible names in order to be able to satisfy the
 // final test. This also _ensures_ it _never_ has a duplicate.
 const LETTERS = [...'QWERTYUIOPASDFGHJKLZXCVBNM'];
@@ -41,7 +40,7 @@ function generateName() {
   shuffledPointer += 1;
   if (shuffledPointer > shuffled.length) {
     throw new Error(
-      'Can not generate another name because all the names have been used.'
+      'Can not generate another name because all the names have been used.',
     );
   }
   return shuffled[shuffledPointer];

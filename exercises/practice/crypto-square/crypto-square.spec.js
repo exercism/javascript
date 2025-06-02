@@ -1,8 +1,14 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { Crypto } from './crypto-square';
 
 describe('Crypto', () => {
   test('empty plaintext results in an empty ciphertext', () => {
     const crypto = new Crypto('');
+    expect(crypto.ciphertext).toEqual('');
+  });
+
+  test('normalization results in empty plaintext', () => {
+    const crypto = new Crypto('... --- ...');
     expect(crypto.ciphertext).toEqual('');
   });
 
@@ -37,12 +43,12 @@ describe('Crypto', () => {
     '54 character plaintext results in 7 chunks, the last two with trailing spaces',
     () => {
       const crypto = new Crypto(
-        'If man was meant to stay on the ground, god would have given us roots.'
+        'If man was meant to stay on the ground, god would have given us roots.',
       );
       expect(crypto.ciphertext).toEqual(
-        'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '
+        'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ',
       );
     },
-    20 * 1000
+    20 * 1000,
   );
 });

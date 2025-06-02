@@ -21,7 +21,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Compute the result for a game of Hex / Polygon",
+  "blurb": "Compute the result for a game of Hex / Polygon.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

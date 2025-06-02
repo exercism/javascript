@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { answer } from './wordy';
 
 describe('Wordy', () => {
@@ -63,13 +64,13 @@ describe('Wordy', () => {
 
   xtest('unknown operation', () => {
     expect(() => answer('What is 52 cubed?')).toThrow(
-      new Error('Unknown operation')
+      new Error('Unknown operation'),
     );
   });
 
   xtest('Non math question', () => {
     expect(() => answer('Who is the President of the United States?')).toThrow(
-      new Error('Unknown operation')
+      new Error('Unknown operation'),
     );
   });
 
@@ -83,25 +84,25 @@ describe('Wordy', () => {
 
   xtest('reject two operations in a row', () => {
     expect(() => answer('What is 1 plus plus 2?')).toThrow(
-      new Error('Syntax error')
+      new Error('Syntax error'),
     );
   });
 
   xtest('reject two numbers in a row', () => {
     expect(() => answer('What is 1 plus 2 1?')).toThrow(
-      new Error('Syntax error')
+      new Error('Syntax error'),
     );
   });
 
   xtest('reject postfix notation', () => {
     expect(() => answer('What is 1 2 plus?')).toThrow(
-      new Error('Syntax error')
+      new Error('Syntax error'),
     );
   });
 
   xtest('reject prefix notation', () => {
     expect(() => answer('What is plus 1 2?')).toThrow(
-      new Error('Syntax error')
+      new Error('Syntax error'),
     );
   });
 });

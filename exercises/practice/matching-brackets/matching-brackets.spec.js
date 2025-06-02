@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { isPaired } from './matching-brackets';
 
 describe('Matching Brackets', () => {
@@ -53,12 +54,24 @@ describe('Matching Brackets', () => {
     expect(isPaired('[({]})')).toEqual(false);
   });
 
+  xtest('paired and wrong nested brackets but innermost are correct', () => {
+    expect(isPaired('[({}])')).toEqual(false);
+  });
+
   xtest('paired and incomplete brackets', () => {
     expect(isPaired('{}[')).toEqual(false);
   });
 
   xtest('too many closing brackets', () => {
     expect(isPaired('[]]')).toEqual(false);
+  });
+
+  xtest('early unexpected brackets', () => {
+    expect(isPaired(')()')).toEqual(false);
+  });
+
+  xtest('early mismatched brackets', () => {
+    expect(isPaired('{)()')).toEqual(false);
   });
 
   xtest('math expression', () => {
@@ -68,8 +81,8 @@ describe('Matching Brackets', () => {
   xtest('complex latex expression', () => {
     expect(
       isPaired(
-        '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)'
-      )
+        '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)',
+      ),
     ).toEqual(true);
   });
 });

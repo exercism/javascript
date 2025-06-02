@@ -17,5 +17,5 @@ interface Translation {
 type fetchTranslation = (text: string) => Promise<Translation>;
 type requestTranslation = (
   text: string,
-  callback: (err?: Error) => void
+  callback: (err?: Error) => void,
 ) => void;

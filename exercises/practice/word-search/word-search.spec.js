@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import WordSearch from './word-search';
 
 describe('single line grids', () => {
@@ -285,7 +286,7 @@ describe('vertical directions', () => {
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['elixir', 'clojure', 'ecmascript'])).toEqual(
-      expectedResults
+      expectedResults,
     );
   });
   xtest('should locate words written bottom to top', () => {
@@ -322,7 +323,7 @@ describe('vertical directions', () => {
     const wordSearch = new WordSearch(grid);
 
     expect(
-      wordSearch.find(['elixir', 'clojure', 'ecmascript', 'rust'])
+      wordSearch.find(['elixir', 'clojure', 'ecmascript', 'rust']),
     ).toEqual(expectedResults);
   });
   xtest('should locate words written top left to bottom right', () => {
@@ -363,7 +364,7 @@ describe('vertical directions', () => {
     const wordSearch = new WordSearch(grid);
 
     expect(
-      wordSearch.find(['clojure', 'elixir', 'ecmascript', 'rust', 'java'])
+      wordSearch.find(['clojure', 'elixir', 'ecmascript', 'rust', 'java']),
     ).toEqual(expectedResults);
   });
   xtest('should locate words written bottom right to top left', () => {
@@ -416,7 +417,7 @@ describe('vertical directions', () => {
         'rust',
         'java',
         'lua',
-      ])
+      ]),
     ).toEqual(expectedResults);
   });
   xtest('should locate words written bottom left to top right', () => {
@@ -474,7 +475,7 @@ describe('vertical directions', () => {
         'java',
         'lua',
         'lisp',
-      ])
+      ]),
     ).toEqual(expectedResults);
   });
   xtest('should locate words written top right to bottom left', () => {
@@ -537,7 +538,7 @@ describe('vertical directions', () => {
         'lua',
         'lisp',
         'ruby',
-      ])
+      ]),
     ).toEqual(expectedResults);
   });
 

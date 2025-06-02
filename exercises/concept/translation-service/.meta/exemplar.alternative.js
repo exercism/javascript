@@ -80,11 +80,13 @@ export class TranslationService {
    */
   async request(text, attempt = 1) {
     try {
-      await new Promise((resolve, reject) => {
-        this.api.request(text, (err) => {
-          err ? reject(err) : resolve();
-        });
-      });
+      await /** @type {Promise<void>} */ (
+        new Promise((resolve, reject) => {
+          this.api.request(text, (err) => {
+            err ? reject(err) : resolve();
+          });
+        })
+      );
     } catch (err) {
       if (attempt === 3) {
         throw err;
@@ -100,7 +102,7 @@ export class QualityThresholdNotMet extends Error {
     super(
       `
 The translation of ${text} does not meet the requested quality threshold.
-    `.trim()
+    `.trim(),
     );
   }
 }
@@ -110,7 +112,7 @@ export class BatchIsEmpty extends Error {
     super(
       `
 Requested a batch translation, but there are no texts in the batch.
-    `.trim()
+    `.trim(),
     );
   }
 }

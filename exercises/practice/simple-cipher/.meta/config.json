@@ -29,9 +29,9 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher",
+  "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher.",
   "source": "Substitution Cipher at Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Substitution_cipher",
+  "source_url": "https://en.wikipedia.org/wiki/Substitution_cipher",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

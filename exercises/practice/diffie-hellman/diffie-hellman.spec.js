@@ -1,4 +1,4 @@
-/* eslint-disable no-new */
+import { describe, expect, test, xtest } from '@jest/globals';
 import { DiffieHellman } from './diffie-hellman';
 
 describe('diffie-hellman', () => {
@@ -61,7 +61,7 @@ describe('diffie-hellman', () => {
 
     xtest('can calculate public key using private key', () => {
       expect(diffieHellman.getPublicKey(alicePrivateKey)).toEqual(
-        alicePublicKey
+        alicePublicKey,
       );
     });
 

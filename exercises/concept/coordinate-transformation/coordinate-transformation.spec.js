@@ -1,8 +1,9 @@
+import { describe, expect, test, jest } from '@jest/globals';
 import {
-  translate2d,
-  scale2d,
   composeTransform,
   memoizeTransform,
+  scale2d,
+  translate2d,
 } from './coordinate-transformation';
 
 const fakeTransform = () => {
@@ -25,11 +26,11 @@ describe('translate2d', () => {
 
   const dx = 3;
   const dy = -5;
-  const translator = translate2d(dx, dy);
   const x1 = 0;
   const y1 = 0;
   const expected = [3, -5];
   test('should be predictable', () => {
+    const translator = translate2d(dx, dy);
     expect(translator(x1, y1)).toEqual(expected);
   });
 
@@ -37,6 +38,8 @@ describe('translate2d', () => {
   const y2 = 5;
   const reusedExpected = [7, 0];
   test('should be reusable', () => {
+    const translator = translate2d(dx, dy);
+    translator(x1, y1);
     expect(translator(x2, y2)).toEqual(reusedExpected);
   });
 });
@@ -48,11 +51,11 @@ describe('scale2d', () => {
 
   const dx = 4;
   const dy = 2;
-  const scaler = scale2d(dx, dy);
   const x1 = 1;
   const y1 = 1;
   const expected = [4, 2];
   test('should be predictable', () => {
+    const scaler = scale2d(dx, dy);
     expect(scaler(x1, y1)).toEqual(expected);
   });
 
@@ -60,6 +63,8 @@ describe('scale2d', () => {
   const y2 = 5;
   const reusedExpected = [-8, 10];
   test('should be reusable', () => {
+    const scaler = scale2d(dx, dy);
+    scaler(x1, y1);
     expect(scaler(x2, y2)).toEqual(reusedExpected);
   });
 });
@@ -67,31 +72,37 @@ describe('scale2d', () => {
 describe('composeTransform', () => {
   const dx = -6;
   const dy = 10;
-  const translator = translate2d(dx, dy);
   const sx = 3;
   const sy = 2;
-  const scaler = scale2d(sx, sy);
 
   test('should return a function', () => {
+    const translator = translate2d(dx, dy);
+    const scaler = scale2d(sx, sy);
     expect(typeof composeTransform(translator, scaler)).toBe('function');
   });
 
   test('should compose two translate functions', () => {
+    const translator = translate2d(dx, dy);
     const composeTranslate = composeTransform(translator, translator);
     expect(composeTranslate(0, 0)).toEqual([-12, 20]);
   });
 
   test('should compose two scale functions', () => {
+    const scaler = scale2d(sx, sy);
     const composeScale = composeTransform(scaler, scaler);
     expect(composeScale(1, 1)).toEqual([9, 4]);
   });
 
   test('should compose in the correct order: g(f(x))', () => {
+    const translator = translate2d(dx, dy);
+    const scaler = scale2d(sx, sy);
     const composed = composeTransform(scaler, translator);
     expect(composed(0, 0)).toEqual([-6, 10]);
   });
 
   test('should compose in the opposite order: f(g(x))', () => {
+    const translator = translate2d(dx, dy);
+    const scaler = scale2d(sx, sy);
     const composed = composeTransform(translator, scaler);
     expect(composed(0, 0)).toEqual([-18, 20]);
   });
@@ -126,6 +137,16 @@ describe('memoizeTransform', () => {
     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
     expect(memoizedTransform(2, 2)).toEqual([4, 4]);
     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
-    expect(mockFunction).toBeCalledTimes(3);
+    expect(mockFunction).toHaveBeenCalledTimes(3);
+  });
+
+  test('should recalculate when a new function is passed in', () => {
+    const sumFunction = (x, y) => x + y;
+    const differenceFunction = (x, y) => x - y;
+    const memoizedSum = memoizeTransform(sumFunction);
+    const memoizedDifference = memoizeTransform(differenceFunction);
+
+    expect(memoizedSum(1, 2)).toEqual(3);
+    expect(memoizedDifference(1, 2)).toEqual(-1);
   });
 });

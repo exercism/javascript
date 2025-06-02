@@ -10,7 +10,7 @@ export const all = (promises) => {
   if (promises.length === 0) return Promise.resolve([]);
   return promises.reduce(
     async (acc, promise) => (await acc).concat(await promise),
-    Promise.resolve([])
+    Promise.resolve([]),
   );
 };
 
@@ -20,7 +20,7 @@ export const allSettled = (promises) => {
   return promises.reduce(
     async (acc, promise) =>
       (await acc).concat(await promise.catch((err) => err)),
-    Promise.resolve([])
+    Promise.resolve([]),
   );
 };
 

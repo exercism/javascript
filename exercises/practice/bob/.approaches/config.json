@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "bobahop"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "a4775bb1-cad6-4523-b9ec-d0dfda2e98ad",
+      "slug": "if-statements",
+      "title": "If statements",
+      "blurb": "Use if statements to return the answer.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "a439f836-57c3-4b99-995f-d76a0321e4b8",
+      "slug": "switch-statement",
+      "title": "Switch statement",
+      "blurb": "Use a switch to return the answer.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "ad78cacc-d3e1-4b3d-a2e1-5488495f590c",
+      "slug": "answer-array",
+      "title": "Answer array",
+      "blurb": "Index into an array to return the answer.",
+      "authors": [
+        "bobahop"
+      ]
+    }
+  ]
+}

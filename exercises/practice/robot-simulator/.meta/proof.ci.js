@@ -17,7 +17,7 @@ export class Robot {
           return 'advance';
         default:
           throw new InvalidInputError(
-            `${character} is not a valid instruction character.`
+            `${character} is not a valid instruction character.`,
           );
       }
     });

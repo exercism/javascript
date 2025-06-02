@@ -1,6 +1,11 @@
 # Exercism JavaScript Track
 
-[![configlet](https://github.com/exercism/javascript/workflows/configlet/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3Aconfiglet) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
+[![Configlet](https://github.com/exercism/javascript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/javascript/actions/workflows/configlet.yml) [![javascript / main](https://github.com/exercism/javascript/workflows/javascript%20/%20main/badge.svg)](https://github.com/exercism/javascript/actions?query=workflow%3A%22javascript+%2F+main%22)
+
+> [!IMPORTANT]
+> We 💙 our community but **this repository does not accept community contributions at this time**.<br>
+> There are no active maintainers to review PRs.<br>
+> Please read this [community blog post][freeing-maintainers] for details.
 
 **Exercism exercises in JavaScript**
 
@@ -19,7 +24,7 @@ It also has a list of tools you can use, of which the `test` tool is one of them
 This run `eslint` for all files that _require_ linting.
 
 ```shell
-npx eslint exercises/**/*.spec.js exercises/**/.meta/*.js --fix
+corepack pnpm node scripts/lint.mjs --fix
 ```
 
 These are also the files that are linted using the lint script, mentioned in [CONTRIBUTING.md][file-contributing].
@@ -43,21 +48,25 @@ This runs `jest` tests for all sample solutions.
 This _does not_ use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
 ```shell
-npx babel-node scripts/test
+corepack pnpm node scripts/test.mjs
 ```
 
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the `example.js` for the practice exercise `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer npx babel-node scripts/test
+ASSIGNMENT=practice/two-fer corepack pnpm node scripts/test.mjs
 ```
 
 > Running on Windows? Depending on your shell, environment variables are set differently.
 > You can use `cross-env` to normalize this. The following should work across environments:
 >
 > ```bash
-> npx cross-env ASSIGNMENT=practice/two-fer babel-node scripts/test
+> # if installed globally
+> cross-env ASSIGNMENT=practice/two-fer corepack pnpm node scripts/test.mjs
+>
+> # otherwise
+> corepack pnpm dlx cross-env ASSIGNMENT=practice/two-fer node scripts/test.mjs
 > ```
 
 ## Related repositories
@@ -93,3 +102,4 @@ A lot of the improvements made to this track and tooling are also made to the Ty
 [git-typescript-representer]: https://github.com/exercism/typescript-representer
 [git-typescript-test-runner]: https://github.com/exercism/typescript-test-runner
 [git-website-copy]: https://github.com/exercism/website-copy
+[freeing-maintainers]: https://exercism.org/blog/freeing-our-maintainers

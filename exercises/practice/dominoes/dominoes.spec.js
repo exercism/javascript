@@ -1,3 +1,4 @@
+import { describe, xdescribe, expect, test, xtest } from '@jest/globals';
 import { chain } from './dominoes';
 
 function runTest(dominoes, expected) {
@@ -11,7 +12,7 @@ function runTest(dominoes, expected) {
 function runTestsExpectingNull(dominoes) {
   const result = chain(dominoes);
 
-  it('Should not have a chain', () => {
+  test('Should not have a chain', () => {
     expect(result).toBe(null);
   });
 }
@@ -19,37 +20,37 @@ function runTestsExpectingNull(dominoes) {
 function runTestsExpectingChain(dominoes) {
   const result = chain(dominoes);
 
-  it('Should have a chain', () => {
+  test('Should have a chain', () => {
     expect(result).not.toBe(null);
   });
 
-  xit('The number of dominoes in the output equals the number of dominoes in the input.', () => {
+  xtest('The number of dominoes in the output equals the number of dominoes in the input.', () => {
     expect(result).toHaveLength(dominoes.length);
   });
 
-  xit('For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.', () => {
+  xtest('For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.', () => {
     expect(
       result
         .map((v, i) => {
           if (i === result.length - 1) return true;
           return v[1] === result[i + 1][0];
         })
-        .every(Boolean)
+        .every(Boolean),
     ).toBe(true);
   });
 
   if (dominoes.length > 0) {
-    xit('For the dominoes on the ends (a, b) ... (c, d): a is equal to d.', () => {
+    xtest('For the dominoes on the ends (a, b) ... (c, d): a is equal to d.', () => {
       expect(result[0][0] === result[result.length - 1][1]).toBe(true);
     });
   }
 
   // 4. Every domino appears in the output an equal number of times as the number of times it appears in the input.
   // (in other words, the dominoes in the output are the same dominoes as the ones in the input)
-  xit('Should have the same dominoes', () => {
+  xtest('Should have the same dominoes', () => {
     const sortDomino = (domino) => [...domino].sort();
     expect([...dominoes].map(sortDomino).sort()).toEqual(
-      [...result].map(sortDomino).sort()
+      [...result].map(sortDomino).sort(),
     );
   });
 }
@@ -74,7 +75,7 @@ describe('Dominoes', () => {
         [3, 1],
         [2, 3],
       ],
-      true
+      true,
     );
   });
 
@@ -85,7 +86,7 @@ describe('Dominoes', () => {
         [1, 3],
         [2, 3],
       ],
-      true
+      true,
     );
   });
 
@@ -96,7 +97,7 @@ describe('Dominoes', () => {
         [4, 1],
         [2, 3],
       ],
-      false
+      false,
     );
   });
 
@@ -106,7 +107,7 @@ describe('Dominoes', () => {
         [1, 1],
         [2, 2],
       ],
-      false
+      false,
     );
   });
 
@@ -118,7 +119,7 @@ describe('Dominoes', () => {
         [3, 4],
         [4, 3],
       ],
-      false
+      false,
     );
   });
 
@@ -130,7 +131,7 @@ describe('Dominoes', () => {
         [3, 1],
         [4, 4],
       ],
-      false
+      false,
     );
   });
 
@@ -143,7 +144,7 @@ describe('Dominoes', () => {
         [2, 4],
         [2, 4],
       ],
-      true
+      true,
     );
   });
 
@@ -157,7 +158,7 @@ describe('Dominoes', () => {
         [2, 2],
         [3, 3],
       ],
-      true
+      true,
     );
   });
 
@@ -174,7 +175,21 @@ describe('Dominoes', () => {
         [3, 4],
         [5, 6],
       ],
-      true
+      true,
+    );
+  });
+
+  xdescribe('separate three-domino loops', () => {
+    runTest(
+      [
+        [1, 2],
+        [2, 3],
+        [3, 1],
+        [4, 5],
+        [5, 6],
+        [6, 4],
+      ],
+      false,
     );
   });
 });

@@ -22,7 +22,7 @@ export const bestHands = (hands) => {
       const handValueComparison = compareHandValues(
         maxRank,
         maxValue,
-        handValue
+        handValue,
       );
       if (handValueComparison === 2) {
         maxValue = handValue;

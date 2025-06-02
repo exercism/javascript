@@ -36,14 +36,16 @@ Before that, it was accessible via the key `__proto__` in many environments.
 
 Do not confuse the prototype of an object (`[[prototype]]`) with the `prototype` property of the constructor function.
 
-```exercism/note
+<!-- prettier-ignore-start -->
+~~~~exercism/note
 To summarize:
 
 - Constructors in JavaScript are regular functions.
 - Constructing a new instance creates an object with a relation to its constructor called its _prototype_.
 - Functions are objects (callable objects) and therefore they can have properties.
 - The constructor's (function) `prototype` property will become the instance's _prototype_.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ### Instance Fields
 
@@ -124,11 +126,13 @@ The `[[prototype]]` of `Object` is usually `null` so the prototype chain ends th
 In conclusion, you can call `myCar.toString()` and that method will exist because JavaScript searches for that method throughout the whole prototype chain.
 You can find a detailed example in the [MDN article "Inheritance and the prototype chain"][mdn-prototype-chain-example].
 
-```exercism/caution
+<!-- prettier-ignore-start -->
+~~~~exercism/caution
 Note that the prototype chain is only travelled when retrieving a value.
 Setting a property directly or deleting a property of an instance object only targets that specific instance.
 This might not be what you would expect when you are used to a language with class-based inheritance.
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ### Dynamic Methods (Adding Methods to All Existing Instances)
 

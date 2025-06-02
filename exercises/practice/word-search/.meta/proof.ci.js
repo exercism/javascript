@@ -59,7 +59,7 @@ function diagonalFind(r, c, word, grid, rIncrement, outOfRange, buildCoords) {
         currentColumn,
         word.length,
         grid[currentRow].length,
-        foundLetters.length
+        foundLetters.length,
       )
     ) {
       const currLetterInGrid = grid[currentRow].charAt(currentColumn);

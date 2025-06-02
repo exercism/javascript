@@ -1,4 +1,5 @@
-import { promisify, all, allSettled, race, any } from './promises';
+import { describe, expect, test, xtest } from '@jest/globals';
+import { all, allSettled, any, promisify, race } from './promises';
 
 describe('promises', () => {
   const failedCallback = new Error('Failed callback');
@@ -139,20 +140,20 @@ describe('promises', () => {
           slowestPromise('SLOWEST'),
           slowerPromise('SLOWER'),
           fastPromise(FAST),
-        ])
+        ]),
       ).resolves.toEqual(FAST);
     });
 
     xtest('resolves with value of the fastest promise even if other slower promises fail', () => {
       const FAST = 'FAST';
       return expect(
-        race([failedPromise(null), fastPromise(FAST)])
+        race([failedPromise(null), fastPromise(FAST)]),
       ).resolves.toEqual(FAST);
     });
 
     xtest('rejects if the fastest promise fails even if other slower promises succeed', () => {
       return expect(
-        race([slowestPromise('SLOWEST'), failedPromise(null)])
+        race([slowestPromise('SLOWEST'), failedPromise(null)]),
       ).rejects.toEqual(failedCallback);
     });
   });
@@ -184,27 +185,27 @@ describe('promises', () => {
           slowestPromise('SLOWEST'),
           slowerPromise('SLOWER'),
           fastPromise(FAST),
-        ])
+        ]),
       ).resolves.toEqual(FAST);
     });
 
     xtest('resolves with value of the fastest successful promise even if slower promises fail', () => {
       const FAST = 'FAST';
       return expect(
-        any([failedPromise(null), fastPromise(FAST)])
+        any([failedPromise(null), fastPromise(FAST)]),
       ).resolves.toEqual(FAST);
     });
 
     xtest('resolves with value of fastest successful promise even if faster promises fail', () => {
       const SLOWEST = 'SLOWEST';
       return expect(
-        any([failedPromise(null), slowestPromise(SLOWEST)])
+        any([failedPromise(null), slowestPromise(SLOWEST)]),
       ).resolves.toEqual(SLOWEST);
     });
 
     xtest('rejects with array of errors if all promises fail', () => {
       return expect(
-        any([failedPromise(null), failedPromise(null)])
+        any([failedPromise(null), failedPromise(null)]),
       ).rejects.toEqual([failedCallback, failedCallback]);
     });
   });

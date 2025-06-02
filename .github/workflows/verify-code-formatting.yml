@@ -7,15 +7,10 @@ on:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: 'Checkout code'
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
-      - name: Use Node.js LTS (16.x)
-        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93
-        with:
-          node-version: '16'
-      - name: Install project development dependencies
-        run: npm i
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
       - name: 'Verify formatting of all files'
         run: ./bin/check-formatting.sh

@@ -1,9 +1,10 @@
+import { beforeEach, describe, expect, test, jest } from '@jest/globals';
 import {
-  checkHumidityLevel,
-  reportOverheating,
-  monitorTheMachine,
   ArgumentError,
+  checkHumidityLevel,
+  monitorTheMachine,
   OverheatingError,
+  reportOverheating,
 } from './factory-sensors';
 
 describe('checkHumidityLevel', () => {
@@ -23,6 +24,10 @@ describe('reportOverheating', () => {
 
   test('should throw an ArgumentError if the temperature is null', () => {
     expect(() => reportOverheating(null)).toThrow(ArgumentError);
+  });
+
+  test('should not throw if the temperature is 0°C', () => {
+    expect(() => reportOverheating(0)).not.toThrow();
   });
 
   test('should throw an OverheatingError if the temperature is 501°C', () => {
@@ -77,7 +82,7 @@ describe('monitorTheMachine', () => {
     expect(actions.shutdown).not.toHaveBeenCalled();
   });
 
-  test('should call only the shutdown action if the check throws an OverheatingError with a temperature equals to 651°C', () => {
+  test('should call only the shutdown action if the check throws an OverheatingError with a temperature of 651°C', () => {
     actions.check = jest.fn(() => {
       throw new OverheatingError(651);
     });

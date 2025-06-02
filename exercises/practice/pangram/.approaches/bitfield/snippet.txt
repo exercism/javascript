@@ -1,0 +1,7 @@
+[...input].forEach((letter) => {
+  if (letter >= "a" && letter <= "z")
+    phrasemask |= 1 << (letter.charCodeAt(0) - A_LCASE);
+  else if (letter >= "A" && letter <= "Z")
+    phrasemask |= 1 << (letter.charCodeAt(0) - A_UCASE);
+});
+return phrasemask == ALL_26_BITS_SET;

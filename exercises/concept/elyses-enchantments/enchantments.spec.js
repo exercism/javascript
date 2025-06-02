@@ -1,14 +1,13 @@
-//@ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
-  getItem,
-  setItem,
-  insertItemAtTop,
-  insertItemAtBottom,
-  removeItem,
-  removeItemFromTop,
-  removeItemAtBottom,
   checkSizeOfStack,
+  getItem,
+  insertItemAtBottom,
+  insertItemAtTop,
+  removeItem,
+  removeItemAtBottom,
+  removeItemFromTop,
+  setItem,
 } from './enchantments';
 
 describe('pick a card', () => {
@@ -115,11 +114,8 @@ describe('make cards disappear', () => {
     const expected = [2, 3, 4];
 
     if (stack[0] === undefined) {
-      // eslint-disable-next-line no-undef
-      fail(
-        new Error(
-          'The card has disappeared, but the stack has not changed in size. This magic trick has turned into actual magic. Perhaps a different method of removing the card will result in a stack that Elyse can work with...'
-        )
+      throw new Error(
+        'The card has disappeared, but the stack has not changed in size. This magic trick has turned into actual magic. Perhaps a different method of removing the card will result in a stack that Elyse can work with...',
       );
     }
 

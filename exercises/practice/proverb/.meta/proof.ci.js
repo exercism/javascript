@@ -18,7 +18,7 @@ export const proverb = (...args) => {
 
   const allExceptLastArg = args.slice(0, -1);
   const chainOfEvents = allExceptLastArg.map(
-    (arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`
+    (arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`,
   );
 
   const qualifier = options.qualifier

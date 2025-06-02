@@ -7,16 +7,16 @@ on:
 jobs:
   format:
     name: 'Sync all exercises'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/sync')
     steps:
       - name: 'Post acknowledgement that it will sync exercises'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@d4560e157075e2d93aa3022b5b51a42a880f1f93
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -34,7 +34,7 @@ jobs:
         id: fork_status
         run: |
           IS_FORK="$(jq '.head.repo.fork' "/tmp/pr.json")"
-          echo "::set-output name=fork::$IS_FORK"
+          echo "fork=$IS_FORK" >> "$GITHUB_OUTPUT"
 
       - name: 'Setup SSH deploy key'
         if: steps.fork_status.outputs.fork == 'false'
@@ -61,9 +61,11 @@ jobs:
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
       - name: 'Install dependencies'
-        run: yarn install
+        run: |
+          corepack enable pnpm
+          corepack pnpm install
       - name: 'Sync exercises'
-        run: npx babel-node scripts/sync
+        run: corepack pnpm node scripts/sync.mjs
 
       - name: 'Commit changes'
         run: |
@@ -84,11 +86,11 @@ jobs:
 
       - name: 'Post acknowledgement that it has synced the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@d4560e157075e2d93aa3022b5b51a42a880f1f93
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -98,11 +100,11 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@d4560e157075e2d93aa3022b5b51a42a880f1f93
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,

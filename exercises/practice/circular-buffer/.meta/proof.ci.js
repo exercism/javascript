@@ -11,7 +11,6 @@ export class BufferFullError extends Error {
   }
 }
 
-// eslint-disable-next-line import/no-default-export
 export default class CircularBuffer {
   constructor(capacity) {
     this.buffer = [];

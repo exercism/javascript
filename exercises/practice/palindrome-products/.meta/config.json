@@ -3,8 +3,10 @@
   "contributors": [
     "ankorGH",
     "cmccandless",
+    "Cool-Katt",
     "draalger",
     "ErikSchierboom",
+    "jagdish-15",
     "javaeeeee",
     "kytrinyx",
     "matthewmorgan",
@@ -27,7 +29,7 @@
   },
   "blurb": "Detect palindrome products in a given range.",
   "source": "Problem 4 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=4",
+  "source_url": "https://projecteuler.net/problem=4",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

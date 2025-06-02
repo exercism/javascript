@@ -24,7 +24,7 @@ export class Forth {
 
         this.defineCommand(
           words[t + 1],
-          words.slice(t + 2, semicolon).join(' ')
+          words.slice(t + 2, semicolon).join(' '),
         );
 
         t = semicolon;

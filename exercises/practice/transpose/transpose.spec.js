@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { transpose } from './transpose';
 
 describe('Transpose', () => {
@@ -88,6 +89,35 @@ describe('Transpose', () => {
     expect(transpose(input)).toEqual(expected);
   });
 
+  xtest('mixed line length', () => {
+    const input = [
+      'The longest line.',
+      'A long line.',
+      'A longer line.',
+      'A line.',
+    ];
+    const expected = [
+      'TAAA',
+      'h   ',
+      'elll',
+      ' ooi',
+      'lnnn',
+      'ogge',
+      'n e.',
+      'glr',
+      'ei ',
+      'snl',
+      'tei',
+      ' .n',
+      'l e',
+      'i .',
+      'n',
+      'e',
+      '.',
+    ];
+    expect(transpose(input)).toEqual(expected);
+  });
+
   xtest('square', () => {
     const input = ['HEART', 'EMBER', 'ABUSE', 'RESIN', 'TREND'];
     const expected = ['HEART', 'EMBER', 'ABUSE', 'RESIN', 'TREND'];
@@ -118,6 +148,19 @@ describe('Transpose', () => {
       '   SER',
       '    ER',
       '     R',
+    ];
+    expect(transpose(input)).toEqual(expected);
+  });
+
+  xtest('jagged triangle', () => {
+    const input = ['11', '2', '3333', '444', '555555', '66666'];
+    const expected = [
+      '123456',
+      '1 3456',
+      '  3456',
+      '  3 56',
+      '    56',
+      '    5',
     ];
     expect(transpose(input)).toEqual(expected);
   });

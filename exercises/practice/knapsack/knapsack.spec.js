@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals';
 import { knapsack } from './knapsack';
 
 describe('Knapsack', () => {
@@ -5,12 +6,12 @@ describe('Knapsack', () => {
     expect(knapsack(100, [])).toEqual(0);
   });
 
-  test('one item, too heavy', () => {
+  xtest('one item, too heavy', () => {
     const items = [{ weight: 100, value: 1 }];
     expect(knapsack(10, items)).toEqual(0);
   });
 
-  test('five items (cannot be greedy by weight)', () => {
+  xtest('five items (cannot be greedy by weight)', () => {
     const items = [
       { weight: 2, value: 5 },
       { weight: 2, value: 5 },
@@ -21,7 +22,7 @@ describe('Knapsack', () => {
     expect(knapsack(10, items)).toEqual(21);
   });
 
-  test('five items (cannot be greedy by value)', () => {
+  xtest('five items (cannot be greedy by value)', () => {
     const items = [
       { weight: 2, value: 20 },
       { weight: 2, value: 20 },
@@ -32,7 +33,7 @@ describe('Knapsack', () => {
     expect(knapsack(10, items)).toEqual(80);
   });
 
-  test('example knapsack', () => {
+  xtest('example knapsack', () => {
     const items = [
       { weight: 5, value: 10 },
       { weight: 4, value: 40 },
@@ -42,7 +43,7 @@ describe('Knapsack', () => {
     expect(knapsack(10, items)).toEqual(90);
   });
 
-  test('8 items', () => {
+  xtest('8 items', () => {
     const items = [
       { weight: 25, value: 350 },
       { weight: 35, value: 400 },
@@ -56,7 +57,7 @@ describe('Knapsack', () => {
     expect(knapsack(104, items)).toEqual(900);
   });
 
-  test('15 items', () => {
+  xtest('15 items', () => {
     const items = [
       { weight: 70, value: 135 },
       { weight: 73, value: 139 },

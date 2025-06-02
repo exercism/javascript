@@ -20,7 +20,7 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Write a function to solve alphametics puzzles.",
+  "blurb": "Given an alphametics puzzle, find the correct solution.",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

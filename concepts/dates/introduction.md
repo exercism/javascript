@@ -98,9 +98,11 @@ const date2 = new Date(2013, 12, 5, 13, 24, 0);
 Shorter variants are also possible, like `YYYY-MM-DD` or `YYYY-MM` or even `YYYY`. However, note that these variants **set the `Date` to UTC**, even though `Z` not mentioned.
 To understand what exactly happens check out [this section][mdn-diff-assumed-timezone] of a MDN page.
 
-```exercism/caution
+<!-- prettier-ignore-start -->
+~~~~exercism/caution
 The use of `Date.parse()` (and the timestamp string method which works similarly) is strongly discouraged due to browser differences and inconsistencies. [^4]
-```
+~~~~
+<!-- prettier-ignore-end -->
 
 ## Accessing `Date` components
 
@@ -182,10 +184,15 @@ d1Copy.getTime() === d1.getTime(); //true
 ```
 
 [^1]: https://javascript.info/date
+
 [^2]: https://javascript.info/date#setting-date-components
+
 [^3]: https://javascript.info/date#date-parse-from-a-string
+
 [^4]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#several_ways_to_create_a_date_object
+
 [^5]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#several_ways_to_create_a_date_object
+
 [^6]: https://javascript.info/date#access-date-components
 
 [utc-defn]: https://simple.wikipedia.org/wiki/Coordinated_Universal_Time

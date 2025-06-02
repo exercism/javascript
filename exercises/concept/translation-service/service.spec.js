@@ -1,13 +1,12 @@
-// @ts-check
-
+import { beforeEach, describe, expect, test } from '@jest/globals';
 import {
-  TranslationService,
-  QualityThresholdNotMet,
   BatchIsEmpty,
+  QualityThresholdNotMet,
+  TranslationService,
 } from './service';
 
-import { NotAvailable, Untranslatable } from './errors';
 import { ExternalApi } from './api';
+import { ConnectionError, NotAvailable, Untranslatable } from './errors';
 
 describe('Free service', () => {
   /** @type {TranslationService} */
@@ -134,7 +133,7 @@ describe('Request service', () => {
   test('it requests at most three times (does not retry thrice or more)', async () => {
     const actual = service.request('ghobe’');
 
-    await expect(actual).rejects.toThrow(Error);
+    await expect(actual).rejects.toThrow(ConnectionError);
   });
 });
 
@@ -182,7 +181,7 @@ describe('Premium service', () => {
   test('it requests at most three times (does not retry thrice or more)', async () => {
     const actual = service.premium('ghobe’', 0);
 
-    await expect(actual).rejects.toThrow(Error);
+    await expect(actual).rejects.toThrow(ConnectionError);
   });
 
   test('it recognizes sufficient quality', async () => {

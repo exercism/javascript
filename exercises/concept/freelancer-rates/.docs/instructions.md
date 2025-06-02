@@ -2,6 +2,11 @@
 
 In this exercise you will be writing code to help a freelancer communicate with their clients about the prices of certain projects. You will write a few utility functions to quickly calculate the costs for the clients.
 
+```exercism/note
+The `ratePerHour` variable and the `dayRate` function are related to money.
+The units of measurement are money for a unit of time: hours and days respectively.
+```
+
 ## 1. Calculate the day rate given an hourly rate
 
 A client contacts the freelancer to enquire about their rates.
@@ -31,8 +36,8 @@ daysInBudget(20000, 89);
 
 Often, the freelancer's clients hire them for projects spanning over multiple months.
 In these cases, the freelancer decides to offer a discount for every full month, and the remaining days are billed at day rate.
-**_Every month has 22 billable days._**
-Help them estimate their cost for such projects, given an hourly rate, the number of days the project spans, and a monthly discount rate.
+Your excellent work-life balance means that you only work 22 days in each calendar month, so **_every month has 22 billable days._**
+Help them estimate their cost for such projects, given an hourly rate, the number of billable days the project contains, and a monthly discount rate.
 The discount is always passed as a number, where `42%` becomes `0.42`. The result _must_ be **rounded up** to the nearest whole number.
 
 ```javascript

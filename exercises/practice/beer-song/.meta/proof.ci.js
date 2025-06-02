@@ -25,13 +25,13 @@ function nextVerse(currentVerse) {
 
 function nextBottle(currentVerse) {
   return `${bottles(
-    nextVerse(currentVerse)
+    nextVerse(currentVerse),
   ).toLowerCase()} of beer on the wall.`;
 }
 
 function verse(number) {
   const line1 = `${bottles(number)} of beer on the wall, ${bottles(
-    number
+    number,
   ).toLowerCase()} of beer.`;
   const line2 = action(number) + nextBottle(number);
 

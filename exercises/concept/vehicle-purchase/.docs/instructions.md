@@ -2,9 +2,9 @@
 
 In this exercise, you will write some code to help you prepare to buy a vehicle.
 
-You have three tasks, one to determine if you will need to get a licence, one to help you choose between two vehicles and one to estimate the acceptable price for a used vehicle.
+You have three tasks, one to determine if you will need to get a license, one to help you choose between two vehicles and one to estimate the acceptable price for a used vehicle.
 
-## 1. Determine if you will need a drivers licence
+## 1. Determine if you will need a drivers license
 
 Some kinds of vehicles require a drivers license to operate them.
 Assume only the kinds `'car'` and `'truck'` require a license, everything else can be operated without a license.
@@ -41,7 +41,7 @@ For a rough estimate, assume if the vehicle is less than 3 years old, it costs 8
 If it is more than 10 years old, it costs 50%.
 If the vehicle is at least 3 years old but not older than 10 years, it costs 70% of the original price.
 
-Implement the `calculateResellPrice(originalPrice, age)` function that applies this logic using `if`, `else if` and `else` (there are other ways but you want to practice).
+Implement the `calculateResellPrice(originalPrice, age)` function that applies this logic using `if`, `else if` and `else` (there are other ways if you want to practice).
 It takes the original price and the age of the vehicle as arguments and returns the estimated price in the dealership.
 
 ```javascript
