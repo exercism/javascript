@@ -17,7 +17,7 @@ Let's start with a simple example: a countdown function.
 function countdown(num) {
   // Base case
   if (num <= 0) {
-    console.log("Blastoff!");
+    console.log('Blastoff!');
     return;
   }
 
