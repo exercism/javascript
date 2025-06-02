@@ -21,8 +21,8 @@ importers:
         specifier: ^22.15.29
         version: 22.15.29
       '@types/shelljs':
-        specifier: ^0.8.15
-        version: 0.8.15
+        specifier: ^0.8.16
+        version: 0.8.16
       babel-jest:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.25.8)
@@ -889,8 +889,8 @@ packages:
   '@types/node@22.15.29':
     resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
-  '@types/shelljs@0.8.15':
-    resolution: {integrity: sha512-vzmnCHl6hViPu9GNLQJ+DZFd6BQI2DBTUeOvYHqkWQLMfKAAQYMb/xAmZkTogZI/vqXHCWkqDRymDI5p0QTi5Q==}
+  '@types/shelljs@0.8.16':
+    resolution: {integrity: sha512-40SUXiH0tZfAg/oKkkGF1kdHPAmE4slv2xAmbfa8VtE6ztHYwdpW2phlzHTVdJh5JOGqA3Cx1Hzp7kxFalKHYA==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -3592,7 +3592,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/shelljs@0.8.15':
+  '@types/shelljs@0.8.16':
     dependencies:
       '@types/glob': 7.2.0
       '@types/node': 22.15.29
