@@ -2,7 +2,7 @@
 
 Recursion is a powerful concept in programming that involves a function calling itself.
 It can be a bit tricky to grasp at first, but once you understand the fundamentals, it becomes a valuable tool in solving complex problems.
-In this tutorial, we'll explore recursion in JavaScript with easy-to-understand examples.
+We'll explore recursion in JavaScript with easy-to-understand examples.
 
 ## What is Recursion?
 
@@ -17,7 +17,7 @@ Let's start with a simple example: a countdown function.
 function countdown(num) {
   // Base case
   if (num <= 0) {
-    console.log("Blastoff!");
+    console.log('Blastoff!');
     return;
   }
 
