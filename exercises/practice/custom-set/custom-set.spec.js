@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { CustomSet } from './custom-set';
 
 describe('CustomSet', () => {
@@ -116,9 +117,15 @@ describe('CustomSet', () => {
       const actual = new CustomSet([1, 2, 3]).eql(new CustomSet([1, 2, 4]));
       expect(actual).toBe(false);
     });
+
     xtest('set is not equal to larger set with same elements', () => {
       const actual = new CustomSet([1, 2, 3]).eql(new CustomSet([1, 2, 3, 4]));
       expect(actual).toBe(false);
+    });
+
+    xtest('set is equal to a set constructed from an array with duplicates', () => {
+      const actual = new CustomSet([1]).eql(new CustomSet([1, 1]));
+      expect(actual).toBe(true);
     });
   });
 
@@ -202,6 +209,12 @@ describe('CustomSet', () => {
     xtest('difference of two non-empty sets is a set of elements that are only in the first set', () => {
       const actual = new CustomSet([3, 2, 1]).difference(new CustomSet([2, 4]));
       const expected = new CustomSet([1, 3]);
+      expect(actual.eql(expected)).toBe(true);
+    });
+
+    xtest('difference removes all duplicates in the first set', () => {
+      const actual = new CustomSet([1, 1]).difference(new CustomSet([1]));
+      const expected = new CustomSet([]);
       expect(actual.eql(expected)).toBe(true);
     });
   });

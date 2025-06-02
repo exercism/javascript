@@ -229,12 +229,19 @@ d1Copy.getTime() === d1.getTime(); //true
 ```
 
 [^1]: https://javascript.info/date
+
 [^2]: https://kb.narrative.io/what-is-unix-time
+
 [^3]: https://javascript.info/date#setting-date-components
+
 [^4]: https://javascript.info/date#date-parse-from-a-string
+
 [^5]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#several_ways_to_create_a_date_object
+
 [^6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#several_ways_to_create_a_date_object
+
 [^7]: https://javascript.info/date#access-date-components
+
 [^8]: https://javascript.info/date#date-now
 
 [utc-defn]: https://simple.wikipedia.org/wiki/Coordinated_Universal_Time

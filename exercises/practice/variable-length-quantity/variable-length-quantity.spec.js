@@ -1,4 +1,5 @@
-import { encode, decode } from './variable-length-quantity';
+import { describe, expect, test, xtest } from '@jest/globals';
+import { decode, encode } from './variable-length-quantity';
 
 describe('VariableLengthQuantity', () => {
   describe('Encode a series of integers, producing a series of bytes.', () => {

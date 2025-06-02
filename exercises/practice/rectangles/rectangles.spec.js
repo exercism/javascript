@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { count } from './rectangles';
 
 describe('Rectangles', () => {
@@ -108,6 +109,21 @@ describe('Rectangles', () => {
       '+---+--+--+-+',
       '+------+  | |',
       '          +-+',
+    ]);
+
+    expect(actual).toEqual(expected);
+  });
+
+  xtest('rectangles must have four sides', () => {
+    const expected = 5;
+    const actual = count([
+      '+-+ +-+',
+      '| | | |',
+      '+-+-+-+',
+      '  | |  ',
+      '+-+-+-+',
+      '| | | |',
+      '+-+ +-+',
     ]);
 
     expect(actual).toEqual(expected);

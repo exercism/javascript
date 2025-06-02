@@ -3,14 +3,14 @@ export const largestProduct = (digits, seriesLength) => {
     return 1;
   }
   if (seriesLength > digits.length) {
-    throw new Error('Span must be smaller than string length');
+    throw new Error('span must be smaller than string length');
   }
   if (seriesLength < 0) {
-    throw new Error('Span must be greater than zero');
+    throw new Error('span must not be negative');
   }
 
   if (!/^[0-9]+$/g.test(digits)) {
-    throw new Error('Digits input must only contain digits');
+    throw new Error('digits input must only contain digits');
   }
 
   let result = 0;

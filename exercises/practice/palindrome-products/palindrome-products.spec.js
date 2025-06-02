@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { Palindromes } from './palindrome-products';
 
 describe('Palindromes', () => {
@@ -132,6 +133,18 @@ describe('Palindromes', () => {
       palindromes.largest;
     }).toThrow(new Error('min must be <= max'));
   });
+});
+
+xtest('smallest product does not use the smallest factor', () => {
+  const palindromes = Palindromes.generate({
+    maxFactor: 4000,
+    minFactor: 3215,
+  });
+  const smallest = palindromes.smallest;
+  const expected = { value: 10988901, factors: [[3297, 3333]] };
+
+  expect(smallest.value).toEqual(expected.value);
+  expect(sortFactors(smallest.factors)).toEqual(expected.factors);
 });
 
 function sortFactors(factors) {

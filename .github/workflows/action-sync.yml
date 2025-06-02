@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: 'Post acknowledgement that it will sync exercises'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -61,9 +61,11 @@ jobs:
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
       - name: 'Install dependencies'
-        run: yarn install
+        run: |
+          corepack enable pnpm
+          corepack pnpm install
       - name: 'Sync exercises'
-        run: npx babel-node scripts/sync
+        run: corepack pnpm node scripts/sync.mjs
 
       - name: 'Commit changes'
         run: |
@@ -84,7 +86,7 @@ jobs:
 
       - name: 'Post acknowledgement that it has synced the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -98,7 +100,7 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |

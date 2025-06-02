@@ -1,8 +1,7 @@
-// @ts-check
-
-import { notify } from './notifier';
-import { order } from './grocer';
+import { afterEach, describe, expect, test, jest } from '@jest/globals';
 import { onError, onSuccess, orderFromGrocer, postOrder } from './fruit-picker';
+import { order } from './grocer';
+import { notify } from './notifier';
 
 jest.mock('./notifier', () => ({
   notify: jest.fn(),
@@ -33,7 +32,7 @@ describe('task 2', () => {
 });
 
 describe('task 3', () => {
-  test('order from grocer passes callback function arguments forward', () => {
+  test('orderFromGrocer passes query and callback function arguments forward', () => {
     const query = { variety: 'apple', quantity: 10 };
     orderFromGrocer(query, onSuccess, onError);
     expect(order).toHaveBeenCalledTimes(1);

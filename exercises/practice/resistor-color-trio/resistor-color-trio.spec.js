@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { ResistorColorTrio } from './resistor-color-trio';
 
 function makeLabel({ value, unit }) {
@@ -39,6 +40,6 @@ describe('Resistor Color Trio', () => {
   xtest('Invalid color', () => {
     expect(
       () => new ResistorColorTrio(['yellow', 'purple', 'black']).label,
-    ).toThrowError(/invalid color/);
+    ).toThrow(/invalid color/);
   });
 });

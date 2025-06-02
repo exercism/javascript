@@ -1,8 +1,14 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { Crypto } from './crypto-square';
 
 describe('Crypto', () => {
   test('empty plaintext results in an empty ciphertext', () => {
     const crypto = new Crypto('');
+    expect(crypto.ciphertext).toEqual('');
+  });
+
+  test('normalization results in empty plaintext', () => {
+    const crypto = new Crypto('... --- ...');
     expect(crypto.ciphertext).toEqual('');
   });
 

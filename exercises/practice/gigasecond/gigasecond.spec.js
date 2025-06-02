@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { gigasecond } from './gigasecond';
 
 describe('Gigasecond', () => {
@@ -37,8 +38,8 @@ describe('Gigasecond', () => {
   });
 
   xtest('does not mutate the input', () => {
-    const input = new Date(Date.UTC(2020, 0, 4, 20, 28, 30));
+    const input = new Date(Date.UTC(2015, 1, 24, 23, 59, 59));
     gigasecond(input);
-    expect(input).toEqual(new Date(Date.UTC(2020, 0, 4, 20, 28, 30)));
+    expect(input).toEqual(new Date(Date.UTC(2015, 1, 24, 23, 59, 59)));
   });
 });

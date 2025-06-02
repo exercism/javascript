@@ -1,13 +1,12 @@
-// @ts-check
-
+import { describe, expect, test } from '@jest/globals';
 import {
-  seeingDouble,
-  threeOfEachThree,
   middleTwo,
-  sandwichTrick,
-  twoIsSpecial,
   perfectlyOrdered,
   reorder,
+  sandwichTrick,
+  seeingDouble,
+  threeOfEachThree,
+  twoIsSpecial,
 } from './enchantments';
 
 describe('seeingDouble', () => {

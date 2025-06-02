@@ -61,6 +61,7 @@ export class GoCounting {
         default:
           return value;
       }
+      // eslint-disable-next-line no-unused-vars
     } catch (err) {
       return undefined;
     }

@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { triplets } from './pythagorean-triplet';
 
 function tripletsWithSum(sum, options = {}) {

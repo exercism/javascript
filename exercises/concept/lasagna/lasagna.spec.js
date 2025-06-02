@@ -1,8 +1,8 @@
+import { describe, expect, test } from '@jest/globals';
 import {
-  // eslint-disable-next-line import/named
   EXPECTED_MINUTES_IN_OVEN,
-  remainingMinutesInOven,
   preparationTimeInMinutes,
+  remainingMinutesInOven,
   totalTimeInMinutes,
 } from './lasagna';
 
@@ -37,6 +37,6 @@ describe('totalTimeInMinutes', () => {
   test('calculates the total cooking time', () => {
     expect(totalTimeInMinutes(1, 5)).toBe(7);
     expect(totalTimeInMinutes(4, 15)).toBe(23);
-    expect(totalTimeInMinutes(1, 35)).toBe(37);
+    expect(totalTimeInMinutes(1, 30)).toBe(32);
   });
 });

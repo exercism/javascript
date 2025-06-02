@@ -11,45 +11,67 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-
-      - name: Use Node.js LTS (18.x)
-        uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          node-version: '18'
+          fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          if ${{ github.event_name == 'pull_request' }}; then
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM -r HEAD^1 HEAD | xargs)" >> $GITHUB_OUTPUT
+          else
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.event.after }} | xargs)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable pnpm
+
+      - name: Use Node.js LTS (22.x)
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22.x
+          cache: 'pnpm'
 
       - name: Install project dependencies
-        run: npm ci
+        run: corepack pnpm install --frozen-lockfile
 
       - name: Run exercism/javascript ci precheck (stub files, config integrity) for changed exercises
-        run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
-            xargs -r npx babel-node scripts/pr-check
+        run: corepack pnpm node scripts/pr.mjs ${{ steps.changed-files.outputs.changed_files }}
 
   ci:
     runs-on: ubuntu-22.04
 
     strategy:
       matrix:
-        node-version: ['18', '20']
+        node-version: [22.x]
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          if ${{ github.event_name == 'pull_request' }}; then
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM -r HEAD^1 HEAD | xargs)" >> $GITHUB_OUTPUT
+          else
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.event.after }} | xargs)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable pnpm
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
       - name: Install project dependencies
-        run: npm ci
+        run: corepack pnpm install --frozen-lockfile
 
       - name: Run exercism/javascript ci (runs tests) for changed/added exercises
-        run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|md|json)$")) | .filename' | \
-            xargs -r npx babel-node scripts/pr
+        run: corepack pnpm node scripts/pr.mjs ${{ steps.changed-files.outputs.changed_files }}

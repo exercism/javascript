@@ -1265,13 +1265,9 @@
         "name": "Scale Generator",
         "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
         "practices": [],
-        "prerequisites": [
-          "classes",
-          "arrays",
-          "strings",
-          "array-transformations"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "loops",
           "pattern_recognition",
@@ -1413,6 +1409,14 @@
           "parsing",
           "text_formatting"
         ]
+      },
+      {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "c72faac5-8d41-404b-8558-759b94ea22ec",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       },
       {
         "slug": "saddle-points",
@@ -1580,13 +1584,9 @@
         "name": "Beer Song",
         "uuid": "6573f168-d8fc-4ccf-a864-1a61f432fae1",
         "practices": [],
-        "prerequisites": [
-          "arrays",
-          "conditionals",
-          "for-loops",
-          "template-strings"
-        ],
+        "prerequisites": [],
         "difficulty": 5,
+        "status": "deprecated",
         "topics": [
           "conditionals",
           "loops",
@@ -2229,7 +2229,12 @@
         "name": "Darts",
         "uuid": "6c64649b-ea81-4118-9e74-a0a55018ffbc",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "comparison",
+          "conditionals",
+          "numbers"
+        ],
         "difficulty": 3
       },
       {
@@ -2364,7 +2369,7 @@
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 8,
+        "difficulty": 4,
         "topics": [
           "conditionals",
           "loops",
@@ -2535,6 +2540,137 @@
           "strings"
         ],
         "difficulty": 7
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "2a3ecf62-fb5d-4dac-8369-72e7976a8f57",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "rest-and-spread",
+          "arrow-functions",
+          "basics"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "63126f78-ba0d-4271-978d-49e9312f0db2",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "rest-and-spread",
+          "arrow-functions",
+          "basics"
+        ],
+        "difficulty": 7
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "2da8329c-2a92-4232-b104-2a08a76cab60",
+        "practices": [],
+        "prerequisites": [
+          "arrays",
+          "conditionals",
+          "for-loops",
+          "template-strings"
+        ],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "loops",
+          "strings"
+        ]
+      },
+      {
+        "slug": "markdown",
+        "name": "Markdown",
+        "uuid": "cd666b3a-7114-4ba9-9b2a-7622a2c8c12c",
+        "practices": [
+          "strings",
+          "string-formatting"
+        ],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "micro-blog",
+        "name": "Micro Blog",
+        "uuid": "ee771d09-33fb-4450-b9c3-d591a4a90a99",
+        "practices": [],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "ledger",
+        "name": "Ledger",
+        "uuid": "8716b347-e18f-48a6-b373-426cc4ca98cb",
+        "practices": [],
+        "prerequisites": [
+          "string-formatting"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "b381543d-2bcf-4999-9d44-788a2b39c1a0",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "array-loops",
+          "conditionals",
+          "errors"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "lens-person",
+        "name": "Lens Person",
+        "uuid": "a1e71425-0e7e-442a-9c8e-cc252f440760",
+        "practices": [],
+        "prerequisites": [
+          "prototypes-and-classes",
+          "callbacks"
+        ],
+        "difficulty": 7,
+        "topics": [
+          "lens",
+          "classes",
+          "callbacks"
+        ]
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "4b6b00cd-62f8-4e9e-b59d-79f153f8efb5",
+        "practices": [],
+        "prerequisites": [
+          "conditionals",
+          "recursion",
+          "loops",
+          "numbers",
+          "lists"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "e51c01e9-b7b1-4877-939a-6254c4efe338",
+        "practices": [
+          "array-loops",
+          "array-transformations"
+        ],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },

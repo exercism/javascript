@@ -1,4 +1,4 @@
-/* eslint-disable no-new */
+import { describe, expect, test, xtest } from '@jest/globals';
 import { Cipher } from './simple-cipher';
 
 describe('Random key cipher', () => {

@@ -1,10 +1,11 @@
+import { describe, expect, test } from '@jest/globals';
 import {
-  createScoreBoard,
   addPlayer,
+  applyMondayBonus,
+  createScoreBoard,
+  normalizeScore,
   removePlayer,
   updateScore,
-  applyMondayBonus,
-  normalizeScore,
 } from './high-score-board';
 
 describe('createScoreBoard', () => {

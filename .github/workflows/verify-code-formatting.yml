@@ -10,12 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: 'Checkout code'
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-      - name: Use Node.js LTS (18.x)
-        uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d
-        with:
-          node-version: '18'
-      - name: Install project development dependencies
-        run: npm i
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
       - name: 'Verify formatting of all files'
         run: ./bin/check-formatting.sh

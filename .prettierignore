@@ -1,12 +1,22 @@
 /.github/labels.yml
 /.github/workflows/sync-labels.yml
+/.github/workflows/no-important-files-changed.yml
 exercises/**/README.md
 !/README.md
 
 # Originates from https://github.com/exercism/org-wide-files
 CODE_OF_CONDUCT.md
 LICENSE
+.github/workflows/configlet.yml
+.github/workflows/sync-labels.yml
+.github/workflows/no-important-files-changed.yml
+.github/workflows/pause-community-contributions.yml
 
 # These are formatted via configlet and will not match prettier
 exercises/**/.meta/config.json
 exercises/**/.approaches/config.json
+config.json
+
+# Originates from https://github.com/exercism/problem-specifications
+exercises/practice/**/.docs/instructions.md
+exercises/practice/**/.docs/introduction.md

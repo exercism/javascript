@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { largestProduct } from './largest-series-product';
 
 describe('Largest Series Product', () => {
@@ -41,25 +42,25 @@ describe('Largest Series Product', () => {
 
   xtest('rejects span longer than string length', () => {
     expect(() => largestProduct('123', 4)).toThrow(
-      new Error('Span must be smaller than string length'),
+      new Error('span must be smaller than string length'),
     );
   });
 
   xtest('rejects empty string and nonzero span', () => {
     expect(() => largestProduct('', 1)).toThrow(
-      new Error('Span must be smaller than string length'),
+      new Error('span must be smaller than string length'),
     );
   });
 
   xtest('rejects invalid character in digits', () => {
     expect(() => largestProduct('1234a5', 2)).toThrow(
-      new Error('Digits input must only contain digits'),
+      new Error('digits input must only contain digits'),
     );
   });
 
   xtest('rejects negative span', () => {
     expect(() => largestProduct('12345', -1)).toThrow(
-      new Error('Span must be greater than zero'),
+      new Error('span must not be negative'),
     );
   });
 });

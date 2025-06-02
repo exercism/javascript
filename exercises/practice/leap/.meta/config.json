@@ -25,9 +25,9 @@
       ".meta/proof.ci.js"
     ]
   },
-  "blurb": "Given a year, report if it is a leap year.",
+  "blurb": "Determine whether a given year is a leap year.",
   "source": "CodeRanch Cattle Drive, Assignment 3",
-  "source_url": "https://coderanch.com/t/718816/Leap",
+  "source_url": "https://web.archive.org/web/20240907033714/https://coderanch.com/t/718816/Leap",
   "custom": {
     "version.tests.compatibility": "jest-27",
     "flag.tests.task-per-describe": false,

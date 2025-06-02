@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { Bowling } from './bowling';
 
 describe('Bowling', () => {
@@ -126,6 +127,17 @@ describe('Bowling', () => {
         bowling.roll(roll);
       });
       expect(bowling.score()).toEqual(30);
+    });
+
+    xtest('last two strikes followed by only last bonus with non strike points', () => {
+      const rolls = [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1,
+      ];
+      const bowling = new Bowling();
+      rolls.forEach((roll) => {
+        bowling.roll(roll);
+      });
+      expect(bowling.score()).toEqual(31);
     });
 
     xtest('a strike with the one roll bonus after a spare in the last frame does not get a bonus', () => {

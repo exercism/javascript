@@ -1,8 +1,9 @@
+import { describe, expect, test, jest } from '@jest/globals';
 import {
-  translate2d,
-  scale2d,
   composeTransform,
   memoizeTransform,
+  scale2d,
+  translate2d,
 } from './coordinate-transformation';
 
 const fakeTransform = () => {
@@ -136,7 +137,7 @@ describe('memoizeTransform', () => {
     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
     expect(memoizedTransform(2, 2)).toEqual([4, 4]);
     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
-    expect(mockFunction).toBeCalledTimes(3);
+    expect(mockFunction).toHaveBeenCalledTimes(3);
   });
 
   test('should recalculate when a new function is passed in', () => {

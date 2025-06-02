@@ -1,3 +1,4 @@
+import { describe, expect, test, xtest } from '@jest/globals';
 import { Change } from './change';
 
 describe('Change', () => {
@@ -53,6 +54,12 @@ describe('Change', () => {
     expect(result).toEqual([4, 4, 4, 5, 5, 5]);
   });
 
+  xtest('a greedy approach is not optimal', () => {
+    const change = new Change();
+    const result = change.calculate([1, 10, 11], 20);
+    expect(result).toEqual([10, 10]);
+  });
+
   xtest('no coins make 0 change', () => {
     const change = new Change();
     const result = change.calculate([1, 5, 10, 21, 25], 0);
@@ -62,27 +69,27 @@ describe('Change', () => {
   xtest('error testing for change smaller than the smallest of coins', () => {
     const change = new Change();
     const message = 'The total 3 cannot be represented in the given currency.';
-    const test = () => {
+    const expectation = () => {
       change.calculate([5, 10], 3);
     };
-    expect(test).toThrowError(message);
+    expect(expectation).toThrow(message);
   });
 
   xtest('error testing if no combination can add up to target', () => {
     const change = new Change();
     const message = 'The total 94 cannot be represented in the given currency.';
-    const test = () => {
+    const expectation = () => {
       change.calculate([5, 10], 94);
     };
-    expect(test).toThrowError(message);
+    expect(expectation).toThrow(message);
   });
 
   xtest('cannot find negative change values', () => {
     const change = new Change();
     const message = 'Negative totals are not allowed.';
-    const test = () => {
+    const expectation = () => {
       change.calculate([1, 2, 5], -5);
     };
-    expect(test).toThrowError(message);
+    expect(expectation).toThrow(message);
   });
 });

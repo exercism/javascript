@@ -45,7 +45,6 @@ export class TwoBucket {
       moves += 1;
     }
 
-    /* eslint-disable-next-line no-constant-condition */
     while (true) {
       if (this.first.amount === this.goal) {
         return {

@@ -96,6 +96,6 @@ but some may find the answer array approach to be less readable.
 [trim]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 [endswith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
 [dry]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
-[approach-if]: https://exercism.org/tracks/javascript/exercises/bob/approaches/if-staements
+[approach-if]: https://exercism.org/tracks/javascript/exercises/bob/approaches/if-statements
 [approach-switch]: https://exercism.org/tracks/javascript/exercises/bob/approaches/switch-statement
 [approach-answer-array]: https://exercism.org/tracks/javascript/exercises/bob/approaches/answer-array

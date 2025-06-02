@@ -1,3 +1,11 @@
+import {
+  afterEach,
+  beforeEach,
+  describe,
+  expect,
+  test,
+  xtest,
+} from '@jest/globals';
 import { Robot } from './robot-name';
 
 const areSequential = (name1, name2) => {
@@ -73,7 +81,7 @@ describe('Robot', () => {
     const modifyInternal = () => {
       robot.name += 'a modification';
     };
-    expect(modifyInternal).toThrow();
+    expect(() => modifyInternal()).toThrow();
   });
 
   xtest('new names should not be sequential', () => {

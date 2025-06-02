@@ -14,7 +14,13 @@ Please `cd` into exercise directory before running all below commands.
 Install assignment dependencies:
 
 ```bash
-$ npm install
+$ corepack pnpm install
+```
+
+If `corepack` complains about not being enabled, you can do so by running:
+
+```bash
+corepack enable pnpm
 ```
 
 ## Making the test suite pass
@@ -22,7 +28,7 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+$ corepack pnpm test
 ```
 
 In the test suites all tests but the first have been skipped.

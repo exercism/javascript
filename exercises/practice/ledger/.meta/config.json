@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "Cool-Katt"
+  ],
+  "files": {
+    "solution": [
+      "ledger.js"
+    ],
+    "test": [
+      "ledger.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Refactor a ledger printer."
+}
