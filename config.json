@@ -2575,9 +2575,7 @@
         "slug": "markdown",
         "name": "Markdown",
         "uuid": "cd666b3a-7114-4ba9-9b2a-7622a2c8c12c",
-        "practices": [
-          "strings"
-        ],
+        "practices": [],
         "prerequisites": [],
         "difficulty": 5
       },
@@ -2644,10 +2642,7 @@
         "slug": "game-of-life",
         "name": "Conway's Game of Life",
         "uuid": "e51c01e9-b7b1-4877-939a-6254c4efe338",
-        "practices": [
-          "array-loops",
-          "array-transformations"
-        ],
+        "practices": [],
         "prerequisites": [],
         "difficulty": 2
       }
