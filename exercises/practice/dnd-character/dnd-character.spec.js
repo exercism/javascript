@@ -128,7 +128,11 @@ describe('D&D Character', () => {
 
   xtest('each ability is only calculated once', () => {
     const Drizzt = new Character();
-
     expect(Drizzt.strength).toEqual(Drizzt.strength);
+    expect(Drizzt.dexterity).toEqual(Drizzt.dexterity);
+    expect(Drizzt.constitution).toEqual(Drizzt.constitution);
+    expect(Drizzt.intelligence).toEqual(Drizzt.intelligence);
+    expect(Drizzt.wisdom).toEqual(Drizzt.wisdom);
+    expect(Drizzt.charisma).toEqual(Drizzt.charisma);
   });
 });

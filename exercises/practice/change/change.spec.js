@@ -54,6 +54,12 @@ describe('Change', () => {
     expect(result).toEqual([4, 4, 4, 5, 5, 5]);
   });
 
+  xtest('a greedy approach is not optimal', () => {
+    const change = new Change();
+    const result = change.calculate([1, 10, 11], 20);
+    expect(result).toEqual([10, 10]);
+  });
+
   xtest('no coins make 0 change', () => {
     const change = new Change();
     const result = change.calculate([1, 5, 10, 21, 25], 0);

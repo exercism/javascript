@@ -7,6 +7,11 @@ describe('Crypto', () => {
     expect(crypto.ciphertext).toEqual('');
   });
 
+  test('normalization results in empty plaintext', () => {
+    const crypto = new Crypto('... --- ...');
+    expect(crypto.ciphertext).toEqual('');
+  });
+
   xtest('Lowercase', () => {
     const crypto = new Crypto('A');
     expect(crypto.ciphertext).toEqual('a');
