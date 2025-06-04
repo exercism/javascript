@@ -115,6 +115,6 @@ export class DiffieHellman {
   }
 
   static getPrivateKey(p) {
-    return Math.floor(Math.random() * (p - 1) + 2);
+    return Math.floor(Math.random() * (p - 2) + 2);
   }
 }
