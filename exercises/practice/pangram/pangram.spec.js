@@ -45,8 +45,6 @@ describe('Pangram()', () => {
   });
 
   xtest('a-m and A-M are 26 different characters but not a pangram', () => {
-    expect(isPangram('abcdefghijklm ABCDEFGHIJKLM')).toBe(
-      false,
-    );
+    expect(isPangram('abcdefghijklm ABCDEFGHIJKLM')).toBe(false);
   });
 });
