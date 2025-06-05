@@ -44,9 +44,7 @@ describe('Pangram()', () => {
     expect(isPangram('"Five quacking Zephyrs jolt my wax bed."')).toBe(true);
   });
 
-  xtest('case insensitive', () => {
-    expect(isPangram('the quick brown fox jumps over with lazy FX')).toBe(
-      false,
-    );
+  xtest('a-m and A-M are 26 different characters but not a pangram', () => {
+    expect(isPangram('abcdefghijklm ABCDEFGHIJKLM')).toBe(false);
   });
 });
