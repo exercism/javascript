@@ -40,49 +40,54 @@ describe('Queens', () => {
   });
 
   describe('Test the ability of one queen to attack another', () => {
-    xtest('queens cannot attack', () => {
+    xtest('cannot attack', () => {
       const queens = new QueenAttack({ white: [2, 4], black: [6, 6] });
       expect(queens.canAttack).toEqual(false);
     });
 
-    xtest('queens can attack when they are on the same row', () => {
+    xtest('can attack on same row', () => {
       const queens = new QueenAttack({ white: [2, 4], black: [2, 6] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack when they are on the same column', () => {
+    xtest('can attack on same column', () => {
       const queens = new QueenAttack({ white: [4, 5], black: [2, 5] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack diagonally', () => {
+    xtest('can attack on first diagonal', () => {
       const queens = new QueenAttack({ white: [2, 2], black: [0, 4] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack another diagonally', () => {
+    xtest('can attack on second diagonal', () => {
       const queens = new QueenAttack({ white: [2, 2], black: [3, 1] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack yet another diagonally', () => {
+    xtest('can attack on third diagonal', () => {
       const queens = new QueenAttack({ white: [2, 2], black: [1, 1] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack diagonally, really', () => {
+    xtest('can attack on fourth diagonal', () => {
       const queens = new QueenAttack({ white: [1, 7], black: [0, 6] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack on a north-east/south-west diagonal', () => {
+    xtest('can attack on fifth diagonal', () => {
       const queens = new QueenAttack({ white: [7, 0], black: [0, 7] });
       expect(queens.canAttack).toEqual(true);
     });
 
-    xtest('queens can attack on another ne/sw diagonal', () => {
+    xtest('can attack on sixth diagonal', () => {
       const queens = new QueenAttack({ white: [2, 6], black: [5, 3] });
       expect(queens.canAttack).toEqual(true);
+    });
+
+    xtest('cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal', () => {
+      const queens = new QueenAttack({ white: [4, 1], black: [2, 5] });
+      expect(queens.canAttack).toEqual(false);
     });
   });
 
