@@ -14,11 +14,19 @@ describe('Resistor Colors', () => {
     expect(decodedValue(['yellow', 'violet'])).toEqual(47);
   });
 
+  xtest('White and red', () => {
+    expect(decodedValue(['white', 'red'])).toEqual(92);
+  });
+
   xtest('Orange and orange', () => {
     expect(decodedValue(['orange', 'orange'])).toEqual(33);
   });
 
   xtest('Ignore additional colors', () => {
     expect(decodedValue(['green', 'brown', 'orange'])).toEqual(51);
+  });
+
+  xtest('Black and brown, one-digit', () => {
+    expect(decodedValue(['black', 'brown'])).toEqual(1);
   });
 });
