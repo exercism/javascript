@@ -40,7 +40,7 @@ describe('Crypto', () => {
   // This test doesn't run on our online test runner because it will time-out
   // with most implementations. It's up to you to test your solution locally.
   test.skip(
-    '54 character plaintext results in 7 chunks, the last two with trailing spaces',
+    '54 character plaintext results in 8 chunks, the last two with trailing spaces',
     () => {
       const crypto = new Crypto(
         'If man was meant to stay on the ground, god would have given us roots.',
