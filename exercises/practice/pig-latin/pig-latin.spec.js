@@ -44,6 +44,10 @@ describe('Pig Latin', () => {
     xtest('word beginning with q without a following u', () => {
       expect(translate('qat')).toEqual('atqay');
     });
+
+    xtest('word beginning with consonant and vowel containing qu', () => {
+      expect(translate('liquid')).toEqual('iquidlay');
+    });
   });
 
   describe('some letter clusters are treated like a single consonant', () => {
