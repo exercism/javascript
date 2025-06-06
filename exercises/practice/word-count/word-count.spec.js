@@ -84,9 +84,9 @@ describe('countWords', () => {
       getting: 1,
       it: 1,
     };
-    expect(countWords("'First: don't laugh. Then: don't cry. You're getting it.'")).toEqual(
-      expectedCounts,
-    );
+    expect(
+      countWords("'First: don't laugh. Then: don't cry. You're getting it.'"),
+    ).toEqual(expectedCounts);
   });
 
   xtest('with quotations', () => {
