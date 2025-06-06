@@ -80,8 +80,11 @@ describe('countWords', () => {
       laugh: 1,
       then: 1,
       cry: 1,
+      "you're": 1,
+      getting: 1,
+      it: 1,
     };
-    expect(countWords("First: don't laugh. Then: don't cry.")).toEqual(
+    expect(countWords("'First: don't laugh. Then: don't cry. You're getting it.'")).toEqual(
       expectedCounts,
     );
   });
@@ -131,5 +134,13 @@ describe('countWords', () => {
       three: 1,
     };
     expect(countWords(",\n,one,\n ,two \n 'three'")).toEqual(expectedCounts);
+  });
+
+  xtest('alternating word separators not detected as a word', () => {
+    const expectedCounts = {
+      can: 1,
+      "can't": 2,
+    };
+    expect(countWords("can, can't, 'can't'")).toEqual(expectedCounts);
   });
 });
