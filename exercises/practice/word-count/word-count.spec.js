@@ -136,7 +136,7 @@ describe('countWords', () => {
     expect(countWords(",\n,one,\n ,two \n 'three'")).toEqual(expectedCounts);
   });
 
-  xtest('alternating word separators not detected as a word', () => {
+  xtest('quotation for word with apostrophe', () => {
     const expectedCounts = {
       can: 1,
       "can't": 2,
