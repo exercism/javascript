@@ -10,6 +10,10 @@ const EARTH_TO_OTHER_PLANETS = {
 };
 
 export const age = (planet, seconds) => {
+  if (!EARTH_TO_OTHER_PLANETS[planet]) {
+    throw new Error('not a planet');
+  }
+
   const earthYears = seconds / 31557600;
   const years = earthYears / EARTH_TO_OTHER_PLANETS[planet];
 

@@ -33,4 +33,8 @@ describe('Space Age', () => {
   xtest('age on Neptune', () => {
     expect(age('neptune', 1821023456)).toEqual(0.35);
   });
+
+  xtest('invalid planet causes error', () => {
+    expect(() => age('Sun', 680804807)).toThrow(new Error('not a planet'));
+  });
 });
