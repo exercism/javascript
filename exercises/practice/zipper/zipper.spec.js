@@ -50,7 +50,7 @@ describe('Zipper', () => {
     expect(zipper.left().up().right().up().left().right().value()).toEqual(3);
   });
 
-  xtest('test ability to descend multiple levels and return', () => {
+  xtest('ability to descend multiple levels and return', () => {
     expect(zipper.left().right().up().up().value()).toEqual(1);
   });
 
