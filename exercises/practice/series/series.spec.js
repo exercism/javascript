@@ -50,6 +50,12 @@ describe('Series', () => {
     }).toThrow(new Error('slice length cannot be greater than series length'));
   });
 
+  xtest('slice length is way too large', () => {
+    expect(() => {
+      new Series('12345').slices(42);
+    }).toThrow(new Error('slice length cannot be greater than series length'));
+  });
+
   xtest('slice length cannot be zero', () => {
     expect(() => {
       new Series('12345').slices(0);
