@@ -27,6 +27,9 @@ description = "traversing up from top"
 [b8505f6a-aed4-4c2e-824f-a0ed8570d74b]
 description = "left, right, and up"
 
+[b9aa8d54-07b7-4bfd-ab6b-7ff7f35930b6]
+description = "test ability to descend multiple levels and return"
+
 [47df1a27-b709-496e-b381-63a03b82ea5f]
 description = "set_value"
 
