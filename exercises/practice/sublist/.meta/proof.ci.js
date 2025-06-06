@@ -1,21 +1,15 @@
 export class List {
-  constructor(list = []) {
-    this.list = list;
+  items = [];
+
+  constructor(...items) {
+    this.items = items;
   }
 
   compare(other) {
-    return {
-      '-1': isSublist(other.list, this.list) ? 'SUBLIST' : 'UNEQUAL',
-      0: isSublist(other.list, this.list) ? 'EQUAL' : 'UNEQUAL',
-      1: isSublist(this.list, other.list) ? 'SUPERLIST' : 'UNEQUAL',
-    }[lengthDiff(this, other)];
+    const sublist = this.items.length === 0 ||
+      `,${other.items.join(',')},`.includes(`,${this.items.join(',')},`);
+    const superlist = other.items.length === 0 ||
+      `,${this.items.join(',')},`.includes(`,${other.items.join(',')},`);
+    return ['UNEQUAL', 'SUPERLIST', 'SUBLIST', 'EQUAL'][+superlist + (+sublist << 1)]
   }
-}
-
-function lengthDiff(one, two) {
-  return String(Math.sign(one.list.length - two.list.length));
-}
-
-function isSublist(one, two) {
-  return one.join().match(two.join());
 }
