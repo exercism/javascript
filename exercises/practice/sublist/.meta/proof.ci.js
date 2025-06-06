@@ -13,7 +13,7 @@ export class List {
       other.items.length === 0 ||
       `,${this.items.join(',')},`.includes(`,${other.items.join(',')},`);
     return ['UNEQUAL', 'SUPERLIST', 'SUBLIST', 'EQUAL'][
-      +superlist + (+sublist << 1)
+      Number(superlist) + (Number(sublist) << 1)
     ];
   }
 }
