@@ -107,6 +107,13 @@ describe('sublist', () => {
     expect(listOne.compare(listTwo)).toEqual('UNEQUAL');
   });
 
+  xtest('first list missing additional digits from second list', () => {
+    const listOne = new List([1, 2]);
+    const listTwo = new List([1, 22]);
+
+    expect(listOne.compare(listTwo)).toEqual('UNEQUAL');
+  });
+
   xtest('order matters to a list', () => {
     const listOne = new List([1, 2, 3]);
     const listTwo = new List([3, 2, 1]);
