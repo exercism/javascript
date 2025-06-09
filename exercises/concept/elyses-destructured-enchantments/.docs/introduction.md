@@ -14,31 +14,45 @@ neptune;
 // => 14
 ```
 
-## Rest and spread
+In short:
 
-JavaScript has a built-in `...` operator that makes it easier to work with indefinite numbers of elements. Depending on the context, it's called either a _rest operator_ or _spread operator_.
+- The syntax allows for naming _positioned_ elements in an array, as well as swapping variables using re-assignment.
+- Destructuring syntax is available inside function parameters, and is available on any iterable.
+- Leaving a position unnamed (by not writing _any_ variable name) silently ignores that position.
 
-### Rest elements
+## Object destructuring
 
-When `...` appears on the left-hand side of an assignment, those three dots are known as the `rest` operator. The three dots together with a variable name is called a rest element. It collects zero or more values, and stores them into a single array.
+In JavaScript, there is also destructuring syntax to extract properties from an object and assign them to distinct variables.
 
-```javascript
-const [a, b, ...everythingElse] = [0, 1, 1, 2, 3, 5, 8];
-
-everythingElse;
-// => [1, 2, 3, 5, 8]
-```
-
-Note that in JavaScript, unlike some other languages, a `rest` element cannot have a trailing comma. It _must_ be the last element in a destructuring assignment.
-
-### Spread elements
-
-When `...` appears on the right-hand side of an assignment, it's known as the `spread` operator. It expands an array into a list of elements. Unlike the rest element, it can appear anywhere in an array literal expression, and there can be more than one.
+In this example, weather symbols are extracted from the object `weather`:
 
 ```javascript
-const oneToFive = [1, 2, 3, 4, 5];
-const oneToTen = [...oneToFive, 6, 7, 8, 9, 10];
+const weather = {
+  sun: '☀️',
+  sun_behind_small_cloud: '🌤️',
+  sun_behind_cloud: '⛅',
+  sun_behind_large_cloud: '🌥️',
+  sun_behind_rain_cloud: '🌦️',
+  cloud: '☁️',
+  cloud_with_rain: '🌧️',
+  cloud_with_snow: '🌨️',
+  cloud_with_lightning: '🌩️',
+  cloud_with_lightning_and_rain: '⛈️',
+};
 
-oneToTen;
-// => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const { sun, cloud, cloud_with_lightning: thunder } = weather;
+
+sun;
+// => '☀️'
+
+cloud;
+// => '☁️'
+
+thunder;
+// => '🌩️'
 ```
+
+In short:
+
+- The syntax allows for both extracting properties as well as extracting and renaming them.
+- Destructuring syntax is available inside function parameters.

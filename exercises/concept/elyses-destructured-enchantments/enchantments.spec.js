@@ -1,10 +1,11 @@
 import { describe, expect, test } from '@jest/globals';
 import {
-  discardTopCard,
   getFirstCard,
   getSecondCard,
-  insertFaceCards,
-  swapTopTwoCards,
+  swapTwoCards,
+  shiftThreeCardsAround,
+  pickNamedPile,
+  swapNamedPile,
 } from './enchantments';
 
 describe('getFirstCard', () => {
@@ -27,7 +28,7 @@ describe('getSecondCard', () => {
   });
 
   test('from a deck with many cards', () => {
-    expect(getSecondCard([2, 5, 1, 6])).toBe(5);
+    expect(getSecondCard([2, 5, 7, 6])).toBe(5);
   });
 
   test('from an empty deck', () => {
@@ -39,48 +40,77 @@ describe('getSecondCard', () => {
   });
 });
 
-describe('swapTopTwoCards', () => {
-  test('in a deck with two cards', () => {
-    expect(swapTopTwoCards([3, 6])).toStrictEqual([6, 3]);
+describe('swapTwoCards', () => {
+  test('swapping two numbered cards', () => {
+    expect(swapTwoCards([3, 6])).toStrictEqual([6, 3]);
   });
 
-  test('in a deck with many cards', () => {
-    expect(swapTopTwoCards([10, 4, 3, 7, 8])).toStrictEqual([4, 10, 3, 7, 8]);
-  });
-});
-
-describe('discardTopCard', () => {
-  test('from a deck with one card', () => {
-    expect(discardTopCard([7])).toStrictEqual([7, []]);
+  test('swapping a high card with a low card', () => {
+    expect(swapTwoCards([10, 2])).toStrictEqual([2, 10]);
   });
 
-  test('from a deck with many cards', () => {
-    expect(discardTopCard([9, 2, 10, 4])).toStrictEqual([9, [2, 10, 4]]);
+  test('swapping a face card with a low card', () => {
+    expect(swapTwoCards(['king', 3])).toStrictEqual([3, 'king']);
   });
 });
 
-describe('insertFaceCards', () => {
-  test('into a deck with many cards', () => {
-    expect(insertFaceCards([3, 10, 7])).toStrictEqual([
-      3,
-      'jack',
-      'queen',
-      'king',
-      10,
-      7,
-    ]);
+describe('shiftThreeCardsAround', () => {
+  test('consecutive numbers', () => {
+    expect(shiftThreeCardsAround([6, 4, 5])).shiftThreeCardsAround([4, 5, 6]);
   });
 
-  test('into a deck with one card', () => {
-    expect(insertFaceCards([9])).toStrictEqual([9, 'jack', 'queen', 'king']);
+  test('drop the face card to the bottom', () => {
+    expect(shiftThreeCardsAround(['king', 5, 2])).toStrictEqual([5, 2, 'king']);
+  });
+});
+
+describe('pickNamedPile', () => {
+  test('keeps the chosen pile', () => {
+    const chosen = [3, 'jack', 'queen', 'king', 10, 7];
+    const disregarded = [4, 5, 6, 8, 9];
+    const piles = { chosen, disregarded };
+
+    expect(pickNamedPile(piles)).toStrictEqual(chosen);
   });
 
-  test('into a deck with no cards', () => {
-    expect(insertFaceCards([])).toStrictEqual([
-      undefined,
-      'jack',
-      'queen',
-      'king',
-    ]);
+  test('returns the actual pile without recreating it', () => {
+    const chosen = [3, 'jack', 'queen', 'king', 10, 7];
+    const disregarded = [4, 5, 6, 8, 9];
+    const piles = { chosen, disregarded };
+
+    const result = pickNamedPile(piles);
+
+    chosen.push('joker');
+
+    expect(result).toStrictEqual(chosen);
+  });
+});
+
+describe('swapNamedPile', () => {
+  test('renames the piles', () => {
+    const face_pile = [3, 'jack', 'queen', 'king', 10, 7];
+    const numbers_pile = [4, 5, 6, 8, 9];
+    const piles = { chosen: numbers_pile, disregarded: face_pile };
+
+    expect(swapNamedPile(piles)).toStrictEqual({
+      chosen: face_pile,
+      disregarded: numbers_pile,
+    });
+  });
+
+  test('returns the actual piles without recreating them', () => {
+    const face_pile = [3, 'jack', 'queen', 'king', 10, 7];
+    const numbers_pile = [4, 5, 6, 8, 9];
+    const piles = { chosen: numbers_pile, disregarded: face_pile };
+
+    const result = swapNamedPile(piles);
+
+    face_pile.push('joker');
+    numbers_pile.push(2);
+
+    expect(result).toStrictEqual({
+      chosen: face_pile,
+      disregarded: numbers_pile,
+    });
   });
 });
