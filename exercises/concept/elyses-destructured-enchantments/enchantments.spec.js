@@ -56,7 +56,7 @@ describe('swapTwoCards', () => {
 
 describe('shiftThreeCardsAround', () => {
   test('consecutive numbers', () => {
-    expect(shiftThreeCardsAround([6, 4, 5])).shiftThreeCardsAround([4, 5, 6]);
+    expect(shiftThreeCardsAround([6, 4, 5])).toStrictEqual([4, 5, 6]);
   });
 
   test('drop the face card to the bottom', () => {
