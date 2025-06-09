@@ -174,16 +174,26 @@
         "slug": "elyses-destructured-enchantments",
         "name": "Elyses Destructured Enchantments",
         "uuid": "d9b5cd13-2f2b-4034-a571-e66c847ed6f8",
-        "concepts": ["array-destructuring"],
-        "prerequisites": ["arrays", "functions", "objects"],
+        "concepts": [
+          "array-destructuring"
+        ],
+        "prerequisites": [
+          "arrays",
+          "functions",
+          "objects"
+        ],
         "status": "beta"
       },
       {
         "slug": "train-driver",
         "name": "Train Driver",
         "uuid": "6cef6712-cf1d-4b3e-9ace-1de3450b4285",
-        "concepts": ["rest-and-spread"],
-        "prerequisites": ["array-destructuring"],
+        "concepts": [
+          "rest-and-spread"
+        ],
+        "prerequisites": [
+          "array-destructuring"
+        ],
         "status": "beta"
       },
       {
