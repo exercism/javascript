@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "SalahuddinAhammed",
+    "SleeplessByte"
+  ],
+  "files": {
+    "solution": [
+      "appointment-time.js"
+    ],
+    "test": [
+      "appointment-time.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
+  },
+  "blurb": "Learn how to work with dates by managing appointments",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+}
