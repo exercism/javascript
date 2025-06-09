@@ -1,0 +1,27 @@
+{
+  "authors": [
+    "meatball133"
+  ],
+  "contributors": [
+    "bethanyg",
+    "junedev"
+  ],
+  "files": {
+    "solution": [
+      "train-driver.js"
+    ],
+    "test": [
+      "train-driver.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
+  },
+  "blurb": "Professionalize using rest and spread operators.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+}
