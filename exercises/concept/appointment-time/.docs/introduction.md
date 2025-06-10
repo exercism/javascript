@@ -27,7 +27,7 @@ const now = new Date();
 // Shows current day, date and time (in your time zone).
 ```
 
-### Unix timestamp (number)
+### **Unix timestamp (number)**
 
 If a number is passed in, this will be interpreted as a `timestamp`.
 A timestamp is an integer number representing the number of **milliseconds** that has passed since **1 January 1970 [UTC][defn-utc]+0**.
@@ -42,7 +42,7 @@ const another = new Date(1749508766627);
 
 One may expect `new Date(0)` to generate the "earliest" date object, but JavaScript will convert the date to your local timezone, which means that only those around [GMT / with an UTC+0][defn-gmt] timezone will actually get the [Unix epoch][defn-unix-epoch] value.
 
-### ISO 8601 timestamp (string)
+### **ISO 8601 timestamp (string)**
 
 You can pass a string value representing a date to the `Date` constructor.
 The **only** format that is consistent across implementations is the [simplified version][mdn-date-string-format] of the internationally recognized and standardized so-called [ISO 8601 timestamp strings][defn-iso8601].
@@ -85,7 +85,7 @@ If the timestamp does not end in `Z`, and it does not end with `+HH:MM` or `-HH:
 > The interpretation as a UTC time is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility.
 > See [Broken Parser – A Web Reality Issue][ref-broken-parser].
 
-### Date object
+### **Date object**
 
 An existing date object can also be used as a constructor argument.
 This makes a copy of the existing `Date` object with the same date and time.
@@ -96,7 +96,7 @@ const t2 = new Date(t1);
 // Values of t1 and t2 will be the same.
 ```
 
-### Supplying individual date and time component values
+### **Supplying individual date and time component values**
 
 A date representing a date can be created by passing three numbers.
 A date representing a date and time can be created by passing in 6 numbers.
