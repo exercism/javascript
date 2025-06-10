@@ -161,7 +161,7 @@ Greater than (`>`) and greater than or equals (`>=`) as well as less than (`<`) 
 This works because JavaScript will try to coerce the date to a primitive.
 
 <!-- prettier-ignore -->
-~~~@exercism/advanced
+~~~exercism/advanced
 When doing a comparison between two dates or date and a number, JavaScript calls [`[Symbol.toPrimitive]("number")`][mdn-to-primitive] which internally calls [`date.valueOf()`][mdn-date-value-of].
 The latter is the same as calling [`date.getTime()`][mdn-date-get-time].
 
