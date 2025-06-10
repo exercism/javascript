@@ -175,7 +175,8 @@
         "name": "Elyses Destructured Enchantments",
         "uuid": "d9b5cd13-2f2b-4034-a571-e66c847ed6f8",
         "concepts": [
-          "array-destructuring"
+          "array-destructuring",
+          "object-destructuring"
         ],
         "prerequisites": [
           "arrays",
@@ -192,7 +193,9 @@
           "rest-and-spread"
         ],
         "prerequisites": [
-          "array-destructuring"
+          "functions",
+          "array-destructuring",
+          "object-destructuring"
         ],
         "status": "beta"
       },
@@ -2730,6 +2733,11 @@
       "name": "Closures"
     },
     {
+      "uuid": "ef1e44db-5fd0-4550-9135-7522303e7e42",
+      "slug": "comparison",
+      "name": "Comparison"
+    },
+    {
       "uuid": "2d0b9f1f-c135-4014-b87c-25b081387002",
       "slug": "conditionals",
       "name": "Conditionals"
@@ -2745,6 +2753,26 @@
       "name": "Errors"
     },
     {
+      "uuid": "be301f37-6cf4-4688-949e-75a8976a91e3",
+      "slug": "for-loops",
+      "name": "For Loops"
+    },
+    {
+      "uuid": "66264917-2d3e-42e9-806c-0fa740852f0f",
+      "slug": "functions",
+      "name": "Functions"
+    },
+    {
+      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
+      "slug": "increment-decrement",
+      "name": "Increment/Decrement"
+    },
+    {
+      "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
+      "slug": "inheritance",
+      "name": "Inheritance"
+    },
+    {
       "uuid": "008f1c88-7c14-48b2-a88d-49ecb5e3b122",
       "slug": "null-undefined",
       "name": "Null and Undefined"
@@ -2755,84 +2783,19 @@
       "name": "Numbers"
     },
     {
-      "uuid": "b3aa57d9-74b2-4d04-a673-ae2402630d8b",
-      "slug": "promises",
-      "name": "Promises"
-    },
-    {
-      "uuid": "cfbc96fa-717e-4f29-a91d-760ebea88822",
-      "slug": "recursion",
-      "name": "Recursion"
-    },
-    {
-      "uuid": "efc895b2-8420-44f1-a385-5c637286f797",
-      "slug": "rest-and-spread",
-      "name": "Rest and Spread"
-    },
-    {
-      "uuid": "19085ad2-038a-4e08-ad34-47ff2a78fec6",
-      "slug": "template-strings",
-      "name": "Template Strings"
-    },
-    {
-      "uuid": "7d5c1533-c7cf-418e-b0f2-080da1e5bdc5",
-      "slug": "strings",
-      "name": "Strings"
-    },
-    {
-      "uuid": "ef1e44db-5fd0-4550-9135-7522303e7e42",
-      "slug": "comparison",
-      "name": "Comparison"
-    },
-    {
-      "uuid": "a2347a19-1e44-449b-9741-94eda00d8ba7",
-      "slug": "increment-decrement",
-      "name": "Increment/Decrement"
-    },
-    {
-      "uuid": "be301f37-6cf4-4688-949e-75a8976a91e3",
-      "slug": "for-loops",
-      "name": "For Loops"
-    },
-    {
-      "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
-      "slug": "while-loops",
-      "name": "While Loops"
-    },
-    {
-      "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
-      "slug": "conditionals-switch",
-      "name": "Switch Statement"
-    },
-    {
       "uuid": "68dd89d3-13b8-49f5-b493-ccfdc82a073c",
       "slug": "objects",
       "name": "Objects"
     },
     {
-      "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
-      "slug": "sets",
-      "name": "Sets"
+      "uuid": "38bb937b-b9d6-4550-8337-5e4f2623837a",
+      "slug": "object-destructuring",
+      "name": "Object Destructuring"
     },
     {
-      "uuid": "66264917-2d3e-42e9-806c-0fa740852f0f",
-      "slug": "functions",
-      "name": "Functions"
-    },
-    {
-      "uuid": "cbad4d23-a9d8-4370-add2-f4416a4df027",
-      "slug": "type-conversion",
-      "name": "Type Conversion"
-    },
-    {
-      "uuid": "168cb8e8-c4f9-4e10-9d79-bffc77b86bbf",
-      "slug": "conditionals-ternary",
-      "name": "Ternary Operator"
-    },
-    {
-      "uuid": "c890e216-5acb-4fb8-8081-61eb78eabe87",
-      "slug": "inheritance",
-      "name": "Inheritance"
+      "uuid": "b3aa57d9-74b2-4d04-a673-ae2402630d8b",
+      "slug": "promises",
+      "name": "Promises"
     },
     {
       "uuid": "e0ff7a2b-d6f7-4513-9589-3e6854e14415",
@@ -2840,9 +2803,54 @@
       "name": "Prototypes & Classes"
     },
     {
+      "uuid": "cfbc96fa-717e-4f29-a91d-760ebea88822",
+      "slug": "recursion",
+      "name": "Recursion"
+    },
+    {
       "uuid": "e5695bba-50c1-4c55-af3e-2444883bd83b",
       "slug": "regular-expressions",
       "name": "Regular Expressions"
+    },
+    {
+      "uuid": "efc895b2-8420-44f1-a385-5c637286f797",
+      "slug": "rest-and-spread",
+      "name": "Rest and Spread"
+    },
+    {
+      "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",
+      "slug": "sets",
+      "name": "Sets"
+    },
+    {
+      "uuid": "7d5c1533-c7cf-418e-b0f2-080da1e5bdc5",
+      "slug": "strings",
+      "name": "Strings"
+    },
+    {
+      "uuid": "d5d54931-b2a7-4b1a-a593-ad85a2810f2f",
+      "slug": "conditionals-switch",
+      "name": "Switch Statement"
+    },
+    {
+      "uuid": "19085ad2-038a-4e08-ad34-47ff2a78fec6",
+      "slug": "template-strings",
+      "name": "Template Strings"
+    },
+    {
+      "uuid": "168cb8e8-c4f9-4e10-9d79-bffc77b86bbf",
+      "slug": "conditionals-ternary",
+      "name": "Ternary Operator"
+    },
+    {
+      "uuid": "cbad4d23-a9d8-4370-add2-f4416a4df027",
+      "slug": "type-conversion",
+      "name": "Type Conversion"
+    },
+    {
+      "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
+      "slug": "while-loops",
+      "name": "While Loops"
     }
   ],
   "key_features": [

@@ -1,6 +1,6 @@
 # About
 
-Array [destructuring assignment][array_destructuring_docs] is a concise way of extracting values from an array. Its syntax is similar to an [array literal][array_literal_resource] expression, but on the left-hand side of the assignment instead of the right.
+Array [destructuring assignment][mdn-array-destructuring] is a concise way of extracting values from an array. Its syntax is similar to an [array literal][mdn-array-literal] expression, but on the left-hand side of the assignment instead of the right.
 
 ```javascript
 const frenchNumbers = ['quatre-vingts', 'quatre-vingt-dix', 'cent'];
@@ -13,6 +13,8 @@ french90;
 french100;
 // => 'cent'
 ```
+
+## Re-assignment
 
 Because variables are mapped to values in the array by position, destructuring syntax can be used to assign or re-assign multiple variables in a single expression.
 
@@ -40,6 +42,8 @@ c;
 // => 'purple'
 ```
 
+## Skipping assignment
+
 The syntax allows skipping values when mapping, for example to ignore specific positions in the array.
 In the example below, imagine we have a `getUserInfo` function that returns an array containing a user's first name, last name, and street address.
 
@@ -53,6 +57,8 @@ streetAddress;
 // => "Sunny Lane 523"
 ```
 
+## Dropping values
+
 The assignment is also not required to use all the values.
 
 ```javascript
@@ -64,6 +70,8 @@ firstName;
 lastName;
 // => "Noir"
 ```
+
+## Taking more values than available
 
 It's even possible to extract _more_ values than the array contains; the leftover variables will be assigned `undefined`. This may be useful when the amount of values isn't known ahead of time.
 
@@ -84,6 +92,8 @@ fourth;
 // => undefined
 ```
 
+## Default values
+
 The array destructuring assignment can provide _default values_ in case there is none in the source array.
 
 ```javascript
@@ -96,4 +106,10 @@ fourth;
 // => undefined
 ```
 
+## Related concepts
+
+[concept:javascript/object-destructuring]()
 [concept:javascript/rest-and-spread]()
+
+[mdn-array-destructuring]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+[mdn-array-literal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Creating_an_array

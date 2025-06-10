@@ -24,39 +24,46 @@ export function getSecondCard([, second]) {
 }
 
 /**
- * Switch the position of the first two cards in the given deck
+ * Switch the position of the two cards
  *
- * @param {Card[]} deck
+ * @param {[Card, Card]} deck
  *
- * @returns {Card[]} new deck with reordered cards
+ * @returns {[Card, Card]} new deck with the 2 cards swapped
  */
-export function swapTopTwoCards([a, b, ...rest]) {
-  return [b, a, ...rest];
+export function swapTwoCards([a, b]) {
+  return [b, a];
 }
 
 /**
- * Put the top card of the given deck into a separate discard pile
+ * Rotate (shift) the position of the three cards (by one place)
  *
- * @param {Card[]} deck
+ * @param {[Card, Card, Card]} deck
  *
- * @returns {[Card, Card[]]} the top card of the given
- * deck and a new deck containing all the other cards
+ * @returns {[Card, Card, Card]} new deck with the 3 cards shifted by one position
  */
-export function discardTopCard([first, ...rest]) {
-  return [first, rest];
+export function shiftThreeCardsAround([a, b, c]) {
+  return [b, c, a];
 }
 
-/** @type Card[] **/
-const FACE_CARDS = ['jack', 'queen', 'king'];
+/**
+ * Grab the chosen pile from the available piles
+ *
+ * @param {{ chosen: Card[], disregarded: Card[] }} piles
+ *
+ * @returns {Card[]} the pile named chosen
+ */
+export function pickNamedPile({ chosen }) {
+  return chosen;
+}
 
 /**
- * Insert face cards into the given deck
+ * Swap the chosen pile for the disregarded pile and the disregarded pile for the chosen pile
  *
- * @param {Card[]} deck
- *
- * @returns {Card[]} new deck where the second,
- * third, and fourth cards are the face cards
+ * @param {{ chosen: Card[], disregarded: Card[] }} piles
+ * @returns {{ chosen: Card[], disregarded: Card[] }} new piles where the two piles are swapped
  */
-export function insertFaceCards([head, ...tail]) {
-  return [head, ...FACE_CARDS, ...tail];
+export function swapNamedPile({ chosen: disregarded, disregarded: chosen }) {
+  // 🪄 Don't break the magic.
+  // Do NOT touch the next line or Elyse will accidentally reveal the trick.
+  return { chosen, disregarded };
 }

@@ -2,32 +2,35 @@
 
 ## 1. Get the first card
 
-- [This article][destructuring_overview_resource] has a good overview of array destructuring. You can find an example of basic variable assignment in the 'Basic Array Destructuring' section.
+- [This article][mdn-destructuring] has a good overview of array destructuring. You can find an example of basic variable assignment in the 'Basic Array Destructuring' section.
 
 ## 2. Get the second card
 
 - You can use placeholders to ignore one or more values in the array.
-- You can find an example [here][ignoring_some_values_resource].
+- You can find an example [on MDN][mdn-destructuring-ignore-value].
 
-## 3. Swap the first two cards
+## 3. Swap the two cards
 
 - It's possible to swap two values in a single destructuring expression.
-- You can find an example [here][swapping_variables_resource].
+- You can find an example [on MDN][mdn-destructuring-swapping].
 
-## 4. Discard the top card
+## 4. Shift three cards around
 
-- There is a [built-in][rest_operator_docs] operator that can be used to collect the remaining values in an array into a single variable.
-- You can find an example [here][rest_assignment_resource].
+- It's possible to change the position of three values in a single destructuring expression.
+- This is the same as swapping two values, but then with three (or more).
 
-## 5. Insert face cards
+## 5. Pick named pile
 
-- There is a [built-in][spread_operator_docs] operator that can be used to expand an array into a list.
-- You can find a more detailed overview [here][spread_operator_overview].
+- Objects can be destructured just like arrays.
+- You can find an example [on MDN][mdn-object-destructuring-basic-assignment].
 
-[destructuring_overview_resource]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Basic_variable_assignment
-[ignoring_some_values_resource]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Ignoring_some_returned_values
-[swapping_variables_resource]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Swapping_variables
-[rest_operator_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Rest_syntax_parameters
-[rest_assignment_resource]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Assigning_the_rest_of_an_array_to_a_variable
-[spread_operator_docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-[spread_operator_overview]: https://blog.alexdevero.com/javascript-spread-operator
+## 6. Swap named piles
+
+- When a property is extracted from an object, it can be renamed using specific syntax.
+- You can find an example [on MDN][mdn-object-destructuring-object-rename].
+
+[mdn-destructuring]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Basic_variable_assignment
+[mdn-destructuring-ignore-value]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Ignoring_some_returned_values
+[mdn-destructuring-swapping]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Swapping_variables
+[mdn-object-destructuring-basic-assignment]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#basic_assignment
+[mdn-object-destructuring-object-rename]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#assigning_to_new_variable_names
