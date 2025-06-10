@@ -11,6 +11,8 @@ None of these are available on Exercism.
 
 In your own projects, do not use a deprecated / unmaintained package such as `moment.js` but rely on more modern alternatives like `luxon`, or the not yet widely available [Temporal][mdn-temporal].
 This exercise focusses on `Date`, which will remain relevant until the end of JavaScript.
+
+[mdn-temporal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
 ~~~
 
 ## Creation
@@ -73,6 +75,8 @@ When working with Dates in JavaScript, _always_ use an ISO 8601 timestamp when c
 
 Date-only forms are allowed, but not all ISO 8601 formats are supported.
 Consult the [simplified version explanation page on MDN][mdn-date-string-format].
+
+[mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
 ~~~
 
 If the timestamp does not end in `Z`, and it does not end with `+HH:MM` or `-HH:MM`, indicating a timezone offset, because of historical reasons, the following applies:
@@ -162,6 +166,10 @@ When doing a comparison between two dates or date and a number, JavaScript calls
 The latter is the same as calling [`date.getTime()`][mdn-date-get-time].
 
 If you do not want to rely on this behaviour, convert to a number using `getTime()` first.
+
+[mdn-to-primitive]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
+[mdn-date-value-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+[mdn-date-get-time]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
 ~~~
 
 Dates cannot be compared using equality (`==`, and `===`), but the result of `.getTime()` can.
@@ -170,9 +178,5 @@ Dates cannot be compared using equality (`==`, and `===`), but the result of `.g
 [defn-gmt]: https://simple.wikipedia.org/wiki/Greenwich_Mean_Time
 [defn-unix-epoch]: https://en.wikipedia.org/wiki/Epoch_%28computing%29
 [defn-iso8601]: https://en.wikipedia.org/wiki/ISO_8601
-[mdn-temporal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
 [mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
-[mdn-to-primitive]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
-[mdn-date-value-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
-[mdn-date-get-time]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
 [ref-broken-parser]: https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/
