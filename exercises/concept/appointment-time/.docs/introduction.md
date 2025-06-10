@@ -171,7 +171,6 @@ Dates cannot be compared using equality (`==`, and `===`), but the result of `.g
 [defn-unix-epoch]: https://en.wikipedia.org/wiki/Epoch_%28computing%29
 [defn-iso8601]: https://en.wikipedia.org/wiki/ISO_8601
 [mdn-temporal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
-[mdn-diff-assumed-timezone]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#differences_in_assumed_time_zone
 [mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
 [mdn-to-primitive]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
 [mdn-date-value-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
