@@ -8,13 +8,41 @@ import {
   separateTimeOfArrival,
 } from './train-driver';
 
+const customInspectSymbol = Symbol.for('nodejs.util.inspect.custom');
+const customLogSymbol = Symbol.for('exercism.javascript.util.log');
+
+// Follow the instructions in case you are stuck on "list.method is not a function"
 class LimitedArray {
   constructor(values) {
     this.values = values;
   }
 
+  // Enables rest syntax and spread operator, as wel as for of, etc.
   [Symbol.iterator]() {
     return this.values[Symbol.iterator]();
+  }
+
+  // Log value in non-upgraded environments
+  toString() {
+    return this.values.toString();
+  }
+
+  // Overrides logging in node (ie. students working locally)
+  [customInspectSymbol](depth, inspectOptions, inspect) {
+    const inner = this.values[customInspectSymbol]
+      ? this.values[customInspectSymbol](depth, inspectOptions, inspect)
+      : this.values.toString();
+
+    return `List of (${inner})`;
+  }
+
+  // Overrides log overrides in web environment (ie. students working in editor)
+  [customLogSymbol](depth, inspectOptions, inspect) {
+    const inner = this.values[customLogSymbol]
+      ? this.values[customLogSymbol](depth, inspectOptions, inspect)
+      : this.values.toString();
+
+    return `List of (${inner})`;
   }
 }
 
