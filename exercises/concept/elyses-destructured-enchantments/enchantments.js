@@ -53,6 +53,7 @@ export function shiftThreeCardsAround(deck) {
  * @returns {Card[]} the pile named chosen
  */
 export function pickNamedPile(piles) {
+  // 🚨 Do NOT use piles.chosen or piles.disregarded.
   throw new Error('Implement the pickNamedPile function');
 }
 
@@ -64,6 +65,7 @@ export function pickNamedPile(piles) {
  */
 export function swapNamedPile(piles) {
   // 🪄 Don't break the magic.
-  // Do NOT touch the next line or Elyse will accidentally reveal the trick.
+  // 🚨 Do NOT use piles.chosen or piles.disregarded.
+  // 🚨 Do NOT touch the next line or Elyse will accidentally reveal the trick.
   return { chosen, disregarded };
 }

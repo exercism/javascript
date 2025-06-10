@@ -12,7 +12,7 @@ const customInspectSymbol = Symbol.for('nodejs.util.inspect.custom');
 const customLogSymbol = Symbol.for('exercism.javascript.util.log');
 
 // Follow the instructions in case you are stuck on "list.method is not a function"
-class LimitedArray {
+class LimitedDeck {
   constructor(values) {
     this.values = values;
   }
@@ -47,7 +47,7 @@ class LimitedArray {
 }
 
 function deck(...values) {
-  return new LimitedArray(values);
+  return new LimitedDeck(values);
 }
 
 describe('getFirstCard', () => {
