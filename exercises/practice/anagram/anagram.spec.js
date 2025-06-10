@@ -126,13 +126,13 @@ describe('Anagram', () => {
 
   xtest('words other than themselves can be anagrams', () => {
     const expected = ['Silent'];
-    const actual = findAnagrams('LISTEN', ['LISTEN', 'Silent',]);
+    const actual = findAnagrams('LISTEN', ['LISTEN', 'Silent']);
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 
   xtest('handles case of greek letters', () => {
-    const expected = ['ΒΓΑ', 'γβα',];
-    const actual = findAnagrams('ΑΒΓ', ['ΒΓΑ', 'ΒΓΔ', 'γβα', 'αβγ',]);
+    const expected = ['ΒΓΑ', 'γβα'];
+    const actual = findAnagrams('ΑΒΓ', ['ΒΓΑ', 'ΒΓΔ', 'γβα', 'αβγ']);
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 
