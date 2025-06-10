@@ -12,7 +12,7 @@ The array accessor `array[index]` and object accessor (`object[key]` and `object
 ~~~~
 <!-- prettier-ignore-end -->
 
-Want to level up Elyse her magic?
+Want to help Elyse level up her magic?
 
 <!-- prettier-ignore-start -->
 ~~~~exercism/advanced
