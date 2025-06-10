@@ -17,7 +17,7 @@ This exercise focusses on `Date`, which will remain relevant until the end of Ja
 
 ## Creation
 
-A `Date` object in an instance of the `Date` class.
+A `Date` object is an instance of the `Date` class.
 It can be created without passing any arguments to the constructor function.
 This results in a `Date` object that represents the current date and time:
 
