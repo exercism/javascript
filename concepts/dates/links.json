@@ -4,11 +4,23 @@
     "description": "javascript.info: Date"
   },
   {
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date",
-    "description": "MDN: Date() Constructor"
+    "url": "https://en.wikipedia.org/wiki/Epoch_%28computing%29",
+    "description": "Wikipedia: epoch (computing)"
   },
   {
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse",
-    "description": "MDN: Date.parse()"
+    "url": "https://en.wikipedia.org/wiki/ISO_8601",
+    "description": "Wikipedia: ISO 8601 format"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "description": "MDN: Date"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format",
+    "description": "MDN: Date time string format"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal",
+    "description": "MDN: Temporal"
   }
 ]

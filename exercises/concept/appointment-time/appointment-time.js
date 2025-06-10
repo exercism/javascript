@@ -8,7 +8,7 @@
  *
  * @returns {Date} the appointment
  */
-export function createAppointment(days, now = Date.now()) {
+export function createAppointment(days, now = undefined) {
   throw new Error('Remove this line and implement the function');
 }
 

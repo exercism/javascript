@@ -1,86 +1,105 @@
-# About
+# Introduction
 
 JavaScript has a built-in object `Date` which stores date and time, and provides methods for their management.
 
+<!-- prettier-ignore -->
+~~~exercism/caution
+It was based on Java's `java.util.Date` class, which was replaced in the early 2010s, but for backwards compatibility, JavaScript's `Date` sticks around.
+
+Because of how hard it is to work with Dates in general and because of how bad or non-existing timezone handling is, many libraries exist such as `moment.js`, `day.js`, `date-fns` and `luxon`.
+None of these are available on Exercism.
+
+In your own projects, do not use a deprecated / unmaintained package such as `moment.js` but rely on more modern alternatives like `luxon`, or the not yet widely available [Temporal][mdn-temporal].
+This exercise focusses on `Date`, which will remain relevant until the end of JavaScript.
+
+[mdn-temporal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
+~~~
+
 ## Creation
 
-A `Date` object in an instance of the `Date` class. It can be created without passing any arguments to the constructor function. This results in a `Date` object that represents the current date and time:
+A `Date` object in an instance of the `Date` class.
+It can be created without passing any arguments to the constructor function.
+This results in a `Date` object that represents the current date and time:
 
 ```javascript
 const now = new Date();
 // => Thu Apr 14 2022 11:46:08 GMT+0530 (India Standard Time)
-
-// Shows current day, date and time in your time zone.
+// Shows current day, date and time (in your time zone).
 ```
 
-However, different types of arguments can also be used to create date object, as follows:
+### Unix timestamp (number)
 
-### Timestamp value
+If a number is passed in, this will be interpreted as a `timestamp`.
+A timestamp is an integer number representing the number of **milliseconds** that has passed since **1 January 1970 [UTC][defn-utc]+0**.
 
-> A timestamp is an integer number representing the number of **milliseconds** that has passed since **Jan 1st of 1970 [UTC][utc-defn]+0**, however, _with reference to your local time zone._
-> This can be used as an argument for the Date object.
->
-> ```javascript
-> const Jan01_1970 = new Date(0);
-> // 0 means 01.01.1970 UTC+0
->
-> const Jan02_1970 = new Date(24 * 3600 * 1000);
-> // adding 24 hours, we get 02.01.1970 UTC+0
->
-> // Note that the objects created here would show the corresponding time in your time zone.
-> ```
->
-> [^1]
+```javascript
+const epoch = new Date(0);
+// Thu Jan 01 1970 01:00:00 GMT+0100 (Central European Standard Time)
 
-<!-- prettier-ignore-start -->
-~~~~exercism/note
-> January 1st, 1970 at 00:00:00 UTC is referred to as the Unix epoch.
-> Unix is an operating system originally developed in the 1960s.
-> Early Unix engineers picked that date arbitrarily because they needed to set a uniform date for the start of time, and > New Year's Day, 1970, seemed most convenient. [^2]
-~~~~
-<!-- prettier-ignore-end -->
+const another = new Date(1749508766627);
+// Tue Jun 10 2025 00:39:26 GMT+0200 (Central European Summer Time)
+```
 
-### Timestamp string
+One may expect `new Date(0)` to generate the "earliest" date object, but JavaScript will convert the date to your local timezone, which means that only those around [GMT / with an UTC+0][defn-gmt] timezone will actually get the [Unix epoch][defn-unix-epoch] value.
+
+### ISO 8601 timestamp (string)
 
 You can pass a string value representing a date to the `Date` constructor.
-The string needs to follow a format that is recognized by the `Date.parse()` method.
-You will learn more about this below.
+The **only** format that is consistent across implementations is the [simplified version][mdn-date-string-format] of the internationally recognized and standardized so-called [ISO 8601 timestamp strings][defn-iso8601].
+
+A moment in time at [UTC][defn-gmt] looks like this:
+
+```text
+YYYY-MM-DDTHH:MM:SSZ
+YYYYMMDDTHHMMSSZ
+```
+
+Where the following substitutions take place:
+
+| Key  | Description                                 |
+| ---- | ------------------------------------------- |
+| YYYY | The calendar year, represented in 4 digits  |
+| MM   | The calendar month, represented in 2 digits |
+| DD   | The calendar day, represented in 2 digits   |
+| HH   | The hours in a 24-hour clock, 2 digits      |
+| MM   | The minutes, 2 digits                       |
+| SS   | The seconds, 2 digits                       |
+
+The letter `T` separates the date from the time.
+The letter `Z` indicates UTC (no timezone, no Day Light Savings).
+
+<!-- prettier-ignore -->
+~~~exercism/caution
+Other formats that are accepted by `Date.parse` may or may not work.
+When working with Dates in JavaScript, _always_ use an ISO 8601 timestamp when converting from a `string` to a `Date`.
+
+Date-only forms are allowed, but not all ISO 8601 formats are supported.
+Consult the [simplified version explanation page on MDN][mdn-date-string-format].
+
+[mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
+~~~
+
+If the timestamp does not end in `Z`, and it does not end with `+HH:MM` or `-HH:MM`, indicating a timezone offset, because of historical reasons, the following applies:
+
+> When the time zone offset is absent, date-only forms are interpreted as a UTC time and date-time forms are interpreted as a local time.
+> The interpretation as a UTC time is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility.
+> See [Broken Parser – A Web Reality Issue][ref-broken-parser].
 
 ### Date object
 
-An existing date object can also be used as an argument.
+An existing date object can also be used as a constructor argument.
 This makes a copy of the existing `Date` object with the same date and time.
 
 ```javascript
 const t1 = new Date();
 const t2 = new Date(t1);
-
 // Values of t1 and t2 will be the same.
 ```
 
-### Individual date and time component values
+### Supplying individual date and time component values
 
-> Given at least a year and month, this form of `Date()` returns a `Date` object whose component values _(year, month, day, hour, minute, second, and millisecond)_ all come from the following parameters.
-> Any missing fields are given the lowest possible value (1 for day and 0 for every other component).
-> The parameter values are all evaluated against the _local time zone, rather than UTC_.
->
-> - `year`: Integer values from 0 to 99 map to the years 1900 to 1999.
->   All other values are the actual year.
-> - `monthIndex`: Integer value representing the month, beginning with _0 for January to 11 for December_.
->   If a value greater than 11 is passed in, then those months will be added to the date.
->   For example, new Date(1990, 12, 1) will return January 1st, 1991.
-> - `day` (Optional): Integer value representing the day of the month.
->   The default is 1.
-> - `hours` (Optional): Integer value between 0 and 23 representing the hour of the day.
->   Defaults to 0.
-> - `minutes` (Optional): Integer value representing the minute segment of a time.
->   The default is 0 minutes past the hour.
-> - `seconds` (Optional): Integer value representing the second segment of a time.
->   The default is 0 seconds past the minute.
-> - `milliseconds` (Optional): Integer value representing the millisecond segment of a time.
->   The default is 0 milliseconds past the second.
->
-> [^3]
+A date representing a date can be created by passing three numbers.
+A date representing a date and time can be created by passing in 6 numbers.
 
 ```javascript
 const date1 = new Date(95, 11, 17);
@@ -90,159 +109,74 @@ const date2 = new Date(2013, 12, 5, 13, 24, 0);
 // Creates Date for Jan 5 2014 13:24 if your local timezone is equivalent to UTC.
 ```
 
+The second value is the `month`, which starts at `0` for January, up to `11` for December.
+
 ## `Date.parse()`
 
-`Date.parse()` takes **string as a input and returns a timestamp** (number of milliseconds from 1 Jan 1970 UTC+0), provided the string is in the format YYYY-MM-DDTHH:mm:ss.sssZ, where:
-
-> - `YYYY-MM-DD` - is the date: year-month-day.
-> - `T` - The character "T" is used as the delimiter
-> - `HH:mm:ss.sss` - is the time: hours, minutes, seconds and milliseconds.
-> - `Z` - This _optional_ part denotes the time zone.
->   If `Z` is present, the `Date` will be set to UTC.
->   If `Z` is not present, it will be Local Time.
->
-> If the format is invalid, `NaN` is returned. [^4]
-
-Shorter variants are also possible, like `YYYY-MM-DD` or `YYYY-MM` or even `YYYY`. However, note that these variants **set the `Date` to UTC**, even though `Z` not mentioned.
-To understand what exactly happens check out [this section][mdn-diff-assumed-timezone] of a MDN page.
-
-```javascript
-const d1 = Date.parse('2019-01-01');
-const d2 = Date.parse('2019-01-01T00:00:00.000Z');
-
-// Both d1 and d2 are of value 1546300800000, as times are set to UTC.
-
-const d3 = Date.parse('2019-01-01T00:00:00.000');
-// This would have a different value (unless you live in GMT) as
-// it is set to your local time zone.
-```
-
-<!-- prettier-ignore-start -->
-~~~~exercism/caution
-The use of `Date.parse()` (and the timestamp string method which works similarly) is strongly discouraged due to browser differences and inconsistencies. [^5]
-~~~~
-<!-- prettier-ignore-end -->
+You may find mentions of or references to a date parsing function `Date.parse`.
+Because there are only a few invariants (truths) for this function and because the rest of the implementation is not specified (and thus not standard), one should not use it.
 
 ## Accessing `Date` components
 
-The following are the methods to access the year, month and so on from the Date object:
-
-> - `getFullYear()`- Get the year (4 digits)
-> - `getMonth()`- Get the month, from 0 to 11.
-> - `getDate()`- Get the day of month, from 1 to 31.
-> - `getHours()`, `getMinutes()`, `getSeconds()`, `getMilliseconds()`- Get the corresponding time components.
-> - `getDay()`- Get the day of week, from 0 (Sunday) to 6 (Saturday).
-> - `getTime()`- Get the number of milliseconds passed since 01.01.1970 UTC.
->
-> [^6]
+There are various methods on date objects that return the components of the date:
 
 ```javascript
-const date0 = new Date(0); //Jan 1 1970 00:00:00
-let month = date0.getMonth()); // => 0; as Jan is the month
-let date = date0.getDay(); // Find out which day the new year of 1970 was!
-
-const date1 = new Date(2020, 11, 13, 5); // Dec 13 2020 5:00:00
-let millsecs = date1.getTime(); // find out how many have milliseconds passed since Jan 1 1890!
+getFullYear(); // Get the year (4 digits)
+getMonth(); // Get the month, from 0 to 11.
+getDate(); // Get the day of month, from 1 to 31.
+getHours(); // Get the hour in a 24 clock, from 0 to 23
+getMinutes(); // Get the minutes, from 0 to 59
+getSeconds(); // Get the seconds, from 0 to 59
+getMilliseconds(); // Get the milliseconds, from 0 and 999
+getDay(); // Get the day of week, from 0 (Sunday) to 6 (Saturday).
 ```
 
-<!-- prettier-ignore-start -->
-~~~~exercism/caution
-Many JavaScript engines implement a non-standard method `getYear()`.
-**This method is deprecated.**
-It returns a 2-digit year sometimes.
-Hence, `getFullYear()` must always be used instead.
-~~~~
-<!-- prettier-ignore-end -->
-
-## Modifying `Date` components
-
-The following methods allow to modify date/time components :
-
-> - `setFullYear(year, [month], [date])`
-> - `setMonth(month, [date])`
-> - `setDate(date)`
-> - `setHours(hour, [min], [sec], [ms])`
-> - `setMinutes(min, [sec], [ms])`
-> - `setSeconds(sec, [ms])`
-> - `setMilliseconds(ms)`
-> - `setTime(timestamp)` (sets the whole date by milliseconds since 01.01.1970 UTC)
->
-> Parameters in `[]` above are _optional_.
-> If not mentioned, the components are not modified.
-> Every one of them except `setTime()` has a UTC-variant, for instance: `setUTCHours()`. [^7]
+Each of these has an applicable `set` variant (e.g. `setFullYear`) to update the value.
+Any overflowing value rolls over to the next component:
 
 ```javascript
-let today = new Date();
+const date = new Date('2025-02-28T12:42:00Z');
+// => Fri Feb 28 2025 13:42:00 GMT+0100 (Central European Standard Time)
 
-today.setHours(0); // still today, but only the hour is changed to 0
+date.setDate(29);
+// there was no February 29th in 2025.
 
-today.setHours(0, 0, 0, 0); // still today, now sharply 00:00:00
+date.getDate();
+// => 1
+
+date.toString();
+// => Sat Mar 01 2025 13:42:00 GMT+0100 (Central European Standard Time)
 ```
 
-## Calculating Time Difference and `Date.now()`
+There are UTC variants for all the methods that disregard the local timezone.
 
-To measure the time elapsed between two given dates, we can use the `Date.getTime()` method.
+## Converting from date
 
-```javascript
-const d1 = new Date(2021, 12, 11, 5, 13, 32, 21);
-const d2 = new Date(2021, 12, 23, 4, 12, 55);
-
-let timeElapsed = d2.getTime() - d1.getTime(); // => 1033162979
-```
-
-Moreover, if we wish to measure the time taken on a live basis, for example the time taken for execution for program, we could use `Date.now()` which provides the timestamp of current time.
-
-> As you might notice, this is semantically equivalent to `new Date().getTime()`, but it doesn’t create an intermediate `Date` object.
-> Hence, it makes the code more efficient. [^8]
-
-```javascript
-const start = Date.now(); // milliseconds count from 1 Jan 1970
-
-// execute a task
-for (let i = 0; i < 100000; i++) {
-  let task = i * i * i * i;
-}
-
-const end = Date.now(); // done
-
-let duration = end - start;
-// how long it took to run the loop, in seconds
-```
+Date objects have a method `getTime()` that returns the UNIX timestamp in milliseconds, ie. amount of milliseconds the midnight at the beginning of January 1, 1970, UTC.
+Additionally, a method `toISOString()` is available to convert from a date object to a ISO 8601 timestamp string.
 
 ## Comparing Dates
 
-We can use `<` and `>` operators to compare two `Date` objects, the date occuring _later being treated as greater_.
+Greater than (`>`) and greater than or equals (`>=`) as well as less than (`<`) and less than or equals (`<=`) can be used directly between two dates or a date and a number.
+This works because JavaScript will try to coerce the date to a primitive.
 
-The `==` or `===` do not work with `Date`, and output `false` in any case, even if dates are equal.
-However, we could use the `Date.getTime()` method to obtain the timestamps (which is of the data type `number`) and compare them using equality operators.
+<!-- prettier-ignore -->
+~~~exercism/advanced
+When doing a comparison between two dates or date and a number, JavaScript calls [`[Symbol.toPrimitive]("number")`][mdn-to-primitive] which internally calls [`date.valueOf()`][mdn-date-value-of].
+The latter is the same as calling [`date.getTime()`][mdn-date-get-time].
 
-```javascript
-const d1 = new Date(2021, 12, 11);
-const d2 = new Date(1990, 11, 23);
+If you do not want to rely on this behaviour, convert to a number using `getTime()` first.
 
-d1 > d2; // true
+[mdn-to-primitive]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
+[mdn-date-value-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+[mdn-date-get-time]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
+~~~
 
-const d1Copy = new Date(d1); // d1Copy will be same as d1
+Dates cannot be compared using equality (`==`, and `===`), but the result of `.getTime()` can.
 
-d1Copy === d1; // false, even though they are same
-d1Copy.getTime() === d1.getTime(); //true
-```
-
-[^1]: https://javascript.info/date
-
-[^2]: https://kb.narrative.io/what-is-unix-time
-
-[^3]: https://javascript.info/date#setting-date-components
-
-[^4]: https://javascript.info/date#date-parse-from-a-string
-
-[^5]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#several_ways_to_create_a_date_object
-
-[^6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#several_ways_to_create_a_date_object
-
-[^7]: https://javascript.info/date#access-date-components
-
-[^8]: https://javascript.info/date#date-now
-
-[utc-defn]: https://simple.wikipedia.org/wiki/Coordinated_Universal_Time
-[mdn-diff-assumed-timezone]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#differences_in_assumed_time_zone
+[defn-utc]: https://simple.wikipedia.org/wiki/Coordinated_Universal_Time
+[defn-gmt]: https://simple.wikipedia.org/wiki/Greenwich_Mean_Time
+[defn-unix-epoch]: https://en.wikipedia.org/wiki/Epoch_%28computing%29
+[defn-iso8601]: https://en.wikipedia.org/wiki/ISO_8601
+[mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
+[ref-broken-parser]: https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/

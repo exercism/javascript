@@ -2683,11 +2683,6 @@
       "name": "Arithmetic Operators"
     },
     {
-      "uuid": "e1b15569-387c-4833-8c3b-9a94e0ee1583",
-      "slug": "array-analysis",
-      "name": "Array Analysis"
-    },
-    {
       "uuid": "9f8f96bb-db13-485a-bfe4-6ae3fe2fbf46",
       "slug": "array-destructuring",
       "name": "Array Destructuring"
@@ -2706,11 +2701,6 @@
       "uuid": "c7c56d2a-636f-4976-9e08-931258a47923",
       "slug": "arrays",
       "name": "Arrays"
-    },
-    {
-      "uuid": "e7eea65d-5a13-44ee-aae6-113cfb234457",
-      "slug": "arrow-functions",
-      "name": "Arrow Functions"
     },
     {
       "uuid": "611d6b3d-1241-4432-90f6-8fcffb36917c",
@@ -2803,6 +2793,21 @@
       "name": "Prototypes & Classes"
     },
     {
+      "uuid": "efc895b2-8420-44f1-a385-5c637286f797",
+      "slug": "rest-and-spread",
+      "name": "Rest and Spread"
+    },
+    {
+      "uuid": "e7eea65d-5a13-44ee-aae6-113cfb234457",
+      "slug": "arrow-functions",
+      "name": "Arrow Functions"
+    },
+    {
+      "uuid": "e1b15569-387c-4833-8c3b-9a94e0ee1583",
+      "slug": "array-analysis",
+      "name": "Array Analysis"
+    },
+    {
       "uuid": "cfbc96fa-717e-4f29-a91d-760ebea88822",
       "slug": "recursion",
       "name": "Recursion"
@@ -2811,11 +2816,6 @@
       "uuid": "e5695bba-50c1-4c55-af3e-2444883bd83b",
       "slug": "regular-expressions",
       "name": "Regular Expressions"
-    },
-    {
-      "uuid": "efc895b2-8420-44f1-a385-5c637286f797",
-      "slug": "rest-and-spread",
-      "name": "Rest and Spread"
     },
     {
       "uuid": "84e55c29-d403-4a90-8a2a-9960feae8ff3",

@@ -11,6 +11,8 @@ None of these are available on Exercism.
 
 In your own projects, do not use a deprecated / unmaintained package such as `moment.js` but rely on more modern alternatives like `luxon`, or the not yet widely available [Temporal][mdn-temporal].
 This exercise focusses on `Date`, which will remain relevant until the end of JavaScript.
+
+[mdn-temporal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
 ~~~
 
 ## Creation
@@ -25,7 +27,7 @@ const now = new Date();
 // Shows current day, date and time (in your time zone).
 ```
 
-### Unix timestamp (number)
+### **Unix timestamp (number)**
 
 If a number is passed in, this will be interpreted as a `timestamp`.
 A timestamp is an integer number representing the number of **milliseconds** that has passed since **1 January 1970 [UTC][defn-utc]+0**.
@@ -40,7 +42,7 @@ const another = new Date(1749508766627);
 
 One may expect `new Date(0)` to generate the "earliest" date object, but JavaScript will convert the date to your local timezone, which means that only those around [GMT / with an UTC+0][defn-gmt] timezone will actually get the [Unix epoch][defn-unix-epoch] value.
 
-### ISO 8601 timestamp (string)
+### **ISO 8601 timestamp (string)**
 
 You can pass a string value representing a date to the `Date` constructor.
 The **only** format that is consistent across implementations is the [simplified version][mdn-date-string-format] of the internationally recognized and standardized so-called [ISO 8601 timestamp strings][defn-iso8601].
@@ -73,6 +75,8 @@ When working with Dates in JavaScript, _always_ use an ISO 8601 timestamp when c
 
 Date-only forms are allowed, but not all ISO 8601 formats are supported.
 Consult the [simplified version explanation page on MDN][mdn-date-string-format].
+
+[mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
 ~~~
 
 If the timestamp does not end in `Z`, and it does not end with `+HH:MM` or `-HH:MM`, indicating a timezone offset, because of historical reasons, the following applies:
@@ -81,7 +85,7 @@ If the timestamp does not end in `Z`, and it does not end with `+HH:MM` or `-HH:
 > The interpretation as a UTC time is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility.
 > See [Broken Parser – A Web Reality Issue][ref-broken-parser].
 
-### Date object
+### **Date object**
 
 An existing date object can also be used as a constructor argument.
 This makes a copy of the existing `Date` object with the same date and time.
@@ -92,7 +96,7 @@ const t2 = new Date(t1);
 // Values of t1 and t2 will be the same.
 ```
 
-### Supplying individual date and time component values
+### **Supplying individual date and time component values**
 
 A date representing a date can be created by passing three numbers.
 A date representing a date and time can be created by passing in 6 numbers.
@@ -157,11 +161,15 @@ Greater than (`>`) and greater than or equals (`>=`) as well as less than (`<`) 
 This works because JavaScript will try to coerce the date to a primitive.
 
 <!-- prettier-ignore -->
-~~~@exercism/advanced
+~~~exercism/advanced
 When doing a comparison between two dates or date and a number, JavaScript calls [`[Symbol.toPrimitive]("number")`][mdn-to-primitive] which internally calls [`date.valueOf()`][mdn-date-value-of].
 The latter is the same as calling [`date.getTime()`][mdn-date-get-time].
 
 If you do not want to rely on this behaviour, convert to a number using `getTime()` first.
+
+[mdn-to-primitive]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
+[mdn-date-value-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+[mdn-date-get-time]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
 ~~~
 
 Dates cannot be compared using equality (`==`, and `===`), but the result of `.getTime()` can.
@@ -170,10 +178,5 @@ Dates cannot be compared using equality (`==`, and `===`), but the result of `.g
 [defn-gmt]: https://simple.wikipedia.org/wiki/Greenwich_Mean_Time
 [defn-unix-epoch]: https://en.wikipedia.org/wiki/Epoch_%28computing%29
 [defn-iso8601]: https://en.wikipedia.org/wiki/ISO_8601
-[mdn-temporal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
-[mdn-diff-assumed-timezone]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#differences_in_assumed_time_zone
 [mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
-[mdn-to-primitive]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
-[mdn-date-value-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
-[mdn-date-get-time]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
 [ref-broken-parser]: https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/
