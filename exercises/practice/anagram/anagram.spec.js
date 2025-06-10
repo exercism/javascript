@@ -96,7 +96,7 @@ describe('Anagram', () => {
 
   xtest('does not detect an anagram if the original word is repeated', () => {
     const expected = [];
-    const actual = findAnagrams('go', ['go Go GO']);
+    const actual = findAnagrams('go', ['goGoGO']);
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 
@@ -106,15 +106,39 @@ describe('Anagram', () => {
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 
-  xtest('words are not anagrams of themselves (case-insensitive)', () => {
+  xtest('words are not anagrams of themselves', () => {
     const expected = [];
-    const actual = findAnagrams('BANANA', ['BANANA', 'Banana', 'banana']);
+    const actual = findAnagrams('BANANA', ['BANANA']);
+    expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
+  });
+
+  xtest('words are not anagrams of themselves even if letter case is partially different', () => {
+    const expected = [];
+    const actual = findAnagrams('BANANA', ['Banana']);
+    expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
+  });
+
+  xtest('words are not anagrams of themselves even if letter case is completely different', () => {
+    const expected = [];
+    const actual = findAnagrams('BANANA', ['banana']);
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 
   xtest('words other than themselves can be anagrams', () => {
     const expected = ['Silent'];
-    const actual = findAnagrams('LISTEN', ['Listen', 'Silent', 'LISTEN']);
+    const actual = findAnagrams('LISTEN', ['LISTEN', 'Silent',]);
+    expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
+  });
+
+  xtest('handles case of greek letters', () => {
+    const expected = ['ΒΓΑ', 'γβα',];
+    const actual = findAnagrams('ΑΒΓ', ['ΒΓΑ', 'ΒΓΔ', 'γβα', 'αβγ',]);
+    expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
+  });
+
+  xtest('different characters may have the same bytes', () => {
+    const expected = [];
+    const actual = findAnagrams('a⬂', ['€a']);
     expect(areSetsEqual(new Set(expected), new Set(actual))).toEqual(true);
   });
 });
