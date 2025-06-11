@@ -30,7 +30,7 @@ export function birdsInWeek(birdsPerDay, week) {
  * by one for every second day.
  *
  * @param {number[]} birdsPerDay
- * @returns {number[]} corrected bird count data
+ * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
   throw new Error('Please implement the fixBirdCountLog function');
