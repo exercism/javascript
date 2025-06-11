@@ -233,5 +233,79 @@ describe('Complex numbers', () => {
       expect(actual.real).toBeCloseTo(expected.real);
       expect(actual.imag).toBeCloseTo(expected.imag);
     });
+
+    xtest('Exponential resulting in a number with real and imaginary part', () => {
+      const expected = new ComplexNumber(1, 1);
+      const actual = new ComplexNumber(Math.LN2 / 2, Math.PI / 4).exp;
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+  });
+
+  describe('Operations between real numbers and complex numbers', () => {
+    xtest('Add real number to complex number', () => {
+      const expected = new ComplexNumber(6, 2);
+      const actual = new ComplexNumber(1, 2).add(new ComplexNumber(5, 0));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+
+    xtest('Add complex number to real number', () => {
+      const expected = new ComplexNumber(6, 2);
+      const actual = new ComplexNumber(5, 0).add(new ComplexNumber(1, 2));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+
+    xtest('Subtract real number from complex number', () => {
+      const expected = new ComplexNumber(1, 7);
+      const actual = new ComplexNumber(5, 7).sub(new ComplexNumber(4, 0));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+    
+    xtest('Subtract complex number from real number', () => {
+      const expected = new ComplexNumber(-1, -7);
+      const actual = new ComplexNumber(4, 0).sub(new ComplexNumber(5, 7));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+
+    xtest('Multiply complex number by real number', () => {
+      const expected = new ComplexNumber(10, 25);
+      const actual = new ComplexNumber(2, 5).mul(new ComplexNumber(5, 0));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+
+    xtest('Multiply real number by complex number', () => {
+      const expected = new ComplexNumber(10, 25);
+      const actual = new ComplexNumber(5, 0).mul(new ComplexNumber(2, 5));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+
+    xtest('Divide complex number by real number', () => {
+      const expected = new ComplexNumber(1, 10);
+      const actual = new ComplexNumber(10, 100).div(new ComplexNumber(10, 0));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
+
+    xtest('Divide real number by complex number', () => {
+      const expected = new ComplexNumber(2.5, -2.5);
+      const actual = new ComplexNumber(5, 0).div(new ComplexNumber(1, 1));
+  
+      expect(actual.real).toBeCloseTo(expected.real);
+      expect(actual.imag).toBeCloseTo(expected.imag);
+    });
   });
 });
