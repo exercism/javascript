@@ -8,6 +8,48 @@ import {
   separateTimeOfArrival,
 } from './train-driver';
 
+const customInspectSymbol = Symbol.for('nodejs.util.inspect.custom');
+const customLogSymbol = Symbol.for('exercism.javascript.util.log');
+
+// Follow the instructions in case you are stuck on "list.method is not a function"
+class LimitedArray {
+  constructor(values) {
+    this.values = values;
+  }
+
+  // Enables rest syntax and spread operator, as wel as for of, etc.
+  [Symbol.iterator]() {
+    return this.values[Symbol.iterator]();
+  }
+
+  // Log value in non-upgraded environments
+  toString() {
+    return this.values.toString();
+  }
+
+  // Overrides logging in node (ie. students working locally)
+  [customInspectSymbol](depth, inspectOptions, inspect) {
+    const inner = this.values[customInspectSymbol]
+      ? this.values[customInspectSymbol](depth, inspectOptions, inspect)
+      : this.values.toString();
+
+    return `List of (${inner})`;
+  }
+
+  // Overrides log overrides in web environment (ie. students working in editor)
+  [customLogSymbol](depth, inspectOptions, inspect) {
+    const inner = this.values[customLogSymbol]
+      ? this.values[customLogSymbol](depth, inspectOptions, inspect)
+      : this.values.toString();
+
+    return `List of (${inner})`;
+  }
+}
+
+function list(...values) {
+  return new LimitedArray(values);
+}
+
 describe('getListOfWagons', () => {
   test('returns the correct array', () => {
     expect(getListOfWagons(1, 5, 2, 7, 4)).toEqual([1, 5, 2, 7, 4]);
@@ -30,20 +72,20 @@ describe('getListOfWagons', () => {
 
 describe('fixListOfWagons', () => {
   test('reorders the first 2 wagons to the end of the array', () => {
-    const eachWagonsID = [3, 7, 1, 14, 10, 4, 12, 6, 23, 17, 13, 20, 8, 19];
+    const eachWagonsID = list(3, 7, 1, 14, 10, 4, 12, 6, 23, 17, 13, 20, 8, 19);
     const expected = [1, 14, 10, 4, 12, 6, 23, 17, 13, 20, 8, 19, 3, 7];
 
     expect(fixListOfWagons(eachWagonsID)).toEqual(expected);
   });
 
   test('works when only 3 wagons given', () => {
-    const eachWagonsID = [4, 2, 1];
+    const eachWagonsID = list(4, 2, 1);
 
     expect(fixListOfWagons(eachWagonsID)).toEqual([1, 4, 2]);
   });
 
   test('works for a few wagons', () => {
-    const eachWagonsID = [3, 4, 1, 5, 7, 9, 10];
+    const eachWagonsID = list(3, 4, 1, 5, 7, 9, 10);
 
     expect(fixListOfWagons(eachWagonsID)).toEqual([1, 5, 7, 9, 10, 3, 4]);
   });
@@ -51,8 +93,8 @@ describe('fixListOfWagons', () => {
 
 describe('correctListOfWagons', () => {
   test('returns a wagon weight list with the inserted array of values', () => {
-    const eachWagonsID = [1, 6, 11, 15, 13, 14, 17, 22, 2, 16, 19, 21];
-    const missingWagons = [8, 10, 5, 9, 3, 7, 20];
+    const eachWagonsID = list(1, 6, 11, 15, 13, 14, 17, 22, 2, 16, 19, 21);
+    const missingWagons = list(8, 10, 5, 9, 3, 7, 20);
     const expected = [
       1, 8, 10, 5, 9, 3, 7, 20, 6, 11, 15, 13, 14, 17, 22, 2, 16, 19, 21,
     ];
@@ -61,16 +103,16 @@ describe('correctListOfWagons', () => {
   });
 
   test('works for short arrays', () => {
-    const eachWagonsID = [1, 7, 15, 24];
-    const missingWagons = [8, 6, 4];
+    const eachWagonsID = list(1, 7, 15, 24);
+    const missingWagons = list(8, 6, 4);
     const expected = [1, 8, 6, 4, 7, 15, 24];
 
     expect(correctListOfWagons(eachWagonsID, missingWagons)).toEqual(expected);
   });
 
   test('works when missingWagons is longer', () => {
-    const eachWagonsID = [1, 7, 15, 24];
-    const missingWagons = [8, 6, 4, 5, 9, 21, 2, 13];
+    const eachWagonsID = list(1, 7, 15, 24);
+    const missingWagons = list(8, 6, 4, 5, 9, 21, 2, 13);
     const expected = [1, 8, 6, 4, 5, 9, 21, 2, 13, 7, 15, 24];
 
     expect(correctListOfWagons(eachWagonsID, missingWagons)).toEqual(expected);

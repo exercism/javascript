@@ -17,7 +17,7 @@ export function getListOfWagons(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
 /**
  * Reorder the array of wagons by moving the first 2 wagons to the end of the array.
  *
- * @param {number[]} ids
+ * @param {Iterable<number>} ids
  * @returns {number[]} reorderd list of wagons
  */
 export function fixListOfWagons(ids) {
@@ -27,8 +27,8 @@ export function fixListOfWagons(ids) {
 /**
  * Fixes the array of wagons by inserting an array of wagons after the first element in eachWagonsID.
  *
- * @param {number[]} ids
- * @param {number[]} missingWagons
+ * @param {Iterable<number>} ids
+ * @param {Iterable<number>} missingWagons
  * @returns {number[]} corrected list of wagons
  */
 export function correctListOfWagons(ids, missingWagons) {
