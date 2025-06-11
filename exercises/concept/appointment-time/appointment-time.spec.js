@@ -39,6 +39,13 @@ describe('createAppointment', () => {
       27 * 60 * 60 * 1000,
     );
   });
+
+  test('rolls over days, months, and years', () => {
+    const currentTime = Date.UTC(1991, 16, 6, 2, 12, 0, 0);
+    const result = createAppointment(720, currentTime);
+
+    expect(result.getTime()).toStrictEqual(767326320000);
+  });
 });
 
 describe('getAppointmentTimestamp', () => {
@@ -52,7 +59,7 @@ describe('getAppointmentTimestamp', () => {
 });
 
 describe('getAppointment', () => {
-  test('get appointment detail', () => {
+  test('extracts appointment details', () => {
     expect(getAppointmentDetails('2022-04-24T08:15:00.000')).toStrictEqual({
       year: 2022,
       month: 3,
@@ -64,13 +71,13 @@ describe('getAppointment', () => {
 });
 
 describe('updateAppointment', () => {
-  test('should update with one option', () => {
+  test('updates a field', () => {
     expect(
       updateAppointment('2022-02-09T09:20:00.000', { month: 6 }),
     ).toStrictEqual({ year: 2022, month: 6, date: 9, hour: 9, minute: 20 });
   });
 
-  test('should update with multiple options', () => {
+  test('update multiple fields', () => {
     expect(
       updateAppointment('2022-11-21T21:20:00.000', {
         year: 2023,
@@ -82,39 +89,51 @@ describe('updateAppointment', () => {
     ).toStrictEqual({ year: 2023, month: 1, date: 12, hour: 1, minute: 29 });
   });
 
-  test('should update with option with zero as value', () => {
+  test('updates even if option is 0', () => {
     expect(
       updateAppointment('2022-12-17T07:10:00.000', { minute: 0 }),
     ).toStrictEqual({ year: 2022, month: 11, date: 17, hour: 7, minute: 0 });
   });
+
+  test('rolls over values', () => {
+    expect(
+      updateAppointment('2029-02-28T23:59:00.000', { hour: 24, minute: 60 }),
+    ).toStrictEqual({ year: 2029, month: 2, date: 1, hour: 1, minute: 0 });
+  });
 });
 
 describe('availableTimes', () => {
-  test('get available times between two appointments', () => {
+  test('retrieves number of seconds between two appointments', () => {
     expect(
       timeBetween('2022-12-12T09:20:00.000', '2022-12-18T08:30:00.000'),
     ).toBe(515400);
   });
+
+  test('rounds to seconds', () => {
+    expect(
+      timeBetween('2024-03-06T09:12:15.180', '2024-03-06T18:15:12.090'),
+    ).toBe(32577);
+  });
 });
 
 describe('isValid', () => {
-  test('true when appointment datetime is in the future', () => {
+  test('is true when appointment datetime is in the future', () => {
     expect(isValid('2022-02-11T23:00:00.000', '2022-02-08T23:00:00.000')).toBe(
       true,
     );
   });
 
-  test('true when appointment date is in the future', () => {
+  test('is true when appointment date is in the future', () => {
     expect(isValid('2022-02-11', '2022-02-08')).toBe(true);
   });
 
-  test('false when appointment datetime is in the past', () => {
+  test('is false when appointment datetime is in the past', () => {
     expect(isValid('2022-05-20T23:00:00.000', '2023-02-08T23:00:00.000')).toBe(
       false,
     );
   });
 
-  test('false when appointment date is in the past', () => {
+  test('is false when appointment date is in the past', () => {
     expect(isValid('2022-05-21', '2022-05-22')).toBe(false);
   });
 });
