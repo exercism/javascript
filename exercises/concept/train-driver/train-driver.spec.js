@@ -50,6 +50,17 @@ function list(...values) {
   return new LimitedArray(values);
 }
 
+function time(timeOfArrival, route) {
+  Object.defineProperty(route, 'timeOfArrival', {
+    configurable: false,
+    writable: false,
+    enumerable: true,
+    value: timeOfArrival,
+  });
+
+  return route;
+}
+
 describe('getListOfWagons', () => {
   test('returns the correct array', () => {
     expect(getListOfWagons(1, 5, 2, 7, 4)).toEqual([1, 5, 2, 7, 4]);
@@ -181,13 +192,12 @@ describe('extendRouteInformation', () => {
 
 describe('separateTimeOfArrival', () => {
   test('separates timeOfArrival from complete object', () => {
-    const route = {
+    const route = time('12:00', {
       from: 'Berlin',
       to: 'Hamburg',
-      timeOfArrival: '12:00',
       precipitation: '10',
       temperature: '5',
-    };
+    });
 
     const expected = [
       '12:00',
@@ -198,12 +208,11 @@ describe('separateTimeOfArrival', () => {
   });
 
   test('separates timeOfArrival with smaller object', () => {
-    const route = {
+    const route = time('10:30', {
       from: 'Paris',
       to: 'London',
-      timeOfArrival: '10:30',
       temperature: '20',
-    };
+    });
 
     const expected = [
       '10:30',
@@ -214,13 +223,12 @@ describe('separateTimeOfArrival', () => {
   });
 
   test('separates timeOfArrival from differently ordered object', () => {
-    const route = {
+    const route = time('21:20', {
       from: 'Gothenburg',
       to: 'Copenhagen',
       precipitation: '1',
-      timeOfArrival: '21:20',
       temperature: '-6',
-    };
+    });
 
     const expected = [
       '21:20',
