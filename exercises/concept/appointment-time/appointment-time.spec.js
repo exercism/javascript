@@ -56,6 +56,22 @@ describe('getAppointmentTimestamp', () => {
       '2000-07-16T12:00:00.000Z',
     );
   });
+
+  test('returns the correct timestamp for a very old date', () => {
+    const currentTime = new Date(Date.UTC(1600, 9, 14, 9, 1, 2, 3));
+
+    expect(getAppointmentTimestamp(currentTime)).toEqual(
+      '1600-10-14T09:01:02.003Z',
+    );
+  });
+
+  test('returns the correct timestamp for a future date', () => {
+    const currentTime = new Date(Date.UTC(3000, 0, 1, 13, 13, 13, 13));
+
+    expect(getAppointmentTimestamp(currentTime)).toEqual(
+      '3000-01-01T13:13:13.013Z',
+    );
+  });
 });
 
 describe('getAppointment', () => {
