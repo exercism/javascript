@@ -1,7 +1,11 @@
 export const reverseString = (string) => {
   let revString = '';
-  for (let i = string.length - 1; i >= 0; i -= 1) {
-    revString += string[i];
+  let characters = Array.from(
+    new Intl.Segmenter().segment(String(string)),
+    (x) => x.segment,
+  );
+  for (let i = characters.length - 1; i >= 0; i--) {
+    revString += characters[i];
   }
   return revString;
 };

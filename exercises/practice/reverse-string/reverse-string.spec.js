@@ -37,4 +37,22 @@ describe('ReverseString', () => {
     const actual = reverseString('drawer');
     expect(actual).toEqual(expected);
   });
+
+  xtest('wide characters', () => {
+    const expected = '猫子';
+    const actual = reverseString('子猫');
+    expect(actual).toEqual(expected);
+  });
+
+  test.skip('grapheme cluster with pre-combined form', () => {
+    const expected = 'dnatsnehctsrüW';
+    const actual = reverseString('Würstchenstand');
+    expect(actual).toEqual(expected);
+  });
+
+  test.skip('grapheme clusters', () => {
+    const expected = 'มรกแรปโนยขีเผู้';
+    const actual = reverseString('ผู้เขียนโปรแกรม');
+    expect(actual).toEqual(expected);
+  });
 });
