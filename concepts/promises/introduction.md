@@ -1,106 +1,50 @@
 # Introduction
 
-The [`Promise`][promise-docs] object represents the eventual completion (or failure) of an
-asynchronous operation, and its resulting value.
+The [`Promise`][promise-docs] object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
-The methods [`promise.then()`][promise-then], [`promise.catch()`][promise-catch], and [`promise.finally()`][promise-finally] are used to associate further action with a promise that becomes settled.
+<!-- prettier-ignore -->
+~~~exercism/note
+This is a hard topic for many people, specially if you know programming in a language that is completely _synchronous_.
+If you feel overwhelmed, or you would like to learn more about **concurrency** and **parallelism**, [watch (via go.dev)][talk-blog] or [watch directly via vimeo][talk-video] and [read the slides][talk-slides] of the brilliant talk "Concurrency is not parallelism".
 
-For example:
+[talk-slides]: https://go.dev/talks/2012/waza.slide#1
+[talk-blog]: https://go.dev/blog/waza-talk
+[talk-video]: https://vimeo.com/49718712
+~~~
 
-```javascript
-const myPromise = new Promise(function (resolve, reject) {
-  let sampleData = [2, 4, 6, 8];
-  let randomNumber = Math.floor(Math.random() * (sampleData.length + 1));
-  if (sampleData[randomNumber]) {
-    resolve(sampleData[randomNumber]);
-  } else {
-    reject('An error occured!');
-  }
-});
+## Lifecycle of a promise
 
-myPromise
-  .then(function (e) {
-    console.log(e);
-  })
-  .catch(function (error) {
-    throw new Error(error);
-  })
-  .finally(function () {
-    console.log('Promise completed');
-  });
-```
+A `Promise` has three states:
 
-## Methods
+1. pending
+2. fulfilled
+3. rejected
 
-These methods are available on `Promise.prototype`
+When it is created, a promise is pending.
+At some point in the future it may _resolve_ or _reject_.
+Once a promise is resolved or rejected once, it can never be resolved or rejected again, nor can its state change.
 
-**then**
+In other words:
 
-> The `.then()` method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining.[^1]
+1. When pending, a promise:
+   - may transition to either the fulfilled or rejected state.
+2. When fulfilled, a promise:
+   - must not transition to any other state.
+   - must have a value, which must not change.
+3. When rejected, a promise:
+   - must not transition to any other state.
+   - must have a reason, which must not change.
 
-```javascript
-const promise1 = new Promise(function (resolve, reject) {
-  resolve('Success!');
-});
+## Chaining promises
 
-promise1.then(function (value) {
-  console.log(value);
-  // expected output: "Success!"
-});
-```
+In JavaScript, there are various methods to chain promises.
+Calling a chaining method on a promise returns another promise.
 
-**catch**
+<!-- prettier-ignore -->
+~~~exercism/note
+The [tutorial on MDN][mdn-promises] is a good resource to consume if you want to learn more about promises before completing the concept exercise.
 
-> A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is resolved. It is used to handle rejected promises.[^2]
-
-```javascript
-const promise1 = new Promise((resolve, reject) => {
-  throw 'An error occured';
-});
-
-promise1.catch(function (error) {
-  console.error(error);
-});
-// expected output: An error occured
-```
-
-**finally**
-
-> When the promise is settled, i.e either fulfilled or rejected, the specified callback function is executed. This provides a way for code to be run whether the promise was fulfilled successfully or rejected once the Promise has been dealt with.[^3]
-
-```javascript
-function findDataById(id) {
-  return new Promise(function (resolve, reject) {
-    let sampleData = [1, 2, 3, 4, 5];
-    if (sampleData[id]) {
-      resolve(sampleData[id]);
-    } else {
-      reject(new Error('Invalid id'));
-    }
-  });
-}
-
-findDataById(4)
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (err) {
-    console.error(err);
-  })
-  .finally(function () {
-    console.log('Promise completed');
-  });
-```
-
----
-
-[^1]: `then`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then>
-
-[^2]: `catch`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch>
-
-[^3]: `finally`, MDN. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally>
+[mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+~~~
 
 [promise-docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[promise-catch]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
-[promise-then]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
-[promise-finally]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally
