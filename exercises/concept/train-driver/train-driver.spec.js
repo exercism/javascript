@@ -63,19 +63,19 @@ function time(timeOfArrival, route) {
 
 describe('getListOfWagons', () => {
   test('returns the correct array', () => {
-    expect(getListOfWagons(1, 5, 2, 7, 4)).toEqual([1, 5, 2, 7, 4]);
+    expect(getListOfWagons(1, 5, 2, 7, 4)).toStrictEqual([1, 5, 2, 7, 4]);
   });
 
   test('works for a few arguments', () => {
-    expect(getListOfWagons(1, 5)).toEqual([1, 5]);
+    expect(getListOfWagons(1, 5)).toStrictEqual([1, 5]);
   });
 
   test('works for a one argument', () => {
-    expect(getListOfWagons(1)).toEqual([1]);
+    expect(getListOfWagons(1)).toStrictEqual([1]);
   });
 
   test('works for many arguments', () => {
-    expect(getListOfWagons(1, 5, 6, 3, 9, 8, 4, 14, 24, 7)).toEqual([
+    expect(getListOfWagons(1, 5, 6, 3, 9, 8, 4, 14, 24, 7)).toStrictEqual([
       1, 5, 6, 3, 9, 8, 4, 14, 24, 7,
     ]);
   });
@@ -86,19 +86,19 @@ describe('fixListOfWagons', () => {
     const eachWagonsID = list(3, 7, 1, 14, 10, 4, 12, 6, 23, 17, 13, 20, 8, 19);
     const expected = [1, 14, 10, 4, 12, 6, 23, 17, 13, 20, 8, 19, 3, 7];
 
-    expect(fixListOfWagons(eachWagonsID)).toEqual(expected);
+    expect(fixListOfWagons(eachWagonsID)).toStrictEqual(expected);
   });
 
   test('works when only 3 wagons given', () => {
     const eachWagonsID = list(4, 2, 1);
 
-    expect(fixListOfWagons(eachWagonsID)).toEqual([1, 4, 2]);
+    expect(fixListOfWagons(eachWagonsID)).toStrictEqual([1, 4, 2]);
   });
 
   test('works for a few wagons', () => {
     const eachWagonsID = list(3, 4, 1, 5, 7, 9, 10);
 
-    expect(fixListOfWagons(eachWagonsID)).toEqual([1, 5, 7, 9, 10, 3, 4]);
+    expect(fixListOfWagons(eachWagonsID)).toStrictEqual([1, 5, 7, 9, 10, 3, 4]);
   });
 });
 
@@ -110,7 +110,9 @@ describe('correctListOfWagons', () => {
       1, 8, 10, 5, 9, 3, 7, 20, 6, 11, 15, 13, 14, 17, 22, 2, 16, 19, 21,
     ];
 
-    expect(correctListOfWagons(eachWagonsID, missingWagons)).toEqual(expected);
+    expect(correctListOfWagons(eachWagonsID, missingWagons)).toStrictEqual(
+      expected,
+    );
   });
 
   test('works for short arrays', () => {
@@ -118,7 +120,9 @@ describe('correctListOfWagons', () => {
     const missingWagons = list(8, 6, 4);
     const expected = [1, 8, 6, 4, 7, 15, 24];
 
-    expect(correctListOfWagons(eachWagonsID, missingWagons)).toEqual(expected);
+    expect(correctListOfWagons(eachWagonsID, missingWagons)).toStrictEqual(
+      expected,
+    );
   });
 
   test('works when missingWagons is longer', () => {
@@ -126,7 +130,9 @@ describe('correctListOfWagons', () => {
     const missingWagons = list(8, 6, 4, 5, 9, 21, 2, 13);
     const expected = [1, 8, 6, 4, 5, 9, 21, 2, 13, 7, 15, 24];
 
-    expect(correctListOfWagons(eachWagonsID, missingWagons)).toEqual(expected);
+    expect(correctListOfWagons(eachWagonsID, missingWagons)).toStrictEqual(
+      expected,
+    );
   });
 });
 
@@ -147,7 +153,7 @@ describe('extendRouteInformation', () => {
       temperature: '5',
     };
 
-    expect(extendRouteInformation(route, moreRouteInformation)).toEqual(
+    expect(extendRouteInformation(route, moreRouteInformation)).toStrictEqual(
       expected,
     );
   });
@@ -163,7 +169,7 @@ describe('extendRouteInformation', () => {
       temperature: '20',
     };
 
-    expect(extendRouteInformation(route, moreRouteInformation)).toEqual(
+    expect(extendRouteInformation(route, moreRouteInformation)).toStrictEqual(
       expected,
     );
   });
@@ -184,7 +190,7 @@ describe('extendRouteInformation', () => {
       temperature: '-6',
     };
 
-    expect(extendRouteInformation(route, moreRouteInformation)).toEqual(
+    expect(extendRouteInformation(route, moreRouteInformation)).toStrictEqual(
       expected,
     );
   });
@@ -204,7 +210,7 @@ describe('separateTimeOfArrival', () => {
       { from: 'Berlin', to: 'Hamburg', precipitation: '10', temperature: '5' },
     ];
 
-    expect(separateTimeOfArrival(route)).toEqual(expected);
+    expect(separateTimeOfArrival(route)).toStrictEqual(expected);
   });
 
   test('separates timeOfArrival with smaller object', () => {
@@ -219,7 +225,7 @@ describe('separateTimeOfArrival', () => {
       { from: 'Paris', to: 'London', temperature: '20' },
     ];
 
-    expect(separateTimeOfArrival(route)).toEqual(expected);
+    expect(separateTimeOfArrival(route)).toStrictEqual(expected);
   });
 
   test('separates timeOfArrival from differently ordered object', () => {
@@ -240,6 +246,6 @@ describe('separateTimeOfArrival', () => {
       },
     ];
 
-    expect(separateTimeOfArrival(route)).toEqual(expected);
+    expect(separateTimeOfArrival(route)).toStrictEqual(expected);
   });
 });
