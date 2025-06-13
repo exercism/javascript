@@ -4,7 +4,7 @@ By default, only `sum` is given to the `triplets` function, but it may optionall
 
 <!-- prettier-ignore-start -->
 ~~~exercism/advanced
-If you're solving this using the CLI, there's a test case involving large numbers that's currently skipped to avoid timeouts in our online test runner.
+If you're solving this using the CLI, there's a test case involving large numbers that's currently skipped to avoid timeouts in our test runner.
 You can enable it if you want by removing the `.skip`, just be aware that it may take a while to run.
 ~~~
 <!-- prettier-ignore-end -->
