@@ -11,7 +11,9 @@ etc.
 
 <!-- prettier-ignore-start -->
 ~~~~exercism/note
-All functions should update the array of cards and then return the modified array - a common way of working known as the Builder pattern, which allows you to nicely daisy-chain functions together.
+All but two functions should update the array of cards and then return the modified array - a common way of working known as the Builder pattern, which allows you to nicely daisy-chain functions together.
+
+The two exceptions are `getItem`, which should return the card at the given position, and `checkSizeOfStack` which should return `true` if the given size matches.
 ~~~~
 <!-- prettier-ignore-end -->
 
