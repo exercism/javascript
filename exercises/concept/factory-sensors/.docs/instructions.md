@@ -1,6 +1,8 @@
 # Instructions
 
-Elena is the new quality manager of a newspaper factory. As she has just arrived in the company, she has decided to review some of the processes in the factory to see what could be improved. She found out that technicians are doing a lot of quality checks by hand. She sees there is a good opportunity for automation and asks you, a freelance developer, to develop a piece of software to monitor some of the machines.
+Elena is the new quality manager of a newspaper factory. As she has just arrived in the company, she has decided to review some of the processes in the factory to see what could be improved.
+She found out that technicians are doing a lot of quality checks by hand.
+She sees there is a good opportunity for automation and asks you, a freelance developer, to develop a piece of software to monitor some of the machines.
 
 ## 1. Monitor the humidity level of the room
 
@@ -63,20 +65,26 @@ Implements a function `monitorTheMachine` that takes an argument `actions`.
 
 `actions` is an object that has 4 properties :
 
-- `check` is a _*function*_ that, when called, checks the temperature of the machine.
-  It may throw various errors
+| property           | description                                                                         |
+| ------------------ | ----------------------------------------------------------------------------------- |
+| `check`            | a _*function*_. Checks the temperature of the machine. It may throw various errors. |
+| `alertDeadSensor`  | a _*function*_. Alerts a technician that the temperature's sensor is dead.          |
+| `alertOverheating` | a _*function*_. Will turn on a warning light on the machine.                        |
+| `shutdown`         | a _*function*_. Will turn off the machine.                                          |
 
-- `alertDeadSensor` is a _*function*_ that, when called, alerts a technician that the temperature's sensor is dead.
+The `monitorTheMachine(actions)` function should internally call `check()`.
+If that passes, the function should not return anything.
+If that `throw`s an error, different behaviour is expected:
 
-- `alertOverheating` is a _*function*_ that, when called, will turn on a warning light on the machine.
+| exception          | expected behaviour                   |
+| ------------------ | ------------------------------------ |
+| `ArgumentError`    | call the `alertDeadSensor` function. |
+| `OverheatingError` | execute the overheating protocol.    |
+| _(anything else)_  | rethrow the error                    |
 
-- `shutdown` is a _*function*_ that, when called, will turn off the machine.
-
-The `monitorTheMachine` function should call `check()`. If it passes, the function should not return anything. However, it may `throw` an error. When this happens, you should, depending on the error:
-
-- `ArgumentError`: when this happens, call the `alertDeadSensor` function.
-- `OverheatingError`: when this happens, if the temperature is less than 600 °C, call the `alertOverheating` function to turn on the warning light. If the temperature exceeds 600°C, the situation is critical, call the `shutdown` function.
-- _anything else_: when this happens, rethrow the error
+**Overheating protocol**
+If the temperature is less than 600 °C, turn on the warning light by calling the `alertOverheating` function.
+If the temperature exceeds 600 °C, the situation is critical, so call the `shutdown` function.
 
 ```javascript
 monitorTheMachine({

@@ -33,12 +33,13 @@ numbers;
 
 ## Methods
 
-Some of the [methods][array_methods] that are available on every Array object can be used to add or remove from the array.
+Some of the [methods][mdn-array] that are available on every Array object can be used to add or remove from the array.
 Here are a few to consider when working on this exercise:
 
 ### push
 
-> The `push()` method adds one or more elements to the end of an array and returns the new length of the array.[^1]
+A `value` can be _added_ to the end of an array by using `.push(value)`.
+The method returns the new length of the array.
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
@@ -49,8 +50,9 @@ numbers;
 
 ### pop
 
-> The `pop()` method removes the last element from an array and returns that element.
-> This method changes the length of the array.[^2]
+The _last_ `value` can be _removed_ from an array by using `.pop()`
+The method returns the removed value.
+The length of the array will be decreased because of this change.
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
@@ -61,8 +63,9 @@ numbers;
 
 ### shift
 
-> The `shift()` method removes the first element from an array and returns that removed element.
-> This method changes the length of the array.[^3]
+The _first_ `value` can be _removed_ from an array by using `.shift()`
+The method returns the removed value.
+The length of the array will be decreased because of this change.
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
@@ -73,7 +76,8 @@ numbers;
 
 ### unshift
 
-> The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.[^4]
+A `value` can be _added_ to the beginning of an array by using `.unshift(value)`.
+The method returns the new length of the array.
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
@@ -84,8 +88,8 @@ numbers;
 
 ### splice
 
-> The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
-> This method returns an array containing the deleted elements.[^5]
+A `value` at a specific `index` can be _removed_ from an array by using `.splice(index, 1)`.
+The method returns the removed element(s).
 
 ```javascript
 const numbers = [1, 'two', 3, 'four'];
@@ -94,16 +98,17 @@ numbers;
 // => [1, 'two', 'one', 'four']
 ```
 
----
+<!-- prettier-ignore -->
+~~~exercism/advanced
+These methods are more powerful than described:
 
-[^1]: `push`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push (referenced September 29, 2021)
+- Both `push` and `unshift` allow you to push or unshift multiple values at once, by adding more arguments.
+  That is not necessary to complete this exercise.
+- Splice can remove multiple values by increasing the second argument.
+  That is not necessary to complete this exercise.
+- Splice can also add multiple values by adding them as arguments after the `deleteCount`.
+  This can be used to replace values, or insert values in the middle of an array (for example by removing 0 elements).
+  That is not necessary to complete this exercise.
+~~~
 
-[^2]: `pop`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop (referenced September 29, 2021)
-
-[^3]: `shift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift (referenced September 29, 2021)
-
-[^4]: `unshift`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift (referenced September 29, 2021)
-
-[^5]: `splice`, MDN. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice (referenced September 29, 2021)
-
-[array_methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+[mdn-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
