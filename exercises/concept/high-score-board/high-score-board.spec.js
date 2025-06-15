@@ -3,7 +3,6 @@ import {
   addPlayer,
   applyMondayBonus,
   createScoreBoard,
-  normalizeScore,
   removePlayer,
   updateScore,
 } from './high-score-board';
@@ -128,29 +127,5 @@ describe('applyMondayBonus', () => {
 
     // This checks that the same object that was passed in is returned.
     expect(Object.is(actual, scoreBoard)).toBe(true);
-  });
-});
-
-describe('normalizeScore', () => {
-  test('applies the normalization function', () => {
-    const params = {
-      score: 45,
-      normalizeFunction: function (score) {
-        return score * 3 - 10;
-      },
-    };
-
-    expect(normalizeScore(params)).toEqual(125);
-  });
-
-  test('works for different params', () => {
-    const params = {
-      score: 2100,
-      normalizeFunction: function (score) {
-        return score / 2 + 100;
-      },
-    };
-
-    expect(normalizeScore(params)).toEqual(1150);
   });
 });
