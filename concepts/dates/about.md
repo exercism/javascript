@@ -50,36 +50,35 @@ The **only** format that is consistent across implementations is the [simplified
 A moment in time at [UTC][defn-gmt] looks like this:
 
 ```text
-YYYY-MM-DDTHH:MM:SSZ
-YYYYMMDDTHHMMSSZ
+YYYY-MM-DDTHH:mm:ss.mssZ
+YYYYMMDDTHHmmss.mssZ
 ```
 
 Where the following substitutions take place:
 
-| Key  | Description                                 |
-| ---- | ------------------------------------------- |
-| YYYY | The calendar year, represented in 4 digits  |
-| MM   | The calendar month, represented in 2 digits |
-| DD   | The calendar day, represented in 2 digits   |
-| HH   | The hours in a 24-hour clock, 2 digits      |
-| MM   | The minutes, 2 digits                       |
-| SS   | The seconds, 2 digits                       |
+| Key  | Description                                   | Default |
+| ---- | --------------------------------------------- | ------- |
+| YYYY | The calendar year, represented in 4 digits    |         |
+| MM   | The calendar month, represented in 2 digits   | 01      |
+| DD   | The calendar day, represented in 2 digits     | 01      |
+| T    | A literal letter T, separating date from time |         |
+| HH   | The hours in a 24-hour clock, 2 digits        | 00      |
+| mm   | The minutes, 2 digits                         | 00      |
+| ss   | The seconds, 2 digits                         | 00      |
+| mss  | The milliseconds, 3 digits                    | 000     |
+| Z    | A literal letter Z, or an offset `+/-HH:mm`   |         |
 
-The letter `T` separates the date from the time.
-The letter `Z` indicates UTC (no timezone, no Day Light Savings).
+The literal letter `Z` indicates UTC (no timezone, no Day Light Savings).
 
-<!-- prettier-ignore -->
-~~~exercism/caution
-Other formats that are accepted by `Date.parse` may or may not work.
-When working with Dates in JavaScript, _always_ use an ISO 8601 timestamp when converting from a `string` to a `Date`.
+Because there are default values for most components, leaving parts off at the end is valid:
 
-Date-only forms are allowed, but not all ISO 8601 formats are supported.
-Consult the [simplified version explanation page on MDN][mdn-date-string-format].
+```text
+YYYY-MM-DD
+```
 
-[mdn-date-string-format]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
-~~~
+Defaults to a time of 00:00:00.000
 
-If the timestamp does not end in `Z`, and it does not end with `+HH:MM` or `-HH:MM`, indicating a timezone offset, because of historical reasons, the following applies:
+If the timestamp does not end in `Z`, and it does not end with `+HH:mm` or `-HH:mm` (indicating a timezone offset), because of historical reasons, the following applies:
 
 > When the time zone offset is absent, date-only forms are interpreted as a UTC time and date-time forms are interpreted as a local time.
 > The interpretation as a UTC time is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility.
