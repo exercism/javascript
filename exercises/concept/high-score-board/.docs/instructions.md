@@ -87,26 +87,3 @@ const scoreBoard = {
 applyMondayBonus(scoreBoard);
 // => { 'Dave Thomas': 144, 'Freyja Ćirić': 639, 'José Valim': 365 }
 ```
-
-## 6. Normalize a high score
-
-Different arcade halls award different score points.
-To celebrate the best arcade player in town, a player's score needs to be normalized so scores from different arcade halls become comparable.
-
-Write a function `normalizeScore`.
-To practice your object skills, instead of two parameters this function should accept one object as a parameter.
-That object contains a key `score` with the value being a player's score (a number).
-There is also a second key `normalizeFunction` that has a function as its value.
-This function takes a score as an argument and returns the corrected score.
-
-Your function `normalizeScore` should return the normalized score that you get after applying the normalization function to the score that was passed in.
-
-```javascript
-function normalize(score) {
-  return 2 * score + 10;
-}
-
-const params = { score: 400, normalizeFunction: normalize };
-normalizeScore(params);
-// => 810
-```
