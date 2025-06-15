@@ -30,7 +30,7 @@ export function frontDoorPassword(word) {
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  return line.slice(-1);
+  return line.trimEnd().slice(-1);
 }
 
 /**
