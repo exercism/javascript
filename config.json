@@ -2858,6 +2858,11 @@
       "uuid": "4e68e39a-e36c-4d2d-8714-eb6482e31ff5",
       "slug": "while-loops",
       "name": "While Loops"
+    },
+     {
+      "uuid": "65cf28ab-243c-41cb-a720-f324f2cabe28",
+      "slug": "randomness",
+      "name": "Randomness",
     }
   ],
   "key_features": [
