@@ -30,9 +30,6 @@ describe('randomStardate',() => {
       1, 1, 1, 1, 1, 1,
       0.5, 0.5, 0.5, 0.5, 0.5, 0.5
     );
-    
-    // 6 * 0, 6 * 1, 6 * 0.5 and everything else random
-    
     for (let i = 0; i < 10_000; i++) {
       const starDate = randomStardate()
       expect(starDate).toBeGreaterThanOrEqual(41_000);
@@ -43,12 +40,20 @@ describe('randomStardate',() => {
 }
 describe('randomPlanetClass', () => {
   test('planet classes are valid',  () => {
-    const planetClasses = ['D', 'H', 'J', 'K', 'L', 'M', 'N', 'R', 'T', 'Y'];
-    for (let i=0;i<4; i++){
-      expect(planetClasses).toContain(randomPlanetClass())
+    const expected = 'DHJKLMNRTY'
+    const seen = {}
+    for (let i=0; i < 1_000; i++){
+      const actual = randomPlanetClass()
+      expect(expected).toContain(actual)
     }
-  });
-  test('returns a random planet class',() => {
-    expect(randomPlanetClass()).not.toEqual(randomPlanetClass())
-  });
-});
+  })
+  test('all planet classes can be returned',  () => {
+    const expected = 'DHJKLMNRTY'
+    const seen = {}
+    for (let i=0; i < 1_000; i++){
+      const actual = randomPlanetClass()
+      seen[actual] = true
+    }
+    expected(Object.keys(seen).length).toBe(expected.length);
+  }) 
+})
