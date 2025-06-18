@@ -3,11 +3,11 @@ import { randomShipRegistryNumber, randomStardate, randomPlanetClass } from './c
 describe('randomShipRegistryNumber',() => {
   test('registry numbers are valid',() => {
     for (let i=0;i<4; i++){
-      expect(randomShipRegistryNumber()).toMatch(/NCC-[1-9][0-9]{3}/))
+      expect(randomShipRegistryNumber()).toMatch(/NCC-[1-9][0-9]{3}/)
     }
   });
   test('returns a random registry number',() => {
-    expect(randomShipRegistryNumber()).not.toEqual(randomShipRegistryNumber()) 
+    expect(randomShipRegistryNumber()).not.toEqual(randomShipRegistryNumber())
   });
 });
 function loadDie(...values) {
