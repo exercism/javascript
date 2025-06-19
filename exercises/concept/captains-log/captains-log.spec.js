@@ -14,7 +14,7 @@ describe('randomShipRegistryNumber', () => {
 });
 
 function loadDie(...values) {
-  const originalRandom = Math.random();
+  const originalRandom = Math.random;
   
   Math.random = function loadedDie() { 
     if (values.length === 0) {
