@@ -15,7 +15,6 @@ The goal of this exercise is to teach the student how to generate psuedorandom n
 - Details of pseudorandom number generation in general.
 - Different algorithms for pseudorandom number generation.
 
-
 ## Concepts
 
 The Concepts this exercise unlocks are:

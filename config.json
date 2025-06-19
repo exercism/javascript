@@ -424,12 +424,17 @@
         "status": "beta"
       },
       {
-      "uuid": "65cf28ab-243c-41cb-a720-f324f2cabe28",
-      "slug": "captains-log",
-      "name": "Captain's Log",
-      "concepts": ["randomness"],
-      "prerequisites": ["numbers", "arithmetic-operators"]
-    }
+        "slug": "captains-log",
+        "name": "Captain's Log",
+        "uuid": "65cf28ab-243c-41cb-a720-f324f2cabe28",
+        "concepts": [
+          "randomness"
+        ],
+        "prerequisites": [
+          "numbers",
+          "arithmetic-operators"
+        ]
+      }
     ],
     "practice": [
       {
@@ -2859,7 +2864,7 @@
       "slug": "while-loops",
       "name": "While Loops"
     },
-     {
+    {
       "uuid": "ca322d6f-0f7e-4a2d-a058-e98a59cdae93",
       "slug": "randomness",
       "name": "Randomness"
