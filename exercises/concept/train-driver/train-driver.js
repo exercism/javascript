@@ -18,7 +18,7 @@ export function getListOfWagons(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
  * Reorder the array of wagons by moving the first 2 wagons to the end of the array.
  *
  * @param {Iterable<number>} ids
- * @returns {number[]} reorderd list of wagons
+ * @returns {number[]} reordered list of wagons
  */
 export function fixListOfWagons(ids) {
   throw new Error('Please implement the fixListOfWagons function');
