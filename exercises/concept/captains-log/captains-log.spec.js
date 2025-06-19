@@ -30,9 +30,13 @@ function loadDie(...values) {
 
 describe('randomStardate', () => {
   test('stardate is between 41000 and 42000', () => {
+    const min = 0;
+    const max = 1 - Number.EPSILON;
+    
+    // prettier-ignore
     const restore = loadDie(
-      0, 0, 0, 0, 0, 0,
-      1, 1, 1, 1, 1, 1,
+      min, min, min, min, min, min,
+      max, max, max, max, max, max,
       0.5, 0.5, 0.5, 0.5, 0.5, 0.5
     );
     
