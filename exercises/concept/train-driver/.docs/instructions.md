@@ -19,7 +19,7 @@ The function should then return the given IDs as a single `array`.
 
 ```javascript
 getListOfWagons(1, 7, 12, 3, 14, 8, 5);
-// => [1, 7, 12, 3, 14, 8, 3]
+// => [1, 7, 12, 3, 14, 8, 5]
 ```
 
 ## 2. Move the first two elements to the end of the array
@@ -87,7 +87,7 @@ Your friend has noticed that they don't need the arrival time in the routing inf
 Therefore your friend would like you to separate the arrival time from the routing information.
 
 Implement a function `separateTimeOfArrival` that accepts an object with the routing information.
-The function should return an array there the first element of the array is the arrival time and the second element is an object with the routing information without arrival time.
+The function should return an array where the first element of the array is the arrival time and the second element is an object with the routing information without arrival time.
 
 ```javascript
 routeInformation = {

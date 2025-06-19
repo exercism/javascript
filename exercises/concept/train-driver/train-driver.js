@@ -7,7 +7,7 @@
 /**
  * Return each wagon's id in form of an array.
  *
- * @param {number[]} ids
+ * @param {...numbers} ids
  * @returns {number[]} wagon ids
  */
 export function getListOfWagons(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
