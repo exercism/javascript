@@ -69,6 +69,7 @@ describe('cost with monthly discount', () => {
     const expected = 14528;
     expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
   });
+
   test('at 29.654321/hour for 220 days with 11.2%', () => {
     const actual = priceWithMonthlyDiscount(29.654321, 220, 0.112);
     const expected = 46347;
