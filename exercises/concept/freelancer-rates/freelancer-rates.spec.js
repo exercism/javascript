@@ -58,17 +58,17 @@ describe('days in budget', () => {
 });
 
 describe('cost with monthly discount', () => {
-    test('at 16/hour for 70 days', () => {
-      const actual = priceWithMonthlyDiscount(16, 70, 0);
-      const expected = 8960;
-      expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
-    });
+  test('at 16/hour for 70 days', () => {
+    const actual = priceWithMonthlyDiscount(16, 70, 0);
+    const expected = 8960;
+    expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
+  });
 
-    test('at 16/hour for 130 days with 15% discount', () => {
-      const actual = priceWithMonthlyDiscount(16, 130, 0.15);
-      const expected = 14528;
-      expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
-    });
+  test('at 16/hour for 130 days with 15% discount', () => {
+    const actual = priceWithMonthlyDiscount(16, 130, 0.15);
+    const expected = 14528;
+    expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
+  });
   test('at 29.654321/hour for 220 days with 11.2%', () => {
     const actual = priceWithMonthlyDiscount(29.654321, 220, 0.112);
     const expected = 46347;
