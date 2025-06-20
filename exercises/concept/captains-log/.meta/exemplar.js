@@ -19,12 +19,12 @@ export function randomStardate() {
 }
 
 const PLANET_CLASSES = 'DHJKLMNRTY';
-  
+
 /**
  * Generates a random planet class.
  *
  * @returns {string} a one-letter planet class.
  */
 export function randomPlanetClass() {
-   return PLANET_CLASSES[Math.floor(Math.random() * PLANET_CLASSES.length)];
+  return PLANET_CLASSES[Math.floor(Math.random() * PLANET_CLASSES.length)];
 }

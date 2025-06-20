@@ -52,10 +52,10 @@ Using the multiplication technique spreads out the bias over the entire range, s
 
 [bias]: https://adammil.net/blog/v134_Efficiently_generating_random_numbers_without_bias.html
 ~~~
+
 ## Generating random integers
 
 To generate a random integer, you can use `Math.floor()` or `Math.ceil()` to turn a randomly generated number into an integer.
-
 
 [why-randomness-is-hard]: https://www.malwarebytes.com/blog/news/2013/09/in-computers-are-random-numbers-really-random
 [Math.random]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
