@@ -34,7 +34,8 @@ randomStardate();
 
 The Starship Enterprise encounters many planets in its travels. Planets in the Star Trek universe are split into categories based on their properties. For example, Earth is a class M planet. All possible planetary classes are: D, H, J, K, L, M, N, R, T, and Y.
 
-Implement the randomPlanetClassfunction. It should return one of the planetary classes at random.
+Implement the randomPlanetClassfunction.
+ It should return one of the planetary classes at random.
 
 ```javascript
 randomPlanetClass();
