@@ -14,7 +14,7 @@ When it rendezvous with another starship, Mary needs to log the registry number 
 
 Registry numbers start with the prefix "NCC-" and then use a number from 1000 to 9999 (both inclusive).
 
-Implement the randomShipRegistryNumber() function that returns a random starship registry number.
+Implement the `randomShipRegistryNumber()` function that returns a random starship registry number.
 
 ```javascript
 randomShipRegistryNumber();
@@ -29,7 +29,7 @@ A stardate is a floating point number.
 The adventures of the Starship Enterprise from the first season of The Next Generation take place between the stardates 41000.0 and 42000.0.
 The "4" stands for the 24th century, the "1" for the first season.
 
-Implement the function randomStardate that returns a floating point number between 41000.0 (inclusive) and 42000.0 (exclusive).
+Implement the function `randomStardate` that returns a floating point number between 41000.0 (inclusive) and 42000.0 (exclusive).
 
 ```javascript
 randomStardate();
@@ -43,7 +43,7 @@ Planets in the Star Trek universe are split into categories based on their prope
 For example, Earth is a class M planet.
 All possible planetary classes are: D, H, J, K, L, M, N, R, T, and Y.
 
-Implement the randomPlanetClassfunction.
+Implement the `randomPlanetClass()` function.
 It should return one of the planetary classes at random.
 
 ```javascript

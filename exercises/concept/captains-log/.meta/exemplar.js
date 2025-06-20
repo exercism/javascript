@@ -1,4 +1,3 @@
-/// <reference path="./global.d.ts" />
 // @ts-check
 
 /**
@@ -7,7 +6,7 @@
  * @returns {string} the generated registry number.
  */
 export function randomShipRegistryNumber() {
-  return 'NCC-' + Math.floor(1000 + Math.random() * 9000);
+  return `NCC-${Math.floor(1000 + Math.random() * 9000)}`;
 }
 
 /**
@@ -19,12 +18,13 @@ export function randomStardate() {
   return 41000 + Math.random() * 1000;
 }
 
+const PLANET_CLASSES = 'DHJKLMNRTY';
+  
 /**
  * Generates a random planet class.
  *
  * @returns {string} a one-letter planet class.
  */
 export function randomPlanetClass() {
-  const planetClasses = ['D', 'H', 'J', 'K', 'L', 'M', 'N', 'R', 'T', 'Y'];
-  return planetClasses[Math.floor(Math.random() * 10)];
+   return PLANET_CLASSES[Math.floor(Math.random() * PLANET_CLASSES.length)];
 }

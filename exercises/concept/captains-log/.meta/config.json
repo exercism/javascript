@@ -2,6 +2,9 @@
   "authors": [
     "SneakyMallard"
   ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "captains-log.js"
