@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "SneakyMallard"
+  ],
+  "contributors": [
+    "SleeplessByte"
+  ],
+  "files": {
+    "solution": [
+      "captains-log.js"
+    ],
+    "test": [
+      "captains-log.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
+  },
+  "blurb": "Learn about randomness and the Math.random() function while helping Mary generate stardates and starship registry numbers for her Star Trek roleplay."
+}
