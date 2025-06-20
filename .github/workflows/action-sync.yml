@@ -3,7 +3,8 @@ name: 'javascript / sync'
 on:
   issue_comment:
     types: [created]
-
+  workflow_dispatch:
+  
 jobs:
   format:
     name: 'Sync all exercises'
