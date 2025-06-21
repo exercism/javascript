@@ -42,5 +42,33 @@ describe('High Scores Test Suite', () => {
       const input = [40];
       expect(new HighScores(input).personalTopThree).toEqual([40]);
     });
+
+    xtest('Latest score after personal top scores', () => {
+      const input = [70, 50, 20, 30];
+      const highScores = new HighScores(input);
+      highScores.personalTopThree; 
+      expect(highScores.latest).toEqual(30);
+    });
+    
+    xtest('Scores after personal top scores', () => {
+      const input = [30, 50, 20, 70];
+      const highScores = new HighScores(input);
+      highScores.personalTopThree; 
+      expect(highScores.scores).toEqual(input);
+    });
+
+    xtest('Latest score after personal best', () => {
+      const input = [20, 70, 15, 25, 30];
+      const highScores = new HighScores(input);
+      highScores.personalBest; 
+      expect(highScores.latest).toEqual(30);
+    });
+
+    xtest('Scores after personal best', () => {
+      const input = [20, 70, 15, 25, 30];
+      const highScores = new HighScores(input);
+      highScores.personalBest; 
+      expect(highScores.scores).toEqual(input);
+    });
   });
 });
