@@ -35,7 +35,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 +');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
 
     xtest('more than two values on the stack', () => {
@@ -59,7 +59,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 -');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
 
     xtest('more than two values on the stack', () => {
@@ -83,7 +83,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 *');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
 
     xtest('more than two values on the stack', () => {
@@ -118,7 +118,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 /');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
 
     xtest('more than two values on the stack', () => {
@@ -205,7 +205,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 swap');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
   });
 
@@ -229,7 +229,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 over');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
   });
 
