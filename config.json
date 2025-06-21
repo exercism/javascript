@@ -432,7 +432,10 @@
         ],
         "prerequisites": [
           "numbers",
-          "arithmetic-operators"
+          "arithmetic-operators",
+          "strings",
+          "objects",
+          "functions"
         ]
       }
     ],
