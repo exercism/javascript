@@ -8,6 +8,12 @@ describe('append entries to a list and return the new list', () => {
     expect(list1.append(list2)).toEqual(new List());
   });
 
+  xtest('list to empty list', () => {
+    const list1 = new List();
+    const list2 = new List([1, 2, 3, 4]);
+    expect(list1.append(list2)).toEqual(list2);
+  });
+
   xtest('empty list to list', () => {
     const list1 = new List([1, 2, 3, 4]);
     const list2 = new List();
@@ -35,6 +41,15 @@ describe('concat lists and lists of lists into new list', () => {
     const list4 = new List([4, 5, 6]);
     const listOfLists = new List([list2, list3, list4]);
     expect(list1.concat(listOfLists).values).toEqual([1, 2, 3, 4, 5, 6]);
+  });
+
+  xtest('list of nested lists', () => {
+    const list1 = new List([[1], [2]]);
+    const list2 = new List([[3]]);
+    const list3 = new List([[]]);
+    const list4 = new List([[4, 5, 6]]);
+    const listOfNestedLists = new List([list2, list3, list4]);
+    expect(list1.concat(listOfNestedLists).values).toEqual([[1], [2], [3], [], [4, 5, 6]]);
   });
 });
 
