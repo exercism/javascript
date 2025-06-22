@@ -49,7 +49,13 @@ describe('concat lists and lists of lists into new list', () => {
     const list3 = new List([[]]);
     const list4 = new List([[4, 5, 6]]);
     const listOfNestedLists = new List([list2, list3, list4]);
-    expect(list1.concat(listOfNestedLists).values).toEqual([[1], [2], [3], [], [4, 5, 6]]);
+    expect(list1.concat(listOfNestedLists).values).toEqual([
+      [1],
+      [2],
+      [3],
+      [],
+      [4, 5, 6],
+    ]);
   });
 });
 
