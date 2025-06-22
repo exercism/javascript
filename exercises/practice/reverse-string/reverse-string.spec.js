@@ -46,7 +46,7 @@ describe('ReverseString', () => {
 
   // The following test cases deal with complex characters.
   // You can optionally enable these tests by removing `.skip` from the test.
-  
+
   test.skip('grapheme cluster with pre-combined form', () => {
     const expected = 'dnatsnehctsrüW';
     const actual = reverseString('Würstchenstand');
