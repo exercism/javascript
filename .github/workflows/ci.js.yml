@@ -6,6 +6,7 @@ name: javascript / main
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   precheck:

@@ -3,6 +3,7 @@ name: 'javascript / format'
 on:
   issue_comment:
     types: [created]
+  workflow_dispatch:
 
 jobs:
   format:
