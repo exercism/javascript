@@ -208,7 +208,6 @@
         ],
         "prerequisites": [
           "arrays",
-          "arrow-functions",
           "callbacks",
           "for-loops",
           "conditionals"
@@ -298,6 +297,7 @@
           "objects"
         ],
         "prerequisites": [
+          "arithmetic-operators",
           "for-loops"
         ],
         "status": "beta"
@@ -356,7 +356,6 @@
           "array-transformations"
         ],
         "prerequisites": [
-          "arrow-functions",
           "numbers",
           "arrays",
           "conditionals",
