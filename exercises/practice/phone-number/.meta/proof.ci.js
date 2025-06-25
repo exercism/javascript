@@ -17,11 +17,11 @@ export const clean = (number) => {
   }
 
   if (numberLength < 10) {
-    throw new Error('Incorrect number of digits');
+    throw new Error('Must not be fewer than 10 digits');
   }
 
   if (numberLength > 11) {
-    throw new Error('More than 11 digits');
+    throw new Error('Must not be greater than 11 digits');
   }
 
   if (strippedNumber.substring(0, 1) === '0') {
