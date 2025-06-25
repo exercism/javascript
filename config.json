@@ -2234,7 +2234,11 @@
           "randomness",
           "classes"
         ],
-        "difficulty": 2
+        "difficulty": 2,
+        "topics": [
+          "classes",
+          "randomness"
+        ]
       },
       {
         "slug": "run-length-encoding",
