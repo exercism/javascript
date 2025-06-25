@@ -2229,8 +2229,13 @@
         "slug": "dnd-character",
         "name": "D&D Character",
         "uuid": "b373e13c-f179-4b36-b6e8-2a0f41540344",
-        "practices": ["randomness"],
-        "prerequisites": ["randomness","classes"],
+        "practices": [
+          "randomness"
+        ],
+        "prerequisites": [
+          "randomness",
+          "classes"
+        ],
         "difficulty": 2
       },
       {
