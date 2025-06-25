@@ -34,6 +34,10 @@ describe('Luhn', () => {
     expect(valid('1 2345 6789 1234 5678 9012')).toEqual(false);
   });
 
+  xtest('invalid long number with a remainder divisible by 5', () => {
+    expect(valid('1 2345 6789 1234 5678 9013')).toEqual(false);
+  });
+
   xtest('valid number with an even number of digits', () => {
     expect(valid('095 245 88')).toEqual(true);
   });
@@ -66,11 +70,23 @@ describe('Luhn', () => {
     expect(valid('091')).toEqual(true);
   });
 
+  xtest('very long input is valid', () => {
+    expect(valid('9999999999 9999999999 9999999999 9999999999')).toEqual(true);
+  });
+
+  xtest('valid luhn with an odd number of digits and non zero first digit', () => {
+    expect(valid('109')).toEqual(true);
+  });
+
   xtest("using ascii value for non-doubled non-digit isn't allowed", () => {
     expect(valid('055b 444 285')).toEqual(false);
   });
 
   xtest("using ascii value for doubled non-digit isn't allowed", () => {
     expect(valid(':9')).toEqual(false);
+  });
+
+  xtest("non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed", () => {
+    expect(valid('59%59')).toEqual(false);
   });
 });

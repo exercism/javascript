@@ -35,7 +35,12 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 +');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
+    });
+
+    xtest('more than two values on the stack', () => {
+      forth.evaluate('1 2 3 +');
+      expect(forth.stack).toEqual([1, 5]);
     });
   });
 
@@ -54,7 +59,12 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 -');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
+    });
+
+    xtest('more than two values on the stack', () => {
+      forth.evaluate('1 12 3 -');
+      expect(forth.stack).toEqual([1, 9]);
     });
   });
 
@@ -73,7 +83,12 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 *');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
+    });
+
+    xtest('more than two values on the stack', () => {
+      forth.evaluate('1 2 3 *');
+      expect(forth.stack).toEqual([1, 6]);
     });
   });
 
@@ -103,7 +118,12 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 /');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
+    });
+
+    xtest('more than two values on the stack', () => {
+      forth.evaluate('1 12 3 /');
+      expect(forth.stack).toEqual([1, 4]);
     });
   });
 
@@ -116,6 +136,16 @@ describe('Forth', () => {
     xtest('multiplication and division', () => {
       forth.evaluate('2 4 * 3 /');
       expect(forth.stack).toEqual([2]);
+    });
+
+    xtest('multiplication and addition', () => {
+      forth.evaluate('1 3 4 * +');
+      expect(forth.stack).toEqual([13]);
+    });
+
+    xtest('addition and multiplication', () => {
+      forth.evaluate('1 3 4 + *');
+      expect(forth.stack).toEqual([7]);
     });
   });
 
@@ -175,7 +205,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 swap');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
   });
 
@@ -199,7 +229,7 @@ describe('Forth', () => {
     xtest('errors if there is only one value on the stack', () => {
       expect(() => {
         forth.evaluate('1 over');
-      }).toThrow(new Error('Stack empty'));
+      }).toThrow(new Error('Only one value on the stack'));
     });
   });
 
@@ -250,11 +280,12 @@ describe('Forth', () => {
       expect(forth.stack).toEqual([11]);
     });
 
-    xtest('cannot redefine numbers', () => {
+    xtest('cannot redefine non-negative numbers', () => {
       expect(() => {
         forth.evaluate(': 1 2 ;');
       }).toThrow(new Error('Invalid definition'));
     });
+
     xtest('cannot redefine negative numbers', () => {
       expect(() => {
         forth.evaluate(': -1 2 ;');
