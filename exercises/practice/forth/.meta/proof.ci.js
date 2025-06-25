@@ -67,7 +67,7 @@ export class Forth {
 
   performCommand(command) {
     if (command.arity > this.stack.length) {
-      if (this.stack.length == 1) {
+      if (this.stack.length === 1) {
         throw new Error('Only one value on the stack');
       }
       throw new Error('Stack empty');
