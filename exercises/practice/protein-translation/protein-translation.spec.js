@@ -2,7 +2,7 @@ import { describe, expect, test, xtest } from '@jest/globals';
 import { translate } from './protein-translation';
 
 describe('ProteinTranslation', () => {
-  test('Empty RNA has no proteins', () => {
+  test('Empty RNA sequence results in no proteins', () => {
     expect(translate()).toEqual([]);
   });
 
@@ -71,13 +71,13 @@ describe('ProteinTranslation', () => {
         'Tyrosine',
       ]);
     });
+
+    xtest('Sequence of two non-STOP codons does not translate to a STOP codon', () => {
+      expect(translate('AUGAUG')).toEqual(['Methionine', 'Methionine']);
+    });
   });
 
   describe('Unexpected strands', () => {
-    xtest("Non-existing codon can't translate", () => {
-      expect(() => translate('AAA')).toThrow(new Error('Invalid codon'));
-    });
-
     xtest("Unknown amino acids, not part of a codon, can't translate", () => {
       expect(() => translate('XYZ')).toThrow(new Error('Invalid codon'));
     });
