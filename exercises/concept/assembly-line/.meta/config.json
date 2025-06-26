@@ -1,5 +1,5 @@
 {
-  "authors": [],
+  "authors": ["quintuple-mallard"],
   "files": {
     "solution": [
       "assembly-line.js"
@@ -11,5 +11,5 @@
       ".meta/exemplar.js"
     ]
   },
-  "blurb": ""
+  "blurb": "Learn about type checking while helping [company] manage their factory"
 }
