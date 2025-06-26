@@ -1,5 +1,7 @@
 {
-  "authors": ["quintuple-mallard"],
+  "authors": [
+    "quintuple-mallard"
+  ],
   "files": {
     "solution": [
       "assembly-line.js"
