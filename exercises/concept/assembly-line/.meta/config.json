@@ -1,5 +1,7 @@
 {
   "authors": ["quintuple-mallard"],
+  "prerequisites":["basics"],
+  "concepts":["type-checking"],
   "files": {
     "solution": [
       "assembly-line.js"
