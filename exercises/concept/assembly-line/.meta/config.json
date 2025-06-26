@@ -1,7 +1,5 @@
 {
   "authors": ["quintuple-mallard"],
-  "prerequisites":["basics"],
-  "concepts":["type-checking"],
   "files": {
     "solution": [
       "assembly-line.js"
@@ -11,7 +9,9 @@
     ],
     "exemplar": [
       ".meta/exemplar.js"
-    ]
+    ],
+  "prerequisites":["basics"],
+  "concepts":["type-checking"],
   },
   "blurb": "Learn about type checking while helping [company] manage their factory"
 }
