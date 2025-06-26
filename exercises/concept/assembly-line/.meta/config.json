@@ -1,0 +1,15 @@
+{
+  "authors": [],
+  "files": {
+    "solution": [
+      "assembly-line.js"
+    ],
+    "test": [
+      "assembly-line.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ]
+  },
+  "blurb": ""
+}
