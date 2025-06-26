@@ -43,7 +43,7 @@ To clarify, `instanceof` will return whether the first operand is an instance of
 class Beverage {
   // ...
 }
-// The Dog class is a child of the Pet class.
+// The Coffee class is a child of the Beverage class.
 class Coffee extends Beverage {
   // ...
 }
@@ -65,6 +65,66 @@ This is because the Array class has a different constructor in each `iframe`, me
 `Array.isArray()` is capable of ignoring this, and should always be used when possible.
 ~~~~
 ## The `in` operator
+
+The `in` operator returns whether the first operand is a property of the second operand.
+It does not check that the property is defined, a property set to `undefined` will still be detected by `in`.
+```javascript
+class Coffee {
+  constructor() {
+    this.temperature = "hot";
+    this.isDarkMatter = undefined;
+  }
+  coolDown() {
+    this.temperature = "warm"
+  }
+}
+const espresso = new Coffee()
+
+"temperature" in espresso
+// => true
+
+"color" in espresso
+// => false
+
+"isDarkMatter" in espresso
+// => true
+
+```
+~~~~exercism/note
+`in` can be slightly unreliable, as it will return `true` for inherited properties and methods.
+```javascript
+"coolDown" in espresso
+// => true
+
+"constructor" in espresso
+// => true
+```
+To avoid this, use the hasOwnProperty() method.
+~~~~
+## The `hasOwnProperty()` method
+
+The `hasOwnProperty()` method returns whether the specified object has _its own property_ (not inherited or a method) that matches a string.
+```javascript
+class Coffee{
+  constructor() {
+    this.temperature = "hot";
+    this.isDarkMatter = undefined;
+  }
+  coolDown() {
+    this.temperature = "warm"
+  }
+}
+const cappuccino = new Coffee()
+
+cappuccino.hasOwnProperty("temperature")
+// => true
+
+cappuccino.hasOwnProperty("constructor")
+// => false
+
+cappuccino.hasOwnProperty("coolDown")
+// => false
+```
 
 [primitives]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 [typeof null is object]: https://2ality.com/2013/10/typeof-null.html
