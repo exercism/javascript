@@ -6,30 +6,34 @@ Javascript has several ways to check the type of an object.
 
 ## The `typeof` operator
 
-The `typeof` operator returns the type of its input. 
+The `typeof` operator returns the type of its input.
 The output is restricted to one of the [primitive data types][primitives], `"function"` or `"object"`.
+
 ```javascript
-typeof undefined
+typeof undefined;
 // => "undefined"
 
-typeof true
+typeof true;
 // => "boolean"
 
-typeof 42
+typeof 42;
 // => "number"
 
-typeof "Hello, World!"
+typeof 'Hello, World!';
 // => "string"
 
-typeof function () {return "Hello, World"}
+typeof function () {
+  return 'Hello, World';
+};
 // => "function"
 
-typeof [1,2,3,4]
+typeof [1, 2, 3, 4];
 // => "object"
 
-typeof {city: "Stockholm", country: "Sweden"}
+typeof { city: 'Stockholm', country: 'Sweden' };
 // => "object"
 ```
+
 The one exception to this is that `typeof null` returns `"object"` for [historical reasons][typeof null is object].
 
 ## The `instanceof` operator
@@ -47,50 +51,52 @@ class Beverage {
 class Coffee extends Beverage {
   // ...
 }
-const java = new Coffee()
+const java = new Coffee();
 
-java instanceof Coffee
+java instanceof Coffee;
 // => true
 
-java instanceof Beverage
+java instanceof Beverage;
 // => true
-
 ```
-~~~~exercism/advanced
+
+```exercism/advanced
 The `Array` class has a method called `Array.isArray()` that checks if its argument is an array.
 
 While `instanceof Array` will not work with an array created in a different `iframe` in a webpage, `Array.isArray()` will.
 
 This is because the Array class has a different constructor in each `iframe`, meaning that the function in the prototype chain will be different, causing `instanceof Array` to fail.
 `Array.isArray()` is capable of ignoring this, and should always be used when possible.
-~~~~
+```
+
 ## The `in` operator
 
 The `in` operator returns whether the first operand is a property of the second operand.
 It does not check that the property is defined, a property set to `undefined` will still be detected by `in`.
+
 ```javascript
 class Coffee {
   constructor() {
-    this.temperature = "hot";
+    this.temperature = 'hot';
     this.isDarkMatter = undefined;
   }
   coolDown() {
-    this.temperature = "warm"
+    this.temperature = 'warm';
   }
 }
-const espresso = new Coffee()
+const espresso = new Coffee();
 
-"temperature" in espresso
+'temperature' in espresso;
 // => true
 
-"color" in espresso
+'color' in espresso;
 // => false
 
-"isDarkMatter" in espresso
+'isDarkMatter' in espresso;
 // => true
-
 ```
-~~~~exercism/note
+
+````exercism/note
 `in` can be slightly unreliable, as it will return `true` for inherited properties and methods.
 ```javascript
 "coolDown" in espresso
@@ -100,29 +106,31 @@ const espresso = new Coffee()
 // => true
 ```
 To avoid this, use the hasOwnProperty() method.
-~~~~
+````
+
 ## The `hasOwnProperty()` method
 
 The `hasOwnProperty()` method returns whether the specified object has _its own property_ (not inherited or a method) that matches a string.
+
 ```javascript
-class Coffee{
+class Coffee {
   constructor() {
-    this.temperature = "hot";
+    this.temperature = 'hot';
     this.isDarkMatter = undefined;
   }
   coolDown() {
-    this.temperature = "warm"
+    this.temperature = 'warm';
   }
 }
-const cappuccino = new Coffee()
+const cappuccino = new Coffee();
 
-cappuccino.hasOwnProperty("temperature")
+cappuccino.hasOwnProperty('temperature');
 // => true
 
-cappuccino.hasOwnProperty("constructor")
+cappuccino.hasOwnProperty('constructor');
 // => false
 
-cappuccino.hasOwnProperty("coolDown")
+cappuccino.hasOwnProperty('coolDown');
 // => false
 ```
 
