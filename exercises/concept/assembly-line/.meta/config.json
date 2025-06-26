@@ -10,8 +10,6 @@
     "exemplar": [
       ".meta/exemplar.js"
     ],
-  "prerequisites":["basics"],
-  "concepts":["type-checking"],
   },
   "blurb": "Learn about type checking while helping [company] manage their factory"
 }
