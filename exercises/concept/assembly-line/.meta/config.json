@@ -9,7 +9,7 @@
     ],
     "exemplar": [
       ".meta/exemplar.js"
-    ],
+    ]
   },
   "blurb": "Learn about type checking while helping [company] manage their factory"
 }
