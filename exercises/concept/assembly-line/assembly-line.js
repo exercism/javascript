@@ -4,6 +4,9 @@
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
 
+class ElectronicDevice {
+  // This is a class for use in the exercise.
+}
 /**
  * Checks if input is a boolean.
  *
@@ -45,11 +48,11 @@ export function isNumericString(value) {
 }
 
 /**
- * Checks if a value is an object.
+ * Checks if a value is an instance of the `ElectronicDevice` class or one of its children.
  *
- * @param {number|boolean|string|null|undefined|symbol|bigint|object} value
- * @returns {boolean} whether the input is an object.
+ * @param {object} object
+ * @returns {boolean} whether the input is an instance of the `ElectronicDevice` class or one of its children.
  */
-export function isElectronic(value) {
+export function isElectronic(object) {
   throw new Error("Remove this line and implement the isElectronic function")
 }
