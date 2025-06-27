@@ -157,3 +157,11 @@ hasConstructorProperty(MySecondClass)
 ### 11. Check if an object has a defined `type` property
 
 Implement the `hasDefinedType` function, that checks if an object has a `type` property that is not `undefined`.
+
+```javascript
+hasDefinedType({type:undefined,color:"red"})
+// => false
+
+hasDefinedType({type:"car",color:"green"})
+// => true
+```
