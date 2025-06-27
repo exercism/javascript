@@ -3,6 +3,13 @@
 ### 1. Check if a value is a boolean
 
 Implement the `isBoolean` function, that checks if a value is a boolean.
+```javascript
+isBoolean(true)
+// => true
+
+isBoolean(null)
+// => false
+```
 
 ### 2. Check if a value is a number.
 
@@ -21,7 +28,7 @@ isNumber(NaN)
 
 ### 3. Check if a value is an object
 
-Implement the `isObject` function, that should check if the value is actually an object (so not null)
+Implement the `isObject` function, that should check if the value is actually an object, not null.
 
 ```javascript
 isObject({greeting:"Hello"})
@@ -36,11 +43,15 @@ isObject(25n)
 Implement the `isNumericString` function, that should check if the value is a string but only consists of numbers.
 
 ```javascript
+isNumericString(42)
+// => false
+
 isNumericString("42")
 // => true
 
 isNumericString("Hi!")
 // => false
+
 ```
 
 ### 5. Check if an object is electronic
@@ -72,7 +83,18 @@ isEmptyArray([])
 // => true
 ```
 
-### 7. Throw an error if an object does not have the `id` property
+### 7. Check if a value is a non empty array
+
+Implement the `isNonEmptyArray` function, that checks if an object is a non empty array.
+```javascript
+isNonEmptyArray([1,2,3])
+// => true
+
+isNonEmptyArray([])
+// => false
+```
+
+### 8. Throw an error if an object does not have the `id` property
 
 Implement the `assertHasId` function, that will throw an `Error` if an object is missing the `id` property.
 
@@ -85,3 +107,5 @@ assertHasId({id:42,color:"red"})
 assertHasId({color:"green"})
 // Error: "Object is missing the 'id' property"
 ```
+
+### 9.
