@@ -142,7 +142,7 @@ class MyClass {
     this.number = "42"
   }
 }
-class MyNewClass extends MyClass {
+class MyNewClass {
   constructor() {
     this.number = "42"
     this.constructor = "A constructor"
@@ -151,8 +151,8 @@ class MyNewClass extends MyClass {
 hasConstructorProperty(MyClass)
 // => false
 
-hasConstructorProperty(MySecondClass)
-// => false
+hasConstructorProperty(MyNewClass)
+// => true
 ```
 ### 11. Check if an object has a defined `type` property
 
