@@ -5,12 +5,12 @@
 // implementing this exercise.
 
 class ElectronicDevice {
-  // This is a class for use in the exercise.
-}
+  // This class will be used in the exercise.
+} 
 /**
  * Checks if input is a boolean.
  *
- * @param {number|boolean|string|null|undefined|symbol|bigint|object} value
+ * @param {any} value
  * @returns {boolean} whether the input is a boolean
  */
 export function isBoolean(value) {
@@ -20,7 +20,7 @@ export function isBoolean(value) {
 /**
  * Checks if input is a finite number or bigint.
  *
- * @param {number|boolean|string|null|undefined|symbol|bigint|object} value
+ * @param {any} value
  * @returns {boolean} whether the input is a finite number or bigint
  */
 export function isNumber(value) {
@@ -30,7 +30,7 @@ export function isNumber(value) {
 /**
  * Checks if a value is an object.
  *
- * @param {number|boolean|string|null|undefined|symbol|bigint|object} value
+ * @param {any} value
  * @returns {boolean} whether the input is an object.
  */
 export function isObject(value) {
@@ -40,7 +40,7 @@ export function isObject(value) {
 /**
  * Checks if a value is a numeric string.
  *
- * @param {number|boolean|string|null|undefined|symbol|bigint|object} value
+ * @param {any} value
  * @returns {boolean} whether the input is a numeric string.
  */
 export function isNumericString(value) {
@@ -48,11 +48,51 @@ export function isNumericString(value) {
 }
 
 /**
- * Checks if a value is an instance of the `ElectronicDevice` class or one of its children.
+ * Checks if an object is an instance of the `ElectronicDevice` class or one of its children.
  *
  * @param {object} object
- * @returns {boolean} whether the input is an instance of the `ElectronicDevice` class or one of its children.
+ * @returns {boolean} whether the object is an instance of the `ElectronicDevice` class or one of its children.
  */
 export function isElectronic(object) {
   throw new Error("Remove this line and implement the isElectronic function")
+}
+
+/**
+ * Checks if a value is a non empty array.
+ *
+ * @param {any} value
+ * @returns {boolean} whether the input is a non empty array.
+ */
+export function isNonEmptyArray(value) {
+  throw new Error("Remove this line and implement the isNonEmptyArray function")
+}
+
+/**
+ * Checks if a value is an empty array.
+ *
+ * @param {any} value
+ * @returns {boolean} whether the input is an empty array.
+ */
+export function isEmptyArray(value) {
+  throw new Error("Remove this line and implement the isEmptyArray function")
+}
+
+/**
+ * Checks if a value is an empty array.
+ *
+ * @param {object} object
+ * @returns {undefined|error} undefined if the input has an `id` property, otherwise throws an error.
+ */
+export function assertHasId(object) {
+  throw new Error("Remove this line and implement the assertHasId function")
+}
+
+/**
+ * Checks if a value is an empty array.
+ *
+ * @param {object} object
+ * @returns {undefined|error} whether the input has a `type` property.
+ */
+export function hasType(object) {
+  throw new Error("Remove this line and implement the hasType function")
 }
