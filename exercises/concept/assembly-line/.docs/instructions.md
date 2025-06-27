@@ -1,8 +1,13 @@
 ## Instructions
 
+You have been hired by a company that makes various products.
+Due to lack of space, all the products are made on the same assembly line, but this has lead to products exiting the factory as unusable piles of metal, glass, and wood.
+To fix this, you have been tasked with making functions to identify the type of a product.
+
 ### 1. Check if a value is a boolean
 
 Implement the `isBoolean` function, that checks if a value is a boolean.
+
 ```javascript
 isBoolean(true)
 // => true
@@ -15,12 +20,18 @@ isBoolean(null)
 
 Implement the `isNumber` function, that checks if a value is a _finite_ number or bigint, ie not `NaN` or `Infinity`.
 
+Sometimes, the device for reading IDs bugs and reads a non-numeric value as `NaN` (Not a Number) or `Infinity`.
+Your function should be able to correctly handle this as well.
+
 ```javascript
 isNumber(42)
 // => true
 
 isNumber("Hello, World!")
 // => false
+
+isNumber(42n)
+// => true
 
 isNumber(NaN)
 // => false
@@ -72,27 +83,27 @@ isElectronic(new WashingMachine())
 // => false
 ```
 
-### 6. Check if a value is an empty array
-
-Implement the `isEmptyArray` function, that checks if an object is an empty array.
-
-```javascript
-isEmptyArray([1,2,3])
-// => false
-
-isEmptyArray([])
-// => true
-```
-
-### 7. Check if a value is a non empty array
+### 6. Check if a value is a non empty array
 
 Implement the `isNonEmptyArray` function, that checks if an object is a non empty array.
+
 ```javascript
 isNonEmptyArray([1,2,3])
 // => true
 
 isNonEmptyArray([])
 // => false
+```
+
+### 7. Check if a value is an empty array
+
+Implement the `isEmptyArray` function, that checks if an object is an empty array.
+```javascript
+isEmptyArray([1,2,3])
+// => false
+
+isEmptyArray([])
+// => true
 ```
 
 ### 8. Throw an error if an object does not have the `id` property
@@ -109,7 +120,7 @@ assertHasId({color:"green"})
 // Error: "Object is missing the 'id' property"
 ```
 
-### 9. Check if an object has the `type` property
+### 9. Check if an object has a `type` property
 
 Implement the `hasType` function, that checks whether an object has a `type` property.
 
@@ -121,22 +132,28 @@ hasType({color:"green"})
 // => false
 ```
 
-### 10. Check if an object has a non inherited `type` property
+### 10. Check if an object has a `constructor` property
 
-Implement the `hasNonInheritedType` function, that checks whether an object has a `type` property that has not been inherited.
-# Fix this!
+Implement the `hasConstructorProperty` function, that checks whether an object has a `constructor` property.
+
 ```javascript
-class Heater {
+class MyClass {
   constructor() {
-    this.type = "heater"
+    this.number = "42"
   }
 }
-class Radiator {
-
+class MyNewClass extends MyClass {
+  constructor() {
+    this.number = "42"
+    this.constructor = "A constructor"
+  }
 }
-hasNonInheritedType()
-// => true
+hasConstructorProperty(MyClass)
+// => false
 
-hasNonInheritedType()
+hasConstructorProperty(MySecondClass)
 // => false
 ```
+### 11. Check if an object has a defined `type` property
+
+Implement the `hasDefinedType` function, that checks if an object has a `type` property that is not `undefined`.
