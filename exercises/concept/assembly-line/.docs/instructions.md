@@ -75,6 +75,7 @@ isElectronic(new WashingMachine())
 ### 6. Check if a value is an empty array
 
 Implement the `isEmptyArray` function, that checks if an object is an empty array.
+
 ```javascript
 isEmptyArray([1,2,3])
 // => false
@@ -98,7 +99,7 @@ isNonEmptyArray([])
 
 Implement the `assertHasId` function, that will throw an `Error` if an object is missing the `id` property.
 
-If an object does have the `id` property, it should return `undefined`.
+If an object does have the `id` property, it should not return anything.
 
 ```javascript
 assertHasId({id:42,color:"red"})
@@ -108,4 +109,34 @@ assertHasId({color:"green"})
 // Error: "Object is missing the 'id' property"
 ```
 
-### 9.
+### 9. Check if an object has the `type` property
+
+Implement the `hasType` function, that checks whether an object has a `type` property.
+
+```javascript
+hasType({type:"car",color:"red"})
+// => true
+
+hasType({color:"green"})
+// => false
+```
+
+### 10. Check if an object has a non inherited `type` property
+
+Implement the `hasNonInheritedType` function, that checks whether an object has a `type` property that has not been inherited.
+# Fix this!
+```javascript
+class Heater {
+  constructor() {
+    this.type = "heater"
+  }
+}
+class Radiator {
+
+}
+hasNonInheritedType()
+// => true
+
+hasNonInheritedType()
+// => false
+```
