@@ -63,3 +63,21 @@ describe("isObject",() => {
     expect(isObject(null)).toBe(false)
   })
 });
+describe("isNumericString",() => {
+  test("isNumericString works on numeric strings",() => {
+    expect(isNumericString("42")).toBe(true);
+    expect(isNumericString("582")).toBe(true);
+  });
+  test("isNumericString works on non-numeric strings",() => {
+    expect(isNumericString("Hello, World!")).toBe(false);
+    expect(isNumericString("<!DOCTYPE HTML>")).toBe(false);
+    expect(isNumericString("NaN")).toBe(false)
+  });
+  test("isNumericString works on non-strings",() => {
+    expect(isNumericString(true)).toBe(false)
+    expect(isNumericString(1234)).toBe(false)
+    expect(isNumericString(undefined)).toBe(false)
+    expect(isNumericString([1,2,3,4])).toBe(false)
+    expect(isNumericString(Symbol("\u0070"))).toBe(false)
+  });
+});
