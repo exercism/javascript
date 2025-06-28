@@ -45,7 +45,7 @@ class ClassForTestingisObject {
 describe("isObject",() => {
   test("isObject works on objects",() => {
     expect(isObject({})).toBe(true);
-    expect(isObject({greeting:hello})).toBe(true);
+    expect(isObject({greeting:"hello"})).toBe(true);
   });
   test("isObject works on class instances",() => {
     expect(isObject(new ClassForTestingisObject(5,"Hello"))).toBe(true);
