@@ -24,7 +24,7 @@ export function isBoolean(value) {
  * @returns {boolean} whether the input is a finite number or bigint
  */
 export function isNumber(value) {
-  return (typeof value === "number"||typeof value === "bigint") && !isNaN(value) && number !== Infinity
+  return (typeof value === "number"||typeof value === "bigint") && !isNaN(value) && value !== Infinity
 }
 
 /**
