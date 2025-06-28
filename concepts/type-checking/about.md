@@ -108,15 +108,14 @@ const espresso = new Coffee();
 To avoid this, use the hasOwnProperty() method.
 ````
 
-## The `hasOwnProperty()` method
+## The `Object.hasOwn()` function
 
-The `hasOwnProperty()` method returns whether the specified object has _its own property_ (not inherited or a method) that matches a string.
+The `Object.hasOwn()` method returns whether the specified object has _its own property_ (not inherited or a method) that matches a string.
 
 ```javascript
 class Coffee {
   constructor() {
     this.temperature = 'hot';
-    this.isDarkMatter = undefined;
   }
   coolDown() {
     this.temperature = 'warm';
@@ -124,13 +123,13 @@ class Coffee {
 }
 const cappuccino = new Coffee();
 
-cappuccino.hasOwnProperty('temperature');
+Object.hasOwn(cappucino,'temperature');
 // => true
 
-cappuccino.hasOwnProperty('constructor');
+Object.hasOwn(cappucino,'constructor');
 // => false
 
-cappuccino.hasOwnProperty('coolDown');
+Object.hasOwn(cappucino,'coolDown');
 // => false
 ```
 
