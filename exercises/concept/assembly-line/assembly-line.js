@@ -4,7 +4,7 @@
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
 
-class ElectronicDevice {
+export class ElectronicDevice {
   // This class will be used in the exercise.
 } 
 /**
