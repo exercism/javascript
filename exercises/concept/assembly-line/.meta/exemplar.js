@@ -107,7 +107,7 @@ export function hasType(object) {
  * @returns {boolean} whether the input has a "constructor" property.
  */
 export function hasConstructorProperty(object) {
-  return object.hasOwnProperty("constructor")
+  return Object.hasOwn(object,"constructor")
 }
 
 /**
@@ -117,5 +117,5 @@ export function hasConstructorProperty(object) {
  * @returns {boolean} whether the input has a defined "type" property.
  */
 export function hasDefinedType(object) {
-  throw new Error("Remove this line and implement the hasDefinedType function")
+  return hasType(object) && object.type !== undefined
 }
