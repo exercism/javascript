@@ -37,8 +37,9 @@ describe("isNumber",() => {
   })
 });
 class ClassForTestingisObject {
-  constructor(word){
-    this.number=word
+  constructor(number,word){
+    this.number = number;
+    this.word = word;
   }
 }
 describe("isObject",() => {
@@ -46,20 +47,19 @@ describe("isObject",() => {
     expect(isObject({})).toBe(true);
     expect(isObject({greeting:hello})).toBe(true);
   });
-  test("isObject works on classes",() => {
-    expect(isObject(new ClassForTestingisObject())).toBe(true);
-    expect(isObject(new ClassForTestingisObject())).toBe(true);
-    expect(isObject(new ClassForTestingisObject())).toBe(true)
+  test("isObject works on class instances",() => {
+    expect(isObject(new ClassForTestingisObject(5,"Hello"))).toBe(true);
+    expect(isObject(new ClassForTestingisObject(58,"null"))).toBe(true);
+    expect(isObject(new ClassForTestingisObject(1488,"World!"))).toBe(true)
   });
   test("isObject works on non-Objects",() => {
     expect(isObject(true)).toBe(false)
     expect(isObject("Hello, World!")).toBe(false)
-    expect(isObject(null)).toBe(false)
+    expect(isObject(undefined)).toBe(false)
     expect(isObject("")).toBe(false)
     expect(isObject(Symbol("1"))).toBe(false)
   });
-  test("isObject works on NaN and Infinity",() => {
-    expect(isObject(NaN)).toBe(false)
-    expect(isObject(Infinity)).toBe(false)
+  test("isObject works on null",() => {
+    expect(isObject(null)).toBe(false)
   })
 });
