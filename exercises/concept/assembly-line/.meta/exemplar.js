@@ -64,7 +64,7 @@ export function isElectronic(object) {
  * @returns {boolean} whether the input is a non empty array.
  */
 export function isNonEmptyArray(value) {
-  return value instanceof Array && value !== []
+  return value instanceof Array && value.length < 0
 }
 
 /**
@@ -74,7 +74,7 @@ export function isNonEmptyArray(value) {
  * @returns {boolean} whether the input is an empty array.
  */
 export function isEmptyArray(value) {
-  return value === []
+  return value instanceof Array && value.length === 0
 }
 
 /**
@@ -97,7 +97,7 @@ export function assertHasId(object) {
  * @returns {boolean} whether the input has a "type" property.
  */
 export function hasType(object) {
-  throw new Error("Remove this line and implement the hasType function")
+  return "type" in object
 }
 
 /**
@@ -107,7 +107,7 @@ export function hasType(object) {
  * @returns {boolean} whether the input has a "constructor" property.
  */
 export function hasConstructorProperty(object) {
-  throw new Error("Remove this line and implement the hasConstructorProperty function")
+  return object.hasOwnProperty("constructor")
 }
 
 /**
