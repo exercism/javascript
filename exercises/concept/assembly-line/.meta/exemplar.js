@@ -44,7 +44,7 @@ export function isObject(value) {
  * @returns {boolean} whether the input is a numeric string.
  */
 export function isNumericString(value) {
-  return typeof value === "string" && value.split("").every((char) => {/[0-9]/.test(char)})
+  return typeof value === "string" && value.split("").every((char) => {return /[0-9]/.test(char)})
 }
 
 /**
