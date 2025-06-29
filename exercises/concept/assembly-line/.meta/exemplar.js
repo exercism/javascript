@@ -64,7 +64,7 @@ export function isElectronic(object) {
  * @returns {boolean} whether the input is a non empty array.
  */
 export function isNonEmptyArray(value) {
-  return value instanceof Array && value.length < 0
+  return value instanceof Array && value.length > 0
 }
 
 /**
