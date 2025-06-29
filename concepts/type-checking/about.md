@@ -6,7 +6,7 @@ Javascript has several ways to check the type of an object.
 ~~~~exercism/note
 Javascript's type checking mechanisms are always soomewhat unreliable.
 
-For true safety with types, you should probably use [TypeScript][TS], a language built on to JavaScript, but with the type syntax of a static-typed language.
+For true safety with types, you should probably use TypeScript, a language that builds on JavaScript, but with the type syntax of a static-typed language.
 ~~~~
 ## The `typeof` operator
 
@@ -137,7 +137,6 @@ Object.hasOwn(cappucino,'coolDown');
 // => false
 ```
 
-[TS]: https://www.typescriptlang.org/
 [primitives]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 [typeof null is object]: https://2ality.com/2013/10/typeof-null.html
 [prototype chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
