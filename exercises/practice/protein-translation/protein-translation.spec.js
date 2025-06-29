@@ -20,7 +20,11 @@ describe('ProteinTranslation', () => {
     mapping.forEach(([protein, codons]) => {
       codons.forEach((codon, index) => {
         const seq = index + 1;
-        xtest(`${protein} RNA sequence ${seq} translates into ${protein}`, () => {
+        const message =
+          codons.length == 1
+            ? `${protein} RNA sequence`
+            : `${protein} RNA sequence ${seq}`;
+        xtest(message, () => {
           expect(translate(codon)).toEqual([protein]);
         });
       });
