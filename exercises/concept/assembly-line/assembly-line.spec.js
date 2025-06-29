@@ -83,8 +83,8 @@ describe("isNumericString",() => {
 });
 class Oven extends ElectronicDevice {}
 class Computer extends ElectronicDevice {}
-class PC extends Computer {}
-class HomeMadePC extends PC {}
+class PersonalComputer extends Computer {}
+class HomeMadePersonalComputer extends PersonalComputer {}
 describe("isElectronic",() => {
   test("isElectronic works on instances of ElectronicDevice or its child classes",() => {
     expect(isElectronic(new ElectronicDevice())).toBe(true);
