@@ -36,7 +36,7 @@ describe("isNumber",() => {
     expect(isNumber(Infinity)).toBe(false)
   })
 });
-class ClassForTestingisObject {
+class ClassForTesting {
   constructor(number,word){
     this.number = number;
     this.word = word;
@@ -48,9 +48,9 @@ describe("isObject",() => {
     expect(isObject({greeting:"hello"})).toBe(true);
   });
   test("isObject works on class instances",() => {
-    expect(isObject(new ClassForTestingisObject(5,"Hello"))).toBe(true);
-    expect(isObject(new ClassForTestingisObject(58,"null"))).toBe(true);
-    expect(isObject(new ClassForTestingisObject(1488,"World!"))).toBe(true)
+    expect(isObject(new ClassForTesting(5,"Hello"))).toBe(true);
+    expect(isObject(new ClassForTesting(58,"null"))).toBe(true);
+    expect(isObject(new ClassForTesting(1488,"World!"))).toBe(true)
   });
   test("isObject works on non-Objects",() => {
     expect(isObject(true)).toBe(false)
@@ -79,5 +79,30 @@ describe("isNumericString",() => {
     expect(isNumericString(undefined)).toBe(false)
     expect(isNumericString([1,2,3,4])).toBe(false)
     expect(isNumericString(Symbol("\u0070"))).toBe(false)
+  });
+});
+class Oven extends ElectronicDevice {}
+class Computer extends ElectronicDevice {}
+class PC extends Computer {}
+class HomeMadePC extends PC {}
+describe("isElectronic",() => {
+  test("isElectronic works on instances of ElectronicDevice or its child classes",() => {
+    expect(isElectronic(new ElectronicDevice())).toBe(true);
+    expect(isElectronic(new Oven())).toBe(true);
+  });
+  test("isElectronic works on other objects",() => {
+    expect(isElectronic({language:"javascript", typing:"dynamic"})).toBe(false);
+    expect(isElectronic(new ClassForTesting(42, "ElectronicDevice"))).toBe(false);
+    expect(isElectronic([1,2,3,4])).toBe(false)
+  });
+  test("isElectronic works on non-objects",() => {
+    expect(isElectronic(true)).toBe(false)
+    expect(isElectronic(1234)).toBe(false)
+    expect(isElectronic(undefined)).toBe(false)
+    expect(isElectronic("Hello!")).toBe(false)
+    expect(isElectronic(Symbol("\u0070"))).toBe(false)
+  });
+  test("a really long prototype chain",()=>{
+    expect(isElectronic(new HomeMadePC())).toBe(true)
   });
 });
