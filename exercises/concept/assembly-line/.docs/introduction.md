@@ -3,7 +3,11 @@
 Knowning what type an object has is often very important for code to run smoothly and without errors.
 
 Javascript has several ways to check the type of an object.
+~~~~exercism/note
+Javascript's type checking mechanisms are always soomewhat unreliable.
 
+For true safety with types, you should probably use TypeScript, a language that builds on JavaScript, but with the type syntax of a static-typed language.
+~~~~
 ## The `typeof` operator
 
 The `typeof` operator returns the type of its input.
