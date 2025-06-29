@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { isBoolean, isNumber, isObject, isNumericString, ElectronicDevice, isElectronic/*, isNonEmptyArray, isEmptyArray ,  assertHasId, hasType, hasConstructorProperty, hasDefinedType*/} from './assembly-line'
+import { isBoolean, isNumber, isObject, isNumericString, ElectronicDevice, isElectronic, isNonEmptyArray, isEmptyArray ,  assertHasId, hasType, hasConstructorProperty, hasDefinedType} from './assembly-line'
 describe("isBoolean",() => {
   test("isBoolean works on booleans",() => {
     expect(isBoolean(true)).toBe(true)
