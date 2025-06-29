@@ -54,13 +54,3 @@ export function updateScore(scoreBoard, player, points) {
 export function applyMondayBonus(scoreBoard) {
   throw new Error('Please implement the applyMondayBonus function');
 }
-
-/**
- * Normalizes a score with the provided normalization function.
- *
- * @param {Params} params the parameters for performing the normalization
- * @returns {number} normalized score
- */
-export function normalizeScore(params) {
-  throw new Error('Please implement the normalizeScore function');
-}
