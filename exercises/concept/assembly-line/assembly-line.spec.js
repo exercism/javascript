@@ -106,3 +106,64 @@ describe("isElectronic",() => {
     expect(isElectronic(new HomeMadePC())).toBe(true)
   });
 });
+describe("isNonEmptyArray", () => {
+  test("isNonEmptyArray works on non-empty arrays", () => {
+    expect(isNonEmptyArray([1, 2, 3])).toBe(true);
+    expect(isNonEmptyArray(['a', 'b'])).toBe(true);
+  });
+  test("isNonEmptyArray works on empty arrays", () => {
+    expect(isNonEmptyArray([])).toBe(false);
+  });
+  test("isNonEmptyArray works on non-arrays", () => {
+    expect(isNonEmptyArray({})).toBe(false);
+    expect(isNonEmptyArray("string")).toBe(false);
+    expect(isNonEmptyArray(123)).toBe(false);
+  });
+});
+
+describe("isEmptyArray", () => {
+  test("isEmptyArray works on empty arrays", () => {
+    expect(isEmptyArray([])).toBe(true);
+  });
+  test("isEmptyArray works on non-empty arrays", () => {
+    expect(isEmptyArray([1, 2, 3])).toBe(false);
+  });
+  test("isEmptyArray works on non-arrays", () => {
+    expect(isEmptyArray({})).toBe(false);
+    expect(isEmptyArray("string")).toBe(false);
+    expect(isEmptyArray(123)).toBe(false);
+  });
+});
+
+describe("assertHasId", () => {
+  test("assertHasId throws error if object has no 'id' property", () => {
+    expect(() => assertHasId({})).toThrow("Object must have an 'id' property");
+  });
+  test("assertHasId does not throw error if object has 'id' property", () => {
+    expect(() => assertHasId({ id: 1 })).not.toThrow();
+  });
+});
+
+describe("hasType", () => {
+  test("hasType works correctly", () => {
+    expect(hasType({ type: 'example' })).toBe(true);
+    expect(hasType({})).toBe(false);
+  });
+});
+
+describe("hasConstructorProperty", () => {
+  test("hasConstructorProperty works correctly", () => {
+    expect(hasConstructorProperty({ constructor: 'test' })).toBe(true);
+    expect(hasConstructorProperty({})).toBe(false);
+    expect(hasConstructorProperty(new ClassForTesting)).toBe(false);
+
+  });
+});
+
+describe("hasDefinedType", () => {
+  test("hasDefinedType works correctly", () => {
+    expect(hasDefinedType({ type: 'example' })).toBe(true);
+    expect(hasDefinedType({ type: undefined })).toBe(false);
+    expect(hasDefinedType({})).toBe(false);
+  });
+});
