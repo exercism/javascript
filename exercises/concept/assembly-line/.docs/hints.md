@@ -10,53 +10,24 @@
 
 - You can use `typeof` to find the type of a value.
 - `typeof` returns a string.
-- `NaN` is never equal to itself
+- You need to check for `Infinity` and `NaN`.
+- `NaN` is never equal to itself, but there is a [built in function][isNaN] to check if a value is NaN.
 
 ## 3. Check if a value is an object
 
-Implement the `isObject` function, that should check if the value is actually an object, not null.
-
-```javascript
-isObject({greeting:"Hello"})
-// => true
-
-isObject(25n)
-// => false
-```
+- You can use `typeof` to find the type of a value.
+- `typeof` returns a string.
+- You will need to check for `null`.
 
 ## 4. Check if a string is numeric
 
-Implement the `isNumericString` function, that should check if the value is a string but only consists of numbers.
-
-```javascript
-isNumericString(42)
-// => false
-
-isNumericString("42")
-// => true
-
-isNumericString("Hi!")
-// => false
-
-```
+- You can use `typeof` to find the type of a value.
+- `typeof` returns a string.
+- You can iterate over a string to check if all characters are digits.
 
 ## 5. Check if an object is electronic
 
-Implement the `isElectronic` function, that checks if an object is an instance of the provided ElectronicDevice class or one of its child classes.
-
-```javascript
-class Duck {
-  //...
-}
-class WashingMachine extends ElectronicDevice {
-  //...
-}
-isElectronic(new Duck())
-// => false
-
-isElectronic(new WashingMachine())
-// => false
-```
+- You can use `instanceof` to check if an object is an instance of a class or one of its children.
 
 ## 6. Check if a value is a non empty array
 
@@ -140,3 +111,5 @@ hasDefinedType({type:undefined,color:"red"})
 hasDefinedType({type:"car",color:"green"})
 // => true
 ```
+
+[isNaN]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
