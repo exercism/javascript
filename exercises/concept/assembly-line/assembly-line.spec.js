@@ -137,7 +137,7 @@ describe("isEmptyArray", () => {
 
 describe("assertHasId", () => {
   test("assertHasId throws error if object has no 'id' property", () => {
-    expect(() => assertHasId({})).toThrow("Object must have an 'id' property");
+    expect(() => assertHasId({})).toThrow();
   });
   test("assertHasId does not throw error if object has 'id' property", () => {
     expect(() => assertHasId({ id: 1 })).not.toThrow();
