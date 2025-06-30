@@ -4,6 +4,10 @@ You have been hired by a company that makes various products.
 Due to lack of space, all the products are made on the same assembly line, but this has lead to products exiting the factory as unusable piles of metal, glass, and wood.
 To fix this, you have been tasked with making functions to identify the type of a product.
 
+~~~~exercism/note
+Many of the later tasks in this exercise can be solved using either `in` or `Object.hasOwn()`.
+To practice, try to solve them with a mix of both.
+~~~~
 ### 1. Check if a value is a boolean
 
 Implement the `isBoolean` function, that checks if a value is a boolean.
