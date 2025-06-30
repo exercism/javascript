@@ -124,19 +124,27 @@ assertHasId({color:"green"})
 // Error: "Object is missing the 'id' property"
 ```
 
-### 9. Check if an object has a `type` property
+### 9. Check if an object has a `type` property or method
 
-Implement the `hasType` function, that checks whether an object has a `type` property.
+Implement the `hasType` function, that checks whether an object has a `type` property or method.
 
 ```javascript
+class Keyboard(){
+  type(){
+    // ...
+  }
+}
 hasType({type:"car",color:"red"})
 // => true
 
 hasType({color:"green"})
 // => false
+
+hasType(new Keyboard())
+// => true
 ```
 
-### 10. Check if an object has a `constructor` property
+### 10. Check if an object has an `id` property
 
 Implement the `hasConstructorProperty` function, that checks whether an object has a `constructor` property.
 
