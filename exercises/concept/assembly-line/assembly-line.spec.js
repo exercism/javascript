@@ -103,7 +103,7 @@ describe("isElectronic",() => {
     expect(isElectronic(Symbol("\u0070"))).toBe(false)
   });
   test("a really long prototype chain",()=>{
-    expect(isElectronic(new HomeMadePC())).toBe(true)
+    expect(isElectronic(new HomeMadePersonalComputer())).toBe(true)
   });
 });
 describe("isNonEmptyArray", () => {
