@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { isBoolean, isNumber, isObject, isNumericString, ElectronicDevice, isElectronic, isNonEmptyArray, isEmptyArray ,  assertHasId, hasType, hasConstructorProperty, hasDefinedType} from './assembly-line'
+import { isBoolean, isNumber, isObject, isNumericString, ElectronicDevice, isElectronic, isNonEmptyArray, isEmptyArray ,  assertHasId, hasType, hasIdProperty, hasDefinedType} from './assembly-line'
 describe("isBoolean",() => {
   test("isBoolean works on booleans",() => {
     expect(isBoolean(true)).toBe(true)
@@ -41,6 +41,7 @@ class ClassForTesting {
     this.number = number;
     this.word = word;
   }
+  id(){}
 }
 describe("isObject",() => {
   test("isObject works on objects",() => {
@@ -134,28 +135,34 @@ describe("isEmptyArray", () => {
     expect(isEmptyArray(123)).toBe(false);
   });
 });
-
+class TestAssertHasId {
+  id(){}
+}
 describe("assertHasId", () => {
-  test("assertHasId throws error if object has no 'id' property", () => {
+  test("assertHasId throws error if object has no 'id' property or method", () => {
     expect(() => assertHasId({})).toThrow();
   });
-  test("assertHasId does not throw error if object has 'id' property", () => {
+  test("assertHasId does not throw error if object has 'id' property or method", () => {
     expect(() => assertHasId({ id: 1 })).not.toThrow();
+    expect(() => assertHasId(new TestAssertHasId())).not.toThrow();
   });
 });
-
+class TestHasType {
+  type(){}
+}
 describe("hasType", () => {
   test("hasType works correctly", () => {
     expect(hasType({ type: 'example' })).toBe(true);
     expect(hasType({})).toBe(false);
+    expect(hasType(new TestHasType())).toBe(true)
   });
 });
 
-describe("hasConstructorProperty", () => {
-  test("hasConstructorProperty works correctly", () => {
-    expect(hasConstructorProperty({ constructor: 'test' })).toBe(true);
-    expect(hasConstructorProperty({})).toBe(false);
-    expect(hasConstructorProperty(new ClassForTesting)).toBe(false);
+describe("hasIdProperty", () => {
+  test("hasIdProperty works correctly", () => {
+    expect(hasIdProperty({ id: 'test' })).toBe(true);
+    expect(hasIdProperty({})).toBe(false);
+    expect(hasIdProperty(new ClassForTesting())).toBe(false);
 
   });
 });
