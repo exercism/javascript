@@ -438,8 +438,8 @@
         ]
       },
       {
-        "slug": "assembly-line",
-        "name": "Assembly Line",
+        "slug": "recycling-robot",
+        "name": "Recycling Robot",
         "uuid": "16114449-52fe-470e-af11-cf9dc3689a93",
         "concepts": [
           "type-checking"
