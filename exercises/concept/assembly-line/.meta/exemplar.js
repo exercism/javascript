@@ -106,7 +106,7 @@ export function hasType(object) {
  * @param {object} object
  * @returns {boolean} whether the input has a "id" property.
  */
-export function hasConstructorProperty(object) {
+export function hasIdProperty(object) {
   return Object.hasOwn(object,"id")
 }
 
