@@ -439,13 +439,14 @@
       },
       {
         "slug": "assembly-line",
-        "name": "assembly-line",
+        "name": "Assembly Line",
         "uuid": "16114449-52fe-470e-af11-cf9dc3689a93",
         "concepts": [
           "type-checking"
         ],
         "prerequisites": [
-          "basics"
+          "basics",
+          "inheritance"
         ]
       }
     ],
