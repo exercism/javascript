@@ -31,85 +31,32 @@
 
 ## 6. Check if a value is a non empty array
 
-Implement the `isNonEmptyArray` function, that checks if an object is a non empty array.
-
-```javascript
-isNonEmptyArray([1,2,3])
-// => true
-
-isNonEmptyArray([])
-// => false
-```
+- You can use `typeof` to find the type of a value.
+- `typeof` returns a string.
+- You can check the length of an array to find out how many elements it contains.
 
 ## 7. Check if a value is an empty array
 
-Implement the `isEmptyArray` function, that checks if an object is an empty array.
-```javascript
-isEmptyArray([1,2,3])
-// => false
-
-isEmptyArray([])
-// => true
-```
+- You can use `typeof` to find the type of a value.
+- `typeof` returns a string.
+- You can check the length of an array to find out how many elements it contains.
 
 ## 8. Throw an error if an object does not have the `id` property
 
-Implement the `assertHasId` function, that will throw an `Error` if an object is missing the `id` property.
-
-If an object does have the `id` property, it should not return anything.
-
-```javascript
-assertHasId({id:42,color:"red"})
-// => undefined
-
-assertHasId({color:"green"})
-// Error: "Object is missing the 'id' property"
-```
+- You can use the `in` operator or the `Object.hasOwn()` function to check if an object has a property.
+- If the `id` property is missing, your function should throw an `Error`.
 
 ## 9. Check if an object has a `type` property
 
-Implement the `hasType` function, that checks whether an object has a `type` property.
-
-```javascript
-hasType({type:"car",color:"red"})
-// => true
-
-hasType({color:"green"})
-// => false
-```
+- You can use the `in` operator or the `Object.hasOwn()` function to check if an object has a property.
 
 ## 10. Check if an object has a `constructor` property
 
-Implement the `hasConstructorProperty` function, that checks whether an object has a `constructor` property.
+- All class instances have a `constructor`, but `Object.hasOwn()` is able to ignore this.
 
-```javascript
-class MyClass {
-  constructor() {
-    this.number = "42"
-  }
-}
-class MyNewClass {
-  constructor() {
-    this.number = "42"
-    this.constructor = "A constructor"
-  }
-}
-hasConstructorProperty(MyClass)
-// => false
-
-hasConstructorProperty(MyNewClass)
-// => true
-```
 ## 11. Check if an object has a defined `type` property
 
-Implement the `hasDefinedType` function, that checks if an object has a `type` property that is not `undefined`.
-
-```javascript
-hasDefinedType({type:undefined,color:"red"})
-// => false
-
-hasDefinedType({type:"car",color:"green"})
-// => true
-```
+- You can use the `in` operator or the `Object.hasOwn()` function to check if an object has a property.
+- You will have to access the `type` property and check if it is defined.
 
 [isNaN]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
