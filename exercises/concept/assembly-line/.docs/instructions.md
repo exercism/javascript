@@ -110,7 +110,7 @@ isEmptyArray([])
 // => true
 ```
 
-### 8. Throw an error if an object does not have the `id` property
+### 8. Throw an error if an object does not have an `id` property or method
 
 Implement the `assertHasId` function, that will throw an `Error` if an object is missing the `id` property.
 
@@ -146,25 +146,29 @@ hasType(new Keyboard())
 
 ### 10. Check if an object has an `id` property
 
-Implement the `hasConstructorProperty` function, that checks whether an object has a `constructor` property.
+Implement the `hasIdProperty` function, that checks whether an object has a `constructor` property.
 
 ```javascript
 class MyClass {
   constructor() {
     this.number = "42"
+    this.id = "BC269327FE1D9B95"
   }
 }
 class MyNewClass {
   constructor() {
     this.number = "42"
-    this.constructor = "A constructor"
+    this._id = "BC269327FE1D9B95"
+  }
+  get id(){
+    return this._id
   }
 }
-hasConstructorProperty(MyClass)
-// => false
-
-hasConstructorProperty(MyNewClass)
+hasIdProperty(new MyClass())
 // => true
+
+hasIdProperty(new MyNewClass())
+// => false
 ```
 ### 11. Check if an object has a defined `type` property
 
