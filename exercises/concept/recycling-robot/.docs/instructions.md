@@ -146,7 +146,7 @@ hasType(new Keyboard())
 
 ### 10. Check if an object has an `id` property
 
-Implement the `hasIdProperty` function, that checks whether an object has a `constructor` property.
+Implement the `hasIdProperty` function, that checks whether an object has an `id` property.
 
 ```javascript
 class MyClass {
