@@ -6,7 +6,7 @@
 
 export class ElectronicDevice {
   // This class will be used in the exercise.
-} 
+}
 /**
  * Checks if input is a boolean.
  *
@@ -14,7 +14,7 @@ export class ElectronicDevice {
  * @returns {boolean} whether the input is a boolean
  */
 export function isBoolean(value) {
-  return typeof value === "boolean"
+  return typeof value === 'boolean';
 }
 
 /**
@@ -24,7 +24,11 @@ export function isBoolean(value) {
  * @returns {boolean} whether the input is a finite number or bigint
  */
 export function isNumber(value) {
-  return (typeof value === "number"||typeof value === "bigint") && !isNaN(Number(value)) && value !== Infinity
+  return (
+    (typeof value === 'number' || typeof value === 'bigint') &&
+    !isNaN(Number(value)) &&
+    value !== Infinity
+  );
 }
 
 /**
@@ -34,7 +38,7 @@ export function isNumber(value) {
  * @returns {boolean} whether the input is an object.
  */
 export function isObject(value) {
-  return value !== null && typeof value === "object"
+  return value !== null && typeof value === 'object';
 }
 
 /**
@@ -44,7 +48,12 @@ export function isObject(value) {
  * @returns {boolean} whether the input is a numeric string.
  */
 export function isNumericString(value) {
-  return typeof value === "string" && value.split("").every((char) => {return /[0-9]/.test(char)})
+  return (
+    typeof value === 'string' &&
+    value.split('').every((char) => {
+      return /[0-9]/.test(char);
+    })
+  );
 }
 
 /**
@@ -54,7 +63,7 @@ export function isNumericString(value) {
  * @returns {boolean} whether the object is an instance of the "ElectronicDevice" class or one of its children.
  */
 export function isElectronic(object) {
-  return object instanceof ElectronicDevice
+  return object instanceof ElectronicDevice;
 }
 
 /**
@@ -64,7 +73,7 @@ export function isElectronic(object) {
  * @returns {boolean} whether the input is a non empty array.
  */
 export function isNonEmptyArray(value) {
-  return value instanceof Array && value.length > 0
+  return value instanceof Array && value.length > 0;
 }
 
 /**
@@ -74,7 +83,7 @@ export function isNonEmptyArray(value) {
  * @returns {boolean} whether the input is an empty array.
  */
 export function isEmptyArray(value) {
-  return value instanceof Array && value.length === 0
+  return value instanceof Array && value.length === 0;
 }
 
 /**
@@ -84,10 +93,10 @@ export function isEmptyArray(value) {
  * @returns {boolean} undefined if the input has an "id" property, otherwise throws an error.
  */
 export function assertHasId(object) {
-  if ("id" in object){
+  if ('id' in object) {
     return;
   }
-  throw new Error('The "id" property is missing.')
+  throw new Error('The "id" property is missing.');
 }
 
 /**
@@ -97,7 +106,7 @@ export function assertHasId(object) {
  * @returns {boolean} whether the input has a "type" property.
  */
 export function hasType(object) {
-  return "type" in object
+  return 'type' in object;
 }
 
 /**
@@ -107,7 +116,7 @@ export function hasType(object) {
  * @returns {boolean} whether the input has a "id" property.
  */
 export function hasIdProperty(object) {
-  return Object.hasOwn(object,"id")
+  return Object.hasOwn(object, 'id');
 }
 
 /**
@@ -117,5 +126,5 @@ export function hasIdProperty(object) {
  * @returns {boolean} whether the input has a defined "type" property.
  */
 export function hasDefinedType(object) {
-  return Object.hasOwn(object, "type") && object.type !== undefined
+  return Object.hasOwn(object, 'type') && object.type !== undefined;
 }

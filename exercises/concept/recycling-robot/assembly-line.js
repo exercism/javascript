@@ -6,7 +6,7 @@
 
 export class ElectronicDevice {
   // This class will be used in the exercise.
-} 
+}
 /**
  * Checks if input is a boolean.
  *
@@ -14,7 +14,7 @@ export class ElectronicDevice {
  * @returns {boolean} whether the input is a boolean
  */
 export function isBoolean(value) {
-  throw new Error("Remove this line and implement the isBoolean function")
+  throw new Error('Remove this line and implement the isBoolean function');
 }
 
 /**
@@ -24,7 +24,7 @@ export function isBoolean(value) {
  * @returns {boolean} whether the input is a finite number or bigint
  */
 export function isNumber(value) {
-  throw new Error("Remove this line and implement the isNumber function")
+  throw new Error('Remove this line and implement the isNumber function');
 }
 
 /**
@@ -34,7 +34,7 @@ export function isNumber(value) {
  * @returns {boolean} whether the input is an object.
  */
 export function isObject(value) {
-  throw new Error("Remove this line and implement the isObject function")
+  throw new Error('Remove this line and implement the isObject function');
 }
 
 /**
@@ -44,7 +44,9 @@ export function isObject(value) {
  * @returns {boolean} whether the input is a numeric string.
  */
 export function isNumericString(value) {
-  throw new Error("Remove this line and implement the isNumericString function")
+  throw new Error(
+    'Remove this line and implement the isNumericString function',
+  );
 }
 
 /**
@@ -54,7 +56,7 @@ export function isNumericString(value) {
  * @returns {boolean} whether the object is an instance of the `ElectronicDevice` class or one of its children.
  */
 export function isElectronic(object) {
-  throw new Error("Remove this line and implement the isElectronic function")
+  throw new Error('Remove this line and implement the isElectronic function');
 }
 
 /**
@@ -64,7 +66,9 @@ export function isElectronic(object) {
  * @returns {boolean} whether the input is a non empty array.
  */
 export function isNonEmptyArray(value) {
-  throw new Error("Remove this line and implement the isNonEmptyArray function")
+  throw new Error(
+    'Remove this line and implement the isNonEmptyArray function',
+  );
 }
 
 /**
@@ -74,7 +78,7 @@ export function isNonEmptyArray(value) {
  * @returns {boolean} whether the input is an empty array.
  */
 export function isEmptyArray(value) {
-  throw new Error("Remove this line and implement the isEmptyArray function")
+  throw new Error('Remove this line and implement the isEmptyArray function');
 }
 
 /**
@@ -84,7 +88,7 @@ export function isEmptyArray(value) {
  * @returns {undefined} undefined if the input has an "id" property or method, otherwise throws an error.
  */
 export function assertHasId(object) {
-  throw new Error("Remove this line and implement the assertHasId function")
+  throw new Error('Remove this line and implement the assertHasId function');
 }
 
 /**
@@ -94,7 +98,7 @@ export function assertHasId(object) {
  * @returns {boolean} whether the input has a "type" property or method.
  */
 export function hasType(object) {
-  throw new Error("Remove this line and implement the hasType function")
+  throw new Error('Remove this line and implement the hasType function');
 }
 
 /**
@@ -104,7 +108,7 @@ export function hasType(object) {
  * @returns {boolean} whether the input has an "id" property.
  */
 export function hasIdProperty(object) {
-  throw new Error("Remove this line and implement the hasIdProperty function")
+  throw new Error('Remove this line and implement the hasIdProperty function');
 }
 
 /**
@@ -114,5 +118,5 @@ export function hasIdProperty(object) {
  * @returns {boolean} whether the input has a defined "type" property.
  */
 export function hasDefinedType(object) {
-  throw new Error("Remove this line and implement the hasDefinedType function")
+  throw new Error('Remove this line and implement the hasDefinedType function');
 }

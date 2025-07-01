@@ -1,6 +1,5 @@
 # Hints
 
-
 ## 1. Check if a value is a boolean
 
 - You can use `typeof` to find the type of a value.

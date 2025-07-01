@@ -4,19 +4,20 @@ You have been hired by a recycling center.
 Due to lack of space, all the products are put on the same conveyor belt, but this has lead to different materials mixing together, making them unusable.
 To fix this, you have been tasked with making functions to identify the type of a product.
 
-~~~~exercism/note
+```exercism/note
 Many of the later tasks in this exercise can be solved using either `in` or `Object.hasOwn()`.
 To practice, try to solve them with a mix of both.
-~~~~
+```
+
 ### 1. Check if a value is a boolean
 
 Implement the `isBoolean` function, that checks if a value is a boolean.
 
 ```javascript
-isBoolean(true)
+isBoolean(true);
 // => true
 
-isBoolean(null)
+isBoolean(null);
 // => false
 ```
 
@@ -28,16 +29,16 @@ Sometimes, the device for reading IDs bugs and reads a non-numeric value as `NaN
 Your function should be able to correctly handle this as well.
 
 ```javascript
-isNumber(42)
+isNumber(42);
 // => true
 
-isNumber("Hello, World!")
+isNumber('Hello, World!');
 // => false
 
-isNumber(42n)
+isNumber(42n);
 // => true
 
-isNumber(NaN)
+isNumber(NaN);
 // => false
 ```
 
@@ -46,10 +47,10 @@ isNumber(NaN)
 Implement the `isObject` function, that should check if the value is actually an object, not null.
 
 ```javascript
-isObject({greeting:"Hello"})
+isObject({ greeting: 'Hello' });
 // => true
 
-isObject(25n)
+isObject(25n);
 // => false
 ```
 
@@ -58,15 +59,14 @@ isObject(25n)
 Implement the `isNumericString` function, that should check if the value is a string but only consists of numbers.
 
 ```javascript
-isNumericString(42)
+isNumericString(42);
 // => false
 
-isNumericString("42")
+isNumericString('42');
 // => true
 
-isNumericString("Hi!")
+isNumericString('Hi!');
 // => false
-
 ```
 
 ### 5. Check if an object is electronic
@@ -80,10 +80,10 @@ class Duck {
 class WashingMachine extends ElectronicDevice {
   //...
 }
-isElectronic(new Duck())
+isElectronic(new Duck());
 // => false
 
-isElectronic(new WashingMachine())
+isElectronic(new WashingMachine());
 // => false
 ```
 
@@ -92,21 +92,22 @@ isElectronic(new WashingMachine())
 Implement the `isNonEmptyArray` function, that checks if an object is a non empty array.
 
 ```javascript
-isNonEmptyArray([1,2,3])
+isNonEmptyArray([1, 2, 3]);
 // => true
 
-isNonEmptyArray([])
+isNonEmptyArray([]);
 // => false
 ```
 
 ### 7. Check if a value is an empty array
 
 Implement the `isEmptyArray` function, that checks if an object is an empty array.
+
 ```javascript
-isEmptyArray([1,2,3])
+isEmptyArray([1, 2, 3]);
 // => false
 
-isEmptyArray([])
+isEmptyArray([]);
 // => true
 ```
 
@@ -117,10 +118,10 @@ Implement the `assertHasId` function, that will throw an `Error` if an object is
 If an object does have the `id` property, it should not return anything.
 
 ```javascript
-assertHasId({id:42,color:"red"})
+assertHasId({ id: 42, color: 'red' });
 // => undefined
 
-assertHasId({color:"green"})
+assertHasId({ color: 'green' });
 // Error: "Object is missing the 'id' property"
 ```
 
@@ -151,33 +152,34 @@ Implement the `hasIdProperty` function, that checks whether an object has an `id
 ```javascript
 class MyClass {
   constructor() {
-    this.number = "42"
-    this.id = "BC269327FE1D9B95"
+    this.number = '42';
+    this.id = 'BC269327FE1D9B95';
   }
 }
 class MyNewClass {
   constructor() {
-    this.number = "42"
-    this._id = "BC269327FE1D9B95"
+    this.number = '42';
+    this._id = 'BC269327FE1D9B95';
   }
-  get id(){
-    return this._id
+  get id() {
+    return this._id;
   }
 }
-hasIdProperty(new MyClass())
+hasIdProperty(new MyClass());
 // => true
 
-hasIdProperty(new MyNewClass())
+hasIdProperty(new MyNewClass());
 // => false
 ```
+
 ### 11. Check if an object has a defined `type` property
 
 Implement the `hasDefinedType` function, that checks if an object has a `type` property that is not `undefined`.
 
 ```javascript
-hasDefinedType({type:undefined,color:"red"})
+hasDefinedType({ type: undefined, color: 'red' });
 // => false
 
-hasDefinedType({type:"car",color:"green"})
+hasDefinedType({ type: 'car', color: 'green' });
 // => true
 ```
