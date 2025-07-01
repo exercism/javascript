@@ -41,22 +41,22 @@
 - `typeof` returns a string.
 - You can check the length of an array to find out how many elements it contains.
 
-## 8. Throw an error if an object does not have the `id` property
+## 8. Throw an error if an object does not have the `id` property or method
 
-- You can use the `in` operator or the `Object.hasOwn()` function to check if an object has a property.
-- If the `id` property is missing, your function should throw an `Error`.
+- You can use the `in` operator to check if an object has a property or method.
+- If the `id` property or method is missing, your function should throw an `Error`.
 
-## 9. Check if an object has a `type` property
+## 9. Check if an object has a `type` property or method
 
-- You can use the `in` operator or the `Object.hasOwn()` function to check if an object has a property.
+- You can use the `in` operator to check if an object has a property or method.
 
-## 10. Check if an object has a `constructor` property
+## 10. Check if an object has an `id` property
 
-- All class instances have a `constructor`, but `Object.hasOwn()` is able to ignore this.
+- To check if an object has a property (not a method), you can use the `Object.hasOwn()` function.
 
 ## 11. Check if an object has a defined `type` property
 
-- You can use the `in` operator or the `Object.hasOwn()` function to check if an object has a property.
+- To check if an object has a property (not a method), you can use the `Object.hasOwn()` function.
 - You will have to access the `type` property and check if it is defined.
 
 [isNaN]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
