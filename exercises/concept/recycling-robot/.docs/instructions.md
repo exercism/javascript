@@ -4,8 +4,6 @@ You have been hired by a recycling center.
 Due to lack of space, all the products are put on the same conveyor belt, but this has lead to different materials mixing together, making them unusable.
 To fix this, you have been tasked with making functions to identify the type of a product.
 
-
-
 ### 1. Check if a value is a boolean
 
 Implement the `isBoolean` function, that checks if a value is a boolean.
