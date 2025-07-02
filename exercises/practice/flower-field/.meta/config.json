@@ -1,0 +1,32 @@
+{
+  "authors": [
+    "matthewmorgan"
+  ],
+  "contributors": [
+    "BNAndras",
+    "brendanmckeown",
+    "cr0t",
+    "rchavarria",
+    "serixscorpio",
+    "SleeplessByte",
+    "xarxziux"
+  ],
+  "files": {
+    "solution": [
+      "flower-field.js"
+    ],
+    "test": [
+      "flower-field.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden.",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+}
