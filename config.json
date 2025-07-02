@@ -2383,12 +2383,26 @@
         ]
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "cb4da136-db03-44fa-a5c8-5235f273320c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": [
+          "algorithms",
+          "arrays",
+          "games"
+        ]
+      },
+      {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "8bafe6c4-9154-4037-9070-7f57f91d495a",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
+        "status": "deprecated",
         "topics": [
           "algorithms",
           "arrays",
