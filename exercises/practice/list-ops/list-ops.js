@@ -5,38 +5,38 @@
 
 export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   append() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   concat() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   filter() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   map() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   length() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   foldl() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   foldr() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }

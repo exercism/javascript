@@ -5,26 +5,26 @@
 
 export class LinkedList {
   push() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   pop() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   shift() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   unshift() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   delete() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   count() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }

@@ -5,27 +5,27 @@
 
 export class BankAccount {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   open() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   close() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   deposit() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   withdraw() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   get balance() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }
 

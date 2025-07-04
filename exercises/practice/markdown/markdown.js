@@ -79,7 +79,7 @@ function parseLine(markdown, list) {
     [result, inListAfter] = parseParagraph(markdown, list);
   }
   if (result === null) {
-    throw new Error('Invalid markdown');
+    throw new Error('Remove this line and implement the function');
   }
   return [result, inListAfter];
 }

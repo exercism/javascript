@@ -5,14 +5,14 @@
 
 export class ZebraPuzzle {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   waterDrinker() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   zebraOwner() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }

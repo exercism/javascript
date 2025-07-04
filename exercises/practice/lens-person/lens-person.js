@@ -13,29 +13,29 @@ import { Lens } from './lens';
 // Implement the nameLens with the getter and setter
 export const nameLens = new Lens(
   () => {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   },
   () => {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   },
 );
 
 // Implement the bornAtLens with the getter and setter
 export const bornAtLens = new Lens(
   () => {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   },
   () => {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   },
 );
 
 // Implement the streetLens with the getter and setter
 export const streetLens = new Lens(
   () => {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   },
   () => {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   },
 );

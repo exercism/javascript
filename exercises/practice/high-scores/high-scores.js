@@ -5,22 +5,22 @@
 
 export class HighScores {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   get scores() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   get latest() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   get personalBest() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   get personalTopThree() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }
