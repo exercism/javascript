@@ -11,7 +11,7 @@
  * @returns {number} time in minutes
  */
 export function timeToMixJuice(name) {
-  throw new Error('Please implement the timeToMixJuice function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -23,7 +23,7 @@ export function timeToMixJuice(name) {
  * @returns {number} number of limes cut
  */
 export function limesToCut(wedgesNeeded, limes) {
-  throw new Error('Please implement the limesToCut function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -34,5 +34,5 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+  throw new Error('Remove this line and implement the function');
 }
