@@ -40,27 +40,33 @@ The Concepts this exercise unlocks are:
 This exercise could benefit from the following rules in the [analyzer][analyzer]:
 
 1. `createScoreBoard`
+
    - `essential`: Make sure no class, map etc. was created, there should be just an object.
    - `actionable`: If the student created an empty object first and then added the value, give feedback to include the entry in the object literal directly.
    - `actionable`: Check that the object was returned directly, no intermediate assignment to a variable necessary.
 
 2. `addPlayer`
+
    - `essential`: Check the assignment operator was used and no additional variables were declared.
 
 3. `removePlayer`
+
    - `essential`: Make sure `delete` was used and not set to undefined or null.
    - `actionable`: If there is additional code to check whether the key is present before deleting it, give feedback that this is not necessary.
 
 4. `updateScore`
+
    - `actionable`: If the student used a separate variable to calculate the new value first, tell them it is not necessary.
    - `actionable`: If the student did not use the shorthand assignment operator, tell them about it. If they used it already, give a `celebratory` comment.
 
 5. `applyMondayBonus`
+
    - `essential`: Check the student actually used `for...in`.
    - Same feedback as in `updateScore` applies.
    - Using `updateScore` in the solution should be treated as equally correct as the exemplar solution.
 
 6. `normalizeScore`
+
    - `actionable`: No intermediate variables necessary.
 
 ## Notes

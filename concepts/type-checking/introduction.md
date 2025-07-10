@@ -4,7 +4,7 @@ Knowning what type an object has is often very important for code to run smoothl
 
 Javascript has several ways to check the type of an object.
 
-````exercism/note
+```exercism/note
 Javascript's type checking mechanisms can be somewhat unreliable.
 
 For better type safety and stronger types, you should probably use TypeScript, a language that builds on JavaScript, but with the type syntax of a static-typed language.```
@@ -37,7 +37,7 @@ typeof [1, 2, 3, 4];
 
 typeof { city: 'Stockholm', country: 'Sweden' };
 // => "object"
-````
+```
 
 The one exception to this is that `typeof null` returns `"object"` for [historical reasons][typeof null is object].
 

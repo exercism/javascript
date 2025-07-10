@@ -38,6 +38,7 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 The comment types mentioned below only serve as a proposal.
 
 1. `timeToMixJuice`
+
    - `essential`: Verify the student used a switch statement.
      Would be nice if we could give different feedback depending on what the student used instead.
      If it was if-else, comment that switch is better suited for so many different variants.
@@ -52,6 +53,7 @@ The comment types mentioned below only serve as a proposal.
      ```
 
 2. `limesToCut`
+
    - A solution that uses `if (limes.length < 0) break;` instead of combining the conditions should be considered equally correct to the exemplar solution.
      The version in the exemplar file is shorter but the break version emphasizes that there is a special edge case.
    - `essential`: Verify that `while` was used.
@@ -66,6 +68,7 @@ The comment types mentioned below only serve as a proposal.
    - `celebratory`: Celebrate if the student used `++` and `+=`.
 
 3. `remainingOrders`
+
    - `essential`: Verify that do-while was used.
      If while was used instead, say that do-while is a better fit because there is always at least one iteration (because `timeLeft` is always > 0) and the condition can best be checked after running the code.
    - `essential`: Verify `timeToMixJuice` was reused instead of duplicating the code.
