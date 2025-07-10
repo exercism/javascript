@@ -11,7 +11,7 @@ export class ElectronicDevice {
  * Checks if input is a boolean.
  *
  * @param {unknown} value
- * @returns {boolean} whether the input is a boolean
+ * @returns {value is boolean} whether the input is a boolean
  */
 export function isBoolean(value) {
   return typeof value === 'boolean';
@@ -21,7 +21,7 @@ export function isBoolean(value) {
  * Checks if input is a finite number or bigint.
  *
  * @param {unknown} value
- * @returns {boolean} whether the input is a finite number or bigint
+ * @returns {value is number | bigint} whether the input is a finite number or bigint
  */
 export function isNumber(value) {
   return (
@@ -35,7 +35,7 @@ export function isNumber(value) {
  * Checks if a value is an object.
  *
  * @param {unknown} value
- * @returns {boolean} whether the input is an object.
+ * @returns {value is object} whether the input is an object.
  */
 export function isObject(value) {
   return value !== null && typeof value === 'object';
