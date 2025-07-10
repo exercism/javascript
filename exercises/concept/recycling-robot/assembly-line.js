@@ -10,7 +10,7 @@ export class ElectronicDevice {
 /**
  * Checks if input is a boolean.
  *
- * @param {any} value
+ * @param {unknown} value
  * @returns {boolean} whether the input is a boolean
  */
 export function isBoolean(value) {
@@ -20,7 +20,7 @@ export function isBoolean(value) {
 /**
  * Checks if input is a finite number or bigint.
  *
- * @param {any} value
+ * @param {unknown} value
  * @returns {boolean} whether the input is a finite number or bigint
  */
 export function isNumber(value) {
@@ -30,7 +30,7 @@ export function isNumber(value) {
 /**
  * Checks if a value is an object.
  *
- * @param {any} value
+ * @param {unknown} value
  * @returns {boolean} whether the input is an object.
  */
 export function isObject(value) {
@@ -40,7 +40,7 @@ export function isObject(value) {
 /**
  * Checks if a value is a numeric string.
  *
- * @param {any} value
+ * @param {unknown} value
  * @returns {boolean} whether the input is a numeric string.
  */
 export function isNumericString(value) {
@@ -62,7 +62,7 @@ export function isElectronic(object) {
 /**
  * Checks if a value is a non empty array.
  *
- * @param {any} value
+ * @param {unknown} value
  * @returns {boolean} whether the input is a non empty array.
  */
 export function isNonEmptyArray(value) {
@@ -74,7 +74,7 @@ export function isNonEmptyArray(value) {
 /**
  * Checks if a value is an empty array.
  *
- * @param {any} value
+ * @param {unknown} value
  * @returns {boolean} whether the input is an empty array.
  */
 export function isEmptyArray(value) {
