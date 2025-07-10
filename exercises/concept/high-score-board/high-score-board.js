@@ -7,7 +7,7 @@
  * @returns {Record<string, number>} new score board
  */
 export function createScoreBoard() {
-  throw new Error('Please implement the createScoreBoard function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -19,7 +19,7 @@ export function createScoreBoard() {
  * @returns {Record<string, number>} updated score board
  */
 export function addPlayer(scoreBoard, player, score) {
-  throw new Error('Please implement the addPlayer function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -30,7 +30,7 @@ export function addPlayer(scoreBoard, player, score) {
  * @returns {Record<string, number>} updated score board
  */
 export function removePlayer(scoreBoard, player) {
-  throw new Error('Please implement the removePlayer function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -42,7 +42,7 @@ export function removePlayer(scoreBoard, player) {
  * @returns {Record<string, number>} updated score board
  */
 export function updateScore(scoreBoard, player, points) {
-  throw new Error('Please implement the updateScore function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -52,5 +52,5 @@ export function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 export function applyMondayBonus(scoreBoard) {
-  throw new Error('Please implement the applyMondayBonus function');
+  throw new Error('Remove this line and implement the function');
 }

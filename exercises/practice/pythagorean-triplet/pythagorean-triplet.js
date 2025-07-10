@@ -4,15 +4,15 @@
 //
 
 export function triplets({ minFactor, maxFactor, sum }) {
-  throw new Error('Remove this statement and implement this function');
+  throw new Error('Remove this line and implement the function');
 }
 
 class Triplet {
   constructor(a, b, c) {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   toArray() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }

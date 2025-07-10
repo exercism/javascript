@@ -11,7 +11,7 @@
  * @returns {number} total bird count
  */
 export function totalBirdCount(birdsPerDay) {
-  throw new Error('Please implement the totalBirdCount function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -22,7 +22,7 @@ export function totalBirdCount(birdsPerDay) {
  * @returns {number} birds counted in the given week
  */
 export function birdsInWeek(birdsPerDay, week) {
-  throw new Error('Please implement the birdsInWeek function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -33,5 +33,5 @@ export function birdsInWeek(birdsPerDay, week) {
  * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
-  throw new Error('Please implement the fixBirdCountLog function');
+  throw new Error('Remove this line and implement the function');
 }

@@ -8,7 +8,7 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error('Implement the twoSum function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -18,7 +18,7 @@ export function twoSum(array1, array2) {
  * @returns {boolean} whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
-  throw new Error('Implement the luckyNumber function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -29,5 +29,5 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error('Implement the errorMessage function');
+  throw new Error('Remove this line and implement the function');
 }

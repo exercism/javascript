@@ -242,42 +242,34 @@ describe('make the bottom card disappear', () => {
 });
 
 describe('check your work', () => {
-  describe('an empty stack of cards', () => {
-    test('has 0 cards', () => {
-      const stack = [];
+  test('an empty stack of cards has 0 cards', () => {
+    const stack = [];
 
-      expect(checkSizeOfStack(stack, 0)).toBe(true);
-      expect(checkSizeOfStack(stack, 1)).toBe(false);
-    });
+    expect(checkSizeOfStack(stack, 0)).toBe(true);
+    expect(checkSizeOfStack(stack, 1)).toBe(false);
   });
 
-  describe('a stack with a single card', () => {
-    test('has exactly 1 card', () => {
-      const stack = [7];
+  test('a stack with a single card has exactly 1 card', () => {
+    const stack = [7];
 
-      expect(checkSizeOfStack(stack, 0)).toBe(false);
-      expect(checkSizeOfStack(stack, 1)).toBe(true);
-      expect(checkSizeOfStack(stack, 2)).toBe(false);
-    });
+    expect(checkSizeOfStack(stack, 0)).toBe(false);
+    expect(checkSizeOfStack(stack, 1)).toBe(true);
+    expect(checkSizeOfStack(stack, 2)).toBe(false);
   });
 
-  describe('a stack with the even cards', () => {
-    test('has exactly 4 cards', () => {
-      const stack = [2, 4, 6, 8];
+  test('a stack with the even cards has exactly 4 cards', () => {
+    const stack = [2, 4, 6, 8];
 
-      expect(checkSizeOfStack(stack, 3)).toBe(false);
-      expect(checkSizeOfStack(stack, 4)).toBe(true);
-      expect(checkSizeOfStack(stack, 5)).toBe(false);
-    });
+    expect(checkSizeOfStack(stack, 3)).toBe(false);
+    expect(checkSizeOfStack(stack, 4)).toBe(true);
+    expect(checkSizeOfStack(stack, 5)).toBe(false);
   });
 
-  describe('a stack with the odd cards', () => {
-    test('has exactly 5 cards', () => {
-      const stack = [1, 3, 5, 7, 9];
+  test('a stack with the odd cards has exactly 5 cards', () => {
+    const stack = [1, 3, 5, 7, 9];
 
-      expect(checkSizeOfStack(stack, 3)).toBe(false);
-      expect(checkSizeOfStack(stack, 4)).toBe(false);
-      expect(checkSizeOfStack(stack, 5)).toBe(true);
-    });
+    expect(checkSizeOfStack(stack, 3)).toBe(false);
+    expect(checkSizeOfStack(stack, 4)).toBe(false);
+    expect(checkSizeOfStack(stack, 5)).toBe(true);
   });
 });
