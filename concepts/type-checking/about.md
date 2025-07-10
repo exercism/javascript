@@ -1,6 +1,6 @@
 # About
 
-Knowning what type an object has is often very important for code to run smoothly and without errors.
+Knowning what the type of a piece of data is, is often very important for code to run smoothly and without errors.
 
 Javascript has several ways to check the type of an object.
 
