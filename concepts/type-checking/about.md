@@ -2,7 +2,7 @@
 
 Knowning what the type of a piece of data is, is often very important for code to run smoothly and without errors.
 
-Javascript has several ways to check the type of an object.
+Javascript has several ways to check the type of a value or object.
 
 ```exercism/note
 Javascript's type checking mechanisms are always soomewhat unreliable.
