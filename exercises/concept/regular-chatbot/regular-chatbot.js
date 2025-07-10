@@ -8,7 +8,7 @@
  */
 
 export function isValidCommand(command) {
-  throw new Error('Please implement the isValidCommand function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -18,7 +18,7 @@ export function isValidCommand(command) {
  * @returns {string} The message without the emojis encryption
  */
 export function removeEmoji(message) {
-  throw new Error('Please implement the removeEmoji function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -28,7 +28,7 @@ export function removeEmoji(message) {
  * @returns {string} the Chatbot response to the phone Validation
  */
 export function checkPhoneNumber(number) {
-  throw new Error('Please implement the checkPhoneNumber function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -38,7 +38,7 @@ export function checkPhoneNumber(number) {
  * @returns {string[] | null} all the possible URL's that the user may have answered
  */
 export function getURL(userInput) {
-  throw new Error('Please implement the userInput function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -48,5 +48,5 @@ export function getURL(userInput) {
  * @returns {string} Greeting from the chatbot
  */
 export function niceToMeetYou(fullName) {
-  throw new Error('Please implement the fullName function');
+  throw new Error('Remove this line and implement the function');
 }

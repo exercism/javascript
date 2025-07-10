@@ -27,10 +27,10 @@ const PLANT_CODES = {
 
 export class Garden {
   constructor(diagram, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   plants(student) {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }

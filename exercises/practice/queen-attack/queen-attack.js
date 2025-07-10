@@ -8,14 +8,14 @@ export class QueenAttack {
     black: [blackRow, blackColumn] = [],
     white: [whiteRow, whiteColumn] = [],
   } = {}) {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 
   get canAttack() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error('Remove this line and implement the function');
   }
 }
