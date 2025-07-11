@@ -67,7 +67,7 @@ isNumericString('Hi!');
 
 ### 5. Check if an object is electronic
 
-Implement the `isElectronic` function, that checks if an object is an instance of the provided ElectronicDevice class or one of its child classes.
+Implement the `isElectronic` function, that checks if an object is an instance of the provided `ElectronicDevice` class or one of its child classes.
 
 ```javascript
 class Duck {
