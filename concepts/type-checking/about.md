@@ -46,7 +46,7 @@ For [historical reasons][`typeof null` is `"object"`].
 ## The `instanceof` operator
 
 For checking the type of an object, you can use the `instanceof` operator.
-It returns a boolean depending on whether the second operand is included in the first operands' [prototype chain][prototype chain].
+It evaluates into a `boolean` depending on whether the second operand is included in the first operands' [prototype chain][prototype chain].
 To clarify, `instanceof` will return whether the first operand is an instance of second operand or one of its child classes.
 `instanceof` only works for compound data types, such as arrays and objects.
 
