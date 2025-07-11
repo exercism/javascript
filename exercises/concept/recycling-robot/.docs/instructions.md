@@ -99,7 +99,7 @@ isNonEmptyArray([]);
 
 ### 7. Check if a value is an empty array
 
-Implement the `isEmptyArray` function, that checks if an object is an empty array.
+Implement the `isEmptyArray` function, that checks if a value is an empty array.
 
 ```javascript
 isEmptyArray([1, 2, 3]);
