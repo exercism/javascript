@@ -91,7 +91,8 @@ Array.isArray({ __proto__: Array.prototype })
 ## The `in` operator
 
 The `in` operator returns whether the first operand is a property of the second operand.
-It does not check that the property is defined, a property set to `undefined` will still be detected by `in`.
+It does not check that the property has a defined value.
+A property set to `undefined` will still be detected by `in`.
 
 ```javascript
 class Coffee {
