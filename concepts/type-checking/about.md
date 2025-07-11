@@ -76,6 +76,16 @@ While `instanceof Array` will not work with an array created in a different real
 
 This is because the Array class has a different constructor in each realm, and each `iframe` has its own ream, meaning that the function in the prototype chain will be different, causing `instanceof Array` to fail.
 `Array.isArray()` is capable of ignoring this, and should always be used when possible.
+
+It can also survive false positives where an object isn't actually an `Array`, and merely has `Array` in its prototype chain.
+
+```javascript
+({ __proto__: Array.prototype }) instanceof Array
+// => true
+
+Array.isArray({ __proto__: Array.prototype })
+// => false
+```
 ```
 
 ## The `in` operator
