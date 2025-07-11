@@ -11,6 +11,9 @@
     ],
     "exemplar": [
       ".meta/exemplar.js"
+    ],
+    "editor": [
+      "lib.js"
     ]
   },
   "blurb": "Learn about type checking while helping manage an assembly line"
