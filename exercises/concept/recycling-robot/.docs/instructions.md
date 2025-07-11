@@ -87,7 +87,7 @@ isElectronic(new WashingMachine());
 
 ### 6. Check if a value is a non empty array
 
-Implement the `isNonEmptyArray` function, that checks if an object is a non empty array.
+Implement the `isNonEmptyArray` function, that checks if a value is a non-empty array.
 
 ```javascript
 isNonEmptyArray([1, 2, 3]);
