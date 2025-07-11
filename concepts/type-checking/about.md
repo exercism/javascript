@@ -48,7 +48,7 @@ For [historical reasons][`typeof null` is `"object"`].
 For checking the type of an object, you can use the `instanceof` operator.
 It evaluates into a `boolean` depending on whether the second operand is included in the first operands' [prototype chain][prototype chain].
 To clarify, `instanceof` will return whether the first operand is an instance of second operand or one of its child classes.
-`instanceof` only works for compound data types, such as arrays and objects.
+`instanceof` only works on objects.
 
 ```javascript
 class Beverage {
