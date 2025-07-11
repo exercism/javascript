@@ -52,7 +52,7 @@ isObject(25n);
 
 ### 4. Check if a string is numeric
 
-Implement the `isNumericString` function, that should check if the value is a string but only consists of numbers.
+Implement the `isNumericString` function, that should check if the value is a string that only consists of digits.
 
 ```javascript
 isNumericString(42);
