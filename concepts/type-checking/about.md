@@ -41,7 +41,7 @@ typeof { city: 'Stockholm', country: 'Sweden' };
 // => "object"
 ```
 
-The one exception to this is that `typeof null` returns `"object"` for [historical reasons][typeof null is object].
+For [historical reasons][`typeof null` is `"object"`].
 
 ## The `instanceof` operator
 
