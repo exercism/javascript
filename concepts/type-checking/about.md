@@ -119,7 +119,8 @@ const espresso = new Coffee();
 ```
 
 ````exercism/note
-`in` can be slightly unreliable, as it will return `true` for inherited properties and methods.
+`in` will return `true` for inherited properties and methods.
+
 ```javascript
 "coolDown" in espresso
 // => true
@@ -127,7 +128,8 @@ const espresso = new Coffee();
 "constructor" in espresso
 // => true
 ```
-To avoid this, use the hasOwnProperty() method.
+
+To avoid this, use `Object.hasOwn()` instead
 ````
 
 ## The `Object.hasOwn()` function
