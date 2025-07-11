@@ -117,7 +117,7 @@ const espresso = new Coffee();
 
 'isDarkMatter' in espresso;
 // => true
-````
+```
 
 ````exercism/note
 `in` will return `true` for inherited properties and methods.
