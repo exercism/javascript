@@ -446,6 +446,10 @@
         ],
         "prerequisites": [
           "basics",
+          "errors", 
+          "objects",
+          "arrays",
+          "classes",
           "inheritance"
         ]
       }
