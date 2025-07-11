@@ -4,6 +4,8 @@
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
 
+import {ElectronicDevice} from "./lib.js"
+
 /**
  * Checks if input is a boolean.
  *
