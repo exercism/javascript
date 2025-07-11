@@ -436,6 +436,22 @@
           "objects",
           "functions"
         ]
+      },
+      {
+        "slug": "recycling-robot",
+        "name": "Recycling Robot",
+        "uuid": "16114449-52fe-470e-af11-cf9dc3689a93",
+        "concepts": [
+          "type-checking"
+        ],
+        "prerequisites": [
+          "basics",
+          "errors",
+          "objects",
+          "arrays",
+          "classes",
+          "inheritance"
+        ]
       }
     ],
     "practice": [
@@ -2887,6 +2903,11 @@
       "uuid": "ca322d6f-0f7e-4a2d-a058-e98a59cdae93",
       "slug": "randomness",
       "name": "Randomness"
+    },
+    {
+      "uuid": "72e51fbe-db98-492e-b155-8ef21623f741",
+      "slug": "type-checking",
+      "name": "Type Checking"
     }
   ],
   "key_features": [

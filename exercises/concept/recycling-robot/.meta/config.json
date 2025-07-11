@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "quintuple-mallard",
+    "SleeplessByte"
+  ],
+  "files": {
+    "solution": [
+      "assembly-line.js"
+    ],
+    "test": [
+      "assembly-line.spec.js"
+    ],
+    "exemplar": [
+      ".meta/exemplar.js"
+    ],
+    "editor": [
+      "lib.js"
+    ]
+  },
+  "blurb": "Learn about type checking while helping manage an assembly line"
+}
