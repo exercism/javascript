@@ -1,5 +1,8 @@
 {
   "blurb": "Learn how to check the type of a value or object in JavaScript",
-  "authors": ["quintuple-mallard"],
+  "authors": [
+    "quintuple-mallard",
+    "SleeplessByte"
+  ],
   "contributors": []
 }
