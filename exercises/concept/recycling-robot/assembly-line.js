@@ -4,9 +4,6 @@
 // the @ts-check directive. It will give you helpful autocompletion when
 // implementing this exercise.
 
-export class ElectronicDevice {
-  // This class will be used in the exercise.
-}
 /**
  * Checks if input is a boolean.
  *
