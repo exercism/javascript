@@ -72,7 +72,7 @@ java instanceof Beverage;
 ```exercism/advanced
 The `Array` class has a method called `Array.isArray()` that checks if its argument is an array.
 
-While `instanceof Array` will not work with an array created in a different `iframe` in a webpage, `Array.isArray()` will.
+While `instanceof Array` will not work with an array created in a different realm such as an `iframe` in a webpage, `Array.isArray()` will.
 
 This is because the Array class has a different constructor in each `iframe`, meaning that the function in the prototype chain will be different, causing `instanceof Array` to fail.
 `Array.isArray()` is capable of ignoring this, and should always be used when possible.
