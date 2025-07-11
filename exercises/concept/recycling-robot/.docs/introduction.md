@@ -1,4 +1,4 @@
-# About
+# Introduction
 
 Knowning what type an object has is often very important for code to run smoothly and without errors.
 
