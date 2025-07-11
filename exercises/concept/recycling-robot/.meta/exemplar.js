@@ -26,7 +26,7 @@ export function isBoolean(value) {
 export function isNumber(value) {
   return (
     (typeof value === 'number' || typeof value === 'bigint') &&
-    !isNaN(Number(value)) &&
+    !isNaN(value) &&
     value !== Infinity
   );
 }
