@@ -73,9 +73,11 @@ Implement the `isElectronic` function, that checks if an object is an instance o
 class Duck {
   //...
 }
+
 class WashingMachine extends ElectronicDevice {
   //...
 }
+
 isElectronic(new Duck());
 // => false
 
