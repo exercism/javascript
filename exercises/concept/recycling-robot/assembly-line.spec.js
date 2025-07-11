@@ -4,7 +4,6 @@ import {
   isNumber,
   isObject,
   isNumericString,
-  ElectronicDevice,
   isElectronic,
   isNonEmptyArray,
   isEmptyArray,
@@ -13,6 +12,7 @@ import {
   hasIdProperty,
   hasDefinedType,
 } from './assembly-line';
+import {ElectronicDevice} from './lib.js'
 describe('isBoolean', () => {
   test('isBoolean works on booleans', () => {
     expect(isBoolean(true)).toBe(true);
