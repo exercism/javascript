@@ -18,7 +18,7 @@ isBoolean(null);
 
 ### 2. Check if a value is a number.
 
-Implement the `isNumber` function, that checks if a value is a _finite_ number or bigint, ie not `NaN` or `Infinity`.
+Implement the `isNumber` function, that checks if a value is a _finite_ `number` or `bigint`, ie. not `NaN` or `Infinity`.
 
 Sometimes, the device for reading IDs bugs and reads a non-numeric value as `NaN` (Not a Number) or `Infinity`.
 Your function should be able to correctly handle this as well.
