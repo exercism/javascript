@@ -13,6 +13,7 @@ import {
   hasDefinedType,
 } from './assembly-line';
 import { ElectronicDevice } from './lib.js';
+
 describe('isBoolean', () => {
   test('isBoolean works on booleans', () => {
     expect(isBoolean(true)).toBe(true);
@@ -26,6 +27,7 @@ describe('isBoolean', () => {
     expect(isBoolean(Symbol('1'))).toBe(false);
   });
 });
+
 describe('isNumber', () => {
   test('isNumber works on numbers', () => {
     expect(isNumber(42)).toBe(true);
@@ -49,6 +51,7 @@ describe('isNumber', () => {
     expect(isNumber(Infinity)).toBe(false);
   });
 });
+
 class ClassForTesting {
   constructor(number, word) {
     this.number = number;
@@ -56,6 +59,7 @@ class ClassForTesting {
   }
   id() {}
 }
+
 describe('isObject', () => {
   test('isObject works on objects', () => {
     expect(isObject({})).toBe(true);
@@ -77,6 +81,7 @@ describe('isObject', () => {
     expect(isObject(null)).toBe(false);
   });
 });
+
 describe('isNumericString', () => {
   test('isNumericString works on numeric strings', () => {
     expect(isNumericString('42')).toBe(true);
@@ -95,10 +100,12 @@ describe('isNumericString', () => {
     expect(isNumericString(Symbol('\u0070'))).toBe(false);
   });
 });
+
 class Oven extends ElectronicDevice {}
 class Computer extends ElectronicDevice {}
 class PersonalComputer extends Computer {}
 class HomeMadePersonalComputer extends PersonalComputer {}
+
 describe('isElectronic', () => {
   test('isElectronic works on instances of ElectronicDevice or its child classes', () => {
     expect(isElectronic(new ElectronicDevice())).toBe(true);
@@ -124,6 +131,7 @@ describe('isElectronic', () => {
     expect(isElectronic(new HomeMadePersonalComputer())).toBe(true);
   });
 });
+
 describe('isNonEmptyArray', () => {
   test('isNonEmptyArray works on non-empty arrays', () => {
     expect(isNonEmptyArray([1, 2, 3])).toBe(true);
@@ -152,9 +160,11 @@ describe('isEmptyArray', () => {
     expect(isEmptyArray(123)).toBe(false);
   });
 });
+
 class TestAssertHasId {
   id() {}
 }
+
 describe('assertHasId', () => {
   test("assertHasId throws error if object has no 'id' property or method", () => {
     expect(() => assertHasId({})).toThrow();
@@ -164,9 +174,11 @@ describe('assertHasId', () => {
     expect(() => assertHasId(new TestAssertHasId())).not.toThrow();
   });
 });
+
 class TestHasType {
   type() {}
 }
+
 describe('hasType', () => {
   test('hasType works correctly', () => {
     expect(hasType({ type: 'example' })).toBe(true);

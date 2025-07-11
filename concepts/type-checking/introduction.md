@@ -85,7 +85,7 @@ It can also survive false positives where an object isn't actually an `Array`, a
 
 Array.isArray({ __proto__: Array.prototype })
 // => false
-````
+```
 
 ````
 
