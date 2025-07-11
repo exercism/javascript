@@ -20,7 +20,7 @@ isBoolean(null);
 
 Implement the `isNumber` function, that checks if a value is a _finite_ `number` or `bigint`, ie. not `NaN` or `Infinity`.
 
-Sometimes, the device for reading IDs bugs and reads a non-numeric value as `NaN` (Not a Number) or `Infinity`.
+Sometimes, the device for reading IDs fails and reads a non-numeric value as `NaN` (Not a Number) or `Infinity`.
 Your function should be able to correctly handle this as well.
 
 ```javascript
