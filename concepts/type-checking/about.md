@@ -134,7 +134,7 @@ To avoid this, use `Object.hasOwn()` instead
 
 ## The `Object.hasOwn()` function
 
-The `Object.hasOwn()` method returns whether the specified object has _its own property_ (not inherited or a method) that matches a string.
+The `Object.hasOwn()` method returns whether the specified object _owns the given property_ (it is not inherited or a method).
 
 ```javascript
 class Coffee {
