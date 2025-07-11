@@ -39,7 +39,8 @@ isNumber(NaN);
 
 ### 3. Check if a value is an object
 
-Implement the `isObject` function, that should check if the value is actually an object, not null.
+Implement the `isObject` function, that should check if the value is an object.
+On the conveyor, `null` is nothing and not considered an object.
 
 ```javascript
 isObject({ greeting: 'Hello' });
