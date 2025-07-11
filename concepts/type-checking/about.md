@@ -13,7 +13,8 @@ For better type safety and stronger types, you should probably use TypeScript, a
 ## The `typeof` operator
 
 The `typeof` operator returns the type of its input.
-The output is restricted to one of the [primitive data types][primitives], `"function"` or `"object"`.
+The output is a string matching the name of one of the [primitive data types][primitives], except for `"null"`. 
+It can also be `"function"` or `"object"`.
 
 ```javascript
 typeof undefined;
