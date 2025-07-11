@@ -54,10 +54,12 @@ To clarify, `instanceof` will return whether the first operand is an instance of
 class Beverage {
   // ...
 }
+
 // The Coffee class is a child of the Beverage class.
 class Coffee extends Beverage {
   // ...
 }
+
 const java = new Coffee();
 
 java instanceof Coffee;
@@ -87,10 +89,12 @@ class Coffee {
     this.temperature = 'hot';
     this.isDarkMatter = undefined;
   }
+
   coolDown() {
     this.temperature = 'warm';
   }
 }
+
 const espresso = new Coffee();
 
 'temperature' in espresso;
@@ -124,6 +128,7 @@ class Coffee {
   constructor() {
     this.temperature = 'hot';
   }
+
   coolDown() {
     this.temperature = 'warm';
   }
