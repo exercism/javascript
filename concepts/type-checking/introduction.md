@@ -13,7 +13,7 @@ For better type safety and stronger types, you should probably use TypeScript, a
 ## The `typeof` operator
 
 The `typeof` operator returns the type of its operand.
-The output is a string matching the name of one of the [primitive data types][primitives], except for `"null"`. 
+The output is a string matching the name of one of the [primitive data types][primitives], except for `"null"`.
 It can also be `"function"` or `"object"`.
 
 ```javascript
@@ -69,7 +69,7 @@ java instanceof Beverage;
 // => true
 ```
 
-```exercism/advanced
+````exercism/advanced
 The `Array` class has a method called `Array.isArray()` that checks if its argument is an array.
 
 While `instanceof Array` will not work with an array created in a different realm such as an `iframe` in a webpage, `Array.isArray()` will.
@@ -85,8 +85,9 @@ It can also survive false positives where an object isn't actually an `Array`, a
 
 Array.isArray({ __proto__: Array.prototype })
 // => false
-```
-```
+````
+
+````
 
 ## The `in` operator
 
@@ -116,7 +117,7 @@ const espresso = new Coffee();
 
 'isDarkMatter' in espresso;
 // => true
-```
+````
 
 ````exercism/note
 `in` will return `true` for inherited properties and methods.
