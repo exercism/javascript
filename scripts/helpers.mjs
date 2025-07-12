@@ -8,7 +8,9 @@ import crypto from 'node:crypto';
 
 const exerciseDirs = shell.ls(
   '-d',
-  path.join('exercises', '{practice,concept}', '*'),
+
+  // Shell.js ls wants / paths
+  path.join('exercises', '{practice,concept}', '*').replaceAll('\\', '/'),
 );
 
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`);

@@ -11,14 +11,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/assembly-line"
+    "directory": "exercises/concept/recycling-robot"
   },
   "devDependencies": {
     "@exercism/babel-preset-javascript": "^0.5.1",
     "@exercism/eslint-config-javascript": "^0.8.1",
     "@jest/globals": "^29.7.0",
     "@types/node": "^22.15.29",
-    "@types/shelljs": "^0.8.16",
+    "@types/shelljs": "^0.8.17",
     "babel-jest": "^29.7.0",
     "core-js": "~3.42.0",
     "diff": "^8.0.2",
