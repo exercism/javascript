@@ -81,16 +81,6 @@ export function isEmptyArray(value) {
 }
 
 /**
- * Throws an error if an object is missing an "id" property or method.
- *
- * @param {object} object
- * @returns {undefined} undefined if the input has an "id" property or method, otherwise throws an error.
- */
-export function assertHasId(object) {
-  throw new Error('Remove this line and implement the assertHasId function');
-}
-
-/**
  * Checks if a value has a "type" property or method.
  *
  * @param {object} object
@@ -98,6 +88,16 @@ export function assertHasId(object) {
  */
 export function hasType(object) {
   throw new Error('Remove this line and implement the hasType function');
+}
+
+/**
+ * Throws an error if an object is missing an "id" property or method.
+ *
+ * @param {object} object
+ * @returns {never|void} undefined if the input has an "id" property or method, otherwise throws an error.
+ */
+export function assertHasId(object) {
+  throw new Error('Remove this line and implement the assertHasId function');
 }
 
 /**

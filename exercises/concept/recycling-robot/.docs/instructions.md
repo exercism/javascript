@@ -52,7 +52,8 @@ isObject(25n);
 
 ### 4. Check if a string is numeric
 
-Implement the `isNumericString` function, that should check if the value is a string that only consists of digits.
+Implement the `isNumericString` function, that should check if the value is a string that only consists of digits or a minus followed by digits indicating a negative number.
+Only integers should be considered, decimals are not considered numeric for this check of the recycling robot.
 
 ```javascript
 isNumericString(42);
@@ -109,7 +110,27 @@ isEmptyArray([]);
 // => true
 ```
 
-### 8. Throw an error if an object does not have an `id` property or method
+### 8. Check if an object has a `type` property or method
+
+Implement the `hasType` function, that checks whether an object has a `type` property or method.
+
+```javascript
+class Keyboard(){
+  type(){
+    // ...
+  }
+}
+hasType({ type:"car", color:"red" })
+// => true
+
+hasType({ color:"green" })
+// => false
+
+hasType(new Keyboard())
+// => true
+```
+
+### 9. Throw an error if an object does not have an `id` property or method
 
 Implement the `assertHasId` function, that will throw an `Error` if an object is missing the `id` property.
 
@@ -123,50 +144,38 @@ assertHasId({ color: 'green' });
 // Error: "Object is missing the 'id' property"
 ```
 
-### 9. Check if an object has a `type` property or method
-
-Implement the `hasType` function, that checks whether an object has a `type` property or method.
-
-```javascript
-class Keyboard(){
-  type(){
-    // ...
-  }
-}
-hasType({type:"car",color:"red"})
-// => true
-
-hasType({color:"green"})
-// => false
-
-hasType(new Keyboard())
-// => true
-```
-
 ### 10. Check if an object has an `id` property
 
 Implement the `hasIdProperty` function, that checks whether an object has an `id` property.
 
 ```javascript
-class MyClass {
+class SimpleData {
   constructor() {
     this.number = '42';
     this.id = 'BC269327FE1D9B95';
   }
 }
-class MyNewClass {
+
+class StealingData extends SimpleData {}
+
+class MethodData {
   constructor() {
     this.number = '42';
     this._id = 'BC269327FE1D9B95';
   }
+
   get id() {
     return this._id;
   }
 }
-hasIdProperty(new MyClass());
+
+hasIdProperty(new SimpleData());
 // => true
 
-hasIdProperty(new MyNewClass());
+hasIdProperty(new MethodData());
+// => false
+
+hasIdProperty(new StealingData());
 // => false
 ```
 
