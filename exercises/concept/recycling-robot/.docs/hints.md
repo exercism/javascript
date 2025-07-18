@@ -40,14 +40,14 @@
 - `typeof` returns a string.
 - You can check the length of an array to find out how many elements it contains.
 
-## 8. Throw an error if an object does not have the `id` property or method
+## 8. Check if an object has a `type` property or method
+
+- You can use the `in` operator to check if an object has a property or method.
+
+## 9. Throw an error if an object does not have the `id` property or method
 
 - You can use the `in` operator to check if an object has a property or method.
 - If the `id` property or method is missing, your function should throw an `Error`.
-
-## 9. Check if an object has a `type` property or method
-
-- You can use the `in` operator to check if an object has a property or method.
 
 ## 10. Check if an object has an `id` property
 

@@ -24,9 +24,7 @@ export function isBoolean(value) {
  */
 export function isNumber(value) {
   return (
-    (typeof value === 'number' || typeof value === 'bigint') &&
-    !isNaN(Number(value)) &&
-    value !== Infinity
+    (typeof value === 'number' && isFinite(value)) || typeof value === 'bigint'
   );
 }
 
@@ -47,12 +45,7 @@ export function isObject(value) {
  * @returns {boolean} whether the input is a numeric string.
  */
 export function isNumericString(value) {
-  return (
-    typeof value === 'string' &&
-    value.split('').every((char) => {
-      return /[0-9]/.test(char);
-    })
-  );
+  return typeof value === 'string' && /^-?\d+$/.test(value);
 }
 
 /**
@@ -86,19 +79,6 @@ export function isEmptyArray(value) {
 }
 
 /**
- * Throws an error if an object is missing an "id" property or method.
- *
- * @param {object} object
- * @returns {boolean} undefined if the input has an "id" property, otherwise throws an error.
- */
-export function assertHasId(object) {
-  if ('id' in object) {
-    return;
-  }
-  throw new Error('The "id" property is missing.');
-}
-
-/**
  * Checks if a value has a "type" property or method.
  *
  * @param {object} object
@@ -106,6 +86,20 @@ export function assertHasId(object) {
  */
 export function hasType(object) {
   return 'type' in object;
+}
+
+/**
+ * Throws an error if an object is missing an "id" property or method.
+ *
+ * @param {object} object
+ * @returns {never|void} undefined if the input has an "id" property, otherwise throws an error.
+ */
+export function assertHasId(object) {
+  if ('id' in object) {
+    return;
+  }
+
+  throw new Error('The "id" property is missing.');
 }
 
 /**
