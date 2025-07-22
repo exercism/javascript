@@ -10,7 +10,7 @@ describe('ProteinTranslation', () => {
     xtest('Methionine RNA sequence', () => {
       expect(translate('AUG')).toEqual(['Methionine']);
     });
-  
+
     xtest('Phenylalanine RNA sequence 1', () => {
       expect(translate('UUU')).toEqual(['Phenylalanine']);
     });
@@ -65,7 +65,7 @@ describe('ProteinTranslation', () => {
     xtest('STOP codon RNA sequence 3', () => {
       expect(translate('UGA')).toEqual([]);
     });
-  });  
+  });
 
   describe('Multiple codons', () => {
     xtest('Sequence of two protein codons translates into proteins', () => {
