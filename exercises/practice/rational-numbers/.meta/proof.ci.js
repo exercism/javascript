@@ -40,10 +40,17 @@ class Rational {
     return new Rational(Math.abs(this.numerator), Math.abs(this.denominator));
   }
   exprational(n) {
-    return new Rational(
-      Math.pow(this.numerator, n),
-      Math.pow(this.denominator, n),
-    );
+    if (n >= 0) {
+      return new Rational(
+        Math.pow(this.numerator, n),
+        Math.pow(this.denominator, n),
+      );
+    } else {
+      return new Rational(
+        Math.pow(this.denominator, -n),
+        Math.pow(this.numerator, -n),
+      );
+    }
   }
   expreal(base) {
     return Math.pow(
