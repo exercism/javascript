@@ -48,13 +48,13 @@ export class ResistorColorTrio {
     const value = this.value;
 
     if (value >= ONE_GIGAOHM) {
-      return `${Math.floor(value / ONE_GIGAOHM) } gigaohms`;
+      return `${Math.floor(value / ONE_GIGAOHM)} gigaohms`;
     }
     if (value >= ONE_MEGAOHM) {
-      return `${Math.floor(value / ONE_MEGAOHM) } megaohms`;
+      return `${Math.floor(value / ONE_MEGAOHM)} megaohms`;
     }
     if (value >= ONE_KILOOHM) {
-      return `${Math.floor(value / ONE_KILOOHM) } kiloohms`;
+      return `${Math.floor(value / ONE_KILOOHM)} kiloohms`;
     }
 
     return `${value} ohms`;

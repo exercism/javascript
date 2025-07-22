@@ -61,9 +61,9 @@ describe('Resistor Color Trio', () => {
   });
 
   xtest('Ignore extra colors', () => {
-    expect(new ResistorColorTrio(['blue', 'green', 'yellow', 'orange']).label).toEqual(
-      makeLabel({ value: 650, unit: 'kiloohms' }),
-    );
+    expect(
+      new ResistorColorTrio(['blue', 'green', 'yellow', 'orange']).label,
+    ).toEqual(makeLabel({ value: 650, unit: 'kiloohms' }));
   });
 
   // optional: error
