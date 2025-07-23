@@ -22,12 +22,28 @@ describe('say', () => {
     expect(say(22)).toBe('twenty-two');
   });
 
+  xtest('thirty', () => {
+    expect(say(30)).toBe('thirty');
+  });
+
+  xtest('ninety-nine', () => {
+    expect(say(99)).toBe('ninety-nine');
+  });
+
   xtest('one hundred', () => {
     expect(say(100)).toBe('one hundred');
   });
 
   xtest('one hundred twenty-three', () => {
     expect(say(123)).toBe('one hundred twenty-three');
+  });
+
+  xtest('two hundred', () => {
+    expect(say(200)).toBe('two hundred');
+  });
+
+  xtest('nine hundred ninety-nine', () => {
+    expect(say(999)).toBe('nine hundred ninety-nine');
   });
 
   xtest('one thousand', () => {
