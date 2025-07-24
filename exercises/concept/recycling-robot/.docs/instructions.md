@@ -83,7 +83,7 @@ isElectronic(new Duck());
 // => false
 
 isElectronic(new WashingMachine());
-// => false
+// => true
 ```
 
 ### 6. Check if a value is a non empty array
