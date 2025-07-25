@@ -1,0 +1,15 @@
+{
+  "authors": ["Obinna Obi-Akwari"],
+  "files": {
+    "solution": [
+      "error-handling.js"
+    ],
+    "test": [
+      "error-handling.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Implement various kinds of error handling and resource management."
+}
