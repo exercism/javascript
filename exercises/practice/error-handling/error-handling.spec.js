@@ -1,7 +1,5 @@
-
 import { describe, expect, it, jest } from '@jest/globals';
 import { processString } from './error-handling';
-
 
 describe('Error Handling', () => {
   it('returns uppercase if valid string', () => {
