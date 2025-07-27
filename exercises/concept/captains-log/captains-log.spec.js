@@ -12,7 +12,7 @@ describe('randomShipRegistryNumber', () => {
     }
   });
 
-  test('returns a random registry number', () => {
+  test('is a random registry number', () => {
     expect(randomShipRegistryNumber()).not.toEqual(randomShipRegistryNumber());
   });
 });
