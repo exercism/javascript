@@ -100,6 +100,13 @@ if (isMainThread) {
 }
 ```
 
+<!-- prettier-ignore -->
+~~~@exercism/caution
+Currently it is not possible to implement parallelism using the online editor.
+
+Please implement `Worker threads` using Node.js locally and submit your solution via CLI!
+~~~
+
 As a stretch goal, consider if your implementation can be adapted to make use of `Worker threads`.
 
 ---
