@@ -1,11 +1,11 @@
 # Instructions append
 
-Javascript is single-threaded by nature, so it lacks many of the language features that other languages have in order to handle parallel code execution.
+JavaScript is single-threaded by nature, so it lacks many of the language features that other languages have in order to handle parallel code execution.
 In fact, the only way to achieve "real" parallel code execution is through `Worker threads` (also reffered to as `Web Workers`).
 
 Almost always, code that appears to execute in parallel,
 such as `async functions` or `Promises`, will actually execute concurrently instead.
-This is often better, since modern Javascript is optimized for such use,
+This is often better, since modern JavaScript is optimized for such use,
 and you will often see code that "emulates" (or "cheats") parallel execution by the use of `Promise.all()` and other concurrent execution methods.
 
 ```exercism/caution
@@ -24,17 +24,17 @@ For the sake of completeness, here's a definition for synchronous execution:
 
 - Synchronous execution is when a task has to wait for another running task to complete, before it can run.
 
-## Parallelism in Javascript
+## Parallelism in JavaScript
 
-Even though Javascript by default is single-threaded, there is a way to execute code in parallel fashion.
+Even though JavaScript by default is single-threaded, there is a way to execute code in parallel fashion.
 
-If your running javascript in the browser (e.g. in a web app),
+If you are running JavaScript in the browser (e.g. in a web app),
 then the way to achieve parallelism is through the [Web Worker API][mdn-demo].
 As described by MDN:
 
 > Web Workers makes it possible to run a script operation in a background thread separate from the main execution thread of an application.
 
-On the other hand, if your javascript is running in Node.js, which is Exercism's target runtime,
+On the other hand, if your JavaScript is running in Node.js, which is Exercism's target runtime,
 this same concept is known as [Worker threads][node].
 
 ```exercism/caution
