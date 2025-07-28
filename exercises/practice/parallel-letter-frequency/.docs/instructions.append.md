@@ -8,10 +8,11 @@ such as `async functions` or `Promises`, will actually execute concurrently inst
 This is often better, since modern JavaScript is optimized for such use,
 and you will often see code that "emulates" (or "cheats") parallel execution by the use of `Promise.all()` and other concurrent execution methods.
 
-```exercism/caution
+<!-- prettier-ignore -->
+~~~@exercism/caution
 To pass the tests for this exercise, your solution needs to execute _concurrently_ (or in parallel),
 meaning that synchronous solutions (e.g. a simple `for` loop) will not pass.
-```
+~~~
 
 ## Concurency vs. Parallelism
 
@@ -37,11 +38,12 @@ As described by MDN:
 On the other hand, if your JavaScript is running in Node.js, which is Exercism's target runtime,
 this same concept is known as [Worker threads][node].
 
-```exercism/caution
+<!-- prettier-ignore -->
+~~~@exercism/caution
 Be aware that the implementation of the worker API differs largely between browsers and other JavaScript environments.
 
 Make sure to read the documentation for your specific runtime!
-```
+~~~
 
 Here's a simple demo of the `Web Worker API` (taken from [here][medium-demo])
 
