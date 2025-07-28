@@ -45,7 +45,7 @@ Be aware that the implementation of the worker API differs largely between brows
 Make sure to read the documentation for your specific runtime!
 ~~~
 
-Here's a simple demo of the `Web Worker API` (taken from [here][medium-demo])
+Here's a simple demo of the `Web Worker API` (taken from [Medium][medium-demo])
 
 ```js
 // main.js
