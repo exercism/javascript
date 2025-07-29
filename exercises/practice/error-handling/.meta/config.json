@@ -1,5 +1,7 @@
 {
-  "authors": ["Obinna Obi-Akwari"],
+  "authors": [
+    "A-O-Emmanuel"
+  ],
   "files": {
     "solution": [
       "error-handling.js"
