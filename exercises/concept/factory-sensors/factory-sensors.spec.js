@@ -8,8 +8,16 @@ import {
 } from './factory-sensors';
 
 describe('checkHumidityLevel', () => {
+  test('should throw if the humidity percentage is 71', () => {
+    expect(() => checkHumidityLevel(71)).toThrow();
+  });
+  
   test('should throw if the humidity percentage is 100', () => {
     expect(() => checkHumidityLevel(100)).toThrow();
+  });
+
+  test('should not throw if the humidity level is 70', () => {
+    expect(() => checkHumidityLevel(70)).not.toThrow();
   });
 
   test('should not throw if the humidity level is 53', () => {
