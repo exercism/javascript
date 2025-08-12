@@ -11,7 +11,7 @@ describe('checkHumidityLevel', () => {
   test('should throw if the humidity percentage is 71', () => {
     expect(() => checkHumidityLevel(71)).toThrow();
   });
-  
+
   test('should throw if the humidity percentage is 100', () => {
     expect(() => checkHumidityLevel(100)).toThrow();
   });
