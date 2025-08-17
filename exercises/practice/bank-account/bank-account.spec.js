@@ -137,32 +137,34 @@ describe('Bank Account', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(1000);
-  
+
     for (let i = 0; i < 10; i++) {
       await adjustBalanceConcurrently(account);
       expect(account.balance).toEqual(1000);
     }
   });
-  
+
   function adjustBalanceConcurrently(account) {
     const random = () => Math.floor(Math.random() * 10);
-  
-    const tasks = Array.from({ length: 1000 }, () =>
-      new Promise(resolve => {
-        try {
-          account.deposit(5);
-          setTimeout(() => {
-            account.withdraw(5);
-            resolve();
-          }, random());
-        } catch (e) {
-          throw new Error(`Exception should not be thrown: ${e.message}`);
-        }
-      })
+
+    const tasks = Array.from(
+      { length: 1000 },
+      () =>
+        new Promise((resolve) => {
+          try {
+            account.deposit(5);
+            setTimeout(() => {
+              account.withdraw(5);
+              resolve();
+            }, random());
+          } catch (e) {
+            throw new Error(`Exception should not be thrown: ${e.message}`);
+          }
+        }),
     );
-  
+
     return Promise.all(tasks);
-  }  
+  }
 
   xtest('Changing balance directly throws error', () => {
     const account = new BankAccount();
