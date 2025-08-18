@@ -8,14 +8,14 @@ describe('Bank Account', () => {
     expect(account.balance).toEqual(0);
   });
 
-  xtest('can deposit money', () => {
+  xtest('Single deposit', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
     expect(account.balance).toEqual(100);
   });
 
-  xtest('can deposit money sequentially', () => {
+  xtest('Multiple deposits"', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -23,7 +23,7 @@ describe('Bank Account', () => {
     expect(account.balance).toEqual(150);
   });
 
-  xtest('can withdraw money', () => {
+  xtest('Withdraw once', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -31,7 +31,7 @@ describe('Bank Account', () => {
     expect(account.balance).toEqual(50);
   });
 
-  xtest('can withdraw money sequentially', () => {
+  xtest('Withdraw twice', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -40,14 +40,25 @@ describe('Bank Account', () => {
     expect(account.balance).toEqual(0);
   });
 
-  xtest('checking balance of closed account throws error', () => {
+  xtest('Can do multiple operations sequentially', () => {
+    const account = new BankAccount();
+    account.open();
+    account.deposit(100);
+    account.deposit(110);
+    account.withdraw(200);
+    account.deposit(60);
+    account.withdraw(50);
+    expect(account.balance).toEqual(20);
+  });
+
+  xtest('Cannot check balance of closed account', () => {
     const account = new BankAccount();
     account.open();
     account.close();
     expect(() => account.balance).toThrow(ValueError);
   });
 
-  xtest('deposit into closed account throws error', () => {
+  xtest('Cannot deposit into closed account', () => {
     const account = new BankAccount();
     account.open();
     account.close();
@@ -56,7 +67,14 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('withdraw from closed account throws error', () => {
+  xtest('Cannot deposit into closed account', () => {
+    const account = new BankAccount();
+    expect(() => {
+      account.deposit(50);
+    }).toThrow(ValueError);
+  });
+
+  xtest('Cannot withdraw from closed account', () => {
     const account = new BankAccount();
     account.open();
     account.close();
@@ -65,14 +83,14 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('close already closed account throws error', () => {
+  xtest('Cannot close an account that was not opened', () => {
     const account = new BankAccount();
     expect(() => {
       account.close();
     }).toThrow(ValueError);
   });
 
-  xtest('open already opened account throws error', () => {
+  xtest('Cannot open an already opened account', () => {
     const account = new BankAccount();
     account.open();
     expect(() => {
@@ -80,7 +98,7 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('reopened account does not retain balance', () => {
+  xtest('Reopened account does not retain balance', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(50);
@@ -89,7 +107,7 @@ describe('Bank Account', () => {
     expect(account.balance).toEqual(0);
   });
 
-  xtest('cannot withdraw more than deposited', () => {
+  xtest('Cannot withdraw more than deposited', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(25);
@@ -98,7 +116,7 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('cannot withdraw negative amount', () => {
+  xtest('Cannot withdraw negative', () => {
     const account = new BankAccount();
     account.open();
     account.deposit(100);
@@ -107,7 +125,7 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('cannot deposit negative amount', () => {
+  xtest('Cannot deposit negative', () => {
     const account = new BankAccount();
     account.open();
     expect(() => {
@@ -115,7 +133,40 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('changing balance directly throws error', () => {
+  xtest('Can handle concurrent transactions', async () => {
+    const account = new BankAccount();
+    account.open();
+    account.deposit(1000);
+
+    for (let i = 0; i < 10; i++) {
+      await adjustBalanceConcurrently(account);
+      expect(account.balance).toEqual(1000);
+    }
+  });
+
+  function adjustBalanceConcurrently(account) {
+    const random = () => Math.floor(Math.random() * 10);
+
+    const tasks = Array.from(
+      { length: 1000 },
+      () =>
+        new Promise((resolve) => {
+          try {
+            account.deposit(5);
+            setTimeout(() => {
+              account.withdraw(5);
+              resolve();
+            }, random());
+          } catch (e) {
+            throw new Error(`Exception should not be thrown: ${e.message}`);
+          }
+        }),
+    );
+
+    return Promise.all(tasks);
+  }
+
+  xtest('Changing balance directly throws error', () => {
     const account = new BankAccount();
     account.open();
     expect(() => {
