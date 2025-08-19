@@ -4,25 +4,32 @@ export class GradeSchool {
   }
 
   add(student, level) {
-    this.students.set(student, level);
+    for (const names of this.students.values()) {
+      if (names.has(student)) {
+        return false;
+      }
+    }
+
+    if (!this.students.has(level)) {
+      this.students.set(level, new Set());
+    }
+
+    this.students.get(level).add(student);
+    return true;
   }
 
   grade(level) {
-    return Array.from(this.students.entries())
-      .filter(([, studentGrade]) => studentGrade === level)
-      .map(([student]) => student)
-      .sort();
+    if (!this.students.has(level)) {
+      return [];
+    }
+    return [...this.students.get(level)].sort();
   }
 
   roster() {
-    const result = {};
-
-    Array.from(this.students.entries()).forEach(([, studentGrade]) => {
-      if (!result[studentGrade]) {
-        result[studentGrade] = this.grade(studentGrade);
-      }
-    });
-
+    const result = [];
+    for (const level of [...this.students.keys()].sort((a, b) => a - b)) {
+      result.push(...[...this.students.get(level)].sort());
+    }
     return result;
   }
 }
