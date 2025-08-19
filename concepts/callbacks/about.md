@@ -81,7 +81,6 @@ You see this pattern often when dealing with asynchronous functions to assist wi
 Common `Array` functions use callback functions to define their behaviour:
 
 - `Array.prototype.forEach`:
-
   - Accepts a callback, which applies the callback to each element of an array.
 
     ```javascript
@@ -92,7 +91,6 @@ Common `Array` functions use callback functions to define their behaviour:
     ```
 
 - `Array.prototype.map`
-
   - Accepts a callback, which applies the callback to each element of an array using the result to create a new array.
 
     ```javascript
@@ -103,7 +101,6 @@ Common `Array` functions use callback functions to define their behaviour:
     ```
 
 - `Array.prototype.reduce`
-
   - Accepts a callback, which applies the callback to each element of an array, passing the result forward to the next invocation.
 
     ```javascript
