@@ -104,16 +104,24 @@ describe('Grade School', () => {
   });
 
   xtest('Students are sorted by grades and then by name in the roster', () => {
-    school.add("Peter", 2);
-    school.add("Anna", 1);
-    school.add("Barb", 1);
-    school.add("Zoe", 2);
-    school.add("Alex", 2);
-    school.add("Jim", 3);
-    school.add("Charlie", 1);
-    
-    const expectedDb = ["Anna", "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"];
-    expect(school.roster()).toEqual(expectedDb);    
+    school.add('Peter', 2);
+    school.add('Anna', 1);
+    school.add('Barb', 1);
+    school.add('Zoe', 2);
+    school.add('Alex', 2);
+    school.add('Jim', 3);
+    school.add('Charlie', 1);
+
+    const expectedDb = [
+      'Anna',
+      'Barb',
+      'Charlie',
+      'Alex',
+      'Peter',
+      'Zoe',
+      'Jim',
+    ];
+    expect(school.roster()).toEqual(expectedDb);
   });
 
   xtest('Grade is empty if no students in the roster', () => {
@@ -121,10 +129,10 @@ describe('Grade School', () => {
   });
 
   xtest('Grade is empty if no students in that grade', () => {
-    school.add("Peter", 2);
-    school.add("Zoe", 2);
-    school.add("Alex", 2);
-    school.add("Jim", 3);
+    school.add('Peter', 2);
+    school.add('Zoe', 2);
+    school.add('Alex', 2);
+    school.add('Jim', 3);
 
     expect(school.grade(1)).toEqual([]);
   });
@@ -158,7 +166,7 @@ describe('Grade School', () => {
     const expectedDb = ['Paul'];
     expect(school.grade(3)).toEqual(expectedDb);
   });
-  
+
   xtest('Students are sorted by name in a grade', () => {
     school.add('Franklin', 5);
     school.add('Bradley', 5);
