@@ -84,9 +84,7 @@ function diagonalFind(r, c, word, grid, rIncrement, cIncrement) {
 function searchDiagonally({ word, grid, fromTop = true, reversed = false }) {
   const rIncrement = fromTop ? 1 : -1;
   const startRow = fromTop ? 0 : grid.length - 1;
-  const endRow = fromTop
-    ? (r) => r < grid.length
-    : (r) => r >= 0;
+  const endRow = fromTop ? (r) => r < grid.length : (r) => r >= 0;
 
   for (let r = startRow; endRow(r); r += rIncrement) {
     for (let c = 0; c < grid[r].length; c += 1) {
@@ -112,7 +110,12 @@ function searchDiagonally({ word, grid, fromTop = true, reversed = false }) {
   // Try reversed word
   if (!reversed) {
     const reversedWord = [...word].reverse().join('');
-    return searchDiagonally({ word: reversedWord, grid, fromTop, reversed: true });
+    return searchDiagonally({
+      word: reversedWord,
+      grid,
+      fromTop,
+      reversed: true,
+    });
   }
 
   return undefined;
