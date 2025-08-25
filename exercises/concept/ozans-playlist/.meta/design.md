@@ -35,6 +35,7 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 For all tasks, verify that the student actually used a `Set`.
 
 1. `addTrack`
+
    - Verify that there was no redundant `Set.has()` call
 
 2. `deleteTrack`

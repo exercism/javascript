@@ -18,6 +18,7 @@ The name _closure_ is historically derived from [_λ-calculus_][wiki-lambda-calc
 ## Reasons to use closures in JavaScript
 
 1. Data Privacy / Data Encapsulation
+
    - Unlike other languages, in 2020, there was no way to specify _private_ variables. So closures can be used to effectively emulate _private_ variables (there was a proposal to introduce private variable notation, which might have become standard by the time you read this).
 
    ```javascript
@@ -36,6 +37,7 @@ The name _closure_ is historically derived from [_λ-calculus_][wiki-lambda-calc
    ```
 
 2. Partial Application
+
    - Functions may return functions, and when a returned function uses the argument of the function that created it, this is an example of using a closure to perform partial application. Sometimes this is called _currying_ a function.
 
    ```javascript
