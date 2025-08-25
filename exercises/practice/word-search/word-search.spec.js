@@ -543,7 +543,7 @@ describe('vertical directions', () => {
   });
 
   describe("word doesn't exist", () => {
-    xtest('should fail to locate a word that is not in the puzzle', () => {
+    xtest('Should fail to locate a word that is not in the puzzle', () => {
       const grid = [
         'jefblpepre',
         'camdcimgtc',
@@ -556,13 +556,133 @@ describe('vertical directions', () => {
         'jalaycalmp',
         'clojurermt',
       ];
-
+    
       const expectedResults = {
-        fail: undefined,
+        clojure: {
+          start: [10, 1],
+          end: [10, 7],
+        },
+        elixir: {
+          start: [5, 6],
+          end: [5, 1],
+        },
+        ecmascript: {
+          start: [1, 10],
+          end: [10, 10],
+        },
+        rust: {
+          start: [5, 9],
+          end: [2, 9],
+        },
+        java: {
+          start: [1, 1],
+          end: [4, 4],
+        },
+        lua: {
+          start: [9, 8],
+          end: [7, 6],
+        },
+        lisp: {
+          start: [6, 3],
+          end: [3, 6],
+        },
+        ruby: {
+          start: [6, 8],
+          end: [9, 5],
+        },
+        haskell: undefined,
       };
+    
       const wordSearch = new WordSearch(grid);
-
-      expect(wordSearch.find(['fail'])).toEqual(expectedResults);
+    
+      expect(
+        wordSearch.find([
+          'clojure',
+          'elixir',
+          'ecmascript',
+          'rust',
+          'java',
+          'lua',
+          'lisp',
+          'ruby',
+          'haskell',
+        ]),
+      ).toEqual(expectedResults);
     });
+
+    xtest('Should fail to locate words that are not on horizontal, vertical, or diagonal lines', () => {
+      const grid = [
+        'abc',
+        'def',
+      ];
+    
+      const expectedResults = {
+        aef: undefined,
+        ced: undefined,
+        abf: undefined,
+        cbd: undefined,
+      };
+    
+      const wordSearch = new WordSearch(grid);
+    
+      expect(
+        wordSearch.find(['aef', 'ced', 'abf', 'cbd']),
+      ).toEqual(expectedResults);
+    });
+    
+    xtest('Should not concatenate different lines to find a horizontal word', () => {
+      const grid = [
+        'abceli',
+        'xirdfg',
+      ];
+    
+      const expectedResults = {
+        elixir: undefined,
+      };
+    
+      const wordSearch = new WordSearch(grid);
+    
+      expect(
+        wordSearch.find(['elixir']),
+      ).toEqual(expectedResults);
+    });
+    
+    xtest('Should not wrap around horizontally to find a word', () => {
+      const grid = [
+        'silabcdefp',
+      ];
+    
+      const expectedResults = {
+        lisp: undefined,
+      };
+    
+      const wordSearch = new WordSearch(grid);
+    
+      expect(
+        wordSearch.find(['lisp']),
+      ).toEqual(expectedResults);
+    });
+    
+    xtest('Should not wrap around vertically to find a word', () => {
+      const grid = [
+        's',
+        'u',
+        'r',
+        'a',
+        'b',
+        'c',
+        't',
+      ];
+    
+      const expectedResults = {
+        rust: undefined,
+      };
+    
+      const wordSearch = new WordSearch(grid);
+    
+      expect(
+        wordSearch.find(['rust']),
+      ).toEqual(expectedResults);
+    });   
   });
 });
