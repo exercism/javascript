@@ -74,32 +74,35 @@ describe('TwoBucket', () => {
     });
   });
 
-  describe('Reachability', () => {
-    const buckOne = 6;
-    const buckTwo = 15;
-
-    xtest('Not possible to reach the goal, start with bucket one', () => {
-      expect(() => new TwoBucket(buckOne, buckTwo, 5, 'one')).toThrow();
-    });
-
-    xtest('Not possible to reach the goal, start with bucket two', () => {
-      expect(() => new TwoBucket(buckOne, buckTwo, 5, 'two')).toThrow();
-    });
-
-    xtest('With the same buckets but a different goal, then it is possible', () => {
-      const starterBuck = 'one';
-      const goal = 9;
-      const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck);
-      const result = twoBucket.solve();
-      expect(result.moves).toEqual(10);
-      expect(result.goalBucket).toEqual('two');
-      expect(result.otherBucket).toEqual(0);
-    });
+  xtest('Measure using bucket one much bigger than bucket two', () => {
+    const twoBucket = new TwoBucket(5, 1, 2, 'one');
+    const result = twoBucket.solve();
+    expect(result.moves).toEqual(6);
+    expect(result.goalBucket).toEqual('one');
+    expect(result.otherBucket).toEqual(1);
   });
 
-  describe('Goal larger than both buckets', () => {
-    xtest('Is impossible', () => {
-      expect(() => new TwoBucket(5, 7, 8, 'one')).toThrow();
-    });
+  xtest('Measure using bucket one much smaller than bucket two', () => {
+    const twoBucket = new TwoBucket(3, 15, 9, 'one');
+    const result = twoBucket.solve();
+    expect(result.moves).toEqual(6);
+    expect(result.goalBucket).toEqual('two');
+    expect(result.otherBucket).toEqual(0);
+  });
+
+  xtest('Not possible to reach the goal', () => {
+    expect(() => new TwoBucket(6, 15, 5, 'one')).toThrow();
+  });
+
+  xtest('With the same buckets but a different goal, then it is possible', () => {
+    const twoBucket = new TwoBucket(6, 15, 9, 'one');
+    const result = twoBucket.solve();
+    expect(result.moves).toEqual(10);
+    expect(result.goalBucket).toEqual('two');
+    expect(result.otherBucket).toEqual(0);
+  });
+
+  xtest('Goal larger than both buckets is impossible', () => {
+    expect(() => new TwoBucket(5, 7, 8, 'one')).toThrow();
   });
 });
