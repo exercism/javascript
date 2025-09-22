@@ -31,6 +31,12 @@ describe('Poker', () => {
     expect(bestHands(hands)).toEqual(expected);
   });
 
+  xtest('winning high card hand also has the lowest card', () => {
+    const hands = ['2S 5H 6S 8D 7H', '3S 4D 6D 8C 7S'];
+    const expected = ['2S 5H 6S 8D 7H'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
   xtest('one pair beats high card', () => {
     const hands = ['4S 5H 6C 8D KH', '2S 4H 6S 4D JH'];
     const expected = ['2S 4H 6S 4D JH'];
@@ -40,6 +46,12 @@ describe('Poker', () => {
   xtest('highest pair wins', () => {
     const hands = ['4S 2H 6S 2D JH', '2S 4H 6C 4D JD'];
     const expected = ['2S 4H 6C 4D JD'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
+  xtest('both hands have the same pair, high card wins', () => {
+    const hands = ['4H 4S AH JC 3D', '4C 4D AS 5D 6C'];
+    const expected = ['4H 4S AH JC 3D'];
     expect(bestHands(hands)).toEqual(expected);
   });
 
@@ -67,6 +79,18 @@ describe('Poker', () => {
     expect(bestHands(hands)).toEqual(expected);
   });
 
+  xtest('both hands have two pairs that add to the same value, win goes to highest pair', () => {
+    const hands = ['6S 6H 3S 3H AS', '7H 7S 2H 2S AC'];
+    const expected = ['7H 7S 2H 2S AC'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
+  xtest('two pairs first ranked by largest pair', () => {
+    const hands = ['5C 2S 5S 4H 4C', '6S 2S 6H 7C 2C'];
+    const expected = ['6S 2S 6H 7C 2C'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
   xtest('three of a kind beats two pair', () => {
     const hands = ['2S 8H 2H 8D JH', '4S 5H 4C 8S 4H'];
     const expected = ['4S 5H 4C 8S 4H'];
@@ -80,7 +104,7 @@ describe('Poker', () => {
   });
 
   xtest('with multiple decks, two players can have same three of a kind, ties go to highest remaining cards', () => {
-    const hands = ['4S AH AS 7C AD', '4S AH AS 8C AD'];
+    const hands = ['5S AH AS 7C AD', '4S AH AS 8C AD'];
     const expected = ['4S AH AS 8C AD'];
     expect(bestHands(hands)).toEqual(expected);
   });
@@ -103,6 +127,12 @@ describe('Poker', () => {
     expect(bestHands(hands)).toEqual(expected);
   });
 
+  xtest('aces cannot be in the middle of a straight (Q K A 2 3)', () => {
+    const hands = ['2C 3D 7H 5H 2S', 'QS KH AC 2D 3S'];
+    const expected = ['2C 3D 7H 5H 2S'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
   xtest('both hands with a straight, tie goes to highest ranked card', () => {
     const hands = ['4S 6C 7S 8D 5H', '5S 7H 8S 9D 6H'];
     const expected = ['5S 7H 8S 9D 6H'];
@@ -122,8 +152,8 @@ describe('Poker', () => {
   });
 
   xtest('both hands have a flush, tie goes to high card, down to the last one if necessary', () => {
-    const hands = ['4H 7H 8H 9H 6H', '2S 4S 5S 6S 7S'];
-    const expected = ['4H 7H 8H 9H 6H'];
+    const hands = ['2H 7H 8H 9H 6H', '3S 5S 6S 7S 8S'];
+    const expected = ['2H 7H 8H 9H 6H'];
     expect(bestHands(hands)).toEqual(expected);
   });
 
@@ -169,9 +199,33 @@ describe('Poker', () => {
     expect(bestHands(hands)).toEqual(expected);
   });
 
+  xtest('aces can end a straight flush (10 J Q K A)', () => {
+    const hands = ['KC AH AS AD AC', '10C JC QC KC AC'];
+    const expected = ['10C JC QC KC AC'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
+  xtest('aces can start a straight flush (A 2 3 4 5)', () => {
+    const hands = ['KS AH AS AD AC', '4H AH 3H 2H 5H'];
+    const expected = ['4H AH 3H 2H 5H'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
+  xtest('aces cannot be in the middle of a straight flush (Q K A 2 3)', () => {
+    const hands = ['2C AC QC 10C KC', 'QH KH AH 2H 3H'];
+    const expected = ['2C AC QC 10C KC'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
   xtest('both hands have straight flush, tie goes to highest-ranked card', () => {
     const hands = ['4H 6H 7H 8H 5H', '5S 7S 8S 9S 6S'];
     const expected = ['5S 7S 8S 9S 6S'];
+    expect(bestHands(hands)).toEqual(expected);
+  });
+
+  xtest('even though an ace is usually high, a 5-high straight flush is the lowest-scoring straight flush', () => {
+    const hands = ['2H 3H 4H 5H 6H', '4D AD 3D 2D 5D'];
+    const expected = ['2H 3H 4H 5H 6H'];
     expect(bestHands(hands)).toEqual(expected);
   });
 });
