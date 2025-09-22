@@ -16,7 +16,7 @@ To practice, use a `for` loop to solve each of the tasks below.
 Let us start analyzing the data by getting a high-level view.
 Find out how many birds you counted in total since you started your logs.
 
-Implement a function `totalBirdCount` that accepts an array that contains the bird count per day.
+Implement a function `totalBirdCount` that accepts an array-like object that contains the bird count per day.
 It should return the total number of birds that you counted.
 
 ```javascript
@@ -29,7 +29,7 @@ totalBirdCount(birdsPerDay);
 
 Now that you got a general feel for your bird count numbers, you want to make a more fine-grained analysis.
 
-Implement a function `birdsInWeek` that accepts an array of bird counts per day and a week number.
+Implement a function `birdsInWeek` that accepts an array-like object of bird counts per day and a week number.
 It returns the total number of birds that you counted in that specific week.
 You can assume weeks are always tracked completely.
 
@@ -46,7 +46,7 @@ You figured out that this bird always spent every second day in your garden.
 You do not know exactly where it was in between those days but definitely not in your garden.
 Your bird watcher intuition also tells you that the bird was in your garden on the first day that you tracked in your list.
 
-Given this new information, write a function `fixBirdCountLog` that takes an array of birds counted per day as an argument. It should correct the counting mistake by modifying the given array.
+Given this new information, write a function `fixBirdCountLog` that takes an array-like object of birds counted per day as an argument. It should correct the counting mistake by modifying the given array.
 
 ```javascript
 birdsPerDay = [2, 5, 0, 7, 4, 1];
