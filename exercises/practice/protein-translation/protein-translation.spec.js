@@ -2,36 +2,68 @@ import { describe, expect, test, xtest } from '@jest/globals';
 import { translate } from './protein-translation';
 
 describe('ProteinTranslation', () => {
-  test('Empty RNA has no proteins', () => {
+  test('Empty RNA sequence results in no proteins', () => {
     expect(translate()).toEqual([]);
   });
 
   describe('Single codons', () => {
-    const mapping = [
-      ['Methionine', ['AUG']],
-      ['Phenylalanine', ['UUU', 'UUC']],
-      ['Leucine', ['UUA', 'UUG']],
-      ['Serine', ['UCU', 'UCC', 'UCA', 'UCG']],
-      ['Tyrosine', ['UAU', 'UAC']],
-      ['Cysteine', ['UGU', 'UGC']],
-      ['Tryptophan', ['UGG']],
-    ];
-
-    mapping.forEach(([protein, codons]) => {
-      codons.forEach((codon, index) => {
-        const seq = index + 1;
-        xtest(`${protein} RNA sequence ${seq} translates into ${protein}`, () => {
-          expect(translate(codon)).toEqual([protein]);
-        });
-      });
+    xtest('Methionine RNA sequence', () => {
+      expect(translate('AUG')).toEqual(['Methionine']);
     });
 
-    const stopCodons = ['UAA', 'UAG', 'UGA'];
+    xtest('Phenylalanine RNA sequence 1', () => {
+      expect(translate('UUU')).toEqual(['Phenylalanine']);
+    });
+    xtest('Phenylalanine RNA sequence 2', () => {
+      expect(translate('UUC')).toEqual(['Phenylalanine']);
+    });
 
-    stopCodons.forEach((codon, index) => {
-      xtest(`STOP codon RNA sequence ${index + 1}`, () => {
-        expect(translate(codon)).toEqual([]);
-      });
+    xtest('Leucine RNA sequence 1', () => {
+      expect(translate('UUA')).toEqual(['Leucine']);
+    });
+    xtest('Leucine RNA sequence 2', () => {
+      expect(translate('UUG')).toEqual(['Leucine']);
+    });
+
+    xtest('Serine RNA sequence 1', () => {
+      expect(translate('UCU')).toEqual(['Serine']);
+    });
+    xtest('Serine RNA sequence 2', () => {
+      expect(translate('UCC')).toEqual(['Serine']);
+    });
+    xtest('Serine RNA sequence 3', () => {
+      expect(translate('UCA')).toEqual(['Serine']);
+    });
+    xtest('Serine RNA sequence 4', () => {
+      expect(translate('UCG')).toEqual(['Serine']);
+    });
+
+    xtest('Tyrosine RNA sequence 1', () => {
+      expect(translate('UAU')).toEqual(['Tyrosine']);
+    });
+    xtest('Tyrosine RNA sequence 2', () => {
+      expect(translate('UAC')).toEqual(['Tyrosine']);
+    });
+
+    xtest('Cysteine RNA sequence 1', () => {
+      expect(translate('UGU')).toEqual(['Cysteine']);
+    });
+    xtest('Cysteine RNA sequence 2', () => {
+      expect(translate('UGC')).toEqual(['Cysteine']);
+    });
+
+    xtest('Tryptophan RNA sequence', () => {
+      expect(translate('UGG')).toEqual(['Tryptophan']);
+    });
+
+    xtest('STOP codon RNA sequence 1', () => {
+      expect(translate('UAA')).toEqual([]);
+    });
+    xtest('STOP codon RNA sequence 2', () => {
+      expect(translate('UAG')).toEqual([]);
+    });
+    xtest('STOP codon RNA sequence 3', () => {
+      expect(translate('UGA')).toEqual([]);
     });
   });
 
@@ -71,13 +103,13 @@ describe('ProteinTranslation', () => {
         'Tyrosine',
       ]);
     });
+
+    xtest('Sequence of two non-STOP codons does not translate to a STOP codon', () => {
+      expect(translate('AUGAUG')).toEqual(['Methionine', 'Methionine']);
+    });
   });
 
   describe('Unexpected strands', () => {
-    xtest("Non-existing codon can't translate", () => {
-      expect(() => translate('AAA')).toThrow(new Error('Invalid codon'));
-    });
-
     xtest("Unknown amino acids, not part of a codon, can't translate", () => {
       expect(() => translate('XYZ')).toThrow(new Error('Invalid codon'));
     });

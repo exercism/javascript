@@ -1,87 +1,178 @@
 import { beforeEach, describe, expect, test, xtest } from '@jest/globals';
 import { GradeSchool } from './grade-school';
 
-describe('School', () => {
+describe('Grade School', () => {
   let school;
 
   beforeEach(() => {
     school = new GradeSchool();
   });
 
-  test('a new school has an empty roster', () => {
-    expect(school.roster()).toEqual({});
+  test('Roster is empty when no student is added', () => {
+    expect(school.roster()).toEqual([]);
   });
 
-  xtest('adding a student adds them to the roster for the given grade', () => {
+  xtest('Add a student', () => {
+    expect(school.add('Aimee', 2)).toEqual(true);
+  });
+
+  xtest('Student is added to the roster', () => {
     school.add('Aimee', 2);
 
-    const expectedDb = { 2: ['Aimee'] };
+    const expectedDb = ['Aimee'];
     expect(school.roster()).toEqual(expectedDb);
   });
 
-  xtest('adding more students to the same grade adds them to the roster', () => {
+  xtest('Adding multiple students in the same grade in the roster', () => {
+    expect(school.add('Blair', 2)).toEqual(true);
+    expect(school.add('James', 2)).toEqual(true);
+    expect(school.add('Paul', 2)).toEqual(true);
+  });
+
+  xtest('Multiple students in the same grade are added to the roster', () => {
     school.add('Blair', 2);
     school.add('James', 2);
     school.add('Paul', 2);
 
-    const expectedDb = { 2: ['Blair', 'James', 'Paul'] };
+    const expectedDb = ['Blair', 'James', 'Paul'];
     expect(school.roster()).toEqual(expectedDb);
   });
 
-  xtest('adding students to different grades adds them to the roster', () => {
+  xtest('Cannot add student to same grade in the roster more than once', () => {
+    expect(school.add('Blair', 2)).toEqual(true);
+    expect(school.add('James', 2)).toEqual(true);
+    expect(school.add('James', 2)).toEqual(false);
+    expect(school.add('Paul', 2)).toEqual(true);
+  });
+
+  xtest('Student not added to same grade in the roster more than once', () => {
+    school.add('Blair', 2);
+    school.add('James', 2);
+    school.add('James', 2);
+    school.add('Paul', 2);
+
+    const expectedDb = ['Blair', 'James', 'Paul'];
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
+  xtest('Adding students in multiple grades', () => {
+    expect(school.add('Chelsea', 3)).toEqual(true);
+    expect(school.add('Logan', 7)).toEqual(true);
+  });
+
+  xtest('Students in multiple grades are added to the roster', () => {
     school.add('Chelsea', 3);
     school.add('Logan', 7);
 
-    const expectedDb = { 3: ['Chelsea'], 7: ['Logan'] };
+    const expectedDb = ['Chelsea', 'Logan'];
     expect(school.roster()).toEqual(expectedDb);
   });
 
-  xtest('grade returns the students in that grade in alphabetical order', () => {
+  xtest('Cannot add same student to multiple grades in the roster', () => {
+    expect(school.add('Blair', 2)).toEqual(true);
+    expect(school.add('James', 2)).toEqual(true);
+    expect(school.add('James', 3)).toEqual(false);
+    expect(school.add('Paul', 3)).toEqual(true);
+  });
+
+  xtest('Student not added to multiple grades in the roster', () => {
+    school.add('Blair', 2);
+    school.add('James', 2);
+    school.add('James', 3);
+    school.add('Paul', 3);
+
+    const expectedDb = ['Blair', 'James', 'Paul'];
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
+  xtest('Students are sorted by grades in the roster', () => {
+    school.add('Jim', 3);
+    school.add('Peter', 2);
+    school.add('Anna', 1);
+
+    const expectedDb = ['Anna', 'Peter', 'Jim'];
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
+  xtest('Students are sorted by name in the roster', () => {
+    school.add('Peter', 2);
+    school.add('Zoe', 2);
+    school.add('Alex', 2);
+
+    const expectedDb = ['Alex', 'Peter', 'Zoe'];
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
+  xtest('Students are sorted by grades and then by name in the roster', () => {
+    school.add('Peter', 2);
+    school.add('Anna', 1);
+    school.add('Barb', 1);
+    school.add('Zoe', 2);
+    school.add('Alex', 2);
+    school.add('Jim', 3);
+    school.add('Charlie', 1);
+
+    const expectedDb = [
+      'Anna',
+      'Barb',
+      'Charlie',
+      'Alex',
+      'Peter',
+      'Zoe',
+      'Jim',
+    ];
+    expect(school.roster()).toEqual(expectedDb);
+  });
+
+  xtest('Grade is empty if no students in the roster', () => {
+    expect(school.grade(1)).toEqual([]);
+  });
+
+  xtest('Grade is empty if no students in that grade', () => {
+    school.add('Peter', 2);
+    school.add('Zoe', 2);
+    school.add('Alex', 2);
+    school.add('Jim', 3);
+
+    expect(school.grade(1)).toEqual([]);
+  });
+
+  xtest('Student not added to same grade more than once', () => {
+    school.add('Blair', 2);
+    school.add('James', 2);
+    school.add('James', 2);
+    school.add('Paul', 2);
+
+    const expectedDb = ['Blair', 'James', 'Paul'];
+    expect(school.grade(2)).toEqual(expectedDb);
+  });
+
+  xtest('Student not added to multiple grades', () => {
+    school.add('Blair', 2);
+    school.add('James', 2);
+    school.add('James', 3);
+    school.add('Paul', 3);
+
+    const expectedDb = ['Blair', 'James'];
+    expect(school.grade(2)).toEqual(expectedDb);
+  });
+
+  xtest('Student not added to other grade for multiple grades', () => {
+    school.add('Blair', 2);
+    school.add('James', 2);
+    school.add('James', 3);
+    school.add('Paul', 3);
+
+    const expectedDb = ['Paul'];
+    expect(school.grade(3)).toEqual(expectedDb);
+  });
+
+  xtest('Students are sorted by name in a grade', () => {
     school.add('Franklin', 5);
     school.add('Bradley', 5);
     school.add('Jeff', 1);
 
-    const expectedStudents = ['Bradley', 'Franklin'];
-    expect(school.grade(5)).toEqual(expectedStudents);
-  });
-
-  xtest('grade returns an empty array if there are no students in that grade', () => {
-    expect(school.grade(1)).toEqual([]);
-  });
-
-  xtest('the students names in each grade in the roster are sorted', () => {
-    school.add('Jennifer', 4);
-    school.add('Kareem', 6);
-    school.add('Christopher', 4);
-    school.add('Kyle', 3);
-
-    const expectedSortedStudents = {
-      3: ['Kyle'],
-      4: ['Christopher', 'Jennifer'],
-      6: ['Kareem'],
-    };
-    expect(school.roster()).toEqual(expectedSortedStudents);
-  });
-
-  xtest('roster cannot be modified outside of module', () => {
-    school.add('Aimee', 2);
-    const roster = school.roster();
-    roster[2].push('Oops.');
-    const expectedDb = { 2: ['Aimee'] };
-    expect(school.roster()).toEqual(expectedDb);
-  });
-
-  xtest('roster cannot be modified outside of module using grade()', () => {
-    school.add('Aimee', 2);
-    school.grade(2).push('Oops.');
-    const expectedDb = { 2: ['Aimee'] };
-    expect(school.roster()).toEqual(expectedDb);
-  });
-
-  xtest("a student can't be in two different grades", () => {
-    school.add('Aimee', 2);
-    school.add('Aimee', 1);
-
-    expect(school.grade(2)).toEqual([]);
+    const expectedDb = ['Bradley', 'Franklin'];
+    expect(school.grade(5)).toEqual(expectedDb);
   });
 });

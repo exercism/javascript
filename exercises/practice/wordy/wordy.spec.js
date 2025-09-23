@@ -6,8 +6,24 @@ describe('Wordy', () => {
     expect(answer('What is 5?')).toEqual(5);
   });
 
+  xtest('just a zero', () => {
+    expect(answer('What is 0?')).toEqual(0);
+  });
+
+  xtest('just a negative number', () => {
+    expect(answer('What is -123?')).toEqual(-123);
+  });
+
   xtest('addition', () => {
     expect(answer('What is 1 plus 1?')).toEqual(2);
+  });
+
+  xtest('addition with a left hand zero', () => {
+    expect(answer('What is 0 plus 2?')).toEqual(2);
+  });
+
+  xtest('addition with a right hand zero', () => {
+    expect(answer('What is 3 plus 0?')).toEqual(3);
   });
 
   xtest('more addition', () => {

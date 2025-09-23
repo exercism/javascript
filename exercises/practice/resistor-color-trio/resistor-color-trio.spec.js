@@ -36,6 +36,36 @@ describe('Resistor Color Trio', () => {
     );
   });
 
+  xtest('Blue and violet and blue', () => {
+    expect(new ResistorColorTrio(['blue', 'violet', 'blue']).label).toEqual(
+      makeLabel({ value: 67, unit: 'megaohms' }),
+    );
+  });
+
+  xtest('Minimum possible value', () => {
+    expect(new ResistorColorTrio(['black', 'black', 'black']).label).toEqual(
+      makeLabel({ value: 0, unit: 'ohms' }),
+    );
+  });
+
+  xtest('Maximum possible value', () => {
+    expect(new ResistorColorTrio(['white', 'white', 'white']).label).toEqual(
+      makeLabel({ value: 99, unit: 'gigaohms' }),
+    );
+  });
+
+  xtest('First two colors make an invalid octal number', () => {
+    expect(new ResistorColorTrio(['black', 'grey', 'black']).label).toEqual(
+      makeLabel({ value: 8, unit: 'ohms' }),
+    );
+  });
+
+  xtest('Ignore extra colors', () => {
+    expect(
+      new ResistorColorTrio(['blue', 'green', 'yellow', 'orange']).label,
+    ).toEqual(makeLabel({ value: 650, unit: 'kiloohms' }));
+  });
+
   // optional: error
   xtest('Invalid color', () => {
     expect(
