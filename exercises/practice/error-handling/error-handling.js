@@ -1,6 +1,8 @@
+//
+// This is only a SKELETON file for the 'Error handling' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+//
+
 export const processString = (input) => {
-  //TODO: implement this
-  //should throw TypeError if input is not a string
-  //should throw a general Error if input is an empty string
-  //should return the uppercase version of the string 'hello'
+  throw new Error('Remove this line and implement the function');
 };
