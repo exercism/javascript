@@ -10,34 +10,38 @@ import {
 } from './appointment-time';
 
 describe('createAppointment', () => {
-  test('creates appointment 4 days in the future', () => {
-    const currentTime = Date.now();
-    const expectedTime = currentTime + 345600 * 1000;
-
-    expect(createAppointment(4, currentTime)).toEqual(new Date(expectedTime));
-  });
-
-  test('creates appointment 124 in the future', () => {
-    const currentTime = Date.now();
-    const expectedTime = currentTime + 10713600 * 1000;
-
-    expect(createAppointment(124, currentTime)).toEqual(new Date(expectedTime));
-  });
-
   test('uses the passed in current time', () => {
     const currentTime = Date.UTC(2000, 6, 16, 12, 0, 0, 0);
     const result = createAppointment(0, currentTime);
 
-    expect(result.getFullYear()).toEqual(2000);
+    expect(result).toEqual(new Date(currentTime));
   });
 
   test('uses the actual current time when it is not passed in', () => {
+    const currentTime = Date.now();
     const result = createAppointment(0);
 
-    expect(Math.abs(Date.now() - result.getTime())).toBeLessThanOrEqual(
-      // Maximum number of time zones difference
-      27 * 60 * 60 * 1000,
-    );
+    expect(result).toEqual(new Date(currentTime));
+  });
+
+  test('creates appointment without DST change', () => {
+    const offset = 4; // days
+
+    const currentTime = Date.UTC(2000, 6, 1, 12, 0, 0, 0);
+    const expectedTime = currentTime + offset * 24 * 60 * 60 * 1000;
+
+    expect(createAppointment(offset, currentTime)).toEqual(new Date(expectedTime));
+  });
+
+  test('creates appointment with potential DST change', () => {
+    const offset = 180; // days
+
+    const currentTime = Date.UTC(2000, 6, 1, 12, 0, 0, 0);
+    let expectedTime = currentTime + offset * 24 * 60 * 60 * 1000;
+    // Manually adjust for DST timezone offset:
+    expectedTime += (new Date(expectedTime).getTimezoneOffset() - new Date(currentTime).getTimezoneOffset()) * 60 * 1000;
+
+    expect(createAppointment(offset, currentTime)).toEqual(new Date(expectedTime));
   });
 
   test('rolls over days, months, and years', () => {
