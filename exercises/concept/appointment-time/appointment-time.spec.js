@@ -30,7 +30,9 @@ describe('createAppointment', () => {
     const currentTime = Date.UTC(2000, 6, 1, 12, 0, 0, 0);
     const expectedTime = currentTime + offset * 24 * 60 * 60 * 1000;
 
-    expect(createAppointment(offset, currentTime)).toEqual(new Date(expectedTime));
+    expect(createAppointment(offset, currentTime)).toEqual(
+      new Date(expectedTime),
+    );
   });
 
   test('creates appointment with potential DST change', () => {
@@ -39,9 +41,15 @@ describe('createAppointment', () => {
     const currentTime = Date.UTC(2000, 6, 1, 12, 0, 0, 0);
     let expectedTime = currentTime + offset * 24 * 60 * 60 * 1000;
     // Manually adjust for DST timezone offset:
-    expectedTime += (new Date(expectedTime).getTimezoneOffset() - new Date(currentTime).getTimezoneOffset()) * 60 * 1000;
+    expectedTime +=
+      (new Date(expectedTime).getTimezoneOffset() -
+        new Date(currentTime).getTimezoneOffset()) *
+      60 *
+      1000;
 
-    expect(createAppointment(offset, currentTime)).toEqual(new Date(expectedTime));
+    expect(createAppointment(offset, currentTime)).toEqual(
+      new Date(expectedTime),
+    );
   });
 
   test('rolls over days, months, and years', () => {

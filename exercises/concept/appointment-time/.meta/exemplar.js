@@ -76,7 +76,7 @@ export function updateAppointment(timestamp, options) {
 export function timeBetween(timestampA, timestampB) {
   return Math.round(
     (new Date(timestampB).getTime() - new Date(timestampA).getTime()) / 1000,
-    );
+  );
 }
 
 /**
