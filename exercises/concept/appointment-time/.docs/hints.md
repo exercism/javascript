@@ -4,7 +4,7 @@
 
 - You need to create a new date. The introduction elaborates on the different ways.
 - `Date.now()` gives you current time in milliseconds
-- `Date` has several getter methods to get date components - months, hours, etc. - for a given date. `getMinutes`, for instance, returns the minutes component.
+- `Date` has several getter methods, listed in the introduction, to get date components.  Can you use one of those methods?
 - Likewise, `Date` has several setter methods to set those components, rolling over into "higher" components if needed. `setMinutes(80)`, for example, will increase the hours component by one and set the minutes component to 20.
 
 ## 2. Convert a date into a timestamp
