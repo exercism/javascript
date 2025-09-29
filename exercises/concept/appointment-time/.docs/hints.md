@@ -4,7 +4,8 @@
 
 - You need to create a new date. The introduction elaborates on the different ways.
 - `Date.now()` gives you current time in milliseconds
-- A day consist of 24 hour. An hour consist of 60 minutes. A minute consist of 60 seconds. A second consist of 1000 milliseconds. In order to get timestamp of `n` days later from current date, you can sum current timestamp and `n * 24 * 60 * 60 * 1000`.
+- `Date` has several getter methods, listed in the introduction, to get date components. Can you use one of those methods?
+- Likewise, `Date` has matching setter methods to set those components, rolling over into "higher" components if needed.
 
 ## 2. Convert a date into a timestamp
 
