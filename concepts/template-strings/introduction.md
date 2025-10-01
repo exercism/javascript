@@ -38,7 +38,7 @@ lines`;
      lines
 */
 ```
-If you want to represent a newline inside a single-line string (not using backticks), you can use the newline escape sequence `\n`:
+If you want to represent a newline inside a regular string instead of using a template string (ie. not using backticks), you can use the newline escape sequence `\n`:
 
 ```javascript
 "This is an example of using the newline escape sequence!\nWithout backticks"
