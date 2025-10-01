@@ -32,6 +32,19 @@ When you are needing to have strings formatted on multiple lines:
 `This is an example of using template
 strings to accomplish multiple
 lines`;
+
+/* => This is an example of using template
+     strings to accomplish multiple
+     lines
+*/
+```
+If you want to represent a newline inside a single-line string (not using backticks), you can use the newline escape sequence `\n`:
+```javascript
+"Congratulations Hannah!\nClass of 2022"
+
+/* => Congratulations Hannah!
+      Class of 2022
+*/
 ```
 
 With the available substitution capabilities, you can also introduce logic into the process to determine what the output string should be.
