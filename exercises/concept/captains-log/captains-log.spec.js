@@ -1,4 +1,4 @@
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect, test, beforeEach, afterEach } from '@jest/globals';
 import {
   randomShipRegistryNumber,
   randomStardate,
@@ -12,7 +12,7 @@ describe('randomShipRegistryNumber', () => {
     }
   });
 
-  test('returns a random registry number', () => {
+  test('is a random registry number', () => {
     expect(randomShipRegistryNumber()).not.toEqual(randomShipRegistryNumber());
   });
 });
@@ -33,24 +33,33 @@ function loadDie(...values) {
 }
 
 describe('randomStardate', () => {
-  test('stardate is between 41000 and 42000', () => {
+  let restore;
+
+  beforeEach(() => {
     const min = 0;
     const max = 1 - Number.EPSILON * 32;
 
     // prettier-ignore
-    const restore = loadDie(
+    restore = loadDie(
       min, min, min, min, min, min,
       max, max, max, max, max, max,
       0.5, 0.5, 0.5, 0.5, 0.5, 0.5
     );
+  });
 
+  afterEach(() => {
+    if (restore) {
+      restore();
+      restore = undefined;
+    }
+  });
+
+  test('stardate is between 41000 and 42000', () => {
     for (let i = 0; i < 10_000; i++) {
       const starDate = randomStardate();
       expect(starDate).toBeGreaterThanOrEqual(41_000);
       expect(starDate).toBeLessThan(42_000);
     }
-
-    restore();
   });
 });
 
