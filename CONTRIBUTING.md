@@ -5,10 +5,10 @@ You can find this in the [`config.json`][file-config].
 It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track-specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
 
 > [!CAUTION]
-> 
+>
 > Please see https://github.com/exercism/javascript/issues/2144.
 >
-> All contributions *MUST* preceed by opening a topic on the forum.
+> All contributions _MUST_ preceed by opening a topic on the forum.
 > This is for both new content and fixes/changes to old content.
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
@@ -120,7 +120,7 @@ Don't worry! You're not alone in this.
 There are always improvements possible on existing exercises.
 
 > [!IMPORTANT]  
-> If you are opening a PR, please ensure you are *on a branch in your fork*, or our automated tooling will not work as expected.
+> If you are opening a PR, please ensure you are _on a branch in your fork_, or our automated tooling will not work as expected.
 
 #### Improving the README.md
 
