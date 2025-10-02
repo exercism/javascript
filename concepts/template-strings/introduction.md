@@ -38,9 +38,10 @@ lines`;
      lines
 */
 ```
+
 If you want to represent a newline inside a regular string instead of using a template string (ie. not using backticks), you can use the newline escape sequence `\n`:
 
-```javascript
+````javascript
 "This is an example of using the newline escape sequence!\nWithout backticks"
 
 /* => This is an example of using the newline escape sequence!
@@ -58,7 +59,7 @@ const grade = 95;
 
 `You have ${grade > 90 ? 'passed' : 'failed'} the exam.`;
 // => You have passed the exam.
-```
+````
 
 [string-reference]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [type-conversion-concept]: /tracks/javascript/concepts/type-conversion
