@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: 'Post acknowledgement that it will format code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -65,7 +65,7 @@ jobs:
         run: corepack enable pnpm
 
       - name: Use Node.js LTS (22.x)
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
         with:
           node-version: 22.x
           cache: 'pnpm'
@@ -95,7 +95,7 @@ jobs:
 
       - name: 'Post acknowledgement that it has formatted the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -109,7 +109,7 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
