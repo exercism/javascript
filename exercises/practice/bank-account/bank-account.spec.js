@@ -67,7 +67,7 @@ describe('Bank Account', () => {
     }).toThrow(ValueError);
   });
 
-  xtest('Cannot deposit into closed account', () => {
+  xtest('Cannot deposit into unopened account', () => {
     const account = new BankAccount();
     expect(() => {
       account.deposit(50);
