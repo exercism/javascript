@@ -21,7 +21,7 @@ In contrast to `let` and `var`, variables that are defined with `const` can only
 ```javascript
 const MY_FIRST_CONSTANT = 10;
 
-// Can not be re-assigned.
+// Cannot be re-assigned.
 MY_FIRST_CONSTANT = 20;
 // => TypeError: Assignment to constant variable.
 ```
