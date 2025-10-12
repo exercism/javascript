@@ -4,7 +4,7 @@ The [`Promise`][promise-docs] object represents the eventual completion (or fail
 
 <!-- prettier-ignore -->
 ~~~exercism/note
-This is a hard topic for many people, specially if you know programming in a language that is completely _synchronous_.
+This is a hard topic for many people, especially if you know programming in a language that is completely _synchronous_.
 If you feel overwhelmed, or you would like to learn more about **concurrency** and **parallelism**, [watch (via go.dev)][talk-blog] or [watch directly via vimeo][talk-video] and [read the slides][talk-slides] of the brilliant talk "Concurrency is not parallelism".
 
 [talk-slides]: https://go.dev/talks/2012/waza.slide#1
