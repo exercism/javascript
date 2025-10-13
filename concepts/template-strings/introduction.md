@@ -1,6 +1,6 @@
 # Introduction
 
-In JavaScript, _template strings_ allows for embedding expressions in strings, also referred to as string interpolation.
+In JavaScript, _template strings_ allow for embedding expressions in strings, also referred to as string interpolation.
 This functionality extends the functionality of the built-in [`String`][string-reference] global object.
 
 You can create template strings in JavaScript by wrapping text in backticks.

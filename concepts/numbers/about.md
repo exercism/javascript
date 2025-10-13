@@ -26,7 +26,7 @@ Numbers may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Lea
 ### Exponential Notation
 
 The E-notation indicates a number that should be multiplied by 10 raised to a given power.
-The format of E-notation is to have a number, followed by `e` or `E`, than by the power of 10 to multiply by.
+The format of E-notation is to have a number, followed by `e` or `E`, then by the power of 10 to multiply by.
 
 ```javascript
 const num = 3.125e7;
@@ -37,7 +37,7 @@ const num = 3.125e7;
 E-notation can also be used to represent very small numbers:
 
 ```javascript
-const num = 325987e-6; // Equals to 0. 325987
+const num = 325987e-6; // Equals 0.325987
 // The notation essentially says, "Take 325987 and multiply it by 10^-6.
 ```
 
@@ -153,7 +153,7 @@ isFinite(NaN); // => false
 
 `+0` or `-0` are distinct numbers in JavaScript. They can be produced if you represented a number, that is so small that it is indistinguishable from 0.
 The signed zero allows you to record “from which direction” you approached zero; that is, what sign the number had before it was considered zero.
-It is best practise to pretend there's only one zero.
+It is best practice to pretend there's only one zero.
 
 ## Comparison
 
