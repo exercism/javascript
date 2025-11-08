@@ -19,8 +19,8 @@ Finish the learning exercise(s) about this concept to learn more
 
 ## Generating random numbers
 
-In Javascript, you can generate psuedorandom numbers using the [`Math.random()`][Math.random] function.
-It will return a psuedorandom floating-point number between 0 (inclusive), and 1 (exclusive).
+In Javascript, you can generate pseudorandom numbers using the [`Math.random()`][Math.random] function.
+It will return a pseudorandom floating-point number between 0 (inclusive), and 1 (exclusive).
 
 [why-randomness-is-hard]: https://www.malwarebytes.com/blog/news/2013/09/in-computers-are-random-numbers-really-random
 [Math.random]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
