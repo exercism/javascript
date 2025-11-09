@@ -2,7 +2,7 @@
 
 ## Goal
 
-The goal of this exercise is to teach the student how to generate psuedorandom numbers in JavaScript.
+The goal of this exercise is to teach the student how to generate pseudorandom numbers in JavaScript.
 
 ## Learning objectives
 
