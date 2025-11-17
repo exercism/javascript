@@ -7,7 +7,7 @@ describe('Error Handling', () => {
   });
 
   xtest('throws Error message if string is empty', () => {
-    expect(() => processString('')).toThrow(Error);
+    expect(() => processString('')).toThrow(TypeError);
   });
 
   xtest('returns uppercase string if input is valid', () => {
