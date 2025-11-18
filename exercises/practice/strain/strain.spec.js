@@ -10,6 +10,10 @@ describe('strain', () => {
     expect(keep([1, 2, 3], (e) => e < 10)).toEqual([1, 2, 3]);
   });
 
+  xtest('keeps nothing', () => {
+    expect(keep([1, 2, 3], (e) => e > 10)).toEqual([]);
+  });
+
   xtest('keeps first and last', () => {
     expect(keep([1, 2, 3], (e) => e % 2 === 1)).toEqual([1, 3]);
   });
@@ -24,7 +28,7 @@ describe('strain', () => {
     expect(result).toEqual('zebra zombies zelot'.split(' '));
   });
 
-  xtest('keeps arrays', () => {
+  xtest('keeps lists', () => {
     const rows = [
       [1, 2, 3],
       [5, 5, 5],
@@ -43,8 +47,12 @@ describe('strain', () => {
     ]);
   });
 
-  xtest('empty discard', () => {
+  xtest('discards everything', () => {
     expect(discard([], (e) => e < 10)).toEqual([]);
+  });
+
+  xtest('discards everything', () => {
+    expect(discard([1, 3, 5], (e) => e < 10)).toEqual([]);
   });
 
   xtest('discards nothing', () => {
@@ -66,7 +74,7 @@ describe('strain', () => {
     expect(result).toEqual('apple banana cherimoya'.split(' '));
   });
 
-  xtest('discards arrays', () => {
+  xtest('discards lists', () => {
     const rows = [
       [1, 2, 3],
       [5, 5, 5],

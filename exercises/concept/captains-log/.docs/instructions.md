@@ -1,4 +1,4 @@
-## Instructions
+# Instructions
 
 Mary is a big fan of the TV series Star Trek: The Next Generation.
 She often plays pen-and-paper role playing games, where she and her friends pretend to be the crew of the Starship Enterprise.
@@ -7,7 +7,7 @@ She loves the creative part of the game, but doesn't like to generate random dat
 
 Help Mary by creating random generators for data commonly appearing in the captain's log.
 
-### 1. Generate a random starship registry number
+## 1. Generate a random starship registry number
 
 Enterprise (registry number NCC-1701) is not the only starship flying around!
 When it rendezvous with another starship, Mary needs to log the registry number of that starship.
@@ -21,7 +21,7 @@ randomShipRegistryNumber();
 // => "NCC-1947"
 ```
 
-### 2. Generate a random stardate
+## 2. Generate a random stardate
 
 What's the use of a log if it doesn't include dates?
 
@@ -36,7 +36,7 @@ randomStardate();
 // => 41458.15721310934
 ```
 
-### 3. Generate a random planet
+## 3. Generate a random planet
 
 The Starship Enterprise encounters many planets in its travels.
 Planets in the Star Trek universe are split into categories based on their properties.

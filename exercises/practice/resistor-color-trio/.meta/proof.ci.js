@@ -12,6 +12,8 @@ const COLORS = [
 ];
 
 const ONE_KILOOHM = 1000;
+const ONE_MEGAOHM = 1000000;
+const ONE_GIGAOHM = 1000000000;
 
 class ArgumentError extends Error {}
 
@@ -44,9 +46,18 @@ export class ResistorColorTrio {
 
   toString() {
     const value = this.value;
-    return value < ONE_KILOOHM
-      ? `${value} ohms`
-      : `${Math.floor(value / ONE_KILOOHM)} kiloohms`;
+
+    if (value >= ONE_GIGAOHM) {
+      return `${Math.floor(value / ONE_GIGAOHM)} gigaohms`;
+    }
+    if (value >= ONE_MEGAOHM) {
+      return `${Math.floor(value / ONE_MEGAOHM)} megaohms`;
+    }
+    if (value >= ONE_KILOOHM) {
+      return `${Math.floor(value / ONE_KILOOHM)} kiloohms`;
+    }
+
+    return `${value} ohms`;
   }
 
   /**
