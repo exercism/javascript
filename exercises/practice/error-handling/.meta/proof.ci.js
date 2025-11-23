@@ -4,7 +4,7 @@ export const processString = (input) => {
       throw new TypeError('Input must be a string');
     }
     if (input === '') {
-      throw new TypeError('Input cannot be empty');
+      return null
     }
     return input.toUpperCase();
   } catch (error) {
