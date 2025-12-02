@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
 
@@ -48,7 +48,7 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
 
