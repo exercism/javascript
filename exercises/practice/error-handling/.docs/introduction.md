@@ -16,7 +16,13 @@ Inside the `try` block:
 
 - If the input is not a string, throw a `TypeError`.
 
-- If the input is an empty string, throw a generic `Error`.
+- If the input is an empty string, return `null`.
+
+- If input length is greater than 100, throw `Error`.
+
+- If input length is less than 10, throw `Error`.
+
+- If input contains a mix of letters and numbers, throw `Error`.
 
 - Otherwise, return the input in `uppercase`.
 
