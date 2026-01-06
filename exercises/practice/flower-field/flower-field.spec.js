@@ -76,4 +76,10 @@ describe('Flower Field', () => {
     ];
     expect(annotate(input)).toEqual(expected);
   });
+
+  xtest('multiple adjacent flowers', () => {
+    const input = [' ** '];
+    const expected = ['1**1'];
+    expect(annotate(input)).toEqual(expected);
+  });
 });
