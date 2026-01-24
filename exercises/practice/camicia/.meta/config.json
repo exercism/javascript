@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "camicia.js"
+    ],
+    "test": [
+      "camicia.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Simulate the card game and determine whether the match ends or enters an infinite loop.",
+  "source": "Beggar-My-Neighbour",
+  "source_url": "https://www.richardpmann.com/beggar-my-neighbour-records.html",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+}
