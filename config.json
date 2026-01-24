@@ -870,6 +870,16 @@
         ]
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "96d482ab-effc-4082-b4a8-3165de8ff0eb",
+        "practices": [],
+        "prerequisites": [
+          "arrays"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "clock",
         "name": "Clock",
         "uuid": "4e0e2c30-be33-49b6-b196-213888a93a0c",
