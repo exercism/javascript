@@ -1,28 +1,25 @@
-export const format = (name, ordinal) => {
-  const suffix = getSuffix(ordinal);
-
-  return `${name}, you are the ${ordinal}${suffix} customer we serve today. Thank you!`;
-};
-
 const getSuffix = (number) => {
   const lastTwoDigits = number % 100;
-  const lastOneDigit = number % 10;
+  const lastDigit = number % 10;
 
   if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
     return 'th';
   }
 
-  if (lastOneDigit === 1) {
+  if (lastDigit === 1) {
     return 'st';
   }
 
-  if (lastOneDigit === 2) {
+  if (lastDigit === 2) {
     return 'nd';
   }
 
-  if (lastOneDigit === 3) {
+  if (lastDigit === 3) {
     return 'rd';
   }
 
   return 'th';
 };
+
+export const format = (name, number) =>
+  `${name}, you are the ${number}${getSuffix(number)} customer we serve today. Thank you!`;
