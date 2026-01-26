@@ -529,6 +529,20 @@
         ]
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "034b31ef-331a-419d-bb62-465c05b533d8",
+        "practices": [
+          "numbers",
+          "strings"
+        ],
+        "prerequisites": [
+          "numbers",
+          "strings"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
