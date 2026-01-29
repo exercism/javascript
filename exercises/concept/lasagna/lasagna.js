@@ -6,6 +6,8 @@
 // understand types, JSDoc, or TypeScript in order to complete this JavaScript
 // exercise, and can completely ignore this comment block and directive.
 
+import { act } from "react";
+
 // 👋🏽 Hi there!
 //
 // On the JavaScript track we provide you with stubs. These stubs provide a
@@ -29,9 +31,8 @@
 // work with the tests, which you can find in ./lasagna.spec.js
 //
 // Good luck preparing some lasagna!
-
-/**
- * The number of minutes it takes to prepare a single layer.
+/*
+  * The number of minutes it takes to prepare a single layer.
  */
 const PREPARATION_MINUTES_PER_LAYER = 2;
 
@@ -42,8 +43,14 @@ const PREPARATION_MINUTES_PER_LAYER = 2;
  * @param {number} actualMinutesInOven
  * @returns {number} the number of minutes remaining
  */
+
+const EXPECTED_MINUTES_IN_OVEN = 40;
 export function remainingMinutesInOven(actualMinutesInOven) {
-  throw new Error('Remove this line and implement the function');
+    if (actualMinutesInOven > EXPECTED_MINUTES_IN_OVEN){
+        throw new Error('Actual minutes in oven cannot be more than expected minutes in oven');
+    }
+    return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven;
+  
 }
 
 /**
@@ -53,7 +60,7 @@ export function remainingMinutesInOven(actualMinutesInOven) {
  * @returns {number} the total preparation time
  */
 export function preparationTimeInMinutes(numberOfLayers) {
-  throw new Error('Remove this line and implement the function');
+  return numberOfLayers * PREPARATION_MINUTES_PER_LAYER;
 }
 
 /**
@@ -65,5 +72,5 @@ export function preparationTimeInMinutes(numberOfLayers) {
  * @returns {number} the total working time
  */
 export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
-  throw new Error('Remove this line and implement the function');
+  return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven;
 }
