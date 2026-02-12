@@ -18,7 +18,7 @@ twoDozen;
 // => Uncaught ReferenceError: twoDozen is not defined
 ```
 
-Except for braces `{}`, functions (and classes) als create new scopes, which can _enclose_ values:
+Besides braces `{}`, functions (and classes) also create new scopes, and can _enclose_ values:
 
 ```javascript
 const dozen = 12;
