@@ -2597,6 +2597,21 @@
         ]
       },
       {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "ef463b82-bf5c-4761-a821-29eeabee3050",
+        "practices": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "arrays",
+          "array-loops",
+          "comparison",
+          "conditionals",
+          "for-loops"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "satellite",
         "name": "Satellite",
         "uuid": "bfc08dea-2a6b-4696-be20-9b55e282388d",
