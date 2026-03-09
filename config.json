@@ -672,6 +672,17 @@
         ]
       },
       {
+        "slug": "split-second-stopwatch",
+        "name": "Split Second Stopwatch",
+        "uuid": "8ddc2921-c0f6-400e-bb74-c2bec51b9d63",
+        "practices": [],
+        "prerequisites": [
+          "classes",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "linked-list",
         "name": "Linked List",
         "uuid": "ec60a578-8889-46a1-b7b8-306dbd8551d5",
