@@ -40,8 +40,8 @@ export function scale2d(sx, sy) {
  * Create a composition function that returns a function that combines two
  * functions to perform a repeatable transformation
  *
- * @param {function} f the first function to apply
- * @param {function} g the second function to apply
+ * @param {CallbackType} f the first function to apply
+ * @param {CallbackType} g the second function to apply
  *
  * @returns {CallbackType} a function which takes an x, y parameter, returns the
  *  transformed coordinate pair in the form [x, y]
@@ -54,11 +54,12 @@ export function composeTransform(f, g) {
  * Return a function that memoizes the last result.  If the arguments are the same as the last call,
  * then memoized result returned.
  *
- * @param {function} f the transformation function to memoize, assumes takes two arguments 'x' and 'y'
+ * @param {CallbackType} f the transformation function to memoize, assumes takes two arguments 'x' and 'y'
  *
  * @returns {CallbackType} a function which takes x and y arguments, and will either return the saved result
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 export function memoizeTransform(f) {
+  // if you have type error for callback function. Add `/** @type {[number, number]} */` to the return variable.
   throw new Error('Remove this line and implement the function');
 }
