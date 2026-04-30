@@ -60,6 +60,6 @@ export function composeTransform(f, g) {
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 export function memoizeTransform(f) {
-  // if you have type error for callback function. Add `/** @type {[number, number]} */` to the return variable.
+  // To narrow the type of the return variable, add `/** @type {[number, number]} */` above it.
   throw new Error('Remove this line and implement the function');
 }
