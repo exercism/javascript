@@ -10,7 +10,7 @@
  */
 export function cardTypeCheck(stack, card) {
   // 🚨 Use .forEach
-  throw new Error('Implement the cardTypeCheck function');
+  throw new Error('Remove this line and implement the function');
 }
 
 /**
@@ -22,5 +22,5 @@ export function cardTypeCheck(stack, card) {
  */
 export function determineOddEvenCards(stack, type) {
   // 🚨 Use a `for...of` loop
-  throw new Error('Implement the determineOddEvenCards function');
+  throw new Error('Remove this line and implement the function');
 }

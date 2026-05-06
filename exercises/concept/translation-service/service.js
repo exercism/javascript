@@ -27,7 +27,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    throw new Error('Implement the free function');
+    throw new Error('Remove this line and implement the function');
   }
 
   /**
@@ -41,7 +41,7 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function');
+    throw new Error('Remove this line and implement the function');
   }
 
   /**
@@ -54,7 +54,7 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    throw new Error('Implement the request function');
+    throw new Error('Remove this line and implement the function');
   }
 
   /**
@@ -68,7 +68,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-    throw new Error('Implement the premium function');
+    throw new Error('Remove this line and implement the function');
   }
 }
 
