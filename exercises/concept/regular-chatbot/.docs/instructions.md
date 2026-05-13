@@ -71,7 +71,9 @@ Example of Conversation:
 Implement the function `getURL()` which is able to return an array with just the link of each website. Writing a regex to recognize any URL would be very complicated, but the Chatbot only needs to read simple URLs. For this exercise, a URL is any `"."`-delimited sequence of words.
 
 ```javascript
-getURL('I learned a lot from exercism.org and developer.mozilla.org, but I found ts39.es very boring!');
+getURL(
+  'I learned a lot from exercism.org and developer.mozilla.org, but I found ts39.es very boring!',
+);
 // => ["exercism.org", "developer.mozilla.org", "ts39.es"];
 ```
 
