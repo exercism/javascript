@@ -78,7 +78,7 @@ status: `"loop"`, cards: 8, tricks: 3
   - **Cards**: total number of cards played throughout the game
   - **Tricks**: number of times the central pile was collected
 
-```exercism/advanced
+~~~~exercism/advanced
 For those who want to take on a more exciting challenge, the hunt for other records for the longest game with an end is still open.
 There are 653,534,134,886,878,245,000 (approximately 654 quintillion) possibilities, and we haven't calculated them all yet!
-```
+~~~~
