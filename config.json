@@ -529,6 +529,20 @@
         ]
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "034b31ef-331a-419d-bb62-465c05b533d8",
+        "practices": [
+          "numbers",
+          "strings"
+        ],
+        "prerequisites": [
+          "numbers",
+          "strings"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "342974d6-9083-4754-a6c5-ed1e19e40ec5",
@@ -656,6 +670,17 @@
           "strings",
           "text_formatting"
         ]
+      },
+      {
+        "slug": "split-second-stopwatch",
+        "name": "Split Second Stopwatch",
+        "uuid": "8ddc2921-c0f6-400e-bb74-c2bec51b9d63",
+        "practices": [],
+        "prerequisites": [
+          "classes",
+          "numbers"
+        ],
+        "difficulty": 4
       },
       {
         "slug": "linked-list",
@@ -868,6 +893,16 @@
           "exception_handling",
           "integers"
         ]
+      },
+      {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "96d482ab-effc-4082-b4a8-3165de8ff0eb",
+        "practices": [],
+        "prerequisites": [
+          "arrays"
+        ],
+        "difficulty": 5
       },
       {
         "slug": "clock",
@@ -2571,6 +2606,21 @@
           "algorithms",
           "logic"
         ]
+      },
+      {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "ef463b82-bf5c-4761-a821-29eeabee3050",
+        "practices": [],
+        "prerequisites": [
+          "arithmetic-operators",
+          "arrays",
+          "array-loops",
+          "comparison",
+          "conditionals",
+          "for-loops"
+        ],
+        "difficulty": 5
       },
       {
         "slug": "satellite",

@@ -32,7 +32,9 @@ Implement the function `graduationFor(name, year)` which takes a name as a strin
 
 ```javascript
 graduationFor('Hannah', 2022);
-// => "Congratulations Hannah!\nClass of 2022"
+/* => "Congratulations Hannah!
+       Class of 2022"
+*/
 ```
 
 ## 4. Compute the cost of a sign

@@ -1,7 +1,9 @@
 /.github/labels.yml
-/.github/workflows/sync-labels.yml
-/.github/workflows/no-important-files-changed.yml
+
+# Generated
 exercises/**/README.md
+pnpm-lock.yaml
+
 !/README.md
 
 # Originates from https://github.com/exercism/org-wide-files

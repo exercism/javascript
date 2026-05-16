@@ -2,7 +2,7 @@
 
 In this exercise, you are implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
 
-You have 6 functions to implement, mostly related to manipulating an object that holds high scores.
+You have 5 functions to implement, mostly related to manipulating an object that holds high scores.
 
 ## 1. Create a new high score board
 

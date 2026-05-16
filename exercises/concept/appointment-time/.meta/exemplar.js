@@ -9,7 +9,10 @@
  * @returns {Date} the appointment
  */
 export function createAppointment(days, now = Date.now()) {
-  return new Date(now + days * 24 * 3600 * 1000);
+  const date = new Date(now);
+  date.setDate(date.getDate() + days);
+
+  return date;
 }
 
 /**

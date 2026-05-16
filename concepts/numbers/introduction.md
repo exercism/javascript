@@ -7,7 +7,7 @@ Many programming languages have specific numeric types to represent different ty
 - `bigint`: a numeric data type that can represent _integers_ in the arbitrary precision format.
   Examples are `-12n`, `0n`, `4n`, and `9007199254740991n`.
 
-If you require arbitrary precision or work with extremely large numbers, use the `bigint` type.
+If you require [arbitrary precision][ref-arbitrary-precision] or work with extremely large numbers, use the `bigint` type.
 Otherwise, the `number` type is likely the better option.
 
 ## Rounding
@@ -20,3 +20,4 @@ Math.ceil(234.34); // => 235
 ```
 
 [ref-math-object-rounding]: https://javascript.info/number#rounding
+[ref-arbitrary-precision]: https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic

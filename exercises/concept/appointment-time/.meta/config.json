@@ -3,6 +3,9 @@
     "SalahuddinAhammed",
     "SleeplessByte"
   ],
+  "contributors": [
+    "BadIdeaException"
+  ],
   "files": {
     "solution": [
       "appointment-time.js"
