@@ -2,7 +2,7 @@
 
 Errors are useful to report when something is wrong or unexpected in a program or a piece of code.
 
-They are javascript objects.
+They are JavaScript objects.
 
 The main property of this object is `message`:
 

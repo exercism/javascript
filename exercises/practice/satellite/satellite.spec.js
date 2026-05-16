@@ -49,4 +49,93 @@ describe('Satellite', () => {
       treeFromTraversals(preorder, inorder);
     }).toThrow(new Error('traversals must contain unique items'));
   });
+
+  xtest('A degenerate binary tree', () => {
+    const preorder = ['a', 'b', 'c', 'd'];
+    const inorder = ['d', 'c', 'b', 'a'];
+    const expected = {
+      value: 'a',
+      left: {
+        value: 'b',
+        left: {
+          value: 'c',
+          left: {
+            value: 'd',
+            left: {},
+            right: {},
+          },
+          right: {},
+        },
+        right: {},
+      },
+      right: {},
+    };
+    expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
+  });
+
+  xtest('Another degenerate binary tree', () => {
+    const preorder = ['a', 'b', 'c', 'd'];
+    const inorder = ['a', 'b', 'c', 'd'];
+    const expected = {
+      value: 'a',
+      left: {},
+      right: {
+        value: 'b',
+        left: {},
+        right: {
+          value: 'c',
+          left: {},
+          right: {
+            value: 'd',
+            left: {},
+            right: {},
+          },
+        },
+      },
+    };
+    expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
+  });
+
+  xtest('Tree with many more items', () => {
+    const preorder = ['a', 'b', 'd', 'g', 'h', 'c', 'e', 'f', 'i'];
+    const inorder = ['g', 'd', 'h', 'b', 'a', 'e', 'c', 'i', 'f'];
+    const expected = {
+      value: 'a',
+      left: {
+        value: 'b',
+        left: {
+          value: 'd',
+          left: {
+            value: 'g',
+            left: {},
+            right: {},
+          },
+          right: {
+            value: 'h',
+            left: {},
+            right: {},
+          },
+        },
+        right: {},
+      },
+      right: {
+        value: 'c',
+        left: {
+          value: 'e',
+          left: {},
+          right: {},
+        },
+        right: {
+          value: 'f',
+          left: {
+            value: 'i',
+            left: {},
+            right: {},
+          },
+          right: {},
+        },
+      },
+    };
+    expect(treeFromTraversals(preorder, inorder)).toEqual(expected);
+  });
 });

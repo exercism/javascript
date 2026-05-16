@@ -1,7 +1,7 @@
 import { describe, expect, test, xtest } from '@jest/globals';
 import WordSearch from './word-search';
 
-describe('single line grids', () => {
+describe('Word Search', () => {
   test('Should accept an initial game grid', () => {
     const grid = ['jefblpepre'];
     const wordSearch = new WordSearch(grid);
@@ -9,14 +9,14 @@ describe('single line grids', () => {
     expect(wordSearch instanceof WordSearch).toEqual(true);
   });
 
-  xtest('can accept a target search word', () => {
+  xtest('Can accept a target search word', () => {
     const grid = ['jefblpepre'];
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['glasnost'])).toEqual({ glasnost: undefined });
   });
 
-  xtest('should locate a word written left to right', () => {
+  xtest('Should locate a word written left to right', () => {
     const grid = ['clojurermt'];
     const expectedResults = {
       clojure: {
@@ -29,7 +29,7 @@ describe('single line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
 
-  xtest('can locate a left to right word in a different position', () => {
+  xtest('Can locate a left to right word in a different position', () => {
     const grid = ['mtclojurer'];
     const expectedResults = {
       clojure: {
@@ -37,12 +37,13 @@ describe('single line grids', () => {
         end: [1, 9],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
 
-  xtest('can locate a different left to right word', () => {
+  xtest('Can locate a different left to right word', () => {
     const grid = ['coffeelplx'];
     const expectedResults = {
       coffee: {
@@ -50,11 +51,13 @@ describe('single line grids', () => {
         end: [1, 6],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['coffee'])).toEqual(expectedResults);
   });
-  xtest('can locate that different left to right word in a different position', () => {
+
+  xtest('Can locate that different left to right word in a different position', () => {
     const grid = ['xcoffeezlp'];
     const expectedResults = {
       coffee: {
@@ -62,14 +65,13 @@ describe('single line grids', () => {
         end: [1, 7],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['coffee'])).toEqual(expectedResults);
   });
-});
 
-describe('multi line grids', () => {
-  xtest('can locate a left to right word in a two line grid', () => {
+  xtest('Can locate a left to right word in a two line grid', () => {
     const grid = ['jefblpepre', 'clojurermt'];
 
     const expectedResults = {
@@ -83,7 +85,8 @@ describe('multi line grids', () => {
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
-  xtest('can locate a left to right word in a different position in a two line grid', () => {
+
+  xtest('Can locate a left to right word in a different position in a two line grid', () => {
     const grid = ['jefblpepre', 'tclojurerm'];
     const expectedResults = {
       clojure: {
@@ -91,11 +94,13 @@ describe('multi line grids', () => {
         end: [2, 8],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
-  xtest('can locate a left to right word in a three line grid', () => {
+
+  xtest('Can locate a left to right word in a three line grid', () => {
     const grid = ['camdcimgtc', 'jefblpepre', 'clojurermt'];
     const expectedResults = {
       clojure: {
@@ -103,12 +108,13 @@ describe('multi line grids', () => {
         end: [3, 7],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
 
-  xtest('can locate a left to right word in a ten line grid', () => {
+  xtest('Can locate a left to right word in a ten line grid', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -128,12 +134,13 @@ describe('multi line grids', () => {
         end: [10, 7],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
 
-  xtest('can locate a left to right word in a different position in a ten line grid', () => {
+  xtest('Can locate a left to right word in a different position in a ten line grid', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -153,11 +160,13 @@ describe('multi line grids', () => {
         end: [9, 7],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults);
   });
-  xtest('can locate a different left to right word in a ten line grid', () => {
+
+  xtest('Can locate a different left to right word in a ten line grid', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -170,20 +179,20 @@ describe('multi line grids', () => {
       'clojurermt',
       'jalaycalmp',
     ];
+
     const expectedResults = {
       scree: {
         start: [7, 1],
         end: [7, 5],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['scree'])).toEqual(expectedResults);
   });
-});
 
-describe('can find multiple words', () => {
-  xtest('can find two words written left to right', () => {
+  xtest('Can find two words written left to right', () => {
     const grid = [
       'aefblpepre',
       'camdcimgtc',
@@ -197,6 +206,7 @@ describe('can find multiple words', () => {
       'clojurermt',
       'xjavamtzlp',
     ];
+
     const expectedResults = {
       clojure: {
         start: [10, 1],
@@ -207,14 +217,13 @@ describe('can find multiple words', () => {
         end: [11, 5],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['java', 'clojure'])).toEqual(expectedResults);
   });
-});
 
-describe('different directions', () => {
-  xtest('should locate a single word written right to left', () => {
+  xtest('Should locate a single word written right to left', () => {
     const grid = ['rixilelhrs'];
     const expectedResults = {
       elixir: {
@@ -222,11 +231,13 @@ describe('different directions', () => {
         end: [1, 1],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['elixir'])).toEqual(expectedResults);
   });
-  xtest('should locate multiple words written in different horizontal directions', () => {
+
+  xtest('Should locate multiple words written in different horizontal directions', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -239,6 +250,7 @@ describe('different directions', () => {
       'jalaycalmp',
       'clojurermt',
     ];
+
     const expectedResults = {
       clojure: {
         start: [10, 1],
@@ -249,14 +261,13 @@ describe('different directions', () => {
         end: [5, 1],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['elixir', 'clojure'])).toEqual(expectedResults);
   });
-});
 
-describe('vertical directions', () => {
-  xtest('should locate words written top to bottom', () => {
+  xtest('Should locate words written top to bottom', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -269,6 +280,7 @@ describe('vertical directions', () => {
       'jalaycalmp',
       'clojurermt',
     ];
+
     const expectedResults = {
       clojure: {
         start: [10, 1],
@@ -283,13 +295,15 @@ describe('vertical directions', () => {
         end: [10, 10],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(wordSearch.find(['elixir', 'clojure', 'ecmascript'])).toEqual(
       expectedResults,
     );
   });
-  xtest('should locate words written bottom to top', () => {
+
+  xtest('Should locate words written bottom to top', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -302,6 +316,7 @@ describe('vertical directions', () => {
       'jalaycalmp',
       'clojurermt',
     ];
+
     const expectedResults = {
       clojure: {
         start: [10, 1],
@@ -320,13 +335,15 @@ describe('vertical directions', () => {
         end: [2, 9],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(
       wordSearch.find(['elixir', 'clojure', 'ecmascript', 'rust']),
     ).toEqual(expectedResults);
   });
-  xtest('should locate words written top left to bottom right', () => {
+
+  xtest('Should locate words written top left to bottom right', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -339,6 +356,7 @@ describe('vertical directions', () => {
       'jalaycalmp',
       'clojurermt',
     ];
+
     const expectedResults = {
       clojure: {
         start: [10, 1],
@@ -361,13 +379,15 @@ describe('vertical directions', () => {
         end: [4, 4],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(
       wordSearch.find(['clojure', 'elixir', 'ecmascript', 'rust', 'java']),
     ).toEqual(expectedResults);
   });
-  xtest('should locate words written bottom right to top left', () => {
+
+  xtest('Should locate words written bottom right to top left', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -407,6 +427,7 @@ describe('vertical directions', () => {
         end: [7, 6],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(
@@ -420,7 +441,8 @@ describe('vertical directions', () => {
       ]),
     ).toEqual(expectedResults);
   });
-  xtest('should locate words written bottom left to top right', () => {
+
+  xtest('Should locate words written bottom left to top right', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -433,6 +455,7 @@ describe('vertical directions', () => {
       'jalaycalmp',
       'clojurermt',
     ];
+
     const expectedResults = {
       clojure: {
         start: [10, 1],
@@ -478,7 +501,8 @@ describe('vertical directions', () => {
       ]),
     ).toEqual(expectedResults);
   });
-  xtest('should locate words written top right to bottom left', () => {
+
+  xtest('Should locate words written top right to bottom left', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -526,6 +550,7 @@ describe('vertical directions', () => {
         end: [9, 5],
       },
     };
+
     const wordSearch = new WordSearch(grid);
 
     expect(
@@ -542,27 +567,123 @@ describe('vertical directions', () => {
     ).toEqual(expectedResults);
   });
 
-  describe("word doesn't exist", () => {
-    xtest('should fail to locate a word that is not in the puzzle', () => {
-      const grid = [
-        'jefblpepre',
-        'camdcimgtc',
-        'oivokprjsm',
-        'pbwasqroua',
-        'rixilelhrs',
-        'wolcqlirpc',
-        'screeaumgr',
-        'alxhpburyi',
-        'jalaycalmp',
-        'clojurermt',
-      ];
+  xtest('Should fail to locate a word that is not in the puzzle', () => {
+    const grid = [
+      'jefblpepre',
+      'camdcimgtc',
+      'oivokprjsm',
+      'pbwasqroua',
+      'rixilelhrs',
+      'wolcqlirpc',
+      'screeaumgr',
+      'alxhpburyi',
+      'jalaycalmp',
+      'clojurermt',
+    ];
 
-      const expectedResults = {
-        fail: undefined,
-      };
-      const wordSearch = new WordSearch(grid);
+    const expectedResults = {
+      clojure: {
+        start: [10, 1],
+        end: [10, 7],
+      },
+      elixir: {
+        start: [5, 6],
+        end: [5, 1],
+      },
+      ecmascript: {
+        start: [1, 10],
+        end: [10, 10],
+      },
+      rust: {
+        start: [5, 9],
+        end: [2, 9],
+      },
+      java: {
+        start: [1, 1],
+        end: [4, 4],
+      },
+      lua: {
+        start: [9, 8],
+        end: [7, 6],
+      },
+      lisp: {
+        start: [6, 3],
+        end: [3, 6],
+      },
+      ruby: {
+        start: [6, 8],
+        end: [9, 5],
+      },
+      haskell: undefined,
+    };
 
-      expect(wordSearch.find(['fail'])).toEqual(expectedResults);
-    });
+    const wordSearch = new WordSearch(grid);
+
+    expect(
+      wordSearch.find([
+        'clojure',
+        'elixir',
+        'ecmascript',
+        'rust',
+        'java',
+        'lua',
+        'lisp',
+        'ruby',
+        'haskell',
+      ]),
+    ).toEqual(expectedResults);
+  });
+
+  xtest('Should fail to locate words that are not on horizontal, vertical, or diagonal lines', () => {
+    const grid = ['abc', 'def'];
+
+    const expectedResults = {
+      aef: undefined,
+      ced: undefined,
+      abf: undefined,
+      cbd: undefined,
+    };
+
+    const wordSearch = new WordSearch(grid);
+
+    expect(wordSearch.find(['aef', 'ced', 'abf', 'cbd'])).toEqual(
+      expectedResults,
+    );
+  });
+
+  xtest('Should not concatenate different lines to find a horizontal word', () => {
+    const grid = ['abceli', 'xirdfg'];
+
+    const expectedResults = {
+      elixir: undefined,
+    };
+
+    const wordSearch = new WordSearch(grid);
+
+    expect(wordSearch.find(['elixir'])).toEqual(expectedResults);
+  });
+
+  xtest('Should not wrap around horizontally to find a word', () => {
+    const grid = ['silabcdefp'];
+
+    const expectedResults = {
+      lisp: undefined,
+    };
+
+    const wordSearch = new WordSearch(grid);
+
+    expect(wordSearch.find(['lisp'])).toEqual(expectedResults);
+  });
+
+  xtest('Should not wrap around vertically to find a word', () => {
+    const grid = ['s', 'u', 'r', 'a', 'b', 'c', 't'];
+
+    const expectedResults = {
+      rust: undefined,
+    };
+
+    const wordSearch = new WordSearch(grid);
+
+    expect(wordSearch.find(['rust'])).toEqual(expectedResults);
   });
 });

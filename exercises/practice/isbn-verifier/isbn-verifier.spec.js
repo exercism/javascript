@@ -30,6 +30,14 @@ describe('ISBN Verifier', () => {
     expect(isValid('3-598-2X507-9')).toEqual(false);
   });
 
+  xtest('only one check digit is allowed', () => {
+    expect(isValid('3-598-21508-96')).toEqual(false);
+  });
+
+  xtest('X is not substituted by the value 10', () => {
+    expect(isValid('3-598-2X507-5')).toEqual(false);
+  });
+
   xtest('valid isbn without separating dashes', () => {
     expect(isValid('3598215088')).toEqual(true);
   });

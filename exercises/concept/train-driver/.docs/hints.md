@@ -12,12 +12,12 @@
 ## 2. Move the first two elements to the end of the array
 
 - You can unpack a series of parameters using [a destructuring assignment (`...`)][destructuring-assignment].
-  This lets you extract the first two elements of a `array` while keeping the rest intact.
+  This lets you extract the first two elements of an `array` while keeping the rest intact.
 - To add another `array` into an existing `array`, you can use the `...` operator to "spread" the `array`.
 
 ## 3. Add missing values
 
-- Using unpacking with the rest operator(`...`), lets you extract the first two elements of a `array` while keeping the rest intact.
+- Using unpacking with the rest operator(`...`), you can extract the first element of an `array` while keeping the rest intact.
 - To add another `array` into an existing `array`, you can use the `...` operator to "spread" the `array`.
 
 ## 4. Extend routing information

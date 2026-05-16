@@ -21,7 +21,7 @@ It also has a list of tools you can use, of which the `test` tool is one of them
 
 ## Running the code quality tooling (linter)
 
-This run `eslint` for all files that _require_ linting.
+This runs `eslint` for all files that _require_ linting.
 
 ```shell
 corepack pnpm node scripts/lint.mjs --fix

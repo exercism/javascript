@@ -47,7 +47,7 @@ describe('strain', () => {
     ]);
   });
 
-  xtest('discards everything', () => {
+  xtest('discard on empty list returns empty list', () => {
     expect(discard([], (e) => e < 10)).toEqual([]);
   });
 

@@ -42,6 +42,10 @@ describe('Exercise - Perfect Numbers', () => {
     xtest('Large abundant number is classified correctly', () => {
       expect(classify(33550335)).toEqual('abundant');
     });
+
+    xtest('Perfect square abundant number is classified correctly', () => {
+      expect(classify(196)).toEqual('abundant');
+    });
   });
 
   describe('Deficient Numbers', () => {
