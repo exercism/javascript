@@ -18,14 +18,14 @@ Inside the `try` block:
 
 - If the input is an empty string, return `null`.
 
-- If input length is greater than 100, throw `Error`.
+- If input length is greater than 100, throw a `RangeError`.
 
-- If input length is less than 10, throw `Error`.
+- If input length is less than 10, throw a `RangeError`.
 
-- If input contains a mix of letters and numbers, throw `Error`.
+- If input contains a mix of letters and numbers, throw a `SyntaxError`.
 
 - Otherwise, return the input in `uppercase`.
 
 Inside the `catch` block:
-- console log the `error` message
+- log the error's message using `console.log`
 - `throw` the `error` so it can be tested for its type.
