@@ -2,7 +2,7 @@ import { describe, expect, test, xtest } from '@jest/globals';
 import { processString } from './error-handling';
 
 describe('Error Handling', () => {
-  xtest('throws TypeError if input is not a string', () => {
+  test('throws TypeError if input is not a string', () => {
     expect(() => processString(42)).toThrow(
       expect.objectContaining({
         name: 'TypeError',
