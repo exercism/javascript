@@ -24,6 +24,7 @@ Inside the `try` block:
 
 - Otherwise, return the input in `uppercase`.
 
+Don't forget to attach appropriate error messages then you throw! An informative and well structured error message can save you hours of debugging.
 Inside the `catch` block:
 - log the error's message using `console.log`
 - `throw` the `error` so it can be tested for its type.
