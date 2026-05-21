@@ -36,14 +36,12 @@ This exercise could benefit from the following rules in the [analyzer][analyzer]
 For all tasks check that the student actually used a for loop.
 
 1. `totalBirdCount`
-
    - Verify that the condition is written with `< x.length` instead of `<= y.length -1`.
    - Check whether a shorthand assignment `+=` was used to increase the sum (non-essential feedback).
    - Verify the total was properly initialized with `0` instead of e.g. `null`
    - Verify the increment operator was used in loop header step
 
 2. `birdsInWeek`
-
    - Verify a helper variable was used instead of duplicating the calculation in the initialization and condition of the loop
    - Other checks should be the same as for `totalBirdCount`
 
