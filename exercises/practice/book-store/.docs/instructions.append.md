@@ -1,4 +1,6 @@
-# Implementation
+# Instructions append
+
+## Implementation
 
 Define a function - `cost` - that calculates the cost for a given list of books based on defined discounts.
 

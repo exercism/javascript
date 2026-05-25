@@ -1,5 +1,7 @@
 # Instructions append
 
+## Implementation
+
 If the final item in the list is an `object` instead of a `string`, it will hold a qualifier that modifies the final line in the proverb.
 
 ```javascript
