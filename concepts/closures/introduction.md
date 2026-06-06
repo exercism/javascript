@@ -105,7 +105,7 @@ const mySecondCounter = makeCounter();
 mySecondCounter();
 // => 1
 
-// It is not affect the first counter.
+// It does not affect the first counter.
 
 myFirstCounter();
 // => 3
