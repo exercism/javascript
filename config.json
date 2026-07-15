@@ -1447,7 +1447,12 @@
         "name": "Rectangles",
         "uuid": "f8c6786e-bf93-4f35-b649-03f4e39bb094",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "loops",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
