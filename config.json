@@ -2325,7 +2325,12 @@
         "name": "Roman Numerals",
         "uuid": "2fc4f834-a51c-42b8-a4d9-5263229e7648",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "loops",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -2391,7 +2396,10 @@
         "name": "Square Root",
         "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arithmetic-operators"
+        ],
         "difficulty": 4,
         "topics": [
           "bitwise_operations",
@@ -2422,7 +2430,12 @@
         "name": "All Your Base",
         "uuid": "d2d3cd13-b06c-4c24-9964-fb1554f70dd4",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "loops",
+          "arithmetic-operators"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -2465,7 +2478,11 @@
         "name": "Queen Attack",
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -2482,7 +2499,12 @@
         "name": "React",
         "uuid": "303c6969-9446-41aa-871a-11223a43e810",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "numbers",
+          "arrays",
+          "functions"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
@@ -2495,7 +2517,13 @@
         "name": "Zipper",
         "uuid": "fd1575f3-3087-4cfa-8a26-168fba6d0606",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "recursion",
+          "trees",
+          "numbers",
+          "arrays"
+        ],
         "difficulty": 8,
         "topics": [
           "recursion",
