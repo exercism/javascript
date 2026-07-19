@@ -1447,7 +1447,12 @@
         "name": "Rectangles",
         "uuid": "f8c6786e-bf93-4f35-b649-03f4e39bb094",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "loops",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 4,
         "topics": [
           "arrays",
@@ -2011,7 +2016,13 @@
         "name": "Bowling",
         "uuid": "dbf26ef1-62ff-4cb1-8ac7-09b022df3b2f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "arrays",
+          "conditionals",
+          "numbers",
+          "loops"
+        ],
         "difficulty": 8,
         "topics": [
           "arrays",
@@ -2028,7 +2039,11 @@
         "name": "Strain",
         "uuid": "8407f9d5-7a7e-40c8-aace-a6a8294ae5e9",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "functions",
+          "array-transformations"
+        ],
         "difficulty": 4,
         "topics": [
           "algorithms",
@@ -2060,7 +2075,10 @@
         "name": "Flatten Array",
         "uuid": "1a6c4a3b-d5db-4a5a-b123-66cf085defe6",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "arrays",
+          "recursion"
+        ],
         "difficulty": 5,
         "topics": [
           "arrays",
@@ -2072,7 +2090,10 @@
         "name": "Nth Prime",
         "uuid": "7ce09989-f202-4c3c-8b7e-72cef18808c3",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "algorithms",
@@ -2088,7 +2109,11 @@
         "name": "Sieve",
         "uuid": "127287d1-ba44-4400-884a-6fe5f72e210f",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -2103,7 +2128,11 @@
         "name": "Rotational Cipher",
         "uuid": "34625b04-844e-41e3-b02b-3443b6b0b7cb",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 2,
         "topics": [
           "conditionals",
@@ -2117,7 +2146,12 @@
         "name": "Diffie-Hellman",
         "uuid": "127eccbd-3009-4a8f-95c1-7d8aeb608550",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "loops",
+          "arithmetic-operators"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -2133,7 +2167,12 @@
         "name": "Affine Cipher",
         "uuid": "37f26dda-6d5b-4b8a-a548-20758c5b6178",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "arrays",
+          "loops"
+        ],
         "difficulty": 4,
         "topics": [
           "algorithms",
@@ -2147,7 +2186,11 @@
         "name": "Atbash Cipher",
         "uuid": "a70e6027-eebe-43a1-84a6-763faa736169",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "loops"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
@@ -2181,7 +2224,12 @@
         "name": "Robot Simulator",
         "uuid": "5174bd15-eee2-4b53-b3ee-ca3a8c958a31",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "strings",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -2217,7 +2265,10 @@
         "name": "Sum of Multiples",
         "uuid": "f7452f71-795b-40b6-847c-67ef4bb9db45",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -2232,7 +2283,12 @@
         "name": "Change",
         "uuid": "cfa5741c-9fe9-4cb5-a322-d77ba8145f4b",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "loops",
+          "algorithms"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
@@ -2254,7 +2310,11 @@
         "name": "Protein Translation",
         "uuid": "775ae0ec-8db7-4568-a188-963931cf5ee1",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "loops"
+        ],
         "difficulty": 1,
         "topics": [
           "algorithms",
@@ -2268,7 +2328,10 @@
         "name": "Armstrong Numbers",
         "uuid": "b28c34f4-f7af-47db-95c6-f920e020bbba",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "loops"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
@@ -2325,7 +2388,12 @@
         "name": "Roman Numerals",
         "uuid": "2fc4f834-a51c-42b8-a4d9-5263229e7648",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "loops",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 3,
         "topics": [
           "conditionals",
@@ -2391,7 +2459,10 @@
         "name": "Square Root",
         "uuid": "31c7725e-def0-4dc9-88a0-e19afb9bfb06",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arithmetic-operators"
+        ],
         "difficulty": 4,
         "topics": [
           "bitwise_operations",
@@ -2422,7 +2493,12 @@
         "name": "All Your Base",
         "uuid": "d2d3cd13-b06c-4c24-9964-fb1554f70dd4",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "loops",
+          "arithmetic-operators"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -2465,7 +2541,11 @@
         "name": "Queen Attack",
         "uuid": "007a4cd4-7324-4512-8905-ead0c78146f7",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "numbers",
+          "conditionals"
+        ],
         "difficulty": 4,
         "topics": [
           "conditionals",
@@ -2482,7 +2562,12 @@
         "name": "React",
         "uuid": "303c6969-9446-41aa-871a-11223a43e810",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "numbers",
+          "arrays",
+          "functions"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
@@ -2495,7 +2580,13 @@
         "name": "Zipper",
         "uuid": "fd1575f3-3087-4cfa-8a26-168fba6d0606",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes",
+          "recursion",
+          "trees",
+          "numbers",
+          "arrays"
+        ],
         "difficulty": 8,
         "topics": [
           "recursion",
