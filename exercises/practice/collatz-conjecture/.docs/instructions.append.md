@@ -7,5 +7,5 @@ If `n` is not a positive integer, stop the program from being executed further a
 In JavaScript, this can be done using the `throw` statement.
 
 ```javascript
-throw new Error('Only positive numbers are allowed');
+throw new Error('Only positive integers are allowed');
 ```
