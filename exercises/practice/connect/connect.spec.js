@@ -62,22 +62,12 @@ describe('Judging a game of connect', () => {
   });
 
   xtest('X wins with left-hand dead end fork', () => {
-    const board = [
-      '. . X .',
-      ' X X . .',
-      '  . X X X',
-      '   O O O O'
-    ];
+    const board = ['. . X .', ' X X . .', '  . X X X', '   O O O O'];
     expect(new Board(board).winner()).toEqual('X');
   });
 
   xtest('X wins with right-hand dead end fork', () => {
-    const board = [
-      '. . X X',
-      ' X X . .',
-      '  . X X .',
-      '   O O O O'
-    ];
+    const board = ['. . X X', ' X X . .', '  . X X .', '   O O O O'];
     expect(new Board(board).winner()).toEqual('X');
   });
 
