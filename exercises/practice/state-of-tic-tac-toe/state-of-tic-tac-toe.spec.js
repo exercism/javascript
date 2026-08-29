@@ -200,4 +200,22 @@ describe('Invalid boards', () => {
     const actual = () => gamestate(board);
     expect(actual).toThrow(expected);
   });
+
+  xtest('Invalid board: O kept playing after X wins', () => {
+    const board = ['OO ', 'XXX', ' O '];
+    const expected = new Error(
+      'Impossible board: game should have ended after the game was won',
+    );
+    const actual = () => gamestate(board);
+    expect(actual).toThrow(expected);
+  });
+
+  xtest('Invalid board: X kept playing after O wins', () => {
+    const board = ['XX ', 'OOO', ' XX'];
+    const expected = new Error(
+      'Impossible board: game should have ended after the game was won',
+    );
+    const actual = () => gamestate(board);
+    expect(actual).toThrow(expected);
+  });
 });

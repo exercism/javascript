@@ -86,9 +86,39 @@ describe('Line Up', () => {
     );
   });
 
+  xtest('format exceptional ordinal numeral 22 ending in nd even though it is a multiple of 11', () => {
+    expect(format('Ingrid', 22)).toBe(
+      'Ingrid, you are the 22nd customer we serve today. Thank you!',
+    );
+  });
+
+  xtest('format exceptional ordinal numeral 33 ending in rd even though it is a multiple of 11', () => {
+    expect(format('Mario', 33)).toBe(
+      'Mario, you are the 33rd customer we serve today. Thank you!',
+    );
+  });
+
+  xtest('format exceptional ordinal numeral 52 ending in nd even though it is a multiple of 13', () => {
+    expect(format('Quentin', 52)).toBe(
+      'Quentin, you are the 52nd customer we serve today. Thank you!',
+    );
+  });
+
   xtest('format exceptional ordinal numeral 62', () => {
     expect(format('Nayra', 62)).toBe(
       'Nayra, you are the 62nd customer we serve today. Thank you!',
+    );
+  });
+
+  xtest('format non-exceptional ordinal numeral 72 ending in nd even though it is a multiple of 12', () => {
+    expect(format('Ugo', 72)).toBe(
+      'Ugo, you are the 72nd customer we serve today. Thank you!',
+    );
+  });
+
+  xtest('format exceptional ordinal numeral 91 ending in st even though it is a multiple of 13', () => {
+    expect(format('Boris', 91)).toBe(
+      'Boris, you are the 91st customer we serve today. Thank you!',
     );
   });
 
@@ -113,6 +143,12 @@ describe('Line Up', () => {
   xtest('format exceptional ordinal numeral 123', () => {
     expect(format('Yma', 123)).toBe(
       'Yma, you are the 123rd customer we serve today. Thank you!',
+    );
+  });
+
+  xtest('format large number 972 ending in nd even though it is a multiple of 12', () => {
+    expect(format('Elias', 972)).toBe(
+      'Elias, you are the 972nd customer we serve today. Thank you!',
     );
   });
 });
