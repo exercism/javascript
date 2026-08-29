@@ -27,7 +27,8 @@ export const gamestate = (board) => {
       throw new Error('Wrong turn order: X went twice');
     case numberOfX - numberOfO < 0:
       throw new Error('Wrong turn order: O started');
-    case scorringArray.includes(gridSize) && scorringArray.includes(-gridSize):
+    case (scorringArray.includes(gridSize) && numberOfX === numberOfO) ||
+      (scorringArray.includes(-gridSize) && numberOfX > numberOfO):
       throw new Error(
         'Impossible board: game should have ended after the game was won',
       );
