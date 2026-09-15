@@ -10,7 +10,7 @@ while (condition) {
 ```
 
 JavaScript also has a do-while loop.
-Here the condition is checked after the loop body was executed.
+Here the condition is checked after the loop body is executed.
 This is useful when the condition depends on the outcome of the code in the body.
 
 ```javascript
