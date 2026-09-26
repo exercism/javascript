@@ -1,0 +1,15 @@
+{
+  "authors": [],
+  "files": {
+    "solution": [
+      "sgf-parsing.js"
+    ],
+    "test": [
+      "sgf-parsing.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Parsing a Smart Game Format string."
+}
