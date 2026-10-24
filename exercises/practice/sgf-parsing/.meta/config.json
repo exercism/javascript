@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "matthewmorgan"
+  ],
+  "files": {
+    "solution": [
+      "sgf-parsing.js"
+    ],
+    "test": [
+      "sgf-parsing.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "blurb": "Parsing a Smart Game Format string.",
+  "source_url": "https://en.wikipedia.org/wiki/Smart_Game_Format",
+  "custom": {
+    "version.tests.compatibility": "jest-27",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false
+  }
+}
