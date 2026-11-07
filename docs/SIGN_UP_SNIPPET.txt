@@ -1,0 +1,11 @@
+function mostCommonWord(text) {
+  const counts = {};
+  let best = "";
+  for (const word of text.toLowerCase().split(" ")) {
+    counts[word] = (counts[word] || 0) + 1;
+    if (counts[word] > (counts[best] || 0)) {
+      best = word;
+    }
+  }
+  return `"${best}" appears ${counts[best]} times`;
+}
