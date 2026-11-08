@@ -6,6 +6,11 @@ docs/SIGN_UP_SNIPPET.txt    @exercism/maintainers-admin
 
 .github/workflows       @exercism/javascript
 
+# The checks that must pass before a PR can merge, and the workflow that validates them.
+# These lines must stay below .github/workflows, because the last matching line wins.
+.github/required-checks.yml                 @exercism/maintainers-admin
+.github/workflows/required-checks.yml       @exercism/maintainers-admin
+
 # Changes to `fetch-configlet` should be made in the `exercism/configlet` repo
 bin/fetch-configlet     @exercism/maintainers-admin
 bin/fetch-configlet.ps1 @exercism/maintainers-admin
