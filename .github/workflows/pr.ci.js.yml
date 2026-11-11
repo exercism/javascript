@@ -75,3 +75,18 @@ jobs:
 
       - name: Run exercism/javascript ci (runs tests) for changed/added exercises
         run: corepack pnpm node scripts/pr.mjs ${{ steps.changed-files.outputs.changed_files }}
+
+  tests:
+    name: Tests
+    needs: ci
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check that every Node.js version passed
+        env:
+          RESULT: ${{ needs.ci.result }}
+        run: |
+          if [[ "$RESULT" != "success" ]]; then
+            echo "The exercise tests failed on at least one Node.js version."
+            exit 1
+          fi

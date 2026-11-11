@@ -9,4 +9,5 @@ checks:
   - verify
   - configlet / configlet
   - i18n / completeness
+  - Tests
   - Validate required checks
