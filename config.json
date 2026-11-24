@@ -1737,6 +1737,14 @@
         ]
       },
       {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "6a44570c-f9a0-4cd7-9217-fcf7f39b3de0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "6a1eee0e-f8d4-446d-9c52-f31c3700af1b",
