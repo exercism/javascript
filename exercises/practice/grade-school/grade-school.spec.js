@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, xtest } from '@jest/globals';
-import { GradeSchool } from './grade-school';
+import { GradeSchool } from './grade-school.js';
 
 describe('Grade School', () => {
   let school;

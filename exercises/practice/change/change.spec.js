@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Change } from './change';
+import { Change } from './change.js';
 
 describe('Change', () => {
   test('change for 1 cent', () => {

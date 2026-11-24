@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { cardTypeCheck, determineOddEvenCards } from './enchantments';
+import { cardTypeCheck, determineOddEvenCards } from './enchantments.js';
 
 const TYPE_IS_ODD = false;
 const TYPE_IS_EVEN = true;

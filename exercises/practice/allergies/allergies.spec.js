@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Allergies } from './allergies';
+import { Allergies } from './allergies.js';
 
 describe('Allergies', () => {
   describe('testing for eggs allergy', () => {

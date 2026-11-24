@@ -1,5 +1,5 @@
 import { describe, test, expect, xtest } from '@jest/globals';
-import { Binary } from './binary';
+import { Binary } from './binary.js';
 
 describe('binary', () => {
   test('0 is decimal 0', () => expect(new Binary('0').toDecimal()).toEqual(0));

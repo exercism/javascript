@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { saddlePoints } from './saddle-points';
+import { saddlePoints } from './saddle-points.js';
 
 describe('Saddle Points', () => {
   test('Can identify single saddle point', () => {

@@ -5,7 +5,7 @@ import {
   hasTrack,
   listArtists,
   removeDuplicates,
-} from './ozans-playlist';
+} from './ozans-playlist.js';
 
 describe('removeDuplicates', () => {
   test('works for an empty playlist', () => {

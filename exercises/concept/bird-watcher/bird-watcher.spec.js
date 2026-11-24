@@ -1,5 +1,9 @@
 import { describe, expect, test } from '@jest/globals';
-import { birdsInWeek, fixBirdCountLog, totalBirdCount } from './bird-watcher';
+import {
+  birdsInWeek,
+  fixBirdCountLog,
+  totalBirdCount,
+} from './bird-watcher.js';
 
 const customInspectSymbol = Symbol.for('nodejs.util.inspect.custom');
 const customLogSymbol = Symbol.for('exercism.javascript.util.log');

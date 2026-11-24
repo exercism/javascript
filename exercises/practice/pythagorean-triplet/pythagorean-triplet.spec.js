@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { triplets } from './pythagorean-triplet';
+import { triplets } from './pythagorean-triplet.js';
 
 function tripletsWithSum(sum, options = {}) {
   return triplets({ ...options, sum }).map((triplet) =>

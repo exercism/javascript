@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { meetup } from './meetup';
+import { meetup } from './meetup.js';
 
 describe('Meetup', () => {
   test('monteenth of May 2013', () => {

@@ -6,7 +6,7 @@ import {
   shiftThreeCardsAround,
   pickNamedPile,
   swapNamedPile,
-} from './enchantments';
+} from './enchantments.js';
 
 const customInspectSymbol = Symbol.for('nodejs.util.inspect.custom');
 const customLogSymbol = Symbol.for('exercism.javascript.util.log');

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { GameOfLife } from './game-of-life';
+import { GameOfLife } from './game-of-life.js';
 
 describe('Game of Life', () => {
   // Empty matrix

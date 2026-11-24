@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { TwoBucket } from './two-bucket';
+import { TwoBucket } from './two-bucket.js';
 
 describe('TwoBucket', () => {
   describe('Measure using bucket one of size 3 and bucket two of size 5', () => {

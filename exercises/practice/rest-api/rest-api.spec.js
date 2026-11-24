@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { RestAPI } from './rest-api';
+import { RestAPI } from './rest-api.js';
 
 describe('Rest API', () => {
   describe('user management', () => {

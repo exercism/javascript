@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { parse } from './acronym';
+import { parse } from './acronym.js';
 
 describe('Acronyms are produced from', () => {
   // basic

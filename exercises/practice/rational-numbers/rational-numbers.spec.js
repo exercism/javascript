@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Rational } from './rational-numbers';
+import { Rational } from './rational-numbers.js';
 
 describe('Addition', () => {
   test('Add two positive rational numbers', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { primes } from './sieve';
+import { primes } from './sieve.js';
 
 describe('Sieve', () => {
   test('no primes under two', () => {

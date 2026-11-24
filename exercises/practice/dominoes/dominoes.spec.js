@@ -1,5 +1,5 @@
 import { describe, xdescribe, expect, test, xtest } from '@jest/globals';
-import { chain } from './dominoes';
+import { chain } from './dominoes.js';
 
 function runTest(dominoes, expected) {
   if (expected) {

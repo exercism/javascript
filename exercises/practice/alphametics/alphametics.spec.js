@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { solve } from './alphametics';
+import { solve } from './alphametics.js';
 
 describe('Solve the alphametics puzzle', () => {
   test('puzzle with three letters', () => {

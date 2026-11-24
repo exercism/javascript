@@ -4,7 +4,7 @@ import {
   memoizeTransform,
   scale2d,
   translate2d,
-} from './coordinate-transformation';
+} from './coordinate-transformation.js';
 
 const fakeTransform = () => {
   let first = true;

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { hey } from './bob';
+import { hey } from './bob.js';
 
 describe('Bob', () => {
   test('asking a question', () => {

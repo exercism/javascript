@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { proverb } from './proverb';
+import { proverb } from './proverb.js';
 
 describe('Proverb', () => {
   test('zero pieces', () => {

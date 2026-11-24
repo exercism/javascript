@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { squareRoot } from './square-root';
+import { squareRoot } from './square-root.js';
 
 describe('Square root', () => {
   test('root of 1', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Triangle } from './triangle';
+import { Triangle } from './triangle.js';
 
 describe('Triangle', () => {
   describe('equilateral triangle', () => {

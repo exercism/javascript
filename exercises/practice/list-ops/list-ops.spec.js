@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { List } from './list-ops';
+import { List } from './list-ops.js';
 
 describe('append entries to a list and return the new list', () => {
   test('empty lists', () => {

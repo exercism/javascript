@@ -6,7 +6,7 @@ import {
   test,
   xtest,
 } from '@jest/globals';
-import { Robot } from './robot-name';
+import { Robot } from './robot-name.js';
 
 const areSequential = (name1, name2) => {
   const alpha1 = name1.substring(0, 2);

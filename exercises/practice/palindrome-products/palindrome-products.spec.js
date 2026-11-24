@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Palindromes } from './palindrome-products';
+import { Palindromes } from './palindrome-products.js';
 
 describe('Palindromes', () => {
   test('smallest palindrome from single digit factors', () => {

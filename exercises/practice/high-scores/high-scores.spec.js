@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { HighScores } from './high-scores';
+import { HighScores } from './high-scores.js';
 
 describe('High Scores Test Suite', () => {
   test('List of scores', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { format } from './line-up';
+import { format } from './line-up.js';
 
 describe('Line Up', () => {
   test('format smallest non-exceptional ordinal numeral 4', () => {

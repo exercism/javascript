@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { House } from './house';
+import { House } from './house.js';
 
 describe('House', () => {
   test('verse one - the house that jack built', () => {

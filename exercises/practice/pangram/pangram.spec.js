@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { isPangram } from './pangram';
+import { isPangram } from './pangram.js';
 
 describe('Pangram()', () => {
   test('empty sentence', () => {

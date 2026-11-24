@@ -7,7 +7,7 @@ import {
   seeingDouble,
   threeOfEachThree,
   twoIsSpecial,
-} from './enchantments';
+} from './enchantments.js';
 
 describe('seeingDouble', () => {
   test('doubles all the values', () => {

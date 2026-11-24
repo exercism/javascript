@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { BankAccount, ValueError } from './bank-account';
+import { BankAccount, ValueError } from './bank-account.js';
 
 describe('Bank Account', () => {
   test('newly opened account has zero balance', () => {

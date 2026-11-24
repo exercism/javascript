@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { clean } from './phone-number';
+import { clean } from './phone-number.js';
 
 describe('Phone Number', () => {
   describe('Cleanup user-entered phone numbers', () => {

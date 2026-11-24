@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { processString } from './error-handling';
+import { processString } from './error-handling.js';
 
 describe('Error Handling', () => {
   test('never throws a generic Error for any invalid input', () => {

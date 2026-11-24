@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { combinations } from './killer-sudoku-helper';
+import { combinations } from './killer-sudoku-helper.js';
 
 describe('Trivial 1-digit cages', () => {
   test('1', () => {

@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, xtest } from '@jest/globals';
-import { Forth } from './forth';
+import { Forth } from './forth.js';
 
 describe('Forth', () => {
   let forth;

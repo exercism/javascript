@@ -5,7 +5,7 @@ import {
   monitorTheMachine,
   OverheatingError,
   reportOverheating,
-} from './factory-sensors';
+} from './factory-sensors.js';
 
 describe('checkHumidityLevel', () => {
   test('should throw if the humidity percentage is 71', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { annotate } from './flower-field';
+import { annotate } from './flower-field.js';
 
 describe('Flower Field', () => {
   test('handles no rows', () => {

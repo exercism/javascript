@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { orderPrice, pizzaPrice } from './pizza-order';
+import { orderPrice, pizzaPrice } from './pizza-order.js';
 
 class PizzaOrder {
   /**

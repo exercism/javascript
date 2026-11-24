@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { primeFactors } from './prime-factors';
+import { primeFactors } from './prime-factors.js';
 
 describe('returns prime factors for the given input number', () => {
   test('no factors', () => expect(primeFactors(1)).toEqual([]));

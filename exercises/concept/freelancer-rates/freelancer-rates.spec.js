@@ -3,7 +3,7 @@ import {
   dayRate,
   daysInBudget,
   priceWithMonthlyDiscount,
-} from './freelancer-rates';
+} from './freelancer-rates.js';
 
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 

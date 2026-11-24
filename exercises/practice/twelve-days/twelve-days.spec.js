@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { recite } from './twelve-days';
+import { recite } from './twelve-days.js';
 
 describe('TwelveDays', () => {
   test('verse first day a partridge in a pear tree', () => {

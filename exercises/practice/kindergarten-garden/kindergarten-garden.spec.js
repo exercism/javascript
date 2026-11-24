@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Garden } from './kindergarten-garden';
+import { Garden } from './kindergarten-garden.js';
 
 describe('partial Garden', () => {
   test('garden with single student', () => {

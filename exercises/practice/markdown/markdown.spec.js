@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { parse } from './markdown';
+import { parse } from './markdown.js';
 
 describe('Markdown', () => {
   test('parses normal text as a paragraph', () => {

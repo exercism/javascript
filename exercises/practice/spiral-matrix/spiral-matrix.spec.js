@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { spiralMatrix } from './spiral-matrix';
+import { spiralMatrix } from './spiral-matrix.js';
 
 describe('Spiral Matrix', () => {
   test('empty spiral', () => {

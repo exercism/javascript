@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { degreesOfSeparation } from './relative-distance';
+import { degreesOfSeparation } from './relative-distance.js';
 
 describe('RelativeDistance', () => {
   test('Direct parent-child relation', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { limesToCut, remainingOrders, timeToMixJuice } from './mixed-juices';
+import { limesToCut, remainingOrders, timeToMixJuice } from './mixed-juices.js';
 
 describe('timeToMixJuice', () => {
   test("returns the correct time for 'Pure Strawberry Joy'", () => {

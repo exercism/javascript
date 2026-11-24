@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { simulateGame } from './camicia';
+import { simulateGame } from './camicia.js';
 
 describe('Camicia', () => {
   test('two cards, one trick', () => {

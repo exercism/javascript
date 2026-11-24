@@ -1,10 +1,10 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Address } from './address';
-import { Born } from './born';
-import { Name } from './name';
-import { Person } from './person';
+import { Address } from './address.js';
+import { Born } from './born.js';
+import { Name } from './name.js';
+import { Person } from './person.js';
 
-import { bornAtLens, nameLens, streetLens } from './lens-person';
+import { bornAtLens, nameLens, streetLens } from './lens-person.js';
 
 // test data
 const person = new Person(

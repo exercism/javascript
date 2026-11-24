@@ -4,7 +4,7 @@ import {
   ProgramWindow,
   Size,
   changeWindow,
-} from './windowing-system';
+} from './windowing-system.js';
 
 describe('Size class', () => {
   test('allows to create a new instance', () => {

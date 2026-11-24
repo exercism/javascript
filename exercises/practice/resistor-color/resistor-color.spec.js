@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { colorCode, COLORS } from './resistor-color';
+import { colorCode, COLORS } from './resistor-color.js';
 
 describe('ResistorColor', () => {
   describe('Color codes', () => {

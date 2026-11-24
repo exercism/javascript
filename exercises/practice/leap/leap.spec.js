@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { isLeap } from './leap';
+import { isLeap } from './leap.js';
 
 describe('A leap year', () => {
   test('year not divisible by 4 in common year', () => {

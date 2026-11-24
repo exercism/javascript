@@ -4,7 +4,7 @@ import {
   preparationTimeInMinutes,
   remainingMinutesInOven,
   totalTimeInMinutes,
-} from './lasagna';
+} from './lasagna.js';
 
 describe('EXPECTED_MINUTES_IN_OVEN', () => {
   test('constant is defined correctly', () => {

@@ -4,7 +4,7 @@ import {
   buildSign,
   costOf,
   graduationFor,
-} from './custom-signs';
+} from './custom-signs.js';
 
 describe('buildSign', () => {
   test('occasion is Birthday', () => {

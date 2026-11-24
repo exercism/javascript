@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { flatten } from './flatten-array';
+import { flatten } from './flatten-array.js';
 
 describe('FlattenArray', () => {
   test('empty', () => {

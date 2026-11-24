@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Board } from './connect';
+import { Board } from './connect.js';
 
 describe('Judging a game of connect', () => {
   test('an empty board has no winner', () => {

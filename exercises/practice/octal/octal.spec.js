@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Octal } from './octal';
+import { Octal } from './octal.js';
 
 describe('octal', () => {
   test('1 is decimal 1', () => {

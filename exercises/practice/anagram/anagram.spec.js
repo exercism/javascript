@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { findAnagrams } from './anagram';
+import { findAnagrams } from './anagram.js';
 
 const areSetsEqual = (setA, setB) =>
   setA.size === setB.size && [...setA].every((val) => setB.has(val));

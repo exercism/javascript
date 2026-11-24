@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Character, abilityModifier } from './dnd-character';
+import { Character, abilityModifier } from './dnd-character.js';
 
 describe('D&D Character', () => {
   describe('Ability modifier', () => {
