@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { tournamentTally } from './tournament';
+import { tournamentTally } from './tournament.js';
 
 describe('Tournament', () => {
   test('just the header if no input', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { classify } from './perfect-numbers';
+import { classify } from './perfect-numbers.js';
 
 describe('Exercise - Perfect Numbers', () => {
   describe('Invalid Inputs', () => {

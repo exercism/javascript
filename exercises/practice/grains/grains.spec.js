@@ -28,7 +28,7 @@
  */
 
 import { describe, expect, test, xtest } from '@jest/globals';
-import { square, total } from './grains';
+import { square, total } from './grains.js';
 
 describe('Grains', () => {
   describe('returns the number of grains on the square', () => {

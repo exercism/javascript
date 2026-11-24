@@ -9,8 +9,8 @@
 //
 // In your own projects, files, and code, you can play with @ts-check as well.
 
-import { notify } from './notifier';
-import { order } from './grocer';
+import { notify } from './notifier.js';
+import { order } from './grocer.js';
 
 /**
  * @return void

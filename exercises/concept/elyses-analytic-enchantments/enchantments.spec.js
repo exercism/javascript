@@ -6,7 +6,7 @@ import {
   getFirstEvenCardPosition,
   getFirstOddCard,
   isEachCardEven,
-} from './enchantments';
+} from './enchantments.js';
 
 describe('getCardPosition', () => {
   test('when it is the first card', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { largestProduct } from './largest-series-product';
+import { largestProduct } from './largest-series-product.js';
 
 describe('Largest Series Product', () => {
   test('finds the largest product if span equals length', () => {

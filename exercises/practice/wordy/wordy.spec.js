@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { answer } from './wordy';
+import { answer } from './wordy.js';
 
 describe('Wordy', () => {
   test('just a number', () => {

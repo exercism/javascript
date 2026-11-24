@@ -5,7 +5,7 @@ import {
   revokeTicket,
   simpleTicketStatus,
   ticketStatus,
-} from './amusement-park';
+} from './amusement-park.js';
 
 describe('createVisitor', () => {
   test('correctly assembles the visitor object', () => {

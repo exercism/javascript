@@ -5,7 +5,7 @@ import {
   isValidCommand,
   niceToMeetYou,
   removeEmoji,
-} from './regular-chatbot';
+} from './regular-chatbot.js';
 
 describe('isValidCommand', () => {
   test('recognizes wheter the command is at the first position', () => {

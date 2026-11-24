@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { gamestate } from './state-of-tic-tac-toe';
+import { gamestate } from './state-of-tic-tac-toe.js';
 
 describe('Won games', () => {
   test('Finished game where X won via left column victory', () => {

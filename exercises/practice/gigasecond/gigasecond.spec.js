@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { gigasecond } from './gigasecond';
+import { gigasecond } from './gigasecond.js';
 
 describe('Gigasecond', () => {
   // date only specification of time

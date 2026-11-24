@@ -3,7 +3,7 @@ import {
   calculateResellPrice,
   chooseVehicle,
   needsLicense,
-} from './vehicle-purchase';
+} from './vehicle-purchase.js';
 
 describe('needsLicense', () => {
   test('requires a license for a car', () => {

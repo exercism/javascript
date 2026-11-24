@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { convert } from './ocr-numbers';
+import { convert } from './ocr-numbers.js';
 
 describe('ocr', () => {
   test('recognizes zero', () => {

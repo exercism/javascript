@@ -3,7 +3,7 @@ import {
   NotAvailable,
   Untranslatable,
   ConnectionError,
-} from './errors';
+} from './errors.js';
 
 const mutex = { current: false };
 

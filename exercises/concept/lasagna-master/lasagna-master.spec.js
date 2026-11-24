@@ -5,7 +5,7 @@ import {
   preparationTime,
   quantities,
   scaleRecipe,
-} from './lasagna-master';
+} from './lasagna-master.js';
 
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 

@@ -6,7 +6,7 @@ import {
   correctListOfWagons,
   extendRouteInformation,
   separateTimeOfArrival,
-} from './train-driver';
+} from './train-driver.js';
 
 const customInspectSymbol = Symbol.for('nodejs.util.inspect.custom');
 const customLogSymbol = Symbol.for('exercism.javascript.util.log');

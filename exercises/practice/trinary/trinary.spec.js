@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Trinary } from './trinary';
+import { Trinary } from './trinary.js';
 
 describe('Trinary', () => {
   test('1 is decimal 1', () => {

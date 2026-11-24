@@ -5,7 +5,7 @@ import {
   createScoreBoard,
   removePlayer,
   updateScore,
-} from './high-score-board';
+} from './high-score-board.js';
 
 describe('createScoreBoard', () => {
   test('creates a new board with a test entry', () => {

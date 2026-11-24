@@ -8,7 +8,7 @@ import {
   removeItemAtBottom,
   removeItemFromTop,
   setItem,
-} from './enchantments';
+} from './enchantments.js';
 
 describe('pick a card', () => {
   test('get the first card', () => {

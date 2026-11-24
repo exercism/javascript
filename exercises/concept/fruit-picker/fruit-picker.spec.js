@@ -1,13 +1,18 @@
 import { afterEach, describe, expect, test, jest } from '@jest/globals';
-import { onError, onSuccess, orderFromGrocer, postOrder } from './fruit-picker';
-import { order } from './grocer';
-import { notify } from './notifier';
+import {
+  onError,
+  onSuccess,
+  orderFromGrocer,
+  postOrder,
+} from './fruit-picker.js';
+import { order } from './grocer.js';
+import { notify } from './notifier.js';
 
-jest.mock('./notifier', () => ({
+jest.mock('./notifier.js', () => ({
   notify: jest.fn(),
 }));
 
-jest.mock('./grocer', () => ({
+jest.mock('./grocer.js', () => ({
   order: jest.fn(),
 }));
 

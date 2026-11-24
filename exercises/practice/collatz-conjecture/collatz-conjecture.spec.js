@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { steps } from './collatz-conjecture';
+import { steps } from './collatz-conjecture.js';
 
 describe('steps()', () => {
   test('zero steps for one', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { LinkedList } from './linked-list';
+import { LinkedList } from './linked-list.js';
 
 describe('LinkedList', () => {
   test('pop gets last element from the list', () => {

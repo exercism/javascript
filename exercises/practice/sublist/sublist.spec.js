@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { List } from './sublist';
+import { List } from './sublist.js';
 
 describe('sublist', () => {
   test('two empty lists are equal', () => {

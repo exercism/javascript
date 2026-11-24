@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { Crypto } from './crypto-square';
+import { Crypto } from './crypto-square.js';
 
 describe('Crypto', () => {
   test('empty plaintext results in an empty ciphertext', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { count } from './rectangles';
+import { count } from './rectangles.js';
 
 describe('Rectangles', () => {
   test('no rows', () => {

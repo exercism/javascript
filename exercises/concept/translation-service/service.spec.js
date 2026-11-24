@@ -3,10 +3,10 @@ import {
   BatchIsEmpty,
   QualityThresholdNotMet,
   TranslationService,
-} from './service';
+} from './service.js';
 
-import { ExternalApi } from './api';
-import { ConnectionError, NotAvailable, Untranslatable } from './errors';
+import { ExternalApi } from './api.js';
+import { ConnectionError, NotAvailable, Untranslatable } from './errors.js';
 
 describe('Free service', () => {
   /** @type {TranslationService} */

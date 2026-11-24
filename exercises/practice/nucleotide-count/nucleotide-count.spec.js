@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { countNucleotides } from './nucleotide-count';
+import { countNucleotides } from './nucleotide-count.js';
 
 describe('count all nucleotides in a strand', () => {
   test('empty strand', () => {

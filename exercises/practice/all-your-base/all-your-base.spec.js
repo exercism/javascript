@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { convert } from './all-your-base';
+import { convert } from './all-your-base.js';
 
 describe('Converter', () => {
   test('single bit one to decimal', () => {

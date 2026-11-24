@@ -11,7 +11,7 @@ import {
   hasType,
   hasIdProperty,
   hasDefinedType,
-} from './assembly-line';
+} from './assembly-line.js';
 import { ElectronicDevice } from './lib.js';
 
 describe('isBoolean', () => {

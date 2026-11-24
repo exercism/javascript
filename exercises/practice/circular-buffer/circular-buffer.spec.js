@@ -2,7 +2,7 @@ import { describe, expect, test, xtest } from '@jest/globals';
 import CircularBuffer, {
   BufferEmptyError,
   BufferFullError,
-} from './circular-buffer';
+} from './circular-buffer.js';
 
 describe('CircularBuffer', () => {
   test('reading empty buffer should fail', () => {

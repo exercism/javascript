@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { decode, encode } from './atbash-cipher';
+import { decode, encode } from './atbash-cipher.js';
 
 describe('Atbash Cipher', () => {
   describe('encode', () => {

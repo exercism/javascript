@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { parallelLetterFrequency } from './parallel-letter-frequency';
+import { parallelLetterFrequency } from './parallel-letter-frequency.js';
 
 describe('ParallelLetterFrequency', () => {
   test('no texts', async () => {

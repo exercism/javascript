@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { CallbackCell, ComputeCell, InputCell } from './react';
+import { CallbackCell, ComputeCell, InputCell } from './react.js';
 
 describe('React module', () => {
   test('accepts input', () => {

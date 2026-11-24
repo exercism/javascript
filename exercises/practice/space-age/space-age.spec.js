@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { age } from './space-age';
+import { age } from './space-age.js';
 
 describe('Space Age', () => {
   test('age on Earth', () => {

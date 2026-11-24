@@ -4,11 +4,11 @@
 //
 
 /* eslint-disable no-unused-vars */
-import { Person } from './person';
-import { Name } from './name';
-import { Born } from './born';
-import { Address } from './address';
-import { Lens } from './lens';
+import { Person } from './person.js';
+import { Name } from './name.js';
+import { Born } from './born.js';
+import { Address } from './address.js';
+import { Lens } from './lens.js';
 
 // Implement the nameLens with the getter and setter
 export const nameLens = new Lens(

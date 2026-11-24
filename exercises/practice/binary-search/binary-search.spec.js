@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { find } from './binary-search';
+import { find } from './binary-search.js';
 
 describe('Binary Search', () => {
   test('finds a value in an array with one element', () => {

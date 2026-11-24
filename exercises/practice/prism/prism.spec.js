@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { findSequence } from './prism';
+import { findSequence } from './prism.js';
 
 describe('Prism', () => {
   test('zero prisms', () => {

@@ -4,7 +4,7 @@ import {
   backDoorResponse,
   frontDoorPassword,
   frontDoorResponse,
-} from './door-policy';
+} from './door-policy.js';
 
 const recite = (poem, responseFn) => {
   return poem.map((line) => responseFn(line));

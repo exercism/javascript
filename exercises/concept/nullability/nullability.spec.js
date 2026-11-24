@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { printBadge } from './nullability';
+import { printBadge } from './nullability.js';
 
 describe('nullability', () => {
   describe('printBadge', () => {

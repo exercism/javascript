@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { commands } from './secret-handshake';
+import { commands } from './secret-handshake.js';
 
 describe('Secret Handshake', () => {
   describe('Create A Handshake For A Number', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { transpose } from './transpose';
+import { transpose } from './transpose.js';
 
 describe('Transpose', () => {
   test('empty string', () => {

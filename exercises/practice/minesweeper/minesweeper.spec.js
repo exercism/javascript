@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { annotate } from './minesweeper';
+import { annotate } from './minesweeper.js';
 
 describe(')', () => {
   test('handles no rows', () => {

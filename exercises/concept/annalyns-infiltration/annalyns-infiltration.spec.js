@@ -4,7 +4,7 @@ import {
   canFreePrisoner,
   canSignalPrisoner,
   canSpy,
-} from './annalyns-infiltration';
+} from './annalyns-infiltration.js';
 
 describe('can execute fast attack', () => {
   test('when the knight is awake', () => {

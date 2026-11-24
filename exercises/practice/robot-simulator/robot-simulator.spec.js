@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { InvalidInputError, Robot } from './robot-simulator';
+import { InvalidInputError, Robot } from './robot-simulator.js';
 
 function turnRight(robot) {
   robot.evaluate('R');

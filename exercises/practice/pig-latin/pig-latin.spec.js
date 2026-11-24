@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { translate } from './pig-latin';
+import { translate } from './pig-latin.js';
 
 describe('Pig Latin', () => {
   describe('ay is added to words that start with vowels', () => {

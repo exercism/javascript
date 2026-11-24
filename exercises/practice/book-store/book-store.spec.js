@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { cost } from './book-store';
+import { cost } from './book-store.js';
 
 describe('Book Store', () => {
   describe('Creating a basket', () => {

@@ -7,7 +7,7 @@ import {
   isValid,
   updateAppointment,
   timeBetween,
-} from './appointment-time';
+} from './appointment-time.js';
 
 describe('createAppointment', () => {
   test('uses the passed in current time', () => {

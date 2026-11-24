@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { DNA } from './point-mutations';
+import { DNA } from './point-mutations.js';
 
 describe('DNA', () => {
   test('no difference between empty strands', () => {

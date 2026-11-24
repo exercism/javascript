@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { truncate } from './micro-blog';
+import { truncate } from './micro-blog.js';
 
 describe('Micro-blog', () => {
   test('English language short', () => {

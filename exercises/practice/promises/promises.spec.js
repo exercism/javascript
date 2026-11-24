@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { all, allSettled, any, promisify, race } from './promises';
+import { all, allSettled, any, promisify, race } from './promises.js';
 
 describe('promises', () => {
   const failedCallback = new Error('Failed callback');

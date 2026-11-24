@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { DiffieHellman } from './diffie-hellman';
+import { DiffieHellman } from './diffie-hellman.js';
 
 describe('diffie-hellman', () => {
   test('throws an error if the constructor arguments are out of range', () => {

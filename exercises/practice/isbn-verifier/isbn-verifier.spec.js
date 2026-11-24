@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { isValid } from './isbn-verifier';
+import { isValid } from './isbn-verifier.js';
 
 describe('ISBN Verifier', () => {
   test('valid isbn', () => {

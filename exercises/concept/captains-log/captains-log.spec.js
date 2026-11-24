@@ -3,7 +3,7 @@ import {
   randomShipRegistryNumber,
   randomStardate,
   randomPlanetClass,
-} from './captains-log';
+} from './captains-log.js';
 
 describe('randomShipRegistryNumber', () => {
   test('registry numbers are valid', () => {

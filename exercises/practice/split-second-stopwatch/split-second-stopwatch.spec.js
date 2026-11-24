@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { SplitSecondStopwatch } from './split-second-stopwatch';
+import { SplitSecondStopwatch } from './split-second-stopwatch.js';
 
 describe('SplitSecondStopwatch', () => {
   test('new stopwatch starts in ready state', () => {

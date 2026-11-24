@@ -1,5 +1,5 @@
 import { describe, expect, test, xtest } from '@jest/globals';
-import { isIsogram } from './isogram';
+import { isIsogram } from './isogram.js';
 
 describe('Isogram', () => {
   describe('Check if the given string is an isogram', () => {
