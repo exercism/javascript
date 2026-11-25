@@ -36,6 +36,12 @@ randomStardate();
 // => 41458.15721310934
 ```
 
+<!-- prettier-ignore -->
+~~~exercism/caution
+It is expected that the smallest random number (0) results in the smallest random stardate (41000.0) and
+the largest random number (just under 1) results in the largest random stardate (41999.999...).
+~~~
+
 ## 3. Generate a random planet
 
 The Starship Enterprise encounters many planets in its travels.
